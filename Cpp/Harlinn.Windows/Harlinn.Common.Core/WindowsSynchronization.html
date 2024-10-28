@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Windows Syncronization | Harlinn</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Windows Syncronization" />
+<meta name="author" content="Espen Harlinn" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is my personal Github site," />
+<meta property="og:description" content="This is my personal Github site," />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/WindowsSynchronization.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/WindowsSynchronization.html" />
+<meta property="og:site_name" content="Harlinn" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Windows Syncronization" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal Github site,","headline":"Windows Syncronization","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/WindowsSynchronization.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Harlinn</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Cpp/Cpp.html">C++</a><a class="page-link" href="/Dart/Dart.html">Dart</a><a class="page-link" href="/DotNet/DotNet.html">.Net</a><a class="page-link" href="/Cpp/Harlinn.Windows/Harlinn.Windows.html">Harlinn.Windows</a><a class="page-link" href="/Java/Java.html">Java</a><a class="page-link" href="/Julia/Julia.html">Julia</a><a class="page-link" href="/Python/Python.html">Python</a><a class="page-link" href="/R/R.html">R</a><a class="page-link" href="/Rust/Rust.html">Rust</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Windows Syncronization</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="introduction">Introduction</h1>
+<p>This article is about the synchronization mechanisms available on the Windows platform using the Visual C++ compiler and the Windows API. To simplify the use of some of the synchronization mechanisms, I have created a set of classes that mainly wraps concurrency mechanisms provided by the Windows API:</p>
+
+<ul>
+  <li><a href="#waitablehandle"><code class="language-plaintext highlighter-rouge">WaitableHandle</code></a>: Base class for waitable Windows kernel objects
+    <ul>
+      <li><a href="#eventwaithandle"><code class="language-plaintext highlighter-rouge">EventWaitHandle</code></a>: A class for working with Windows kernel event objects</li>
+      <li><a href="#mutex"><code class="language-plaintext highlighter-rouge">Mutex</code></a>: A class for working with Windows kernel mutex objects</li>
+      <li><a href="#semaphore"><code class="language-plaintext highlighter-rouge">Semaphore</code></a>: A class for working with Windows kernel semaphore objects</li>
+      <li><a href="#waitabletimer"><code class="language-plaintext highlighter-rouge">WaitableTimer</code></a>: A class for working with Windows kernel waitable timer objects</li>
+      <li><a href="#thread"><code class="language-plaintext highlighter-rouge">Thread</code></a>: A thread class, similar in spirit to std::thread, but derived from WaitableHandle since threads are also waitable Windows kernel objects</li>
+      <li><a href="#process"><code class="language-plaintext highlighter-rouge">Process</code></a>: A class for executing other processes. Like threads, processes are waitable Windows kernel objects</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="kernel-object-synchronization">Kernel Object Synchronization</h2>
+<p>Synchronization can be performed using several synchronization mechanisms that are backed by Windows kernel object implementations. These are the most heavyweight synchronization mechanisms provided by the Win32/64 API, and the most versatile:</p>
+
+<ul>
+  <li>They can be named, putting them in the kernel object namespace.</li>
+  <li>They can be used for inter-process synchronization.</li>
+  <li>They can be secured.</li>
+  <li>Child processes can inherit handles from the processes that either opened them or created them.</li>
+  <li>We can specify a timeout, in milliseconds, when waiting for a kernel object to enter its signaled state.</li>
+  <li>They can have a lifetime beyond the process that created them.</li>
+</ul>
+
+<p>The Win32/64 API allows us to use the following kernel object types with synchronization:</p>
+
+<ul>
+  <li>Thread</li>
+  <li>Process</li>
+  <li>File and console standard input, output, and error streams</li>
+  <li>Job</li>
+  <li>Event</li>
+  <li>Mutex</li>
+  <li>Semaphore</li>
+  <li>Waitable timer</li>
+</ul>
+
+<h3 id="waitablehandle">WaitableHandle</h3>
+<p><code class="language-plaintext highlighter-rouge">WaitableHandle</code> is the base class for the classes that provide access to the kernel objects that 
+a program can wait on. It has a single data member:</p>
+<pre><code class="language-C++">class WaitableHandle
+{
+private:
+    HANDLE handle_;
+public:
+    ...
+};
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">WaitableHandle</code> is move assignable, move constructible, but not copy assignable and not copy constructible. 
+The implementation ensures that the lifetime of the handle is properly managed. The class, as the name 
+suggests, implements functions that allows us to wait on a kernel object.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Wait(…)</code> function is a thin wrapper around the <code class="language-plaintext highlighter-rouge">WaitForSingleObject(…)</code> function:</p>
+<pre><code class="language-C++">bool Wait( UInt32 timeoutInMillis = INFINITE ) const
+{
+    auto rc = WaitForSingleObject( handle_, timeoutInMillis );
+    if ( rc == WAIT_FAILED )
+    {
+        ThrowLastOSError( );
+    }
+    return rc == WAIT_TIMEOUT ? false : true;
+}
+</code></pre>
+<p>The <code class="language-plaintext highlighter-rouge">Wait(…)</code> function returns <code class="language-plaintext highlighter-rouge">true</code> if the wait was successful, and the kernel object is in a signaled state, 
+or <code class="language-plaintext highlighter-rouge">false</code> if the wait expired due to a timeout. If the <code class="language-plaintext highlighter-rouge">WaitForSingleObject(…)</code> function returns <code class="language-plaintext highlighter-rouge">WAIT_FAILED</code> 
+indicating an error, <code class="language-plaintext highlighter-rouge">Wait(…)</code> will throw an exception containing the error code returned by <code class="language-plaintext highlighter-rouge">GetLastError()</code> 
+and the accompanying error message provided by the OS.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">WaitForSingleObject(…)</code> function also works as memory barrier, so no further action is required by the 
+thread to ensure safe access to the objects protected by the handle.</p>
+
+<p>To provide compatibility with the <code class="language-plaintext highlighter-rouge">std::lock_guard</code> and other templates from the standard template library, 
+<code class="language-plaintext highlighter-rouge">WaitableHandle</code> also implements:</p>
+<pre><code class="language-C++">void lock( ) const
+{
+    Wait( );
+}
+
+bool try_lock( ) const
+{
+    return Wait( );
+}
+</code></pre>
+
+<p>It is up to the derived classes to implement the missing <code class="language-plaintext highlighter-rouge">unlock( )</code> member function.</p>
+
+<h3 id="eventwaithandle">EventWaitHandle</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">EventWaitHandle</code> class provides a mechanism to notify a waiting thread of the occurrence 
+of an event. This class wraps the Event kernel object and manage the lifetime of the handle.</p>
+
+<p>There are two kinds of event objects: manual-reset and auto-reset. When an event enters a 
+signaled state, a manual-reset event will release all the waiting threads for execution, 
+while an auto-reset event will only release one of the waiting threads.</p>
+
+<p>Events are often used when one thread performs some work and then signals another thread to 
+perform work that depends on the work it has just performed. The event is created in a 
+non-signaled state, and then after the thread completes its work, it sets the event to a signaled 
+state. At this point, the waiting thread is released and can continue its operation.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">EventWaitHandle</code> can be used like this:</p>
+<pre><code class="language-C++">EventWaitHandle event1( true );
+EventWaitHandle event2( true );
+Thread thread( [&amp;event1, &amp;event2]( )
+{
+    puts( "Background thread signalling event1" );
+    event1.Signal( );
+    puts( "Background thread waiting for event2" );
+    event2.Wait( );
+} );
+
+puts( "Main thread waiting for event1" );
+event1.Wait( );
+puts( "Main thread signalling event2" );
+event2.Signal( );
+puts( "Main thread waiting for background thread to terminate" );
+thread.Wait( );
+</code></pre>
+<p>Outputs:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Main thread waiting for event1
+Background thread signalling event1
+Background thread waiting for event2
+Main thread signalling event2
+Main thread waiting for background thread to terminate
+</code></pre></div></div>
+<h4 id="constructors">Constructors</h4>
+<p><code class="language-plaintext highlighter-rouge">EventWaitHandle</code> objects can be constructed in several ways, and the default 
+constructor creates an empty object that can be move assigned another <code class="language-plaintext highlighter-rouge">EventWaitHandle</code>.</p>
+<pre><code class="language-C++">constexpr EventWaitHandle( ) noexcept;
+explicit EventWaitHandle( bool manualReset, bool initialState = false,
+                        EventWaitHandleRights desiredAccess = EventWaitHandleRights::FullControl,
+                        LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit EventWaitHandle( LPCWSTR name, bool manualReset = true, bool initialState = false,
+                        EventWaitHandleRights desiredAccess = EventWaitHandleRights::FullControl,
+                        LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit EventWaitHandle( LPCSTR name, bool manualReset = true, bool initialState = false,
+                        EventWaitHandleRights desiredAccess = EventWaitHandleRights::FullControl,
+                        LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit EventWaitHandle( const std::wstring&amp; name, bool manualReset = true, 
+                        bool initialState = false,
+                        EventWaitHandleRights desiredAccess = EventWaitHandleRights::FullControl,
+                        LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit EventWaitHandle( const std::string&amp; name, bool manualReset = true, 
+                        bool initialState = false,
+                        EventWaitHandleRights desiredAccess = EventWaitHandleRights::FullControl,
+                        LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+</code></pre>
+
+<p>If <code class="language-plaintext highlighter-rouge">manualReset</code> is set to <code class="language-plaintext highlighter-rouge">true</code>, the constructor creates a manual-reset event, 
+otherwise, it creates an auto-reset event.</p>
+
+<p><code class="language-plaintext highlighter-rouge">initialState</code> specifies that the event will be created in a signaled state.</p>
+
+<p>When a manual-reset event is signaled, it remains signaled until it is reset to 
+non-signaled by the <code class="language-plaintext highlighter-rouge">ResetEvent()</code> function. All waiting threads, or threads that 
+later begin to wait for the event, will be released when the object’s state is signaled.</p>
+
+<p>When an auto-reset event is signaled, it remains signaled until a single waiting thread 
+is released, then the system automatically resets the state to non-signaled. 
+If no threads are waiting, the auto-reset event remains signaled.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">name</code> argument specifies a name for the event and the length must not be greater 
+than <code class="language-plaintext highlighter-rouge">MAX_PATH</code>. If the name matches an existing event object, a handle to that event 
+is created and the <code class="language-plaintext highlighter-rouge">manualReset</code> and <code class="language-plaintext highlighter-rouge">initialState</code> arguments are ignored.</p>
+
+<p><code class="language-plaintext highlighter-rouge">securityAttributes</code> specifies the <code class="language-plaintext highlighter-rouge">SECURITY_ATTRIBUTES</code> for the event. When the 
+<code class="language-plaintext highlighter-rouge">securityAttributes</code> is <code class="language-plaintext highlighter-rouge">nullptr</code>, the event gets a default security descriptor 
+with ACLs from the primary or impersonation token of the creating thread.</p>
+
+<p><code class="language-plaintext highlighter-rouge">desiredAccess</code> specifies the access mask for the event using values from the 
+<code class="language-plaintext highlighter-rouge">EventWaitHandleRights</code> enumeration which can be combined using the <code class="language-plaintext highlighter-rouge">|</code> operator.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">None</code>: No rights</li>
+  <li><code class="language-plaintext highlighter-rouge">Delete</code>: The right to delete a named event</li>
+  <li><code class="language-plaintext highlighter-rouge">ReadPermissions</code>: The right to open and copy the access rules and audit rules for a named event</li>
+  <li><code class="language-plaintext highlighter-rouge">Synchronize</code>: The right to wait on a named event</li>
+  <li><code class="language-plaintext highlighter-rouge">ChangePermissions</code>: The right to change the security and audit rules associated with a named event</li>
+  <li><code class="language-plaintext highlighter-rouge">TakeOwnership</code>: The right to change the owner of a named event</li>
+  <li><code class="language-plaintext highlighter-rouge">Modify</code>: The right to set or reset the signaled state of a named event</li>
+  <li><code class="language-plaintext highlighter-rouge">FullControl</code>: The right to exert full control over a named event, and to modify its access rules and audit rules</li>
+</ul>
+
+<h4 id="openexisting-and-tryopenexisting">OpenExisting and TryOpenExisting</h4>
+<p>To access an existing event object, we use the <code class="language-plaintext highlighter-rouge">OpenExisting(…)</code> function, which has the following overloads:</p>
+<pre><code class="language-C++">static EventWaitHandle OpenExisting( LPCWSTR name,
+                            EventWaitHandleRights desiredAccess = EventWaitHandleRights::Synchronize | EventWaitHandleRights::Modify,
+                            bool inheritHandle = false );
+static EventWaitHandle OpenExisting( LPCSTR name,
+                            EventWaitHandleRights desiredAccess = EventWaitHandleRights::Synchronize | EventWaitHandleRights::Modify,
+                            bool inheritHandle = false );
+static EventWaitHandle OpenExisting( const std::wstring&amp; name,
+                            EventWaitHandleRights desiredAccess = EventWaitHandleRights::Synchronize | EventWaitHandleRights::Modify,
+                            bool inheritHandle = false );
+static EventWaitHandle OpenExisting( const std::string&amp; name,
+                            EventWaitHandleRights desiredAccess = EventWaitHandleRights::Synchronize | EventWaitHandleRights::Modify,
+                            bool inheritHandle = false );
+</code></pre>
+
+<p>The <code class="language-plaintext highlighter-rouge">OpenExisting(…)</code> functions will throw an exception if the event cannot be 
+opened, while the <code class="language-plaintext highlighter-rouge">TryOpenExisting(…)</code> functions will return an empty <code class="language-plaintext highlighter-rouge">EventWaitHandle</code>.</p>
+
+<pre><code class="language-C++">static EventWaitHandle TryOpenExisting( LPCWSTR name,
+                            EventWaitHandleRights desiredAccess = EventWaitHandleRights::Synchronize | EventWaitHandleRights::Modify,
+                            bool inheritHandle = false );
+static EventWaitHandle TryOpenExisting( LPCSTR name,
+                            EventWaitHandleRights desiredAccess = EventWaitHandleRights::Synchronize | EventWaitHandleRights::Modify,
+                            bool inheritHandle = false );
+static EventWaitHandle TryOpenExisting( const std::wstring&amp; name,
+                            EventWaitHandleRights desiredAccess = EventWaitHandleRights::Synchronize | EventWaitHandleRights::Modify,
+                            bool inheritHandle = false );
+static EventWaitHandle TryOpenExisting( const std::string&amp; name,
+                            EventWaitHandleRights desiredAccess = EventWaitHandleRights::Synchronize | EventWaitHandleRights::Modify,
+                            bool inheritHandle = false );
+</code></pre>
+
+<h4 id="pulseevent">PulseEvent</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">PulseEvent()</code> function sets the event to the signaled state and then resets it to the 
+non-signaled state after releasing the waiting threads as specified by the event type.</p>
+<pre><code class="language-C++">void PulseEvent( ) const;
+</code></pre>
+<p>A manual-reset event will release all the threads that can be released immediately. 
+The function then resets the state of the event to non-signaled and returns.</p>
+
+<p>An auto-reset event will release a single waiting thread and then reset the state of 
+the event to non-signaled.</p>
+
+<p>According to the documentation for the <code class="language-plaintext highlighter-rouge">PulseEvent(…)</code> Windows API function, this 
+function should be avoided:</p>
+
+<blockquote>
+  <p>A thread waiting on a synchronization object can be momentarily removed from 
+the wait state by a kernel-mode APC, and then returned to the wait state after 
+the APC is complete. If the call to PulseEvent occurs during the time when the 
+thread has been removed from the wait state, the thread will not be released 
+because PulseEvent releases only those threads that are waiting at the moment 
+it is called. Therefore, PulseEvent is unreliable and should not be used by 
+new applications.</p>
+</blockquote>
+
+<h4 id="setevent-and-signal">SetEvent and Signal</h4>
+
+<p><code class="language-plaintext highlighter-rouge">SetEvent</code> and <code class="language-plaintext highlighter-rouge">Signal</code> sets the signaled state of the event object.</p>
+<pre><code class="language-C++">void SetEvent( ) const;
+void Signal( ) const;
+</code></pre>
+<p><code class="language-plaintext highlighter-rouge">Signal</code> just calls <code class="language-plaintext highlighter-rouge">SetEvent</code>, but using it can often make the intent behind the 
+calling code clearer.</p>
+
+<p>Setting an event that is already in the signaled state has no effect.</p>
+
+<p>A manual-reset event remains signaled until it is set explicitly to the non-signaled 
+state by a call to the <code class="language-plaintext highlighter-rouge">ResetEvent()</code> function. Waiting threads, and threads that begin 
+a wait operation for the event, will be released while the state of the event is signaled.</p>
+
+<p>An auto-reset event is signaled until a single waiting thread is released, it is then reset 
+to non-signaled automatically.</p>
+
+<h4 id="resetevent-reset-and-unlock">ResetEvent, Reset and unlock</h4>
+
+<p><code class="language-plaintext highlighter-rouge">ResetEvent</code>, <code class="language-plaintext highlighter-rouge">Reset</code> and <code class="language-plaintext highlighter-rouge">unlock</code> sets the event to a non-signaled state.</p>
+
+<pre><code class="language-C++">void ResetEvent( ) const;
+void Reset( ) const;
+void unlock( ) const;
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">Reset</code> and <code class="language-plaintext highlighter-rouge">unlock</code> just calls <code class="language-plaintext highlighter-rouge">ResetEvent</code>. By implementing unlock, the class meets the 
+<a href="https://en.cppreference.com/w/cpp/named_req/BasicLockable">BasicLockable</a> requirements, 
+allowing us to use templates such as <a href="https://en.cppreference.com/w/cpp/thread/lock_guard"><code class="language-plaintext highlighter-rouge">std::lock_guard</code></a> to wait on the event and automatically 
+reset the event when the lock goes out of scope. Depending on the design, this may make sense.</p>
+
+<h3 id="mutex">Mutex</h3>
+<p>The <code class="language-plaintext highlighter-rouge">Mutex</code> is used to ensure that a thread has mutual exclusive access to an object.</p>
+
+<p>The thread that owns a mutex can perform multiple wait operations on the <code class="language-plaintext highlighter-rouge">Mutex</code> without 
+blocking its execution. This prevents the thread from deadlocking while waiting for a mutex 
+that it owns. To release ownership of the mutex, the thread must call <code class="language-plaintext highlighter-rouge">ReleaseMutex</code> once 
+for each successful wait operation.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Mutex</code> is a synchronization object that is set to signaled when it is not owned by a 
+thread, and non-signaled when it is owned.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Mutex</code> class wraps the mutex kernel object and manage the lifetime of the handle. 
+The class meets the <a href="https://en.cppreference.com/w/cpp/named_req/BasicLockable">BasicLockable</a> requirements, 
+allowing us to use templates such as <a href="https://en.cppreference.com/w/cpp/thread/unique_lock"><code class="language-plaintext highlighter-rouge">std::unique_lock</code></a> to acquire and release ownership 
+of a mutex kernel object.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Mutex</code> class can be used like this:</p>
+<pre><code class="language-C++">size_t counter = 0;
+Mutex mutex( true );
+ThreadGroup threadGroup;
+
+for ( int i = 0; i &lt; 100; ++i )
+{
+    threadGroup.Add( [i, &amp;mutex, &amp;counter]( )
+    {
+        auto id = i + 1;
+        for ( int i = 0; i &lt; 10; ++i )
+        {
+            printf( "T%d: waiting\n", id );
+            std::unique_lock lock( mutex );
+            printf( "T%d: acquired mutex\n", id );
+            ++counter;
+            printf( "T%d: value %zu\n", id, counter );
+        }
+    } );
+}
+
+mutex.unlock( );
+puts( "Main thread waiting on background threads" );
+threadGroup.join();
+printf( "Final value %zu\n", counter );
+</code></pre>
+
+<p>The example creates one hundred threads, where each thread takes a lock on the mutex and 
+increments the value of counter ten times. The mutex is initially held by the main thread 
+of the program and none of the “counter” threads can proceed until all the threads are created.</p>
+
+<p>Output:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Main thread waiting on background threads
+T1: waiting
+T13: waiting
+T2: waiting
+T3: waiting
+T4: waiting
+T5: waiting
+T6: waiting
+T7: waiting
+T20: waiting
+  ...
+  ...
+T100: waiting
+Main thread waiting on background threads
+T83: acquired mutex
+T83: value 2
+T83: waiting
+T76: acquired mutex
+T76: value 3
+T76: waiting
+  ...
+  ...
+
+T3: value 998
+T1: acquired mutex
+T1: value 999
+T2: acquired mutex
+T2: value 1000
+Final value 1000
+</code></pre></div></div>
+
+<h4 id="constructors-1">Constructors</h4>
+
+<p>Mutex objects can be constructed in several ways, and the default constructor 
+creates an empty object that can be move assigned another Mutex.</p>
+<pre><code class="language-C++">constexpr Mutex( ) noexcept;
+explicit Mutex( bool initiallyOwned,
+            MutexRights desiredAccess = MutexRights::FullControl,
+            LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit Mutex( LPCWSTR name, bool initiallyOwned = true,
+            MutexRights desiredAccess = MutexRights::FullControl,
+            LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit Mutex( LPCSTR name, bool initiallyOwned = true,
+            MutexRights desiredAccess = MutexRights::FullControl,
+            LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit Mutex( const std::wstring&amp; name, bool initiallyOwned = true,
+            MutexRights desiredAccess = MutexRights::FullControl,
+            LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit Mutex( const std::string&amp; name, bool initiallyOwned = true,
+            MutexRights desiredAccess = MutexRights::FullControl,
+            LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+</code></pre>
+
+<p>If the caller created the mutex object and the <code class="language-plaintext highlighter-rouge">initiallyOwned</code> argument is <code class="language-plaintext highlighter-rouge">true</code>, the calling 
+thread gets ownership of the newly created mutex object. More than one process can call <code class="language-plaintext highlighter-rouge">CreateMutex</code>, 
+or <code class="language-plaintext highlighter-rouge">CreateMutexEx</code> which is called by the Mutex constructors, to create the same named mutex. The 
+first process will create the mutex, and the other processes will just open a handle to the existing 
+mutex. This allows multiple processes to get handles to the same mutex, without forcing the user 
+to make sure that the creating process is started first. If we do this, then we should set 
+<code class="language-plaintext highlighter-rouge">initiallyOwned</code> to false to avoid uncertainty about which process has the initial ownership.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">name</code> argument specifies a name for the mutex object and the length must not be greater 
+than <code class="language-plaintext highlighter-rouge">MAX_PATH</code>. If the name matches an existing mutex object, a handle to that mutex is created 
+and the <code class="language-plaintext highlighter-rouge">initiallyOwned</code> argument is ignored.</p>
+
+<p><code class="language-plaintext highlighter-rouge">securityAttributes</code> specifies the <code class="language-plaintext highlighter-rouge">SECURITY_ATTRIBUTES</code> for the mutex. When the <code class="language-plaintext highlighter-rouge">securityAttributes</code> 
+is <code class="language-plaintext highlighter-rouge">nullptr</code>, the mutex gets a default security descriptor with ACLs from the primary or impersonation 
+token of the creating thread.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">desiredAccess</code> specifies the access mask for the mutex using values from the <code class="language-plaintext highlighter-rouge">MutexRights</code> enumeration that can be combined using the ‘</td>
+      <td>’ operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">None</code>: No rights</li>
+  <li><code class="language-plaintext highlighter-rouge">Delete</code>: The right to delete a named mutex</li>
+  <li><code class="language-plaintext highlighter-rouge">ReadPermissions</code>: The right to open and copy the access rules and audit rules for a named mutex</li>
+  <li><code class="language-plaintext highlighter-rouge">Synchronize</code>: The right to wait on a named mutex</li>
+  <li><code class="language-plaintext highlighter-rouge">ChangePermissions</code>: The right to change the security and audit rules associated with a named mutex</li>
+  <li><code class="language-plaintext highlighter-rouge">TakeOwnership</code>: The right to change the owner of a named mutex</li>
+  <li><code class="language-plaintext highlighter-rouge">Modify</code>: The right to set or reset the signaled state of a named mutex</li>
+  <li><code class="language-plaintext highlighter-rouge">FullControl</code>: The right to exert full control over a named mutex, and to modify its access rules and audit rules</li>
+</ul>
+
+<h4 id="openexisting-and-tryopenexisting-1">OpenExisting and TryOpenExisting</h4>
+
+<p>To access an existing mutex object, we use the <code class="language-plaintext highlighter-rouge">OpenExisting(…)</code> function, which has the following overloads:</p>
+<pre><code class="language-C++">static Mutex OpenExisting( LPCWSTR name,
+                        MutexRights desiredAccess = MutexRights::Synchronize | MutexRights::Modify,
+                        bool inheritHandle = false );
+static Mutex OpenExisting( LPCSTR name,
+                        MutexRights desiredAccess = MutexRights::Synchronize | MutexRights::Modify,
+                        bool inheritHandle = false );
+static Mutex OpenExisting( const std::wstring&amp; name,
+                        MutexRights desiredAccess = MutexRights::Synchronize | MutexRights::Modify,
+                        bool inheritHandle = false );
+static Mutex OpenExisting( const std::string&amp; name,
+                        MutexRights desiredAccess = MutexRights::Synchronize | MutexRights::Modify,
+                        bool inheritHandle = false );
+</code></pre>
+
+<p>The <code class="language-plaintext highlighter-rouge">OpenExisting(…)</code> functions will throw an exception if the mutex cannot be opened, while 
+the <code class="language-plaintext highlighter-rouge">TryOpenExisting(…)</code> functions will return an empty Mutex.</p>
+
+<pre><code class="language-C++">static Mutex TryOpenExisting( LPCWSTR name,
+                        MutexRights desiredAccess = MutexRights::Synchronize | MutexRights::Modify,
+                        bool inheritHandle = false );
+static Mutex TryOpenExisting( LPCSTR name,
+                        MutexRights desiredAccess = MutexRights::Synchronize | MutexRights::Modify,
+                        bool inheritHandle = false );
+static Mutex TryOpenExisting( const std::wstring&amp; name,
+                        MutexRights desiredAccess = MutexRights::Synchronize | MutexRights::Modify,
+                        bool inheritHandle = false );
+static Mutex TryOpenExisting( const std::string&amp; name,
+                            MutexRights desiredAccess = MutexRights::Synchronize | MutexRights::Modify,
+                        bool inheritHandle = false );
+</code></pre>
+
+<h4 id="releasemutex-release-and-unlock">ReleaseMutex, Release and unlock</h4>
+<p><code class="language-plaintext highlighter-rouge">ReleaseMutex()</code> releases ownership of the mutex, and the <code class="language-plaintext highlighter-rouge">Release()</code> and <code class="language-plaintext highlighter-rouge">unlock()</code> functions 
+just calls the <code class="language-plaintext highlighter-rouge">ReleaseMutex()</code> function.</p>
+
+<h3 id="semaphore">Semaphore</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Semaphore</code> objects can be used for resource counting. A semaphore has a maximum count and a 
+current count. Use the maximum count to hold the maximum number of resources protected by the 
+semaphore, and the current count for the number of currently available resources.</p>
+
+<p>The state of a semaphore is set to signaled when its count is greater than zero, and 
+non-signaled when its count is zero.</p>
+
+<p>Each successful wait on a <code class="language-plaintext highlighter-rouge">Semaphore</code> will cause the count to be decremented by 1, and we 
+must call the <code class="language-plaintext highlighter-rouge">Release(…)</code> function to increase the semaphore’s count by a specified amount.</p>
+
+<p>The count can never be less than zero or greater than the maximum value.</p>
+
+<p>The class meets the <a href="https://en.cppreference.com/w/cpp/named_req/BasicLockable">BasicLockable</a> requirements, 
+allowing us to use templates such as <a href="https://en.cppreference.com/w/cpp/thread/unique_lock"><code class="language-plaintext highlighter-rouge">std::unique_lock</code></a> 
+to wait on a Semaphore and call <code class="language-plaintext highlighter-rouge">ReleaseSemaphore(1)</code> when the lock goes out of scope.</p>
+
+<p>Here is a “toy” resource manager demonstrating a typical use case for a <code class="language-plaintext highlighter-rouge">Semaphore</code> object:</p>
+
+<pre><code class="language-C++">namespace ResourceManager
+{
+    struct Resource
+    {
+        long long counter_ = 0;
+    };
+
+    class Resources
+    {
+        constexpr static size_t ResourceCount = 5;
+        Semaphore semaphore_;
+        Mutex mutex_;
+        std::array&lt;Resource, ResourceCount&gt; resources_;
+        std::list&lt; Resource* &gt; freeList_;
+    public:
+        Resources( )
+            : semaphore_( ResourceCount, ResourceCount ), mutex_( false )
+        {
+            for ( auto&amp; r : resources_ )
+            {
+                freeList_.push_back( &amp;r );
+            }
+        }
+        Resource* GetResource( )
+        {
+            if ( semaphore_.Wait( ) )
+            {
+                std::unique_lock lock( mutex_ );
+                auto* result = freeList_.back( );
+                freeList_.pop_back( );
+                return result;
+            }
+            return nullptr;
+        }
+        void Release( Resource* r )
+        {
+            std::unique_lock lock( mutex_ );
+            freeList_.push_back( r );
+            semaphore_.Release( );
+        }
+        size_t Sum( ) const
+        {
+            size_t result = 0;
+            for ( auto&amp; r : resources_ )
+            {
+                result += r.counter_;
+            }
+            return result;
+        }
+    };
+}
+</code></pre>
+<p>The <code class="language-plaintext highlighter-rouge">Resources</code> class manages access to five <code class="language-plaintext highlighter-rouge">Resource</code> objects.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Semaphore</code> is used to provide notification to the waiting threads that a resource is available 
+for allocation, while the <code class="language-plaintext highlighter-rouge">Mutex</code> is used to protect the list of free resources.</p>
+
+<p>To try it out, we let one hundred threads share a <code class="language-plaintext highlighter-rouge">Resources</code> object and get access to <code class="language-plaintext highlighter-rouge">Resource</code> objects 
+as they become available:</p>
+
+<pre><code class="language-C++">using namespace ResourceManager;
+Resources resources;
+
+ThreadGroup threadGroup;
+for ( int i = 0; i &lt; 100; ++i )
+{
+    threadGroup.Add( [i, &amp;resources]( )
+    {
+        auto id = i + 1;
+        for ( int i = 0; i &lt; 10; ++i )
+        {
+            printf( "T%d: waiting\n", id );
+            auto* r = resources.GetResource( );
+            printf( "T%d: acquired resource\n", id );
+            r-&gt;counter_++;
+            printf( "T%d: value %zu\n", id, r-&gt;counter_ );
+            resources.Release( r );
+        }
+    } );
+}
+puts( "Main thread waiting on background threads" );
+threadGroup.join( );
+auto sum = resources.Sum( );
+printf( "Final value %zu\n", sum );
+</code></pre>
+
+<p>Output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>T1: waiting
+T2: waiting
+T1: acquired resource
+T1: value 1
+T3: waiting
+T3: acquired resource
+T3: value 2
+T5: waiting
+T5: acquired resource
+T5: value 3
+T9: waiting
+T18: waiting
+  ...
+  ...
+T100: acquired resource
+T100: value 190
+T92: acquired resource
+T92: value 200
+T98: acquired resource
+T98: value 207
+T74: acquired resource
+T74: value 178
+T81: acquired resource
+T81: value 225
+Final value 1000
+</code></pre></div></div>
+
+<h4 id="constructors-2">Constructors</h4>
+<p>Semaphore objects can be constructed in several ways, and the default constructor creates 
+an empty object that can be move assigned another Semaphore.</p>
+
+<pre><code class="language-C++">constexpr Semaphore( ) noexcept;
+explicit Semaphore( long initialCount, long maximumCount,
+                    SemaphoreRights desiredAccess = SemaphoreRights::FullControl,
+                    LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit Semaphore( LPCWSTR name, long initialCount, long maximumCount,
+                    SemaphoreRights desiredAccess = SemaphoreRights::FullControl,
+                    LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit Semaphore( LPCSTR name, long initialCount, long maximumCount,
+                    SemaphoreRights desiredAccess = SemaphoreRights::FullControl,
+                    LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit Semaphore( const std::wstring&amp; name, long initialCount, long maximumCount,
+                    SemaphoreRights desiredAccess = SemaphoreRights::FullControl,
+                    LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit Semaphore( const std::string&amp; name, long initialCount, long maximumCount,
+                    SemaphoreRights desiredAccess = SemaphoreRights::FullControl,
+                    LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+</code></pre>
+<p>The <code class="language-plaintext highlighter-rouge">initialCount</code> argument specifies the initial count for the <code class="language-plaintext highlighter-rouge">Semaphore</code> object, 
+and must not be less than zero or greater than the maximumCount argument. A semaphore is 
+non-signaled when its count is zero and signaled when it is greater. The count is decremented 
+by one for each thread that successfully waits on a semaphore. The count is increased by calling the 
+<code class="language-plaintext highlighter-rouge">ReleaseSemaphore(…)</code> function with the amount to increase the count by as its argument.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">maximumCount</code> argument specifies the maximum count for the <code class="language-plaintext highlighter-rouge">Semaphore</code> object, which must be <code class="language-plaintext highlighter-rouge">1</code> or greater.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">name</code> argument specifies a name for the semaphore object and the length must not be 
+greater than <code class="language-plaintext highlighter-rouge">MAX_PATH</code>. If the name matches an existing semaphore object, a handle to that 
+semaphore is created and the initialCount and maximumCount arguments are ignored.</p>
+
+<p><code class="language-plaintext highlighter-rouge">securityAttributes</code> specifies the <code class="language-plaintext highlighter-rouge">SECURITY_ATTRIBUTES</code> for the semaphore. When the <code class="language-plaintext highlighter-rouge">securityAttributes</code> 
+is <code class="language-plaintext highlighter-rouge">nullptr</code>, the semaphore gets a default security descriptor with ACLs from the primary or 
+impersonation token of the creating thread.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">desiredAccess</code> specifies the access mask for the semaphore using values from the <code class="language-plaintext highlighter-rouge">SemaphoreRights</code> enumeration which can be combined using the ‘</td>
+      <td>’ operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">None</code>: No rights</li>
+  <li><code class="language-plaintext highlighter-rouge">Delete</code>: The right to delete a named semaphore</li>
+  <li><code class="language-plaintext highlighter-rouge">ReadPermissions</code>: The right to open and copy the access rules and audit rules for a named semaphore</li>
+  <li><code class="language-plaintext highlighter-rouge">Synchronize</code>: The right to wait on a named semaphore</li>
+  <li><code class="language-plaintext highlighter-rouge">ChangePermissions</code>: The right to change the security and audit rules associated with a named semaphore</li>
+  <li><code class="language-plaintext highlighter-rouge">TakeOwnership</code>: The right to change the owner of a named semaphore</li>
+  <li><code class="language-plaintext highlighter-rouge">Modify</code>: The right to set or reset the signaled state of a named semaphore</li>
+  <li><code class="language-plaintext highlighter-rouge">FullControl</code>: The right to exert full control over a named semaphore, and to modify its access rules and audit rules</li>
+</ul>
+
+<h4 id="openexisting-and-tryopenexisting-2">OpenExisting and TryOpenExisting</h4>
+<p>To access an existing semaphore object, we use the <code class="language-plaintext highlighter-rouge">OpenExisting(…)</code> function, 
+which has the following overloads:</p>
+
+<pre><code class="language-C++">static Semaphore OpenExisting( LPCWSTR name,
+                                SemaphoreRights desiredAccess = SemaphoreRights::Synchronize | SemaphoreRights::Modify,
+                                bool inheritHandle = false );
+static Semaphore OpenExisting( LPCSTR name,
+                                SemaphoreRights desiredAccess = SemaphoreRights::Synchronize | SemaphoreRights::Modify,
+                                bool inheritHandle = false );
+static Semaphore OpenExisting( const std::wstring&amp; name,
+                                SemaphoreRights desiredAccess = SemaphoreRights::Synchronize | SemaphoreRights::Modify,
+                                bool inheritHandle = false );
+static Semaphore OpenExisting( const std::string&amp; name,
+                                SemaphoreRights desiredAccess = SemaphoreRights::Synchronize | SemaphoreRights::Modify,
+                                bool inheritHandle = false );
+</code></pre>
+
+<p>The <code class="language-plaintext highlighter-rouge">OpenExisting(…)</code> functions will throw an exception if the semaphore cannot be opened, 
+while the <code class="language-plaintext highlighter-rouge">TryOpenExisting(…)</code> functions will return an empty <code class="language-plaintext highlighter-rouge">Semaphore</code>.</p>
+
+<pre><code class="language-C++">static Semaphore TryOpenExisting( LPCWSTR name,
+                                SemaphoreRights desiredAccess = SemaphoreRights::Synchronize | SemaphoreRights::Modify,
+                                bool inheritHandle = false );
+static Semaphore TryOpenExisting( LPCSTR name,
+                                SemaphoreRights desiredAccess = SemaphoreRights::Synchronize | SemaphoreRights::Modify,
+                                bool inheritHandle = false );
+static Semaphore TryOpenExisting( const std::wstring&amp; name,
+                                SemaphoreRights desiredAccess = SemaphoreRights::Synchronize | SemaphoreRights::Modify,
+                                bool inheritHandle = false );
+static Semaphore TryOpenExisting( const std::string&amp; name,
+                                SemaphoreRights desiredAccess = SemaphoreRights::Synchronize | SemaphoreRights::Modify,
+                                bool inheritHandle = false );
+</code></pre>
+
+<h4 id="releasesemaphore-release-and-unlock">ReleaseSemaphore, Release and unlock</h4>
+<p><code class="language-plaintext highlighter-rouge">ReleaseSemaphore</code> increases the count of the semaphore by the specified amount:</p>
+
+<pre><code class="language-C++">long ReleaseSemaphore( long releaseCount = 1 ) const;
+long Release( long releaseCount = 1 ) const;
+void unlock( ) const;
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">Release</code> just calls <code class="language-plaintext highlighter-rouge">ReleaseSemaphore</code>, as does <code class="language-plaintext highlighter-rouge">unlock()</code> with <code class="language-plaintext highlighter-rouge">releaseCount</code> set to one.</p>
+
+<h3 id="waitabletimer">WaitableTimer</h3>
+
+<p>A waitable timer is a synchronization object whose state is set to signaled when the specified 
+due time arrives. The Windows API provides two waitable timer types: manual-reset and synchronization; 
+and both can be periodic.</p>
+
+<p>A manual-reset waitable timer is signaled until the <code class="language-plaintext highlighter-rouge">SetWaitableTimer</code> function is called to set a 
+new due time; while a synchronization timer is in its signaled state until a single thread is 
+released after successfully waiting on the waitable timer.</p>
+
+<p>The following fragment creates a thread that will wait for five seconds on the timer.</p>
+
+<pre><code class="language-C++">std::cout &lt;&lt; "Start: " &lt;&lt; DateTime::Now( ) &lt;&lt; std::endl;
+EventWaitHandle event( true );
+WaitableTimer timer(true, TimeSpan::FromSeconds( 5 ) );
+Thread thread( [&amp;timer, &amp;event]( )
+{
+    std::cout &lt;&lt; "Background thread waiting on timer" &lt;&lt; std::endl;
+    timer.Wait( );
+    std::cout &lt;&lt; "Background thread continued: " &lt;&lt; DateTime::Now( ) &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Background thread signalling event" &lt;&lt; std::endl;
+    event.Signal( );
+} );
+std::cout &lt;&lt; "Main thread waiting for event" &lt;&lt; std::endl;
+event.Wait( );
+std::cout &lt;&lt; "Main thread waiting for background thread to terminate" &lt;&lt; std::endl;
+thread.Wait( );
+</code></pre>
+
+<p>Outputs:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Start: 03.09.2020 22 : 02 : 59
+Main thread waiting for event
+Background thread waiting on timer
+Background thread continued : 03.09.2020 22 : 03 : 04
+Background thread signalling event
+Main thread waiting for background thread to terminate
+</code></pre></div></div>
+
+<p>Constructors</p>
+
+<p><code class="language-plaintext highlighter-rouge">WaitableTimer</code> objects can be constructed in several ways, and the default constructor creates 
+an empty object that can be move assigned another <code class="language-plaintext highlighter-rouge">WaitableTimer</code>.</p>
+
+<pre><code class="language-C++">constexpr WaitableTimer( ) noexcept;
+explicit WaitableTimer( bool manualReset,
+                        WaitableTimerRights desiredAccess = WaitableTimerRights::FullControl,
+                        LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit WaitableTimer( bool manualReset, const DateTime&amp; dueTime,
+                        const TimeSpan&amp; interval = TimeSpan( ),
+                        WaitableTimerRights desiredAccess = WaitableTimerRights::FullControl,
+                        LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit WaitableTimer( bool manualReset, const TimeSpan&amp; dueTime,
+                        const TimeSpan&amp; interval = TimeSpan( ),
+                        WaitableTimerRights desiredAccess = WaitableTimerRights::FullControl,
+                        LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit WaitableTimer( LPCWSTR name, bool manualReset = true,
+                        WaitableTimerRights desiredAccess = WaitableTimerRights::FullControl,
+                        LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit WaitableTimer( LPCSTR name, bool manualReset = true,
+                        WaitableTimerRights desiredAccess = WaitableTimerRights::FullControl,
+                        LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit WaitableTimer( const std::wstring&amp; name, bool manualReset = true,
+                        WaitableTimerRights desiredAccess = WaitableTimerRights::FullControl,
+                        LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+explicit WaitableTimer( const std::string&amp; name, bool manualReset = true,
+                        WaitableTimerRights desiredAccess = WaitableTimerRights::FullControl,
+                        LPSECURITY_ATTRIBUTES securityAttributes = nullptr );
+</code></pre>
+
+<p>If the <code class="language-plaintext highlighter-rouge">manualReset</code> argument is true, the constructor creates a manual-reset waitable 
+timer; if false, a synchronization waitable timer is created that is automatically 
+reset after releasing a single waiting thread.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">dueTime</code> argument specifies when the waitable timer will enter the signaled state. 
+If <code class="language-plaintext highlighter-rouge">dueTime</code> is a <code class="language-plaintext highlighter-rouge">DateTime</code>, then the <code class="language-plaintext highlighter-rouge">dueTime</code> is absolute, and when <code class="language-plaintext highlighter-rouge">dueTime</code> is a <code class="language-plaintext highlighter-rouge">TimeSpan</code>, 
+the dueTime is relative.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">name</code> argument specifies a name for the waitable timer object and the length must not be greater 
+than <code class="language-plaintext highlighter-rouge">MAX_PATH</code>. If the name matches an existing waitable timer object, a handle to that waitable timer 
+is created and the <code class="language-plaintext highlighter-rouge">manualReset</code> argument is ignored.</p>
+
+<p><code class="language-plaintext highlighter-rouge">securityAttributes</code> specifies the <code class="language-plaintext highlighter-rouge">SECURITY_ATTRIBUTES</code> for the waitable timer. When the 
+<code class="language-plaintext highlighter-rouge">securityAttributes</code> is <code class="language-plaintext highlighter-rouge">nullptr</code>, the waitable timer gets a default security descriptor 
+with ACLs from the primary or impersonation token of the creating thread.</p>
+
+<p><code class="language-plaintext highlighter-rouge">desiredAccess</code> specifies the access mask for the waitable timer using values from the 
+<code class="language-plaintext highlighter-rouge">WaitableTimerRights</code> enumeration that can be combined using the ‘|’ operator.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">None</code>: No rights</li>
+  <li><code class="language-plaintext highlighter-rouge">Delete</code>: The right to delete a named waitable timer</li>
+  <li><code class="language-plaintext highlighter-rouge">ReadPermissions</code>: The right to open and copy the access rules and audit rules for a named waitable timer</li>
+  <li><code class="language-plaintext highlighter-rouge">Synchronize</code>: The right to wait on a named waitable timer</li>
+  <li><code class="language-plaintext highlighter-rouge">ChangePermissions</code>: The right to change the security and audit rules associated with a named waitable timer</li>
+  <li><code class="language-plaintext highlighter-rouge">TakeOwnership</code>: The right to change the owner of a named waitable timer</li>
+  <li><code class="language-plaintext highlighter-rouge">Modify</code>: The right to set or reset the signaled state of a named waitable timer</li>
+  <li><code class="language-plaintext highlighter-rouge">FullControl</code>: The right to exert full control over a named waitable timer, and to modify its access rules and audit rules</li>
+</ul>
+
+<h4 id="openexisting-and-tryopenexisting-3">OpenExisting and TryOpenExisting</h4>
+
+<p>To access an existing waitable timer object, we use the <code class="language-plaintext highlighter-rouge">OpenExisting(…)</code> function, which 
+has the following overloads:</p>
+
+<pre><code class="language-C++">static WaitableTimer OpenExisting( LPCWSTR name,
+                                WaitableTimerRights desiredAccess =  WaitableTimerRights::Synchronize | WaitableTimerRights::Modify,
+                                bool inheritHandle = false );
+static WaitableTimer OpenExisting( LPCSTR name,
+                                WaitableTimerRights desiredAccess = WaitableTimerRights::Synchronize | WaitableTimerRights::Modify,
+                                bool inheritHandle = false );
+static WaitableTimer OpenExisting( const std::wstring&amp; name,
+                                WaitableTimerRights desiredAccess =  WaitableTimerRights::Synchronize | WaitableTimerRights::Modify,
+                                bool inheritHandle = false );
+static WaitableTimer OpenExisting( const std::string&amp; name,
+                                WaitableTimerRights desiredAccess =  WaitableTimerRights::Synchronize | WaitableTimerRights::Modify,
+                                bool inheritHandle = false );
+</code></pre>
+
+<p>The <code class="language-plaintext highlighter-rouge">OpenExisting(…)</code> functions will throw an exception if the waitable timer cannot be opened, while 
+the <code class="language-plaintext highlighter-rouge">TryOpenExisting(…)</code> functions will return an empty <code class="language-plaintext highlighter-rouge">WaitableTimer</code>.</p>
+
+<pre><code class="language-C++">static WaitableTimer TryOpenExisting( LPCWSTR name,
+                                WaitableTimerRights desiredAccess = WaitableTimerRights::Synchronize | WaitableTimerRights::Modify,
+                                bool inheritHandle = false );
+static WaitableTimer TryOpenExisting( LPCSTR name,
+                                WaitableTimerRights desiredAccess =  WaitableTimerRights::Synchronize | WaitableTimerRights::Modify,
+                                bool inheritHandle = false );
+static WaitableTimer TryOpenExisting( const std::wstring&amp; name,
+                                WaitableTimerRights desiredAccess =  WaitableTimerRights::Synchronize | WaitableTimerRights::Modify,
+                                bool inheritHandle = false );
+static WaitableTimer TryOpenExisting( const std::string&amp; name,
+                                WaitableTimerRights desiredAccess =  WaitableTimerRights::Synchronize | WaitableTimerRights::Modify,
+                                bool inheritHandle = false );
+</code></pre>
+
+<h4 id="settimer">SetTimer</h4>
+<p>The <code class="language-plaintext highlighter-rouge">SetTimer</code> function activates the waitable timer, and when the due time arrives, 
+the waitable timer is signaled.</p>
+
+<pre><code class="language-C++">void SetTimer( LARGE_INTEGER dueTime, DWORD interval,
+                PTIMERAPCROUTINE completionRoutine,
+                void* argToCompletionRoutine,
+                bool resumeSystemIfSuspended ) const;
+void SetTimer( LARGE_INTEGER dueTime, DWORD interval,
+                bool resumeSystemIfSuspended = false ) const;
+void SetTimer( const DateTime&amp; dueTime, const TimeSpan&amp; interval,
+                PTIMERAPCROUTINE completionRoutine,
+                void* argToCompletionRoutine,
+                bool resumeSystemIfSuspended ) const;
+void SetTimer( const TimeSpan&amp; dueTime, const TimeSpan&amp; interval,
+                PTIMERAPCROUTINE completionRoutine,
+                void* argToCompletionRoutine,
+                bool resumeSystemIfSuspended ) const;
+void SetTimer( const DateTime&amp; dueTime, const TimeSpan&amp; interval = TimeSpan( ),
+                bool resumeSystemIfSuspended = false ) const;
+void SetTimer( const TimeSpan&amp; dueTime, const TimeSpan&amp; interval = TimeSpan( ),
+                bool resumeSystemIfSuspended = false ) const;
+</code></pre>
+
+<p>The <code class="language-plaintext highlighter-rouge">dueTime</code> specifies the time for when the timer will be set to signaled. Use a positive 
+value to set the absolute time in UTC as FILETIME, or a negative value to set the relative 
+time with a 100-nanosecond resolution. When <code class="language-plaintext highlighter-rouge">dueTime</code> is given as a <code class="language-plaintext highlighter-rouge">DateTime</code>, the argument 
+specifies an absolute dueTime, and when given as a <code class="language-plaintext highlighter-rouge">TimeSpan</code>, the dueTime will be relative.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">interval</code> argument gives the period of the timer, in milliseconds. When <code class="language-plaintext highlighter-rouge">interval</code> is zero, 
+the waitable timer will be signaled once, and when <code class="language-plaintext highlighter-rouge">interval</code> is greater than zero, the waitable 
+timer will be periodic and automatically reactivated each time the period elapses, until the timer 
+is cancelled using the <code class="language-plaintext highlighter-rouge">Cancel()</code> function or reset using the <code class="language-plaintext highlighter-rouge">SetTimer(…)</code> function. When <code class="language-plaintext highlighter-rouge">interval</code> 
+is given as a <code class="language-plaintext highlighter-rouge">TimeSpan</code>, the argument will be converted to milliseconds.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">completionRoutine</code> argument specifies a pointer to an optional completion routine.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">argToCompletionRoutine</code> argument specifies an argument to be passed to the optional completion routine.</p>
+
+<p>If the <code class="language-plaintext highlighter-rouge">resumeSystemIfSuspended</code> argument is <code class="language-plaintext highlighter-rouge">true</code>, the system will be restored from suspended 
+power conservation mode when the waitable timer becomes signaled.</p>
+
+<h3 id="thread">Thread</h3>
+<p>A thread is also a synchronization object that we can wait on. <code class="language-plaintext highlighter-rouge">Thread</code> objects enter their signaled 
+state when they are done executing.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Thread</code> class can be used like the <code class="language-plaintext highlighter-rouge">std::thread</code> class, and provides additional Windows specific functions.</p>
+
+<p><strong>NOTE</strong>: We should not use the Win x86/x64 <code class="language-plaintext highlighter-rouge">ExitThread(…)</code> or the c runtime <code class="language-plaintext highlighter-rouge">_endthread(…)</code> or <code class="language-plaintext highlighter-rouge">_endthreadex(…)</code> 
+functions to terminate a thread, both this implementation and the implementation of <code class="language-plaintext highlighter-rouge">std::thread</code> that is currently 
+provided with Visual C++ use a <code class="language-plaintext highlighter-rouge">std::unique_ptr&lt;&gt;</code> to hold a pointer to a <code class="language-plaintext highlighter-rouge">tuple&lt;…&gt;</code> containing the thread arguments, 
+so the stack needs to be properly unwound to allow the std::unique_ptr&lt;&gt; destructor to delete this tuple.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Thread</code> class does provide an alternative that is implemented by throwing an exception that is not derived 
+from std::exception. This is not a bullet proof mechanism as any catch all, <code class="language-plaintext highlighter-rouge">catch(…)</code>, will catch this exception.</p>
+
+<p>The best way to exit a thread is to return from the thread function.</p>
+
+<pre><code class="language-C++">Thread thread( []( ) { return 5; } );
+thread.join( );
+auto exitCode = thread.ExitCode( );
+printf( "Thread exited with exit code %d\n", exitCode );
+</code></pre>
+<p>Outputs:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Thread exited with exit code 5
+</code></pre></div></div>
+
+<p>The implementation of <code class="language-plaintext highlighter-rouge">std::thread</code> provided with Visual C++ closes the handle to the thread 
+in its implementation of <code class="language-plaintext highlighter-rouge">join( )</code>, making it impossible to perform further operations on 
+the object. The <code class="language-plaintext highlighter-rouge">Thread</code> class will keep the handle until we call Close(), or the object goes out of scope.</p>
+
+<h4 id="constructors-3">Constructors</h4>
+
+<p><code class="language-plaintext highlighter-rouge">Thread</code> objects can be constructed in several ways, and the default constructor creates an 
+empty object that can be move assigned another <code class="language-plaintext highlighter-rouge">Thread</code>.</p>
+
+<pre><code class="language-C++">constexpr Thread( ) noexcept;
+constexpr Thread( HANDLE handle, UInt32 threadId ) noexcept;
+
+template &lt;class Function, class... Args&gt;
+    requires ( std::is_same_v&lt;std::remove_cvref_t&lt;Function&gt;, Thread&gt; == false )
+explicit Thread( Function&amp;&amp; function, Args&amp;&amp;... args );
+
+template &lt;class Function, class... Args&gt;
+    requires ( std::is_same_v&lt;std::remove_cvref_t&lt;Function&gt;, Thread&gt; == false )
+explicit Thread( LPSECURITY_ATTRIBUTES securityAttributes, 
+                   Function&amp;&amp; function, Args&amp;&amp;... args );
+</code></pre>
+<p>The second constructor initializes a <code class="language-plaintext highlighter-rouge">Thread</code> object using the handle and <code class="language-plaintext highlighter-rouge">threadId</code> arguments, 
+which are assumed to be valid.</p>
+
+<p>The two last constructors create a new thread, executing <code class="language-plaintext highlighter-rouge">std::invoke</code> using a decayed copy 
+of function and its decayed arguments that have been passed to the new thread.</p>
+
+<p><code class="language-plaintext highlighter-rouge">securityAttributes</code> specifies the <code class="language-plaintext highlighter-rouge">SECURITY_ATTRIBUTES</code> for the thread. When the <code class="language-plaintext highlighter-rouge">securityAttributes</code> 
+is <code class="language-plaintext highlighter-rouge">nullptr</code>, the thread gets a default security descriptor with ACLs from the primary or impersonation 
+token of the creating thread.</p>
+
+<h3 id="process">Process</h3>
+<p>A process is also a synchronization object that we can wait on. <code class="language-plaintext highlighter-rouge">Process</code> objects enter their signaled 
+state when they are done executing.</p>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Harlinn</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Harlinn</li><li><a class="u-email" href="mailto:espen@harlinn.no">espen@harlinn.no</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Harlinn"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Harlinn</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is my personal Github site, </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
