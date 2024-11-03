@@ -3,20 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>DataReaderWrapper | Harlinn</title>
+<title>DbXGen | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="DataReaderWrapper" />
+<meta property="og:title" content="DbXGen" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is my personal Github site," />
 <meta property="og:description" content="This is my personal Github site," />
-<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/DotNet/Libraries/Harlinn.Common.Core.Net/Data/SqlClient/DataReaderWrapper.html" />
-<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/DotNet/Libraries/Harlinn.Common.Core.Net/Data/SqlClient/DataReaderWrapper.html" />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/Tools/DbXGen/DbXGen.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/Tools/DbXGen/DbXGen.html" />
 <meta property="og:site_name" content="Harlinn" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="DataReaderWrapper" />
+<meta property="twitter:title" content="DbXGen" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal Github site,","headline":"DataReaderWrapper","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/DotNet/Libraries/Harlinn.Common.Core.Net/Data/SqlClient/DataReaderWrapper.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal Github site,","headline":"DbXGen","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Tools/DbXGen/DbXGen.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /></head>
 <body><header class="site-header" role="banner">
@@ -39,13 +39,56 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">DataReaderWrapper</h1>
+    <h1 class="post-title">DbXGen</h1>
   </header>
 
   <div class="post-content">
-    <h1 id="datareaderwrapper">DataReaderWrapper</h1>
+    <h1 id="dbxgen">DbXGen</h1>
 
-<p><code class="language-plaintext highlighter-rouge">DataReaderWrapper</code> is a wrapper for the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.data.sqlclient.sqldatareader">Microsoft.Data.SqlClient.SqlDataReader</a> class.</p>
+<p>DbXGen is a tool that takes an object oriented data model in the form of an XML file, and produces:</p>
+
+<ul>
+  <li>SQL scripts for Microsoft SQL Server required to create:
+    <ul>
+      <li>The tables that will hold the data.</li>
+      <li>A set of views that makes it easier to extract data from the database.</li>
+      <li>Stored procedures for inserting, updating and deleting data into/from the database.</li>
+    </ul>
+  </li>
+  <li>C# code that:
+    <ul>
+      <li>Wraps the generated stored procedures.</li>
+      <li>Custom DataReaders that implements the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.data.idatareader">IDataReader</a> interface
+for each class specified by the data model.</li>
+      <li>Data transfer object classes for each class specified by the data model.</li>
+      <li>An interface, <code class="language-plaintext highlighter-rouge">IDataContext</code>, that specifies all the operations that can be performed against the database.</li>
+      <li>An implementation of <code class="language-plaintext highlighter-rouge">IDataContext</code> called MsSqlDataContext.</li>
+      <li>Entity classes for for each class specified by the data model.</li>
+      <li>An <code class="language-plaintext highlighter-rouge">EntityContext</code> class that tracks changes to the entity objects.</li>
+    </ul>
+  </li>
+  <li>C++ code that
+    <ul>
+      <li>Wraps the generated stored procedures.</li>
+      <li>Custom DataReaders for each class specified by the data model.</li>
+      <li>Data transfer object classes for each class specified by the data model.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>DbXGen is still under development.</p>
+
+<p>Read <a href="DbXGen.Introduction.html">Introduction to DbXGen</a></p>
+
+<p>Read <a href="DbXGen.Model.html">Model</a> to learn about DbXGen data models.</p>
+
+<p>Read <a href="DbXGen.Options.html">Options</a> to learn about DbXGen options.</p>
+
+<p>Read <a href="DbXGen.MsSQL.html">Microsoft SQL Server</a> to learn about code generation for Microsoft SQL Server.</p>
+
+<p>Read <a href="DbXGen.CSharp.html">C#</a> to learn about the C# code generation.</p>
+
+<p>Read <a href="DbXGen.Cpp.html">C++</a> to learn about the C# code generation.</p>
 
 
   </div>

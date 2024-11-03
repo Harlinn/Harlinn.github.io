@@ -31,7 +31,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/Cpp/Cpp.html">C++</a><a class="page-link" href="/Dart/Dart.html">Dart</a><a class="page-link" href="/DotNet/DotNet.html">.Net</a><a class="page-link" href="/Cpp/Harlinn.Windows/Harlinn.Windows.html">Harlinn.Windows</a><a class="page-link" href="/Java/Java.html">Java</a><a class="page-link" href="/Julia/Julia.html">Julia</a><a class="page-link" href="/Python/Python.html">Python</a><a class="page-link" href="/R/R.html">R</a><a class="page-link" href="/Rust/Rust.html">Rust</a><a class="page-link" href="/about/">About</a></div>
+        <div class="trigger"><a class="page-link" href="/Cpp/Cpp.html">C++</a><a class="page-link" href="/Dart/Dart.html">Dart</a><a class="page-link" href="/Databases/Databases.html">Databases</a><a class="page-link" href="/DotNet/DotNet.html">.Net</a><a class="page-link" href="/Java/Java.html">Java</a><a class="page-link" href="/Julia/Julia.html">Julia</a><a class="page-link" href="/Python/Python.html">Python</a><a class="page-link" href="/R/R.html">R</a><a class="page-link" href="/Rust/Rust.html">Rust</a><a class="page-link" href="/about/">About</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -43,7 +43,316 @@
   </header>
 
   <div class="post-content">
-    <h2 id="harlinnodbc">Harlinn.ODBC</h2>
+    <h1 id="harlinnodbc">Harlinn.ODBC</h1>
+
+<p>Harlinn.ODBC is my C++ library for working with the Open Database Connectivity (ODBC) C API 
+based on the <a href="/Cpp/Harlinn.Windows/Harlinn.Common.Core/Harlinn.Common.Core.html">Harlinn.Common.Core</a> C++ library.</p>
+
+<p>I’ve primarily developed this library for use with Microsoft’s SQL Server, but there is nothing 
+that prevents you from using it with other database management systems.</p>
+
+<p>You need to include the HODBC.h header file to use the library, and the types exposed by the library 
+resides within the Harlinn::ODBC namespace.</p>
+
+<p>I think it’s fair to say that the C based ODBC API is already sort of object oriented, exposed through 
+the four handle types identified by the HandleType enumeration:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">HandleType::Environment</code></li>
+  <li><code class="language-plaintext highlighter-rouge">HandleType::Connection</code></li>
+  <li><code class="language-plaintext highlighter-rouge">HandleType::Statement</code></li>
+  <li><code class="language-plaintext highlighter-rouge">HandleType::Descriptor</code></li>
+</ol>
+
+<p>The library wraps each handle type as a C++ class. The classes are move constructible and move assignable, 
+but not copy constructible nor copy assignable.</p>
+
+<p>If an error occurs while calling the ODBC C API, the library will throw an exception, making it 
+straightforward to use:</p>
+
+<pre><code class="language-C++">ODBC::Environment environment = ODBC::Environment::Create( );
+auto connection = environment.Connect( DataSourceName );
+connection.SetCurrentCatalog( DatabaseName );
+auto statement = connection.CreateStatement( );
+statement.Prepare( L"SELECT Id, LastName, FirstName, MiddleName FROM Persons FOR BROWSE" );
+auto baseName = statement.ColumnBaseTableName( 1 );
+BOOST_CHECK( baseName == L"Persons" );
+
+</code></pre>
+
+<p>This is not an ODBC tutorial, and if you really want to dive into the ODBC C API then 
+<a href="https://learn.microsoft.com/en-us/sql/odbc/microsoft-open-database-connectivity-odbc">Microsoft Open Database Connectivity</a> 
+is a very good place to start.</p>
+
+<h2 id="the-handle-classes">The Handle Classes</h2>
+
+<p>The handle classes are all derived from the <code class="language-plaintext highlighter-rouge">SqlHandle</code> template class, which implements the 
+functionality that ensures that handles are freed when expected, and if it’s a connection 
+handle: Closed before freed.</p>
+
+<h3 id="the-environment-class">The Environment class</h3>
+<p>Every ODBC application needs an initialized ODBC environment handle, and you call the static 
+<code class="language-plaintext highlighter-rouge">Environment::Create()</code> function to create an <code class="language-plaintext highlighter-rouge">Environment</code> object wrapping an initialized 
+ODBC environment handle.</p>
+
+<p>The environment holds global data on behalf of the application, such as:</p>
+
+<ul>
+  <li>The state of the environment, including the current state of environment level attributes.</li>
+  <li>The handles to the connections currently allocated by the environment.</li>
+  <li>The current environment level diagnostics.</li>
+  <li>Available ODBC drivers</li>
+  <li>Configured data sources</li>
+</ul>
+
+<p>An ODBC driver is a dynamic link library that implements ODBC function calls, and a data 
+source is a named set of configuration data required by an ODBC driver to establish a connection 
+with the source of the data, which can be a datafile or a full-blown relational database 
+management server such as IBM DB2, Microsoft SQL Server and Oracle RDBMS.</p>
+
+<h3 id="the-connection-class">The Connection class</h3>
+<p><code class="language-plaintext highlighter-rouge">Connection</code> handles represent a connection between an application and a data source. 
+The connection contains data about:</p>
+
+<ul>
+  <li>The state of the connection, including the values of connection level attributes.</li>
+  <li>The handles of the descriptors and statements allocated for the connection.</li>
+  <li>The connection level diagnostic information.</li>
+</ul>
+
+<p>Once you have an <code class="language-plaintext highlighter-rouge">Environment</code> object, you can use it to connect to an ODBC data source 
+by calling the <code class="language-plaintext highlighter-rouge">Connect</code> function on the environment object, passing the name of a data 
+source, configured using the <a href="https://learn.microsoft.com/en-us/sql/odbc/admin/odbc-data-source-administrator">ODBC Data Source Administrator</a>, as its argument:</p>
+
+<pre><code class="language-C++">auto connection = environment.Connect( DataSourceName );
+</code></pre>
+
+<h3 id="the-statement-class">The Statement class</h3>
+
+<p>A <code class="language-plaintext highlighter-rouge">Statement</code> represents all the information associated with an SQL statement, including:</p>
+
+<ul>
+  <li>The state of the statement, including the values of statement level attributes.</li>
+  <li>The result sets created by the statement.</li>
+  <li>The parameters used in the execution of the SQL statement.</li>
+  <li>The addresses of the application variables bound to the statement’s result set columns and parameters.</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">Statement</code> objects are created using the <code class="language-plaintext highlighter-rouge">Connection::CreateStatement( )</code> function:</p>
+
+<pre><code class="language-C++">auto statement = connection.CreateStatement( );
+</code></pre>
+
+<h3 id="the-descriptor-class">The Descriptor class</h3>
+
+<p>A <code class="language-plaintext highlighter-rouge">Descriptor</code> represents metadata that describes the columns of a statement or the 
+parameters for a SQL statement. When an application allocates a statement ODBC automatically 
+creates four descriptors:</p>
+
+<ul>
+  <li>Application Parameter Descriptor (APD). Contains information about the application buffers bound to the parameters in a SQL statement, such as their addresses, lengths, and C data types.</li>
+  <li>Implementation Parameter Descriptor (IPD). Contains information about the parameters in a SQL statement, such as their SQL data types, lengths, and nullability.</li>
+  <li>Application Row Descriptor (ARD). Contains information about the application buffers bound to the columns in a result set, such as their addresses, lengths, and C data types.</li>
+  <li>Implementation Row Descriptor (IRD). Contains information about the columns in a result set, such as their SQL data types, lengths, and nullability.</li>
+</ul>
+
+<h2 id="the-support-classes">The support classes</h2>
+
+<p>The library contains several support classes that facilitates efficient data exchange 
+between the ODBC C API and your application.</p>
+
+<h3 id="datareader">DataReader</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">DataReader</code> class mimics, to some extent, the .Net <a href="https://learn.microsoft.com/en-us/dotnet/api/system.data.idatareader">IDataReader</a> 
+interface. It provides methods that allows you to iterate over a result set, while 
+retrieving column values for each row in the result set:</p>
+
+<pre><code class="language-C++">ODBC::Environment environment = ODBC::Environment::Create( );
+auto connection = environment.Connect( DataSourceName );
+connection.SetCurrentCatalog( DatabaseName );
+auto statement = connection.CreateStatement( );
+auto reader = statement.ExecuteReader( L"SELECT Id, FloatValue FROM TestTable1" );
+if( reader-&gt;Read( ) )
+{
+    auto dbDouble = reader-&gt;GetDBDouble( 2 );
+    BOOST_CHECK( dbDouble.has_value( ) );
+    BOOST_CHECK( dbDouble.value( ) == 1.0 );
+}
+</code></pre>
+
+<p>The above example can easily be understood by anyone that has worked 
+with ADO.Net, but it also highlights two key differences:</p>
+
+<ul>
+  <li>There is no <code class="language-plaintext highlighter-rouge">IsDBNull(...)</code> function, as information about whether the column is <code class="language-plaintext highlighter-rouge">NULL</code>, 
+or not, is part of the <code class="language-plaintext highlighter-rouge">DBDouble</code> object returned by the <code class="language-plaintext highlighter-rouge">GetDBDouble(...)</code> function.</li>
+  <li>Column ordinals start with 1 not 0.</li>
+</ul>
+
+<h3 id="nullable-types">Nullable types</h3>
+<p>The library implements a wide range of types capable of holding column values and their 
+associated <code class="language-plaintext highlighter-rouge">NULL</code> indicator. All of them can be bound to statement input parameters, and 
+most of them can be bound to result set columns and statement output parameters.</p>
+
+<h4 id="fixeddbwidestring">FixedDBWideString</h4>
+
+<p><code class="language-plaintext highlighter-rouge">FixedDBWideString</code> is a template providing a simple C++ string implementation backed by 
+a zero terminated fixed size <code class="language-plaintext highlighter-rouge">wchar_t</code> array.  It’s intended for use with smaller <code class="language-plaintext highlighter-rouge">nvarchar</code> and <code class="language-plaintext highlighter-rouge">nchar</code> columns.</p>
+
+<h4 id="fixeddbansistring">FixedDBAnsiString</h4>
+
+<p><code class="language-plaintext highlighter-rouge">FixedDBAnsiString</code> is a template providing a simple C++ string implementation backed by 
+a zero terminated fixed size <code class="language-plaintext highlighter-rouge">char</code> array. It’s intended for use with smaller <code class="language-plaintext highlighter-rouge">varchar</code> and <code class="language-plaintext highlighter-rouge">char</code> columns.</p>
+
+<h4 id="fixeddbbinary">FixedDBBinary</h4>
+
+<p><code class="language-plaintext highlighter-rouge">FixedDBBinary</code> is a template providing a simple C++ binary buffer implementation backed by a 
+fixed size <code class="language-plaintext highlighter-rouge">Byte</code> array. It’s intended for use with smaller <code class="language-plaintext highlighter-rouge">binary</code> and <code class="language-plaintext highlighter-rouge">varbinary</code> columns.</p>
+
+<h4 id="dbboolean">DBBoolean</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBBoolean</code> is intended for use with <code class="language-plaintext highlighter-rouge">bit</code> columns.</p>
+
+<h4 id="dbsbyte">DBSByte</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBSByte</code> is intended for use with signed <code class="language-plaintext highlighter-rouge">tinyint</code> columns.</p>
+
+<h4 id="dbbyte">DBByte</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBByte</code> is intended for use with unsigned <code class="language-plaintext highlighter-rouge">tinyint</code> columns.</p>
+
+<h4 id="dbint16">DBInt16</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBInt16</code> is intended for use with signed <code class="language-plaintext highlighter-rouge">smallint</code> columns.</p>
+
+<h4 id="dbuint16">DBUInt16</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBUInt16</code> is intended for use with unsigned <code class="language-plaintext highlighter-rouge">smallint</code> columns.</p>
+
+<h4 id="dbint32">DBInt32</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBInt32</code> is intended for use with signed <code class="language-plaintext highlighter-rouge">int</code> columns.</p>
+
+<h4 id="dbuint32">DBUInt32</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBUInt32</code> is intended for use with unsigned <code class="language-plaintext highlighter-rouge">int</code> columns.</p>
+
+<h4 id="dbint64">DBInt64</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBInt64</code> is intended for use with signed <code class="language-plaintext highlighter-rouge">bigint</code> columns.</p>
+
+<h4 id="dbuint64">DBUInt64</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBUInt64</code> is intended for use with unsigned <code class="language-plaintext highlighter-rouge">bigint</code> columns.</p>
+
+<h4 id="dbenum">DBEnum</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBEnum</code> is intended for use with enums, mapping the value to/from the underlying integer type.</p>
+
+<h4 id="dbsingle">DBSingle</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBSingle</code> is intended for use with 32-bit floating point columns.</p>
+
+<h4 id="dbdouble">DBDouble</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBDouble</code> is intended for use with 64-bit floating point columns.</p>
+
+<h4 id="dbdatetime">DBDateTime</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBDateTime</code> is intended for use with signed <code class="language-plaintext highlighter-rouge">bigint</code> columns, storing the value in ‘ticks’.</p>
+
+<h4 id="dbtimespan">DBTimeSpan</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBTimeSpan</code> is intended for use with signed <code class="language-plaintext highlighter-rouge">bigint</code> columns, storing the value in ‘ticks’.</p>
+
+<h4 id="dbguid">DBGuid</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBGuid</code> is intended for use with <code class="language-plaintext highlighter-rouge">uniqueidentifier</code> columns.</p>
+
+<h4 id="dbcurrency">DBCurrency</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBCurrency</code> is intended for use with signed <code class="language-plaintext highlighter-rouge">bigint</code> columns, storing the scaled value of <code class="language-plaintext highlighter-rouge">Currency</code> objects.</p>
+
+<h4 id="dbwidestring">DBWideString</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBWideString</code> is intended for use with larger <code class="language-plaintext highlighter-rouge">nvarchar</code> and <code class="language-plaintext highlighter-rouge">nchar</code> columns. Do not bind result set columns 
+and output parameters to this type.</p>
+
+<h4 id="dbansistring">DBAnsiString</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBAnsiString</code> is intended for use with larger <code class="language-plaintext highlighter-rouge">varchar</code> and <code class="language-plaintext highlighter-rouge">char</code> columns. Do not bind result set columns 
+and output parameters to this type.</p>
+
+<h4 id="dbbinary">DBBinary</h4>
+<p><code class="language-plaintext highlighter-rouge">DBBinary</code> is intended for use with larger <code class="language-plaintext highlighter-rouge">binary</code> and <code class="language-plaintext highlighter-rouge">varbinary</code> columns. Do not bind result set columns 
+and output parameters to this type.</p>
+
+<h4 id="dbtimestamp">DBTimeStamp</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBTimeStamp</code> is intended for use with <code class="language-plaintext highlighter-rouge">datetime</code> and <code class="language-plaintext highlighter-rouge">datetime2</code> columns.</p>
+
+<h4 id="dbtime">DBTime</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBTime</code> is intended for use with <code class="language-plaintext highlighter-rouge">time</code> columns with a resolution of one second.</p>
+
+<h4 id="dbtime2">DBTime2</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBTime2</code> is intended for use with time columns with a resolution of one 100 nanoseconds, 
+and it’s a Microsoft SQL Server specific extension.</p>
+
+<h4 id="dbinterval">DBInterval</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBInterval</code> is intended for use with interval columns, like Oracles <code class="language-plaintext highlighter-rouge">INTERVAL YEAR TO MONTH</code> and <code class="language-plaintext highlighter-rouge">INTERVAL DAY TO SECOND</code></p>
+
+<h4 id="dbtimestampoffset">DBTimestampOffset</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBTimestampOffset</code> is intended for use with <code class="language-plaintext highlighter-rouge">datetimeoffset</code> columns.</p>
+
+<h4 id="dbnumeric">DBNumeric</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBNumeric</code> is intended for use with <code class="language-plaintext highlighter-rouge">decimal</code> and <code class="language-plaintext highlighter-rouge">numeric</code> columns.</p>
+
+<h4 id="dbmoney">DBMoney</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBMoney</code> is intended for use with <code class="language-plaintext highlighter-rouge">money</code> and <code class="language-plaintext highlighter-rouge">smallmoney</code> columns.</p>
+
+<h4 id="dbrowversion">DBRowVersion</h4>
+
+<p><code class="language-plaintext highlighter-rouge">DBRowVersion</code> is intended for use with <code class="language-plaintext highlighter-rouge">rowversion</code> columns.</p>
+
+<h3 id="non-nullable-types">Non-nullable types</h3>
+
+<p><code class="language-plaintext highlighter-rouge">bool</code>, <code class="language-plaintext highlighter-rouge">SByte</code>, <code class="language-plaintext highlighter-rouge">Byte</code>, <code class="language-plaintext highlighter-rouge">Int16</code>, <code class="language-plaintext highlighter-rouge">UInt16</code>, <code class="language-plaintext highlighter-rouge">Int32</code>, <code class="language-plaintext highlighter-rouge">UInt32</code>, <code class="language-plaintext highlighter-rouge">Int64</code>, <code class="language-plaintext highlighter-rouge">UInt64</code>, enums, 
+<code class="language-plaintext highlighter-rouge">float</code>, <code class="language-plaintext highlighter-rouge">double</code>, <code class="language-plaintext highlighter-rouge">DataTime</code>, <code class="language-plaintext highlighter-rouge">TimeSpan</code>, <code class="language-plaintext highlighter-rouge">Currency</code>, <code class="language-plaintext highlighter-rouge">WideString</code>, <code class="language-plaintext highlighter-rouge">AnsiString</code>, <code class="language-plaintext highlighter-rouge">Binary</code>, 
+<code class="language-plaintext highlighter-rouge">TimeStamp</code>, <code class="language-plaintext highlighter-rouge">Time</code>, <code class="language-plaintext highlighter-rouge">Time2</code>, <code class="language-plaintext highlighter-rouge">Interval</code>, <code class="language-plaintext highlighter-rouge">TimestampOffset</code>, <code class="language-plaintext highlighter-rouge">Numeric</code>, <code class="language-plaintext highlighter-rouge">Money</code> and <code class="language-plaintext highlighter-rouge">RowVersion</code> 
+are intended for use with the same column types, with the same restrictions, as their 
+DB prefixed counterparts - but without the ability to assign or retrieve <code class="language-plaintext highlighter-rouge">NULL</code> values.</p>
+
+<h2 id="how-to-use-the-library">How to use the library</h2>
+
+<h2 id="common-steps">Common steps</h2>
+
+<p>Before you can execute an SQL statement against an existing SQL Server database you must:</p>
+
+<ol>
+  <li>Create a data source using the ODBC Data Source Administrator.</li>
+  <li>Create an Environment object.</li>
+  <li>Create a Connection object.</li>
+</ol>
+
+<p>Once you have created a data source, you can establish a connection using two lines of code:</p>
+
+<pre><code class="language-C++">ODBC::Environment environment = ODBC::Environment::Create( );
+auto connection = environment.Connect( DataSourceName );
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">ODBC::Environment::Create( )</code> allocates an ODBC environment handle and calls <code class="language-plaintext highlighter-rouge">SQLSetEnvAttr</code> to 
+set the <code class="language-plaintext highlighter-rouge">SQL_ATTR_APP_ODBC_VER</code> environment attribute to <code class="language-plaintext highlighter-rouge">SQL_OV_ODBC3_80</code>, indicating to ODBC 
+that the calling application conforms to the ODBC 3.8 specification.</p>
+
+<p>It then uses the newly created environment to connect to the data source configuration specified 
+by <code class="language-plaintext highlighter-rouge">DataSourceName</code>.</p>
+
 
   </div>
 
