@@ -1,0 +1,7 @@
+var struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01unsigned_01char_01_4 =
+[
+    [ "Array", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01unsigned_01char_01_4.xhtml#a510e09c05ffd8c5f3b5c30f81a1889c7", null ],
+    [ "EmptyArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01unsigned_01char_01_4.xhtml#a171ee335d6aa4069ff8d0dac824caa42", null ],
+    [ "LargeArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01unsigned_01char_01_4.xhtml#a9809a2d98c4c83b6ad2736b8301c4d4e", null ],
+    [ "SmallArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01unsigned_01char_01_4.xhtml#a5e3e351deee0720658ce80e30b8d2f81", null ]
+];

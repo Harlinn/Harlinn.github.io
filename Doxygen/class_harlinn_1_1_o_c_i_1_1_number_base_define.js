@@ -1,0 +1,26 @@
+var class_harlinn_1_1_o_c_i_1_1_number_base_define =
+[
+    [ "Base", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#aa1a29908beb593ea98aff612c29b564f", null ],
+    [ "NumberBaseDefine", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#a26c0cf7ba4145f8eb11666047a7c0b67", null ],
+    [ "NumberBaseDefine", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#ae62aec037889a8529b765df5cdbf68bb", null ],
+    [ "AsBoolean", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#a45fb8e7ca74ab84177dd3ea105bed0c2", null ],
+    [ "AsByte", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#af52a98c1cb3bbe1dae8e872ee0b26336", null ],
+    [ "AsBytes", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#a7c8e64d0a4b1ef396429936a7d4936fd", null ],
+    [ "AsDateTime", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#a76929c4b54f7fc1df1555074e31dd0d4", null ],
+    [ "AsDouble", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#ace2ccb15e1db42c340d4ece1dc6ef07e", null ],
+    [ "AsInt16", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#a279cd6522ce58858e7b2558b911f8173", null ],
+    [ "AsInt32", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#a5d8009e1394856a52ac30a17346b5d32", null ],
+    [ "AsInt64", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#affe06af4baf6bdf5fd4c8dc9ad507dc4", null ],
+    [ "AsSByte", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#a9a174e3651fa93604b2198cca2463792", null ],
+    [ "AsSingle", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#ab8a94e6c9db23369933639bd505ce458", null ],
+    [ "AsString", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#a75b495c671e2950f76c3559c9bfa6503", null ],
+    [ "AsString", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#abd8dee8c7205a4264199121588566944", null ],
+    [ "AsTimeSpan", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#ac3fad50c5514fb04b7846c7e082c292a", null ],
+    [ "AsUInt16", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#a22fae5abd1529d755b428500ff8ea72e", null ],
+    [ "AsUInt32", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#ae021ca45e3d27ce6b0752b422603149d", null ],
+    [ "AsUInt64", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#adf62552bbc3f1e8148cc958319ce09eb", null ],
+    [ "Data", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#a69d4a86a1476e23bc4e82c425179bb01", null ],
+    [ "Initialize", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#aec813f61010180a98ea6a762c79ec06b", null ],
+    [ "data_", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#a3ecb4277264c31eafd84977da33dd232", null ],
+    [ "ExternalType", "class_harlinn_1_1_o_c_i_1_1_number_base_define.xhtml#ad3c7e42606e34b8503f209a9bac65c6e", null ]
+];

@@ -1,0 +1,27 @@
+var class_harlinn_1_1_common_1_1_core_1_1_property_description =
+[
+    [ "Base", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a44127e46fa0223a6f6430b5e8ec18458", null ],
+    [ "CoerceToCanonicalValue", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a4a6ed42956c448922b6423217715c8e1", null ],
+    [ "FormatForDisplay", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#ac57ff73a9bc81a91220f62f496a89dd4", null ],
+    [ "GetAggregationType", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a8dcc792add8e2f17785bd1cc1e711c1c", null ],
+    [ "GetCanonicalName", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a8dd4e2ab75b1cfa0807650657d70da1f", null ],
+    [ "GetColumnState", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a058e78ad819bf486d1f9dc32394922b6", null ],
+    [ "GetConditionType", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#ad7cf71d32099077a6b3b83fe8b956d47", null ],
+    [ "GetConditionType", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a7e7e2571003f85973a2281f44ed3b3aa", null ],
+    [ "GetDefaultColumnWidth", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a4407069187cdb82e0f0cb11af6f6de83", null ],
+    [ "GetDisplayName", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a1c603f8b43e91687c40c8c32ccb1afb0", null ],
+    [ "GetDisplayType", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#ae7a7e602489ee6e4dd0689c45d2e6b9b", null ],
+    [ "GetEditInvitation", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a75a6b836260378db566fc74ec509d1f3", null ],
+    [ "GetEnumTypeList", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#ac4a66c150abb0f72f2493da097774e1c", null ],
+    [ "GetEnumTypeList", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a27e69db06120c18d44f3251814c010f6", null ],
+    [ "GetGroupingRange", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#acb1a7016b91278af7249e5a743db9ffe", null ],
+    [ "GetPropertyKey", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a5b0d02c97353ff2ae6713110fdc57860", null ],
+    [ "GetPropertyType", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#aa4c7c33aea38c5f952b5948b4ffe9439", null ],
+    [ "GetRelativeDescription", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#af0e5ad5d2a0f83a4d3a56f75baff9b1e", null ],
+    [ "GetRelativeDescriptionType", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a161939439d75b5a50bb4397d378f3ebd", null ],
+    [ "GetSortDescription", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a63383b5fe39738eb39500dbd839c3566", null ],
+    [ "GetSortDescriptionLabel", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a0b4334021910e1572d540b21b93cae14", null ],
+    [ "GetTypeFlags", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a4b29371ef863e232e8b64dcb44af498a", null ],
+    [ "GetViewFlags", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#ac2ea6cbfc60bc9a26ef9b075a296e8a5", null ],
+    [ "IsValueCanonical", "class_harlinn_1_1_common_1_1_core_1_1_property_description.xhtml#a0614da3530565d7ecced3881bd576e98", null ]
+];

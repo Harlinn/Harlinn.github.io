@@ -1,0 +1,27 @@
+var class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip =
+[
+    [ "SetBottom", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#a81f542493df7dabb3f08968b684a7db0", null ],
+    [ "SetBottom", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#a03ee74cdd2cc34dcbe3b6680a0443eed", null ],
+    [ "SetBottomLeftRadiusX", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#af8cb52cc7cacab8f7d8b16a9fbac58d7", null ],
+    [ "SetBottomLeftRadiusX", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#a635e5192dbd6538615fb7627c3d51637", null ],
+    [ "SetBottomLeftRadiusY", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#a916e542688e460a9cae31b47985e4359", null ],
+    [ "SetBottomLeftRadiusY", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#ac454b36791210b55ff1840d7d3cc97b2", null ],
+    [ "SetBottomRightRadiusX", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#ae3a45a3bf6cba719b3a10394c2b8b2a3", null ],
+    [ "SetBottomRightRadiusX", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#a9ad70ab81e5492ce1a984384f6cbcb79", null ],
+    [ "SetBottomRightRadiusY", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#a574826ff4d546a7ae1a7829d63ce60d3", null ],
+    [ "SetBottomRightRadiusY", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#adbae86e00832380582abf42c6381e991", null ],
+    [ "SetLeft", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#aa00fdbd9d84fb6af7549a10db278619b", null ],
+    [ "SetLeft", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#ae756f9968d7020b48277098602e2c837", null ],
+    [ "SetRight", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#ac79f4cec4031fb6c19569fa9c06042a8", null ],
+    [ "SetRight", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#aedcb1fa37724194e006b763bfd9263a0", null ],
+    [ "SetTop", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#aafba4e2beb0fe141d2f5610dd6eedade", null ],
+    [ "SetTop", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#a2a5a2c225cac715e5ab12de6a2bbf48c", null ],
+    [ "SetTopLeftRadiusX", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#a38236ca7b26b8eff18bbea9e47e1494d", null ],
+    [ "SetTopLeftRadiusX", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#a8b2b6d83cd321f924e12674e40993fb5", null ],
+    [ "SetTopLeftRadiusY", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#ab5cb56b1201810b9648fbee7ee361520", null ],
+    [ "SetTopLeftRadiusY", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#ade9b5c748ca87d3d27c2b3d254758f2a", null ],
+    [ "SetTopRightRadiusX", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#af1cdf96e4cd70c4f5e8c645bc0bb174a", null ],
+    [ "SetTopRightRadiusX", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#a0f2e798cea38380d602886941ff3c3a0", null ],
+    [ "SetTopRightRadiusY", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#a360b1a548585fe378ab0aff6918a7164", null ],
+    [ "SetTopRightRadiusY", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_composition_rectangle_clip.xhtml#aa2929cc484bbeb9e4950ac7fccc90e9d", null ]
+];

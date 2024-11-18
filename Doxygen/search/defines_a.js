@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['oci_5fautotuned_5fstmt_5fcache_0',['OCI_AUTOTUNED_STMT_CACHE',['../_h_o_c_i_enums_8h.xhtml#a99d2db0a9dbb9200962167198971fc9c',1,'HOCIEnums.h']]],
+  ['oci_5fdirpath_5fdefaults_5fdefault_1',['OCI_DIRPATH_DEFAULTS_DEFAULT',['../_h_o_c_i_enums_8h.xhtml#a59130b92a3cd75cdd65aad3b955abe02',1,'HOCIEnums.h']]],
+  ['oci_5fdirpath_5fdefaults_5fevaluate_5fevery_5frow_2',['OCI_DIRPATH_DEFAULTS_EVALUATE_EVERY_ROW',['../_h_o_c_i_enums_8h.xhtml#ae0dc247caa5de9157eec0493c8bd32dd',1,'HOCIEnums.h']]],
+  ['oci_5fdirpath_5fdefaults_5fevaluate_5fonce_3',['OCI_DIRPATH_DEFAULTS_EVALUATE_ONCE',['../_h_o_c_i_enums_8h.xhtml#a3d62528f3f7a3efe9f550158e8abbe22',1,'HOCIEnums.h']]],
+  ['oci_5fdirpath_5fdefaults_5fignore_4',['OCI_DIRPATH_DEFAULTS_IGNORE',['../_h_o_c_i_enums_8h.xhtml#a11de6d40a82a623aa3104bcc732ffee8',1,'HOCIEnums.h']]],
+  ['oci_5fdirpath_5fdefaults_5fignore_5funsupported_5fevaluate_5fevery_5frow_5',['OCI_DIRPATH_DEFAULTS_IGNORE_UNSUPPORTED_EVALUATE_EVERY_ROW',['../_h_o_c_i_enums_8h.xhtml#ae6eed624026980eeac023b9b4881dae7',1,'HOCIEnums.h']]],
+  ['oci_5fdirpath_5fdefaults_5fignore_5funsupported_5fevaluate_5fonce_6',['OCI_DIRPATH_DEFAULTS_IGNORE_UNSUPPORTED_EVALUATE_ONCE',['../_h_o_c_i_enums_8h.xhtml#aac45dffd314bf7be362b29fa3959267a',1,'HOCIEnums.h']]],
+  ['oci_5fha_5fstatus_5fdown_7',['OCI_HA_STATUS_DOWN',['../_h_o_c_i_enums_8h.xhtml#abee1b3ec41927fd94f6b727ba6d7f360',1,'HOCIEnums.h']]],
+  ['oci_5fha_5fstatus_5fup_8',['OCI_HA_STATUS_UP',['../_h_o_c_i_enums_8h.xhtml#a9862896b7ebb8c41f6aa456975f1286b',1,'HOCIEnums.h']]],
+  ['oci_5fsession_5fstateful_9',['OCI_SESSION_STATEFUL',['../_h_o_c_i_enums_8h.xhtml#a364b9d2602a000b874335ce07e73fe69',1,'HOCIEnums.h']]],
+  ['oci_5fsession_5fstateless_10',['OCI_SESSION_STATELESS',['../_h_o_c_i_enums_8h.xhtml#a003dfaabf7be0a6411eea0b3cd78448c',1,'HOCIEnums.h']]],
+  ['oci_5fsession_5fstateless_5fapp_11',['OCI_SESSION_STATELESS_APP',['../_h_o_c_i_enums_8h.xhtml#ab7843324886cd98d31609f4e61f52974',1,'HOCIEnums.h']]],
+  ['oci_5fsession_5fstateless_5fcal_12',['OCI_SESSION_STATELESS_CAL',['../_h_o_c_i_enums_8h.xhtml#a819532e77b785560a106a411e91a0d78',1,'HOCIEnums.h']]],
+  ['oci_5fsession_5fstateless_5fdef_13',['OCI_SESSION_STATELESS_DEF',['../_h_o_c_i_enums_8h.xhtml#a6a0f5d09457a82caa685a59c79ebd142',1,'HOCIEnums.h']]],
+  ['oci_5fsession_5fstateless_5ftxn_14',['OCI_SESSION_STATELESS_TXN',['../_h_o_c_i_enums_8h.xhtml#a5ae63a7ce8db3fc091d30d5d4822155a',1,'HOCIEnums.h']]],
+  ['oemresource_15',['OEMRESOURCE',['../_h_c_c_def_8h.xhtml#a3a75770af38d05856eb2e9d1867b471c',1,'HCCDef.h']]]
+];

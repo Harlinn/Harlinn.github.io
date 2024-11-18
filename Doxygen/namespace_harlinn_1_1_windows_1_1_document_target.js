@@ -1,0 +1,6 @@
+var namespace_harlinn_1_1_windows_1_1_document_target =
+[
+    [ "PrintDocumentPackageStatusEvent", "class_harlinn_1_1_windows_1_1_document_target_1_1_print_document_package_status_event.xhtml", "class_harlinn_1_1_windows_1_1_document_target_1_1_print_document_package_status_event" ],
+    [ "PrintDocumentPackageTarget", "class_harlinn_1_1_windows_1_1_document_target_1_1_print_document_package_target.xhtml", "class_harlinn_1_1_windows_1_1_document_target_1_1_print_document_package_target" ],
+    [ "PrintDocumentPackageTargetFactory", "class_harlinn_1_1_windows_1_1_document_target_1_1_print_document_package_target_factory.xhtml", "class_harlinn_1_1_windows_1_1_document_target_1_1_print_document_package_target_factory" ]
+];

@@ -1,0 +1,9 @@
+var struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_signed_data_type_resolver_3_01signed_01char_01_4 =
+[
+    [ "MaxValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_signed_data_type_resolver_3_01signed_01char_01_4.xhtml#ad6c84f0e74bae70992e8e43371819f7b", null ],
+    [ "MinusOneValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_signed_data_type_resolver_3_01signed_01char_01_4.xhtml#aada629f007f7247164bea521e9e3d638", null ],
+    [ "MinValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_signed_data_type_resolver_3_01signed_01char_01_4.xhtml#a33640b602ee8eb654dab9bfd11054361", null ],
+    [ "OneValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_signed_data_type_resolver_3_01signed_01char_01_4.xhtml#ac67a4857e95729ef72a4438971b8e6b5", null ],
+    [ "Value", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_signed_data_type_resolver_3_01signed_01char_01_4.xhtml#ae1a9cdfe548b70feba02a4f7360f3534", null ],
+    [ "ZeroValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_signed_data_type_resolver_3_01signed_01char_01_4.xhtml#a2451467d6b82c04070cdfa089b429e6e", null ]
+];

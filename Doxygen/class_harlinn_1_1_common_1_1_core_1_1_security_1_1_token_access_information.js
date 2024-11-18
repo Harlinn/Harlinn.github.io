@@ -1,0 +1,26 @@
+var class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information =
+[
+    [ "Data", "struct_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information_1_1_data.xhtml", "struct_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information_1_1_data" ],
+    [ "ReleaseMethod", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#a128d44c01dcdbc57b8c87113343d80a6", null ],
+    [ "TokenAccessInformation", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#aa1d34bf61dab1de83a8d23bed292f664", null ],
+    [ "TokenAccessInformation", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#a2f6a69f88b92f7c8767c0141b254a222", null ],
+    [ "TokenAccessInformation", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#ab1e72442aa8ab1b01ff09a1a446fd779", null ],
+    [ "TokenAccessInformation", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#ad1c1173dfd9e28af91555e0ff3ff1bee", null ],
+    [ "~TokenAccessInformation", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#a70a10e6c9499b42aebf6ff51dffd4bae", null ],
+    [ "AppContainerNumber", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#afb52c7c8de1a29667e0874f86aea70fd", null ],
+    [ "AuthenticationId", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#afc2589cde57adb6895ba750065ab7155", null ],
+    [ "CapabilitiesHash", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#abf334d623f162a3c108a302cd128f381", null ],
+    [ "Flags", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#ae2aacfa3cc42791d3959509d812c5d55", null ],
+    [ "ImpersonationLevel", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#abca8834690f07ccf93737b8f3cb239d5", null ],
+    [ "MandatoryPolicy", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#a93b6db3f272e49f3ebdadbb42819be9e", null ],
+    [ "operator=", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#a4def6b59f202245a6da13e3122a4be53", null ],
+    [ "operator=", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#a114dd0a2b8f6eea1ec1e874c3d18d0ea", null ],
+    [ "PackageSid", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#a5ea73b9298e9224f561117741bcad234", null ],
+    [ "Privileges", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#ac4e422b428b6385dcdd16aec2ec23e85", null ],
+    [ "RestrictedSidHash", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#a99fe87e67d09aeb04be4db73be0e187f", null ],
+    [ "SidHash", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#a43aa68672da4e971d6550e811dea77eb", null ],
+    [ "TokenType", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#ade3d6f8bcc784beca502c7546825b4a2", null ],
+    [ "TrustLevelSid", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#acc05d2c8d158bc478ff6a4b9caadd34c", null ],
+    [ "data_", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#aafd12cd72cc823f9f53430047c843574", null ],
+    [ "releaseMethod_", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_access_information.xhtml#a5e785a755c28a0a5dc0d7dd104dee29a", null ]
+];

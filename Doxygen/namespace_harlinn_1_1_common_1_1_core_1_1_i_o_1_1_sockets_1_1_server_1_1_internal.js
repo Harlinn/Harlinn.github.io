@@ -1,0 +1,4 @@
+var namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_internal =
+[
+    [ "BufferQueue", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_internal_1_1_buffer_queue.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_internal_1_1_buffer_queue" ]
+];

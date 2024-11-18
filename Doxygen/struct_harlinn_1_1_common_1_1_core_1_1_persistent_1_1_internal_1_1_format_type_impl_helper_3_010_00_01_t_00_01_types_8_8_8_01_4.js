@@ -1,0 +1,5 @@
+var struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_type_impl_helper_3_010_00_01_t_00_01_types_8_8_8_01_4 =
+[
+    [ "FormatType", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_type_impl_helper_3_010_00_01_t_00_01_types_8_8_8_01_4.xhtml#a7475fbb51e1f74a5d9d8e73c6e24d148", null ],
+    [ "Format", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_type_impl_helper_3_010_00_01_t_00_01_types_8_8_8_01_4.xhtml#a1bf971696df0370a73178960d16b088f", null ]
+];

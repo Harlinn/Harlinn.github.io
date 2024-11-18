@@ -1,0 +1,8 @@
+var class_harlinn_1_1_common_1_1_core_1_1_runtime_1_1_remoting_1_1_metadata_services_1_1_s_u_d_s_generator_exception =
+[
+    [ "Base", "class_harlinn_1_1_common_1_1_core_1_1_runtime_1_1_remoting_1_1_metadata_services_1_1_s_u_d_s_generator_exception.xhtml#a0b04c8070d1074d22796f510988f45bc", null ],
+    [ "Type", "class_harlinn_1_1_common_1_1_core_1_1_runtime_1_1_remoting_1_1_metadata_services_1_1_s_u_d_s_generator_exception.xhtml#a8b75ab032ce432d75d6aeb65dc93c193", null ],
+    [ "HARLINN_COMMON_DECLARE_STANDARD_EXCEPTION_MEMBERS", "class_harlinn_1_1_common_1_1_core_1_1_runtime_1_1_remoting_1_1_metadata_services_1_1_s_u_d_s_generator_exception.xhtml#a8ba2fb7ae6d102e9b094cf4115d88cd7", null ],
+    [ "HRESULTForExceptionType", "class_harlinn_1_1_common_1_1_core_1_1_runtime_1_1_remoting_1_1_metadata_services_1_1_s_u_d_s_generator_exception.xhtml#aeea0767aaaaefceb2001d2e033186dfd", null ],
+    [ "KIND", "class_harlinn_1_1_common_1_1_core_1_1_runtime_1_1_remoting_1_1_metadata_services_1_1_s_u_d_s_generator_exception.xhtml#a4e21fb64e45eefed8a4f469a0c82a915", null ]
+];

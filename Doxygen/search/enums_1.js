@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['backgroundmixmode_0',['BackgroundMixMode',['../namespace_harlinn_1_1_windows.xhtml#ae22d59c41e4a8100bd5ca4cc9cf98564',1,'Harlinn::Windows']]],
+  ['backupflags_1',['BackupFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_ese.xhtml#a3efc210420e28e8a5cbb7355186ed66e',1,'Harlinn::Common::Core::Ese']]],
+  ['backuprestoreflags_2',['BackupRestoreFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_wbem.xhtml#a8935bab47a79f7a521a3009c784078e7',1,'Harlinn::Common::Core::Wbem']]],
+  ['basetype_3',['BaseType',['../namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.xhtml#a958e291eca28acf43356c82691ac12a1',1,'Harlinn::Common::Core::SIMD']]],
+  ['basictypeid_4',['BasicTypeId',['../namespace_harlinn_1_1_common_1_1_core_1_1_types.xhtml#ad7050d48722d01c073c0b3fcdd66613d',1,'Harlinn::Common::Core::Types']]],
+  ['bitmapalphachanneloption_5',['BitmapAlphaChannelOption',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#a1b37405ea14ccd08b4a5076b9e519428',1,'Harlinn::Windows::Imaging']]],
+  ['bitmapcreatecacheoption_6',['BitmapCreateCacheOption',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#a8104f5705af74e7f659d39d85d97210e',1,'Harlinn::Windows::Imaging']]],
+  ['bitmapdecodercapabilities_7',['BitmapDecoderCapabilities',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#a8742f77b2615b65f3d9a38462e01ebf0',1,'Harlinn::Windows::Imaging']]],
+  ['bitmapdithertype_8',['BitmapDitherType',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#a3ccee025ace3ce755e93384c9c7d4e18',1,'Harlinn::Windows::Imaging']]],
+  ['bitmapencodercacheoption_9',['BitmapEncoderCacheOption',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#a8afdb6c3a81c61a33b808139d0be1ef5',1,'Harlinn::Windows::Imaging']]],
+  ['bitmapinterpolationmode_10',['BitmapInterpolationMode',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#a7229c02fffe2ffc817210915b9f5b4c7',1,'Harlinn::Windows::Imaging']]],
+  ['bitmaplockflags_11',['BitmapLockFlags',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#abeaf5a86b7bdb29814e307886b4593ad',1,'Harlinn::Windows::Imaging']]],
+  ['bitmappalettetype_12',['BitmapPaletteType',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#ad6926c2a7ed999e7a125216bf4e319b3',1,'Harlinn::Windows::Imaging']]],
+  ['bitmaptransformoptions_13',['BitmapTransformOptions',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#a0a57940ad3d15ce2970824a132daa974',1,'Harlinn::Windows::Imaging']]],
+  ['blend_14',['Blend',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.xhtml#aa71c679661956998e0fd8e16fa313f84',1,'Harlinn::Windows::Graphics::D3D12']]],
+  ['blendoperation_15',['BlendOperation',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.xhtml#af5cb5c26b182e95d12c3183ba82b5b8d',1,'Harlinn::Windows::Graphics::D3D12']]],
+  ['borderflags_16',['BorderFlags',['../namespace_harlinn_1_1_windows.xhtml#a76fa34d294b64c373046e3a99525e416',1,'Harlinn::Windows']]],
+  ['borderstyle_17',['BorderStyle',['../namespace_harlinn_1_1_windows.xhtml#aa2c7085feb84b0e4bc8ed1770225e168',1,'Harlinn::Windows']]],
+  ['boundsaccumulationflags_18',['BoundsAccumulationFlags',['../namespace_harlinn_1_1_windows.xhtml#a0fb3216d0e7ddf472c42a57aadbe9b26',1,'Harlinn::Windows']]],
+  ['brushstyle_19',['BrushStyle',['../namespace_harlinn_1_1_windows.xhtml#a651ddb401a56e0a5c3d57e5a1075d401',1,'Harlinn::Windows']]],
+  ['bufferflags_20',['BufferFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal.xhtml#a87a11b626e6a7c2a9baa858967d0f266',1,'Harlinn::Common::Core::Logging::Internal']]],
+  ['bulkoperation_21',['BulkOperation',['../namespace_harlinn_1_1_o_d_b_c.xhtml#ad9b70b371a684d3b08d4ae9bf3cbe0a8',1,'Harlinn::ODBC']]]
+];

@@ -1,0 +1,7 @@
+var struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee88b019ceb23ee156d09a957b06bc937 =
+[
+    [ "MaxValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee88b019ceb23ee156d09a957b06bc937.xhtml#ab29bcf5f021beb5f2c4b875175037b34", null ],
+    [ "OneValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee88b019ceb23ee156d09a957b06bc937.xhtml#a43e0417c97f12d9ef904db3942cb0c02", null ],
+    [ "Value", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee88b019ceb23ee156d09a957b06bc937.xhtml#a3b264a7c4d55a20a99ec2ee3dc5dd13f", null ],
+    [ "ZeroValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee88b019ceb23ee156d09a957b06bc937.xhtml#aeabd7fbe1e1db1ff3b48ecf25f544908", null ]
+];

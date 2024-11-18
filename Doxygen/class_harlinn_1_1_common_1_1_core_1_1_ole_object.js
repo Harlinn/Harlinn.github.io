@@ -1,0 +1,25 @@
+var class_harlinn_1_1_common_1_1_core_1_1_ole_object =
+[
+    [ "Base", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#ac6b267dac89eff926eb1298a3dc56b37", null ],
+    [ "Advise", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#a3e8030244ed76b1a103dd043eaf3e941", null ],
+    [ "Close", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#a197c2573fc9bf7fe2ae84e83406e59c5", null ],
+    [ "DoVerb", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#acbb41feca9bfa162fc644e340e23fed0", null ],
+    [ "EnumAdvise", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#ab18e8c369dd70e484e089ba9ebb4ad41", null ],
+    [ "EnumVerbs", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#ae4d4a23da00feec33027c8874584dd4f", null ],
+    [ "GetClientSite", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#a0b1d098d86a282d7270e1c30cfc3d580", null ],
+    [ "GetClipboardData", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#acb186d0477bc079a3bcbbee43c295c1e", null ],
+    [ "GetExtent", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#ad398722740b8e2cd348c6b0beed3a762", null ],
+    [ "GetMiscStatus", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#a57bcb86a0d891a73500d953bd18abb95", null ],
+    [ "GetMoniker", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#a976609a0c109c1fbe842659fccb7acfc", null ],
+    [ "GetUserClassID", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#a193351caae5363bc65a542737641c8eb", null ],
+    [ "GetUserType", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#ae9e2f6f80dec7237428fc36dbe9f5c7e", null ],
+    [ "InitFromData", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#a8f839122442a91572cfdbb2a47b0c756", null ],
+    [ "IsUpToDate", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#a4ab2775d52c1783fb18faf154c7286d4", null ],
+    [ "SetClientSite", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#ae18d3e8c90df4946e11bed32f215a2aa", null ],
+    [ "SetColorScheme", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#a00c5c6542938f849b6360784ccf9d822", null ],
+    [ "SetExtent", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#aa8c75dcb4a5f25c426df72ff860aef27", null ],
+    [ "SetHostNames", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#ace317528b6cb508fa685372145a2293f", null ],
+    [ "SetMoniker", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#a1102c76b971e1f1f88cc105762c319a8", null ],
+    [ "Unadvise", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#a99a8a0b37585dacd00d49e5cf8f0b57d", null ],
+    [ "Update", "class_harlinn_1_1_common_1_1_core_1_1_ole_object.xhtml#a056a8da9392794215383b6ef43408fa2", null ]
+];
