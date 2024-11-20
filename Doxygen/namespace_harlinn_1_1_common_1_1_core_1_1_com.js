@@ -6,6 +6,7 @@ var namespace_harlinn_1_1_common_1_1_core_1_1_com =
     [ "DllModule", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_dll_module.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_dll_module" ],
     [ "EnumConnectionsImpl", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_enum_connections_impl.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_enum_connections_impl" ],
     [ "ExeModule", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_exe_module.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_exe_module" ],
+    [ "HeapObject", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_heap_object.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_heap_object" ],
     [ "Interface", "struct_harlinn_1_1_common_1_1_core_1_1_com_1_1_interface.xhtml", null ],
     [ "Interface< IUnknown >", "struct_harlinn_1_1_common_1_1_core_1_1_com_1_1_interface_3_01_i_unknown_01_4.xhtml", "struct_harlinn_1_1_common_1_1_core_1_1_com_1_1_interface_3_01_i_unknown_01_4" ],
     [ "IStreamOnStreamImpl", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_i_stream_on_stream_impl.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_i_stream_on_stream_impl" ],
@@ -15,8 +16,10 @@ var namespace_harlinn_1_1_common_1_1_core_1_1_com =
     [ "ModuleClassFactoryT", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_module_class_factory_t.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_module_class_factory_t" ],
     [ "ModuleDispatchClassFactory", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_module_dispatch_class_factory.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_module_dispatch_class_factory" ],
     [ "ModuleObjectBase", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_module_object_base.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_module_object_base" ],
-    [ "ObjectBase", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_object_base.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_object_base" ],
     [ "ServiceModule", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_service_module.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_service_module" ],
+    [ "StackObject", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_stack_object.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_stack_object" ],
+    [ "InterfaceQueryable", "concept_harlinn_1_1_common_1_1_core_1_1_com_1_1_interface_queryable.xhtml", null ],
+    [ "IUnknownImplLike", "concept_harlinn_1_1_common_1_1_core_1_1_com_1_1_i_unknown_impl_like.xhtml", null ],
     [ "ModuleClassFactoryPointer", "namespace_harlinn_1_1_common_1_1_core_1_1_com.xhtml#a505ee146fd6275456bfa148e72b021d1", null ],
     [ "ApartmentModel", "namespace_harlinn_1_1_common_1_1_core_1_1_com.xhtml#a1dba283bb8a614835b41d57e5c0e9f65", [
       [ "ApartmentThreaded", "namespace_harlinn_1_1_common_1_1_core_1_1_com.xhtml#a1dba283bb8a614835b41d57e5c0e9f65a4b8702daa56aab057e836488b82dde31", null ],
@@ -87,7 +90,6 @@ var namespace_harlinn_1_1_common_1_1_core_1_1_com =
       [ "Impersonate", "namespace_harlinn_1_1_common_1_1_core_1_1_com.xhtml#a3b7c756889a450c29e208d78d09b33dfaef143bd1a521c2278b91f38c34d0e05f", null ],
       [ "Delegate", "namespace_harlinn_1_1_common_1_1_core_1_1_com.xhtml#a3b7c756889a450c29e208d78d09b33dfa26545d7107c7489959a37bd671181fca", null ]
     ] ],
-    [ "__declspec", "namespace_harlinn_1_1_common_1_1_core_1_1_com.xhtml#afda1a01ec287fe9768317b6ad4ad29e3", null ],
     [ "GetSupportedKnownInterfaceIds", "namespace_harlinn_1_1_common_1_1_core_1_1_com.xhtml#a88ffcbaaaf539f447b6ceb04c83e3543", null ],
     [ "GetSupportedKnownInterfaces", "namespace_harlinn_1_1_common_1_1_core_1_1_com.xhtml#a0327c93e3af0309015196b2eb1bc58c4", null ],
     [ "HCC_DEFINE_ENUM_FLAG_OPERATORS", "namespace_harlinn_1_1_common_1_1_core_1_1_com.xhtml#ab15f3917829efa7c3a8ecce91bec83e6", null ],

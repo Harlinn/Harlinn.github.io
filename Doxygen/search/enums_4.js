@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['eightbimiptcdigestproperties_0',['EightBIMIptcDigestProperties',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#a3080a16aaad8f26e797ff44a2a25b094',1,'Harlinn::Windows::Imaging']]],
-  ['eightbimiptcproperties_1',['EightBIMIptcProperties',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#a3dd50e7011daef46e4416f53381cc3a9',1,'Harlinn::Windows::Imaging']]],
-  ['eightbimresolutioninfoproperties_2',['EightBIMResolutionInfoProperties',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#adf3d954f7e5c8e372db004932feb3c8f',1,'Harlinn::Windows::Imaging']]],
+  ['eightbimiptcdigestproperties_0',['EightBIMIptcDigestProperties',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.xhtml#a1ffd2cf33cd07367ede46f4571c9d402',1,'Harlinn::Windows::Graphics::Imaging']]],
+  ['eightbimiptcproperties_1',['EightBIMIptcProperties',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.xhtml#a66a9105acd91d1c19c8de8d4e453c9cc',1,'Harlinn::Windows::Graphics::Imaging']]],
+  ['eightbimresolutioninfoproperties_2',['EightBIMResolutionInfoProperties',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.xhtml#a1e5c7d4358dcf07259bf376bfbf024ce',1,'Harlinn::Windows::Graphics::Imaging']]],
   ['enabledstate_3',['EnabledState',['../namespace_harlinn_1_1_common_1_1_core_1_1_http.xhtml#aeaa7a6d76534adacf9d8fc6776c7036e',1,'Harlinn::Common::Core::Http']]],
   ['enumtransformsflags_4',['EnumTransformsFlags',['../namespace_harlinn_1_1_windows_1_1_m_f.xhtml#a4d7ca913648abe5e324fa7200e91564e',1,'Harlinn::Windows::MF']]],
   ['environmentflags_5',['EnvironmentFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_l_m_d_b.xhtml#a4bca982fb348f170ac76dcbc3536b1ec',1,'Harlinn::Common::Core::LMDB']]],

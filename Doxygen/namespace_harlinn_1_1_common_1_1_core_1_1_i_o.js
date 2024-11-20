@@ -1,5 +1,6 @@
 var namespace_harlinn_1_1_common_1_1_core_1_1_i_o =
 [
+    [ "Blocks", "namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_blocks.xhtml", "namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_blocks" ],
     [ "IsolatedStorage", "namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_isolated_storage.xhtml", "namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_isolated_storage" ],
     [ "Path", "namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_path.xhtml", "namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_path" ],
     [ "Serialization", "namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization.xhtml", "namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization" ],

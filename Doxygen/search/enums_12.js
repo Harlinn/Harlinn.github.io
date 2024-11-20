@@ -4,7 +4,7 @@ var searchData=
   ['scheme_1',['Scheme',['../namespace_harlinn_1_1_common_1_1_core_1_1_http.xhtml#a61764397ec16a01c249ae96f3e23a64b',1,'Harlinn::Common::Core::Http']]],
   ['scope_2',['Scope',['../namespace_harlinn_1_1_common_1_1_core_1_1_demangle.xhtml#a585e4f1fbbb5cf477fc91597cb447ddb',1,'Harlinn::Common::Core::Demangle']]],
   ['searchpredicates_3',['SearchPredicates',['../namespace_harlinn_1_1_o_d_b_c.xhtml#a220db8ac67e5b007aa5eebe45a8adb01',1,'Harlinn::ODBC']]],
-  ['sectionaccesslevel_4',['SectionAccessLevel',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#a726b5092795faeaf0ccd0d9d5b15bdb1',1,'Harlinn::Windows::Imaging']]],
+  ['sectionaccesslevel_4',['SectionAccessLevel',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.xhtml#aebe72d589fbd539c43dc2123eae443eb',1,'Harlinn::Windows::Graphics::Imaging']]],
   ['sectionflags_5',['SectionFlags',['../namespace_harlinn_1_1_common_1_1_core.xhtml#a1f1681cd36953284bd5875fce7dcb2f9',1,'Harlinn::Common::Core']]],
   ['securitybuffertype_6',['SecurityBufferType',['../namespace_harlinn_1_1_common_1_1_core_1_1_security.xhtml#aaf2257e525bff3b9d4bdb56ff2cca244',1,'Harlinn::Common::Core::Security']]],
   ['securitydatarepresentation_7',['SecurityDataRepresentation',['../namespace_harlinn_1_1_common_1_1_core_1_1_security.xhtml#ac399dbd0e8af41596c1a5955efe1766f',1,'Harlinn::Common::Core::Security']]],

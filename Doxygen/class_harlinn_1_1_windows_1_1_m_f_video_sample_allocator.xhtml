@@ -223,7 +223,10 @@ requires std::is_base_of_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_c
 <tr class="memitem:a5dc7a66bd9d439796518ca9cd60643d4 inherit pro_attribs_class_harlinn_1_1_common_1_1_core_1_1_unknown" id="r_a5dc7a66bd9d439796518ca9cd60643d4"><td class="memItemLeft" align="right" valign="top">IUnknown *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_unknown.xhtml#a5dc7a66bd9d439796518ca9cd60643d4">unknown_</a></td></tr>
 <tr class="separator:a5dc7a66bd9d439796518ca9cd60643d4 inherit pro_attribs_class_harlinn_1_1_common_1_1_core_1_1_unknown"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Allocates video samples for a video media sink. </p>
+<p>The stream sinks on the enhanced video renderer (EVR) expose this interface as a service. To obtain a pointer to the interface, call <a class="el" href="class_harlinn_1_1_windows_1_1_m_f_get_service.xhtml#ab9262a89dc7373e35e5fc4f8d2b7090e">MFGetService::GetService</a> using the service identifier MR_VIDEO_ACCELERATION_SERVICE. Custom media sinks can also implement this interface. The Media Session uses this interface to allocate samples for the EVR, unless the upstream decoder supports DirectX Video Acceleration (DXVA). </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acb1dce6d4bf486c3edd3f90097a49840" name="acb1dce6d4bf486c3edd3f90097a49840"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb1dce6d4bf486c3edd3f90097a49840">&#9670;&#160;</a></span>AllocateSample()</h2>
 

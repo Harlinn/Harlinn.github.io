@@ -47,7 +47,6 @@ var namespace_harlinn_1_1_common_1_1_core =
       [ "IsBigEndian", "namespace_harlinn_1_1_common_1_1_core_1_1_bit_converter.xhtml#a97e77f83e84b83c188ab518c2aed9a66", null ],
       [ "IsLittleEndian", "namespace_harlinn_1_1_common_1_1_core_1_1_bit_converter.xhtml#abc8f6bdc1f46afb58133bbf082507646", null ]
     ] ],
-    [ "Blocks", "namespace_harlinn_1_1_common_1_1_core_1_1_blocks.xhtml", "namespace_harlinn_1_1_common_1_1_core_1_1_blocks" ],
     [ "Com", "namespace_harlinn_1_1_common_1_1_core_1_1_com.xhtml", "namespace_harlinn_1_1_common_1_1_core_1_1_com" ],
     [ "Concurrency", "namespace_harlinn_1_1_common_1_1_core_1_1_concurrency.xhtml", "namespace_harlinn_1_1_common_1_1_core_1_1_concurrency" ],
     [ "Crypto", "namespace_harlinn_1_1_common_1_1_core_1_1_crypto.xhtml", "namespace_harlinn_1_1_common_1_1_core_1_1_crypto" ],
@@ -2458,7 +2457,7 @@ var namespace_harlinn_1_1_common_1_1_core =
     [ "MinLongLong", "namespace_harlinn_1_1_common_1_1_core.xhtml#a107033ffc266a07cd1384f34abc5db8d", null ],
     [ "MinSSizeT", "namespace_harlinn_1_1_common_1_1_core.xhtml#a2642a990bbeae0807a56dfbcb30c0a29", null ],
     [ "qword_array", "namespace_harlinn_1_1_common_1_1_core.xhtml#a0ac8f52195847525cf4026ff3a9c61e6", null ],
-    [ "short_shifts", "namespace_harlinn_1_1_common_1_1_core.xhtml#a4488813bb7e5410634436c420aeb8160", null ],
+    [ "short_shifts", "namespace_harlinn_1_1_common_1_1_core.xhtml#adc77417f23abcf72f2e307cfd389254f", null ],
     [ "SignMask", "namespace_harlinn_1_1_common_1_1_core.xhtml#a3a406122cee461c6df2f707ac57a01be", null ],
     [ "SignMask< double >", "namespace_harlinn_1_1_common_1_1_core.xhtml#a6e684284c08efed4500e171b65538c16", null ],
     [ "SignMask< float >", "namespace_harlinn_1_1_common_1_1_core.xhtml#a0a0e5488dd688c8caeee2bdc4cbc267b", null ],

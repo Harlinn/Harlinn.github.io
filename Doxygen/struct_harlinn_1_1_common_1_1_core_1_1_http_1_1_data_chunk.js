@@ -8,10 +8,10 @@ var struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk =
     [ "DataChunkType", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk.xhtml#a55ac4395fb7da74725d5801c9bd41fac", null ],
     [ "FileHandle", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk.xhtml#ad6888d1619e5858fd0b08e1c573425c0", null ],
     [ "FragmentNameLength", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk.xhtml#a7b472f9323598eb98b37eb99ede82652", null ],
-    [ "FromFileHandle", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk.xhtml#a01873a62282786796c3e6341ff001763", null ],
-    [ "FromFragmentCache", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk.xhtml#a1a34374812ec3143129ffa202086e2b2", null ],
-    [ "FromFragmentCacheEx", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk.xhtml#ae78acfcaa444d1607dd66808ea98bfee", null ],
-    [ "FromMemory", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk.xhtml#a7b8b5bd1229a5b40210fa270f258880b", null ],
+    [ "FromFileHandle", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk.xhtml#ad4e9401d83859b4fe267b3ee16c24db9", null ],
+    [ "FromFragmentCache", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk.xhtml#a7feba5bc108b44b28dd1b5813e10724a", null ],
+    [ "FromFragmentCacheEx", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk.xhtml#aa54202b6407f4d9484b1f7a52aacbae1", null ],
+    [ "FromMemory", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk.xhtml#adabb177cef1d369b2b3870bc0f449b45", null ],
     [ "pBuffer", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk.xhtml#acdef9258d35c4d9e7a5ee3fb051d597e", null ],
     [ "pFragmentName", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk.xhtml#a8afb03b5335a6fcba4eb3cc566e76182", null ]
 ];

@@ -1,13 +1,10 @@
 var namespace_harlinn_1_1_windows =
 [
     [ "DirectShow", "namespace_harlinn_1_1_windows_1_1_direct_show.xhtml", "namespace_harlinn_1_1_windows_1_1_direct_show" ],
-    [ "DirectWrite", "namespace_harlinn_1_1_windows_1_1_direct_write.xhtml", "namespace_harlinn_1_1_windows_1_1_direct_write" ],
     [ "DocumentTarget", "namespace_harlinn_1_1_windows_1_1_document_target.xhtml", "namespace_harlinn_1_1_windows_1_1_document_target" ],
-    [ "DXGI", "namespace_harlinn_1_1_windows_1_1_d_x_g_i.xhtml", "namespace_harlinn_1_1_windows_1_1_d_x_g_i" ],
     [ "Environment", "namespace_harlinn_1_1_windows_1_1_environment.xhtml", "namespace_harlinn_1_1_windows_1_1_environment" ],
     [ "Fonts", "namespace_harlinn_1_1_windows_1_1_fonts.xhtml", "namespace_harlinn_1_1_windows_1_1_fonts" ],
     [ "Graphics", "namespace_harlinn_1_1_windows_1_1_graphics.xhtml", "namespace_harlinn_1_1_windows_1_1_graphics" ],
-    [ "Imaging", "namespace_harlinn_1_1_windows_1_1_imaging.xhtml", "namespace_harlinn_1_1_windows_1_1_imaging" ],
     [ "ImGui", "namespace_harlinn_1_1_windows_1_1_im_gui.xhtml", "namespace_harlinn_1_1_windows_1_1_im_gui" ],
     [ "Internal", "namespace_harlinn_1_1_windows_1_1_internal.xhtml", "namespace_harlinn_1_1_windows_1_1_internal" ],
     [ "LiveMedia", "namespace_harlinn_1_1_windows_1_1_live_media.xhtml", "namespace_harlinn_1_1_windows_1_1_live_media" ],

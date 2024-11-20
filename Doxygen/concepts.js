@@ -3,6 +3,10 @@ var concepts =
     [ "Harlinn", "namespace_harlinn.xhtml", [
       [ "Common", "namespace_harlinn_1_1_common.xhtml", [
         [ "Core", "namespace_harlinn_1_1_common_1_1_core.xhtml", [
+          [ "Com", "namespace_harlinn_1_1_common_1_1_core_1_1_com.xhtml", [
+            [ "InterfaceQueryable", "concept_harlinn_1_1_common_1_1_core_1_1_com_1_1_interface_queryable.xhtml", null ],
+            [ "IUnknownImplLike", "concept_harlinn_1_1_common_1_1_core_1_1_com_1_1_i_unknown_impl_like.xhtml", null ]
+          ] ],
           [ "Ese", "namespace_harlinn_1_1_common_1_1_core_1_1_ese.xhtml", [
             [ "StringType", "concept_harlinn_1_1_common_1_1_core_1_1_ese_1_1_string_type.xhtml", null ],
             [ "CharType", "concept_harlinn_1_1_common_1_1_core_1_1_ese_1_1_char_type.xhtml", null ],

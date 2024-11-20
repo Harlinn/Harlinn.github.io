@@ -19,5 +19,5 @@ var class_harlinn_1_1_common_1_1_core_1_1_string_builder =
     [ "AppendLine", "class_harlinn_1_1_common_1_1_core_1_1_string_builder.xhtml#a8994e7cbaaad9af8765c7ff007ec965b", null ],
     [ "ToString", "class_harlinn_1_1_common_1_1_core_1_1_string_builder.xhtml#a7116ede7e8b27a4cf8cf3fd3f52dcaee", null ],
     [ "isWide", "class_harlinn_1_1_common_1_1_core_1_1_string_builder.xhtml#af3700e0f149c60e83d21e05f2fd44624", null ],
-    [ "stream_", "class_harlinn_1_1_common_1_1_core_1_1_string_builder.xhtml#a163dbdf434814fd84f6cdaeed94c4455", null ]
+    [ "stream_", "class_harlinn_1_1_common_1_1_core_1_1_string_builder.xhtml#a148118c4435712bb65eaf0a8c89cb9ed", null ]
 ];

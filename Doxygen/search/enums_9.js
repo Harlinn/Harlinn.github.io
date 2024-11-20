@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['jpegchrominanceproperties_0',['JpegChrominanceProperties',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#ab7076e91169087fca802f169a562f66c',1,'Harlinn::Windows::Imaging']]],
-  ['jpegcommentproperties_1',['JpegCommentProperties',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#ab39d37eea34db5ea017ef3e9081bbf3e',1,'Harlinn::Windows::Imaging']]],
-  ['jpegluminanceproperties_2',['JpegLuminanceProperties',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#a33537510db898f8f7e846b7dc61f841e',1,'Harlinn::Windows::Imaging']]]
+  ['jpegchrominanceproperties_0',['JpegChrominanceProperties',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.xhtml#a601e4e71d1259e7d466b052c998c485a',1,'Harlinn::Windows::Graphics::Imaging']]],
+  ['jpegcommentproperties_1',['JpegCommentProperties',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.xhtml#a18a12350dceddab06bd5c47f80a9b282',1,'Harlinn::Windows::Graphics::Imaging']]],
+  ['jpegluminanceproperties_2',['JpegLuminanceProperties',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.xhtml#a1b97d1f93612cee3f7b3050ab731fc2f',1,'Harlinn::Windows::Graphics::Imaging']]]
 ];

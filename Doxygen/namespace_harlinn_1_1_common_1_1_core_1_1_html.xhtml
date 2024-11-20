@@ -116,8 +116,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a83e40c2d362b955812c9a6fc16a7be10" id="r_a83e40c2d362b955812c9a6fc16a7be10"><td class="memItemLeft" align="right" valign="top">std::span&lt; const <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_html_1_1_named_char.xhtml">NamedChar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83e40c2d362b955812c9a6fc16a7be10">CharactersByValue</a> ()</td></tr>
 <tr class="separator:a83e40c2d362b955812c9a6fc16a7be10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade90a98b4581c2a7c3991b54f88e8046" id="r_ade90a98b4581c2a7c3991b54f88e8046"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.xhtml#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade90a98b4581c2a7c3991b54f88e8046">Encode</a> (const wchar_t *text, size_t textLength)</td></tr>
+<tr class="memdesc:ade90a98b4581c2a7c3991b54f88e8046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a string to an HTML-encoded string.  <br /></td></tr>
 <tr class="separator:ade90a98b4581c2a7c3991b54f88e8046"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa37c217305627106077f7c1f9d0d0631" id="r_aa37c217305627106077f7c1f9d0d0631"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.xhtml#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa37c217305627106077f7c1f9d0d0631">Decode</a> (const wchar_t *text, size_t textLength)</td></tr>
+<tr class="memdesc:aa37c217305627106077f7c1f9d0d0631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a string that has been HTML-encoded for HTTP transmission into a decoded string.  <br /></td></tr>
 <tr class="separator:aa37c217305627106077f7c1f9d0d0631"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadedc8302958c92fbeeac70e1251b7bf" id="r_aadedc8302958c92fbeeac70e1251b7bf"><td class="memTemplParams" colspan="2">template&lt;typename StringT &gt; <br />
 requires std::is_same_v&lt;StringT, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.xhtml#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&gt; || std::is_same_v&lt;StringT, std::wstring&gt; || std::is_same_v&lt;StringT, std::wstring_view&gt;</td></tr>
@@ -279,6 +281,21 @@ requires std::is_same_v&lt;StringT, <a class="el" href="namespace_harlinn_1_1_co
       </table>
 </div><div class="memdoc">
 
+<p>Converts a string that has been HTML-encoded for HTTP transmission into a decoded string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>A pointer to the text to decode. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textLength</td><td>The length of the text to decode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The HTML-decoded string. </dd></dl>
+
 </div>
 </div>
 <a id="a2c0d199473df5a1ad9f6bfcca481ed38" name="a2c0d199473df5a1ad9f6bfcca481ed38"></a>
@@ -384,6 +401,21 @@ requires std::is_same_v&lt;StringT, <a class="el" href="namespace_harlinn_1_1_co
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Converts a string to an HTML-encoded string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>A pointer to the text to encode. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">textLength</td><td>The length of the text to encode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The HTML-encoded string. </dd></dl>
 
 </div>
 </div>

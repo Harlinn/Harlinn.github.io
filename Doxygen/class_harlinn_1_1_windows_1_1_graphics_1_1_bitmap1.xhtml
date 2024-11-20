@@ -139,9 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab756b1e56c73d0ae7c072cb3ad277003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the bitmap options used when creating the API.  <br /></td></tr>
 <tr class="separator:ab756b1e56c73d0ae7c072cb3ad277003"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64aff1cb0bddb5952d6aaca9496aebb9" id="r_a64aff1cb0bddb5952d6aaca9496aebb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64aff1cb0bddb5952d6aaca9496aebb9">GetSurface</a> (IDXGISurface **dxgiSurface) const</td></tr>
-<tr class="memdesc:a64aff1cb0bddb5952d6aaca9496aebb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the <a class="el" href="namespace_harlinn_1_1_windows_1_1_d_x_g_i.xhtml">DXGI</a> surface from the corresponding bitmap, if the bitmap was created from a device derived from a D3D device.  <br /></td></tr>
+<tr class="memdesc:a64aff1cb0bddb5952d6aaca9496aebb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i.xhtml">DXGI</a> surface from the corresponding bitmap, if the bitmap was created from a device derived from a D3D device.  <br /></td></tr>
 <tr class="separator:a64aff1cb0bddb5952d6aaca9496aebb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05548564f1b08ff66486ed63df450aca" id="r_a05548564f1b08ff66486ed63df450aca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_windows_1_1_d_x_g_i_1_1_surface.xhtml">DXGI::Surface</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05548564f1b08ff66486ed63df450aca">GetSurface</a> () const</td></tr>
+<tr class="memitem:a05548564f1b08ff66486ed63df450aca" id="r_a05548564f1b08ff66486ed63df450aca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_surface.xhtml">DXGI::Surface</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05548564f1b08ff66486ed63df450aca">GetSurface</a> () const</td></tr>
 <tr class="separator:a05548564f1b08ff66486ed63df450aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a099c1df4d48c452146db8334e15ef542" id="r_a099c1df4d48c452146db8334e15ef542"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a099c1df4d48c452146db8334e15ef542">Map</a> (D2D1_MAP_OPTIONS options, D2D1_MAPPED_RECT *mappedRect) const</td></tr>
 <tr class="memdesc:a099c1df4d48c452146db8334e15ef542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps the given bitmap into memory. The bitmap must have been created with the D2D1_BITMAP_OPTIONS_CPU_READ flag.  <br /></td></tr>
@@ -381,7 +381,7 @@ requires std::is_base_of_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_c
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_windows_1_1_d_x_g_i_1_1_surface.xhtml">DXGI::Surface</a> Harlinn::Windows::Graphics::Bitmap1::GetSurface </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_surface.xhtml">DXGI::Surface</a> Harlinn::Windows::Graphics::Bitmap1::GetSurface </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -419,14 +419,14 @@ requires std::is_base_of_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_c
 </table>
 </div><div class="memdoc">
 
-<p>Retrieves the <a class="el" href="namespace_harlinn_1_1_windows_1_1_d_x_g_i.xhtml">DXGI</a> surface from the corresponding bitmap, if the bitmap was created from a device derived from a D3D device. </p>
+<p>Retrieves the <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i.xhtml">DXGI</a> surface from the corresponding bitmap, if the bitmap was created from a device derived from a D3D device. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dxgiSurface</td><td>The underlying <a class="el" href="namespace_harlinn_1_1_windows_1_1_d_x_g_i.xhtml">DXGI</a> surface for the bitmap. </td></tr>
+    <tr><td class="paramname">dxgiSurface</td><td>The underlying <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i.xhtml">DXGI</a> surface for the bitmap. </td></tr>
   </table>
   </dd>
 </dl>
-<p>The bitmap used must have been created from a <a class="el" href="namespace_harlinn_1_1_windows_1_1_d_x_g_i.xhtml">DXGI</a> surface render target, a derived render target, or a device context created from an ID2D1Device. </p>
+<p>The bitmap used must have been created from a <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i.xhtml">DXGI</a> surface render target, a derived render target, or a device context created from an ID2D1Device. </p>
 <p>The returned surface can be used with Microsoft Direct3D or any other API that interoperates with shared surfaces. The application must transitively ensure that the surface is usable on the Direct3D device that is used in this context. For example, if using the surface with Direct2D then the Direct2D render target must have been created through <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_factory.xhtml#a1312b513995c9eb36d6b63cf7428604b" title="Creates a render target that draws to a DirectX Graphics Infrastructure (DXGI) surface.">Graphics::Factory::CreateDxgiSurfaceRenderTarget</a> or on a device context created on the same device. </p>
 
 </div>

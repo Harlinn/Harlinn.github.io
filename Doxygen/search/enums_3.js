@@ -6,7 +6,7 @@ var searchData=
   ['datepart_3',['DatePart',['../namespace_harlinn_1_1_common_1_1_core.xhtml#a2bad736145da8233a22d4e06ec9623e5',1,'Harlinn::Common::Core']]],
   ['datetimeerrorflag_4',['DateTimeErrorFlag',['../namespace_harlinn_1_1_o_c_i.xhtml#adf8533d8c2e973a0f90571e38d3d6f07',1,'Harlinn::OCI']]],
   ['dayofweek_5',['DayOfWeek',['../namespace_harlinn_1_1_common_1_1_core.xhtml#a663636b97aa32afb14b0c0d507343375',1,'Harlinn::Common::Core']]],
-  ['decodeoptions_6',['DecodeOptions',['../namespace_harlinn_1_1_windows_1_1_imaging.xhtml#a201c4e48a6666cdd6ad912dda2a109d8',1,'Harlinn::Windows::Imaging']]],
+  ['decodeoptions_6',['DecodeOptions',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.xhtml#a93de51c162208dbd01ecde7e7af1f543',1,'Harlinn::Windows::Graphics::Imaging']]],
   ['delegaterequestpropertyid_7',['DelegateRequestPropertyId',['../namespace_harlinn_1_1_common_1_1_core_1_1_http.xhtml#a4a45740beebe2f46f86fbed24ec4a0ce',1,'Harlinn::Common::Core::Http']]],
   ['deletetimeseriesrangetype_8',['DeleteTimeseriesRangeType',['../namespace_harlinn_1_1_common_1_1_core_1_1_data.xhtml#a96da633ff291466e3b05f517ab096d5e',1,'Harlinn::Common::Core::Data::DeleteTimeseriesRangeType'],['../namespace_harlinn_1_1_common_1_1_core_1_1_net_1_1_data.xhtml#a4be80cdce89ce7a144fda714413c3b5a',1,'Harlinn::Common::Core.Net.Data.DeleteTimeseriesRangeType']]],
   ['depthwritemask_9',['DepthWriteMask',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.xhtml#a7ccb646c7d4715d6d61595df606f334c',1,'Harlinn::Windows::Graphics::D3D12']]],

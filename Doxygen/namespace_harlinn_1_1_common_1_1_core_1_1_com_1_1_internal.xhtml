@@ -116,8 +116,42 @@ Functions</h2></td></tr>
 <tr class="memitem:a489728af6c5dee7a7300db134076e89b" id="r_a489728af6c5dee7a7300db134076e89b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a489728af6c5dee7a7300db134076e89b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a489728af6c5dee7a7300db134076e89b">CheckIfInterfaceIsSupported</a> (IUnknown *unknown)</td></tr>
 <tr class="separator:a489728af6c5dee7a7300db134076e89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8b6600a6a76efad10f535e3dd96a096" id="r_af8b6600a6a76efad10f535e3dd96a096"><td class="memTemplParams" colspan="2">template&lt;typename DerivedT , typename ... InterfaceTypes&gt; </td></tr>
+<tr class="memitem:af8b6600a6a76efad10f535e3dd96a096"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af8b6600a6a76efad10f535e3dd96a096">__declspec</a> (novtable) Interfaces</td></tr>
+<tr class="memdesc:af8b6600a6a76efad10f535e3dd96a096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for COM object implementations, it implements <code> virtual HRESULT __stdcall QueryInterface( const IID&amp; iid, void** result ) override; </code> on behalf of derived templates.  <br /></td></tr>
+<tr class="separator:af8b6600a6a76efad10f535e3dd96a096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="af8b6600a6a76efad10f535e3dd96a096" name="af8b6600a6a76efad10f535e3dd96a096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8b6600a6a76efad10f535e3dd96a096">&#9670;&#160;</a></span>__declspec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedT , typename ... InterfaceTypes&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">class Harlinn::Common::Core::Com::Internal::__declspec </td>
+          <td>(</td>
+          <td class="paramtype">novtable</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Base class for COM object implementations, it implements <code> virtual HRESULT __stdcall QueryInterface( const IID&amp; iid, void** result ) override; </code> on behalf of derived templates. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">DerivedT</td><td>The type that gets instantiated. </td></tr>
+    <tr><td class="paramname">...InterfaceTypes</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The list of COM interfaces that is implemented by DerivedT that DerivedT can be unambiguously be cast to. This means that no interface can be derived from any other interface that is part of this parameter pack. </p>
+<p><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_com_1_1_interface.xhtml">Interface</a> inheritance is implemented through specializations of</p>
+
+</div>
+</div>
 <a id="a489728af6c5dee7a7300db134076e89b" name="a489728af6c5dee7a7300db134076e89b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a489728af6c5dee7a7300db134076e89b">&#9670;&#160;</a></span>CheckIfInterfaceIsSupported()</h2>
 

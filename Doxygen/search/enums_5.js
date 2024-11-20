@@ -19,7 +19,7 @@ var searchData=
   ['flushtype_16',['FlushType',['../namespace_harlinn_1_1_common_1_1_core_1_1_logging.xhtml#a1a775b16017bbbeddb1cd1b86de0df4c',1,'Harlinn::Common::Core::Logging']]],
   ['fontsmoothingorientation_17',['FontSmoothingOrientation',['../namespace_harlinn_1_1_windows.xhtml#a65082b86fde121901d3d2a802702bf5a',1,'Harlinn::Windows']]],
   ['foregroundmixmode_18',['ForegroundMixMode',['../namespace_harlinn_1_1_windows.xhtml#af22735cfa7288347e01254bdf5fb9709',1,'Harlinn::Windows']]],
-  ['format_19',['Format',['../namespace_harlinn_1_1_windows_1_1_d_x_g_i.xhtml#a81a1aaca151dc6754640a53c1f24abd8',1,'Harlinn::Windows::DXGI']]],
+  ['format_19',['Format',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i.xhtml#a44af51316c575dcac6b4f3fd7fe8233f',1,'Harlinn::Windows::Graphics::DXGI']]],
   ['formatstringsectiontype_20',['FormatStringSectionType',['../namespace_harlinn_1_1_common_1_1_core_1_1_formatting.xhtml#a5dba93c4e396b3410d14a6fe780fe273',1,'Harlinn::Common::Core::Formatting']]],
   ['formatstringtype_21',['FormatStringType',['../namespace_harlinn_1_1_common_1_1_core_1_1_crypto.xhtml#ad2f32edc3fb2a76ea6b5ec48ddf2eac3',1,'Harlinn::Common::Core::Crypto']]],
   ['formatsupport1_22',['FormatSupport1',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.xhtml#a6a863372955c054f06f9ae7685bb7110',1,'Harlinn::Windows::Graphics::D3D12']]],

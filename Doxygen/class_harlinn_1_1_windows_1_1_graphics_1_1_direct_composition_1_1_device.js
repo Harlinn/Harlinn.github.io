@@ -1,0 +1,27 @@
+var class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device =
+[
+    [ "CheckDeviceState", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a94a9c5d691b159a3f7efaf972b348a7e", null ],
+    [ "Commit", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a3a6870c1432948dc32adbd0b85c332ce", null ],
+    [ "CreateAnimation", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a06111847419aae8b3b43cd4a39bc5c1c", null ],
+    [ "CreateEffectGroup", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#ac2c15864eb83637dc4ee040fd3d27d4a", null ],
+    [ "CreateMatrixTransform", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a68b90bf9ede6ff6c91d64c7e81ac3aee", null ],
+    [ "CreateMatrixTransform3D", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#afa28f07fc30417c0a823c01b6d980d76", null ],
+    [ "CreateRectangleClip", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a535a634cd4d475db93472e4d6a64bac5", null ],
+    [ "CreateRotateTransform", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a95f10b2dc6d90ebac279bd3271f8d58c", null ],
+    [ "CreateRotateTransform3D", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a345a296f16467411d4e27032108f1950", null ],
+    [ "CreateScaleTransform", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#adbc73ad27c24cc9b344ac3dfd85fa820", null ],
+    [ "CreateScaleTransform3D", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a59cf15fc18570db7f668320048cffc66", null ],
+    [ "CreateSkewTransform", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a61f1612da3249e8ce775c4f0eb741866", null ],
+    [ "CreateSurface", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#aa85308fcb76818e99832c8dd64e5f886", null ],
+    [ "CreateSurfaceFromHandle", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a7342f3921b2980e57a01c0c59674fe08", null ],
+    [ "CreateSurfaceFromHwnd", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a73f19a8bca063062ed2aaf7595207310", null ],
+    [ "CreateTargetForHwnd", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a0d2f291fa05124b669a3b5ba59c7eed1", null ],
+    [ "CreateTransform3DGroup", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a1c9f0ce7ca6ec1719e073c8a56ddfcf4", null ],
+    [ "CreateTransformGroup", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a5a5db8d69087dde347c0e6ad2430fc81", null ],
+    [ "CreateTranslateTransform", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a5a5c724d54ebb427efdaecc65f7f5a96", null ],
+    [ "CreateTranslateTransform3D", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a59dd5f537ac42f68162f6ce3901b4842", null ],
+    [ "CreateVirtualSurface", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#ad4e42ca25a8beb45411b73d243b95026", null ],
+    [ "CreateVisual", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a588ac9ca9860e6d09dd7b2ab44eede9a", null ],
+    [ "GetFrameStatistics", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a7c45dd524c0aecad94bcbdadcf4ba704", null ],
+    [ "WaitForCommitCompletion", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_device.xhtml#a919564335ce67ea151331fc58fff6887", null ]
+];
