@@ -1,4 +1,4 @@
 var struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_as_tuple_3_01std_1_1tuple_3_01_types_8_8_8_01_4_01_4 =
 [
-    [ "type", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_as_tuple_3_01std_1_1tuple_3_01_types_8_8_8_01_4_01_4.xhtml#af98f2d3358807794931baaf30e57d69c", null ]
+    [ "type", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_as_tuple_3_01std_1_1tuple_3_01_types_8_8_8_01_4_01_4.html#af98f2d3358807794931baaf30e57d69c", null ]
 ];

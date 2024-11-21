@@ -1,4 +1,4 @@
 var struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quiet_na_n_unsigned_value_3_01double_01_4 =
 [
-    [ "value", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quiet_na_n_unsigned_value_3_01double_01_4.xhtml#ae37d110cb6231aae57c74f64cecde74b", null ]
+    [ "value", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quiet_na_n_unsigned_value_3_01double_01_4.html#ae37d110cb6231aae57c74f64cecde74b", null ]
 ];

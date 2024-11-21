@@ -1,7 +1,7 @@
 var namespaces_dup =
 [
-    [ "boost", "namespaceboost.xhtml", "namespaceboost" ],
-    [ "Harlinn", "namespace_harlinn.xhtml", "namespace_harlinn" ],
-    [ "std", "namespacestd.xhtml", "namespacestd" ],
-    [ "xxhash", "namespacexxhash.xhtml", "namespacexxhash" ]
+    [ "boost", "namespaceboost.html", "namespaceboost" ],
+    [ "Harlinn", "namespace_harlinn.html", "namespace_harlinn" ],
+    [ "std", "namespacestd.html", "namespacestd" ],
+    [ "xxhash", "namespacexxhash.html", "namespacexxhash" ]
 ];

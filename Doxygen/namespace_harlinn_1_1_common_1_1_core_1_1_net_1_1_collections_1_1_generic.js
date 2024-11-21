@@ -1,5 +1,5 @@
 var namespace_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic =
 [
-    [ "SortedListEx", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_list_ex.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_list_ex" ],
-    [ "SortedWeakReferenceList", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_weak_reference_list.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_weak_reference_list" ]
+    [ "SortedListEx", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_list_ex.html", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_list_ex" ],
+    [ "SortedWeakReferenceList", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_weak_reference_list.html", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_weak_reference_list" ]
 ];

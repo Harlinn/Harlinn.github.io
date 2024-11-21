@@ -1,4 +1,4 @@
 var namespace_harlinn_1_1_common_1_1_core_1_1_runtime_1_1_serialization =
 [
-    [ "SerializationException", "class_harlinn_1_1_common_1_1_core_1_1_runtime_1_1_serialization_1_1_serialization_exception.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_runtime_1_1_serialization_1_1_serialization_exception" ]
+    [ "SerializationException", "class_harlinn_1_1_common_1_1_core_1_1_runtime_1_1_serialization_1_1_serialization_exception.html", "class_harlinn_1_1_common_1_1_core_1_1_runtime_1_1_serialization_1_1_serialization_exception" ]
 ];

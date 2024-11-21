@@ -1,4 +1,4 @@
 var struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_basic_type_traits_3_01_byte_00_01_r_t_01_4 =
 [
-    [ "Base", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_basic_type_traits_3_01_byte_00_01_r_t_01_4.xhtml#a5acd2ee05ff64c2d8f8ff7dacac25f3f", null ]
+    [ "Base", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_basic_type_traits_3_01_byte_00_01_r_t_01_4.html#a5acd2ee05ff64c2d8f8ff7dacac25f3f", null ]
 ];

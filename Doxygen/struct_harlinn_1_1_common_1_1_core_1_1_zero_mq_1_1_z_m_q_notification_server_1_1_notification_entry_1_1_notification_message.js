@@ -1,5 +1,5 @@
 var struct_harlinn_1_1_common_1_1_core_1_1_zero_mq_1_1_z_m_q_notification_server_1_1_notification_entry_1_1_notification_message =
 [
-    [ "Payload", "struct_harlinn_1_1_common_1_1_core_1_1_zero_mq_1_1_z_m_q_notification_server_1_1_notification_entry_1_1_notification_message.xhtml#a938e691b3dc10851e64333021133febe", null ],
-    [ "Type", "struct_harlinn_1_1_common_1_1_core_1_1_zero_mq_1_1_z_m_q_notification_server_1_1_notification_entry_1_1_notification_message.xhtml#a253a8cc8608d1ee3bb4b96efb566ee45", null ]
+    [ "Payload", "struct_harlinn_1_1_common_1_1_core_1_1_zero_mq_1_1_z_m_q_notification_server_1_1_notification_entry_1_1_notification_message.html#a938e691b3dc10851e64333021133febe", null ],
+    [ "Type", "struct_harlinn_1_1_common_1_1_core_1_1_zero_mq_1_1_z_m_q_notification_server_1_1_notification_entry_1_1_notification_message.html#a253a8cc8608d1ee3bb4b96efb566ee45", null ]
 ];

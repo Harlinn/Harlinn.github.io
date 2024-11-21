@@ -1,7 +1,7 @@
 var struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee2c69e416769ea5eeae0f03fc6e535cc =
 [
-    [ "MaxValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee2c69e416769ea5eeae0f03fc6e535cc.xhtml#a65a41088f9c3f6e2ac2e3d3ccaa8db48", null ],
-    [ "OneValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee2c69e416769ea5eeae0f03fc6e535cc.xhtml#a82d64f7aa8fd49e3147f2304502f6dd3", null ],
-    [ "Value", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee2c69e416769ea5eeae0f03fc6e535cc.xhtml#a90dd97ab076b492fb38106fe766335a9", null ],
-    [ "ZeroValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee2c69e416769ea5eeae0f03fc6e535cc.xhtml#a208f77d2ec5e2e2554da71b553d7d2a0", null ]
+    [ "MaxValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee2c69e416769ea5eeae0f03fc6e535cc.html#a65a41088f9c3f6e2ac2e3d3ccaa8db48", null ],
+    [ "OneValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee2c69e416769ea5eeae0f03fc6e535cc.html#a82d64f7aa8fd49e3147f2304502f6dd3", null ],
+    [ "Value", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee2c69e416769ea5eeae0f03fc6e535cc.html#a90dd97ab076b492fb38106fe766335a9", null ],
+    [ "ZeroValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee2c69e416769ea5eeae0f03fc6e535cc.html#a208f77d2ec5e2e2554da71b553d7d2a0", null ]
 ];

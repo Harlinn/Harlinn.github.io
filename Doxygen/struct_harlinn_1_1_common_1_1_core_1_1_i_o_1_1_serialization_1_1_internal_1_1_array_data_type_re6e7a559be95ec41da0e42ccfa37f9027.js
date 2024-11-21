@@ -1,7 +1,7 @@
 var struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_re6e7a559be95ec41da0e42ccfa37f9027 =
 [
-    [ "Array", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_re6e7a559be95ec41da0e42ccfa37f9027.xhtml#ace235eb8a9effe83996654e15c71e7ff", null ],
-    [ "EmptyArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_re6e7a559be95ec41da0e42ccfa37f9027.xhtml#af2be3970da89a6ec1eaa1c2cfac8bdc1", null ],
-    [ "LargeArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_re6e7a559be95ec41da0e42ccfa37f9027.xhtml#a0d08fd120ce8ec902ed89131061a87b9", null ],
-    [ "SmallArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_re6e7a559be95ec41da0e42ccfa37f9027.xhtml#a3b4ce699766d99373d10aa573d06bead", null ]
+    [ "Array", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_re6e7a559be95ec41da0e42ccfa37f9027.html#ace235eb8a9effe83996654e15c71e7ff", null ],
+    [ "EmptyArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_re6e7a559be95ec41da0e42ccfa37f9027.html#af2be3970da89a6ec1eaa1c2cfac8bdc1", null ],
+    [ "LargeArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_re6e7a559be95ec41da0e42ccfa37f9027.html#a0d08fd120ce8ec902ed89131061a87b9", null ],
+    [ "SmallArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_re6e7a559be95ec41da0e42ccfa37f9027.html#a3b4ce699766d99373d10aa573d06bead", null ]
 ];

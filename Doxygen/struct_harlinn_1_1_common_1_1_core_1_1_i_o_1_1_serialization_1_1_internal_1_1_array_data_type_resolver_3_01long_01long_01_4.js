@@ -1,7 +1,7 @@
 var struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01long_01long_01_4 =
 [
-    [ "Array", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01long_01long_01_4.xhtml#a739446f10159a4eba9f624fb3fc6079b", null ],
-    [ "EmptyArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01long_01long_01_4.xhtml#a122c38722a83ff266ee564de134fbff9", null ],
-    [ "LargeArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01long_01long_01_4.xhtml#a57e34ab173169836e839c5542b891ab2", null ],
-    [ "SmallArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01long_01long_01_4.xhtml#af9cef1318bcd103d96843802d5e6809b", null ]
+    [ "Array", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01long_01long_01_4.html#a739446f10159a4eba9f624fb3fc6079b", null ],
+    [ "EmptyArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01long_01long_01_4.html#a122c38722a83ff266ee564de134fbff9", null ],
+    [ "LargeArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01long_01long_01_4.html#a57e34ab173169836e839c5542b891ab2", null ],
+    [ "SmallArray", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01long_01long_01_4.html#af9cef1318bcd103d96843802d5e6809b", null ]
 ];

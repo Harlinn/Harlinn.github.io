@@ -1,4 +1,4 @@
 var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options11 =
 [
-    [ "AtomicInt64OnDescriptorHeapResourceSupported", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options11.xhtml#adcccf7ca33625b7fe12f8711e26b2a32", null ]
+    [ "AtomicInt64OnDescriptorHeapResourceSupported", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options11.html#adcccf7ca33625b7fe12f8711e26b2a32", null ]
 ];

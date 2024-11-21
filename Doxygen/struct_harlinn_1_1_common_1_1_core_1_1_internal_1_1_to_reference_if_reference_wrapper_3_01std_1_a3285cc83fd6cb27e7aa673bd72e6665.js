@@ -1,4 +1,4 @@
 var struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_to_reference_if_reference_wrapper_3_01std_1_a3285cc83fd6cb27e7aa673bd72e6665 =
 [
-    [ "type", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_to_reference_if_reference_wrapper_3_01std_1_a3285cc83fd6cb27e7aa673bd72e6665.xhtml#a47db78533c980d3e5e8482470fa91772", null ]
+    [ "type", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_to_reference_if_reference_wrapper_3_01std_1_a3285cc83fd6cb27e7aa673bd72e6665.html#a47db78533c980d3e5e8482470fa91772", null ]
 ];

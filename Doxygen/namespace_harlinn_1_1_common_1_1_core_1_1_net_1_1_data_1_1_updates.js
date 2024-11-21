@@ -1,7 +1,7 @@
 var namespace_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates =
 [
-    [ "IStoredProcedures", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_i_stored_procedures.xhtml", null ],
-    [ "IUpdateNodeFactory", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_i_update_node_factory.xhtml", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_i_update_node_factory" ],
-    [ "SqlServerUpdateHandlerBase", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base" ],
-    [ "SqlServerUpdateNodeBase", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base.xhtml", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base" ]
+    [ "IStoredProcedures", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_i_stored_procedures.html", null ],
+    [ "IUpdateNodeFactory", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_i_update_node_factory.html", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_i_update_node_factory" ],
+    [ "SqlServerUpdateHandlerBase", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base.html", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base" ],
+    [ "SqlServerUpdateNodeBase", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base.html", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base" ]
 ];

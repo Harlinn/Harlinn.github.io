@@ -1,4 +1,4 @@
 var struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_negative_infinity_unsigned_value_3_01float_01_4 =
 [
-    [ "value", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_negative_infinity_unsigned_value_3_01float_01_4.xhtml#ac2eb9cf190c8888dc53de8c002e9d207", null ]
+    [ "value", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_negative_infinity_unsigned_value_3_01float_01_4.html#ac2eb9cf190c8888dc53de8c002e9d207", null ]
 ];

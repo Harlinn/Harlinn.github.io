@@ -1,0 +1,4 @@
+var class_harlinn_1_1_windows_1_1_media_1_1_audio_system_effects_property_change_notification_client =
+[
+    [ "OnPropertyChanged", "class_harlinn_1_1_windows_1_1_media_1_1_audio_system_effects_property_change_notification_client.html#a33a5b30ece2f2e88514c1e3286dc95e7", null ]
+];

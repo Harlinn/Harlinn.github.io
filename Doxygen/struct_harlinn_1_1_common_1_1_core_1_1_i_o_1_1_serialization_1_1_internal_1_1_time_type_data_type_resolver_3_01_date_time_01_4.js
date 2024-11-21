@@ -1,5 +1,5 @@
 var struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_time_type_data_type_resolver_3_01_date_time_01_4 =
 [
-    [ "Value", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_time_type_data_type_resolver_3_01_date_time_01_4.xhtml#a57fcab4a02a7abad16d312cfea2ecd01", null ],
-    [ "ZeroValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_time_type_data_type_resolver_3_01_date_time_01_4.xhtml#a3dc6d4b211afdea8fbeb8102e097b7a6", null ]
+    [ "Value", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_time_type_data_type_resolver_3_01_date_time_01_4.html#a57fcab4a02a7abad16d312cfea2ecd01", null ],
+    [ "ZeroValue", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_time_type_data_type_resolver_3_01_date_time_01_4.html#a3dc6d4b211afdea8fbeb8102e097b7a6", null ]
 ];
