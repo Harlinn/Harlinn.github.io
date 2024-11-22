@@ -1,12 +1,5 @@
 var NAVTREEINDEX158 =
 {
-"class_harlinn_1_1_common_1_1_core_1_1_semaphore.html#a06fad04a7752c871a10690c40155843f":[4,0,1,0,0,345,27],
-"class_harlinn_1_1_common_1_1_core_1_1_semaphore.html#a0714a3b237d6e23ebb0e77d67e07c923":[2,0,1,0,0,353,1],
-"class_harlinn_1_1_common_1_1_core_1_1_semaphore.html#a0714a3b237d6e23ebb0e77d67e07c923":[4,0,1,0,0,345,1],
-"class_harlinn_1_1_common_1_1_core_1_1_semaphore.html#a1fde964c27d0a1f95e87e65d9faa631e":[2,0,1,0,0,353,3],
-"class_harlinn_1_1_common_1_1_core_1_1_semaphore.html#a1fde964c27d0a1f95e87e65d9faa631e":[4,0,1,0,0,345,3],
-"class_harlinn_1_1_common_1_1_core_1_1_semaphore.html#a27a1c33fe1116716cdbb4344c7c2079e":[2,0,1,0,0,353,2],
-"class_harlinn_1_1_common_1_1_core_1_1_semaphore.html#a27a1c33fe1116716cdbb4344c7c2079e":[4,0,1,0,0,345,2],
 "class_harlinn_1_1_common_1_1_core_1_1_semaphore.html#a40044ec0401d4405145a320b55fb0676":[2,0,1,0,0,353,6],
 "class_harlinn_1_1_common_1_1_core_1_1_semaphore.html#a40044ec0401d4405145a320b55fb0676":[4,0,1,0,0,345,6],
 "class_harlinn_1_1_common_1_1_core_1_1_semaphore.html#a4bf92ddb36e6a159b1ae3dd22dfbebcf":[2,0,1,0,0,353,0],
@@ -249,5 +242,12 @@ var NAVTREEINDEX158 =
 "class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink_base.html#a0099d7ba5e7d23fdbd7032f10706bf7c":[4,0,1,0,0,352,4],
 "class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink_base.html#a1c6076c181b8b5d764e3f44697421a28":[2,0,1,0,0,360,8],
 "class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink_base.html#a1c6076c181b8b5d764e3f44697421a28":[4,0,1,0,0,352,8],
-"class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink_base.html#a5d6369b65fc8529e88648769da16da1a":[2,0,1,0,0,360,3]
+"class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink_base.html#a5d6369b65fc8529e88648769da16da1a":[2,0,1,0,0,360,3],
+"class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink_base.html#a5d6369b65fc8529e88648769da16da1a":[4,0,1,0,0,352,3],
+"class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink_base.html#a98608071c7f514e2191472a71d46f9bf":[2,0,1,0,0,360,2],
+"class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink_base.html#a98608071c7f514e2191472a71d46f9bf":[4,0,1,0,0,352,2],
+"class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink_base.html#aa078fcb60bb37505e16bc57a522b3179":[2,0,1,0,0,360,11],
+"class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink_base.html#aa078fcb60bb37505e16bc57a522b3179":[4,0,1,0,0,352,11],
+"class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink_base.html#aa1563699a2cc42cf31af18b49b646d91":[2,0,1,0,0,360,5],
+"class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink_base.html#aa1563699a2cc42cf31af18b49b646d91":[4,0,1,0,0,352,5]
 };

@@ -1,6 +1,6 @@
 var class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_simplified_geometry_sink_implementation_base =
 [
-    [ "Base", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_simplified_geometry_sink_implementation_base.html#af778cf1840bbf080f2b0f5cf0e52172a", null ],
+    [ "Base", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_simplified_geometry_sink_implementation_base.html#a0abec8bfe53d97480e1cf205b0eff687", null ],
     [ "DerivedType", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_simplified_geometry_sink_implementation_base.html#a1b3443a6b05a89059d90a21f78972347", null ],
     [ "InterfaceType", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_simplified_geometry_sink_implementation_base.html#a621f24ac15bc29bf0408463e8c3a7f2a", null ],
     [ "AddBeziers", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_simplified_geometry_sink_implementation_base.html#a88034c31ec72fc04b2047c06a67fdf2a", null ],

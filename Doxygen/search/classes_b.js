@@ -53,7 +53,7 @@ var searchData=
   ['localizedstrings_50',['LocalizedStrings',['../class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html',1,'Harlinn::Windows::Graphics::DirectWrite']]],
   ['localuniqueid_51',['LocalUniqueId',['../class_harlinn_1_1_common_1_1_core_1_1_security_1_1_local_unique_id.html',1,'Harlinn::Common::Core::Security']]],
   ['location_52',['Location',['../class_harlinn_1_1_common_1_1_core_1_1_location.html',1,'Harlinn::Common::Core']]],
-  ['locationeventssink_53',['LocationEventsSink',['../class_harlinn_1_1_common_1_1_core_1_1_location_events_sink.html',1,'Harlinn::Common::Core']]],
+  ['locationeventssinkimpl_53',['LocationEventsSinkImpl',['../class_harlinn_1_1_common_1_1_core_1_1_location_events_sink_impl.html',1,'Harlinn::Common::Core']]],
   ['locationpermissions_54',['LocationPermissions',['../class_harlinn_1_1_common_1_1_core_1_1_location_permissions.html',1,'Harlinn::Common::Core']]],
   ['locationpower_55',['LocationPower',['../class_harlinn_1_1_common_1_1_core_1_1_location_power.html',1,'Harlinn::Common::Core']]],
   ['locationreport_56',['LocationReport',['../class_harlinn_1_1_common_1_1_core_1_1_location_report.html',1,'Harlinn::Common::Core']]],

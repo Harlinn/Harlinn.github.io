@@ -1,12 +1,5 @@
 var NAVTREEINDEX122 =
 {
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer.html#a200af98dbe7b4546ac1891fb81b35322":[4,0,1,0,0,17,2,0,49],
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer.html#a27bead183da8be3e3ff96f3151cb81fc":[2,0,1,0,0,21,2,0,2],
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer.html#a27bead183da8be3e3ff96f3151cb81fc":[4,0,1,0,0,17,2,0,2],
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer.html#a2c17d4c9b1971fa5cb14656bda94709b":[2,0,1,0,0,21,2,0,46],
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer.html#a2c17d4c9b1971fa5cb14656bda94709b":[4,0,1,0,0,17,2,0,46],
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer.html#a2edadbe596b032b9654d53908e7519ff":[2,0,1,0,0,21,2,0,31],
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer.html#a2edadbe596b032b9654d53908e7519ff":[4,0,1,0,0,17,2,0,31],
 "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer.html#a316b18a8a5f009821cae03c482a9d993":[2,0,1,0,0,21,2,0,50],
 "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer.html#a316b18a8a5f009821cae03c482a9d993":[4,0,1,0,0,17,2,0,50],
 "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer.html#a344e914b1a50b0c11ed011dd73a947c2":[2,0,1,0,0,21,2,0,18],
@@ -249,5 +242,12 @@ var NAVTREEINDEX122 =
 "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a2d8673720184333ee4da8deb3085d50e":[4,0,1,0,0,17,11,52],
 "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a374a9735362ec0873cf2e2da912eff40":[2,0,1,0,0,21,11,34],
 "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a374a9735362ec0873cf2e2da912eff40":[4,0,1,0,0,17,11,34],
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a37619200811f0e55c098c14cabe04cab":[2,0,1,0,0,21,11,14]
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a37619200811f0e55c098c14cabe04cab":[2,0,1,0,0,21,11,14],
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a37619200811f0e55c098c14cabe04cab":[4,0,1,0,0,17,11,14],
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a41508c37f85e29d37038c19bb5a291d1":[2,0,1,0,0,21,11,42],
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a41508c37f85e29d37038c19bb5a291d1":[4,0,1,0,0,17,11,42],
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a426c5deda9edaf27b91af58d3fb28b3e":[2,0,1,0,0,21,11,25],
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a426c5deda9edaf27b91af58d3fb28b3e":[4,0,1,0,0,17,11,25],
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a4290d30b815cf4fe89eef9b11720dea3":[2,0,1,0,0,21,11,54],
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a4290d30b815cf4fe89eef9b11720dea3":[4,0,1,0,0,17,11,54]
 };

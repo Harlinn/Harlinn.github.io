@@ -118,10 +118,20 @@ Functions</h2></td></tr>
 <tr class="separator:a489728af6c5dee7a7300db134076e89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8b6600a6a76efad10f535e3dd96a096" id="r_af8b6600a6a76efad10f535e3dd96a096"><td class="memTemplParams" colspan="2">template&lt;typename DerivedT , typename ... InterfaceTypes&gt; </td></tr>
 <tr class="memitem:af8b6600a6a76efad10f535e3dd96a096"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af8b6600a6a76efad10f535e3dd96a096">__declspec</a> (novtable) Interfaces</td></tr>
-<tr class="memdesc:af8b6600a6a76efad10f535e3dd96a096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for COM object implementations, it implements <code> virtual HRESULT __stdcall QueryInterface( const IID&amp; iid, void** result ) override; </code> on behalf of derived templates.  <br /></td></tr>
+<tr class="memdesc:af8b6600a6a76efad10f535e3dd96a096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for COM object implementations, it implements <code> void* QueryItf( const Guid&amp; iid ); </code> which returns a pointer to the requested interface identified by the iid parameter, or nullptr if the requested interface is not supported by the type.  <br /></td></tr>
 <tr class="separator:af8b6600a6a76efad10f535e3dd96a096"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Use this template to implement COM objects that will be instantiated using either <code> template&lt;typename BaseT&gt; class <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_com_1_1_heap_object.html" title="Use this template to instantiate an object with an implementation of IUnknown::Release() that calls t...">HeapObject</a> {...} </code> or <code> template&lt;typename BaseT&gt; class <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_com_1_1_stack_object.html" title="Use this template to instantiate an object with a non-destructive implementation of IUnknown::Release...">StackObject</a> {...} </code> </p>
+<p><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_com_1_1_heap_object.html" title="Use this template to instantiate an object with an implementation of IUnknown::Release() that calls t...">HeapObject</a> and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_com_1_1_stack_object.html" title="Use this template to instantiate an object with a non-destructive implementation of IUnknown::Release...">StackObject</a> provides the implementation of the IUnknown interface, while the remaining functions specified by the interfaces given in the InterfaceTypes parameter pack must be implemented by the class derived from ObjectBase. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">...InterfaceTypes</td><td></td></tr>
+    <tr><td class="paramname">DerivedT</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="af8b6600a6a76efad10f535e3dd96a096" name="af8b6600a6a76efad10f535e3dd96a096"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af8b6600a6a76efad10f535e3dd96a096">&#9670;&#160;</a></span>__declspec()</h2>
 
@@ -139,7 +149,7 @@ template&lt;typename DerivedT , typename ... InterfaceTypes&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Base class for COM object implementations, it implements <code> virtual HRESULT __stdcall QueryInterface( const IID&amp; iid, void** result ) override; </code> on behalf of derived templates. </p>
+<p>Base class for COM object implementations, it implements <code> void* QueryItf( const Guid&amp; iid ); </code> which returns a pointer to the requested interface identified by the iid parameter, or nullptr if the requested interface is not supported by the type. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">DerivedT</td><td>The type that gets instantiated. </td></tr>
@@ -148,7 +158,15 @@ template&lt;typename DerivedT , typename ... InterfaceTypes&gt; </div>
   </dd>
 </dl>
 <p>The list of COM interfaces that is implemented by DerivedT that DerivedT can be unambiguously be cast to. This means that no interface can be derived from any other interface that is part of this parameter pack. </p>
-<p><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_com_1_1_interface.html">Interface</a> inheritance is implemented through specializations of</p>
+<p>Retrieves a pointer to the interface if it's among the interfaces specified by the InterfaceTypes... parameter pack, otherwise nullptr. </p>
+<p>Used by derived classes to implement the <code>virtual HRESULT __stdcall QueryInterface( const IID&amp; iid, void** result )</code> function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iid</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A void* pointer to the requested interface, or nullptr if it is not supported.</dd></dl>
 
 </div>
 </div>

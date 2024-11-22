@@ -1,12 +1,5 @@
 var NAVTREEINDEX133 =
 {
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_sql_client_1_1_data_reader_wrapper.html#a71ea50949ecac286252191491b80ec2a":[4,0,1,0,0,20,1,0,0,65],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_sql_client_1_1_data_reader_wrapper.html#a734572873071fba255ef0564c97d2f34":[2,0,1,0,0,25,1,0,0,61],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_sql_client_1_1_data_reader_wrapper.html#a734572873071fba255ef0564c97d2f34":[4,0,1,0,0,20,1,0,0,61],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_sql_client_1_1_data_reader_wrapper.html#a789eabdbac0a47800d8715d6f46a3a66":[2,0,1,0,0,25,1,0,0,43],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_sql_client_1_1_data_reader_wrapper.html#a789eabdbac0a47800d8715d6f46a3a66":[4,0,1,0,0,20,1,0,0,43],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_sql_client_1_1_data_reader_wrapper.html#a7f7bae5ad8c895041f9e32d87eed2f3f":[2,0,1,0,0,25,1,0,0,21],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_sql_client_1_1_data_reader_wrapper.html#a7f7bae5ad8c895041f9e32d87eed2f3f":[4,0,1,0,0,20,1,0,0,21],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_sql_client_1_1_data_reader_wrapper.html#a804a10d3badcf5d4a6248930e52e72e8":[2,0,1,0,0,25,1,0,0,60],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_sql_client_1_1_data_reader_wrapper.html#a804a10d3badcf5d4a6248930e52e72e8":[4,0,1,0,0,20,1,0,0,60],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_sql_client_1_1_data_reader_wrapper.html#a86e8c5a9747f031240cb685cbe200df5":[2,0,1,0,0,25,1,0,0,8],
@@ -249,5 +242,12 @@ var NAVTREEINDEX133 =
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base.html#ab10337510dc569635bb2190ef9b405a2":[4,0,1,0,0,20,1,1,2,9],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base.html#ae8a6953b0358e4b79bae180b6673aa95":[2,0,1,0,0,25,1,1,2,4],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base.html#ae8a6953b0358e4b79bae180b6673aa95":[4,0,1,0,0,20,1,1,2,4],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base.html#ae99570015bf9c026f15eaf4a064eb337":[2,0,1,0,0,25,1,1,2,7]
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base.html#ae99570015bf9c026f15eaf4a064eb337":[2,0,1,0,0,25,1,1,2,7],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base.html#ae99570015bf9c026f15eaf4a064eb337":[4,0,1,0,0,20,1,1,2,7],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base.html#afc5f834767e52b79c9db8acd00a5db60":[2,0,1,0,0,25,1,1,2,6],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base.html#afc5f834767e52b79c9db8acd00a5db60":[4,0,1,0,0,20,1,1,2,6],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base.html":[2,0,1,0,0,25,1,1,3],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base.html":[4,0,1,0,0,20,1,1,3],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base.html#a0b5f7406382d8e26d2ab6f6288c4201a":[2,0,1,0,0,25,1,1,3,4],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base.html#a0b5f7406382d8e26d2ab6f6288c4201a":[4,0,1,0,0,20,1,1,3,4]
 };

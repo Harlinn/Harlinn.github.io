@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Harlinn.Windows: Member List</title>
+<title>Harlinn.Windows: Harlinn::Common::Core::SimpleByteSpanLike Concept Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,7 +71,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('class_harlinn_1_1_common_1_1_core_1_1_location_events_sink.html',''); initResizable(true); });
+$(function(){initNavTree('concept_harlinn_1_1_common_1_1_core_1_1_simple_byte_span_like.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -97,21 +97,27 @@ $(function(){initNavTree('class_harlinn_1_1_common_1_1_core_1_1_location_events_
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Harlinn::Common::Core::LocationEventsSink Member List</div></div>
+  <div class="headertitle"><div class="title">Harlinn::Common::Core::SimpleByteSpanLike Concept Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_location_events_sink.html">Harlinn::Common::Core::LocationEventsSink</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_location_events_sink.html#a5d773cd2ecf37f5c8a661c6e262c46b0">Base</a> typedef</td><td class="entry"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_location_events_sink.html">Harlinn::Common::Core::LocationEventsSink</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_location_events_sink.html#a9507f54839edd9cf4a6ced0d8f565cfc">location_</a></td><td class="entry"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_location_events_sink.html">Harlinn::Common::Core::LocationEventsSink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_location_events_sink.html#ad989396c3831119dc8c50a832bad7471">OnLocationChanged</a>(__RPC__in REFIID reportType, __RPC__in_opt ILocationReport *locationReport) override</td><td class="entry"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_location_events_sink.html">Harlinn::Common::Core::LocationEventsSink</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_location_events_sink.html#af70fbac241c7d5f78e3fd42565a06577">OnStatusChanged</a>(__RPC__in REFIID reportType, LOCATION_REPORT_STATUS newStatus) override</td><td class="entry"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_location_events_sink.html">Harlinn::Common::Core::LocationEventsSink</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
-</table></div><!-- contents -->
+<p>Matches most common container classes with sequential memory layout.  
+<a href="#details">More...</a></p>
+
+<p><code>#include &lt;HCCConcepts.h&gt;</code></p>
+<h2 class="groupheader">Concept definition</h2>
+<div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_byte_span_like.html">Harlinn::Common::Core::SimpleByteSpanLike</a> =  <a class="code hl_concept" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_span_like.html">SimpleSpanLike&lt;T&gt;</a> &amp;&amp; std::is_same_v&lt;typename T::value_type, Byte&gt;</div>
+<div class="ttc" id="aconcept_harlinn_1_1_common_1_1_core_1_1_simple_byte_span_like_html"><div class="ttname"><a href="concept_harlinn_1_1_common_1_1_core_1_1_simple_byte_span_like.html">Harlinn::Common::Core::SimpleByteSpanLike</a></div><div class="ttdoc">Matches most common container classes with sequential memory layout.</div><div class="ttdef"><b>Definition</b> HCCConcepts.h:62</div></div>
+<div class="ttc" id="aconcept_harlinn_1_1_common_1_1_core_1_1_simple_span_like_html"><div class="ttname"><a href="concept_harlinn_1_1_common_1_1_core_1_1_simple_span_like.html">Harlinn::Common::Core::SimpleSpanLike</a></div><div class="ttdoc">Matches most containers with sequential memory layout.</div><div class="ttdef"><b>Definition</b> HCCConcepts.h:28</div></div>
+</div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Matches most common container classes with sequential memory layout. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="namespace_harlinn.html">Harlinn</a></li><li class="navelem"><a class="el" href="namespace_harlinn_1_1_common.html">Common</a></li><li class="navelem"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html">Core</a></li><li class="navelem"><a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_byte_span_like.html">SimpleByteSpanLike</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
   </ul>
 </div>

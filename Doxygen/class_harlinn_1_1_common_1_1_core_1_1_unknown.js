@@ -8,7 +8,7 @@ var class_harlinn_1_1_common_1_1_core_1_1_unknown =
     [ "Unknown", "class_harlinn_1_1_common_1_1_core_1_1_unknown.html#aaa34bfd7783fe6f4b538c0bc2cf255da", null ],
     [ "~Unknown", "class_harlinn_1_1_common_1_1_core_1_1_unknown.html#a0340a6160ee8df2afb43636ea3c2cc96", null ],
     [ "As", "class_harlinn_1_1_common_1_1_core_1_1_unknown.html#af6772461121e3555b96aa27b64ed98c8", null ],
-    [ "As", "class_harlinn_1_1_common_1_1_core_1_1_unknown.html#a4937fd8f5f7f2936ca5d615a9b564c76", null ],
+    [ "As", "class_harlinn_1_1_common_1_1_core_1_1_unknown.html#a94456ed5a1ae723403764dd14f1d27c8", null ],
     [ "CoCreateInstanceFromClassId", "class_harlinn_1_1_common_1_1_core_1_1_unknown.html#a53934808e8bc16aae6c312e16200f38c", null ],
     [ "CoCreateInstanceFromClassId", "class_harlinn_1_1_common_1_1_core_1_1_unknown.html#a2a04fc32e5cb30da5304d5ba698ffcd2", null ],
     [ "CoCreateInstanceFromClassId", "class_harlinn_1_1_common_1_1_core_1_1_unknown.html#acd974cb14b75e77172186c55df46a6c4", null ],

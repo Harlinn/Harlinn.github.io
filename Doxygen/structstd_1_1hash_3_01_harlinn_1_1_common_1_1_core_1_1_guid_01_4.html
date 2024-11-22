@@ -104,6 +104,9 @@ $(function(){initNavTree('structstd_1_1hash_3_01_harlinn_1_1_common_1_1_core_1_1
 </div><!--header-->
 <div class="contents">
 
+<p>This specialization of std::hash for <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Harlinn::Common::Core::Guid</a> assumes that the distribution of values for the 8 last bytes of the Guid is random enough to be used as a hash value.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;HCCGuid.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -111,7 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af64e6b0c9ef71fe8c671d7d6024c853b" id="r_af64e6b0c9ef71fe8c671d7d6024c853b"><td class="memItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af64e6b0c9ef71fe8c671d7d6024c853b">operator()</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Harlinn::Common::Core::Guid</a> &amp;guid) const noexcept</td></tr>
 <tr class="separator:af64e6b0c9ef71fe8c671d7d6024c853b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This specialization of std::hash for <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Harlinn::Common::Core::Guid</a> assumes that the distribution of values for the 8 last bytes of the Guid is random enough to be used as a hash value. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af64e6b0c9ef71fe8c671d7d6024c853b" name="af64e6b0c9ef71fe8c671d7d6024c853b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af64e6b0c9ef71fe8c671d7d6024c853b">&#9670;&#160;</a></span>operator()()</h2>
 

@@ -1,7 +1,7 @@
 var class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_swap_chain =
 [
     [ "Base", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_swap_chain.html#a13831ad559e66a73f6ff13f5f3c9396e", null ],
-    [ "GetBuffer", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_swap_chain.html#a2fa80d7ab2b0fc5f3b34310bd980481b", null ],
+    [ "GetBuffer", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_swap_chain.html#ae91efc19b5978eeb62a2d3ad874ba5ef", null ],
     [ "GetBuffer", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_swap_chain.html#a850135a918246acdb0302e24b37e6c98", null ],
     [ "GetBuffer", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_swap_chain.html#a4a7b7cc07b98a101303c2c2d6efd1d8d", null ],
     [ "GetContainingOutput", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_swap_chain.html#afaeccab5b60ede1876c5c61c677cdb54", null ],

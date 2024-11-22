@@ -1655,34 +1655,6 @@ var hierarchy =
       [ "Harlinn::Windows::Media::StreamingMediaSink", "class_harlinn_1_1_windows_1_1_media_1_1_streaming_media_sink.html", null ],
       [ "Harlinn::Windows::Media::StreamingStreamSink", "class_harlinn_1_1_windows_1_1_media_1_1_streaming_stream_sink.html", null ]
     ] ],
-    [ "IUnknownImplementation", null, [
-      [ "Harlinn::Common::Core::IWbemObjectSinkImplementationBase< IWbemObjectSinkDispatcher< boost::container::small_vector< WbemClassObject, 64 > >, IWbemObjectSink, boost::container::small_vector< WbemClassObject, 64 >, InterfaceTypes... >", "class_harlinn_1_1_common_1_1_core_1_1_i_wbem_object_sink_implementation_base.html", [
-        [ "Harlinn::Common::Core::IWbemObjectSinkDispatcherBase< IWbemObjectSinkDispatcher< boost::container::small_vector< WbemClassObject, 64 > >, IWbemObjectSink, boost::container::small_vector< WbemClassObject, 64 > >", "class_harlinn_1_1_common_1_1_core_1_1_i_wbem_object_sink_dispatcher_base.html", null ]
-      ] ],
-      [ "Harlinn::Common::Core::IWbemObjectSinkImplementationBase< DerivedT, IWbemObjectSink, boost::container::small_vector< WbemClassObject, 64 >, InterfaceTypes... >", "class_harlinn_1_1_common_1_1_core_1_1_i_wbem_object_sink_implementation_base.html", null ],
-      [ "Harlinn::Windows::Graphics::ID2D1SimplifiedGeometrySinkImplementationBase< ID2D1GeometrySinkImplementationBase< DerivedT >, ID2D1GeometrySink >", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_simplified_geometry_sink_implementation_base.html", [
-        [ "Harlinn::Windows::Graphics::ID2D1GeometrySinkImplementationBase< DerivedT >", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_geometry_sink_implementation_base.html", null ]
-      ] ],
-      [ "Harlinn::Common::Core::IDispatchImplementation< DerivedT, InterfaceT, InterfaceTypes >", "class_harlinn_1_1_common_1_1_core_1_1_i_dispatch_implementation.html", null ],
-      [ "Harlinn::Common::Core::IWbemObjectSinkImplementationBase< DerivedT, InterfaceT, ContainerT, InterfaceTypes >", "class_harlinn_1_1_common_1_1_core_1_1_i_wbem_object_sink_implementation_base.html", [
-        [ "Harlinn::Common::Core::IWbemObjectSinkDispatcherBase< DerivedT, InterfaceT, ContainerT, InterfaceTypes >", "class_harlinn_1_1_common_1_1_core_1_1_i_wbem_object_sink_dispatcher_base.html", [
-          [ "Harlinn::Common::Core::IWbemObjectSinkDispatcher< ContainerT >", "class_harlinn_1_1_common_1_1_core_1_1_i_wbem_object_sink_dispatcher.html", null ]
-        ] ]
-      ] ],
-      [ "Harlinn::Common::Core::LocationEventsSink", "class_harlinn_1_1_common_1_1_core_1_1_location_events_sink.html", null ],
-      [ "Harlinn::Common::Core::SensorEventSinkBase", "class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink_base.html", [
-        [ "Harlinn::Common::Core::SensorEventSink", "class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink.html", null ]
-      ] ],
-      [ "Harlinn::Common::Core::SensorManagerEventSinkBase", "class_harlinn_1_1_common_1_1_core_1_1_sensor_manager_event_sink_base.html", [
-        [ "Harlinn::Common::Core::SensorManagerEventSink", "class_harlinn_1_1_common_1_1_core_1_1_sensor_manager_event_sink.html", null ]
-      ] ],
-      [ "Harlinn::Windows::FileDialogEventsImplementation", "class_harlinn_1_1_windows_1_1_file_dialog_events_implementation.html", null ],
-      [ "Harlinn::Windows::Graphics::ID2D1CommandSinkImplementationBase< DerivedT >", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_command_sink_implementation_base.html", null ],
-      [ "Harlinn::Windows::Graphics::ID2D1GdiMetafileSinkImplementationBase< DerivedT, InterfaceT, InterfaceTypes >", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_gdi_metafile_sink_implementation_base.html", null ],
-      [ "Harlinn::Windows::Graphics::ID2D1SimplifiedGeometrySinkImplementationBase< DerivedT, InterfaceT >", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_simplified_geometry_sink_implementation_base.html", null ],
-      [ "Harlinn::Windows::Graphics::ID2D1TessellationSinkImplementationBase< DerivedT >", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_tessellation_sink_implementation_base.html", null ],
-      [ "Harlinn::Windows::Graphics::Imaging::ProgressCallback", "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_progress_callback.html", null ]
-    ] ],
     [ "Harlinn.Common.Core.Net.Data.Updates.IUpdateNodeFactory< TKind >", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_i_update_node_factory.html", null ],
     [ "JET_COLUMNCREATE_W", null, [
       [ "Harlinn::Common::Core::Ese::ColumnCreate", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_create.html", null ]
@@ -1882,6 +1854,31 @@ var hierarchy =
     ] ],
     [ "Harlinn::OCI::Number", "struct_harlinn_1_1_o_c_i_1_1_number.html", null ],
     [ "Com::ObjectBase", null, [
+      [ "Harlinn::Common::Core::IWbemObjectSinkImplementationBase< IWbemObjectSinkDispatcher, IWbemObjectSink, boost::container::small_vector< WbemClassObject, 64 > >", "class_harlinn_1_1_common_1_1_core_1_1_i_wbem_object_sink_implementation_base.html", [
+        [ "Harlinn::Common::Core::IWbemObjectSinkDispatcherBase< IWbemObjectSinkDispatcher, IWbemObjectSink, boost::container::small_vector< WbemClassObject, 64 > >", "class_harlinn_1_1_common_1_1_core_1_1_i_wbem_object_sink_dispatcher_base.html", [
+          [ "Harlinn::Common::Core::IWbemObjectSinkDispatcher", "class_harlinn_1_1_common_1_1_core_1_1_i_wbem_object_sink_dispatcher.html", null ]
+        ] ]
+      ] ],
+      [ "Harlinn::Common::Core::IWbemObjectSinkImplementationBase< DerivedT, IWbemObjectSink, boost::container::small_vector< WbemClassObject, 64 > >", "class_harlinn_1_1_common_1_1_core_1_1_i_wbem_object_sink_implementation_base.html", null ],
+      [ "Harlinn::Windows::Graphics::ID2D1SimplifiedGeometrySinkImplementationBase< ID2D1GeometrySinkImplementationBase< DerivedT >, ID2D1GeometrySink >", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_simplified_geometry_sink_implementation_base.html", [
+        [ "Harlinn::Windows::Graphics::ID2D1GeometrySinkImplementationBase< DerivedT >", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_geometry_sink_implementation_base.html", null ]
+      ] ],
+      [ "Harlinn::Common::Core::IWbemObjectSinkImplementationBase< DerivedT, InterfaceT, ContainerT >", "class_harlinn_1_1_common_1_1_core_1_1_i_wbem_object_sink_implementation_base.html", [
+        [ "Harlinn::Common::Core::IWbemObjectSinkDispatcherBase< DerivedT, InterfaceT, ContainerT >", "class_harlinn_1_1_common_1_1_core_1_1_i_wbem_object_sink_dispatcher_base.html", null ]
+      ] ],
+      [ "Harlinn::Common::Core::LocationEventsSinkImpl", "class_harlinn_1_1_common_1_1_core_1_1_location_events_sink_impl.html", null ],
+      [ "Harlinn::Common::Core::SensorEventSinkBase", "class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink_base.html", [
+        [ "Harlinn::Common::Core::SensorEventSink", "class_harlinn_1_1_common_1_1_core_1_1_sensor_event_sink.html", null ]
+      ] ],
+      [ "Harlinn::Common::Core::SensorManagerEventSinkBase", "class_harlinn_1_1_common_1_1_core_1_1_sensor_manager_event_sink_base.html", [
+        [ "Harlinn::Common::Core::SensorManagerEventSink", "class_harlinn_1_1_common_1_1_core_1_1_sensor_manager_event_sink.html", null ]
+      ] ],
+      [ "Harlinn::Windows::FileDialogEventsImplementation", "class_harlinn_1_1_windows_1_1_file_dialog_events_implementation.html", null ],
+      [ "Harlinn::Windows::Graphics::ID2D1CommandSinkImplementationBase< DerivedT >", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_command_sink_implementation_base.html", null ],
+      [ "Harlinn::Windows::Graphics::ID2D1GdiMetafileSinkImplementationBase< DerivedT, InterfaceT >", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_gdi_metafile_sink_implementation_base.html", null ],
+      [ "Harlinn::Windows::Graphics::ID2D1SimplifiedGeometrySinkImplementationBase< DerivedT, InterfaceT >", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_simplified_geometry_sink_implementation_base.html", null ],
+      [ "Harlinn::Windows::Graphics::ID2D1TessellationSinkImplementationBase< DerivedT >", "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_tessellation_sink_implementation_base.html", null ],
+      [ "Harlinn::Windows::Graphics::Imaging::ProgressCallback", "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_progress_callback.html", null ],
       [ "Harlinn::Windows::Media::abstract", "class_harlinn_1_1_windows_1_1_media_1_1abstract.html", null ]
     ] ],
     [ "Harlinn::OCI::ObjectBase", "class_harlinn_1_1_o_c_i_1_1_object_base.html", [
@@ -1899,11 +1896,7 @@ var hierarchy =
       [ "Harlinn::Common::Core::Com::Internal::ISequentialStreamOnStreamImpl< StreamT, DerivedT, IStream >", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_internal_1_1_i_sequential_stream_on_stream_impl.html", [
         [ "Harlinn::Common::Core::Com::Internal::IStreamOnStreamImpl< StreamT, DerivedT, InterfaceT >", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_internal_1_1_i_stream_on_stream_impl.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Com::EnumConnectionsImpl< DerivedT, ObjectBaseT, ConnectionInterfaceT, InterfaceT >", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_enum_connections_impl.html", null ],
       [ "Harlinn::Common::Core::Com::Internal::ISequentialStreamOnStreamImpl< StreamT, DerivedT, InterfaceT >", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_internal_1_1_i_sequential_stream_on_stream_impl.html", null ]
-    ] ],
-    [ "ObjectBaseT", null, [
-      [ "Harlinn::Common::Core::Com::EnumConnectionsImpl< DerivedT, ObjectBaseT, ConnectionInterfaceT, InterfaceT >", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_enum_connections_impl.html", null ]
     ] ],
     [ "OnDemandServerMediaSubsession", null, [
       [ "Harlinn::Windows::Media::LiveMedia::MediaFoundationMediaSubsession", "class_harlinn_1_1_windows_1_1_media_1_1_live_media_1_1_media_foundation_media_subsession.html", null ]
@@ -2993,6 +2986,7 @@ var hierarchy =
       [ "Harlinn::Common::Core::ClassFactory", "class_harlinn_1_1_common_1_1_core_1_1_class_factory.html", [
         [ "Harlinn::Common::Core::ClassFactory2", "class_harlinn_1_1_common_1_1_core_1_1_class_factory2.html", null ]
       ] ],
+      [ "Harlinn::Common::Core::ComPtr< T >", "class_harlinn_1_1_common_1_1_core_1_1_com_ptr.html", null ],
       [ "Harlinn::Common::Core::ConnectionPoint", "class_harlinn_1_1_common_1_1_core_1_1_connection_point.html", null ],
       [ "Harlinn::Common::Core::ConnectionPointContainer", "class_harlinn_1_1_common_1_1_core_1_1_connection_point_container.html", null ],
       [ "Harlinn::Common::Core::Continue", "class_harlinn_1_1_common_1_1_core_1_1_continue.html", null ],
@@ -3218,7 +3212,6 @@ var hierarchy =
       [ "Harlinn::Common::Core::TypeLibRegistration", "class_harlinn_1_1_common_1_1_core_1_1_type_lib_registration.html", null ],
       [ "Harlinn::Common::Core::TypeLibRegistrationReader", "class_harlinn_1_1_common_1_1_core_1_1_type_lib_registration_reader.html", null ],
       [ "Harlinn::Common::Core::TypeMarshal", "class_harlinn_1_1_common_1_1_core_1_1_type_marshal.html", null ],
-      [ "Harlinn::Common::Core::UnknownPtr< T >", "class_harlinn_1_1_common_1_1_core_1_1_unknown_ptr.html", null ],
       [ "Harlinn::Common::Core::UnsecuredApartment", "class_harlinn_1_1_common_1_1_core_1_1_unsecured_apartment.html", [
         [ "Harlinn::Common::Core::WbemUnsecuredApartment", "class_harlinn_1_1_common_1_1_core_1_1_wbem_unsecured_apartment.html", null ]
       ] ],

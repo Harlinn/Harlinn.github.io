@@ -1,12 +1,5 @@
 var NAVTREEINDEX134 =
 {
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base.html#ae99570015bf9c026f15eaf4a064eb337":[4,0,1,0,0,20,1,1,2,7],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base.html#afc5f834767e52b79c9db8acd00a5db60":[2,0,1,0,0,25,1,1,2,6],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base.html#afc5f834767e52b79c9db8acd00a5db60":[4,0,1,0,0,20,1,1,2,6],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base.html":[2,0,1,0,0,25,1,1,3],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base.html":[4,0,1,0,0,20,1,1,3],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base.html#a0b5f7406382d8e26d2ab6f6288c4201a":[2,0,1,0,0,25,1,1,3,4],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base.html#a0b5f7406382d8e26d2ab6f6288c4201a":[4,0,1,0,0,20,1,1,3,4],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base.html#a1236cc486af0ac2792034e9a4c929528":[2,0,1,0,0,25,1,1,3,19],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base.html#a1236cc486af0ac2792034e9a4c929528":[4,0,1,0,0,20,1,1,3,19],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base.html#a206040816e5f6e7b3cbf2bdbd885ffe8":[2,0,1,0,0,25,1,1,3,16],
@@ -249,5 +242,12 @@ var NAVTREEINDEX134 =
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_event_context_after_commit_event_args.html":[4,0,1,0,0,20,2,4],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_event_context_after_commit_event_args.html#a6c8dd3e06dc682886ef93918269f24fb":[2,0,1,0,0,25,2,4,1],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_event_context_after_commit_event_args.html#a6c8dd3e06dc682886ef93918269f24fb":[4,0,1,0,0,20,2,4,1],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_event_context_after_commit_event_args.html#abfafd73814863e3817aecab3ea4a9351":[2,0,1,0,0,25,2,4,2]
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_event_context_after_commit_event_args.html#abfafd73814863e3817aecab3ea4a9351":[2,0,1,0,0,25,2,4,2],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_event_context_after_commit_event_args.html#abfafd73814863e3817aecab3ea4a9351":[4,0,1,0,0,20,2,4,2],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_event_context_after_commit_event_args.html#af39aa1d223e7c0f6bb9c9e6a3ce493b2":[2,0,1,0,0,25,2,4,0],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_event_context_after_commit_event_args.html#af39aa1d223e7c0f6bb9c9e6a3ce493b2":[4,0,1,0,0,20,2,4,0],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_event_context_before_commit_event_args.html":[2,0,1,0,0,25,2,5],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_event_context_before_commit_event_args.html":[4,0,1,0,0,20,2,5],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_event_context_before_commit_event_args.html#a22909c40bde383bb94690320c8e8d2cf":[2,0,1,0,0,25,2,5,0],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_event_context_before_commit_event_args.html#a22909c40bde383bb94690320c8e8d2cf":[4,0,1,0,0,20,2,5,0]
 };

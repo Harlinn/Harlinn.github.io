@@ -70,6 +70,7 @@ var concepts =
           [ "SimpleCharSpanLike", "concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html", null ],
           [ "SimpleAnsiCharSpanLike", "concept_harlinn_1_1_common_1_1_core_1_1_simple_ansi_char_span_like.html", null ],
           [ "SimpleWideCharSpanLike", "concept_harlinn_1_1_common_1_1_core_1_1_simple_wide_char_span_like.html", null ],
+          [ "SimpleByteSpanLike", "concept_harlinn_1_1_common_1_1_core_1_1_simple_byte_span_like.html", null ],
           [ "SpanLike", "concept_harlinn_1_1_common_1_1_core_1_1_span_like.html", null ],
           [ "CharSpanLike", "concept_harlinn_1_1_common_1_1_core_1_1_char_span_like.html", null ],
           [ "AnsiCharSpanLike", "concept_harlinn_1_1_common_1_1_core_1_1_ansi_char_span_like.html", null ],
