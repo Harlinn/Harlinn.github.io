@@ -31,7 +31,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/Cpp/Cpp.html">C++</a><a class="page-link" href="/Dart/Dart.html">Dart</a><a class="page-link" href="/Databases/Databases.html">Databases</a><a class="page-link" href="/DotNet/DotNet.html">.Net</a><a class="page-link" href="/Java/Java.html">Java</a><a class="page-link" href="/Julia/Julia.html">Julia</a><a class="page-link" href="/Python/Python.html">Python</a><a class="page-link" href="/R/R.html">R</a><a class="page-link" href="/Rust/Rust.html">Rust</a><a class="page-link" href="/about/">About</a></div>
+        <div class="trigger"><a class="page-link" href="/Cpp/Cpp.html">C++</a><a class="page-link" href="/Databases/Databases.html">Databases</a><a class="page-link" href="/DotNet/DotNet.html">.Net</a><a class="page-link" href="/Java/Java.html">Java</a><a class="page-link" href="/Julia/Julia.html">Julia</a><a class="page-link" href="/Python/Python.html">Python</a><a class="page-link" href="/R/R.html">R</a><a class="page-link" href="/Rust/Rust.html">Rust</a><a class="page-link" href="/about/">About</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -43,7 +43,22 @@
   </header>
 
   <div class="post-content">
-    <h1 id="python">Python</h1>
+    <p>Python has taken the world by storm, and it’s now perhaps the worlds 
+most poplar programming language. Python and its runtime CPython is not
+the most efficient platform for performing computations, and it doesn’t 
+need to. Efficient Python programs use native Python extension modules to do
+the number crunching and other tasks that requires high performance.</p>
+
+<p>Creating the glue between Python and natively compiled code <a href="https://docs.python.org/3/extending/extending.html">can be tedious</a>,
+but fortunately the are tools like <a href="https://cython.org/">Cython</a> that greatly 
+simplifies the process and makes it less error prone.</p>
+
+<p>Another option is to use the <a href="https://www.boost.org/doc/libs/1_86_0/libs/python/doc/html/index.html">boost.python</a> C++ library.</p>
+
+<p>For rust interoperability there are <a href="https://github.com/PyO3/pyo3">PyO3</a>, which can be used to write a 
+native Python extension module in Rust, or to embed Python in a Rust binary.</p>
+
+<p>There exists an extraordinary amount of <a href="https://pypi.org/">Python packages</a>, that can be used to perform most development tasks.</p>
 
   </div>
 

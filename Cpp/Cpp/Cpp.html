@@ -31,7 +31,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/Cpp/Cpp.html">C++</a><a class="page-link" href="/Dart/Dart.html">Dart</a><a class="page-link" href="/Databases/Databases.html">Databases</a><a class="page-link" href="/DotNet/DotNet.html">.Net</a><a class="page-link" href="/Java/Java.html">Java</a><a class="page-link" href="/Julia/Julia.html">Julia</a><a class="page-link" href="/Python/Python.html">Python</a><a class="page-link" href="/R/R.html">R</a><a class="page-link" href="/Rust/Rust.html">Rust</a><a class="page-link" href="/about/">About</a></div>
+        <div class="trigger"><a class="page-link" href="/Cpp/Cpp.html">C++</a><a class="page-link" href="/Databases/Databases.html">Databases</a><a class="page-link" href="/DotNet/DotNet.html">.Net</a><a class="page-link" href="/Java/Java.html">Java</a><a class="page-link" href="/Julia/Julia.html">Julia</a><a class="page-link" href="/Python/Python.html">Python</a><a class="page-link" href="/R/R.html">R</a><a class="page-link" href="/Rust/Rust.html">Rust</a><a class="page-link" href="/about/">About</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -43,7 +43,95 @@
   </header>
 
   <div class="post-content">
-    <h1 id="c">C++</h1>
+    <p>C++ is one of the most widely used programming languages in the world, 
+and it is very flexible: Developers can work at the highest levels of 
+abstraction, or at the processor level of the target architecture. 
+C++ provides thoroughly optimized standard libraries, and enables 
+access to low-level hardware features. C++ is used to develop games, 
+spreadsheets, word processing software, embedded software, and other 
+desktop applications, device drivers, high performance computing solutions, 
+compilers and assemblers, web servers, mobile apps and operating systems.</p>
+
+<p>C++ was created as an extension to the C programming language, which 
+allows the use of raw pointers, arrays, null-terminated character strings, 
+and many other features that enable great performance, but can also be a 
+source of serious bugs that are hard to detect.</p>
+
+<p>As C++ has evolved, the need to use C-style idioms has diminished, but
+the old C-programming facilities are still there when you need them.
+Backwards compatibility has always been a big thing for the C++ community,
+as this protects the investments made by companies and organizations all
+over the world into developing vast and complex software solutions.</p>
+
+<p>Modern C++ tool chains are significantly more secure than before, providing
+features such as:</p>
+
+<ul>
+  <li>Static analyzers, implemented using path-sensitive, inter-procedural 
+analysis based on symbolic execution techniques, including:
+    <ul>
+      <li>Thread safety analysis as a C++ language extension which warns about 
+potential race conditions in code.</li>
+      <li>Warnings emitted at compile time to help developers update their code 
+to encapsulate and propagate the bounds information associated with pointers.</li>
+      <li>Runtime assertions that eliminate undefined behavior as long as the coding 
+convention is followed and the bounds information is therefore available and 
+correct.</li>
+      <li><a href="https://learn.microsoft.com/en-us/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects">SAL annotations</a>
+used to enhance static code analysis.</li>
+    </ul>
+  </li>
+  <li>Runtime sanitizers like:
+    <ul>
+      <li>AddressSanitizer which is a fast memory error detector consisting of a compiler 
+instrumentation module and a run-time library. It can detect bugs like:
+        <ul>
+          <li>Out-of-bounds accesses to heap, stack and global variables.</li>
+          <li>Use-after-free.</li>
+          <li>Use-after-return.</li>
+          <li>Use-after-scope.</li>
+          <li>Double-free, invalid free.</li>
+          <li>Memory leaks.</li>
+        </ul>
+      </li>
+      <li>ThreadSanitizer which detects data races.</li>
+      <li>MemorySanitizer which detects uninitialized memory use such as:
+        <ul>
+          <li>Uninitialized value used in a conditional branch.</li>
+          <li>Uninitialized pointer used for memory accesses.</li>
+          <li>Uninitialized value was passed or returned from a function call.</li>
+          <li>Uninitialized data was passed to a system call.</li>
+        </ul>
+      </li>
+      <li>UndefinedBehaviorSanitizer which detects:
+        <ul>
+          <li>Array subscript out of bounds, where the bounds can be statically determined.</li>
+          <li>Bitwise shifts that are out of bounds for their data type.</li>
+          <li>Dereferencing misaligned or null pointers.</li>
+          <li>Signed integer overflow.</li>
+          <li>Conversion to, from, or between floating-point types which would overflow the destination</li>
+          <li>and <a href="https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html">more</a>.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>None of the above helps if it is not used, and these features are being actively developed and
+enhanced, and the latest version of the C++ tool chains offers significant enhancements over the
+previous versions.</p>
+
+<p>These features are generally something developers must actively enable for the
+code base they are working on, and this often requires a significant effort, 
+as the static analyzers often favors modern C++ idioms and certain coding conventions, 
+which is good as they are far less error prone. This means that the code base 
+may need modification to get as much mileage out of the tools as possible. Still, 
+this should be much cheaper than rewriting the entire code base in another 
+programming language.</p>
+
+<p>These tools cannot be proven to catch all potential errors in C and C++ code, but when used rigorously
+in conjunction with unit tests and integrations tests, they are able to catch most of the bugs they are 
+designed to detect.</p>
 
 <h2 id="the-c-language">The C++ language</h2>
 

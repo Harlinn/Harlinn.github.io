@@ -10,6 +10,10 @@ var annotated_dup =
       [ "Common", "namespace_harlinn_1_1_common.html", [
         [ "Core", "namespace_harlinn_1_1_common_1_1_core.html", [
           [ "Com", "namespace_harlinn_1_1_common_1_1_core_1_1_com.html", [
+            [ "Interfaces", "namespace_harlinn_1_1_common_1_1_core_1_1_com_1_1_interfaces.html", [
+              [ "Interface", "struct_harlinn_1_1_common_1_1_core_1_1_com_1_1_interfaces_1_1_interface.html", null ],
+              [ "Interface< IUnknown >", "struct_harlinn_1_1_common_1_1_core_1_1_com_1_1_interfaces_1_1_interface_3_01_i_unknown_01_4.html", "struct_harlinn_1_1_common_1_1_core_1_1_com_1_1_interfaces_1_1_interface_3_01_i_unknown_01_4" ]
+            ] ],
             [ "Internal", "namespace_harlinn_1_1_common_1_1_core_1_1_com_1_1_internal.html", [
               [ "ISequentialStreamOnStreamImpl", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_internal_1_1_i_sequential_stream_on_stream_impl.html", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_internal_1_1_i_sequential_stream_on_stream_impl" ],
               [ "IStreamOnStreamImpl", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_internal_1_1_i_stream_on_stream_impl.html", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_internal_1_1_i_stream_on_stream_impl" ]
@@ -18,8 +22,6 @@ var annotated_dup =
             [ "DllModule", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_dll_module.html", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_dll_module" ],
             [ "ExeModule", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_exe_module.html", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_exe_module" ],
             [ "HeapObject", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_heap_object.html", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_heap_object" ],
-            [ "Interface", "struct_harlinn_1_1_common_1_1_core_1_1_com_1_1_interface.html", null ],
-            [ "Interface< IUnknown >", "struct_harlinn_1_1_common_1_1_core_1_1_com_1_1_interface_3_01_i_unknown_01_4.html", "struct_harlinn_1_1_common_1_1_core_1_1_com_1_1_interface_3_01_i_unknown_01_4" ],
             [ "IStreamOnStreamImpl", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_i_stream_on_stream_impl.html", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_i_stream_on_stream_impl" ],
             [ "Module", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_module.html", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_module" ],
             [ "ModuleClassFactory", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_module_class_factory.html", "class_harlinn_1_1_common_1_1_core_1_1_com_1_1_module_class_factory" ],
@@ -259,7 +261,6 @@ var annotated_dup =
           [ "Ese", "namespace_harlinn_1_1_common_1_1_core_1_1_ese.html", [
             [ "ColumnCreate", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_create.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_create" ],
             [ "ColumnDefinition", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_definition.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_definition" ],
-            [ "ColumnId", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_id.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_id" ],
             [ "Columns", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_columns.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_columns" ],
             [ "Database", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database" ],
             [ "DatabaseOptions", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database_options.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database_options" ],
@@ -1081,12 +1082,6 @@ var annotated_dup =
             [ "ThreadStopException", "class_harlinn_1_1_common_1_1_core_1_1_threading_1_1_thread_stop_exception.html", "class_harlinn_1_1_common_1_1_core_1_1_threading_1_1_thread_stop_exception" ],
             [ "WaitHandleCannotBeOpenedException", "class_harlinn_1_1_common_1_1_core_1_1_threading_1_1_wait_handle_cannot_be_opened_exception.html", "class_harlinn_1_1_common_1_1_core_1_1_threading_1_1_wait_handle_cannot_be_opened_exception" ]
           ] ],
-          [ "Timeseries", "namespace_harlinn_1_1_common_1_1_core_1_1_timeseries.html", [
-            [ "Math", "namespace_harlinn_1_1_common_1_1_core_1_1_timeseries_1_1_math.html", [
-              [ "Add", "class_harlinn_1_1_common_1_1_core_1_1_timeseries_1_1_math_1_1_add.html", "class_harlinn_1_1_common_1_1_core_1_1_timeseries_1_1_math_1_1_add" ],
-              [ "Expression", "class_harlinn_1_1_common_1_1_core_1_1_timeseries_1_1_math_1_1_expression.html", "class_harlinn_1_1_common_1_1_core_1_1_timeseries_1_1_math_1_1_expression" ]
-            ] ]
-          ] ],
           [ "Types", "namespace_harlinn_1_1_common_1_1_core_1_1_types.html", [
             [ "Adapters", "namespace_harlinn_1_1_common_1_1_core_1_1_types_1_1_adapters.html", [
               [ "TypeAdapter", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_adapters_1_1_type_adapter.html", null ]
@@ -1292,7 +1287,6 @@ var annotated_dup =
           [ "BlockingLock", "class_harlinn_1_1_common_1_1_core_1_1_blocking_lock.html", "class_harlinn_1_1_common_1_1_core_1_1_blocking_lock" ],
           [ "BooleanBitTraits", "struct_harlinn_1_1_common_1_1_core_1_1_boolean_bit_traits.html", null ],
           [ "BooleanSafeArray", "class_harlinn_1_1_common_1_1_core_1_1_boolean_safe_array.html", null ],
-          [ "Buffer", "class_harlinn_1_1_common_1_1_core_1_1_buffer.html", "class_harlinn_1_1_common_1_1_core_1_1_buffer" ],
           [ "ByteArray", "class_harlinn_1_1_common_1_1_core_1_1_byte_array.html", "class_harlinn_1_1_common_1_1_core_1_1_byte_array" ],
           [ "ByteBitTraits", "struct_harlinn_1_1_common_1_1_core_1_1_byte_bit_traits.html", null ],
           [ "CannotUnloadAppDomainException", "class_harlinn_1_1_common_1_1_core_1_1_cannot_unload_app_domain_exception.html", "class_harlinn_1_1_common_1_1_core_1_1_cannot_unload_app_domain_exception" ],
@@ -2873,7 +2867,7 @@ var annotated_dup =
       [ "formatter< Harlinn::Common::Core::Ese::AttachDatabaseFlags, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_attach_database_flags_00_01_char_t_01_4.html", null ],
       [ "formatter< Harlinn::Common::Core::Ese::BackupFlags, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_backup_flags_00_01_char_t_01_4.html", null ],
       [ "formatter< Harlinn::Common::Core::Ese::ColumnFlags, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_flags_00_01_char_t_01_4.html", null ],
-      [ "formatter< Harlinn::Common::Core::Ese::ColumnInfoFlags, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_info_flags_00_01_char_t_01_4.html", null ],
+      [ "formatter< Harlinn::Common::Core::Ese::ColumnInfoLevel, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_info_level_00_01_char_t_01_4.html", null ],
       [ "formatter< Harlinn::Common::Core::Ese::ColumnType, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_type_00_01_char_t_01_4.html", null ],
       [ "formatter< Harlinn::Common::Core::Ese::CreateDatabaseFlags, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_create_database_flags_00_01_char_t_01_4.html", null ],
       [ "formatter< Harlinn::Common::Core::Ese::DetachDatabaseFlags, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_detach_database_flags_00_01_char_t_01_4.html", null ],

@@ -190,8 +190,6 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_thread_pools.html">ThreadPools</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_timeseries.html">Timeseries</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_types.html">Types</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_utf.html">Utf</a></td></tr>
@@ -326,8 +324,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_boolean_bit_traits.html">BooleanBitTraits</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_boolean_safe_array.html">BooleanSafeArray</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_buffer.html">Buffer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_byte_array.html">ByteArray</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Byte array for compile-time serialization of data.  <a href="class_harlinn_1_1_common_1_1_core_1_1_byte_array.html#details">More...</a><br /></td></tr>
@@ -1008,6 +1004,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_timer_queue_timer.html">TimerQueueTimer</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a time interval.  <a href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_tuple.html">Tuple</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1266,6 +1263,8 @@ Concepts</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matches zero terminated C++ string classes with sequential memory layout that implements an API similar to std::basic_string instantiated for char. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_com_like.html">SimpleComLike</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_binary_like.html">BinaryLike</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_guid_type.html">GuidType</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2972,186 +2971,177 @@ requires std::is_integral_v&lt;T&gt;</td></tr>
 <tr class="memitem:a2e71d9b47a013e60561187b97502ff48" id="r_a2e71d9b47a013e60561187b97502ff48"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires std::is_same_v&lt;ResultType, ArgumentType&gt;</td></tr>
 <tr class="memitem:a2e71d9b47a013e60561187b97502ff48"><td class="memTemplItemLeft" align="right" valign="top">constexpr ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2e71d9b47a013e60561187b97502ff48">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a2e71d9b47a013e60561187b97502ff48"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs no conversion since ResultType must be the same as ArgumentType.  <br /></td></tr>
 <tr class="separator:a2e71d9b47a013e60561187b97502ff48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3326113fe534dec977932e777734d813" id="r_a3326113fe534dec977932e777734d813"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires ( std::is_same_v&lt;ResultType, double&gt;&amp;&amp; std::is_same_v&lt;ArgumentType, float&gt; )</td></tr>
 <tr class="memitem:a3326113fe534dec977932e777734d813"><td class="memTemplItemLeft" align="right" valign="top">constexpr ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3326113fe534dec977932e777734d813">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a3326113fe534dec977932e777734d813"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from float to double.  <br /></td></tr>
 <tr class="separator:a3326113fe534dec977932e777734d813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ffba2a09bc43498be3c98caf5f57c4d" id="r_a3ffba2a09bc43498be3c98caf5f57c4d"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires ( std::is_same_v&lt;ResultType, float&gt;&amp;&amp; std::is_same_v&lt;ArgumentType, double&gt; )</td></tr>
 <tr class="memitem:a3ffba2a09bc43498be3c98caf5f57c4d"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3ffba2a09bc43498be3c98caf5f57c4d">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a3ffba2a09bc43498be3c98caf5f57c4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from double to float. Throws an <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_argument_out_of_range_exception.html">ArgumentOutOfRangeException</a> if the argument cannot safely be converted to a float.  <br /></td></tr>
 <tr class="separator:a3ffba2a09bc43498be3c98caf5f57c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a034b6cd6f1eaa9dafa62cfd350bb5689" id="r_a034b6cd6f1eaa9dafa62cfd350bb5689"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires (requires( ArgumentType a ) { { <a class="el" href="#a05c05c50c34d01f558d9004ca94592e0">ToWideString</a>( a ) } -&gt; std::same_as&lt;<a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&gt;; } &amp;&amp; <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ResultType&gt; &amp;&amp; std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a>, ArgumentType&gt; == false &amp;&amp; std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html">Currency</a>, ArgumentType&gt; == false )</td></tr>
 <tr class="memitem:a034b6cd6f1eaa9dafa62cfd350bb5689"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a034b6cd6f1eaa9dafa62cfd350bb5689">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a034b6cd6f1eaa9dafa62cfd350bb5689"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from any type for which there exists an overload of ToWideString, except for <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a> and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a>, to WideString.  <br /></td></tr>
 <tr class="separator:a034b6cd6f1eaa9dafa62cfd350bb5689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93fbaecc13fb43b2f311ad5bc3df15a2" id="r_a93fbaecc13fb43b2f311ad5bc3df15a2"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires ( requires( ArgumentType a ) { { <a class="el" href="#a02a484287e7e9005b773c0ac60a83a2a">ToAnsiString</a>( a ) } -&gt; std::same_as&lt;<a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>&gt;; } &amp;&amp; <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ResultType&gt; &amp;&amp; std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a>, ArgumentType&gt; == false &amp;&amp; std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html">Currency</a>, ArgumentType&gt; == false )</td></tr>
 <tr class="memitem:a93fbaecc13fb43b2f311ad5bc3df15a2"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a93fbaecc13fb43b2f311ad5bc3df15a2">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a93fbaecc13fb43b2f311ad5bc3df15a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from any type for which there exists an overload of ToAnsiString, except for <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a> and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a>, to AnsiString.  <br /></td></tr>
 <tr class="separator:a93fbaecc13fb43b2f311ad5bc3df15a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab506e46b836c050814e5ebe826767e41" id="r_ab506e46b836c050814e5ebe826767e41"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires ( std::is_same_v&lt;ResultType, bool&gt; &amp;&amp; std::is_arithmetic_v&lt;ArgumentType&gt; &amp;&amp; <a class="el" href="#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;ArgumentType&gt; )</td></tr>
 <tr class="memitem:ab506e46b836c050814e5ebe826767e41"><td class="memTemplItemLeft" align="right" valign="top">constexpr ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab506e46b836c050814e5ebe826767e41">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:ab506e46b836c050814e5ebe826767e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from an integer or floating point type, but not bool, to a bool.  <br /></td></tr>
 <tr class="separator:ab506e46b836c050814e5ebe826767e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06c5e162c296f39fae81f79e538e6851" id="r_a06c5e162c296f39fae81f79e538e6851"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires ( std::is_same_v&lt;ArgumentType, bool&gt; &amp;&amp; std::is_arithmetic_v&lt;ResultType&gt; &amp;&amp; <a class="el" href="#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;ResultType&gt; )</td></tr>
 <tr class="memitem:a06c5e162c296f39fae81f79e538e6851"><td class="memTemplItemLeft" align="right" valign="top">constexpr ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a06c5e162c296f39fae81f79e538e6851">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a06c5e162c296f39fae81f79e538e6851"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a bool to an integer or floating point type, but not a bool type.  <br /></td></tr>
 <tr class="separator:a06c5e162c296f39fae81f79e538e6851"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed2bd52442ce4096f5934c1b572835bd" id="r_aed2bd52442ce4096f5934c1b572835bd"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires ( std::is_same_v&lt;ResultType, bool&gt; &amp;&amp; ( std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>, ArgumentType&gt; || std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>, ArgumentType&gt; ) )</td></tr>
 <tr class="memitem:aed2bd52442ce4096f5934c1b572835bd"><td class="memTemplItemLeft" align="right" valign="top">constexpr ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aed2bd52442ce4096f5934c1b572835bd">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:aed2bd52442ce4096f5934c1b572835bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> or <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> to a bool.  <br /></td></tr>
 <tr class="separator:aed2bd52442ce4096f5934c1b572835bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af93f79c075676ead702ed96f0ca94988" id="r_af93f79c075676ead702ed96f0ca94988"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires ( std::is_same_v&lt;ResultType, bool&gt; &amp;&amp; ( std::is_same_v&lt;<a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>, ArgumentType&gt; || std::is_same_v&lt;<a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>, ArgumentType&gt; ) )</td></tr>
-<tr class="memitem:af93f79c075676ead702ed96f0ca94988"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af93f79c075676ead702ed96f0ca94988">ConvertTo</a> (const ArgumentType &amp;arg)</td></tr>
-<tr class="separator:af93f79c075676ead702ed96f0ca94988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4334013258a3c3c65024e87bf887e8fa" id="r_a4334013258a3c3c65024e87bf887e8fa"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , SimpleStringLike ArgumentType&gt; <br />
+requires requires( const ArgumentType&amp; a ) { { <a class="el" href="#a0a26564e478b8a3077e7ef546bd36f39">Parse</a>&lt;ResultType&gt;( a ) }-&gt;std::same_as&lt;ResultType&gt;; }</td></tr>
+<tr class="memitem:a4334013258a3c3c65024e87bf887e8fa"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4334013258a3c3c65024e87bf887e8fa">ConvertTo</a> (const ArgumentType &amp;arg)</td></tr>
+<tr class="memdesc:a4334013258a3c3c65024e87bf887e8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a type that satisfies the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept to a type for which there exist a Parse&lt;&gt; specialization that accepts the argument type.  <br /></td></tr>
+<tr class="separator:a4334013258a3c3c65024e87bf887e8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98fd42abcbe6d3c817d634145ec67a54" id="r_a98fd42abcbe6d3c817d634145ec67a54"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires ( std::is_same_v&lt;ResultType, bool&gt; &amp;&amp; std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a>, ArgumentType&gt; )</td></tr>
 <tr class="memitem:a98fd42abcbe6d3c817d634145ec67a54"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a98fd42abcbe6d3c817d634145ec67a54">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a98fd42abcbe6d3c817d634145ec67a54"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> to a bool.  <br /></td></tr>
 <tr class="separator:a98fd42abcbe6d3c817d634145ec67a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73c994e9b0d0be22abe644f5b9f4f2e5" id="r_a73c994e9b0d0be22abe644f5b9f4f2e5"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires ( std::is_same_v&lt;ResultType, bool&gt; &amp;&amp; std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html">Currency</a>, ArgumentType&gt; )</td></tr>
 <tr class="memitem:a73c994e9b0d0be22abe644f5b9f4f2e5"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a73c994e9b0d0be22abe644f5b9f4f2e5">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a73c994e9b0d0be22abe644f5b9f4f2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a> to a bool.  <br /></td></tr>
 <tr class="separator:a73c994e9b0d0be22abe644f5b9f4f2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38f4da4f288ef44740fa3921259ac41c" id="r_a38f4da4f288ef44740fa3921259ac41c"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires ( std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a>, ArgumentType&gt; &amp;&amp; std::is_same_v &lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a>,ResultType&gt; == false )</td></tr>
-<tr class="memitem:a38f4da4f288ef44740fa3921259ac41c"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a38f4da4f288ef44740fa3921259ac41c">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:a38f4da4f288ef44740fa3921259ac41c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6faa84aba2545788f6cde73adeb347a9" id="r_a6faa84aba2545788f6cde73adeb347a9"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
+requires ( std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a>, ArgumentType&gt; &amp;&amp; std::is_same_v &lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a>,ResultType&gt; == false ) &amp;&amp; requires ( <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a> v ) { { v.As&lt;ResultType&gt;( ) }-&gt;std::same_as&lt;ResultType&gt;; }</td></tr>
+<tr class="memitem:a6faa84aba2545788f6cde73adeb347a9"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6faa84aba2545788f6cde73adeb347a9">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a6faa84aba2545788f6cde73adeb347a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a> to a type for Which there exist a specialization of <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html#a2c947c306fe19dc202d5502b9add5ba5">Variant::As</a>&lt;ResultType&gt;.  <br /></td></tr>
+<tr class="separator:a6faa84aba2545788f6cde73adeb347a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8d31aced9e8bd604daf59f6e00a8160" id="r_ae8d31aced9e8bd604daf59f6e00a8160"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires ( ((<a class="el" href="#ae26d63e9ad6bffcbd200435668e434cc">IsSignedInteger</a>&lt;ResultType&gt; &amp;&amp; <a class="el" href="#ae26d63e9ad6bffcbd200435668e434cc">IsSignedInteger</a>&lt;ArgumentType&gt;) || ( <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;ResultType&gt; &amp;&amp; <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;ArgumentType&gt; ) ) &amp;&amp; <a class="el" href="#a7d191244f9eab05c5d2f25a20f76e8b3">size_is_less</a>&lt; ResultType, ArgumentType&gt; )</td></tr>
 <tr class="memitem:ae8d31aced9e8bd604daf59f6e00a8160"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae8d31aced9e8bd604daf59f6e00a8160">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:ae8d31aced9e8bd604daf59f6e00a8160"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs a narrowing conversion from an integer type to another.  <br /></td></tr>
 <tr class="separator:ae8d31aced9e8bd604daf59f6e00a8160"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57b7f02290def7aabd33386171585514" id="r_a57b7f02290def7aabd33386171585514"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires ( ((<a class="el" href="#ae26d63e9ad6bffcbd200435668e434cc">IsSignedInteger</a>&lt;ResultType&gt; &amp;&amp; <a class="el" href="#ae26d63e9ad6bffcbd200435668e434cc">IsSignedInteger</a>&lt;ArgumentType&gt;) || ( <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;ResultType&gt; &amp;&amp; <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;ArgumentType&gt; ) ) &amp;&amp; <a class="el" href="#acfe9aed9e3a720b2d985afa796c75618">size_is_greater_or_equal</a>&lt; ResultType, ArgumentType&gt; &amp;&amp; std::is_same_v&lt;ResultType, ArgumentType&gt; == false )</td></tr>
 <tr class="memitem:a57b7f02290def7aabd33386171585514"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a57b7f02290def7aabd33386171585514">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a57b7f02290def7aabd33386171585514"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs a widening conversion from an integer type to another integer type with the same signedness.  <br /></td></tr>
 <tr class="separator:a57b7f02290def7aabd33386171585514"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab52fb9c495d27c9e5307fbdd0861d4da" id="r_ab52fb9c495d27c9e5307fbdd0861d4da"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires ( <a class="el" href="#ae26d63e9ad6bffcbd200435668e434cc">IsSignedInteger</a>&lt;ResultType&gt; &amp;&amp; <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;ArgumentType&gt; &amp;&amp; <a class="el" href="#a6f23158dd04378908d5dd3455c4673a5">size_is_less_or_equal</a>&lt; ResultType, ArgumentType&gt; )</td></tr>
 <tr class="memitem:ab52fb9c495d27c9e5307fbdd0861d4da"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab52fb9c495d27c9e5307fbdd0861d4da">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:ab52fb9c495d27c9e5307fbdd0861d4da"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs a narrowing conversion from an unsigned integer type to a signed integer type.  <br /></td></tr>
 <tr class="separator:ab52fb9c495d27c9e5307fbdd0861d4da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac86d98eb753f7a09d9c83ce5ffbf5a47" id="r_ac86d98eb753f7a09d9c83ce5ffbf5a47"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires ( <a class="el" href="#ae26d63e9ad6bffcbd200435668e434cc">IsSignedInteger</a>&lt;ResultType&gt; &amp;&amp; <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;ArgumentType&gt; &amp;&amp; <a class="el" href="#acb9de2c11646720a9fe008a192062613">size_is_greater</a>&lt; ResultType, ArgumentType&gt; )</td></tr>
 <tr class="memitem:ac86d98eb753f7a09d9c83ce5ffbf5a47"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac86d98eb753f7a09d9c83ce5ffbf5a47">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:ac86d98eb753f7a09d9c83ce5ffbf5a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs a widening conversion from an unsigned integer type to a signed integer type.  <br /></td></tr>
 <tr class="separator:ac86d98eb753f7a09d9c83ce5ffbf5a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d887fa1118000bc1303b13c667baf3a" id="r_a9d887fa1118000bc1303b13c667baf3a"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires ( <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;ResultType&gt; &amp;&amp; <a class="el" href="#ae26d63e9ad6bffcbd200435668e434cc">IsSignedInteger</a>&lt;ArgumentType&gt; &amp;&amp; <a class="el" href="#a7d191244f9eab05c5d2f25a20f76e8b3">size_is_less</a>&lt; ResultType, ArgumentType&gt; )</td></tr>
 <tr class="memitem:a9d887fa1118000bc1303b13c667baf3a"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9d887fa1118000bc1303b13c667baf3a">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a9d887fa1118000bc1303b13c667baf3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs a narrowing conversion from a signed integer type to an unsigned integer type.  <br /></td></tr>
 <tr class="separator:a9d887fa1118000bc1303b13c667baf3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af66820b1e7e5bf23f2a6b98adb5d9e6e" id="r_af66820b1e7e5bf23f2a6b98adb5d9e6e"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires ( <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;ResultType&gt; &amp;&amp; <a class="el" href="#ae26d63e9ad6bffcbd200435668e434cc">IsSignedInteger</a>&lt;ArgumentType&gt; &amp;&amp; <a class="el" href="#acfe9aed9e3a720b2d985afa796c75618">size_is_greater_or_equal</a>&lt; ResultType, ArgumentType&gt; )</td></tr>
 <tr class="memitem:af66820b1e7e5bf23f2a6b98adb5d9e6e"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af66820b1e7e5bf23f2a6b98adb5d9e6e">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:af66820b1e7e5bf23f2a6b98adb5d9e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs a widening conversion from a signed integer type to an unsigned integer type.  <br /></td></tr>
 <tr class="separator:af66820b1e7e5bf23f2a6b98adb5d9e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af915c86487c49f725d94de28a8a036e4" id="r_af915c86487c49f725d94de28a8a036e4"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires <a class="el" href="#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;ResultType&gt; &amp;&amp; <a class="el" href="#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;ArgumentType&gt;</td></tr>
 <tr class="memitem:af915c86487c49f725d94de28a8a036e4"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af915c86487c49f725d94de28a8a036e4">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:af915c86487c49f725d94de28a8a036e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a floating point type to an integer type.  <br /></td></tr>
 <tr class="separator:af915c86487c49f725d94de28a8a036e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2db14a03a641679d84e940c928e6a925" id="r_a2db14a03a641679d84e940c928e6a925"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires (<a class="el" href="#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;ResultType&gt; || <a class="el" href="#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;ResultType&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ResultType&gt; || <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ResultType&gt; ) &amp;&amp; std::is_same_v&lt;ArgumentType,<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html">Currency</a>&gt;</td></tr>
 <tr class="memitem:a2db14a03a641679d84e940c928e6a925"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2db14a03a641679d84e940c928e6a925">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a2db14a03a641679d84e940c928e6a925"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a> value to an integer, floating point, AnsiString or WideString type.  <br /></td></tr>
 <tr class="separator:a2db14a03a641679d84e940c928e6a925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a486830a3a60b914cb3dbefc4b7384336" id="r_a486830a3a60b914cb3dbefc4b7384336"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires <a class="el" href="#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;ResultType&gt; &amp;&amp; <a class="el" href="#a73f413b1bfbea35b494cb70e3f88876b">IsAnyOf_v</a>&lt;ArgumentType,<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt;</td></tr>
 <tr class="memitem:a486830a3a60b914cb3dbefc4b7384336"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a486830a3a60b914cb3dbefc4b7384336">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a486830a3a60b914cb3dbefc4b7384336"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> or <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> value to an integer type.  <br /></td></tr>
 <tr class="separator:a486830a3a60b914cb3dbefc4b7384336"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cb102fc74432d73f1066b9093c533e1" id="r_a4cb102fc74432d73f1066b9093c533e1"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</td></tr>
-<tr class="memitem:a4cb102fc74432d73f1066b9093c533e1"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4cb102fc74432d73f1066b9093c533e1">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:a4cb102fc74432d73f1066b9093c533e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a2bef8ed7970ff2ea00d0aab18e5e93" id="r_a7a2bef8ed7970ff2ea00d0aab18e5e93"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#af82811a69582d9f85a78627741d07b19">Byte</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</td></tr>
-<tr class="memitem:a7a2bef8ed7970ff2ea00d0aab18e5e93"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7a2bef8ed7970ff2ea00d0aab18e5e93">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:a7a2bef8ed7970ff2ea00d0aab18e5e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98d371e5396c6b62247e983777f5eaf7" id="r_a98d371e5396c6b62247e983777f5eaf7"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</td></tr>
-<tr class="memitem:a98d371e5396c6b62247e983777f5eaf7"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a98d371e5396c6b62247e983777f5eaf7">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:a98d371e5396c6b62247e983777f5eaf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ba6c21729f63d5d2a48d9a64b6fdfe2" id="r_a7ba6c21729f63d5d2a48d9a64b6fdfe2"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</td></tr>
-<tr class="memitem:a7ba6c21729f63d5d2a48d9a64b6fdfe2"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7ba6c21729f63d5d2a48d9a64b6fdfe2">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:a7ba6c21729f63d5d2a48d9a64b6fdfe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c2708580c47990270cd74e7ffd14a7f" id="r_a5c2708580c47990270cd74e7ffd14a7f"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</td></tr>
-<tr class="memitem:a5c2708580c47990270cd74e7ffd14a7f"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5c2708580c47990270cd74e7ffd14a7f">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:a5c2708580c47990270cd74e7ffd14a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5fa310a8490e83884f805340defca7d" id="r_ad5fa310a8490e83884f805340defca7d"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</td></tr>
-<tr class="memitem:ad5fa310a8490e83884f805340defca7d"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad5fa310a8490e83884f805340defca7d">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:ad5fa310a8490e83884f805340defca7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a632d6fd101938de38283d69c1a243112" id="r_a632d6fd101938de38283d69c1a243112"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</td></tr>
-<tr class="memitem:a632d6fd101938de38283d69c1a243112"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a632d6fd101938de38283d69c1a243112">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:a632d6fd101938de38283d69c1a243112"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a0933f7fbc1bed67b72d895499963c4" id="r_a5a0933f7fbc1bed67b72d895499963c4"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</td></tr>
-<tr class="memitem:a5a0933f7fbc1bed67b72d895499963c4"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5a0933f7fbc1bed67b72d895499963c4">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:a5a0933f7fbc1bed67b72d895499963c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4512b89228bc2e79f1e7fc878d57c8df" id="r_a4512b89228bc2e79f1e7fc878d57c8df"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#ac69fb0d67e0a3064a2048954e78298ba">Single</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</td></tr>
-<tr class="memitem:a4512b89228bc2e79f1e7fc878d57c8df"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4512b89228bc2e79f1e7fc878d57c8df">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:a4512b89228bc2e79f1e7fc878d57c8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c44c53cb56d5e288746ce781b999b1e" id="r_a5c44c53cb56d5e288746ce781b999b1e"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#a789293c13583af2e0a4926d068e0415e">Double</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</td></tr>
-<tr class="memitem:a5c44c53cb56d5e288746ce781b999b1e"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5c44c53cb56d5e288746ce781b999b1e">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:a5c44c53cb56d5e288746ce781b999b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09744a4b167a71767cb88e3d5b0333a0" id="r_a09744a4b167a71767cb88e3d5b0333a0"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt; &amp;&amp; (std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt;)</td></tr>
 <tr class="memitem:a09744a4b167a71767cb88e3d5b0333a0"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a09744a4b167a71767cb88e3d5b0333a0">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a09744a4b167a71767cb88e3d5b0333a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a c style zero terminated string value to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a>.  <br /></td></tr>
 <tr class="separator:a09744a4b167a71767cb88e3d5b0333a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e1075e7f77d24aad1195157050fa9e5" id="r_a5e1075e7f77d24aad1195157050fa9e5"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; )</td></tr>
-<tr class="memitem:a5e1075e7f77d24aad1195157050fa9e5"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5e1075e7f77d24aad1195157050fa9e5">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:a5e1075e7f77d24aad1195157050fa9e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0bf0ac995ab7e7198483382d6edce34" id="r_ab0bf0ac995ab7e7198483382d6edce34"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , SimpleStringLike ArgumentType&gt; <br />
+requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt;</td></tr>
+<tr class="memitem:ab0bf0ac995ab7e7198483382d6edce34"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab0bf0ac995ab7e7198483382d6edce34">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:ab0bf0ac995ab7e7198483382d6edce34"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a>.  <br /></td></tr>
+<tr class="separator:ab0bf0ac995ab7e7198483382d6edce34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c4ee1a2e0fdff38c10e1fcf9ebc9b71" id="r_a9c4ee1a2e0fdff38c10e1fcf9ebc9b71"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt; &amp;&amp; <a class="el" href="#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;ArgumentType&gt;</td></tr>
 <tr class="memitem:a9c4ee1a2e0fdff38c10e1fcf9ebc9b71"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9c4ee1a2e0fdff38c10e1fcf9ebc9b71">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a9c4ee1a2e0fdff38c10e1fcf9ebc9b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> to a floating point type.  <br /></td></tr>
 <tr class="separator:a9c4ee1a2e0fdff38c10e1fcf9ebc9b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6beab5920b6fd980a681f625ef917ea" id="r_aa6beab5920b6fd980a681f625ef917ea"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt; &amp;&amp; std::is_same_v&lt;ArgumentType,<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html">Currency</a>&gt;</td></tr>
 <tr class="memitem:aa6beab5920b6fd980a681f625ef917ea"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa6beab5920b6fd980a681f625ef917ea">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:aa6beab5920b6fd980a681f625ef917ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a> value to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> value.  <br /></td></tr>
 <tr class="separator:aa6beab5920b6fd980a681f625ef917ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a486956dee31e1216960279b5c11169e2" id="r_a486956dee31e1216960279b5c11169e2"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt;&amp;&amp; <a class="el" href="#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;ArgumentType&gt;</td></tr>
 <tr class="memitem:a486956dee31e1216960279b5c11169e2"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a486956dee31e1216960279b5c11169e2">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a486956dee31e1216960279b5c11169e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from an integer type to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> value.  <br /></td></tr>
 <tr class="separator:a486956dee31e1216960279b5c11169e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a116207caa55a43e40cc7eee773cabae6" id="r_a116207caa55a43e40cc7eee773cabae6"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt;&amp;&amp; <a class="el" href="#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;ArgumentType&gt;</td></tr>
 <tr class="memitem:a116207caa55a43e40cc7eee773cabae6"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a116207caa55a43e40cc7eee773cabae6">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a116207caa55a43e40cc7eee773cabae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from an integer type to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> value.  <br /></td></tr>
 <tr class="separator:a116207caa55a43e40cc7eee773cabae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a126d0daba03dcc3051ba12d03e2b7866" id="r_a126d0daba03dcc3051ba12d03e2b7866"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt; &amp;&amp; (std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt;)</td></tr>
 <tr class="memitem:a126d0daba03dcc3051ba12d03e2b7866"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a126d0daba03dcc3051ba12d03e2b7866">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a126d0daba03dcc3051ba12d03e2b7866"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a c style zero terminated string value to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>.  <br /></td></tr>
 <tr class="separator:a126d0daba03dcc3051ba12d03e2b7866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fc87305f889ecad05cbb41f7374c773" id="r_a8fc87305f889ecad05cbb41f7374c773"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; )</td></tr>
-<tr class="memitem:a8fc87305f889ecad05cbb41f7374c773"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8fc87305f889ecad05cbb41f7374c773">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:a8fc87305f889ecad05cbb41f7374c773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307f7a80f8acd6638b955a9cd942a0f0" id="r_a307f7a80f8acd6638b955a9cd942a0f0"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , SimpleStringLike ArgumentType&gt; <br />
+requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt;</td></tr>
+<tr class="memitem:a307f7a80f8acd6638b955a9cd942a0f0"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a307f7a80f8acd6638b955a9cd942a0f0">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a307f7a80f8acd6638b955a9cd942a0f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>.  <br /></td></tr>
+<tr class="separator:a307f7a80f8acd6638b955a9cd942a0f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a28fb2f1ce22fb1af18e8eef88b8a7f" id="r_a2a28fb2f1ce22fb1af18e8eef88b8a7f"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt; &amp;&amp; <a class="el" href="#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;ArgumentType&gt;</td></tr>
 <tr class="memitem:a2a28fb2f1ce22fb1af18e8eef88b8a7f"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2a28fb2f1ce22fb1af18e8eef88b8a7f">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a2a28fb2f1ce22fb1af18e8eef88b8a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a floating point type to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> value.  <br /></td></tr>
 <tr class="separator:a2a28fb2f1ce22fb1af18e8eef88b8a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a0422958a198d9155fbfd5f028c03b2" id="r_a5a0422958a198d9155fbfd5f028c03b2"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires <a class="el" href="#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;ResultType&gt; &amp;&amp; std::is_same_v&lt;ArgumentType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt;</td></tr>
 <tr class="memitem:a5a0422958a198d9155fbfd5f028c03b2"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5a0422958a198d9155fbfd5f028c03b2">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a5a0422958a198d9155fbfd5f028c03b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> value to a floating point type.  <br /></td></tr>
 <tr class="separator:a5a0422958a198d9155fbfd5f028c03b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49afc9a4420022ab4b9055ffb9315c08" id="r_a49afc9a4420022ab4b9055ffb9315c08"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires <a class="el" href="#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;ResultType&gt; &amp;&amp; std::is_same_v&lt;ArgumentType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt;</td></tr>
 <tr class="memitem:a49afc9a4420022ab4b9055ffb9315c08"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a49afc9a4420022ab4b9055ffb9315c08">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a49afc9a4420022ab4b9055ffb9315c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> value to a floating point type.  <br /></td></tr>
 <tr class="separator:a49afc9a4420022ab4b9055ffb9315c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9627702eec0d5e2fcea4371f89d4ab56" id="r_a9627702eec0d5e2fcea4371f89d4ab56"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt;&amp;&amp; std::is_same_v&lt;ArgumentType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt;</td></tr>
-<tr class="memitem:a9627702eec0d5e2fcea4371f89d4ab56"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9627702eec0d5e2fcea4371f89d4ab56">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:a9627702eec0d5e2fcea4371f89d4ab56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae07246bbec331970dd048b87decb2199" id="r_ae07246bbec331970dd048b87decb2199"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt;&amp;&amp; std::is_same_v&lt;ArgumentType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt;</td></tr>
-<tr class="memitem:ae07246bbec331970dd048b87decb2199"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae07246bbec331970dd048b87decb2199">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:ae07246bbec331970dd048b87decb2199"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a496811b7686484c5a81d6e4fe90fef29" id="r_a496811b7686484c5a81d6e4fe90fef29"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a>&gt; &amp;&amp; (std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; || <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; )</td></tr>
-<tr class="memitem:a496811b7686484c5a81d6e4fe90fef29"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a496811b7686484c5a81d6e4fe90fef29">ConvertTo</a> (ArgumentType arg)</td></tr>
-<tr class="separator:a496811b7686484c5a81d6e4fe90fef29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f168e343dfeb1b58561bb00a565e9ee" id="r_a1f168e343dfeb1b58561bb00a565e9ee"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
+requires (std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt;&amp;&amp; std::is_same_v&lt;ArgumentType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt;) || ( std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt; &amp;&amp; std::is_same_v&lt;ArgumentType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt; )</td></tr>
+<tr class="memitem:a1f168e343dfeb1b58561bb00a565e9ee"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1f168e343dfeb1b58561bb00a565e9ee">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:a1f168e343dfeb1b58561bb00a565e9ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> value to DataTime value, or a conversion from a DataTime value to <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> value.  <br /></td></tr>
+<tr class="separator:a1f168e343dfeb1b58561bb00a565e9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9dd907bbea0c5aa4d7c150488240dfb" id="r_ae9dd907bbea0c5aa4d7c150488240dfb"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
+requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a>&gt; &amp;&amp; (std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; || SimpleStringLike&lt;ArgumentType&gt; )</td></tr>
+<tr class="memitem:ae9dd907bbea0c5aa4d7c150488240dfb"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae9dd907bbea0c5aa4d7c150488240dfb">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:ae9dd907bbea0c5aa4d7c150488240dfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from a c style zero terminated string value, or a type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept, to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a>.  <br /></td></tr>
+<tr class="separator:ae9dd907bbea0c5aa4d7c150488240dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2e527c8d0f2c692a836345ef67ec8af" id="r_ad2e527c8d0f2c692a836345ef67ec8af"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , typename ArgumentType &gt; <br />
 requires <a class="el" href="#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;ResultType&gt; &amp;&amp; <a class="el" href="#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;ArgumentType&gt;</td></tr>
 <tr class="memitem:ad2e527c8d0f2c692a836345ef67ec8af"><td class="memTemplItemLeft" align="right" valign="top">ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad2e527c8d0f2c692a836345ef67ec8af">ConvertTo</a> (ArgumentType arg)</td></tr>
+<tr class="memdesc:ad2e527c8d0f2c692a836345ef67ec8af"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConvertTo template that performs conversion from an integer to a floating point value.  <br /></td></tr>
 <tr class="separator:ad2e527c8d0f2c692a836345ef67ec8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cf102764b6bdbfb371937a2e0eb3d1b" id="r_a6cf102764b6bdbfb371937a2e0eb3d1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_c_c_def_8h.html#afb06ae686742fde98e6427c4a1e2206c">HCC_EXPORT</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cf102764b6bdbfb371937a2e0eb3d1b">crc32</a> (const void *buffer, size_t bufferSize, uint32_t crc=0)</td></tr>
 <tr class="separator:a6cf102764b6bdbfb371937a2e0eb3d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3800,10 +3790,10 @@ requires std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_
 <tr class="separator:a57614825fad5e0bdb6cb4749f5551397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2093052f87d76ee39f921f11fe75d610" id="r_a2093052f87d76ee39f921f11fe75d610"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2093052f87d76ee39f921f11fe75d610">ToWideString</a> (SetFlags value, const <a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;defaultResult)</td></tr>
 <tr class="separator:a2093052f87d76ee39f921f11fe75d610"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8069f5cb4e3121f4793fdd64e538684a" id="r_a8069f5cb4e3121f4793fdd64e538684a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8069f5cb4e3121f4793fdd64e538684a">ToWideString</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34">Ese::ColumnInfoFlags</a> value)</td></tr>
-<tr class="separator:a8069f5cb4e3121f4793fdd64e538684a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ee5bd8df6c8f60c9f8e6c91968ee1a4" id="r_a3ee5bd8df6c8f60c9f8e6c91968ee1a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ee5bd8df6c8f60c9f8e6c91968ee1a4">ToWideString</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34">Ese::ColumnInfoFlags</a> value, const <a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;defaultResult)</td></tr>
-<tr class="separator:a3ee5bd8df6c8f60c9f8e6c91968ee1a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df9d869c4c1e67997f0d1a7bd58abd0" id="r_a3df9d869c4c1e67997f0d1a7bd58abd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3df9d869c4c1e67997f0d1a7bd58abd0">ToWideString</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7">Ese::ColumnInfoLevel</a> value)</td></tr>
+<tr class="separator:a3df9d869c4c1e67997f0d1a7bd58abd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688d4fb8083d06741e0a18d894ffc83d" id="r_a688d4fb8083d06741e0a18d894ffc83d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a688d4fb8083d06741e0a18d894ffc83d">ToWideString</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7">Ese::ColumnInfoLevel</a> value, const <a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;defaultResult)</td></tr>
+<tr class="separator:a688d4fb8083d06741e0a18d894ffc83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ae757db9a0d06b80064f8088e81b437" id="r_a4ae757db9a0d06b80064f8088e81b437"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ae757db9a0d06b80064f8088e81b437">ToWideString</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a14c4d48a950a966d9e6b4235027e9959">Ese::PrepareUpdateOptions</a> value)</td></tr>
 <tr class="separator:a4ae757db9a0d06b80064f8088e81b437"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae322c7dc811eabe3a9d0a00396493a92" id="r_ae322c7dc811eabe3a9d0a00396493a92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae322c7dc811eabe3a9d0a00396493a92">ToWideString</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a14c4d48a950a966d9e6b4235027e9959">Ese::PrepareUpdateOptions</a> value, const <a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;defaultResult)</td></tr>
@@ -3976,22 +3966,22 @@ requires std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_
 requires std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78">Ese::SetFlags</a>, T&gt; &amp;&amp; ( std::is_same_v&lt;CharT, wchar_t&gt; || std::is_same_v&lt;CharT, char&gt; )</td></tr>
 <tr class="memitem:a8ac18efe638a9bbc3946632b4b244371"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8ac18efe638a9bbc3946632b4b244371">Parse</a> (const CharT *str)</td></tr>
 <tr class="separator:a8ac18efe638a9bbc3946632b4b244371"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86c5f98e651e4e9df9c38a24b3f5c643" id="r_a86c5f98e651e4e9df9c38a24b3f5c643"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86c5f98e651e4e9df9c38a24b3f5c643">ToAnsiString</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34">Ese::ColumnInfoFlags</a> value)</td></tr>
-<tr class="separator:a86c5f98e651e4e9df9c38a24b3f5c643"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29ad5c31fa692a3167a05446a8aa8b58" id="r_a29ad5c31fa692a3167a05446a8aa8b58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29ad5c31fa692a3167a05446a8aa8b58">ToAnsiString</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34">Ese::ColumnInfoFlags</a> value, const <a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a> &amp;defaultResult)</td></tr>
-<tr class="separator:a29ad5c31fa692a3167a05446a8aa8b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b6edb0353bdb4bb5ce552662616dec3" id="r_a5b6edb0353bdb4bb5ce552662616dec3"><td class="memTemplParams" colspan="2">template&lt;typename StringT &gt; <br />
+<tr class="memitem:ab1234f47221239c0f3605290b158711e" id="r_ab1234f47221239c0f3605290b158711e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1234f47221239c0f3605290b158711e">ToAnsiString</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7">Ese::ColumnInfoLevel</a> value)</td></tr>
+<tr class="separator:ab1234f47221239c0f3605290b158711e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998561a8a1452d3727f6dd226bc36ac6" id="r_a998561a8a1452d3727f6dd226bc36ac6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a998561a8a1452d3727f6dd226bc36ac6">ToAnsiString</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7">Ese::ColumnInfoLevel</a> value, const <a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a> &amp;defaultResult)</td></tr>
+<tr class="separator:a998561a8a1452d3727f6dd226bc36ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af36a9b43093cbcc884827d4d60924f23" id="r_af36a9b43093cbcc884827d4d60924f23"><td class="memTemplParams" colspan="2">template&lt;typename StringT &gt; <br />
 requires std::is_same_v&lt;StringT, <a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&gt; || std::is_same_v&lt;StringT, <a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>&gt;</td></tr>
-<tr class="memitem:a5b6edb0353bdb4bb5ce552662616dec3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5b6edb0353bdb4bb5ce552662616dec3">TryParse</a> (const StringT &amp;str, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34">Ese::ColumnInfoFlags</a> &amp;value)</td></tr>
-<tr class="separator:a5b6edb0353bdb4bb5ce552662616dec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe644d39689ab51f38185d81f616afb6" id="r_abe644d39689ab51f38185d81f616afb6"><td class="memTemplParams" colspan="2">template&lt;typename T , typename StringT &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34">Ese::ColumnInfoFlags</a>, T&gt; &amp;&amp; ( std::is_same_v&lt;StringT, <a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&gt; || std::is_same_v&lt;StringT, <a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>&gt; )</td></tr>
-<tr class="memitem:abe644d39689ab51f38185d81f616afb6"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abe644d39689ab51f38185d81f616afb6">Parse</a> (const <a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;str)</td></tr>
-<tr class="separator:abe644d39689ab51f38185d81f616afb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a051ab719a2cfa291a522d04231a7d8eb" id="r_a051ab719a2cfa291a522d04231a7d8eb"><td class="memTemplParams" colspan="2">template&lt;typename T , typename CharT &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34">Ese::ColumnInfoFlags</a>, T&gt; &amp;&amp; ( std::is_same_v&lt;CharT, wchar_t&gt; || std::is_same_v&lt;CharT, char&gt; )</td></tr>
-<tr class="memitem:a051ab719a2cfa291a522d04231a7d8eb"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a051ab719a2cfa291a522d04231a7d8eb">Parse</a> (const CharT *str)</td></tr>
-<tr class="separator:a051ab719a2cfa291a522d04231a7d8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af36a9b43093cbcc884827d4d60924f23"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af36a9b43093cbcc884827d4d60924f23">TryParse</a> (const StringT &amp;str, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7">Ese::ColumnInfoLevel</a> &amp;value)</td></tr>
+<tr class="separator:af36a9b43093cbcc884827d4d60924f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af68fe4c10985ac3244c313b58617df72" id="r_af68fe4c10985ac3244c313b58617df72"><td class="memTemplParams" colspan="2">template&lt;typename T , typename StringT &gt; <br />
+requires std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7">Ese::ColumnInfoLevel</a>, T&gt; &amp;&amp; ( std::is_same_v&lt;StringT, <a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&gt; || std::is_same_v&lt;StringT, <a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>&gt; )</td></tr>
+<tr class="memitem:af68fe4c10985ac3244c313b58617df72"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af68fe4c10985ac3244c313b58617df72">Parse</a> (const <a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;str)</td></tr>
+<tr class="separator:af68fe4c10985ac3244c313b58617df72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa89eac57879f266c11f3950a0b15f952" id="r_aa89eac57879f266c11f3950a0b15f952"><td class="memTemplParams" colspan="2">template&lt;typename T , typename CharT &gt; <br />
+requires std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7">Ese::ColumnInfoLevel</a>, T&gt; &amp;&amp; ( std::is_same_v&lt;CharT, wchar_t&gt; || std::is_same_v&lt;CharT, char&gt; )</td></tr>
+<tr class="memitem:aa89eac57879f266c11f3950a0b15f952"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa89eac57879f266c11f3950a0b15f952">Parse</a> (const CharT *str)</td></tr>
+<tr class="separator:aa89eac57879f266c11f3950a0b15f952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2b694047959a05e8c3b268e1d9b756d" id="r_ac2b694047959a05e8c3b268e1d9b756d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2b694047959a05e8c3b268e1d9b756d">ToAnsiString</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a14c4d48a950a966d9e6b4235027e9959">Ese::PrepareUpdateOptions</a> value)</td></tr>
 <tr class="separator:ac2b694047959a05e8c3b268e1d9b756d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c0b150539ad1279679e1bc40136742d" id="r_a9c0b150539ad1279679e1bc40136742d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c0b150539ad1279679e1bc40136742d">ToAnsiString</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a14c4d48a950a966d9e6b4235027e9959">Ese::PrepareUpdateOptions</a> value, const <a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a> &amp;defaultResult)</td></tr>
@@ -9928,7 +9918,7 @@ requires std::is_enum_v&lt;EnumT&gt;&amp;&amp; std::conjunction_v&lt;std::is_sam
 </div>
 </div>
 <a id="a2e71d9b47a013e60561187b97502ff48" name="a2e71d9b47a013e60561187b97502ff48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e71d9b47a013e60561187b97502ff48">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[1/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e71d9b47a013e60561187b97502ff48">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[1/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9953,10 +9943,26 @@ requires std::is_same_v&lt;ResultType, ArgumentType&gt;</div>
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs no conversion since ResultType must be the same as ArgumentType. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>The type to convert to. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>The type to convert from, must be of the same type as ResultType </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a3326113fe534dec977932e777734d813" name="a3326113fe534dec977932e777734d813"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3326113fe534dec977932e777734d813">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[2/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3326113fe534dec977932e777734d813">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[2/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9981,10 +9987,26 @@ requires ( std::is_same_v&lt;ResultType, double&gt;&amp;&amp; std::is_same_v&lt;
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from float to double. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be double, the type to convert to. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be float, the type to convert from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a3ffba2a09bc43498be3c98caf5f57c4d" name="a3ffba2a09bc43498be3c98caf5f57c4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ffba2a09bc43498be3c98caf5f57c4d">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[3/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ffba2a09bc43498be3c98caf5f57c4d">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[3/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10009,10 +10031,26 @@ requires ( std::is_same_v&lt;ResultType, float&gt;&amp;&amp; std::is_same_v&lt;A
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from double to float. Throws an <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_argument_out_of_range_exception.html">ArgumentOutOfRangeException</a> if the argument cannot safely be converted to a float. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be float, the type to convert to. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be double, the type to convert from. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a034b6cd6f1eaa9dafa62cfd350bb5689" name="a034b6cd6f1eaa9dafa62cfd350bb5689"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a034b6cd6f1eaa9dafa62cfd350bb5689">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[4/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a034b6cd6f1eaa9dafa62cfd350bb5689">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[4/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10037,10 +10075,26 @@ requires (requires( ArgumentType a ) { { <a class="el" href="#a05c05c50c34d01f55
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from any type for which there exists an overload of ToWideString, except for <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a> and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a>, to WideString. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be WideString. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be a type for which there exists an overload of ToWideString, except for <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a> and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a93fbaecc13fb43b2f311ad5bc3df15a2" name="a93fbaecc13fb43b2f311ad5bc3df15a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93fbaecc13fb43b2f311ad5bc3df15a2">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[5/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a93fbaecc13fb43b2f311ad5bc3df15a2">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[5/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10065,10 +10119,26 @@ requires ( requires( ArgumentType a ) { { <a class="el" href="#a02a484287e7e9005
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from any type for which there exists an overload of ToAnsiString, except for <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a> and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a>, to AnsiString. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be WideString. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be a type for which there exists an overload of ToAnsiString, except for <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a> and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="ab506e46b836c050814e5ebe826767e41" name="ab506e46b836c050814e5ebe826767e41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab506e46b836c050814e5ebe826767e41">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[6/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab506e46b836c050814e5ebe826767e41">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[6/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10093,10 +10163,26 @@ requires ( std::is_same_v&lt;ResultType, bool&gt; &amp;&amp; std::is_arithmetic_
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from an integer or floating point type, but not bool, to a bool. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be bool. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be an integer or floating point type, but not bool. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a06c5e162c296f39fae81f79e538e6851" name="a06c5e162c296f39fae81f79e538e6851"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06c5e162c296f39fae81f79e538e6851">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[7/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a06c5e162c296f39fae81f79e538e6851">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[7/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10121,10 +10207,26 @@ requires ( std::is_same_v&lt;ArgumentType, bool&gt; &amp;&amp; std::is_arithmeti
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a bool to an integer or floating point type, but not a bool type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be an integer or floating point type, but not bool. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be bool. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="aed2bd52442ce4096f5934c1b572835bd" name="aed2bd52442ce4096f5934c1b572835bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed2bd52442ce4096f5934c1b572835bd">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[8/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aed2bd52442ce4096f5934c1b572835bd">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[8/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10149,10 +10251,26 @@ requires ( std::is_same_v&lt;ResultType, bool&gt; &amp;&amp; ( std::is_same_v&lt
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> or <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> to a bool. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be bool. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> or <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a98fd42abcbe6d3c817d634145ec67a54" name="a98fd42abcbe6d3c817d634145ec67a54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98fd42abcbe6d3c817d634145ec67a54">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[9/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a98fd42abcbe6d3c817d634145ec67a54">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[9/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10177,10 +10295,26 @@ requires ( std::is_same_v&lt;ResultType, bool&gt; &amp;&amp; std::is_same_v&lt;<
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> to a bool. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be bool. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a73c994e9b0d0be22abe644f5b9f4f2e5" name="a73c994e9b0d0be22abe644f5b9f4f2e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73c994e9b0d0be22abe644f5b9f4f2e5">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[10/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a73c994e9b0d0be22abe644f5b9f4f2e5">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[10/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10205,16 +10339,32 @@ requires ( std::is_same_v&lt;ResultType, bool&gt; &amp;&amp; std::is_same_v&lt;<
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a> to a bool. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be bool. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
-<a id="a38f4da4f288ef44740fa3921259ac41c" name="a38f4da4f288ef44740fa3921259ac41c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38f4da4f288ef44740fa3921259ac41c">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[11/46]</span></h2>
+<a id="a6faa84aba2545788f6cde73adeb347a9" name="a6faa84aba2545788f6cde73adeb347a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6faa84aba2545788f6cde73adeb347a9">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[11/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires ( std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a>, ArgumentType&gt; &amp;&amp; std::is_same_v &lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a>,ResultType&gt; == false )</div>
+requires ( std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a>, ArgumentType&gt; &amp;&amp; std::is_same_v &lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a>,ResultType&gt; == false ) &amp;&amp; requires ( <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a> v ) { { v.As&lt;ResultType&gt;( ) }-&gt;std::same_as&lt;ResultType&gt;; }</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -10233,10 +10383,26 @@ requires ( std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_co
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a> to a type for Which there exist a specialization of <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html#a2c947c306fe19dc202d5502b9add5ba5">Variant::As</a>&lt;ResultType&gt;. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must not be a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a>, and it must be a type for Which there exist a specialization of <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html#a2c947c306fe19dc202d5502b9add5ba5">Variant::As</a>&lt;ResultType&gt;. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_variant.html">Variant</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="ae8d31aced9e8bd604daf59f6e00a8160" name="ae8d31aced9e8bd604daf59f6e00a8160"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8d31aced9e8bd604daf59f6e00a8160">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[12/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d31aced9e8bd604daf59f6e00a8160">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[12/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10261,10 +10427,26 @@ requires ( ((<a class="el" href="#ae26d63e9ad6bffcbd200435668e434cc">IsSignedInt
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs a narrowing conversion from an integer type to another. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be a smaller integer type than ArgumentType. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be a wider integer type than ResultType. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a57b7f02290def7aabd33386171585514" name="a57b7f02290def7aabd33386171585514"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57b7f02290def7aabd33386171585514">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[13/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a57b7f02290def7aabd33386171585514">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[13/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10289,10 +10471,26 @@ requires ( ((<a class="el" href="#ae26d63e9ad6bffcbd200435668e434cc">IsSignedInt
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs a widening conversion from an integer type to another integer type with the same signedness. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be an integer type that is wider or equally sized to ArgumentType with the same signedness.. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be an integer type that is narrower or equally sized to ArgumentType with the same signedness. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="ab52fb9c495d27c9e5307fbdd0861d4da" name="ab52fb9c495d27c9e5307fbdd0861d4da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab52fb9c495d27c9e5307fbdd0861d4da">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[14/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab52fb9c495d27c9e5307fbdd0861d4da">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[14/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10317,10 +10515,26 @@ requires ( <a class="el" href="#ae26d63e9ad6bffcbd200435668e434cc">IsSignedInteg
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs a narrowing conversion from an unsigned integer type to a signed integer type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be a signed integer type that is narrower or equally sized to ArgumentType. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be a unsigned integer type that is wider or equally sized to ResultType. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="ac86d98eb753f7a09d9c83ce5ffbf5a47" name="ac86d98eb753f7a09d9c83ce5ffbf5a47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac86d98eb753f7a09d9c83ce5ffbf5a47">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[15/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac86d98eb753f7a09d9c83ce5ffbf5a47">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[15/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10345,10 +10559,26 @@ requires ( <a class="el" href="#ae26d63e9ad6bffcbd200435668e434cc">IsSignedInteg
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs a widening conversion from an unsigned integer type to a signed integer type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be a signed integer type that is wider than ArgumentType. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be an unsigned integer type that is narrower than ResultType. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a9d887fa1118000bc1303b13c667baf3a" name="a9d887fa1118000bc1303b13c667baf3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d887fa1118000bc1303b13c667baf3a">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[16/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d887fa1118000bc1303b13c667baf3a">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[16/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10373,10 +10603,26 @@ requires ( <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInt
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs a narrowing conversion from a signed integer type to an unsigned integer type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be an unsigned integer type that is narrower than ArgumentType. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be a signed integer type that is wider than ResultType. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="af66820b1e7e5bf23f2a6b98adb5d9e6e" name="af66820b1e7e5bf23f2a6b98adb5d9e6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af66820b1e7e5bf23f2a6b98adb5d9e6e">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[17/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af66820b1e7e5bf23f2a6b98adb5d9e6e">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[17/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10401,10 +10647,26 @@ requires ( <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInt
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs a widening conversion from a signed integer type to an unsigned integer type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be an unsigned integer type that is wider or equally sized to ArgumentType. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be a signed integer type that is narrower or equally sized to ResultType. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="af915c86487c49f725d94de28a8a036e4" name="af915c86487c49f725d94de28a8a036e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af915c86487c49f725d94de28a8a036e4">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[18/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af915c86487c49f725d94de28a8a036e4">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[18/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10429,10 +10691,26 @@ requires <a class="el" href="#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&l
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a floating point type to an integer type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be an integer. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be a floating point type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a2db14a03a641679d84e940c928e6a925" name="a2db14a03a641679d84e940c928e6a925"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2db14a03a641679d84e940c928e6a925">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[19/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2db14a03a641679d84e940c928e6a925">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[19/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10457,10 +10735,26 @@ requires (<a class="el" href="#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a> value to an integer, floating point, AnsiString or WideString type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be an integer, floating point, AnsiString or WideString type. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a486830a3a60b914cb3dbefc4b7384336" name="a486830a3a60b914cb3dbefc4b7384336"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a486830a3a60b914cb3dbefc4b7384336">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[20/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a486830a3a60b914cb3dbefc4b7384336">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[20/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10485,290 +10779,26 @@ requires <a class="el" href="#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&l
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a4cb102fc74432d73f1066b9093c533e1" name="a4cb102fc74432d73f1066b9093c533e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cb102fc74432d73f1066b9093c533e1">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[21/46]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ResultType Harlinn::Common::Core::ConvertTo </td>
-          <td>(</td>
-          <td class="paramtype">ArgumentType</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7a2bef8ed7970ff2ea00d0aab18e5e93" name="a7a2bef8ed7970ff2ea00d0aab18e5e93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a2bef8ed7970ff2ea00d0aab18e5e93">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[22/46]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#af82811a69582d9f85a78627741d07b19">Byte</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ResultType Harlinn::Common::Core::ConvertTo </td>
-          <td>(</td>
-          <td class="paramtype">ArgumentType</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a98d371e5396c6b62247e983777f5eaf7" name="a98d371e5396c6b62247e983777f5eaf7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98d371e5396c6b62247e983777f5eaf7">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[23/46]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ResultType Harlinn::Common::Core::ConvertTo </td>
-          <td>(</td>
-          <td class="paramtype">ArgumentType</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7ba6c21729f63d5d2a48d9a64b6fdfe2" name="a7ba6c21729f63d5d2a48d9a64b6fdfe2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ba6c21729f63d5d2a48d9a64b6fdfe2">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[24/46]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ResultType Harlinn::Common::Core::ConvertTo </td>
-          <td>(</td>
-          <td class="paramtype">ArgumentType</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5c2708580c47990270cd74e7ffd14a7f" name="a5c2708580c47990270cd74e7ffd14a7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c2708580c47990270cd74e7ffd14a7f">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[25/46]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ResultType Harlinn::Common::Core::ConvertTo </td>
-          <td>(</td>
-          <td class="paramtype">ArgumentType</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad5fa310a8490e83884f805340defca7d" name="ad5fa310a8490e83884f805340defca7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5fa310a8490e83884f805340defca7d">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[26/46]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ResultType Harlinn::Common::Core::ConvertTo </td>
-          <td>(</td>
-          <td class="paramtype">ArgumentType</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a632d6fd101938de38283d69c1a243112" name="a632d6fd101938de38283d69c1a243112"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a632d6fd101938de38283d69c1a243112">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[27/46]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ResultType Harlinn::Common::Core::ConvertTo </td>
-          <td>(</td>
-          <td class="paramtype">ArgumentType</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5a0933f7fbc1bed67b72d895499963c4" name="a5a0933f7fbc1bed67b72d895499963c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a0933f7fbc1bed67b72d895499963c4">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[28/46]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ResultType Harlinn::Common::Core::ConvertTo </td>
-          <td>(</td>
-          <td class="paramtype">ArgumentType</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4512b89228bc2e79f1e7fc878d57c8df" name="a4512b89228bc2e79f1e7fc878d57c8df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4512b89228bc2e79f1e7fc878d57c8df">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[29/46]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#ac69fb0d67e0a3064a2048954e78298ba">Single</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ResultType Harlinn::Common::Core::ConvertTo </td>
-          <td>(</td>
-          <td class="paramtype">ArgumentType</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5c44c53cb56d5e288746ce781b999b1e" name="a5c44c53cb56d5e288746ce781b999b1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c44c53cb56d5e288746ce781b999b1e">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[30/46]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType,<a class="el" href="#a789293c13583af2e0a4926d068e0415e">Double</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; )</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ResultType Harlinn::Common::Core::ConvertTo </td>
-          <td>(</td>
-          <td class="paramtype">ArgumentType</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> or <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> value to an integer type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be an integer type. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> or <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
 
 </div>
 </div>
 <a id="a09744a4b167a71767cb88e3d5b0333a0" name="a09744a4b167a71767cb88e3d5b0333a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09744a4b167a71767cb88e3d5b0333a0">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[31/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a09744a4b167a71767cb88e3d5b0333a0">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[21/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10793,16 +10823,32 @@ requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_com
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a c style zero terminated string value to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a>. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be convertible to <code>const char*</code> or <code>const wchar_t*</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
-<a id="a5e1075e7f77d24aad1195157050fa9e5" name="a5e1075e7f77d24aad1195157050fa9e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e1075e7f77d24aad1195157050fa9e5">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[32/46]</span></h2>
+<a id="ab0bf0ac995ab7e7198483382d6edce34" name="ab0bf0ac995ab7e7198483382d6edce34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0bf0ac995ab7e7198483382d6edce34">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[22/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; )</div>
+template&lt;typename ResultType , SimpleStringLike ArgumentType&gt; <br />
+requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -10821,10 +10867,26 @@ requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_com
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a>. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be a type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a9c4ee1a2e0fdff38c10e1fcf9ebc9b71" name="a9c4ee1a2e0fdff38c10e1fcf9ebc9b71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c4ee1a2e0fdff38c10e1fcf9ebc9b71">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[33/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c4ee1a2e0fdff38c10e1fcf9ebc9b71">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[23/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10849,10 +10911,26 @@ requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_com
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> to a floating point type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be a floating point type. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value in number of days. </dd></dl>
+
 </div>
 </div>
 <a id="aa6beab5920b6fd980a681f625ef917ea" name="aa6beab5920b6fd980a681f625ef917ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6beab5920b6fd980a681f625ef917ea">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[34/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6beab5920b6fd980a681f625ef917ea">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[24/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10877,10 +10955,26 @@ requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_com
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a> value to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a>. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert in number of days. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a486956dee31e1216960279b5c11169e2" name="a486956dee31e1216960279b5c11169e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a486956dee31e1216960279b5c11169e2">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[35/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a486956dee31e1216960279b5c11169e2">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[25/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10905,10 +10999,26 @@ requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_com
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from an integer type to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be an integer type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert in ticks. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a116207caa55a43e40cc7eee773cabae6" name="a116207caa55a43e40cc7eee773cabae6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a116207caa55a43e40cc7eee773cabae6">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[36/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a116207caa55a43e40cc7eee773cabae6">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[26/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10933,10 +11043,26 @@ requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_com
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from an integer type to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a>. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be an integer type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert in ticks. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a126d0daba03dcc3051ba12d03e2b7866" name="a126d0daba03dcc3051ba12d03e2b7866"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a126d0daba03dcc3051ba12d03e2b7866">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[37/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a126d0daba03dcc3051ba12d03e2b7866">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[27/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10961,16 +11087,32 @@ requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_com
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a c style zero terminated string value to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be convertible to <code>const char*</code> or <code>const wchar_t*</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
-<a id="a8fc87305f889ecad05cbb41f7374c773" name="a8fc87305f889ecad05cbb41f7374c773"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fc87305f889ecad05cbb41f7374c773">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[38/46]</span></h2>
+<a id="a307f7a80f8acd6638b955a9cd942a0f0" name="a307f7a80f8acd6638b955a9cd942a0f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a307f7a80f8acd6638b955a9cd942a0f0">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[28/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt; &amp;&amp; ( <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; )</div>
+template&lt;typename ResultType , SimpleStringLike ArgumentType&gt; <br />
+requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -10989,10 +11131,26 @@ requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_com
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be a type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a2a28fb2f1ce22fb1af18e8eef88b8a7f" name="a2a28fb2f1ce22fb1af18e8eef88b8a7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a28fb2f1ce22fb1af18e8eef88b8a7f">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[39/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a28fb2f1ce22fb1af18e8eef88b8a7f">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[29/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11017,10 +11175,26 @@ requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_com
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a floating point type to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be a floating point type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert in number of days before or after midnight, 30 December 1899. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
 <a id="a5a0422958a198d9155fbfd5f028c03b2" name="a5a0422958a198d9155fbfd5f028c03b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a0422958a198d9155fbfd5f028c03b2">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[40/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a0422958a198d9155fbfd5f028c03b2">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[30/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11045,10 +11219,26 @@ requires <a class="el" href="#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> value to a floating point type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be a floating point type. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value in number of days before or after midnight, 30 December 1899. </dd></dl>
+
 </div>
 </div>
 <a id="a49afc9a4420022ab4b9055ffb9315c08" name="a49afc9a4420022ab4b9055ffb9315c08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49afc9a4420022ab4b9055ffb9315c08">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[41/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a49afc9a4420022ab4b9055ffb9315c08">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[31/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11073,16 +11263,32 @@ requires <a class="el" href="#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> value to a floating point type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be a floating point type. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value in number of days. </dd></dl>
+
 </div>
 </div>
-<a id="a9627702eec0d5e2fcea4371f89d4ab56" name="a9627702eec0d5e2fcea4371f89d4ab56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9627702eec0d5e2fcea4371f89d4ab56">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[42/46]</span></h2>
+<a id="a1f168e343dfeb1b58561bb00a565e9ee" name="a1f168e343dfeb1b58561bb00a565e9ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f168e343dfeb1b58561bb00a565e9ee">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[32/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt;&amp;&amp; std::is_same_v&lt;ArgumentType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt;</div>
+requires (std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt;&amp;&amp; std::is_same_v&lt;ArgumentType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt;) || ( std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt; &amp;&amp; std::is_same_v&lt;ArgumentType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt; )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -11101,16 +11307,32 @@ requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_com
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> value to DataTime value, or a conversion from a DataTime value to <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> if ArgumentType is DataTime, or DataTime if ArgumentType is <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a>. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a> if ResultType is DataTime, or DataTime if ResultType is <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html" title="Represents a time interval.">TimeSpan</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
-<a id="ae07246bbec331970dd048b87decb2199" name="ae07246bbec331970dd048b87decb2199"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae07246bbec331970dd048b87decb2199">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[43/46]</span></h2>
+<a id="ae9dd907bbea0c5aa4d7c150488240dfb" name="ae9dd907bbea0c5aa4d7c150488240dfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9dd907bbea0c5aa4d7c150488240dfb">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[33/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&gt;&amp;&amp; std::is_same_v&lt;ArgumentType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&gt;</div>
+requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a>&gt; &amp;&amp; (std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; || SimpleStringLike&lt;ArgumentType&gt; )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -11129,38 +11351,26 @@ requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_com
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a496811b7686484c5a81d6e4fe90fef29" name="a496811b7686484c5a81d6e4fe90fef29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a496811b7686484c5a81d6e4fe90fef29">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[44/46]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires std::is_same_v&lt;ResultType, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a>&gt; &amp;&amp; (std::is_nothrow_convertible_v&lt; ArgumentType, const wchar_t*&gt; || std::is_nothrow_convertible_v&lt; ArgumentType, const char*&gt; || <a class="el" href="#ae6183020800e1df60d8462fa05c42b4e">IsWideString</a>&lt;ArgumentType&gt; || <a class="el" href="#a09daee57a4a66e4bd48363ac9a8e59af">IsAnsiString</a>&lt;ArgumentType&gt; )</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ResultType Harlinn::Common::Core::ConvertTo </td>
-          <td>(</td>
-          <td class="paramtype">ArgumentType</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>A ConvertTo template that performs conversion from a c style zero terminated string value, or a type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept, to a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a>. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be convertible to <code>const char*</code> or <code>const wchar_t*</code>, or a type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
 
 </div>
 </div>
 <a id="ad2e527c8d0f2c692a836345ef67ec8af" name="ad2e527c8d0f2c692a836345ef67ec8af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2e527c8d0f2c692a836345ef67ec8af">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[45/46]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2e527c8d0f2c692a836345ef67ec8af">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[34/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11185,16 +11395,32 @@ requires <a class="el" href="#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint
 </table>
 </div><div class="memdoc">
 
+<p>A ConvertTo template that performs conversion from an integer to a floating point value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>Must be floating point type. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>Must be an integer type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
 </div>
 </div>
-<a id="af93f79c075676ead702ed96f0ca94988" name="af93f79c075676ead702ed96f0ca94988"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af93f79c075676ead702ed96f0ca94988">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[46/46]</span></h2>
+<a id="a4334013258a3c3c65024e87bf887e8fa" name="a4334013258a3c3c65024e87bf887e8fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4334013258a3c3c65024e87bf887e8fa">&#9670;&#160;</a></span>ConvertTo() <span class="overload">[35/35]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ResultType , typename ArgumentType &gt; <br />
-requires ( std::is_same_v&lt;ResultType, bool&gt; &amp;&amp; ( std::is_same_v&lt;<a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>, ArgumentType&gt; || std::is_same_v&lt;<a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>, ArgumentType&gt; ) )</div>
+template&lt;typename ResultType , SimpleStringLike ArgumentType&gt; <br />
+requires requires( const ArgumentType&amp; a ) { { <a class="el" href="#a0a26564e478b8a3077e7ef546bd36f39">Parse</a>&lt;ResultType&gt;( a ) }-&gt;std::same_as&lt;ResultType&gt;; }</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -11212,6 +11438,22 @@ requires ( std::is_same_v&lt;ResultType, bool&gt; &amp;&amp; ( std::is_same_v&lt
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>A ConvertTo template that performs conversion from a type that satisfies the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept to a type for which there exist a Parse&lt;&gt; specialization that accepts the argument type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ResultType</td><td>A type for which there exist a Parse&lt;&gt; specialization that accepts the argument type. </td></tr>
+    <tr><td class="paramname">ArgumentType</td><td>A type that satisfies the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>The value to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
 
 </div>
 </div>
@@ -15602,14 +15844,14 @@ requires std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_
 
 </div>
 </div>
-<a id="a051ab719a2cfa291a522d04231a7d8eb" name="a051ab719a2cfa291a522d04231a7d8eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a051ab719a2cfa291a522d04231a7d8eb">&#9670;&#160;</a></span>Parse() <span class="overload">[28/136]</span></h2>
+<a id="aa89eac57879f266c11f3950a0b15f952" name="aa89eac57879f266c11f3950a0b15f952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa89eac57879f266c11f3950a0b15f952">&#9670;&#160;</a></span>Parse() <span class="overload">[28/136]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , typename CharT &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34">Ese::ColumnInfoFlags</a>, T&gt; &amp;&amp; ( std::is_same_v&lt;CharT, wchar_t&gt; || std::is_same_v&lt;CharT, char&gt; )</div>
+requires std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7">Ese::ColumnInfoLevel</a>, T&gt; &amp;&amp; ( std::is_same_v&lt;CharT, wchar_t&gt; || std::is_same_v&lt;CharT, char&gt; )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -17878,14 +18120,14 @@ requires std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_
 
 </div>
 </div>
-<a id="abe644d39689ab51f38185d81f616afb6" name="abe644d39689ab51f38185d81f616afb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe644d39689ab51f38185d81f616afb6">&#9670;&#160;</a></span>Parse() <span class="overload">[107/136]</span></h2>
+<a id="af68fe4c10985ac3244c313b58617df72" name="af68fe4c10985ac3244c313b58617df72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af68fe4c10985ac3244c313b58617df72">&#9670;&#160;</a></span>Parse() <span class="overload">[107/136]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , typename StringT &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34">Ese::ColumnInfoFlags</a>, T&gt; &amp;&amp; ( std::is_same_v&lt;StringT, <a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&gt; || std::is_same_v&lt;StringT, <a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>&gt; )</div>
+requires std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7">Ese::ColumnInfoLevel</a>, T&gt; &amp;&amp; ( std::is_same_v&lt;StringT, <a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&gt; || std::is_same_v&lt;StringT, <a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>&gt; )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -24034,8 +24276,8 @@ template&lt;WideStringLike WideStringT, AnsiStringLike AnsiStringT&gt; </div>
 
 </div>
 </div>
-<a id="a86c5f98e651e4e9df9c38a24b3f5c643" name="a86c5f98e651e4e9df9c38a24b3f5c643"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86c5f98e651e4e9df9c38a24b3f5c643">&#9670;&#160;</a></span>ToAnsiString() <span class="overload">[78/152]</span></h2>
+<a id="ab1234f47221239c0f3605290b158711e" name="ab1234f47221239c0f3605290b158711e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1234f47221239c0f3605290b158711e">&#9670;&#160;</a></span>ToAnsiString() <span class="overload">[78/152]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -24046,7 +24288,7 @@ template&lt;WideStringLike WideStringT, AnsiStringLike AnsiStringT&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a> Harlinn::Common::Core::ToAnsiString </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34">Ese::ColumnInfoFlags</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7">Ese::ColumnInfoLevel</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -24059,8 +24301,8 @@ template&lt;WideStringLike WideStringT, AnsiStringLike AnsiStringT&gt; </div>
 
 </div>
 </div>
-<a id="a29ad5c31fa692a3167a05446a8aa8b58" name="a29ad5c31fa692a3167a05446a8aa8b58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29ad5c31fa692a3167a05446a8aa8b58">&#9670;&#160;</a></span>ToAnsiString() <span class="overload">[79/152]</span></h2>
+<a id="a998561a8a1452d3727f6dd226bc36ac6" name="a998561a8a1452d3727f6dd226bc36ac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a998561a8a1452d3727f6dd226bc36ac6">&#9670;&#160;</a></span>ToAnsiString() <span class="overload">[79/152]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -24071,7 +24313,7 @@ template&lt;WideStringLike WideStringT, AnsiStringLike AnsiStringT&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a> Harlinn::Common::Core::ToAnsiString </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34">Ese::ColumnInfoFlags</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7">Ese::ColumnInfoLevel</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -28855,8 +29097,8 @@ template&lt;WideStringLike StringT&gt; </div>
 
 </div>
 </div>
-<a id="a8069f5cb4e3121f4793fdd64e538684a" name="a8069f5cb4e3121f4793fdd64e538684a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8069f5cb4e3121f4793fdd64e538684a">&#9670;&#160;</a></span>ToWideString() <span class="overload">[119/201]</span></h2>
+<a id="a3df9d869c4c1e67997f0d1a7bd58abd0" name="a3df9d869c4c1e67997f0d1a7bd58abd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3df9d869c4c1e67997f0d1a7bd58abd0">&#9670;&#160;</a></span>ToWideString() <span class="overload">[119/201]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28864,7 +29106,7 @@ template&lt;WideStringLike StringT&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="_h_c_c_def_8h.html#afb06ae686742fde98e6427c4a1e2206c">HCC_EXPORT</a> <a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a> Harlinn::Common::Core::ToWideString </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34">Ese::ColumnInfoFlags</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7">Ese::ColumnInfoLevel</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -28872,8 +29114,8 @@ template&lt;WideStringLike StringT&gt; </div>
 
 </div>
 </div>
-<a id="a3ee5bd8df6c8f60c9f8e6c91968ee1a4" name="a3ee5bd8df6c8f60c9f8e6c91968ee1a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ee5bd8df6c8f60c9f8e6c91968ee1a4">&#9670;&#160;</a></span>ToWideString() <span class="overload">[120/201]</span></h2>
+<a id="a688d4fb8083d06741e0a18d894ffc83d" name="a688d4fb8083d06741e0a18d894ffc83d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688d4fb8083d06741e0a18d894ffc83d">&#9670;&#160;</a></span>ToWideString() <span class="overload">[120/201]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28881,7 +29123,7 @@ template&lt;WideStringLike StringT&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="_h_c_c_def_8h.html#afb06ae686742fde98e6427c4a1e2206c">HCC_EXPORT</a> <a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a> Harlinn::Common::Core::ToWideString </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34">Ese::ColumnInfoFlags</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7">Ese::ColumnInfoLevel</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -32094,8 +32336,8 @@ requires std::is_same_v&lt;StringT, <a class="el" href="#a7b2b8eb82c826297870ffb
 
 </div>
 </div>
-<a id="a5b6edb0353bdb4bb5ce552662616dec3" name="a5b6edb0353bdb4bb5ce552662616dec3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b6edb0353bdb4bb5ce552662616dec3">&#9670;&#160;</a></span>TryParse() <span class="overload">[45/92]</span></h2>
+<a id="af36a9b43093cbcc884827d4d60924f23" name="af36a9b43093cbcc884827d4d60924f23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af36a9b43093cbcc884827d4d60924f23">&#9670;&#160;</a></span>TryParse() <span class="overload">[45/92]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32114,7 +32356,7 @@ requires std::is_same_v&lt;StringT, <a class="el" href="#a7b2b8eb82c826297870ffb
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34">Ese::ColumnInfoFlags</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7">Ese::ColumnInfoLevel</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

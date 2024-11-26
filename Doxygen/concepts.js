@@ -8,9 +8,7 @@ var concepts =
             [ "IUnknownImplLike", "concept_harlinn_1_1_common_1_1_core_1_1_com_1_1_i_unknown_impl_like.html", null ]
           ] ],
           [ "Ese", "namespace_harlinn_1_1_common_1_1_core_1_1_ese.html", [
-            [ "StringType", "concept_harlinn_1_1_common_1_1_core_1_1_ese_1_1_string_type.html", null ],
             [ "CharType", "concept_harlinn_1_1_common_1_1_core_1_1_ese_1_1_char_type.html", null ],
-            [ "BinaryVectorType", "concept_harlinn_1_1_common_1_1_core_1_1_ese_1_1_binary_vector_type.html", null ],
             [ "DirectType", "concept_harlinn_1_1_common_1_1_core_1_1_ese_1_1_direct_type.html", null ],
             [ "TableType", "concept_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table_type.html", null ],
             [ "DatabaseType", "concept_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database_type.html", null ]
@@ -82,6 +80,7 @@ var concepts =
           [ "WideStringLike", "concept_harlinn_1_1_common_1_1_core_1_1_wide_string_like.html", null ],
           [ "AnsiStringLike", "concept_harlinn_1_1_common_1_1_core_1_1_ansi_string_like.html", null ],
           [ "SimpleComLike", "concept_harlinn_1_1_common_1_1_core_1_1_simple_com_like.html", null ],
+          [ "BinaryLike", "concept_harlinn_1_1_common_1_1_core_1_1_binary_like.html", null ],
           [ "GuidType", "concept_harlinn_1_1_common_1_1_core_1_1_guid_type.html", null ],
           [ "WideStringType", "concept_harlinn_1_1_common_1_1_core_1_1_wide_string_type.html", null ]
         ] ]

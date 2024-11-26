@@ -6,7 +6,7 @@ var namespacestd =
     [ "formatter< Harlinn::Common::Core::Ese::AttachDatabaseFlags, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_attach_database_flags_00_01_char_t_01_4.html", null ],
     [ "formatter< Harlinn::Common::Core::Ese::BackupFlags, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_backup_flags_00_01_char_t_01_4.html", null ],
     [ "formatter< Harlinn::Common::Core::Ese::ColumnFlags, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_flags_00_01_char_t_01_4.html", null ],
-    [ "formatter< Harlinn::Common::Core::Ese::ColumnInfoFlags, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_info_flags_00_01_char_t_01_4.html", null ],
+    [ "formatter< Harlinn::Common::Core::Ese::ColumnInfoLevel, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_info_level_00_01_char_t_01_4.html", null ],
     [ "formatter< Harlinn::Common::Core::Ese::ColumnType, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_type_00_01_char_t_01_4.html", null ],
     [ "formatter< Harlinn::Common::Core::Ese::CreateDatabaseFlags, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_create_database_flags_00_01_char_t_01_4.html", null ],
     [ "formatter< Harlinn::Common::Core::Ese::DetachDatabaseFlags, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_ese_1_1_detach_database_flags_00_01_char_t_01_4.html", null ],

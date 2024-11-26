@@ -17,7 +17,7 @@ var searchData=
   ['colorcontexttype_14',['ColorContextType',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.html#a563212fd759fef06e6352bcba0c07991',1,'Harlinn::Windows::Graphics::Imaging']]],
   ['colorwriteenable_15',['ColorWriteEnable',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#af2d864bc2cfd72a629584575d77b9541',1,'Harlinn::Windows::Graphics::D3D12']]],
   ['columnflags_16',['ColumnFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7',1,'Harlinn::Common::Core::Ese']]],
-  ['columninfoflags_17',['ColumnInfoFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#ab3b8b9e1fb62d4e3befeca76ffc8cf34',1,'Harlinn::Common::Core::Ese']]],
+  ['columninfolevel_17',['ColumnInfoLevel',['../namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a895076b6d0dacdefc6aa898f3f38faa7',1,'Harlinn::Common::Core::Ese']]],
   ['columnproperties_18',['ColumnProperties',['../namespace_harlinn_1_1_o_c_i.html#a12779cbe5bcb4ab3ceda0f8ce115ee2e',1,'Harlinn::OCI']]],
   ['columntype_19',['ColumnType',['../namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a02ba6c1b46fa199c2df41d5875577c3d',1,'Harlinn::Common::Core::Ese']]],
   ['commandlistsupportflags_20',['CommandListSupportFlags',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#adea78c01e8e1cc2202a8dc6c813f673c',1,'Harlinn::Windows::Graphics::D3D12']]],

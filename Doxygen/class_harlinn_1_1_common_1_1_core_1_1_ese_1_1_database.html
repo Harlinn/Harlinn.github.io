@@ -145,7 +145,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a89ded5a5a03f0322a63d4883b7cf8b5d" id="r_a89ded5a5a03f0322a63d4883b7cf8b5d"><td class="memTemplParams" colspan="2">template&lt;TableType T = Table, CharType C&gt; </td></tr>
 <tr class="memitem:a89ded5a5a03f0322a63d4883b7cf8b5d"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a89ded5a5a03f0322a63d4883b7cf8b5d">OpenTable</a> (const C *tablename, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a72d8cf5aafab7e26c653ef805403fef3">OpenTableFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a72d8cf5aafab7e26c653ef805403fef3ad0a9acf8aed3a47ed70f8a51b49b604a">OpenTableFlags::Updatable</a>, bool noexception=false) const</td></tr>
 <tr class="separator:a89ded5a5a03f0322a63d4883b7cf8b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2c088957aa32711f540ce0c406219dd" id="r_af2c088957aa32711f540ce0c406219dd"><td class="memTemplParams" colspan="2">template&lt;TableType T = Table, StringType S&gt; </td></tr>
+<tr class="memitem:af2c088957aa32711f540ce0c406219dd" id="r_af2c088957aa32711f540ce0c406219dd"><td class="memTemplParams" colspan="2">template&lt;TableType T = Table, SimpleStringLike S&gt; </td></tr>
 <tr class="memitem:af2c088957aa32711f540ce0c406219dd"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af2c088957aa32711f540ce0c406219dd">OpenTable</a> (const S &amp;tablename, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a72d8cf5aafab7e26c653ef805403fef3">OpenTableFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a72d8cf5aafab7e26c653ef805403fef3ad0a9acf8aed3a47ed70f8a51b49b604a">OpenTableFlags::Updatable</a>, bool noexception=false) const</td></tr>
 <tr class="separator:af2c088957aa32711f540ce0c406219dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadf1b9f293fa398d2f55f103931ebd92" id="r_aadf1b9f293fa398d2f55f103931ebd92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa71c1814cc10465a29c98721f5580304">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadf1b9f293fa398d2f55f103931ebd92">CreateTable</a> (const wchar_t *tablename, unsigned long initialNumberOfPages, unsigned long density, JET_TABLEID *tableId) const</td></tr>
@@ -156,31 +156,32 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abefabf1dc51b84aab3287d6de984749b"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abefabf1dc51b84aab3287d6de984749b">CreateTable</a> (const C *tablename, unsigned long initialNumberOfPages=1, unsigned long density=0) const</td></tr>
 <tr class="memdesc:abefabf1dc51b84aab3287d6de984749b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty table in the database.  <br /></td></tr>
 <tr class="separator:abefabf1dc51b84aab3287d6de984749b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade0afd918560069ddc4fe781ce999be6" id="r_ade0afd918560069ddc4fe781ce999be6"><td class="memTemplParams" colspan="2">template&lt;TableType T = Table, StringType S&gt; </td></tr>
+<tr class="memitem:ade0afd918560069ddc4fe781ce999be6" id="r_ade0afd918560069ddc4fe781ce999be6"><td class="memTemplParams" colspan="2">template&lt;TableType T = Table, SimpleStringLike S&gt; </td></tr>
 <tr class="memitem:ade0afd918560069ddc4fe781ce999be6"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ade0afd918560069ddc4fe781ce999be6">CreateTable</a> (const S &amp;tablename, unsigned long initialNumberOfPages=1, unsigned long density=0) const</td></tr>
 <tr class="memdesc:ade0afd918560069ddc4fe781ce999be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty table in the database.  <br /></td></tr>
 <tr class="separator:ade0afd918560069ddc4fe781ce999be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a461de17d97cb1215ec53f959e541c5" id="r_a1a461de17d97cb1215ec53f959e541c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html">Tables</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a461de17d97cb1215ec53f959e541c5">GetTables</a> () const</td></tr>
-<tr class="separator:a1a461de17d97cb1215ec53f959e541c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e276d265e95d10c5829c3aa41b17d9b" id="r_a7e276d265e95d10c5829c3aa41b17d9b"><td class="memTemplParams" colspan="2">template&lt;StringLike StringT = WideString&gt; </td></tr>
+<tr class="memitem:a7e276d265e95d10c5829c3aa41b17d9b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html">Tables</a>&lt; StringT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7e276d265e95d10c5829c3aa41b17d9b">GetTables</a> () const</td></tr>
+<tr class="separator:a7e276d265e95d10c5829c3aa41b17d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f675eb19a5e2b350d1371f2686cfb95" id="r_a0f675eb19a5e2b350d1371f2686cfb95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f675eb19a5e2b350d1371f2686cfb95">DeleteTable</a> (const wchar_t *tableName)</td></tr>
 <tr class="separator:a0f675eb19a5e2b350d1371f2686cfb95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa485db84da0e2ffd7d5316494535bbc" id="r_aaa485db84da0e2ffd7d5316494535bbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa485db84da0e2ffd7d5316494535bbc">DeleteTable</a> (const char *tableName)</td></tr>
 <tr class="separator:aaa485db84da0e2ffd7d5316494535bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a755dbe535b6896a212337b02f0db8e" id="r_a8a755dbe535b6896a212337b02f0db8e"><td class="memTemplParams" colspan="2">template&lt;StringType T&gt; </td></tr>
+<tr class="memitem:a8a755dbe535b6896a212337b02f0db8e" id="r_a8a755dbe535b6896a212337b02f0db8e"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
 <tr class="memitem:a8a755dbe535b6896a212337b02f0db8e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8a755dbe535b6896a212337b02f0db8e">DeleteTable</a> (const T &amp;tableName)</td></tr>
 <tr class="separator:a8a755dbe535b6896a212337b02f0db8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a119e7ff69659e3165426273701cd63fa" id="r_a119e7ff69659e3165426273701cd63fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_ese_1_1_object_info.html">ObjectInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a119e7ff69659e3165426273701cd63fa">GetTableInfo</a> (const wchar_t *objectName) const</td></tr>
 <tr class="separator:a119e7ff69659e3165426273701cd63fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a058f60444a0f81cf37bd39556e6b0528" id="r_a058f60444a0f81cf37bd39556e6b0528"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_ese_1_1_object_info.html">ObjectInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a058f60444a0f81cf37bd39556e6b0528">GetTableInfo</a> (const char *objectName) const</td></tr>
 <tr class="separator:a058f60444a0f81cf37bd39556e6b0528"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd9321d66b4fd002fe5932f5cd47c9c1" id="r_abd9321d66b4fd002fe5932f5cd47c9c1"><td class="memTemplParams" colspan="2">template&lt;StringType S&gt; </td></tr>
+<tr class="memitem:abd9321d66b4fd002fe5932f5cd47c9c1" id="r_abd9321d66b4fd002fe5932f5cd47c9c1"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike S&gt; </td></tr>
 <tr class="memitem:abd9321d66b4fd002fe5932f5cd47c9c1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_ese_1_1_object_info.html">ObjectInfo</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abd9321d66b4fd002fe5932f5cd47c9c1">GetTableInfo</a> (const S &amp;objectName) const</td></tr>
 <tr class="separator:abd9321d66b4fd002fe5932f5cd47c9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6a41367fc4d813b5ebcf749296c061f" id="r_ae6a41367fc4d813b5ebcf749296c061f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6a41367fc4d813b5ebcf749296c061f">TableExists</a> (const wchar_t *objectName) const</td></tr>
 <tr class="separator:ae6a41367fc4d813b5ebcf749296c061f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9caf131db4971f871f93be772c240fdf" id="r_a9caf131db4971f871f93be772c240fdf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9caf131db4971f871f93be772c240fdf">TableExists</a> (const char *objectName) const</td></tr>
 <tr class="separator:a9caf131db4971f871f93be772c240fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af16d066e787cbd1357987246bb9cd25e" id="r_af16d066e787cbd1357987246bb9cd25e"><td class="memTemplParams" colspan="2">template&lt;StringType S&gt; </td></tr>
+<tr class="memitem:af16d066e787cbd1357987246bb9cd25e" id="r_af16d066e787cbd1357987246bb9cd25e"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike S&gt; </td></tr>
 <tr class="memitem:af16d066e787cbd1357987246bb9cd25e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af16d066e787cbd1357987246bb9cd25e">TableExists</a> (const S &amp;objectName) const</td></tr>
 <tr class="separator:af16d066e787cbd1357987246bb9cd25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -441,7 +442,7 @@ template&lt;TableType T = Table, CharType C&gt; </div>
 <p>Creates an empty table in the database. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html" title="The Table class manages a handle to a database cursor that is used to call to the JET API....">Table</a>, or a type move assignable type derived from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html" title="The Table class manages a handle to a database cursor that is used to call to the JET API....">Table</a></td></tr>
+    <tr><td class="paramname">T</td><td><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a>, or a type move assignable type derived from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a></td></tr>
   </table>
   </dd>
 </dl>
@@ -453,7 +454,7 @@ template&lt;TableType T = Table, CharType C&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html" title="The Table class manages a handle to a database cursor that is used to call to the JET API....">Table</a> instance, or an instance of a type derived from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html" title="The Table class manages a handle to a database cursor that is used to call to the JET API....">Table</a>, for the newly created database table.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a> instance, or an instance of a type derived from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a>, for the newly created database table.</dd></dl>
 
 </div>
 </div>
@@ -502,7 +503,7 @@ template&lt;TableType T = Table, CharType C&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;TableType T = Table, StringType S&gt; </div>
+template&lt;TableType T = Table, SimpleStringLike S&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -533,7 +534,7 @@ template&lt;TableType T = Table, StringType S&gt; </div>
 <p>Creates an empty table in the database. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html" title="The Table class manages a handle to a database cursor that is used to call to the JET API....">Table</a>, or a type move assignable type derived from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html" title="The Table class manages a handle to a database cursor that is used to call to the JET API....">Table</a></td></tr>
+    <tr><td class="paramname">T</td><td><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a>, or a type move assignable type derived from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a></td></tr>
   </table>
   </dd>
 </dl>
@@ -545,7 +546,7 @@ template&lt;TableType T = Table, StringType S&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html" title="The Table class manages a handle to a database cursor that is used to call to the JET API....">Table</a> instance, or an instance of a type derived from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html" title="The Table class manages a handle to a database cursor that is used to call to the JET API....">Table</a>, for the newly created database table.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a> instance, or an instance of a type derived from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a>, for the newly created database table.</dd></dl>
 
 </div>
 </div>
@@ -619,7 +620,7 @@ template&lt;TableType T = Table, StringType S&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;StringType T&gt; </div>
+template&lt;SimpleStringLike T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -696,7 +697,7 @@ template&lt;StringType T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;StringType S&gt; </div>
+template&lt;SimpleStringLike S&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -742,17 +743,19 @@ template&lt;StringType S&gt; </div>
 
 </div>
 </div>
-<a id="a1a461de17d97cb1215ec53f959e541c5" name="a1a461de17d97cb1215ec53f959e541c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a461de17d97cb1215ec53f959e541c5">&#9670;&#160;</a></span>GetTables()</h2>
+<a id="a7e276d265e95d10c5829c3aa41b17d9b" name="a7e276d265e95d10c5829c3aa41b17d9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e276d265e95d10c5829c3aa41b17d9b">&#9670;&#160;</a></span>GetTables()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;StringLike StringT = WideString&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html">Tables</a> Harlinn::Common::Core::Ese::Database::GetTables </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html">Tables</a>&lt; StringT &gt; Harlinn::Common::Core::Ese::Database::GetTables </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -953,7 +956,7 @@ template&lt;TableType T = Table, CharType C&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;TableType T = Table, StringType S&gt; </div>
+template&lt;TableType T = Table, SimpleStringLike S&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1158,7 +1161,7 @@ template&lt;TableType T = Table, StringType S&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;StringType S&gt; </div>
+template&lt;SimpleStringLike S&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Introduction to the Extensible Storage Engine | Harlinn</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Introduction to the Extensible Storage Engine" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is my personal Github site," />
+<meta property="og:description" content="This is my personal Github site," />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/ESE/EsePart1.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/ESE/EsePart1.html" />
+<meta property="og:site_name" content="Harlinn" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Introduction to the Extensible Storage Engine" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal Github site,","headline":"Introduction to the Extensible Storage Engine","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/ESE/EsePart1.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Harlinn</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Cpp/Cpp.html">C++</a><a class="page-link" href="/Databases/Databases.html">Databases</a><a class="page-link" href="/DotNet/DotNet.html">.Net</a><a class="page-link" href="/Java/Java.html">Java</a><a class="page-link" href="/Julia/Julia.html">Julia</a><a class="page-link" href="/Python/Python.html">Python</a><a class="page-link" href="/R/R.html">R</a><a class="page-link" href="/Rust/Rust.html">Rust</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Introduction to the Extensible Storage Engine</h1>
+  </header>
+
+  <div class="post-content">
+    <p>Several years ago, while working on a system that stored, retrieved, analyzed 
+large amounts of timeseries data in an Oracle database, we found that it was 
+impossible to meet the performance requirements set for the project using the 
+existing database schema as deployed on an Oracle RDBMS. Changing
+the database schema was not an option since that would also require changes
+to several large and critical systems.</p>
+
+<p>After trying out several NoSQL database engines we found that MicroSofts’ 
+Extensible Storage Engine (ESE) was a good fit for our needs.</p>
+
+<p>Our main reasons for choosing ESE was that:</p>
+
+<ul>
+  <li>
+    <p>It’s installed with Windows, so it gets updates and bugfixes along with 
+the rest of the OS, and it is used by well known Microsoft products such as:</p>
+
+    <ul>
+      <li>Microsoft Exchange</li>
+      <li>Active Directory</li>
+      <li>Windows Search</li>
+    </ul>
+  </li>
+  <li>It is reliable.</li>
+  <li>It’s fast - inserting more than 100 000 records per second is not unusual.</li>
+  <li>There are no additional costs.</li>
+</ul>
+
+<p>This article shows how to:</p>
+
+<ul>
+  <li><a href="#first-steps">Initialize the database engine and create a session</a></li>
+  <li><a href="#first-steps">Create a database</a></li>
+  <li><a href="#first-steps">Open an existing database</a></li>
+  <li><a href="#create-a-table">Create a table</a></li>
+  <li><a href="#opening-a-table">Open an existing table</a></li>
+  <li><a href="#create-a-table">Add columns to table</a></li>
+  <li><a href="#create-a-table">Create a primary index for a table</a></li>
+  <li><a href="#creating-a-new-row">Insert rows into a table</a></li>
+  <li><a href="#read-column-data">Read column data</a></li>
+  <li><a href="#searching">Search for data</a></li>
+  <li><a href="#searching">Iterate over a table, or a range of rows, forwards and backwards</a></li>
+  <li><a href="#updating-a-row-in-a-table">Updating a Row in a Table</a></li>
+  <li><a href="#deleting-a-row-in-a-table">Deleting a Row in a Table</a></li>
+  <li><a href="#create-a-table">Use transactions</a></li>
+</ul>
+
+<p>The Extensible Storage Engine has a C based API, and after a while we 
+decided that it would be beneficial for the progress of the project
+the create a C++ wrapper around the C API to simplify the code base
+and reduce programming errors. This turned out to be an excellent idea, 
+as it really simplified and reduced the size of the ESE related code.</p>
+
+<p>The C++ wrappers that Harlinn.Common.Core provides for the ESE C API, are
+a complete rewrite and an improvement compared to the wrappers I developed
+for that project, since:</p>
+
+<ul>
+  <li>They work nicely with the standard C++ libraries.</li>
+  <li>Use move semantics to safely and efficiently manage the ESE resources.</li>
+</ul>
+
+<p>To use the C++ wrappers for Extensible Storage Engine you need to:</p>
+
+<ul>
+  <li>Include the <code class="language-plaintext highlighter-rouge">HCCEse.h</code> header file and link with the <code class="language-plaintext highlighter-rouge">Harlinn.Common.Core.lib</code> library.</li>
+  <li>Initialize and configure an instance.</li>
+  <li>Create a session.</li>
+  <li>Create or open a database in this session.</li>
+</ul>
+
+<p>Here is an example that does this, and:</p>
+
+<ul>
+  <li>Creates a table.</li>
+  <li>Adds a boolean column.</li>
+  <li>Inserts two rows of data</li>
+  <li>Reads the two rows of data from the table and verifies that the retrieved data is as expected.</li>
+</ul>
+
+<pre><code class="language-C++">// Initialize the Extensible Storage Engine
+Ese::Instance instance( L"TestInstance" );
+
+// Set the path to the directory that will contain 
+// the checkpoint file for the instance 
+instance.SetSystemPath( DatabaseSystemPath );
+
+// Set the path to the directory that will contain 
+// the transaction log files for the instance 
+instance.SetLogFilePath( DatabaseLogfilePath );
+
+// Create the session
+auto session = instance.BeginSession( );
+
+// Create or open the database overwriting any 
+// existing data
+auto database = session.CreateDatabase( DatabasePath, 
+                        Ese::CreateDatabaseFlags::OverwriteExisting );
+
+// Create a table
+auto table1 = database.CreateTable( "table1" );
+
+// Add a column
+auto columnId = table1.AddBoolean( "fieldName" );
+
+// A lambda funtion that inserts one row in the table.
+auto DoInsert = [ &amp;table1, columnId ]( )
+    {
+        // Insert a new row
+        table1.Insert( );
+        // Assign a value to the column
+        table1.SetColumn( columnId, true );
+        // Write the data to the table
+        table1.Update( );
+    };
+
+// Insert two rows of data
+DoInsert( );
+DoInsert( );
+    
+// Move the table cursor to the first row
+if ( table1.MoveFirst( ) )
+{
+    // Retrieve the column value as a std::optional&lt;bool&gt;
+    auto value1 = table1.As&lt;bool&gt;( columnId );
+
+    // Move the table cursor to the next row
+    if ( table1.MoveNext( ) )
+    {
+        auto value2 = false;
+        // Retrieve the column value by passing a reference
+        // to the variable that will be assigned the column
+        // value 
+        auto columnNotNull = table1.Read( columnId, value2 );
+
+        // Verify that the data is as expected
+        assert( columnNotNull == value1.has_value( ) == true );
+        assert( value2 == value1.value( ) == true );
+
+        // Verify that there are no more rows
+        assert( table1.MoveNext( ) == false );
+    }
+}
+</code></pre>
+
+<p>If anything goes wrong, the library will throw an exception, so there 
+is no need for elaborate error checking at each call site, but those 
+exceptions must be handled.</p>
+
+<p>The test code, in <code class="language-plaintext highlighter-rouge">EseTests.cpp</code>, which is included with the source 
+code, demonstrates how to store and retrieve all datatypes supported 
+by ESE.</p>
+
+<p>There is also an example that demonstrates the performance of ESE, on my 
+development laptop it:</p>
+
+<ul>
+  <li>Inserts <code class="language-plaintext highlighter-rouge">44 640 000</code> rows in just over 5 minutes at a rate of <code class="language-plaintext highlighter-rouge">149 477</code>
+rows per second.</li>
+  <li>Searches for, and retrieves <code class="language-plaintext highlighter-rouge">1 000</code> subsets of the data, for a total of
+<code class="language-plaintext highlighter-rouge">21 600 000</code> rows, in <code class="language-plaintext highlighter-rouge">27</code> seconds, at a rate of <code class="language-plaintext highlighter-rouge">794 690</code> rows per second.</li>
+</ul>
+
+<p>The above are excellent numbers, and to see how this works out on your own 
+system, build and execute:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ExampleCoreESE01.exe -c -r -t -d F:\&lt;Path to database directory&gt;\Database.edb
+</code></pre></div></div>
+<p>where</p>
+
+<ul>
+  <li>-c tells the program to create a new database</li>
+  <li>-d provides the path to the database file</li>
+  <li>-r tells the program to replace any existing database at that location</li>
+  <li>-t tells the program to execute the performance tests</li>
+</ul>
+
+<p>This requires about 10GB of free space on your hard drive.</p>
+
+<p>The library allows you to use both UTF16, and char based strings by 
+providing overloads that use the Unicode version and the ANSI version of the 
+ESE C API, and selects one or the other based on the string/character type of 
+the arguments were this is applicable.</p>
+
+<h2 id="harlinncommoncoreese">Harlinn::Common::Core::Ese</h2>
+
+<p>There are four major classes in the library that wraps the ESE C API handle types. 
+The classes are move assignable and move constructible, but not copy assignable, 
+and not copy constructible. This design is used to ensure that the lifetime of the 
+handles is convenient to manage in an appropriate way, ensuring that the handles are 
+always closed when the owning objects go out of scope.</p>
+
+<h3 id="instance">Instance</h3>
+
+<p><a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance.html">Instance</a> 
+is the root object, and all use of the library should start by creating an instance 
+of this type.</p>
+
+<p>The <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance.html">Instance</a> object 
+holds and manages the lifetime of an ESE instance handle.</p>
+
+<h3 id="session">Session</h3>
+
+<p>A <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_session.html">Session</a> object 
+holds and manages the lifetime of an ESE session handle. Sessions provide the transactional 
+context of ESE, and all ESE database operations are performed through a session.</p>
+
+<p>When an instance is used by more than one thread, each thread <strong>should</strong> have 
+its own session.</p>
+
+<h3 id="database">Database</h3>
+
+<p>A <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html">Database</a> object 
+holds and manages the lifetime of a database handle. ESE database handles are used to manage 
+the schema of the database and to manage tables inside the database. Database handles can 
+only be used with the session that was used to create them, and the library helps to 
+facilitate this.</p>
+
+<h3 id="table">Table</h3>
+
+<p>A <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a> object holds 
+and manages the lifetime of a database cursor handle. ESE cursor handles are used to read 
+row data, search rows; or create, update and delete rows. It is also used to define the 
+columns and indexes for a table. Like database handles, the database cursor handles can only 
+be used with the session that was used to create them, and the library helps to facilitate 
+this too.</p>
+
+<h2 id="first-steps">First steps</h2>
+
+<p>Normally, an application will have a single <code class="language-plaintext highlighter-rouge">Ese::Instance</code> object, and 
+multiple sessions with one or more open databases in them. To keep 
+the code for the unit tests simple, I bundled them into a single class called 
+<code class="language-plaintext highlighter-rouge">Engine</code> that is used for most of them:</p>
+
+<pre><code class="language-C++">class Engine
+{
+public:
+    Ese::Instance instance;
+    Ese::Session session;
+    Ese::Database database;
+
+    Engine( bool createNewDatabase = true )
+    {
+        instance = Ese::Instance( "TestInstance" );
+        
+        // Configure ESE to create any required directory that is 
+        // missing in a file system silently
+        instance.SetCreatePathIfNotExist( );
+
+        // Configure ESE to not display a dialog box in 
+        case of an error.
+        instance.SetExceptionAction( Ese::ExceptionAction::None );
+        
+        // Set the path to the directory that will contain 
+        // the checkpoint file for the instance
+        instance.SetSystemPath( DatabaseSystemPath );
+
+        // Set the path to the directory that will contain 
+        // the transaction log files for the instance 
+        instance.SetLogFilePath( DatabaseLogfilePath );
+
+        // Create the session
+        session = instance.BeginSession( );
+        if ( createNewDatabase )
+        {
+            // Create a new database, overwriting any existing
+            // database.
+            database =
+               session.CreateDatabase( DatabasePath, 
+                                       Ese::CreateDatabaseFlags::OverwriteExisting );
+        }
+        else
+        {
+            // Attach the database to the session
+            session.AttachDatabase( DatabasePath );
+
+            // Open the database
+            database = session.OpenDatabase( DatabasePath );
+        }
+    }
+};
+</code></pre>
+<p>If <code class="language-plaintext highlighter-rouge">createNewDatabase</code> is <code class="language-plaintext highlighter-rouge">false</code>, an instance of the <code class="language-plaintext highlighter-rouge">Engine</code> class will open an 
+existing database.</p>
+
+<p>The call to <code class="language-plaintext highlighter-rouge">instance.SetCreatePathIfNotExist( )</code> configures ESE to create 
+any required directory that is missing in a file system silently.</p>
+
+<p><code class="language-plaintext highlighter-rouge">instance.SetExceptionAction( Ese::ExceptionAction::None )</code> configures ESE 
+to not display a dialog box in case of error.</p>
+
+<p><code class="language-plaintext highlighter-rouge">instance.SetSystemPath( DatabaseSystemPath )</code> configures the path to the directory 
+that will contain the checkpoint file for the instance.</p>
+
+<p><code class="language-plaintext highlighter-rouge">instance.SetLogFilePath( DatabaseLogfilePath )</code> configures the path to the directory 
+that will contain the transaction logs for the instance.</p>
+
+<p>When the instance is configured, we’re ready to create the <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_session.html">Session</a> object:</p>
+
+<pre><code class="language-C++">session = instance.BeginSession( );
+</code></pre>
+<p>Once we have a Session object, we can create new databases by calling Session::CreateDatabase, 
+or we can attach and open an existing database, as shown above.</p>
+
+<p>With this in place, creating a new table is as easy as:</p>
+
+<pre><code class="language-C++">BOOST_AUTO_TEST_CASE( CreateTableTest1 )
+{
+    Engine engine;
+    auto&amp; database = engine.database;
+    auto table1 = database.CreateTable( "table1" );
+    BOOST_TEST( table1.IsValid( ) );
+}
+</code></pre>
+
+<p>Trivial, so lets look at something useful. Lets say you have the following struct and want 
+to store the data in a table:</p>
+
+<pre><code class="language-C++">struct SensorValue
+{
+    // Identifies the sensor
+    boost::uuids::uuid Sensor;
+
+    // The timestamp for the sensor value
+    std::chrono::system_clock::time_point Timestamp;
+
+    // The flags value 
+    int64_t Flags = 0;
+
+    // The sensor value
+    double Value = 0.0;
+};
+</code></pre>
+<p>To keep everything in one place, we extend the Engine class:</p>
+
+<pre><code class="language-C++">class SensorEngine : public Engine
+{
+public:
+    using Base = Engine;
+</code></pre>
+<p>When working with ESE I like to keep names short, particularly the column names
+as this simplifies index creation.</p>
+
+<p>We need a name for the table:</p>
+<pre><code class="language-C++">    static constexpr char SensorValueTableName[] = "SV";
+</code></pre>
+<p>A name for the primary index:</p>
+<pre><code class="language-C++">    static constexpr char SensorValueIndexName[] = "ISV";
+</code></pre>
+<p>A name for the sensor column:</p>
+<pre><code class="language-C++">    static constexpr char SensorColumnName[] = "S";
+</code></pre>
+<p>A name for the timestamp column</p>
+<pre><code class="language-C++">    static constexpr char TimestampColumnName[] = "T";
+</code></pre>
+<p>A name for the flags column</p>
+<pre><code class="language-C++">    static constexpr char FlagsColumnName[] = "F";
+</code></pre>
+<p>And, finally a name for the value column:</p>
+<pre><code class="language-C++">    static constexpr char ValueColumnName[] = "V";
+</code></pre>
+
+<p>When working with columns in ESE we identity them by their column ids, so we need four column ids, one for each column:</p>
+
+<pre><code class="language-C++">
+    JET_COLUMNID SensorColumnId = 0;
+    JET_COLUMNID TimestampColumnId = 0;
+    JET_COLUMNID FlagsColumnId = 0;
+    JET_COLUMNID ValueColumnId = 0;
+</code></pre>
+<p>We also need a table object:</p>
+<pre><code class="language-C++">    Ese::Table SensorValues;
+</code></pre>
+<p>The default constructor for <code class="language-plaintext highlighter-rouge">Ese::Table</code> creates an object that is not connected
+to an ESE table.</p>
+
+<p>We could skip writing the constructor, since it doesn’t add anything, 
+but I think implementing it makes the intent of the code clearer:</p>
+
+<pre><code class="language-C++">    SensorEngine( bool createDatabase = true )
+        : Base( createDatabase )
+    {
+    }
+</code></pre>
+<h3 id="create-a-table">Create a Table</h3>
+
+<p>Creating a table is rather straight forward:</p>
+<pre><code class="language-C++">    void CreateSensorValueTable( )
+    {
+</code></pre>
+<p>First we need to start a transaction, which will be rolled back automatically
+unless we call <code class="language-plaintext highlighter-rouge">transaction.Commit( )</code> when we are done:</p>
+<pre><code class="language-C++">        auto transaction = session.StartTransaction( );
+</code></pre>
+<p>Then we create the table:</p>
+<pre><code class="language-C++">        SensorValues = database.CreateTable( SensorValueTableName );
+</code></pre>
+<p>Before adding the four columns:</p>
+<pre><code class="language-C++">        SensorColumnId = SensorValues.AddGuid( SensorColumnName );
+        TimestampColumnId = SensorValues.AddDateTime( TimestampColumnName );
+        FlagsColumnId = SensorValues.AddUInt64( FlagsColumnName );
+        ValueColumnId = SensorValues.AddDouble( ValueColumnName );
+</code></pre>
+<p>The various Add<em>ColumnType</em> functions return the column id for the columns
+they create.</p>
+
+<p>Now that we have created the table, it’s time to create the primary key, which
+is an index with the <code class="language-plaintext highlighter-rouge">Ese::IndexFlags::Primary</code> flag set. Every table should
+have a primary key, and if we don’t create one, ESE will create one for us, but 
+then we don’t have control over its definition.</p>
+
+<p>This <code class="language-plaintext highlighter-rouge">"+S\0+T\0"</code> is the definition we would like to have for the primary key of 
+the table. Here <code class="language-plaintext highlighter-rouge">S</code> and <code class="language-plaintext highlighter-rouge">T</code> are the column names, and the <code class="language-plaintext highlighter-rouge">+</code> prefix before 
+the column names tells ESE that want the index in ascending order for that column.</p>
+
+<p>The index field definition for each column is required to be terminated by a <code class="language-plaintext highlighter-rouge">\0</code> value, 
+and the last field definition must be terminated by a double <code class="language-plaintext highlighter-rouge">\0</code>.</p>
+
+<p>The last parameter to the <code class="language-plaintext highlighter-rouge">CreateIndex</code> function <code class="language-plaintext highlighter-rouge">7</code> is the number of <strong>characters</strong> in
+the index definition, including the final <code class="language-plaintext highlighter-rouge">\0</code> that C++ adds to zero terminated strings.</p>
+
+<pre><code class="language-C++">        SensorValues.CreateIndex( SensorValueIndexName, Ese::IndexFlags::Primary, "+S\0+T\0", 7 );
+</code></pre>
+<p>We are done, and can commit the transaction.</p>
+<pre><code class="language-C++">        transaction.Commit( );
+    }
+</code></pre>
+
+<h3 id="opening-a-table">Opening a Table</h3>
+
+<p>Opening a Table is easy:</p>
+<pre><code class="language-C++">    void OpenSensorValueTable( )
+    {
+</code></pre>
+<p>First we call Database::OpenTable:</p>
+<pre><code class="language-C++">        SensorValues = database.OpenTable( SensorValueTableName );
+</code></pre>
+<p>Then we call Table::GetColumnId to get the column ids for each of the four columns:</p>
+<pre><code class="language-C++">        SensorColumnId = SensorValues.GetColumnId( SensorColumnName );
+        TimestampColumnId = SensorValues.GetColumnId( TimestampColumnName );
+        FlagsColumnId = SensorValues.GetColumnId( FlagsColumnName );
+        ValueColumnId = SensorValues.GetColumnId( ValueColumnName );
+    }
+</code></pre>
+<h2 id="create-retrieve-update-and-delete-crud">Create, Retrieve, Update and Delete (CRUD)</h2>
+
+<p>Now that we have a table to work with, we can implement
+functions to create, retrieve, update and delete rows 
+from the table.</p>
+
+<h3 id="creating-a-new-row">Creating a new row</h3>
+
+<p>Inserting a new row starts with calling the Table::Insert
+function, before calling one of the Table::SetColumn overloads
+for each of the columns, and finalizing the operation with
+a call to Table::Store.</p>
+
+<pre><code class="language-C++">    void Insert( const SensorValue&amp; value )
+    {
+        SensorValues.Insert( );
+        SensorValues.SetColumn( SensorColumnId, value.Sensor );
+        SensorValues.SetColumn( TimestampColumnId, value.Timestamp );
+        SensorValues.SetColumn( FlagsColumnId, value.Flags );
+        SensorValues.SetColumn( ValueColumnId, value.Value );
+        SensorValues.Store( );
+    }
+</code></pre>
+
+<h3 id="read-column-data">Read column data</h3>
+
+<p>Reading column values is performed by calling one of the
+Table::Read overloads. The Table::Read overloads returns
+false if the column value is NULL, but since none of the
+columns can be set to NULL, the return value can be safely
+ignored. First we create a function that reads the value 
+stored in the <code class="language-plaintext highlighter-rouge">S</code> column:</p>
+<pre><code class="language-C++">    boost::uuids::uuid Sensor( ) const
+    {
+        boost::uuids::uuid result;
+        SensorValues.Read( SensorColumnId, result );
+        return result;
+    }
+</code></pre>
+
+<p>Then we create a function that reads the value 
+stored in the <code class="language-plaintext highlighter-rouge">T</code> column:</p>
+
+<pre><code class="language-C++">    std::chrono::system_clock::time_point Timestamp( ) const
+    {
+        std::chrono::system_clock::time_point result;
+        SensorValues.Read( TimestampColumnId, result );
+        return result;
+    }
+</code></pre>
+<p>Afterwards we create a function that reads the value 
+stored in the <code class="language-plaintext highlighter-rouge">F</code> column:</p>
+
+<pre><code class="language-C++">    int64_t Flags( ) const
+    {
+        int64_t result;
+        SensorValues.Read( FlagsColumnId, result );
+        return result;
+    }
+</code></pre>
+<p>Finally we create a function that reads the value 
+stored in the <code class="language-plaintext highlighter-rouge">V</code> column:</p>
+<pre><code class="language-C++">    double Value( ) const
+    {
+        double result;
+        SensorValues.Read( ValueColumnId, result );
+        return result;
+    }
+</code></pre>
+<p>To bring it all together we can wrap it up by creating
+a <code class="language-plaintext highlighter-rouge">Retrieve</code> function that returns our <code class="language-plaintext highlighter-rouge">SensorValue</code>
+object.</p>
+<pre><code class="language-C++">    SensorValue Retrieve( )
+    {
+        SensorValue result{ Sensor( ), Timestamp( ), Flags( ), Value( ) };
+        return result;
+    }
+</code></pre>
+<h3 id="searching">Searching</h3>
+
+<p>To place the table cursor on the first row that contains data for a sensor, 
+which is the one with the earliest timestamp, we first create a search key
+using the one of the <code class="language-plaintext highlighter-rouge">Table::MakeKey</code> function overloads. Search keys are used
+to search for a row of data matching an index. When we have one or more secondary
+indexes defined for a table, we use the <code class="language-plaintext highlighter-rouge">Table::SetCurrentIndex</code> function to
+select the active search index for the table. Since we have only created 
+a primary index for the table, it will always be the search index. The <code class="language-plaintext highlighter-rouge">S</code>
+column, which identifies the sensor, is the first member of the index, and 
+the <code class="language-plaintext highlighter-rouge">T</code> column is the second and final member of the index.</p>
+
+<p>By passing the sensor id to <code class="language-plaintext highlighter-rouge">Table::MakeKey</code> along with <code class="language-plaintext highlighter-rouge">Ese::KeyFlags::NewKey</code>
+to indicate that this is the first value of a new sear key, and 
+<code class="language-plaintext highlighter-rouge">Ese::KeyFlags::FullColumnStartLimit</code> indicates this is the last value
+we will specify for the search key, and that it will be used to match the
+index entry closest to the start of the index that satisfies the key.</p>
+
+<p>In other words, we create a that will only look at the first column of 
+the index when looking for matches with <code class="language-plaintext highlighter-rouge">Table::Seek</code> or
+<code class="language-plaintext highlighter-rouge">Table::SetIndexRange</code>.</p>
+
+<pre><code class="language-C++">    bool MoveTo( const boost::uuids::uuid&amp; sensorId ) const
+    {
+        SensorValues.MakeKey( sensorId, Ese::KeyFlags::NewKey | 
+                                        Ese::KeyFlags::FullColumnStartLimit );
+</code></pre>
+<p>Next we call <code class="language-plaintext highlighter-rouge">Table::Seek</code> passing <code class="language-plaintext highlighter-rouge">Ese::SeekFlags::GreaterOrEqual</code> as its 
+argument because this will place the cursor on the row closest to the beginning
+of the active search index that matches the current search key.</p>
+
+<pre><code class="language-C++">        auto rc = SensorValues.Seek( Ese::SeekFlags::GreaterOrEqual );
+        return rc &gt;= Ese::Result::Success;
+    }
+</code></pre>
+<p>The <code class="language-plaintext highlighter-rouge">MoveTo</code> function can be used to iterate over the stored sensor
+values for a sensor like this:</p>
+<pre><code class="language-C++">success = engine.MoveTo( firstSensor );
+if ( success )
+{
+    do
+    {
+        auto sensorId = engine.Sensor( );
+        if ( sensorId != firstSensor )
+        {
+            break;
+        }
+    } while ( sensorValues.MoveNext( ) );
+}
+</code></pre>
+
+<p>Next we create a function that locates the sensor value, for a sensor, with the greatest
+timestamp less or equal to the argument timestamp. In other words, the current sensor value
+at the requested time.</p>
+
+<pre><code class="language-C++">    bool MoveTo( const boost::uuids::uuid&amp; sensorId, 
+        const std::chrono::system_clock::time_point&amp; timestamp, 
+        bool requireFullMatch = false ) const
+    {
+</code></pre>
+
+<p>This time we need to create a search key with two entries, one for the sensor id, and one 
+for the timestamp.</p>
+
+<pre><code class="language-C++">        SensorValues.MakeKey( sensorId, Ese::KeyFlags::NewKey );
+        SensorValues.MakeKey( timestamp );
+</code></pre>
+
+<p>By default we pass <code class="language-plaintext highlighter-rouge">Ese::SeekFlags::LessOrEqual</code> to <code class="language-plaintext highlighter-rouge">Table::Seek</code> because this
+will place the cursor on the row that compares less of equal to
+to the search key that is closest to the end of the search index. When
+<code class="language-plaintext highlighter-rouge">requireFullMatch</code> is true, it’s because we want to move to a record that
+exactly matches the search key.</p>
+
+<pre><code class="language-C++">        auto rc = SensorValues.Seek( requireFullMatch ? 
+                Ese::SeekFlags::Equal : Ese::SeekFlags::LessOrEqual );
+        return rc &gt;= Ese::Result::Success;
+    }
+</code></pre>
+
+<p>Implementing a function that places the cursor on the record with
+the latest timestamp, is similar to creating the 
+<code class="language-plaintext highlighter-rouge">bool MoveTo( const boost::uuids::uuid&amp; sensorId ) const</code> function:</p>
+
+<pre><code class="language-C++">    bool MoveToLast( const boost::uuids::uuid&amp; sensorId ) const
+    {
+        SensorValues.MakeKey( sensorId, Ese::KeyFlags::NewKey | 
+                            Ese::KeyFlags::FullColumnEndLimit );
+
+        auto rc = SensorValues.Seek( Ese::SeekFlags::LessOrEqual );
+        return rc &gt;= Ese::Result::Success;
+    }
+</code></pre>
+
+<p>It would be nice if we could simplify the code used to iterate over 
+the sensor values, like this:</p>
+
+<pre><code class="language-C++">success = engine.Filter( secondSensor );
+if ( success )
+{
+    do
+    {
+    } while ( sensorValues.MoveNext( ) );
+}
+</code></pre>
+
+<p>This can be accomplished using the <code class="language-plaintext highlighter-rouge">Table::SetIndexRange</code> function.</p>
+
+<pre><code class="language-C++">    bool Filter( const boost::uuids::uuid&amp; sensorId ) const
+    {
+        auto success = MoveTo( sensorId );
+        if ( success )
+        {
+            SensorValues.MakeKey( sensorId, Ese::KeyFlags::NewKey | 
+                                Ese::KeyFlags::FullColumnEndLimit );
+</code></pre>
+<p>Calling <code class="language-plaintext highlighter-rouge">Table::SetIndexRange</code> with <code class="language-plaintext highlighter-rouge">Ese::IndexRangeFlags::UpperLimit</code> 
+creates a limit for the records that can be navigated to using <code class="language-plaintext highlighter-rouge">Table::MoveNext</code> or 
+<code class="language-plaintext highlighter-rouge">Table::Move( JET_MoveNext )</code>, while <code class="language-plaintext highlighter-rouge">Ese::IndexRangeFlags::Inclusive</code> indicates that
+the row matching the search key is included in the set of rows that the cursor
+can navigate to when this index range is active.</p>
+
+<pre><code class="language-C++">            SensorValues.SetIndexRange( Ese::IndexRangeFlags::Inclusive | 
+                                Ese::IndexRangeFlags::UpperLimit );
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+</code></pre>
+
+<p>Similarly, it would be nice to be able to move backwards over the index:</p>
+<pre><code class="language-C++">success = engine.ReverseFilter( secondSensor );
+if ( success )
+{
+    do
+    {
+    } while ( sensorValues.MovePrevious( ) );
+}
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">ReverseFilter</code> can be implemented like this:</p>
+
+<pre><code class="language-C++">    bool ReverseFilter( const boost::uuids::uuid&amp; sensorId ) const
+    {
+        auto success = MoveToLast( sensorId );
+        if ( success )
+        {
+            SensorValues.MakeKey( sensorId, Ese::KeyFlags::NewKey | Ese::KeyFlags::FullColumnStartLimit );
+            SensorValues.SetIndexRange( Ese::IndexRangeFlags::Inclusive );
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+</code></pre>
+
+<h1 id="updating-a-row-in-a-table">Updating a Row in a Table</h1>
+
+<p>To update a row of data in the table we must first navigate to the
+row that we want to update, which is why we have the <code class="language-plaintext highlighter-rouge">requireFullMatch</code> parameter for</p>
+<pre><code class="language-C++">    bool MoveTo( const boost::uuids::uuid&amp; sensorId, 
+        const std::chrono::system_clock::time_point&amp; timestamp, 
+        bool requireFullMatch = false ) const
+</code></pre>
+<p>This overload of <code class="language-plaintext highlighter-rouge">MoveTo</code> will return false if it cannot find 
+a row where <code class="language-plaintext highlighter-rouge">S</code> is equal to <code class="language-plaintext highlighter-rouge">sensorId</code> and <code class="language-plaintext highlighter-rouge">T</code> is equal to <code class="language-plaintext highlighter-rouge">timestamp</code> when 
+<code class="language-plaintext highlighter-rouge">true</code> is passed for the <code class="language-plaintext highlighter-rouge">requireFullMatch</code> parameter.</p>
+
+<pre><code class="language-C++">    bool Update( const SensorValue&amp; value )
+    {
+</code></pre>
+<p>So first we locate the row:</p>
+
+<pre><code class="language-C++">        if ( MoveTo( value.Sensor, value.Timestamp, true ) )
+        {
+</code></pre>
+<p>Then call <code class="language-plaintext highlighter-rouge">Table::Replace</code> to prepare the table for an update
+to the columns that are not part of the primary index.</p>
+
+<pre><code class="language-C++">            SensorValues.Replace( );
+</code></pre>
+<p>Assign the values that we want to write to the columns of the row:</p>
+
+<pre><code class="language-C++">            SensorValues.SetColumn( FlagsColumnId, value.Flags );
+            SensorValues.SetColumn( ValueColumnId, value.Value );
+</code></pre>
+<p>And finalize the update with a call to <code class="language-plaintext highlighter-rouge">Table::Store</code>:</p>
+
+<pre><code class="language-C++">            SensorValues.Store( );
+            return true;
+        }
+        return false;
+    }
+</code></pre>
+
+<h1 id="deleting-a-row-in-a-table">Deleting a Row in a Table</h1>
+
+<p>To delete a row in a table we must first position the cursor on the 
+row we want to delete, and then call <code class="language-plaintext highlighter-rouge">Table::Delete</code></p>
+
+<pre><code class="language-C++">    bool Delete( const SensorValue&amp; value )
+    {
+        if ( MoveTo( value.Sensor, value.Timestamp, true ) )
+        {
+            SensorValues.Delete( );
+            return true;
+        }
+        return false;
+    }
+</code></pre>
+<p>That’s it, end of class :-)</p>
+
+<pre><code class="language-C++">};
+</code></pre>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Harlinn</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Harlinn</li><li><a class="u-email" href="mailto:espen@harlinn.no">espen@harlinn.no</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Harlinn"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Harlinn</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is my personal Github site, </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,12 +1,13 @@
 var class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables =
 [
-    [ "Base", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#a2b388bef035022e30aa732813a47eee4", null ],
-    [ "Tables", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#a2d842b928ca8e10cca0afe5d4c208d7d", null ],
-    [ "ContainerName", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#a64923e3790be48c2e18d02c709077681", null ],
-    [ "Flags", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#ad0c62b6b7c4d3081cf411749a8a024db", null ],
-    [ "NumberOfPages", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#ae73c60d3a793303bb0a66863ba5c80ed", null ],
-    [ "NumberOfRecords", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#ad0fe6394cb5e2af91f9bcc65937a92f5", null ],
-    [ "ObjectName", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#ad9f1284d5186efaf2b2709ffe228e835", null ],
-    [ "Options", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#a7687bc5d542e47ceb8e27f08a7aafec6", null ],
-    [ "objectList_", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#ad1622c778e20798dba06306fde0ca918", null ]
+    [ "Base", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#a9e2cabc00bc1fae5063b639405703073", null ],
+    [ "StringType", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#ab2d84a1b39726a11b5e3098aee29f38a", null ],
+    [ "Tables", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#a5d3017754c7a0d58f3f24f4919f3a7c4", null ],
+    [ "ContainerName", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#a2bdc47c7bb072aff72d2643a10067e43", null ],
+    [ "Flags", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#a1f31f202cbff2126f0078146d18dbcb9", null ],
+    [ "NumberOfPages", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#a35675fd40614b2a1edb65766f63c8e56", null ],
+    [ "NumberOfRecords", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#a48f272c32684fa2600be47333e37e769", null ],
+    [ "ObjectName", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#aea4dac7d025a5cbeb8535daeeafffb56", null ],
+    [ "Options", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#a61dc7fa0b8c70d6487161e2f7dff39af", null ],
+    [ "objectList_", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html#aaadd6c22a2a2844168cc1a673765d587", null ]
 ];

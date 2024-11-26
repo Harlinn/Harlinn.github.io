@@ -253,6 +253,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a68ead31be03c1963c536cbe96f2bbb73" id="r_a68ead31be03c1963c536cbe96f2bbb73"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_h_c_c_def_8h.html#afb06ae686742fde98e6427c4a1e2206c">HCC_EXPORT</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68ead31be03c1963c536cbe96f2bbb73">Parse</a> (const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;uuid)</td></tr>
 <tr class="memdesc:a68ead31be03c1963c536cbe96f2bbb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> from its string representation. The string representation must match "{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}".  <br /></td></tr>
 <tr class="separator:a68ead31be03c1963c536cbe96f2bbb73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2515550a5921f3f23424f6942a71eca8" id="r_a2515550a5921f3f23424f6942a71eca8"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike StringT&gt; <br />
+requires ( std::is_same_v&lt;StringT,<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>&gt; == false &amp;&amp; std::is_same_v&lt;StringT, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&gt; == false )</td></tr>
+<tr class="memitem:a2515550a5921f3f23424f6942a71eca8"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2515550a5921f3f23424f6942a71eca8">Parse</a> (const StringT &amp;uuid)</td></tr>
+<tr class="separator:a2515550a5921f3f23424f6942a71eca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4894bfe1ad08dd562cfbd56f2de280b8" id="r_a4894bfe1ad08dd562cfbd56f2de280b8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_h_c_c_def_8h.html#afb06ae686742fde98e6427c4a1e2206c">HCC_EXPORT</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4894bfe1ad08dd562cfbd56f2de280b8">IsGuid</a> (const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;uuid)</td></tr>
 <tr class="separator:a4894bfe1ad08dd562cfbd56f2de280b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10391ffbe56e36881e69f06654c05dc4" id="r_a10391ffbe56e36881e69f06654c05dc4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_h_c_c_def_8h.html#afb06ae686742fde98e6427c4a1e2206c">HCC_EXPORT</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10391ffbe56e36881e69f06654c05dc4">NewGuid</a> ()</td></tr>
@@ -1371,7 +1375,7 @@ template&lt;GuidType T&gt; </div>
 </div>
 </div>
 <a id="a9012165504de241805b2ca5c122ce488" name="a9012165504de241805b2ca5c122ce488"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9012165504de241805b2ca5c122ce488">&#9670;&#160;</a></span>Parse() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9012165504de241805b2ca5c122ce488">&#9670;&#160;</a></span>Parse() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1405,7 +1409,7 @@ template&lt;GuidType T&gt; </div>
 </div>
 </div>
 <a id="ada3dae20ff5cbee619b9dbcb1d42dff2" name="ada3dae20ff5cbee619b9dbcb1d42dff2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada3dae20ff5cbee619b9dbcb1d42dff2">&#9670;&#160;</a></span>Parse() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ada3dae20ff5cbee619b9dbcb1d42dff2">&#9670;&#160;</a></span>Parse() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1438,8 +1442,36 @@ template&lt;GuidType T&gt; </div>
 
 </div>
 </div>
+<a id="a2515550a5921f3f23424f6942a71eca8" name="a2515550a5921f3f23424f6942a71eca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2515550a5921f3f23424f6942a71eca8">&#9670;&#160;</a></span>Parse() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;SimpleStringLike StringT&gt; <br />
+requires ( std::is_same_v&lt;StringT,<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a>&gt; == false &amp;&amp; std::is_same_v&lt;StringT, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&gt; == false )</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a> Harlinn::Common::Core::Guid::Parse </td>
+          <td>(</td>
+          <td class="paramtype">const StringT &amp;</td>          <td class="paramname"><span class="paramname"><em>uuid</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="acf74dce5e299071a2265a01a94590521" name="acf74dce5e299071a2265a01a94590521"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf74dce5e299071a2265a01a94590521">&#9670;&#160;</a></span>Parse() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acf74dce5e299071a2265a01a94590521">&#9670;&#160;</a></span>Parse() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1473,7 +1505,7 @@ template&lt;GuidType T&gt; </div>
 </div>
 </div>
 <a id="a68ead31be03c1963c536cbe96f2bbb73" name="a68ead31be03c1963c536cbe96f2bbb73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68ead31be03c1963c536cbe96f2bbb73">&#9670;&#160;</a></span>Parse() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ead31be03c1963c536cbe96f2bbb73">&#9670;&#160;</a></span>Parse() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
