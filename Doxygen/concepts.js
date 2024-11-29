@@ -8,7 +8,6 @@ var concepts =
             [ "IUnknownImplLike", "concept_harlinn_1_1_common_1_1_core_1_1_com_1_1_i_unknown_impl_like.html", null ]
           ] ],
           [ "Ese", "namespace_harlinn_1_1_common_1_1_core_1_1_ese.html", [
-            [ "CharType", "concept_harlinn_1_1_common_1_1_core_1_1_ese_1_1_char_type.html", null ],
             [ "DirectType", "concept_harlinn_1_1_common_1_1_core_1_1_ese_1_1_direct_type.html", null ],
             [ "TableType", "concept_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table_type.html", null ],
             [ "DatabaseType", "concept_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database_type.html", null ]
@@ -64,6 +63,8 @@ var concepts =
             [ "HasTypeList", "concept_harlinn_1_1_common_1_1_core_1_1_types_1_1_has_type_list.html", null ],
             [ "IsAdapted", "concept_harlinn_1_1_common_1_1_core_1_1_types_1_1_is_adapted.html", null ]
           ] ],
+          [ "CharType", "concept_harlinn_1_1_common_1_1_core_1_1_char_type.html", null ],
+          [ "ApiCharType", "concept_harlinn_1_1_common_1_1_core_1_1_api_char_type.html", null ],
           [ "SimpleSpanLike", "concept_harlinn_1_1_common_1_1_core_1_1_simple_span_like.html", null ],
           [ "SimpleCharSpanLike", "concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html", null ],
           [ "SimpleAnsiCharSpanLike", "concept_harlinn_1_1_common_1_1_core_1_1_simple_ansi_char_span_like.html", null ],

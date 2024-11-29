@@ -2056,6 +2056,7 @@ var hierarchy =
         [ "Harlinn::Common::Core::Http::Server::HttpResponse", "class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_http_response.html", null ]
       ] ]
     ] ],
+    [ "Harlinn::Common::Core::Ese::RetrieveColumn", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_retrieve_column.html", null ],
     [ "boost::icl::right_open_interval", null, [
       [ "Harlinn::Common::Core::Interval", "class_harlinn_1_1_common_1_1_core_1_1_interval.html", null ]
     ] ],
@@ -2209,6 +2210,7 @@ var hierarchy =
       [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogSession", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_session.html", null ]
     ] ],
     [ "Harlinn::Common::Core::LMDBEx::SessionReference< DatabaseT, SessionT >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_session_reference.html", null ],
+    [ "Harlinn::Common::Core::Ese::SetColumn", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_set_column.html", null ],
     [ "Harlinn::Common::Core::SevenBitDecode< T >", "struct_harlinn_1_1_common_1_1_core_1_1_seven_bit_decode.html", null ],
     [ "Harlinn::Common::Core::SevenBitEncode< N >", "struct_harlinn_1_1_common_1_1_core_1_1_seven_bit_encode.html", null ],
     [ "Harlinn::Common::Core::Persistent::Internal::SevenBitEncodedValue< uint64Value >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_seven_bit_encoded_value.html", null ],
@@ -2349,7 +2351,7 @@ var hierarchy =
     ] ],
     [ "Harlinn::Common::Core::Ese::Table", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html", [
       [ "Harlinn::Common::Core::Ese::SystemTable", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_system_table.html", [
-        [ "Harlinn::Common::Core::Ese::Columns< StringT >", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_columns.html", null ],
+        [ "Harlinn::Common::Core::Ese::ColumnList< StringT >", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_list.html", null ],
         [ "Harlinn::Common::Core::Ese::Tables< StringT >", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html", null ]
       ] ]
     ] ],

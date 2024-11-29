@@ -100,7 +100,7 @@ var class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance =
     [ "Restore", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance.html#ac2605c7855a01218fc527afd415baf45", null ],
     [ "Restore", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance.html#a092fe5fdd0e5994d6c0de2052e75b0be", null ],
     [ "SetAccessDeniedRetryPeriod", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance.html#ae8e5309fc683fa3978da7012283315c4", null ],
-    [ "SetAlternateDatabaseRecoveryPath", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance.html#a3e0e91442d9970c3ce9b80bac614ae71", null ],
+    [ "SetAlternateDatabaseRecoveryPath", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance.html#acea651e097e4649868e2109e85f7a182", null ],
     [ "SetBaseName", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance.html#ad4a294c9d90491eed269abb174ff0945", null ],
     [ "SetBatchIOBufferMax", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance.html#a7bc72aef9fbbae5d45c016b6fe2c2c5a", null ],
     [ "SetCacheSize", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance.html#aa706e91c564ef727ef84a4346a479a99", null ],

@@ -109,6 +109,9 @@ $(function(){initNavTree('class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance
 </div><!--header-->
 <div class="contents">
 
+<p>An instance of the database engine for use in a single process.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;HCCEse.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -171,8 +174,9 @@ requires std::is_same_v&lt;typename StringT1::value_type, typename StringT2::val
 <tr class="memitem:ac9d8a5f0d51a0cbc2e3c0e27d756df2a" id="r_ac9d8a5f0d51a0cbc2e3c0e27d756df2a"><td class="memTemplParams" colspan="2">template&lt;StringLike StringT&gt; </td></tr>
 <tr class="memitem:ac9d8a5f0d51a0cbc2e3c0e27d756df2a"><td class="memTemplItemLeft" align="right" valign="top">StringT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac9d8a5f0d51a0cbc2e3c0e27d756df2a">QueryAlternateDatabaseRecoveryPath</a> () const</td></tr>
 <tr class="separator:ac9d8a5f0d51a0cbc2e3c0e27d756df2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e0e91442d9970c3ce9b80bac614ae71" id="r_a3e0e91442d9970c3ce9b80bac614ae71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e0e91442d9970c3ce9b80bac614ae71">SetAlternateDatabaseRecoveryPath</a> (const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;value) const</td></tr>
-<tr class="separator:a3e0e91442d9970c3ce9b80bac614ae71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea651e097e4649868e2109e85f7a182" id="r_acea651e097e4649868e2109e85f7a182"><td class="memTemplParams" colspan="2">template&lt;StringLike StringT&gt; </td></tr>
+<tr class="memitem:acea651e097e4649868e2109e85f7a182"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acea651e097e4649868e2109e85f7a182">SetAlternateDatabaseRecoveryPath</a> (const StringT &amp;value) const</td></tr>
+<tr class="separator:acea651e097e4649868e2109e85f7a182"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e30da78c08a92ec23eee25c35cc91a1" id="r_a6e30da78c08a92ec23eee25c35cc91a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e30da78c08a92ec23eee25c35cc91a1">QueryCleanupMismatchedLogFiles</a> () const</td></tr>
 <tr class="separator:a6e30da78c08a92ec23eee25c35cc91a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6b6edd65a2f38418f619f4d1829d787" id="r_ae6b6edd65a2f38418f619f4d1829d787"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6b6edd65a2f38418f619f4d1829d787">SetCleanupMismatchedLogFiles</a> (bool value) const</td></tr>
@@ -299,7 +303,7 @@ requires std::is_same_v&lt;typename StringT1::value_type, typename StringT2::val
 <tr class="memitem:a374bf183481f944590f1cbf932916fcd"><td class="memTemplItemLeft" align="right" valign="top">StringT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a374bf183481f944590f1cbf932916fcd">QueryBaseName</a> () const</td></tr>
 <tr class="memdesc:a374bf183481f944590f1cbf932916fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This parameter sets the three letter prefix used for many of the files used by the database engine. For example, the checkpoint file is called EDB.CHK by default because EDB is the default base name. The base name can be used to easily distinguish between sets of files that belong to different instances or to different applications.  <br /></td></tr>
 <tr class="separator:a374bf183481f944590f1cbf932916fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4a294c9d90491eed269abb174ff0945" id="r_ad4a294c9d90491eed269abb174ff0945"><td class="memTemplParams" colspan="2">template&lt;StringLike StringT&gt; </td></tr>
+<tr class="memitem:ad4a294c9d90491eed269abb174ff0945" id="r_ad4a294c9d90491eed269abb174ff0945"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike StringT&gt; </td></tr>
 <tr class="memitem:ad4a294c9d90491eed269abb174ff0945"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad4a294c9d90491eed269abb174ff0945">SetBaseName</a> (const StringT &amp;value) const</td></tr>
 <tr class="separator:ad4a294c9d90491eed269abb174ff0945"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad04044b5418c16a1110c7b8c8ca575ca" id="r_ad04044b5418c16a1110c7b8c8ca575ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad04044b5418c16a1110c7b8c8ca575ca">QueryCircularLog</a> () const</td></tr>
@@ -517,7 +521,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a5f0aeb7648d742aa4f90ee1b3163d8c0" id="r_a5f0aeb7648d742aa4f90ee1b3163d8c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a754da1620e6f94aa852e6ae047db7e59">InitFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f0aeb7648d742aa4f90ee1b3163d8c0">initFlags_</a></td></tr>
 <tr class="separator:a5f0aeb7648d742aa4f90ee1b3163d8c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An instance of the database engine for use in a single process. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aabfa6ace7ede977cdc94ca8fda1bdadb" name="aabfa6ace7ede977cdc94ca8fda1bdadb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aabfa6ace7ede977cdc94ca8fda1bdadb">&#9670;&#160;</a></span>Instance() <span class="overload">[1/8]</span></h2>
 
@@ -3187,11 +3193,13 @@ requires std::is_same_v&lt;typename StringT1::value_type, typename StringT2::val
 
 </div>
 </div>
-<a id="a3e0e91442d9970c3ce9b80bac614ae71" name="a3e0e91442d9970c3ce9b80bac614ae71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e0e91442d9970c3ce9b80bac614ae71">&#9670;&#160;</a></span>SetAlternateDatabaseRecoveryPath()</h2>
+<a id="acea651e097e4649868e2109e85f7a182" name="acea651e097e4649868e2109e85f7a182"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acea651e097e4649868e2109e85f7a182">&#9670;&#160;</a></span>SetAlternateDatabaseRecoveryPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;StringLike StringT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3199,7 +3207,7 @@ requires std::is_same_v&lt;typename StringT1::value_type, typename StringT2::val
         <tr>
           <td class="memname">void Harlinn::Common::Core::Ese::Instance::SetAlternateDatabaseRecoveryPath </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const StringT &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -3218,7 +3226,7 @@ requires std::is_same_v&lt;typename StringT1::value_type, typename StringT2::val
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;StringLike StringT&gt; </div>
+template&lt;SimpleStringLike StringT&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

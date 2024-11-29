@@ -200,9 +200,12 @@ by ESE.</p>
 development laptop it:</p>
 
 <ul>
-  <li>Inserts <code class="language-plaintext highlighter-rouge">44 640 000</code> rows in just over 5 minutes at a rate of <code class="language-plaintext highlighter-rouge">149 477</code>
-rows per second.</li>
-  <li>Searches for, and retrieves <code class="language-plaintext highlighter-rouge">1 000</code> subsets of the data, for a total of
+  <li>Inserts <code class="language-plaintext highlighter-rouge">44 640 000</code> rows in 286 seconds, at a rate of <code class="language-plaintext highlighter-rouge">156 005</code>
+rows per second. This done by first searching for a row that 
+matches the primary key. If found, the row is updated, otherwise a
+new row is inserted into the table.</li>
+  <li>Reads <code class="language-plaintext highlighter-rouge">44 640 000</code> rows in 30 seconds, at a rate of <code class="language-plaintext highlighter-rouge">1 479 087</code> rows per second.</li>
+  <li>Searches for, and retrieves <code class="language-plaintext highlighter-rouge">1 000</code> subsets of the data, for a total of 
 <code class="language-plaintext highlighter-rouge">21 600 000</code> rows, in <code class="language-plaintext highlighter-rouge">27</code> seconds, at a rate of <code class="language-plaintext highlighter-rouge">794 690</code> rows per second.</li>
 </ul>
 
@@ -220,7 +223,7 @@ system, build and execute:</p>
   <li>-t tells the program to execute the performance tests</li>
 </ul>
 
-<p>This requires about 10GB of free space on your hard drive.</p>
+<p>This requires about 3GB of free space on your hard drive.</p>
 
 <p>The library allows you to use both UTF16, and char based strings by 
 providing overloads that use the Unicode version and the ANSI version of the 

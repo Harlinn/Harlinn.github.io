@@ -58,7 +58,7 @@ var searchData=
   ['columncreate_55',['ColumnCreate',['../class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_create.html',1,'Harlinn::Common::Core::Ese']]],
   ['columndefinition_56',['ColumnDefinition',['../class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_definition.html',1,'Harlinn::Common::Core::Ese']]],
   ['columndescriptor_57',['ColumnDescriptor',['../class_harlinn_1_1_o_c_i_1_1_column_descriptor.html',1,'Harlinn::OCI']]],
-  ['columns_58',['Columns',['../class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_columns.html',1,'Harlinn::Common::Core::Ese']]],
+  ['columnlist_58',['ColumnList',['../class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_list.html',1,'Harlinn::Common::Core::Ese']]],
   ['comallocator_59',['ComAllocator',['../class_harlinn_1_1_common_1_1_core_1_1_com_allocator.html',1,'Harlinn::Common::Core']]],
   ['combobox_60',['ComboBox',['../class_harlinn_1_1_windows_1_1_combo_box.html',1,'Harlinn::Windows']]],
   ['comboboxwindowclass_61',['ComboBoxWindowClass',['../class_harlinn_1_1_windows_1_1_combo_box_window_class.html',1,'Harlinn::Windows']]],

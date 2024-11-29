@@ -106,53 +106,71 @@ $(function(){initNavTree('class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database
 </div><!--header-->
 <div class="contents">
 
+<p>Manages the handle to an Extensible <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_storage.html">Storage</a> Engine database, providing an API that exposes the operations that can be performed on the database.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;HCCEse.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a409660c6154129c7bab9d7eda3926358" id="r_a409660c6154129c7bab9d7eda3926358"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a409660c6154129c7bab9d7eda3926358">Database</a> () noexcept</td></tr>
+<tr class="memdesc:a409660c6154129c7bab9d7eda3926358"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html" title="Manages the handle to an Extensible Storage Engine database, providing an API that exposes the operat...">Database</a> object that is not connected to an Extensible <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_storage.html">Storage</a> Engine database.  <br /></td></tr>
 <tr class="separator:a409660c6154129c7bab9d7eda3926358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4df3373d42b2cf2369ebfea9b3485164" id="r_a4df3373d42b2cf2369ebfea9b3485164"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4df3373d42b2cf2369ebfea9b3485164">Database</a> (JET_SESID sessionId, JET_DBID databaseId)</td></tr>
+<tr class="memdesc:a4df3373d42b2cf2369ebfea9b3485164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html" title="Manages the handle to an Extensible Storage Engine database, providing an API that exposes the operat...">Database</a> object that is connected to an Extensible <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_storage.html">Storage</a> Engine database.  <br /></td></tr>
 <tr class="separator:a4df3373d42b2cf2369ebfea9b3485164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1adbf152cacd537505c01d85c6ca451f" id="r_a1adbf152cacd537505c01d85c6ca451f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1adbf152cacd537505c01d85c6ca451f">Database</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html">Database</a> &amp;other)=delete</td></tr>
+<tr class="memdesc:a1adbf152cacd537505c01d85c6ca451f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy construction is not allowed.  <br /></td></tr>
 <tr class="separator:a1adbf152cacd537505c01d85c6ca451f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49bf744664640158873d2d760a9927f8" id="r_a49bf744664640158873d2d760a9927f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49bf744664640158873d2d760a9927f8">Database</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html">Database</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a49bf744664640158873d2d760a9927f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor, taking ownership of the handles from the other database object.  <br /></td></tr>
 <tr class="separator:a49bf744664640158873d2d760a9927f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5d7f2d0dfaea25ae27ee3a0e29464f4" id="r_ac5d7f2d0dfaea25ae27ee3a0e29464f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5d7f2d0dfaea25ae27ee3a0e29464f4">~Database</a> ()</td></tr>
 <tr class="separator:ac5d7f2d0dfaea25ae27ee3a0e29464f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a139ec14a26c72b2422e512d850b64367" id="r_a139ec14a26c72b2422e512d850b64367"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html">Database</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a139ec14a26c72b2422e512d850b64367">operator=</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html">Database</a> &amp;other)=delete</td></tr>
+<tr class="memdesc:a139ec14a26c72b2422e512d850b64367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment is not allowed.  <br /></td></tr>
 <tr class="separator:a139ec14a26c72b2422e512d850b64367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebe883887a58986e22cbd297bb92912f" id="r_aebe883887a58986e22cbd297bb92912f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html">Database</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebe883887a58986e22cbd297bb92912f">operator=</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html">Database</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:aebe883887a58986e22cbd297bb92912f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment implemented by swapping handles wit the argument database object.  <br /></td></tr>
 <tr class="separator:aebe883887a58986e22cbd297bb92912f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79fc4ea2e853650f5ab8d3760702bc4d" id="r_a79fc4ea2e853650f5ab8d3760702bc4d"><td class="memItemLeft" align="right" valign="top">JET_SESID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79fc4ea2e853650f5ab8d3760702bc4d">SessionHandle</a> () const</td></tr>
+<tr class="memdesc:a79fc4ea2e853650f5ab8d3760702bc4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the handle of the session that was used to open or create the database.  <br /></td></tr>
 <tr class="separator:a79fc4ea2e853650f5ab8d3760702bc4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cd6fecf18e9a888f411b38a0a6fa660" id="r_a5cd6fecf18e9a888f411b38a0a6fa660"><td class="memItemLeft" align="right" valign="top">JET_DBID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cd6fecf18e9a888f411b38a0a6fa660">Handle</a> () const</td></tr>
+<tr class="memdesc:a5cd6fecf18e9a888f411b38a0a6fa660"><td class="mdescLeft">&#160;</td><td class="mdescRight">The raw database handle.  <br /></td></tr>
 <tr class="separator:a5cd6fecf18e9a888f411b38a0a6fa660"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05d092dd38755d7858de0ffee39d44ab" id="r_a05d092dd38755d7858de0ffee39d44ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05d092dd38755d7858de0ffee39d44ab">OnDatabaseCreated</a> ()</td></tr>
 <tr class="separator:a05d092dd38755d7858de0ffee39d44ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad58a140ba48a35d9248b3474012cbeb3" id="r_ad58a140ba48a35d9248b3474012cbeb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad58a140ba48a35d9248b3474012cbeb3">OnDatabaseOpened</a> ()</td></tr>
 <tr class="separator:ad58a140ba48a35d9248b3474012cbeb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0163da272995bc0e4c7e40c28fd74593" id="r_a0163da272995bc0e4c7e40c28fd74593"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0163da272995bc0e4c7e40c28fd74593">IsValid</a> () const noexcept</td></tr>
+<tr class="memdesc:a0163da272995bc0e4c7e40c28fd74593"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html" title="Manages the handle to an Extensible Storage Engine database, providing an API that exposes the operat...">Database</a> object where the session handle is not equal to JET_sesidNil and the database handle is not equal to JET_dbidNil is considered to be a valid <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html" title="Manages the handle to an Extensible Storage Engine database, providing an API that exposes the operat...">Database</a> object.  <br /></td></tr>
 <tr class="separator:a0163da272995bc0e4c7e40c28fd74593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa56ebd83d3b76b3794b928ddd10488e" id="r_aaa56ebd83d3b76b3794b928ddd10488e"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa56ebd83d3b76b3794b928ddd10488e">operator bool</a> () const noexcept</td></tr>
+<tr class="memdesc:aaa56ebd83d3b76b3794b928ddd10488e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html" title="Manages the handle to an Extensible Storage Engine database, providing an API that exposes the operat...">Database</a> object where the session handle is not equal to JET_sesidNil and the database handle is not equal to JET_dbidNil is considered to be a valid <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html" title="Manages the handle to an Extensible Storage Engine database, providing an API that exposes the operat...">Database</a> object.  <br /></td></tr>
 <tr class="separator:aaa56ebd83d3b76b3794b928ddd10488e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a489865668791bb11d12927a620d39502" id="r_a489865668791bb11d12927a620d39502"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a489865668791bb11d12927a620d39502">Close</a> ()</td></tr>
+<tr class="memdesc:a489865668791bb11d12927a620d39502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes a database.  <br /></td></tr>
 <tr class="separator:a489865668791bb11d12927a620d39502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ad8508dbda5eaf0c4117f3d86ef1a1e" id="r_a3ad8508dbda5eaf0c4117f3d86ef1a1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa71c1814cc10465a29c98721f5580304">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ad8508dbda5eaf0c4117f3d86ef1a1e">OpenTable</a> (const wchar_t *tablename, const void *parameters, unsigned long parametersSize, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a72d8cf5aafab7e26c653ef805403fef3">OpenTableFlags</a> flags, JET_TABLEID *tableId) const</td></tr>
+<tr class="memdesc:a3ad8508dbda5eaf0c4117f3d86ef1a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a cursor on a previously created table.  <br /></td></tr>
 <tr class="separator:a3ad8508dbda5eaf0c4117f3d86ef1a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc845b5eb60de4cfc8202d1ef0ef7da2" id="r_acc845b5eb60de4cfc8202d1ef0ef7da2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa71c1814cc10465a29c98721f5580304">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc845b5eb60de4cfc8202d1ef0ef7da2">OpenTable</a> (const char *tablename, const void *parameters, unsigned long parametersSize, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a72d8cf5aafab7e26c653ef805403fef3">OpenTableFlags</a> flags, JET_TABLEID *tableId) const</td></tr>
+<tr class="memdesc:acc845b5eb60de4cfc8202d1ef0ef7da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a cursor on a previously created table.  <br /></td></tr>
 <tr class="separator:acc845b5eb60de4cfc8202d1ef0ef7da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89ded5a5a03f0322a63d4883b7cf8b5d" id="r_a89ded5a5a03f0322a63d4883b7cf8b5d"><td class="memTemplParams" colspan="2">template&lt;TableType T = Table, CharType C&gt; </td></tr>
-<tr class="memitem:a89ded5a5a03f0322a63d4883b7cf8b5d"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a89ded5a5a03f0322a63d4883b7cf8b5d">OpenTable</a> (const C *tablename, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a72d8cf5aafab7e26c653ef805403fef3">OpenTableFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a72d8cf5aafab7e26c653ef805403fef3ad0a9acf8aed3a47ed70f8a51b49b604a">OpenTableFlags::Updatable</a>, bool noexception=false) const</td></tr>
-<tr class="separator:a89ded5a5a03f0322a63d4883b7cf8b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c818062e9904b384729b9d46da3948" id="r_a40c818062e9904b384729b9d46da3948"><td class="memTemplParams" colspan="2">template&lt;TableType T = Table, ApiCharType C&gt; </td></tr>
+<tr class="memitem:a40c818062e9904b384729b9d46da3948"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a40c818062e9904b384729b9d46da3948">OpenTable</a> (const C *tableName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a72d8cf5aafab7e26c653ef805403fef3">OpenTableFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a72d8cf5aafab7e26c653ef805403fef3ad0a9acf8aed3a47ed70f8a51b49b604a">OpenTableFlags::Updatable</a>, bool noexception=false) const</td></tr>
+<tr class="memdesc:a40c818062e9904b384729b9d46da3948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a cursor on a previously created table.  <br /></td></tr>
+<tr class="separator:a40c818062e9904b384729b9d46da3948"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2c088957aa32711f540ce0c406219dd" id="r_af2c088957aa32711f540ce0c406219dd"><td class="memTemplParams" colspan="2">template&lt;TableType T = Table, SimpleStringLike S&gt; </td></tr>
 <tr class="memitem:af2c088957aa32711f540ce0c406219dd"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af2c088957aa32711f540ce0c406219dd">OpenTable</a> (const S &amp;tablename, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a72d8cf5aafab7e26c653ef805403fef3">OpenTableFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a72d8cf5aafab7e26c653ef805403fef3ad0a9acf8aed3a47ed70f8a51b49b604a">OpenTableFlags::Updatable</a>, bool noexception=false) const</td></tr>
+<tr class="memdesc:af2c088957aa32711f540ce0c406219dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a cursor on a previously created table.  <br /></td></tr>
 <tr class="separator:af2c088957aa32711f540ce0c406219dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadf1b9f293fa398d2f55f103931ebd92" id="r_aadf1b9f293fa398d2f55f103931ebd92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa71c1814cc10465a29c98721f5580304">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadf1b9f293fa398d2f55f103931ebd92">CreateTable</a> (const wchar_t *tablename, unsigned long initialNumberOfPages, unsigned long density, JET_TABLEID *tableId) const</td></tr>
 <tr class="separator:aadf1b9f293fa398d2f55f103931ebd92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79b27f28e3ea0def59011354807323f7" id="r_a79b27f28e3ea0def59011354807323f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa71c1814cc10465a29c98721f5580304">Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79b27f28e3ea0def59011354807323f7">CreateTable</a> (const char *tablename, unsigned long initialNumberOfPages, unsigned long density, JET_TABLEID *tableId) const</td></tr>
 <tr class="separator:a79b27f28e3ea0def59011354807323f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abefabf1dc51b84aab3287d6de984749b" id="r_abefabf1dc51b84aab3287d6de984749b"><td class="memTemplParams" colspan="2">template&lt;TableType T = Table, CharType C&gt; </td></tr>
+<tr class="memitem:abefabf1dc51b84aab3287d6de984749b" id="r_abefabf1dc51b84aab3287d6de984749b"><td class="memTemplParams" colspan="2">template&lt;TableType T = Table, ApiCharType C&gt; </td></tr>
 <tr class="memitem:abefabf1dc51b84aab3287d6de984749b"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abefabf1dc51b84aab3287d6de984749b">CreateTable</a> (const C *tablename, unsigned long initialNumberOfPages=1, unsigned long density=0) const</td></tr>
 <tr class="memdesc:abefabf1dc51b84aab3287d6de984749b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty table in the database.  <br /></td></tr>
 <tr class="separator:abefabf1dc51b84aab3287d6de984749b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,27 +180,37 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ade0afd918560069ddc4fe781ce999be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e276d265e95d10c5829c3aa41b17d9b" id="r_a7e276d265e95d10c5829c3aa41b17d9b"><td class="memTemplParams" colspan="2">template&lt;StringLike StringT = WideString&gt; </td></tr>
 <tr class="memitem:a7e276d265e95d10c5829c3aa41b17d9b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html">Tables</a>&lt; StringT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7e276d265e95d10c5829c3aa41b17d9b">GetTables</a> () const</td></tr>
+<tr class="memdesc:a7e276d265e95d10c5829c3aa41b17d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves an <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html">Tables</a>&lt;StringT&gt; that can be used to enumerate the tables in the database.  <br /></td></tr>
 <tr class="separator:a7e276d265e95d10c5829c3aa41b17d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f675eb19a5e2b350d1371f2686cfb95" id="r_a0f675eb19a5e2b350d1371f2686cfb95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f675eb19a5e2b350d1371f2686cfb95">DeleteTable</a> (const wchar_t *tableName)</td></tr>
+<tr class="memdesc:a0f675eb19a5e2b350d1371f2686cfb95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a table in a database.  <br /></td></tr>
 <tr class="separator:a0f675eb19a5e2b350d1371f2686cfb95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa485db84da0e2ffd7d5316494535bbc" id="r_aaa485db84da0e2ffd7d5316494535bbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa485db84da0e2ffd7d5316494535bbc">DeleteTable</a> (const char *tableName)</td></tr>
+<tr class="memdesc:aaa485db84da0e2ffd7d5316494535bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a table in a database.  <br /></td></tr>
 <tr class="separator:aaa485db84da0e2ffd7d5316494535bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a755dbe535b6896a212337b02f0db8e" id="r_a8a755dbe535b6896a212337b02f0db8e"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
 <tr class="memitem:a8a755dbe535b6896a212337b02f0db8e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8a755dbe535b6896a212337b02f0db8e">DeleteTable</a> (const T &amp;tableName)</td></tr>
+<tr class="memdesc:a8a755dbe535b6896a212337b02f0db8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a table in a database.  <br /></td></tr>
 <tr class="separator:a8a755dbe535b6896a212337b02f0db8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a119e7ff69659e3165426273701cd63fa" id="r_a119e7ff69659e3165426273701cd63fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_ese_1_1_object_info.html">ObjectInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a119e7ff69659e3165426273701cd63fa">GetTableInfo</a> (const wchar_t *objectName) const</td></tr>
+<tr class="memdesc:a119e7ff69659e3165426273701cd63fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves information about a table in the database.  <br /></td></tr>
 <tr class="separator:a119e7ff69659e3165426273701cd63fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a058f60444a0f81cf37bd39556e6b0528" id="r_a058f60444a0f81cf37bd39556e6b0528"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_ese_1_1_object_info.html">ObjectInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a058f60444a0f81cf37bd39556e6b0528">GetTableInfo</a> (const char *objectName) const</td></tr>
+<tr class="memdesc:a058f60444a0f81cf37bd39556e6b0528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves information about a table in the database.  <br /></td></tr>
 <tr class="separator:a058f60444a0f81cf37bd39556e6b0528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd9321d66b4fd002fe5932f5cd47c9c1" id="r_abd9321d66b4fd002fe5932f5cd47c9c1"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike S&gt; </td></tr>
 <tr class="memitem:abd9321d66b4fd002fe5932f5cd47c9c1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_ese_1_1_object_info.html">ObjectInfo</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abd9321d66b4fd002fe5932f5cd47c9c1">GetTableInfo</a> (const S &amp;objectName) const</td></tr>
+<tr class="memdesc:abd9321d66b4fd002fe5932f5cd47c9c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves information about a table in the database.  <br /></td></tr>
 <tr class="separator:abd9321d66b4fd002fe5932f5cd47c9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6a41367fc4d813b5ebcf749296c061f" id="r_ae6a41367fc4d813b5ebcf749296c061f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6a41367fc4d813b5ebcf749296c061f">TableExists</a> (const wchar_t *objectName) const</td></tr>
+<tr class="memdesc:ae6a41367fc4d813b5ebcf749296c061f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_test.html">Test</a> if a table exists in the database.  <br /></td></tr>
 <tr class="separator:ae6a41367fc4d813b5ebcf749296c061f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9caf131db4971f871f93be772c240fdf" id="r_a9caf131db4971f871f93be772c240fdf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9caf131db4971f871f93be772c240fdf">TableExists</a> (const char *objectName) const</td></tr>
+<tr class="memdesc:a9caf131db4971f871f93be772c240fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_test.html">Test</a> if a table exists in the database.  <br /></td></tr>
 <tr class="separator:a9caf131db4971f871f93be772c240fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af16d066e787cbd1357987246bb9cd25e" id="r_af16d066e787cbd1357987246bb9cd25e"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike S&gt; </td></tr>
 <tr class="memitem:af16d066e787cbd1357987246bb9cd25e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af16d066e787cbd1357987246bb9cd25e">TableExists</a> (const S &amp;objectName) const</td></tr>
+<tr class="memdesc:af16d066e787cbd1357987246bb9cd25e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_test.html">Test</a> if a table exists in the database.  <br /></td></tr>
 <tr class="separator:af16d066e787cbd1357987246bb9cd25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -199,7 +227,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a53ff41649f0e49a4b4826ed009f35503" id="r_a53ff41649f0e49a4b4826ed009f35503"><td class="memItemLeft" align="right" valign="top">JET_DBID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53ff41649f0e49a4b4826ed009f35503">databaseId_</a></td></tr>
 <tr class="separator:a53ff41649f0e49a4b4826ed009f35503"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages the handle to an Extensible <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_storage.html">Storage</a> Engine database, providing an API that exposes the operations that can be performed on the database. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a409660c6154129c7bab9d7eda3926358" name="a409660c6154129c7bab9d7eda3926358"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a409660c6154129c7bab9d7eda3926358">&#9670;&#160;</a></span>Database() <span class="overload">[1/4]</span></h2>
 
@@ -222,6 +252,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html" title="Manages the handle to an Extensible Storage Engine database, providing an API that exposes the operat...">Database</a> object that is not connected to an Extensible <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_storage.html">Storage</a> Engine database. </p>
 
 </div>
 </div>
@@ -252,6 +284,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructs a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html" title="Manages the handle to an Extensible Storage Engine database, providing an API that exposes the operat...">Database</a> object that is connected to an Extensible <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_storage.html">Storage</a> Engine database. </p>
+
 </div>
 </div>
 <a id="a1adbf152cacd537505c01d85c6ca451f" name="a1adbf152cacd537505c01d85c6ca451f"></a>
@@ -277,6 +311,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Copy construction is not allowed. </p>
+
 </div>
 </div>
 <a id="a49bf744664640158873d2d760a9927f8" name="a49bf744664640158873d2d760a9927f8"></a>
@@ -301,6 +337,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Move constructor, taking ownership of the handles from the other database object. </p>
 
 </div>
 </div>
@@ -378,6 +416,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Closes a database. </p>
+
 </div>
 </div>
 <a id="a0e423b54c2b407cd435cd59c926ce679" name="a0e423b54c2b407cd435cd59c926ce679"></a>
@@ -411,7 +451,7 @@ Private Attributes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;TableType T = Table, CharType C&gt; </div>
+template&lt;TableType T = Table, ApiCharType C&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -612,6 +652,14 @@ template&lt;TableType T = Table, SimpleStringLike S&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Deletes a table in a database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tableName</td><td>The name of the table to delete. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a8a755dbe535b6896a212337b02f0db8e" name="a8a755dbe535b6896a212337b02f0db8e"></a>
@@ -639,6 +687,14 @@ template&lt;SimpleStringLike T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Deletes a table in a database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tableName</td><td>The name of the table to delete. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a0f675eb19a5e2b350d1371f2686cfb95" name="a0f675eb19a5e2b350d1371f2686cfb95"></a>
@@ -664,6 +720,14 @@ template&lt;SimpleStringLike T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Deletes a table in a database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tableName</td><td>The name of the table to delete. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a058f60444a0f81cf37bd39556e6b0528" name="a058f60444a0f81cf37bd39556e6b0528"></a>
@@ -688,6 +752,15 @@ template&lt;SimpleStringLike T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Retrieves information about a table in the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objectName</td><td>The name of the table. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_ese_1_1_object_info.html">ObjectInfo</a> object for the requeste table. </dd></dl>
 
 </div>
 </div>
@@ -716,6 +789,15 @@ template&lt;SimpleStringLike S&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Retrieves information about a table in the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objectName</td><td>The name of the table. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_ese_1_1_object_info.html">ObjectInfo</a> object for the requeste table. </dd></dl>
+
 </div>
 </div>
 <a id="a119e7ff69659e3165426273701cd63fa" name="a119e7ff69659e3165426273701cd63fa"></a>
@@ -740,6 +822,15 @@ template&lt;SimpleStringLike S&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Retrieves information about a table in the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objectName</td><td>The name of the table. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_ese_1_1_object_info.html">ObjectInfo</a> object for the requeste table. </dd></dl>
 
 </div>
 </div>
@@ -768,6 +859,15 @@ template&lt;StringLike StringT = WideString&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Retrieves an <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_tables.html">Tables</a>&lt;StringT&gt; that can be used to enumerate the tables in the database. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">StringT</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 </div>
 </div>
 <a id="a5cd6fecf18e9a888f411b38a0a6fa660" name="a5cd6fecf18e9a888f411b38a0a6fa660"></a>
@@ -793,6 +893,9 @@ template&lt;StringLike StringT = WideString&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>The raw database handle. </p>
+<dl class="section return"><dt>Returns</dt><dd>The raw database handle. </dd></dl>
+
 </div>
 </div>
 <a id="a0163da272995bc0e4c7e40c28fd74593" name="a0163da272995bc0e4c7e40c28fd74593"></a>
@@ -817,6 +920,9 @@ template&lt;StringLike StringT = WideString&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>A <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html" title="Manages the handle to an Extensible Storage Engine database, providing an API that exposes the operat...">Database</a> object where the session handle is not equal to JET_sesidNil and the database handle is not equal to JET_dbidNil is considered to be a valid <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html" title="Manages the handle to an Extensible Storage Engine database, providing an API that exposes the operat...">Database</a> object. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if this <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html" title="Manages the handle to an Extensible Storage Engine database, providing an API that exposes the operat...">Database</a> object is valid, otherwise false. </dd></dl>
 
 </div>
 </div>
@@ -870,13 +976,13 @@ template&lt;StringLike StringT = WideString&gt; </div>
 
 </div>
 </div>
-<a id="a89ded5a5a03f0322a63d4883b7cf8b5d" name="a89ded5a5a03f0322a63d4883b7cf8b5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89ded5a5a03f0322a63d4883b7cf8b5d">&#9670;&#160;</a></span>OpenTable() <span class="overload">[1/4]</span></h2>
+<a id="a40c818062e9904b384729b9d46da3948" name="a40c818062e9904b384729b9d46da3948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40c818062e9904b384729b9d46da3948">&#9670;&#160;</a></span>OpenTable() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;TableType T = Table, CharType C&gt; </div>
+template&lt;TableType T = Table, ApiCharType C&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -884,7 +990,7 @@ template&lt;TableType T = Table, CharType C&gt; </div>
         <tr>
           <td class="memname">T Harlinn::Common::Core::Ese::Database::OpenTable </td>
           <td>(</td>
-          <td class="paramtype">const C *</td>          <td class="paramname"><span class="paramname"><em>tablename</em></span>, </td>
+          <td class="paramtype">const C *</td>          <td class="paramname"><span class="paramname"><em>tableName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -903,6 +1009,25 @@ template&lt;TableType T = Table, CharType C&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Opens a cursor on a previously created table. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Ese::Table</a> or a type derived from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Ese::Table</a>. </td></tr>
+    <tr><td class="paramname">C</td><td>char or wchar_t. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tableName</td><td>The name of the table to open. </td></tr>
+    <tr><td class="paramname">flags</td><td>Zero or more values from the OpenTableFlags enumeration. The values can be combined using the <code>|</code> operator. </td></tr>
+    <tr><td class="paramname">noexception</td><td>If true this function will not throw an exception if table identified by tableName is not found in the database and return an invalid <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a> object representing the table in the database. </dd></dl>
+<p>Derived classes should implement OnTableOpened( ) which is called just after constructing the <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a>, or <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a> derived object. This is an opportunity for <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a> derived objects to retrieve the column ids for the table. </p>
 
 </div>
 </div>
@@ -948,6 +1073,19 @@ template&lt;TableType T = Table, CharType C&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Opens a cursor on a previously created table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tablename</td><td>The name of the table to open. </td></tr>
+    <tr><td class="paramname">parameters</td><td>Deprecated. Set to nullptr. </td></tr>
+    <tr><td class="paramname">parametersSize</td><td>Deprecated. Set to 0. </td></tr>
+    <tr><td class="paramname">flags</td><td>Zero or more values from the OpenTableFlags enumeration. The values can be combined using the <code>|</code> operator. </td></tr>
+    <tr><td class="paramname">tableId</td><td>On success, points to the identifier of the table. On failure, the contents for tableId are undefined. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A value from the <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa71c1814cc10465a29c98721f5580304">Ese::Result</a> enumeration. </dd></dl>
+
 </div>
 </div>
 <a id="af2c088957aa32711f540ce0c406219dd" name="af2c088957aa32711f540ce0c406219dd"></a>
@@ -983,6 +1121,25 @@ template&lt;TableType T = Table, SimpleStringLike S&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Opens a cursor on a previously created table. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Ese::Table</a> or a type derived from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Ese::Table</a>. </td></tr>
+    <tr><td class="paramname">C</td><td>char or wchar_t. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tableName</td><td>The name of the table to open. </td></tr>
+    <tr><td class="paramname">flags</td><td>Zero or more values from the OpenTableFlags enumeration. The values can be combined using the <code>|</code> operator. </td></tr>
+    <tr><td class="paramname">noexception</td><td>If true this function will not throw an exception if table identified by tableName is not found in the database and return an invalid <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a> object representing the table in the database. </dd></dl>
+<p>Derived classes should implement OnTableOpened( ) which is called just after constructing the <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a>, or <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a> derived object. This is an opportunity for <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Table</a> derived objects to retrieve the column ids for the table. &lt;/ramarks&gt; </p>
 
 </div>
 </div>
@@ -1028,6 +1185,19 @@ template&lt;TableType T = Table, SimpleStringLike S&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Opens a cursor on a previously created table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tablename</td><td>The name of the table to open. </td></tr>
+    <tr><td class="paramname">parameters</td><td>Deprecated. Set to nullptr. </td></tr>
+    <tr><td class="paramname">parametersSize</td><td>Deprecated. Set to 0. </td></tr>
+    <tr><td class="paramname">flags</td><td>Zero or more values from the OpenTableFlags enumeration. The values can be combined using the <code>|</code> operator. </td></tr>
+    <tr><td class="paramname">tableId</td><td>On success, points to the identifier of the table. On failure, the contents for tableId are undefined. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A value from the <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa71c1814cc10465a29c98721f5580304">Ese::Result</a> enumeration. </dd></dl>
+
 </div>
 </div>
 <a id="aaa56ebd83d3b76b3794b928ddd10488e" name="aaa56ebd83d3b76b3794b928ddd10488e"></a>
@@ -1052,6 +1222,8 @@ template&lt;TableType T = Table, SimpleStringLike S&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>A <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html" title="Manages the handle to an Extensible Storage Engine database, providing an API that exposes the operat...">Database</a> object where the session handle is not equal to JET_sesidNil and the database handle is not equal to JET_dbidNil is considered to be a valid <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html" title="Manages the handle to an Extensible Storage Engine database, providing an API that exposes the operat...">Database</a> object. </p>
 
 </div>
 </div>
@@ -1078,6 +1250,8 @@ template&lt;TableType T = Table, SimpleStringLike S&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Copy assignment is not allowed. </p>
+
 </div>
 </div>
 <a id="aebe883887a58986e22cbd297bb92912f" name="aebe883887a58986e22cbd297bb92912f"></a>
@@ -1102,6 +1276,8 @@ template&lt;TableType T = Table, SimpleStringLike S&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Move assignment implemented by swapping handles wit the argument database object. </p>
 
 </div>
 </div>
@@ -1128,6 +1304,9 @@ template&lt;TableType T = Table, SimpleStringLike S&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the handle of the session that was used to open or create the database. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 </div>
 </div>
 <a id="a9caf131db4971f871f93be772c240fdf" name="a9caf131db4971f871f93be772c240fdf"></a>
@@ -1152,6 +1331,15 @@ template&lt;TableType T = Table, SimpleStringLike S&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_test.html">Test</a> if a table exists in the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objectName</td><td>The name of the table. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the table exists. </dd></dl>
 
 </div>
 </div>
@@ -1180,6 +1368,15 @@ template&lt;SimpleStringLike S&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_test.html">Test</a> if a table exists in the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objectName</td><td>The name of the table. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the table exists. </dd></dl>
+
 </div>
 </div>
 <a id="ae6a41367fc4d813b5ebcf749296c061f" name="ae6a41367fc4d813b5ebcf749296c061f"></a>
@@ -1204,6 +1401,15 @@ template&lt;SimpleStringLike S&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_test.html">Test</a> if a table exists in the database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objectName</td><td>The name of the table. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the table exists. </dd></dl>
 
 </div>
 </div>

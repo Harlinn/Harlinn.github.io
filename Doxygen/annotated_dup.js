@@ -261,7 +261,7 @@ var annotated_dup =
           [ "Ese", "namespace_harlinn_1_1_common_1_1_core_1_1_ese.html", [
             [ "ColumnCreate", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_create.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_create" ],
             [ "ColumnDefinition", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_definition.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_definition" ],
-            [ "Columns", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_columns.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_columns" ],
+            [ "ColumnList", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_list.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_column_list" ],
             [ "Database", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database" ],
             [ "DatabaseOptions", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database_options.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database_options" ],
             [ "Exception", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_exception.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_exception" ],
@@ -272,7 +272,9 @@ var annotated_dup =
             [ "InstanceOptions", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance_options.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance_options" ],
             [ "ObjectInfo", "struct_harlinn_1_1_common_1_1_core_1_1_ese_1_1_object_info.html", "struct_harlinn_1_1_common_1_1_core_1_1_ese_1_1_object_info" ],
             [ "Options", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_options.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_options" ],
+            [ "RetrieveColumn", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_retrieve_column.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_retrieve_column" ],
             [ "Session", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_session.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_session" ],
+            [ "SetColumn", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_set_column.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_set_column" ],
             [ "SystemTable", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_system_table.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_system_table" ],
             [ "Table", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table" ],
             [ "TableCreate", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table_create.html", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table_create" ],
