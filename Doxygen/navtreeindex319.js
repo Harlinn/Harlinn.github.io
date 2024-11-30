@@ -1,7 +1,5 @@
 var NAVTREEINDEX319 =
 {
-"namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.html#a34ecbd3dc9c5bc5b7e2aae39ecdb1a7fa25fc090030537f1eb260e4c35977054e":[2,0,1,3,4,6,41,5],
-"namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.html#a34ecbd3dc9c5bc5b7e2aae39ecdb1a7fa6adf97f83acf6453d4a6a4b1070f3754":[2,0,1,3,4,6,41,0],
 "namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.html#a34ecbd3dc9c5bc5b7e2aae39ecdb1a7fa87d6415317d37c569f35b716b43e1acf":[2,0,1,3,4,6,41,2],
 "namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.html#a34ecbd3dc9c5bc5b7e2aae39ecdb1a7fa9fa206db94ea123460e8d82375c70832":[2,0,1,3,4,6,41,3],
 "namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.html#a34ecbd3dc9c5bc5b7e2aae39ecdb1a7faa2dd5ff605c5df113ebde5aa6cfb4d38":[2,0,1,3,4,6,41,9],
@@ -249,5 +247,7 @@ var NAVTREEINDEX319 =
 "namespacemembers_func_b.html":[2,1,1,2],
 "namespacemembers_func_c.html":[2,1,1,3],
 "namespacemembers_func_d.html":[2,1,1,4],
-"namespacemembers_func_e.html":[2,1,1,5]
+"namespacemembers_func_e.html":[2,1,1,5],
+"namespacemembers_func_f.html":[2,1,1,6],
+"namespacemembers_func_g.html":[2,1,1,7]
 };

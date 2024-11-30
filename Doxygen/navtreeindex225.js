@@ -1,6 +1,5 @@
 var NAVTREEINDEX225 =
 {
-"class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_video_1_1_d3_d12_video_device3.html#a3f1c59e3fda378b2a6757f71b9c20264":[2,0,1,3,4,2,0,10,0],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_video_1_1_d3_d12_video_device3.html#a3f1c59e3fda378b2a6757f71b9c20264":[4,0,1,3,3,2,0,10,0],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_video_1_1_d3_d12_video_device3.html#a4065cdc69d767553d1ddce78c0acfa5c":[2,0,1,3,4,2,0,10,1],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_video_1_1_d3_d12_video_device3.html#a4065cdc69d767553d1ddce78c0acfa5c":[4,0,1,3,3,2,0,10,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX225 =
 "class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_adapter3.html#adf6d7aec78c67739ee4e257fc24d7400":[2,0,1,3,4,5,3,6],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_adapter3.html#adf6d7aec78c67739ee4e257fc24d7400":[4,0,1,3,3,5,3,6],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_adapter3.html#ae160b9b0c52b712dd220b3b285c8162d":[2,0,1,3,4,5,3,0],
-"class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_adapter3.html#ae160b9b0c52b712dd220b3b285c8162d":[4,0,1,3,3,5,3,0]
+"class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_adapter3.html#ae160b9b0c52b712dd220b3b285c8162d":[4,0,1,3,3,5,3,0],
+"class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_adapter3.html#af3d19202a000ec58fb75fbee687df3f6":[2,0,1,3,4,5,3,5]
 };

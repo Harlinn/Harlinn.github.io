@@ -1,6 +1,5 @@
 var NAVTREEINDEX105 =
 {
-"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_data_reader.html#a9cc9f1e6b2a1427da93b8a9c747e65ae":[2,0,1,0,0,18,3,1,40],
 "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_data_reader.html#a9cc9f1e6b2a1427da93b8a9c747e65ae":[4,0,1,0,0,14,2,1,40],
 "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_data_reader.html#aa2c324bf694298a6419e2e9a5e1da66c":[2,0,1,0,0,18,3,1,39],
 "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_data_reader.html#aa2c324bf694298a6419e2e9a5e1da66c":[4,0,1,0,0,14,2,1,39],
@@ -249,5 +248,6 @@ var NAVTREEINDEX105 =
 "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_address_info.html":[2,0,1,0,0,18,4,6],
 "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_address_info.html":[4,0,1,0,0,14,3,5],
 "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_address_info.html#a1262c8e57d27f010cef97703d5a1623c":[2,0,1,0,0,18,4,6,11],
-"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_address_info.html#a1262c8e57d27f010cef97703d5a1623c":[4,0,1,0,0,14,3,5,11]
+"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_address_info.html#a1262c8e57d27f010cef97703d5a1623c":[4,0,1,0,0,14,3,5,11],
+"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_address_info.html#a1670c3c1d20ba8d4e5d3672e0f1797f0":[2,0,1,0,0,18,4,6,8]
 };

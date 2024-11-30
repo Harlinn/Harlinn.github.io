@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Best practices for safer C++ development | Harlinn</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Best practices for safer C++ development" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is my personal Github site," />
+<meta property="og:description" content="This is my personal Github site," />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Cpp/Safety/CppSafety.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Cpp/Safety/CppSafety.html" />
+<meta property="og:site_name" content="Harlinn" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Best practices for safer C++ development" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal Github site,","headline":"Best practices for safer C++ development","url":"https://harlinn.github.io/Cpp/Cpp/Safety/CppSafety.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Harlinn</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Cpp/Cpp.html">C++</a><a class="page-link" href="/Databases/Databases.html">Databases</a><a class="page-link" href="/DotNet/DotNet.html">.Net</a><a class="page-link" href="/Java/Java.html">Java</a><a class="page-link" href="/Julia/Julia.html">Julia</a><a class="page-link" href="/Python/Python.html">Python</a><a class="page-link" href="/R/R.html">R</a><a class="page-link" href="/Rust/Rust.html">Rust</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Best practices for safer C++ development</h1>
+  </header>
+
+  <div class="post-content">
+    <p>Safe coding practices has never been more important, and historically the C and C++
+community has emphasized performance and backwards compatibility. This is now
+changing rapidly as safety concerns are being addressed vigorously by parties
+both inside, and outside, the standard C and C++ committees.</p>
+
+<p>Modern C++ tool chains are significantly more secure than before, providing
+features such as:</p>
+
+<ul>
+  <li>Static analyzers, implemented using path-sensitive, inter-procedural 
+analysis based on symbolic execution techniques, including:
+    <ul>
+      <li>Thread safety analysis as a C++ language extension which warns about 
+potential race conditions in code.</li>
+      <li>Warnings emitted at compile time to help developers update their code 
+to encapsulate and propagate the bounds information associated with pointers.</li>
+      <li>Runtime assertions that eliminate undefined behavior as long as the coding 
+convention is followed and the bounds information is therefore available and 
+correct.</li>
+      <li><a href="https://learn.microsoft.com/en-us/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects">SAL annotations</a>
+used to enhance static code analysis.</li>
+    </ul>
+  </li>
+  <li>Runtime sanitizers like:
+    <ul>
+      <li>AddressSanitizer which is a fast memory error detector consisting of a compiler 
+instrumentation module and a run-time library. It can detect bugs like:
+        <ul>
+          <li>Out-of-bounds accesses to heap, stack and global variables.</li>
+          <li>Use-after-free.</li>
+          <li>Use-after-return.</li>
+          <li>Use-after-scope.</li>
+          <li>Double-free, invalid free.</li>
+          <li>Memory leaks.</li>
+        </ul>
+      </li>
+      <li>ThreadSanitizer which detects data races.</li>
+      <li>MemorySanitizer which detects uninitialized memory use such as:
+        <ul>
+          <li>Uninitialized value used in a conditional branch.</li>
+          <li>Uninitialized pointer used for memory accesses.</li>
+          <li>Uninitialized value was passed or returned from a function call.</li>
+          <li>Uninitialized data was passed to a system call.</li>
+        </ul>
+      </li>
+      <li>UndefinedBehaviorSanitizer which detects:
+        <ul>
+          <li>Array subscript out of bounds, where the bounds can be statically determined.</li>
+          <li>Bitwise shifts that are out of bounds for their data type.</li>
+          <li>Dereferencing misaligned or null pointers.</li>
+          <li>Signed integer overflow.</li>
+          <li>Conversion to, from, or between floating-point types which would overflow the destination</li>
+          <li>and <a href="https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html">more</a>.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>None of the above helps if it is not used, and these features are being actively developed and
+enhanced, and the latest version of the C++ tool chains offers significant enhancements over the
+previous versions.</p>
+
+<p>These features are generally something developers must actively enable for the
+code base they are working on, and this often requires a significant effort, 
+as the static analyzers often favors modern C++ idioms and certain coding conventions, 
+which is good as they are far less error prone. This means that the code base 
+may need modification to get as much mileage out of the tools as possible. Still, 
+this should be much cheaper than rewriting the entire code base in another 
+programming language.</p>
+
+<p>These tools cannot be proven to catch all potential errors in C and C++ code, but when used rigorously
+in conjunction with unit tests and integrations tests, they are able to catch most of the bugs they are 
+designed to detect.</p>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Harlinn</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Harlinn</li><li><a class="u-email" href="mailto:espen@harlinn.no">espen@harlinn.no</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Harlinn"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Harlinn</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is my personal Github site, </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

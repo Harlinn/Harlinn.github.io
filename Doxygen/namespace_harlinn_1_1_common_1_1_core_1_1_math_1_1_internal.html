@@ -180,11 +180,11 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 <tr class="memitem:ac7dac8200480ce8c9cf164aa05300197"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac7dac8200480ce8c9cf164aa05300197">FRExpImpl</a> (T val, int &amp;exp) noexcept</td></tr>
 <tr class="memdesc:ac7dac8200480ce8c9cf164aa05300197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get significand and exponent of val.  <br /></td></tr>
 <tr class="separator:ac7dac8200480ce8c9cf164aa05300197"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88d615bd6efbc1ff75eeca67be3ea996" id="r_a88d615bd6efbc1ff75eeca67be3ea996"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;std::remove_cvref_t&lt;T&gt;&gt;</td></tr>
-<tr class="memitem:a88d615bd6efbc1ff75eeca67be3ea996"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a88d615bd6efbc1ff75eeca67be3ea996">ModFImpl</a> (T val, T &amp;intPart) noexcept</td></tr>
-<tr class="memdesc:a88d615bd6efbc1ff75eeca67be3ea996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Breaks val into an integral and a fractional part.  <br /></td></tr>
-<tr class="separator:a88d615bd6efbc1ff75eeca67be3ea996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7271acfa5fafe769c0b06035dba7df48" id="r_a7271acfa5fafe769c0b06035dba7df48"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;std::remove_cvref_t&lt;ValueT&gt;&gt;</td></tr>
+<tr class="memitem:a7271acfa5fafe769c0b06035dba7df48"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; ValueT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7271acfa5fafe769c0b06035dba7df48">ModFImpl</a> (ValueT val, ValueT &amp;intPart) noexcept</td></tr>
+<tr class="memdesc:a7271acfa5fafe769c0b06035dba7df48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Breaks val into an integral and a fractional part.  <br /></td></tr>
+<tr class="separator:a7271acfa5fafe769c0b06035dba7df48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac94ebd5e059d45dce350f5706a635468" id="r_ac94ebd5e059d45dce350f5706a635468"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;T&gt;</td></tr>
 <tr class="memitem:ac94ebd5e059d45dce350f5706a635468"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac94ebd5e059d45dce350f5706a635468">CopySignImpl</a> (T magnitudeVal, T signVal) noexcept</td></tr>
@@ -248,6 +248,10 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 <tr class="separator:a20daf61686caaa4d428e6ef55afbad68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2ac5ade7f24ca8164eb6f66642a9f83" id="r_ae2ac5ade7f24ca8164eb6f66642a9f83"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2ac5ade7f24ca8164eb6f66642a9f83">ATan2Impl</a> (float y, float x) noexcept</td></tr>
 <tr class="separator:ae2ac5ade7f24ca8164eb6f66642a9f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c1db57b4c09cf645bf12d40aa6239e6" id="r_a9c1db57b4c09cf645bf12d40aa6239e6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;T&gt;</td></tr>
+<tr class="memitem:a9c1db57b4c09cf645bf12d40aa6239e6"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9c1db57b4c09cf645bf12d40aa6239e6">LerpImpl</a> (T a, T b, T t) noexcept</td></tr>
+<tr class="separator:a9c1db57b4c09cf645bf12d40aa6239e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf1ee29767605d650b5f4c518cc65fdf" id="r_aaf1ee29767605d650b5f4c518cc65fdf"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf1ee29767605d650b5f4c518cc65fdf">ExpImpl</a> (double x) noexcept</td></tr>
 <tr class="separator:aaf1ee29767605d650b5f4c518cc65fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5568a750e2415b54d1a1b991de661967" id="r_a5568a750e2415b54d1a1b991de661967"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5568a750e2415b54d1a1b991de661967">ExpImpl</a> (float x) noexcept</td></tr>
@@ -1060,6 +1064,43 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 
 </div>
 </div>
+<a id="a9c1db57b4c09cf645bf12d40aa6239e6" name="a9c1db57b4c09cf645bf12d40aa6239e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c1db57b4c09cf645bf12d40aa6239e6">&#9670;&#160;</a></span>LerpImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T Harlinn::Common::Core::Math::Internal::LerpImpl </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a405291dff4644f62c7a438b90385cc23" name="a405291dff4644f62c7a438b90385cc23"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a405291dff4644f62c7a438b90385cc23">&#9670;&#160;</a></span>Log10Impl() <span class="overload">[1/2]</span></h2>
 
@@ -1260,27 +1301,27 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 
 </div>
 </div>
-<a id="a88d615bd6efbc1ff75eeca67be3ea996" name="a88d615bd6efbc1ff75eeca67be3ea996"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88d615bd6efbc1ff75eeca67be3ea996">&#9670;&#160;</a></span>ModFImpl()</h2>
+<a id="a7271acfa5fafe769c0b06035dba7df48" name="a7271acfa5fafe769c0b06035dba7df48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7271acfa5fafe769c0b06035dba7df48">&#9670;&#160;</a></span>ModFImpl()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;std::remove_cvref_t&lt;T&gt;&gt;</div>
+template&lt;typename ValueT &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;std::remove_cvref_t&lt;ValueT&gt;&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::remove_cvref_t&lt; T &gt; Harlinn::Common::Core::Math::Internal::ModFImpl </td>
+          <td class="memname">std::remove_cvref_t&lt; ValueT &gt; Harlinn::Common::Core::Math::Internal::ModFImpl </td>
           <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>val</em></span>, </td>
+          <td class="paramtype">ValueT</td>          <td class="paramname"><span class="paramname"><em>val</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>intPart</em></span>&#160;)</td>
+          <td class="paramtype">ValueT &amp;</td>          <td class="paramname"><span class="paramname"><em>intPart</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

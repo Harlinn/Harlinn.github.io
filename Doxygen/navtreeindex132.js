@@ -1,6 +1,5 @@
 var NAVTREEINDEX132 =
 {
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_list_ex_1_1_value_list.html#a2e836dbb5276c69757b0ded39802ff2c":[2,0,1,0,0,25,0,0,0,4,5],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_list_ex_1_1_value_list.html#a2e836dbb5276c69757b0ded39802ff2c":[4,0,1,0,0,20,0,0,0,4,5],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_list_ex_1_1_value_list.html#a32af59b408168766691c96bb7107eaa2":[2,0,1,0,0,25,0,0,0,4,11],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_list_ex_1_1_value_list.html#a32af59b408168766691c96bb7107eaa2":[4,0,1,0,0,20,0,0,0,4,11],
@@ -249,5 +248,6 @@ var NAVTREEINDEX132 =
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_delete_timeseries_range_factory.html#ace234e935bb2a5783dc10f5735f32986":[2,0,1,0,0,25,1,9,0],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_delete_timeseries_range_factory.html#ace234e935bb2a5783dc10f5735f32986":[4,0,1,0,0,20,1,9,0],
 "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_delete_timeseries_range_factory.html#aee173f13b7abeb20f1d9d120e6f33019":[2,0,1,0,0,25,1,9,1],
-"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_delete_timeseries_range_factory.html#aee173f13b7abeb20f1d9d120e6f33019":[4,0,1,0,0,20,1,9,1]
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_delete_timeseries_range_factory.html#aee173f13b7abeb20f1d9d120e6f33019":[4,0,1,0,0,20,1,9,1],
+"class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_delete_until_timeseries_range_data.html":[2,0,1,0,0,25,1,10]
 };

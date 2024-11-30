@@ -1,6 +1,5 @@
 var NAVTREEINDEX239 =
 {
-"class_harlinn_1_1_windows_1_1_graphics_1_1_geometry.html#a7db96aaa6f0e868076a78dcaf098e897":[2,0,1,3,4,56,6],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_geometry.html#a7db96aaa6f0e868076a78dcaf098e897":[4,0,1,3,3,56,6],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_geometry.html#a7e17842ff7670af4cb5091fc060d7cf5":[2,0,1,3,4,56,52],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_geometry.html#a7e17842ff7670af4cb5091fc060d7cf5":[4,0,1,3,3,56,52],
@@ -249,5 +248,6 @@ var NAVTREEINDEX239 =
 "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_command_sink_implementation_base.html#af454be6c35cd8a3353cf2c7574c7cec7":[2,0,1,3,4,63,34],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_command_sink_implementation_base.html#af454be6c35cd8a3353cf2c7574c7cec7":[4,0,1,3,3,63,34],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_command_sink_implementation_base.html#af7d56cf90f6ac15f81958bc2afd48a55":[2,0,1,3,4,63,0],
-"class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_command_sink_implementation_base.html#af7d56cf90f6ac15f81958bc2afd48a55":[4,0,1,3,3,63,0]
+"class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_command_sink_implementation_base.html#af7d56cf90f6ac15f81958bc2afd48a55":[4,0,1,3,3,63,0],
+"class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_command_sink_implementation_base.html#af91e36671edcaff688cb5cb89f813b2e":[2,0,1,3,4,63,38]
 };

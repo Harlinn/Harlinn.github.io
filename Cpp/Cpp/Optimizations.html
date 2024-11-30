@@ -43,364 +43,507 @@
   </header>
 
   <div class="post-content">
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SimpleOverheadDoubleTest: Duration=0.987088, Accumulated=503141590973.86835
-SimpleOverheadFloatTest: Duration=0.9672639, Accumulated=503141590978.63367
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SimpleOverheadDoubleTest: Duration=1.0013171, Accumulated=503141590973.86835
+SimpleOverheadFloatTest: Duration=0.975303, Accumulated=503141590978.63367
 OverheadDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=0.9676177, Accumulated 1=503141590973.86835
-        std:  Duration=0.9977178, Accumulated 2=503141590973.86835
+        Math: Duration=0.9811062, Accumulated 1=503141590973.86835
+        std:  Duration=1.0025947, Accumulated 2=503141590973.86835
+        Math improved performance by 2.19 %
+
         Accumulated 1 is identical to Accumulated 2
 
 OverheadFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=0.9956971, Accumulated 1=536870912
-        std:  Duration=0.9687126, Accumulated 2=536870912
+        Math: Duration=0.9794259, Accumulated 1=536870912
+        std:  Duration=0.973196, Accumulated 2=536870912
+        Math performs like the standard implementation.
+
         Accumulated 1 is identical to Accumulated 2
 
 IsNaNDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=1.015695, Accumulated 1=0
-        std:  Duration=1.1072467, Accumulated 2=0
+        Math: Duration=1.050609, Accumulated 1=0
+        std:  Duration=1.108523, Accumulated 2=0
+        Math improved performance by 5.51 %
+
         Accumulated 1 is identical to Accumulated 2
 
 IsNaNFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=1.0344078, Accumulated 1=0
-        std:  Duration=1.1063605, Accumulated 2=0
+        Math: Duration=1.0430472, Accumulated 1=0
+        std:  Duration=1.112076, Accumulated 2=0
+        Math improved performance by 6.62 %
+
         Accumulated 1 is identical to Accumulated 2
 
 IsInfDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=1.0128126, Accumulated 1=0
-        std:  Duration=1.0347902, Accumulated 2=0
+        Math: Duration=1.0200882, Accumulated 1=0
+        std:  Duration=1.0591402, Accumulated 2=0
+        Math improved performance by 3.83 %
+
         Accumulated 1 is identical to Accumulated 2
 
 IsInfFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=1.0114594, Accumulated 1=0
-        std:  Duration=1.0515042, Accumulated 2=0
+        Math: Duration=1.0190421, Accumulated 1=0
+        std:  Duration=1.0605647, Accumulated 2=0
+        Math improved performance by 4.07 %
+
         Accumulated 1 is identical to Accumulated 2
 
 AbsDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=1.143267, Accumulated 1=503141590973.86835
-        std:  Duration=0.967588, Accumulated 2=503141590973.86835
+        Math: Duration=0.9793178, Accumulated 1=503141590973.86835
+        std:  Duration=0.9831033, Accumulated 2=503141590973.86835
+        Math performs like the standard implementation.
+
         Accumulated 1 is identical to Accumulated 2
 
 AbsFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=1.1057541, Accumulated 1=536870912
-        std:  Duration=0.9674738, Accumulated 2=536870912
+        Math: Duration=0.9773036, Accumulated 1=536870912
+        std:  Duration=0.9798287, Accumulated 2=536870912
+        Math performs like the standard implementation.
+
         Accumulated 1 is identical to Accumulated 2
 
 SignBitDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=1.0162319, Accumulated 1=0
-        std:  Duration=1.7242215, Accumulated 2=0
+        Math: Duration=1.0032412, Accumulated 1=0
+        std:  Duration=1.8338567, Accumulated 2=0
+        Math improved performance by 82.79 %
+
         Accumulated 1 is identical to Accumulated 2
 
 SignBitFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=1.0678555, Accumulated 1=0
-        std:  Duration=2.3299077, Accumulated 2=0
+        Math: Duration=1.0216414, Accumulated 1=0
+        std:  Duration=2.0567952, Accumulated 2=0
+        Math improved performance by 101.32 %
+
         Accumulated 1 is identical to Accumulated 2
 
 FRExpDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=2,5567831, Accumulated 1=745120329.5878271, Accumulated 2=9005132735
-        std:  Duration=16,3336111, Accumulated 1=745120329.5878271, Accumulated 2=9005132735
+        Math: Duration=2.438257, Accumulated 1=745120329.5878271, Accumulated 2=9005132735
+        std:  Duration=16.7649366, Accumulated 1=745120329.5878271, Accumulated 2=9005132735
+        Math improved performance by 587.58 %
+
         Accumulated 1(a and b) is identical to Accumulated 2(a and b)
 
 FRExpFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=2.0483617, Accumulated 1=16777216, Accumulated 2=134217728
-        std:  Duration=16.3829807, Accumulated 1=16777216, Accumulated 2=134217728
+        Math: Duration=2.3523096, Accumulated 1=16777216, Accumulated 2=134217728
+        std:  Duration=16.993272, Accumulated 1=16777216, Accumulated 2=134217728
+        Math improved performance by 622.41 %
+
         Accumulated 1(a and b) is identical to Accumulated 2(a and b)
 
 ModFDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=2.7913118, Accumulated 1=499999993.8677668, Accumulated 2=502641590980
-        std:  Duration=3.7761643, Accumulated 1=499999993.8677668, Accumulated 2=502641590980
+        Math: Duration=2.061643, Accumulated 1=499999993.8677668, Accumulated 2=502641590980
+        std:  Duration=3.9476156, Accumulated 1=499999993.8677668, Accumulated 2=502641590980
+        Math improved performance by 91.48 %
+
         Accumulated 1(a and b) is identical to Accumulated 2(a and b)
 
 ModFFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=2.4796495, Accumulated 1=11010047, Accumulated 2=536870912
-        std:  Duration=3.7942568, Accumulated 1=11010047, Accumulated 2=536870912
+        Math: Duration=2.696913, Accumulated 1=11010047, Accumulated 2=536870912
+        std:  Duration=4.0293868, Accumulated 1=11010047, Accumulated 2=536870912
+        Math improved performance by 49.41 %
+
         Accumulated 1(a and b) is identical to Accumulated 2(a and b)
 
 MinDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=1.0252732, Accumulated 1=503141590973.86835
-        std:  Duration=0.9693317, Accumulated 2=503141590973.86835
+        Math: Duration=0.976677, Accumulated 1=503141590973.86835
+        std:  Duration=0.9730237, Accumulated 2=503141590973.86835
+        Math performs like the standard implementation.
+
         Accumulated 1 is identical to Accumulated 2
 
 MinFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=1.0912411, Accumulated 1=536870912
-        std:  Duration=0.9680243, Accumulated 2=536870912
+        Math: Duration=1.1032197, Accumulated 1=536870912
+        std:  Duration=0.977146, Accumulated 2=536870912
+        Math degraded performance by -11.43 %
+
         Accumulated 1 is identical to Accumulated 2
 
 MaxDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=0.964202, Accumulated 1=503141590973.86835
-        std:  Duration=0.9665794, Accumulated 2=503141590973.86835
+        Math: Duration=0.9719534, Accumulated 1=503141590973.86835
+        std:  Duration=0.9773233, Accumulated 2=503141590973.86835
+        Math performs like the standard implementation.
+
         Accumulated 1 is identical to Accumulated 2
 
 MaxFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=1.1082143, Accumulated 1=536870912
-        std:  Duration=0.9668614, Accumulated 2=536870912
+        Math: Duration=1.0947463, Accumulated 1=536870912
+        std:  Duration=0.9762176, Accumulated 2=536870912
+        Math degraded performance by -10.83 %
+
         Accumulated 1 is identical to Accumulated 2
 
 FloorDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=0.9664648, Accumulated 1=502641590980
-        std:  Duration=1.1623708, Accumulated 2=502641590980
+        Math: Duration=0.9865005, Accumulated 1=502641590980
+        std:  Duration=1.1658718, Accumulated 2=502641590980
+        Math improved performance by 18.18 %
+
         Accumulated 1 is identical to Accumulated 2
 
 FloorFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=0.9679145, Accumulated 1=536870912
-        std:  Duration=1.2008161, Accumulated 2=536870912
+        Math: Duration=0.9733373, Accumulated 1=536870912
+        std:  Duration=1.1728648, Accumulated 2=536870912
+        Math improved performance by 20.50 %
+
         Accumulated 1 is identical to Accumulated 2
 
 CeilDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=1.0719565, Accumulated 1=503641590980
-        std:  Duration=1.2395892, Accumulated 2=503641590980
+        Math: Duration=0.9809971, Accumulated 1=503641590980
+        std:  Duration=1.1790741, Accumulated 2=503641590980
+        Math improved performance by 20.19 %
+
         Accumulated 1 is identical to Accumulated 2
 
 CeilFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=1.0426307, Accumulated 1=536870912
-        std:  Duration=1.1944826, Accumulated 2=536870912
+        Math: Duration=0.9721634, Accumulated 1=536870912
+        std:  Duration=1.1663886, Accumulated 2=536870912
+        Math improved performance by 19.98 %
+
         Accumulated 1 is identical to Accumulated 2
 
 TruncDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=0.9644431, Accumulated 1=502641590980
-        std:  Duration=7.5826062, Accumulated 2=502641590980
+        Math: Duration=0.9791243, Accumulated 1=502641590980
+        std:  Duration=8.0718254, Accumulated 2=502641590980
+        Math improved performance by 724.39 %
+
         Accumulated 1 is identical to Accumulated 2
 
 TruncFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=1.0942274, Accumulated 1=536870912
-        std:  Duration=1.1566711, Accumulated 2=536870912
+        Math: Duration=1.099751, Accumulated 1=536870912
+        std:  Duration=1.1716575, Accumulated 2=536870912
+        Math improved performance by 6.54 %
+
         Accumulated 1 is identical to Accumulated 2
 
 RoundDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=0.9726264, Accumulated 1=503141590980
-        std:  Duration=11.0687857, Accumulated 2=503141590980
+        Math: Duration=0.9773862, Accumulated 1=503141590980
+        std:  Duration=11.5097614, Accumulated 2=503141590980
+        Math improved performance by 1077.61 %
+
         Accumulated 1 is identical to Accumulated 2
 
 RoundFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=0.9649303, Accumulated 1=536870912
-        std:  Duration=1.3575818, Accumulated 2=536870912
+        Math: Duration=0.9715994, Accumulated 1=536870912
+        std:  Duration=1.3434204, Accumulated 2=536870912
+        Math improved performance by 38.27 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ClampDoubleTest: Outer 1, Inner 1000000000
 
-        Math: Duration=1.0712329, Accumulated=503141590973.86835
-        std:  Duration=1.1492196, Accumulated=503141590973.86835
+        Math: Duration=1.0884412, Accumulated=503141590973.86835
+        std:  Duration=1.12732, Accumulated=503141590973.86835
+        Math improved performance by 3.57 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ClampFloatTest: Outer 1, Inner 1000000000
 
-        Math: Duration=1.0958428, Accumulated=536870912
-        std:  Duration=1.1935574, Accumulated=536870912
+        Math: Duration=1.1010305, Accumulated=536870912
+        std:  Duration=1.2017229, Accumulated=536870912
+        Math improved performance by 9.15 %
+
         Accumulated 1 is identical to Accumulated 2
 
 LerpDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=1.1497263, Accumulated=505497785458.538
-        std:  Duration=2.2942098, Accumulated=505497785458.538
+        Math: Duration=1.7489451, Accumulated=505497785458.538
+        std:  Duration=2.332128, Accumulated=505497785458.538
+        Math improved performance by 33.34 %
+
         Accumulated 1 is identical to Accumulated 2
 
 LerpFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=1.1504429, Accumulated=536870912
-        std:  Duration=2.3894495, Accumulated=536870912
+        Math: Duration=1.7301684, Accumulated=536870912
+        std:  Duration=2.3942508, Accumulated=536870912
+        Math improved performance by 38.38 %
+
         Accumulated 1 is identical to Accumulated 2
 
 CopySignDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=0.9720046, Accumulated 1=-503141590973.86835
-        std:  Duration=5.7032613, Accumulated 2=-503141590973.86835
+        Math: Duration=0.9748248, Accumulated 1=-503141590973.86835
+        std:  Duration=5.7853489, Accumulated 2=-503141590973.86835
+        Math improved performance by 493.48 %
+
         Accumulated 1 is identical to Accumulated 2
 
 CopySignFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=0.971987, Accumulated 1=-536870912
-        std:  Duration=0.9919173, Accumulated 2=-536870912
+        Math: Duration=0.9787105, Accumulated 1=-536870912
+        std:  Duration=0.9964851, Accumulated 2=-536870912
+        Math improved performance by 1.82 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ScaleByNDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=2.7674135, Accumulated=1.6658946543001458e+38
-        std:  Duration=10.6056192, Accumulated=1.6658946543001458e+38
+        Math: Duration=2.0613328, Accumulated=1.6658946543001458e+38
+        std:  Duration=10.7544209, Accumulated=1.6658946543001458e+38
+        Math improved performance by 421.72 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ScaleByNFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=2.1583338, Accumulated=1.3899781e+38
-        std:  Duration=10.8106578, Accumulated=1.3899781e+38
+        Math: Duration=1.8974354, Accumulated=1.3899781e+38
+        std:  Duration=10.7664029, Accumulated=1.3899781e+38
+        Math improved performance by 467.42 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ConstexprSinDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=2.5300602, Accumulated 1=372923275.6697768
-        std:  Duration=2.7648153, Accumulated 2=372923275.6697768
+        Math: Duration=2.5461241, Accumulated 1=372923275.6697768
+        std:  Duration=3.1027178, Accumulated 2=372923275.6697768
+        Math improved performance by 21.86 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ConstexprCosDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=3.1773721, Accumulated 1=900316436.3800457
-        std:  Duration=3.1075967, Accumulated 2=900316436.3800457
+        Math: Duration=3.2207374, Accumulated 1=900316436.3800457
+        std:  Duration=3.3930267, Accumulated 2=900316436.3800457
+        Math improved performance by 5.35 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ConstexprTanDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=6.0710862, Accumulated 1=441271047.5188152
-        std:  Duration=3.8386957, Accumulated 2=441271047.5188152
+        Math: Duration=6.3787966, Accumulated 1=441271047.5188152
+        std:  Duration=4.1385588, Accumulated 2=441271047.5188152
+        Math degraded performance by -35.12 %
+
         Accumulated 1 is identical to Accumulated 2
 
 SinDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=8.2072443, Accumulated 1=463375.4415525004
-        std:  Duration=8.0582312, Accumulated 2=463375.4415525004
+        Math: Duration=7.3610605, Accumulated 1=463375.4415525004
+        std:  Duration=7.3914425, Accumulated 2=463375.4415525004
+        Math performs like the standard implementation.
+
         Accumulated 1 is identical to Accumulated 2
 
 SinFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=5.7744946, Accumulated 1=16777216
-        std:  Duration=6.3330352, Accumulated 2=16777216
+        Math: Duration=5.9427426, Accumulated 1=16777216
+        std:  Duration=6.7974965, Accumulated 2=16777216
+        Math improved performance by 14.38 %
+
         Accumulated 1 is identical to Accumulated 2
 
 CosDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=6.780491, Accumulated 1=812724.4462835883
-        std:  Duration=7.2000543, Accumulated 2=812724.4462835883
+        Math: Duration=7.064021, Accumulated 1=812724.4462835883
+        std:  Duration=7.0021305, Accumulated 2=812724.4462835883
+        Math performs like the standard implementation.
+
         Accumulated 1 is identical to Accumulated 2
 
 CosFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=5.7715209, Accumulated 1=16777216
-        std:  Duration=6.5950351, Accumulated 2=16777216
+        Math: Duration=5.9286904, Accumulated 1=16777216
+        std:  Duration=6.8138801, Accumulated 2=16777216
+        Math improved performance by 14.93 %
+
         Accumulated 1 is identical to Accumulated 2
 
 TanDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=10.438574, Accumulated 1=6435908926.834679
-        std:  Duration=10.3996172, Accumulated 2=6435908926.834679
+        Math: Duration=10.8419765, Accumulated 1=6435908926.834679
+        std:  Duration=10.5872713, Accumulated 2=6435908926.834679
+        Math degraded performance by -2.35 %
+
         Accumulated 1 is identical to Accumulated 2
 
 TanFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=6.6613826, Accumulated 1=-39712564
-        std:  Duration=6.0826167, Accumulated 2=-39712564
+        Math: Duration=6.5358374, Accumulated 1=-39712564
+        std:  Duration=6.3928066, Accumulated 2=-39712564
+        Math degraded performance by -2.19 %
+
         Accumulated 1 is identical to Accumulated 2
 
 SqrtDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=1.4554246, Accumulated 1=21177562677.907993
-        std:  Duration=1.4518176, Accumulated 2=21177562677.907993
+        Math: Duration=1.4593129, Accumulated 1=21177562677.907993
+        std:  Duration=1.4653603, Accumulated 2=21177562677.907993
+        Math performs like the standard implementation.
+
         Accumulated 1 is identical to Accumulated 2
 
 SqrtFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=1.0724776, Accumulated 1=134217728
-        std:  Duration=1.0451513, Accumulated 2=134217728
+        Math: Duration=1.0838228, Accumulated 1=134217728
+        std:  Duration=1.041614, Accumulated 2=134217728
+        Math degraded performance by -3.89 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ASinDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=6.7667913, Accumulated 1=570796325.6249679
-        std:  Duration=10.6564406, Accumulated 2=570796325.6249679
+        Math: Duration=6.5809317, Accumulated 1=570796325.6249679
+        std:  Duration=10.5147159, Accumulated 2=570796325.6249679
+        Math improved performance by 59.78 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ASinFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=2.0809093, Accumulated 1=1048576
-        std:  Duration=4.8568203, Accumulated 2=1048576
+        Math: Duration=2.3598932, Accumulated 1=1048576
+        std:  Duration=4.9526761, Accumulated 2=1048576
+        Math improved performance by 109.87 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ACosDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=5.7426922, Accumulated 1=1000000001.1699724
-        std:  Duration=10.7648016, Accumulated 2=1000000001.1699724
+        Math: Duration=5.6988305, Accumulated 1=1000000001.1699724
+        std:  Duration=10.8786021, Accumulated 2=1000000001.1699724
+        Math improved performance by 90.89 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ACosFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=2.703589, Accumulated 1=33554432
-        std:  Duration=5.381421, Accumulated 2=33554432
+        Math: Duration=2.764049, Accumulated 1=33554432
+        std:  Duration=5.7405983, Accumulated 2=33554432
+        Math improved performance by 107.69 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ATanDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=6.4336572, Accumulated 1=438824574.1665145
-        std:  Duration=6.5958157, Accumulated 2=438824574.1665145
+        Math: Duration=6.2558947, Accumulated 1=438824574.1665145
+        std:  Duration=6.666491, Accumulated 2=438824574.1665145
+        Math improved performance by 6.56 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ATanFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=3.0101425, Accumulated 1=524288
-        std:  Duration=4.5498052, Accumulated 2=524288
+        Math: Duration=2.4695629, Accumulated 1=524288
+        std:  Duration=4.397874, Accumulated 2=524288
+        Math improved performance by 78.08 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ATan2DoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=13.162579, Accumulated 1=785398158.123596
-        std:  Duration=16.3348687, Accumulated 2=785398158.123596
+        Math: Duration=11.285882, Accumulated 1=785398158.123596
+        std:  Duration=16.2553699, Accumulated 2=785398158.123596
+        Math improved performance by 44.03 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ATan2FloatTest: Outer 1, Inner 1000000000
-        Math: Duration=9.2369465, Accumulated 1=16777216
-        std:  Duration=10.5875491, Accumulated 2=16777216
+        Math: Duration=7.8514947, Accumulated 1=16777216
+        std:  Duration=10.6917169, Accumulated 2=16777216
+        Math improved performance by 36.17 %
+
         Accumulated 1 is identical to Accumulated 2
 
 NextAfterDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=5.0347546, Accumulated=2.4703282295377952e-306
-        std:  Duration=40.8803007, Accumulated=2.4703282295377952e-306
+        Math: Duration=4.760117, Accumulated=2.4703282295377952e-306
+        std:  Duration=39.9883415, Accumulated=2.4703282295377952e-306
+        Math improved performance by 740.07 %
+
         Accumulated 1 is identical to Accumulated 2
 
 NextAfterFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=2.5892161, Accumulated=56010
-        std:  Duration=9.590539, Accumulated=56010
+        Math: Duration=2.8342875, Accumulated=56010
+        std:  Duration=9.4209426, Accumulated=56010
+        Math improved performance by 232.39 %
+
         Accumulated 1 is identical to Accumulated 2
 
 NextUpDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=1.4029709, Accumulated=2.4703282295377952e-306
-        std: Duration=40.8568622, Accumulated=2.4703282295377952e-306
+        Math: Duration=1.3713605, Accumulated=2.4703282295377952e-306
+        std: Duration=39.5469921, Accumulated=2.4703282295377952e-306
+        Math improved performance by 2783.78 %
+
         Accumulated 1 is identical to Accumulated 2
 
 NextUpFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=1.368829, Accumulated=56010
-        std: Duration=9.3605163, Accumulated=56010
+        Math: Duration=1.3600695, Accumulated=56010
+        std: Duration=9.3429316, Accumulated=56010
+        Math improved performance by 586.95 %
+
         Accumulated 1 is identical to Accumulated 2
 
 NextDownDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=2.065474, Accumulated=-2.4703282295377952e-306
-        std: Duration=39.9998149, Accumulated=-2.4703282295377952e-306
+        Math: Duration=2.0269105, Accumulated=-2.4703282295377952e-306
+        std: Duration=39.3025557, Accumulated=-2.4703282295377952e-306
+        Math improved performance by 1839.04 %
+
         Accumulated 1 is identical to Accumulated 2
 
 NextDownFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=2.1206636, Accumulated=-56010
-        std: Duration=9.2509957, Accumulated=-56010
+        Math: Duration=2.0166139, Accumulated=-56010
+        std: Duration=9.4903104, Accumulated=-56010
+        Math improved performance by 370.61 %
+
         Accumulated 1 is identical to Accumulated 2
 
 FModDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=7.2008117, Accumulated=2353341560.634282
-        std: Duration=8.7528214, Accumulated=2353341560.634282
+        Math: Duration=7.5030678, Accumulated=2353341560.634282
+        std: Duration=8.5072921, Accumulated=2353341560.634282
+        Math improved performance by 13.38 %
+
         Accumulated 1 is identical to Accumulated 2
 
 FModFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=2.5833798, Accumulated=63669728
-        std: Duration=4.141895, Accumulated=63669728
+        Math: Duration=2.3551091, Accumulated=63669728
+        std: Duration=4.4649941, Accumulated=63669728
+        Math improved performance by 89.59 %
+
         Accumulated 1 is identical to Accumulated 2
 
 ExpDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=5.1773759, Accumulated 1=4226291487.0085087
-        std:  Duration=5.0425954, Accumulated 2=4226291487.0085087
+        Math: Duration=5.1957002, Accumulated 1=4226291487.0085087
+        std:  Duration=5.2350389, Accumulated 2=4226291487.0085087
+        Math performs like the standard implementation.
+
         Accumulated 1 is identical to Accumulated 2
 
 ExpFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=5.0173965, Accumulated 1=67108864
-        std:  Duration=5.584212, Accumulated 2=67108864
+        Math: Duration=4.8456335, Accumulated 1=67108864
+        std:  Duration=4.9325471, Accumulated 2=67108864
+        Math improved performance by 1.79 %
+
         Accumulated 1 is identical to Accumulated 2
 
 HypotDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=5.6214222, Accumulated 1=2119906187.6395133
-        std:  Duration=5.9397353, Accumulated 2=2119906187.6395133
+        Math: Duration=5.6620369, Accumulated 1=2119906187.6395133
+        std:  Duration=5.5685157, Accumulated 2=2119906187.6395133
+        Math degraded performance by -1.65 %
+
         Accumulated 1 is identical to Accumulated 2
 
 HypotFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=4.918306, Accumulated 1=33554432
-        std:  Duration=5.0134624, Accumulated 2=33554432
+        Math: Duration=5.0001943, Accumulated 1=33554432
+        std:  Duration=5.1953943, Accumulated 2=33554432
+        Math improved performance by 3.90 %
+
         Accumulated 1 is identical to Accumulated 2
 
 LogDoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=5.7672006, Accumulated 1=314346866.84337443
-        std:  Duration=5.398406, Accumulated 2=314346866.84337443
+        Math: Duration=5.4449105, Accumulated 1=314346866.84337443
+        std:  Duration=5.4213336, Accumulated 2=314346866.84337443
+        Math performs like the standard implementation.
+
         Accumulated 1 is identical to Accumulated 2
 
 LogFloatTest: Outer 1, Inner 1000000000
-        Math: Duration=4.2952993, Accumulated 1=-2097152
-        std:  Duration=5.0859962, Accumulated 2=-2097152
+        Math: Duration=4.4141061, Accumulated 1=-2097152
+        std:  Duration=4.5692149, Accumulated 2=-2097152
+        Math improved performance by 3.51 %
+
         Accumulated 1 is identical to Accumulated 2
 
 Log2DoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=9.9810971, Accumulated 1=453506665.9140615
-        std:  Duration=10.1973087, Accumulated 2=453506665.9140615
+        Math: Duration=9.548306, Accumulated 1=453506665.9140615
+        std:  Duration=9.2865207, Accumulated 2=453506665.9140615
+        Math degraded performance by -2.74 %
+
         Accumulated 1 is identical to Accumulated 2
 
 Log2FloatTest: Outer 1, Inner 1000000000
-        Math: Duration=6.4803724, Accumulated 1=-4194304
-        std:  Duration=23.3399195, Accumulated 2=-4194304
+        Math: Duration=6.4839316, Accumulated 1=-4194304
+        std:  Duration=22.7935863, Accumulated 2=-4194304
+        Math improved performance by 251.54 %
+
         Accumulated 1 is identical to Accumulated 2
 
 Log10DoubleTest: Outer 1, Inner 1000000000
-        Math: Duration=10.9672969, Accumulated 1=136519109.67367068
-        std:  Duration=6.714689, Accumulated 2=136519109.67367068
+        Math: Duration=10.024545, Accumulated 1=136519109.67367068
+        std:  Duration=5.8420501, Accumulated 2=136519109.67367068
+        Math degraded performance by -41.72 %
+
         Accumulated 1 is identical to Accumulated 2
 
 Log10FloatTest: Outer 1, Inner 1000000000
-        Math: Duration=6.9971996, Accumulated 1=-1048576
-        std:  Duration=5.1098377, Accumulated 2=-1048576
+        Math: Duration=6.7933624, Accumulated 1=-1048576
+        std:  Duration=4.9472028, Accumulated 2=-1048576
+        Math degraded performance by -27.18 %
+
         Accumulated 1 is identical to Accumulated 2
+
 
 RunAddDouble1ATest: Duration=0.9782645, Accumulated=[500999998325.57697]
 RunAddDouble1BTest: Duration=1.119956, Accumulated=[1010999996629.8711]

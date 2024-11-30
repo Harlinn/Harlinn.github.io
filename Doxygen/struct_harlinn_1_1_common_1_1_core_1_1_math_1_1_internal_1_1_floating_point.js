@@ -1,5 +1,6 @@
 var struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_floating_point =
 [
+    [ "IntType", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_floating_point.html#afda6e27dae58f48ccaaee1f5b88d3808", null ],
     [ "UIntType", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_floating_point.html#a63f0187ecd4f759971fc22a9737993ad", null ],
     [ "ValueType", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_floating_point.html#a46949cea5d591e780960d55027e61325", null ],
     [ "FloatingPoint", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_floating_point.html#a6cae58d4125062fd7c1908a8fd5f3fb0", null ],

@@ -1,6 +1,5 @@
 var NAVTREEINDEX231 =
 {
-"class_harlinn_1_1_windows_1_1_graphics_1_1_device_context4.html#a8d9941c053d37de8b04468ebdb80e6a5":[2,0,1,3,4,35,92],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_device_context4.html#a8d9941c053d37de8b04468ebdb80e6a5":[4,0,1,3,3,35,92],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_device_context4.html#a91e16edc214a5b06476c3d1e331621d9":[2,0,1,3,4,35,78],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_device_context4.html#a91e16edc214a5b06476c3d1e331621d9":[4,0,1,3,3,35,78],
@@ -249,5 +248,6 @@ var NAVTREEINDEX231 =
 "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_delegated_ink_trail.html#a71d375719de1cee0b98235b4a1e397d3":[2,0,1,3,4,3,8,3],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_delegated_ink_trail.html#a71d375719de1cee0b98235b4a1e397d3":[4,0,1,3,3,3,8,3],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_delegated_ink_trail.html#ab06f80a8994921062a012d095437f9c0":[2,0,1,3,4,3,8,1],
-"class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_delegated_ink_trail.html#ab06f80a8994921062a012d095437f9c0":[4,0,1,3,3,3,8,1]
+"class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_delegated_ink_trail.html#ab06f80a8994921062a012d095437f9c0":[4,0,1,3,3,3,8,1],
+"class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_delegated_ink_trail.html#ac453d9e01e038043c8ddb82ec9cf6d20":[2,0,1,3,4,3,8,2]
 };

@@ -1,7 +1,5 @@
 var NAVTREEINDEX323 =
 {
-"struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_cooked_url.html#a03bf2594d2f3183c2d3ed8b994c3930f":[4,0,1,0,0,12,15,1],
-"struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_cooked_url.html#a14e7c1964dc2e183ffe922892c1a3823":[2,0,1,0,0,16,15,3],
 "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_cooked_url.html#a14e7c1964dc2e183ffe922892c1a3823":[4,0,1,0,0,12,15,3],
 "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_cooked_url.html#a1881fc118d0873fda85d8911a48539e6":[2,0,1,0,0,16,15,0],
 "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_cooked_url.html#a1881fc118d0873fda85d8911a48539e6":[4,0,1,0,0,12,15,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX323 =
 "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_auth_info.html#ad7bc2bba475f65f722e950ead457076d":[4,0,1,0,0,12,32,1],
 "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_auth_info.html#ae9a2eed9c9e53eec2305797a0cba486d":[2,0,1,0,0,16,32,4],
 "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_auth_info.html#ae9a2eed9c9e53eec2305797a0cba486d":[4,0,1,0,0,12,32,4],
-"struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_channel_bind_status.html":[2,0,1,0,0,16,33]
+"struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_channel_bind_status.html":[2,0,1,0,0,16,33],
+"struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_channel_bind_status.html":[4,0,1,0,0,12,33],
+"struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_channel_bind_status.html#a294a9d0d69148cf6421bb7de798437f1":[2,0,1,0,0,16,33,1]
 };

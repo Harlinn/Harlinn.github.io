@@ -1,6 +1,5 @@
 var NAVTREEINDEX212 =
 {
-"class_harlinn_1_1_windows_1_1_direct_show_1_1_distributor_notify.html#afe874aff8110da80f524e36578f82f6b":[2,0,1,3,0,30,0],
 "class_harlinn_1_1_windows_1_1_direct_show_1_1_distributor_notify.html#afe874aff8110da80f524e36578f82f6b":[4,0,1,3,0,30,0],
 "class_harlinn_1_1_windows_1_1_direct_show_1_1_enum_filters.html":[2,0,1,3,0,31],
 "class_harlinn_1_1_windows_1_1_direct_show_1_1_enum_filters.html":[4,0,1,3,0,31],
@@ -249,5 +248,6 @@ var NAVTREEINDEX212 =
 "class_harlinn_1_1_windows_1_1_direct_show_1_1_mem_allocator.html#a6670d4212124c3f8ab0a984664409b22":[2,0,1,3,0,52,4],
 "class_harlinn_1_1_windows_1_1_direct_show_1_1_mem_allocator.html#a6670d4212124c3f8ab0a984664409b22":[4,0,1,3,0,52,4],
 "class_harlinn_1_1_windows_1_1_direct_show_1_1_mem_allocator.html#a72193a478d76da1f7922b9acca04436e":[2,0,1,3,0,52,3],
-"class_harlinn_1_1_windows_1_1_direct_show_1_1_mem_allocator.html#a72193a478d76da1f7922b9acca04436e":[4,0,1,3,0,52,3]
+"class_harlinn_1_1_windows_1_1_direct_show_1_1_mem_allocator.html#a72193a478d76da1f7922b9acca04436e":[4,0,1,3,0,52,3],
+"class_harlinn_1_1_windows_1_1_direct_show_1_1_mem_allocator.html#a8c1d93c6dc7903235bc2aa4e2a71b279":[2,0,1,3,0,52,5]
 };

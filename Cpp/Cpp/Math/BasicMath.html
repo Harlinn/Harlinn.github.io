@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Optimized basic math functions | Harlinn</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Optimized basic math functions" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is my personal Github site," />
+<meta property="og:description" content="This is my personal Github site," />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath.html" />
+<meta property="og:site_name" content="Harlinn" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Optimized basic math functions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal Github site,","headline":"Optimized basic math functions","url":"https://harlinn.github.io/Cpp/Cpp/Math/BasicMath.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Harlinn</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Cpp/Cpp.html">C++</a><a class="page-link" href="/Databases/Databases.html">Databases</a><a class="page-link" href="/DotNet/DotNet.html">.Net</a><a class="page-link" href="/Java/Java.html">Java</a><a class="page-link" href="/Julia/Julia.html">Julia</a><a class="page-link" href="/Python/Python.html">Python</a><a class="page-link" href="/R/R.html">R</a><a class="page-link" href="/Rust/Rust.html">Rust</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Optimized basic math functions</h1>
+  </header>
+
+  <div class="post-content">
+    <p>C++ is often used to create software that performs mathematical operations efficiently.</p>
+
+<p>Complex computations are put together using the functionality provided by the standard C and C++ libraries
+as the basic building blocks. The header, <a href="/Doxygen/_h_c_c_math_8h.html"><code class="language-plaintext highlighter-rouge">HCCMath.h</code></a> provides alternatives
+to many of the basic mathematical function that is specified in the C and C++ standards. All of the
+functions can be <code class="language-plaintext highlighter-rouge">constexpr</code> evaluated, and several offer surprising performance benefits as well.</p>
+
+<p>The functions are implemented in the <a href="/Doxygen/namespace_harlinn_1_1_common_1_1_core_1_1_math.html"><code class="language-plaintext highlighter-rouge">Harlinn::Common::Core::Math</code> namespace</a>.</p>
+
+<p>The performance the functions are thoroughly checked by a <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Examples/Core/Math/HCCMathPerfTest01">test program</a> 
+included in the <a href="/Cpp/Harlinn.Windows/Harlinn.Windows.html">Harlinn.Windows solution</a>.</p>
+
+<p>Each function, together with its C/C++ counterpart, is executed 1 000 000 000 times, to check if there are 
+any performance benefits to using the <code class="language-plaintext highlighter-rouge">constexpr</code> implementations at runtime, and that they return the same 
+results for the same arguments.</p>
+
+<h2 id="basic-operations">Basic operations</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Abs</code> which returns the absolute value <code class="language-plaintext highlighter-rouge">|x|</code> for <code class="language-plaintext highlighter-rouge">x</code>, is implemented for floating point types, signed integers and unsigned integers.</li>
+  <li><code class="language-plaintext highlighter-rouge">fmod</code> which calculate the remainder of a floating point division operation, is implemented for floating point types.</li>
+  <li><code class="language-plaintext highlighter-rouge">Max</code> which returns the greater of to values, is implemented for floating point types.</li>
+  <li><code class="language-plaintext highlighter-rouge">Min</code> which returns the lesser of to values, is implemented for floating point types.</li>
+  <li><code class="language-plaintext highlighter-rouge">IsSameValue</code> checks for binary equality between two floating point values.</li>
+</ul>
+
+<h2 id="exponential-functions">Exponential functions</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Exp</code> returns <strong>e</strong> raised to the given power (<strong>e</strong><sup><code class="language-plaintext highlighter-rouge">x</code></sup>).</li>
+  <li><code class="language-plaintext highlighter-rouge">Log</code> computes natural, base <strong>e</strong>, logarithm (ln x)</li>
+  <li><code class="language-plaintext highlighter-rouge">Log2</code> base 2 logarithm of the given number (log<sub>2</sub><code class="language-plaintext highlighter-rouge">x</code>). When applied 
+to single precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">251.54</code> % faster 
+than the standard implementation.</li>
+  <li><code class="language-plaintext highlighter-rouge">Log10</code> computes common (base 10) logarithm (log<sub>10</sub><code class="language-plaintext highlighter-rouge">x</code> )</li>
+</ul>
+
+<h2 id="power-functions">Power functions</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Sqrt</code> computes square root (√<code class="language-plaintext highlighter-rouge">x</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">Hypot</code> computes square root of the sum of the squares of two numbers</li>
+</ul>
+
+<h2 id="trigonometric-functions">Trigonometric functions</h2>
+
+<p>Graphic intensive application are highly sensitive to the performance of 
+the trigonometric functions, especially for single precision floating point values.</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Sin</code> computes the sine of its argument given in radians.</p>
+
+    <p>When applied to single precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">14.38</code> % faster 
+than the standard implementation.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Cos</code> computes the cosine of its argument given in radians.</p>
+
+    <p>When applied  to single precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">14.93</code> % faster 
+than the standard implementation.</p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Tan</code> computes the tangent of its argument given in radians.</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ASin</code> computes arc sine of its argument.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">59.78</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">109.87</code> % faster for single precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ACos</code> computes the arc cosine of its argument.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">90.89</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">107.69</code> % faster for single precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ATan</code> computes the arc tangent of its argument.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">6.56</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">78.08</code> % faster for single precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ATan2</code> computes the arc tangent of <code class="language-plaintext highlighter-rouge">x</code> / <code class="language-plaintext highlighter-rouge">y</code>, its two arguments, using signs 
+to determine quadrants.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">44.03</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">36.17</code> % faster for single 
+precision floating point values.</p>
+  </li>
+</ul>
+
+<h2 id="nearest-integral-value-floating-point-operations">Nearest integral value floating point operations</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Ceil</code> computes the nearest integral value not less than the given value.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">20.19</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">19.98</code> % faster for single 
+precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Floor</code> computes the nearest integral value not greater than the given value.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">18.18</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">20.50</code> % faster for single 
+precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Trunc</code> computes the nearest integral value not greater in magnitude than the given value.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">724.39</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">6.54</code> % faster for single 
+precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Round</code> computes the nearest integral value, rounding away from zero in halfway cases.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">1077.61</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">38.27</code> % faster for single 
+precision floating point values.</p>
+  </li>
+</ul>
+
+<h2 id="floating-point-manipulation-functions">Floating point manipulation functions</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">FRExp</code> decomposes a number into significand and base-2 exponent.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">587.58</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">622.41</code> % faster for single 
+precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ModF</code> decomposes a number into integer and fractional parts.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">91.48</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">49.41</code> % faster for single 
+precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ScaleByN</code> multiplies a number by FLT_RADIX raised to a power.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">421.72</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">467.42</code> % faster for single 
+precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">NextAfter</code> next representable floating-point value towards the given value.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">740.07</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">232.39</code> % faster for single 
+precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">NextUp</code> Return the smallest floating point number y of the same 
+type as x such that x &lt; y. If no such y exists, e.g. if x is Inf or NaN, then return x.</p>
+
+    <p>The standard C++ implementation is <code class="language-plaintext highlighter-rouge">std::nextafter( x, std::numeric_limits&lt;double&gt;::infinity( ) )</code>.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">2783.78</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">586.95</code> % faster for single 
+precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">NextDown</code> Return the largest floating point number y of the same type 
+as x such that y &lt; x. If no such y exists, e.g. if x is -Inf or NaN, then return x.</p>
+
+    <p>The standard C++ implementation is <code class="language-plaintext highlighter-rouge">std::nextafter( x, -std::numeric_limits&lt;double&gt;::infinity( ) )</code>.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">1839.04</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">370.61</code> % faster for single 
+precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">CopySign</code> copies the sign of a floating point value.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">493.48</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">1.82</code> % faster for single 
+precision floating point values.</p>
+  </li>
+</ul>
+
+<h2 id="classification-and-comparison">Classification and comparison</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">IsNaN</code> checks if the given number is NaN.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">5.51</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">6.62</code> % faster for single 
+precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">IsInf</code> checks if the given number is infinite.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">3.83</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">4.07</code> % faster for single 
+precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">SignBit</code> checks if the given number is negative.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">82.79</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">101.32</code> % faster for single 
+precision floating point values.</p>
+  </li>
+</ul>
+
+<h2 id="other-computations">Other computations</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Clamp</code> If the a value is within [minimumValue, maximumValue], the function 
+returns the value, otherwise it returns the nearest boundary.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">3.57</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">9.15</code> % faster for single 
+precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Lerp</code> Computes the linear interpolation between a and b, if the 
+parameter t is inside [​0​, 1), the linear extrapolation otherwise, 
+i.e. the result of a + t * ( b - a ) with accounting 
+for floating point calculation imprecision.</p>
+
+    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">33.34</code> % faster 
+than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">38.38</code> % faster for single 
+precision floating point values.</p>
+  </li>
+</ul>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Harlinn</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Harlinn</li><li><a class="u-email" href="mailto:espen@harlinn.no">espen@harlinn.no</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Harlinn"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Harlinn</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is my personal Github site, </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
