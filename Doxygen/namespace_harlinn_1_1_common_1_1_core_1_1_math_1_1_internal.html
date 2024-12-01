@@ -252,6 +252,10 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;T&gt;</td></tr>
 <tr class="memitem:a9c1db57b4c09cf645bf12d40aa6239e6"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9c1db57b4c09cf645bf12d40aa6239e6">LerpImpl</a> (T a, T b, T t) noexcept</td></tr>
 <tr class="separator:a9c1db57b4c09cf645bf12d40aa6239e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a373423dca54cb06cf42f305adc61efae" id="r_a373423dca54cb06cf42f305adc61efae"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a373423dca54cb06cf42f305adc61efae">FModImpl</a> (double x, double y) noexcept</td></tr>
+<tr class="separator:a373423dca54cb06cf42f305adc61efae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999b02df7a3274ce92862fc248dcd109" id="r_a999b02df7a3274ce92862fc248dcd109"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a999b02df7a3274ce92862fc248dcd109">FModImpl</a> (float x, float y) noexcept</td></tr>
+<tr class="separator:a999b02df7a3274ce92862fc248dcd109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf1ee29767605d650b5f4c518cc65fdf" id="r_aaf1ee29767605d650b5f4c518cc65fdf"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf1ee29767605d650b5f4c518cc65fdf">ExpImpl</a> (double x) noexcept</td></tr>
 <tr class="separator:aaf1ee29767605d650b5f4c518cc65fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5568a750e2415b54d1a1b991de661967" id="r_a5568a750e2415b54d1a1b991de661967"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5568a750e2415b54d1a1b991de661967">ExpImpl</a> (float x) noexcept</td></tr>
@@ -899,6 +903,84 @@ template&lt;typename FloatT &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a373423dca54cb06cf42f305adc61efae" name="a373423dca54cb06cf42f305adc61efae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a373423dca54cb06cf42f305adc61efae">&#9670;&#160;</a></span>FModImpl() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Harlinn::Common::Core::Math::Internal::FModImpl </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Computes the double precision floating point remainder of the division operation <code>x / y</code>. </p>
+<p>This implementation can be constexpr evaluated, and improves runtime performance by 13.38 %. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>A double precision floating point value. </td></tr>
+    <tr><td class="paramname">y</td><td>A double precision floating point value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The double precision floating point remainder of the division operation <code>x / y</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a999b02df7a3274ce92862fc248dcd109" name="a999b02df7a3274ce92862fc248dcd109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a999b02df7a3274ce92862fc248dcd109">&#9670;&#160;</a></span>FModImpl() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Harlinn::Common::Core::Math::Internal::FModImpl </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Computes the single precision floating point remainder of the division operation <code>x / y</code>. </p>
+<p>This implementation can be constexpr evaluated, and improves runtime performance by 89.59 %. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>A single precision floating point value. </td></tr>
+    <tr><td class="paramname">y</td><td>A single precision floating point value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The single precision floating point remainder of the division operation <code>x / y</code>. </dd></dl>
 
 </div>
 </div>

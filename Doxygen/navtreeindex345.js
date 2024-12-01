@@ -1,5 +1,11 @@
 var NAVTREEINDEX345 =
 {
+"xxh3_8h.html#a5a61b869708b770ad75e3e063a2f9273":[5,0,170,0],
+"xxh__x86dispatch_8c.html":[5,0,171],
+"xxh__x86dispatch_8h.html":[5,0,172],
+"xxh__x86dispatch_8h.html#a333c8054af1ed5132f678c68e9638ea6":[5,0,172,8],
+"xxh__x86dispatch_8h.html#a3d8a8a2f1875f7d46d9acbc7658d40f2":[5,0,172,6],
+"xxh__x86dispatch_8h.html#a3ead856e9ad4bb032dc16fee90364a78":[5,0,172,9],
 "xxh__x86dispatch_8h.html#a4106732199bf5cd678de9750bf40d0b3":[5,0,172,7],
 "xxh__x86dispatch_8h.html#a42828eaeb38603c4d8ac63cb03f0c3f2":[5,0,172,3],
 "xxh__x86dispatch_8h.html#a7bd9fdebde0f76eda9bda4fdb4b52090":[5,0,172,1],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX338 =
 {
+"struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits_3_01bool_01_4.html#a7f548c0ea4451f3e8fc56e8c88df5ebb":[4,0,1,0,0,416,4],
+"struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits_3_01bool_01_4.html#ac3aee367b9ff1c93db5f19c64e57f176":[2,0,1,0,0,424,3],
+"struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits_3_01bool_01_4.html#ac3aee367b9ff1c93db5f19c64e57f176":[4,0,1,0,0,416,3],
+"struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits_3_01bool_01_4.html#acfda72e4db2a7ca89b20ce6b3720dd77":[2,0,1,0,0,424,2],
+"struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits_3_01bool_01_4.html#acfda72e4db2a7ca89b20ce6b3720dd77":[4,0,1,0,0,416,2],
+"struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits_3_01double_01_4.html":[2,0,1,0,0,425],
 "struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits_3_01double_01_4.html":[4,0,1,0,0,417],
 "struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits_3_01float_01_4.html":[2,0,1,0,0,426],
 "struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits_3_01float_01_4.html":[4,0,1,0,0,418],
@@ -243,11 +249,5 @@ var NAVTREEINDEX338 =
 "struct_harlinn_1_1_o_c_i_1_1_internal_1_1_traits_3_01_u_int32_01_4.html":[4,0,1,1,0,14],
 "struct_harlinn_1_1_o_c_i_1_1_internal_1_1_traits_3_01_u_int64_01_4.html":[2,0,1,1,1,15],
 "struct_harlinn_1_1_o_c_i_1_1_internal_1_1_traits_3_01_u_int64_01_4.html":[4,0,1,1,0,15],
-"struct_harlinn_1_1_o_c_i_1_1_internal_1_1_traits_3_01_wide_string_01_4.html":[2,0,1,1,1,17],
-"struct_harlinn_1_1_o_c_i_1_1_internal_1_1_traits_3_01_wide_string_01_4.html":[4,0,1,1,0,17],
-"struct_harlinn_1_1_o_c_i_1_1_internal_1_1_traits_3_01bool_01_4.html":[2,0,1,1,1,3],
-"struct_harlinn_1_1_o_c_i_1_1_internal_1_1_traits_3_01bool_01_4.html":[4,0,1,1,0,3],
-"struct_harlinn_1_1_o_c_i_1_1_internal_1_1_traits_3_01wchar__t_01_5_01_4.html":[2,0,1,1,1,16],
-"struct_harlinn_1_1_o_c_i_1_1_internal_1_1_traits_3_01wchar__t_01_5_01_4.html":[4,0,1,1,0,16],
-"struct_harlinn_1_1_o_c_i_1_1_internal_1_1_traits_impl.html":[2,0,1,1,1,18]
+"struct_harlinn_1_1_o_c_i_1_1_internal_1_1_traits_3_01_wide_string_01_4.html":[2,0,1,1,1,17]
 };

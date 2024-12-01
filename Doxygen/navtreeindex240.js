@@ -1,5 +1,6 @@
 var NAVTREEINDEX240 =
 {
+"class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_command_sink_implementation_base.html#af91e36671edcaff688cb5cb89f813b2e":[2,0,1,3,4,63,38],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_command_sink_implementation_base.html#af91e36671edcaff688cb5cb89f813b2e":[4,0,1,3,3,63,38],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_command_sink_implementation_base.html#afd960d90afab84398b85f693c02e0dcf":[2,0,1,3,4,63,25],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_i_d2_d1_command_sink_implementation_base.html#afd960d90afab84398b85f693c02e0dcf":[4,0,1,3,3,63,25],
@@ -248,6 +249,5 @@ var NAVTREEINDEX240 =
 "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_decoder_info.html":[2,0,1,3,4,6,5],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_decoder_info.html":[4,0,1,3,3,6,5],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_decoder_info.html#a236b05d99dbf988d0a2ab68b3ae9ca44":[2,0,1,3,4,6,5,2],
-"class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_decoder_info.html#a236b05d99dbf988d0a2ab68b3ae9ca44":[4,0,1,3,3,6,5,2],
-"class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_decoder_info.html#a473c0e2ba0f3a391e60ecdcde0edd2b1":[2,0,1,3,4,6,5,1]
+"class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_decoder_info.html#a236b05d99dbf988d0a2ab68b3ae9ca44":[4,0,1,3,3,6,5,2]
 };

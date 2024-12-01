@@ -1,5 +1,11 @@
 var NAVTREEINDEX342 =
 {
+"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_heap_properties.html":[4,0,1,3,3,2,88],
+"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_heap_properties.html#a17fe6a745aee8e40816f088a7bf90c81":[2,0,1,3,4,2,88,0],
+"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_heap_properties.html#a17fe6a745aee8e40816f088a7bf90c81":[4,0,1,3,3,2,88,0],
+"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_heap_properties.html#a43bb04037ef8819738b40d11753585d0":[2,0,1,3,4,2,88,2],
+"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_heap_properties.html#a43bb04037ef8819738b40d11753585d0":[4,0,1,3,3,2,88,2],
+"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_heap_properties.html#a456a95c3cc3e499411ad0f9fab818071":[2,0,1,3,4,2,88,3],
 "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_heap_properties.html#a456a95c3cc3e499411ad0f9fab818071":[4,0,1,3,3,2,88,3],
 "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_heap_properties.html#a511b73d4efa49287ab0d97f876c86a77":[2,0,1,3,4,2,88,4],
 "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_heap_properties.html#a511b73d4efa49287ab0d97f876c86a77":[4,0,1,3,3,2,88,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX342 =
 "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_footprint.html#a1821cbf1384f63856f6588a16a6e358a":[4,0,1,3,3,2,132,2],
 "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_footprint.html#a18742fb18cc2fc817bda75fb3a837037":[2,0,1,3,4,2,132,0],
 "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_footprint.html#a18742fb18cc2fc817bda75fb3a837037":[4,0,1,3,3,2,132,0],
-"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_footprint.html#a5b6299a6e6efa493b87f19228ee084a5":[2,0,1,3,4,2,132,1],
-"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_footprint.html#a5b6299a6e6efa493b87f19228ee084a5":[4,0,1,3,3,2,132,1],
-"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_footprint.html#a97ab11545852a9fb11fcad8e2fda500c":[2,0,1,3,4,2,132,4],
-"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_footprint.html#a97ab11545852a9fb11fcad8e2fda500c":[4,0,1,3,3,2,132,4],
-"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_footprint.html#af664cc68b9667abe6bcb02062ead7393":[2,0,1,3,4,2,132,3],
-"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_footprint.html#af664cc68b9667abe6bcb02062ead7393":[4,0,1,3,3,2,132,3],
-"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_info.html":[2,0,1,3,4,2,133]
+"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_footprint.html#a5b6299a6e6efa493b87f19228ee084a5":[2,0,1,3,4,2,132,1]
 };

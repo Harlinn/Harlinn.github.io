@@ -52,39 +52,180 @@ functions can be <code class="language-plaintext highlighter-rouge">constexpr</c
 
 <p>The functions are implemented in the <a href="/Doxygen/namespace_harlinn_1_1_common_1_1_core_1_1_math.html"><code class="language-plaintext highlighter-rouge">Harlinn::Common::Core::Math</code> namespace</a>.</p>
 
-<p>The performance the functions are thoroughly checked by a <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Examples/Core/Math/HCCMathPerfTest01">test program</a> 
+<h2 id="benchmarks">Benchmarks</h2>
+
+<p>The performance of the functions is benchmarked using the <a href="https://github.com/google/benchmark">Google benchmark</a> library, 
+and can be verified by building and executing <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Benchmarks/Math/BasicMathBenchmarks">BasicMathBenchmarks</a> 
 included in the <a href="/Cpp/Harlinn.Windows/Harlinn.Windows.html">Harlinn.Windows solution</a>.</p>
 
-<p>Each function, together with its C/C++ counterpart, is executed 1 000 000 000 times, to check if there are 
-any performance benefits to using the <code class="language-plaintext highlighter-rouge">constexpr</code> implementations at runtime, and that they return the same 
-results for the same arguments.</p>
+<h2 id="rationale">Rationale</h2>
+
+<p>The functions was initially developed to enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of mathematical expressions, because nothing
+improves runtime performance as much as making the compiler calculate the results at compile time.</p>
+
+<p>This is achieved by providing a specific code path that will only be evaluated at compile time:</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt; 
+constexpr inline std::remove_cvref_t&lt;T&gt; Abs( T val ) noexcept
+{
+    if ( std::is_constant_evaluated( ) )
+    {
+        return Internal::AbsImpl( val );
+    }
+    else
+    {
+        using FloatT = std::remove_cvref_t&lt;T&gt;;
+        if constexpr ( std::is_same_v&lt;FloatT, float&gt; )
+        {
+            return std::fabsf( val );
+        }
+        else
+        {
+            return std::fabs( val );
+        }
+    }
+}
+</code></pre>
+
+<p>While calling the standard C/C++ implementation at runtime, unless the benchmarks prove 
+that the <code class="language-plaintext highlighter-rouge">constexpr</code> , or some other, implementation - performs consistently better.</p>
+
+<p>Initial expectations for the runtime performance of the code that was implemented 
+for <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation was low, but to my surprise it turned out that several 
+of the functions outperformed the standard C and C++ implementations. The <code class="language-plaintext highlighter-rouge">constexpr</code> 
+implementation of <code class="language-plaintext highlighter-rouge">Sin</code> outperforms <code class="language-plaintext highlighter-rouge">std::sin</code> by approximately <code class="language-plaintext highlighter-rouge">100</code> % for single 
+precision floating point numbers:</p>
+
+<pre><code class="language-C++">    template&lt;typename T&gt;
+        requires IsFloatingPoint&lt;T&gt;
+    constexpr inline std::remove_cvref_t&lt;T&gt; Sin( T x ) noexcept
+    {
+        if ( std::is_constant_evaluated( ) )
+        {
+            return Math::Internal::SinImpl( x );
+        }
+        else
+        {
+            if constexpr ( std::is_same_v&lt;std::remove_cvref_t&lt;T&gt;, float&gt; )
+            {
+                return Math::Internal::SinImpl( x );
+            }
+            else
+            {
+                return std::sin( x );
+            }
+        }
+    }
+</code></pre>
+
+<p>While <code class="language-plaintext highlighter-rouge">Exp</code> outperforms <code class="language-plaintext highlighter-rouge">std::exp</code> by <code class="language-plaintext highlighter-rouge">1200</code> % for double 
+precision floating point numbers, and by <code class="language-plaintext highlighter-rouge">1000</code> % for single 
+precision floating point numbers.</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+constexpr inline std::remove_cvref_t&lt;T&gt; Exp( T x ) noexcept
+{
+    return Math::Internal::ExpImpl( x );
+}
+</code></pre>
+
+<p>For some functions like <code class="language-plaintext highlighter-rouge">Tan</code>, the performance of the <code class="language-plaintext highlighter-rouge">constexpr</code> path , varies greatly.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Math::Internal::TanImpl</code> usually performs about 40 % worse than <code class="language-plaintext highlighter-rouge">std::tan</code>, but in approximately 1 
+out of every 5<sup>th</sup> run of the benchmarks, the <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Tan</code> beats
+<code class="language-plaintext highlighter-rouge">std::tan</code>. When the runtime performance of the <code class="language-plaintext highlighter-rouge">constexpr</code> path is unstable and performs worse 
+than the standard implementations in more than 1 out of every 4<sup>th</sup> run of 
+the benchmarks, the functions in <code class="language-plaintext highlighter-rouge">HCCMath.h</code> always call the standard 
+C/C++ implementation at runtime.</p>
+
+<p><a href="#basicmathbenchmarks-results">BasicMathBenchmarks results</a>, at the bottom of this page, shows how
+the performance numbers were calculated.</p>
 
 <h2 id="basic-operations">Basic operations</h2>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Abs</code> which returns the absolute value <code class="language-plaintext highlighter-rouge">|x|</code> for <code class="language-plaintext highlighter-rouge">x</code>, is implemented for floating point types, signed integers and unsigned integers.</li>
-  <li><code class="language-plaintext highlighter-rouge">fmod</code> which calculate the remainder of a floating point division operation, is implemented for floating point types.</li>
-  <li><code class="language-plaintext highlighter-rouge">Max</code> which returns the greater of to values, is implemented for floating point types.</li>
-  <li><code class="language-plaintext highlighter-rouge">Min</code> which returns the lesser of to values, is implemented for floating point types.</li>
-  <li><code class="language-plaintext highlighter-rouge">IsSameValue</code> checks for binary equality between two floating point values.</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Abs</code> which returns the absolute value <code class="language-plaintext highlighter-rouge">|x|</code> for <code class="language-plaintext highlighter-rouge">x</code>, is implemented for 
+floating point types, signed integers and unsigned integers. Calls <code class="language-plaintext highlighter-rouge">std::abs</code>
+at runtime.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">FMod</code> which calculate the remainder of a floating point division operation, 
+is implemented for floating point types.</p>
+
+    <p><code class="language-plaintext highlighter-rouge">FMod</code> outperforms <code class="language-plaintext highlighter-rouge">std::fmod</code> by approximately <code class="language-plaintext highlighter-rouge">60</code> % for double precision floating
+point values, and by <code class="language-plaintext highlighter-rouge">40</code> % for single precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Max</code> which returns the greater of to values, is implemented for floating point types.</p>
+
+    <p><code class="language-plaintext highlighter-rouge">Max</code> calls <code class="language-plaintext highlighter-rouge">std::max</code> at compile time, and at runtime it calls <code class="language-plaintext highlighter-rouge">_mm_max_ss</code> for single 
+precision floating point values, and <code class="language-plaintext highlighter-rouge">std::max</code> for double precision floating
+point values. This improves the performance, on the average, by <code class="language-plaintext highlighter-rouge">10</code> % for single 
+precision floating point values. It varies between <code class="language-plaintext highlighter-rouge">2</code> % and <code class="language-plaintext highlighter-rouge">30</code> % for each run 
+of the benchmarks.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Min</code> which returns the lesser of to values, is implemented for floating point types.</p>
+
+    <p><code class="language-plaintext highlighter-rouge">Min</code> calls <code class="language-plaintext highlighter-rouge">std::min</code> at compile time, and at runtime it calls <code class="language-plaintext highlighter-rouge">_mm_min_ss</code> for single 
+precision floating point values, and <code class="language-plaintext highlighter-rouge">std::min</code> for double precision floating
+point values. This improves the performance, on the average, by <code class="language-plaintext highlighter-rouge">7</code> % for single 
+precision floating point values. It varies between <code class="language-plaintext highlighter-rouge">-2</code> % and <code class="language-plaintext highlighter-rouge">20</code> % for each run 
+of the benchmarks.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">IsSameValue</code> checks for binary equality between two floating point values.</p>
+  </li>
 </ul>
 
 <h2 id="exponential-functions">Exponential functions</h2>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Exp</code> returns <strong>e</strong> raised to the given power (<strong>e</strong><sup><code class="language-plaintext highlighter-rouge">x</code></sup>).</li>
-  <li><code class="language-plaintext highlighter-rouge">Log</code> computes natural, base <strong>e</strong>, logarithm (ln x)</li>
-  <li><code class="language-plaintext highlighter-rouge">Log2</code> base 2 logarithm of the given number (log<sub>2</sub><code class="language-plaintext highlighter-rouge">x</code>). When applied 
-to single precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">251.54</code> % faster 
-than the standard implementation.</li>
-  <li><code class="language-plaintext highlighter-rouge">Log10</code> computes common (base 10) logarithm (log<sub>10</sub><code class="language-plaintext highlighter-rouge">x</code> )</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Exp</code> returns <strong>e</strong> raised to the given power (<strong>e</strong><sup><code class="language-plaintext highlighter-rouge">x</code></sup>).</p>
+
+    <p><code class="language-plaintext highlighter-rouge">Exp</code> outperforms <code class="language-plaintext highlighter-rouge">std::exp</code> by approximately <code class="language-plaintext highlighter-rouge">1200</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">1000</code> % for single precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Log</code> computes natural, base <strong>e</strong>, logarithm (ln x)</p>
+
+    <p><code class="language-plaintext highlighter-rouge">Log</code> outperforms <code class="language-plaintext highlighter-rouge">std::log</code> by approximately <code class="language-plaintext highlighter-rouge">260</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">400</code> % for single precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Log2</code> base 2 logarithm of the given number (log<sub>2</sub><code class="language-plaintext highlighter-rouge">x</code>).</p>
+
+    <p><code class="language-plaintext highlighter-rouge">Log2</code> outperforms <code class="language-plaintext highlighter-rouge">std::log2</code> by approximately <code class="language-plaintext highlighter-rouge">270</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">250</code> % for single precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Log10</code> computes common (base 10) logarithm (log<sub>10</sub><code class="language-plaintext highlighter-rouge">x</code> )</p>
+
+    <p><code class="language-plaintext highlighter-rouge">Log10</code> outperforms <code class="language-plaintext highlighter-rouge">std::log10</code> by approximately <code class="language-plaintext highlighter-rouge">360</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">390</code> % for single precision floating point values.</p>
+  </li>
 </ul>
 
 <h2 id="power-functions">Power functions</h2>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Sqrt</code> computes square root (√<code class="language-plaintext highlighter-rouge">x</code>)</li>
-  <li><code class="language-plaintext highlighter-rouge">Hypot</code> computes square root of the sum of the squares of two numbers</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Sqrt</code> computes square root (√<code class="language-plaintext highlighter-rouge">x</code>)</p>
+
+    <p>Calls <code class="language-plaintext highlighter-rouge">_mm_sqrt_pd</code> or <code class="language-plaintext highlighter-rouge">_mm_sqrt_ps</code> at runtime.</p>
+
+    <p><code class="language-plaintext highlighter-rouge">Sqrt</code> outperforms <code class="language-plaintext highlighter-rouge">std::sqrt</code> by approximately <code class="language-plaintext highlighter-rouge">1400</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">1300</code> % for single precision floating point values.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Hypot</code> computes square root of the sum of the squares of two numbers.</p>
+
+    <p>At runtime <code class="language-plaintext highlighter-rouge">Hypot</code> calls <code class="language-plaintext highlighter-rouge">std::hypot</code>.</p>
+  </li>
 </ul>
 
 <h2 id="trigonometric-functions">Trigonometric functions</h2>
@@ -96,41 +237,50 @@ the trigonometric functions, especially for single precision floating point valu
   <li>
     <p><code class="language-plaintext highlighter-rouge">Sin</code> computes the sine of its argument given in radians.</p>
 
-    <p>When applied to single precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">14.38</code> % faster 
-than the standard implementation.</p>
+    <p><code class="language-plaintext highlighter-rouge">Sin</code> outperforms <code class="language-plaintext highlighter-rouge">std::sin</code> by approximately <code class="language-plaintext highlighter-rouge">100</code> % for single precision 
+floating point values, and calls <code class="language-plaintext highlighter-rouge">std::sin</code> for double precision 
+floating point values.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">Cos</code> computes the cosine of its argument given in radians.</p>
 
-    <p>When applied  to single precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">14.93</code> % faster 
-than the standard implementation.</p>
+    <p><code class="language-plaintext highlighter-rouge">Cos</code> outperforms <code class="language-plaintext highlighter-rouge">std::cos</code> by approximately <code class="language-plaintext highlighter-rouge">110</code> % for single precision 
+floating point values, and calls <code class="language-plaintext highlighter-rouge">std::cos</code> for double precision 
+floating point values.</p>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">Tan</code> computes the tangent of its argument given in radians.</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Tan</code> computes the tangent of its argument given in radians.</p>
+
+    <p><code class="language-plaintext highlighter-rouge">Tan</code> outperforms <code class="language-plaintext highlighter-rouge">std::tan</code> by approximately <code class="language-plaintext highlighter-rouge">60</code> % for single precision 
+floating point values,</p>
+
+    <p><code class="language-plaintext highlighter-rouge">Tan</code> calls std::tan at runtime, with a consistent performance penalty of up to <code class="language-plaintext highlighter-rouge">40</code> %
+compared to calling <code class="language-plaintext highlighter-rouge">std::tan</code> directly for double precision floating point values.</p>
+  </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">ASin</code> computes arc sine of its argument.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">59.78</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">109.87</code> % faster for single precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">ASin</code> outperforms <code class="language-plaintext highlighter-rouge">std::asin</code> by approximately <code class="language-plaintext highlighter-rouge">20</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">30</code> % for single precision floating point values.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">ACos</code> computes the arc cosine of its argument.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">90.89</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">107.69</code> % faster for single precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">ACos</code> outperforms <code class="language-plaintext highlighter-rouge">std::acos</code> by approximately <code class="language-plaintext highlighter-rouge">30</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">50</code> % for single precision floating point values.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">ATan</code> computes the arc tangent of its argument.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">6.56</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">78.08</code> % faster for single precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">ATan</code> outperforms <code class="language-plaintext highlighter-rouge">std::atan</code> by approximately <code class="language-plaintext highlighter-rouge">5</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">30</code> % for single precision floating point values.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">ATan2</code> computes the arc tangent of <code class="language-plaintext highlighter-rouge">x</code> / <code class="language-plaintext highlighter-rouge">y</code>, its two arguments, using signs 
 to determine quadrants.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">44.03</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">36.17</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">ATan2</code> outperforms <code class="language-plaintext highlighter-rouge">std::acos</code> by approximately <code class="language-plaintext highlighter-rouge">20</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">80</code> % for single precision floating point values.</p>
   </li>
 </ul>
 
@@ -140,30 +290,26 @@ precision floating point values.</p>
   <li>
     <p><code class="language-plaintext highlighter-rouge">Ceil</code> computes the nearest integral value not less than the given value.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">20.19</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">19.98</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">Ceil</code> calls <code class="language-plaintext highlighter-rouge">__ceil</code> or <code class="language-plaintext highlighter-rouge">__ceilf</code> at runtime.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">Floor</code> computes the nearest integral value not greater than the given value.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">18.18</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">20.50</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">Floor</code> calls <code class="language-plaintext highlighter-rouge">__floor</code> or <code class="language-plaintext highlighter-rouge">__floorf</code> at runtime.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">Trunc</code> computes the nearest integral value not greater in magnitude than the given value.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">724.39</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">6.54</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">Trunc</code> calls <code class="language-plaintext highlighter-rouge">__truncf</code> at runtime for single precision floating point numbers,
+and calls <code class="language-plaintext highlighter-rouge">_mm_round_pd</code> double precision floating point numbers, improving performance
+by <code class="language-plaintext highlighter-rouge">320</code> %.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">Round</code> computes the nearest integral value, rounding away from zero in halfway cases.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">1077.61</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">38.27</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">Round</code> calls <code class="language-plaintext highlighter-rouge">__roundf</code> at runtime for single precision floating point numbers,
+and calls <code class="language-plaintext highlighter-rouge">_mm_round_pd</code> double precision floating point numbers, improving performance
+by <code class="language-plaintext highlighter-rouge">500</code> %.</p>
   </li>
 </ul>
 
@@ -173,30 +319,26 @@ precision floating point values.</p>
   <li>
     <p><code class="language-plaintext highlighter-rouge">FRExp</code> decomposes a number into significand and base-2 exponent.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">587.58</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">622.41</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">FRExp</code> outperforms <code class="language-plaintext highlighter-rouge">std::frexp</code> by approximately <code class="language-plaintext highlighter-rouge">450</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">550</code> % for single precision floating point values.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">ModF</code> decomposes a number into integer and fractional parts.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">91.48</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">49.41</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">ModF</code> outperforms <code class="language-plaintext highlighter-rouge">std::modf</code> by approximately <code class="language-plaintext highlighter-rouge">60</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">50</code> % for single precision floating point values.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">ScaleByN</code> multiplies a number by FLT_RADIX raised to a power.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">421.72</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">467.42</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">ScaleByN</code> outperforms <code class="language-plaintext highlighter-rouge">std::scalbn</code> by approximately <code class="language-plaintext highlighter-rouge">90</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">170</code> % for single precision floating point values.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">NextAfter</code> next representable floating-point value towards the given value.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">740.07</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">232.39</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">NextAfter</code> outperforms <code class="language-plaintext highlighter-rouge">std::nextafter</code> by approximately <code class="language-plaintext highlighter-rouge">40</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">90</code> % for single precision floating point values.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">NextUp</code> Return the smallest floating point number y of the same 
@@ -204,9 +346,8 @@ type as x such that x &lt; y. If no such y exists, e.g. if x is Inf or NaN, then
 
     <p>The standard C++ implementation is <code class="language-plaintext highlighter-rouge">std::nextafter( x, std::numeric_limits&lt;double&gt;::infinity( ) )</code>.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">2783.78</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">586.95</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">NextUp</code> outperforms <code class="language-plaintext highlighter-rouge">std::nextafter</code> by approximately <code class="language-plaintext highlighter-rouge">1400</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">1300</code> % for single precision floating point values.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">NextDown</code> Return the largest floating point number y of the same type 
@@ -214,16 +355,14 @@ as x such that y &lt; x. If no such y exists, e.g. if x is -Inf or NaN, then ret
 
     <p>The standard C++ implementation is <code class="language-plaintext highlighter-rouge">std::nextafter( x, -std::numeric_limits&lt;double&gt;::infinity( ) )</code>.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">1839.04</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">370.61</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">NextDown</code> outperforms <code class="language-plaintext highlighter-rouge">std::nextafter</code> by approximately <code class="language-plaintext highlighter-rouge">210</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">330</code> % for single precision floating point values.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">CopySign</code> copies the sign of a floating point value.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">493.48</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">1.82</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">NextDown</code> outperforms <code class="language-plaintext highlighter-rouge">std::nextafter</code> by approximately <code class="language-plaintext highlighter-rouge">300</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">10</code> % for single precision floating point values.</p>
   </li>
 </ul>
 
@@ -233,23 +372,19 @@ precision floating point values.</p>
   <li>
     <p><code class="language-plaintext highlighter-rouge">IsNaN</code> checks if the given number is NaN.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">5.51</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">6.62</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">IsNaN</code> calls <code class="language-plaintext highlighter-rouge">std::isnan</code> at runtime.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">IsInf</code> checks if the given number is infinite.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">3.83</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">4.07</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">IsInf</code> calls <code class="language-plaintext highlighter-rouge">std::isinf</code> for double precision floating point values, and
+outperforms <code class="language-plaintext highlighter-rouge">std::isinf</code> for single precision floating point values by <code class="language-plaintext highlighter-rouge">40</code> %.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">SignBit</code> checks if the given number is negative.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">82.79</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">101.32</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">SignBit</code> outperforms <code class="language-plaintext highlighter-rouge">std::signbit</code> by approximately <code class="language-plaintext highlighter-rouge">50</code> % for both double and 
+single precision floating point values.</p>
   </li>
 </ul>
 
@@ -260,9 +395,7 @@ precision floating point values.</p>
     <p><code class="language-plaintext highlighter-rouge">Clamp</code> If the a value is within [minimumValue, maximumValue], the function 
 returns the value, otherwise it returns the nearest boundary.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">3.57</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">9.15</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">Clamp</code> calls <code class="language-plaintext highlighter-rouge">std::clamp</code> at runtime.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">Lerp</code> Computes the linear interpolation between a and b, if the 
@@ -270,12 +403,190 @@ parameter t is inside [​0​, 1), the linear extrapolation otherwise,
 i.e. the result of a + t * ( b - a ) with accounting 
 for floating point calculation imprecision.</p>
 
-    <p>When applied to double precision floating point values, the implementation is <code class="language-plaintext highlighter-rouge">33.34</code> % faster 
-than the standard implementation, and similarly <code class="language-plaintext highlighter-rouge">38.38</code> % faster for single 
-precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">Lerp</code> calls <code class="language-plaintext highlighter-rouge">std::lerp</code> at runtime.</p>
   </li>
 </ul>
 
+<h3 id="basicmathbenchmarks-results">BasicMathBenchmarks Results</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-------------------------------------------------------------------------------------------
+Benchmark                               Time             CPU   Iterations  Improvement
+-------------------------------------------------------------------------------------------
+BenchmarkDoubleGenerator             2.37 ns         1.51 ns    640000000
+BenchmarkFloatGenerator              1.80 ns         1.15 ns    640000000
+BenchmarkDoubleIsSameValue           2.17 ns         1.57 ns    448000000
+BenchmarkFloatIsSameValue            2.69 ns         1.95 ns    344615385
+BenchmarkDoubleIsZero                2.64 ns         1.60 ns    497777778
+BenchmarkFloatIsZero                 1.90 ns         1.15 ns    746666667
+BenchmarkDoubleIsNaN                 2.63 ns         1.67 ns    373333333
+BenchmarkDoubleStdIsNaN              1.70 ns         1.22 ns    640000000
+BenchmarkFloatIsNaN                  2.36 ns         1.57 ns    497777778
+BenchmarkFloatStdIsNaN               1.89 ns         1.05 ns    746666667
+BenchmarkDoubleSignum                2.13 ns         1.55 ns    373333333
+BenchmarkDoubleNaiveSignum           1.97 ns         1.60 ns    448000000
+BenchmarkFloatSignum                 2.28 ns         2.01 ns    373333333
+BenchmarkFloatNaiveSignum            2.05 ns         1.35 ns    497777778
+BenchmarkDoubleDeg2Rad               1.72 ns         1.28 ns    560000000
+BenchmarkFloatDeg2Rad                1.46 ns         1.15 ns    640000000
+BenchmarkDoubleRad2Deg               1.67 ns         1.12 ns    640000000
+BenchmarkFloatRad2Deg                1.51 ns         1.17 ns    746666667
+BenchmarkDoubleNextAfter             6.40 ns         5.47 ns    100000000  (( 7.67 - 5.47)/5.47)*100 = 40.22 %
+BenchmarkDoubleStdNextAfter          10.2 ns         7.67 ns     89600000
+BenchmarkFloatNextAfter              4.42 ns         3.66 ns    179200000  (( 6.98 - 3.66)/3.66)*100 = 90.71 %
+BenchmarkFloatStdNextAfter           10.9 ns         6.98 ns     89600000
+BenchmarkDoubleInternalSqrt          35.2 ns         24.9 ns     21333333
+BenchmarkDoubleSqrt                  1.85 ns         1.33 ns    448000000  (( 20.5 - 1.33)/1.33)*100 = 1441.35 %
+BenchmarkDoubleStdSqrt               25.8 ns         20.5 ns     37333333
+BenchmarkFloatInternalSqrt           13.3 ns         10.2 ns    100000000
+BenchmarkFloatSqrt                   1.66 ns         1.26 ns    560000000  (( 18.0 - 1.26)/1.26)*100 = 1328.57 %
+BenchmarkFloatStdSqrt                23.3 ns         18.0 ns     37333333
+BenchmarkDoubleNextDown              2.56 ns         1.97 ns    373333333  (( 6.28 - 1.97)/1.97)*100 = 218.78 %
+BenchmarkDoubleStdNextDown           10.6 ns         6.28 ns     89600000
+BenchmarkFloatNextDown               2.39 ns         1.81 ns    560000000  (( 7.81 - 1.81)/1.81)*100 = 331.49 %
+BenchmarkFloatStdNextDown            10.5 ns         7.81 ns    112000000
+BenchmarkDoubleNextUp                2.95 ns         1.88 ns    373333333  (( 7.15 - 1.88)/1.88)*100 = 280.32 %
+BenchmarkDoubleStdNextUp             9.68 ns         7.15 ns     89600000
+BenchmarkFloatNextUp                 2.67 ns         1.90 ns    560000000  (( 9.42 - 1.90)/1.90)*100 = 395.79 %
+BenchmarkFloatStdNextUp              12.6 ns         9.42 ns     89600000
+BenchmarkDoubleIsInf                 1.78 ns         1.36 ns    448000000  (( 1.40 - 1.36)/1.36)*100 = 2.94 %
+BenchmarkDoubleStdIsInf              2.00 ns         1.40 ns    448000000
+BenchmarkFloatIsInf                  1.43 ns         1.03 ns   1000000000  (( 1.48 - 1.03)/1.03)*100 = 43.69 %
+BenchmarkFloatStdIsInf               1.88 ns         1.48 ns    896000000
+BenchmarkDoubleInternalAbs           1.99 ns         1.51 ns    497777778
+BenchmarkDoubleAbs                   1.65 ns         1.20 ns    560000000  (( 1.29 - 1.20)/1.20)*100 = 7.5 %
+BenchmarkDoubleStdAbs                1.73 ns         1.29 ns    448000000
+BenchmarkFloatInternalAbs            2.21 ns         1.19 ns    448000000  
+BenchmarkFloatAbs                    1.62 ns         1.22 ns    497777778  (( 1.26 - 1.22)/1.22)*100 = 3.28 %
+BenchmarkFloatStdAbs                 1.69 ns         1.26 ns    560000000
+BenchmarkDoubleSignBit               1.72 ns         1.29 ns    896000000  (( 1.94 - 1.29)/1.29)*100 = 50.39 %
+BenchmarkDoubleStdSignBit            2.94 ns         1.94 ns    298666667
+BenchmarkFloatSignBit                1.92 ns         1.40 ns    448000000  (( 2.20 - 1.40)/1.40)*100 = 57.14 %
+BenchmarkFloatStdSignBit             2.99 ns         2.20 ns    298666667
+BenchmarkDoubleFRExp                 3.26 ns         2.29 ns    320000000  (( 12.7 - 2.29)/2.29)*100 = 454.59 %
+BenchmarkDoubleStdFRExp              16.9 ns         12.7 ns     89600000
+BenchmarkFloatFRExp                  3.09 ns         2.02 ns    448000000  (( 13.5 - 2.02)/2.02)*100 = 568.32 %
+BenchmarkFloatStdFRExp               19.7 ns         13.5 ns     49777778
+BenchmarkDoubleModF                  3.67 ns         2.58 ns    344615385  (( 4.14 - 2.58)/2.58)*100 = 60.47 %
+BenchmarkDoubleStdModF               6.09 ns         4.14 ns    248888889
+BenchmarkFloatModF                   3.51 ns         2.26 ns    373333333  (( 3.35 - 2.26)/2.26)*100 = 48.23 %
+BenchmarkFloatStdModF                5.09 ns         3.35 ns    186666667
+BenchmarkDoubleMin                   1.70 ns         1.52 ns    576735632  (( 1.50 - 1.52)/1.52)*100 = -1.32 %
+BenchmarkDoubleStdMin                1.78 ns         1.50 ns    407272727
+BenchmarkFloatMin                    1.80 ns         1.26 ns    448000000  (( 1.33 - 1.26)/1.26)*100 = 5.56 %
+BenchmarkFloatStdMin                 1.65 ns         1.33 ns    448000000
+BenchmarkDoubleMax                   1.61 ns         1.39 ns    640000000  (( 1.37 - 1.39)/1.39)*100 = -1.43 %
+BenchmarkDoubleStdMax                1.72 ns         1.37 ns    593798817
+BenchmarkFloatMax                    1.68 ns         1.14 ns    560000000  (( 1.46 - 1.14)/1.14)*100 = 28.07 %
+BenchmarkFloatStdMax                 1.86 ns         1.46 ns    373333333
+BenchmarkDoubleTrunc                 1.72 ns         1.45 ns    344615385  (( 6.09 - 1.45)/1.45)*100 = 320 %
+BenchmarkDoubleStdTrunc              8.13 ns         6.09 ns    100000000
+BenchmarkFloatTrunc                  1.66 ns         1.38 ns    407272727  (( 1.31 - 1.38)/1.38)*100 = -5.07 %
+BenchmarkFloatStdTrunc               1.63 ns         1.31 ns    560000000
+BenchmarkDoubleFloor                 1.77 ns         1.33 ns    448000000  (( 1.09 - 1.33)/1.33)*100 = -18.04 %
+BenchmarkDoubleStdFloor              1.49 ns         1.09 ns    560000000
+BenchmarkFloatFloor                  1.67 ns         1.31 ns    560000000  (( 1.16 - 1.31)/1.31)*100 = -11.45 %
+BenchmarkFloatStdFloor               1.69 ns         1.16 ns    497777778
+BenchmarkDoubleCeil                  1.75 ns         1.23 ns    746666667  (( 1.40 - 1.23)/1.23)*100 = 13.82
+BenchmarkDoubleStdCeil               1.87 ns         1.40 ns    560000000
+BenchmarkFloatCeil                   1.82 ns         1.24 ns    669013333  (( 1.27 - 1.24)/1.24)*100 = 2.42 %
+BenchmarkFloatStdCeil                2.00 ns         1.27 ns    640000000
+BenchmarkDoubleRound                 1.78 ns         1.39 ns    640000000  (( 9.63 - 1.39)/1.39)*100 = 592.8 %
+BenchmarkDoubleStdRound              11.9 ns         9.63 ns     74666667
+BenchmarkFloatRound                  1.72 ns         1.28 ns    560000000  (( 2.09 - 1.28)/1.28)*100 = 63.28 %
+BenchmarkFloatStdRound               2.47 ns         2.09 ns    373333333
+BenchmarkDoubleClamp                 2.23 ns         1.46 ns    448000000  (( 1.67 - 1.46)/1.46)*100 = 14.38 %
+BenchmarkDoubleStdClamp              2.04 ns         1.67 ns    746666667
+BenchmarkFloatClamp                  2.09 ns         1.59 ns    560000000  equal
+BenchmarkFloatStdClamp               2.41 ns         1.59 ns    344615385
+BenchmarkDoubleLerp                  2.98 ns         2.12 ns    235789474  (( 2.40 - 2.12)/2.12)*100 = 13.21 %
+BenchmarkDoubleStdLerp               3.04 ns         2.40 ns    280000000
+BenchmarkFloatLerp                   2.91 ns         2.15 ns    320000000  (( 1.85 - 2.15)/2.15)*100 = -13.95 %
+BenchmarkFloatStdLerp                2.49 ns         1.85 ns    497777778
+BenchmarkDoubleCopySign              1.75 ns         1.26 ns    497777778  (( 5.16 - 1.26)/1.26)*100 = 309.52 %
+BenchmarkDoubleStdCopySign           6.30 ns         5.16 ns    112000000
+BenchmarkFloatCopySign               1.69 ns         1.23 ns    407272727  (( 1.36 - 1.23)/1.23)*100 = 10.57 %
+BenchmarkFloatStdCopySign            1.77 ns         1.36 ns    448000000
+BenchmarkDoubleScaleByN              4.29 ns         3.68 ns    203636364  (( 7.15 - 3.68)/3.68)*100 = 94.29 %
+BenchmarkDoubleStdScaleByN           10.4 ns         7.15 ns     89600000
+BenchmarkFloatScaleByN               3.37 ns         2.62 ns    280000000  (( 7.26 - 2.62)/2.62)*100 = 177.1 %
+BenchmarkFloatStdScaleByN            10.1 ns         7.26 ns     92490323
+BenchmarkDoubleFMod                  9.71 ns         6.25 ns    100000000  (( 6.98 - 6.25)/6.25)*100 = 11.68 %
+BenchmarkDoubleStdFMod               10.2 ns         6.98 ns     89600000
+BenchmarkFloatFMod                   10.2 ns         8.54 ns     64000000  (( 9.00 - 8.54)/8.54)*100 = 5.39 %
+BenchmarkFloatStdFMod                10.5 ns         9.00 ns     74666667
+BenchmarkDoubleInternalExpImpl       4.10 ns         3.31 ns    179200000
+BenchmarkDoubleExp                   4.38 ns         3.52 ns    248888889  (( 47.4 - 3.52)/3.52)*100 = 1246.59 %
+BenchmarkDoubleStdExp                53.1 ns         47.4 ns     11200000
+BenchmarkFloatInternalExpImpl        4.98 ns         3.81 ns    172307692
+BenchmarkFloatExp                    4.75 ns         3.72 ns    172307692  (( 40.8 - 3.72)/3.72)*100 = 996.77 %
+BenchmarkFloatStdExp                 53.0 ns         40.8 ns     14933333
+BenchmarkDoubleInternalHypot         7.47 ns         5.16 ns    112000000
+BenchmarkDoubleHypot                 7.74 ns         6.98 ns     89600000  (( 5.72 - 6.98)/6.98)*100 = -18.05 %
+BenchmarkDoubleStdHypot              6.90 ns         5.72 ns    112000000
+BenchmarkFloatInternalHypot          6.35 ns         5.72 ns    112000000
+BenchmarkFloatHypot                  6.67 ns         5.16 ns    100000000  (( 5.00 - 5.16)/5.16)*100 = -3.1 %
+BenchmarkFloatStdHypot               6.95 ns         5.00 ns    100000000
+BenchmarkDoubleInternalLog           7.62 ns         5.87 ns    138416552
+BenchmarkDoubleLog                   7.05 ns         5.72 ns    112000000  (( 20.9 - 5.72)/5.72)*100 = 265.38 %
+BenchmarkDoubleStdLog                29.8 ns         20.9 ns     34461538
+BenchmarkFloatInternalLog            6.12 ns         5.16 ns    112000000
+BenchmarkFloatLog                    5.79 ns         4.74 ns    112000000  (( 23.4 - 4.74)/4.74)*100 = 393.67 %
+BenchmarkFloatStdLog                 29.3 ns         23.4 ns     28000000
+BenchmarkDoubleInternalLog2          8.22 ns         6.00 ns    112000000
+BenchmarkDoubleLog2                  8.36 ns         6.63 ns     89600000  (( 24.7 - 6.63)/6.63)*100 = 272.55 %
+BenchmarkDoubleStdLog2               35.2 ns         24.7 ns     37333333
+BenchmarkFloatInternalLog2           6.04 ns         4.19 ns    149333333
+BenchmarkFloatLog2                   6.29 ns         5.62 ns    100000000  (( 20.1 - 5.62)/5.62)*100 = 257.65 %
+BenchmarkFloatStdLog2                30.1 ns         20.1 ns     28000000
+BenchmarkDoubleInternalLog10         8.37 ns         7.32 ns     89600000
+BenchmarkDoubleLog10                 8.27 ns         6.28 ns    112000000  (( 28.9 - 6.28)/6.28)*100 = 360.19 %
+BenchmarkDoubleStdLog10              32.5 ns         28.9 ns     24888889
+BenchmarkFloatInternalLog10          6.59 ns         4.96 ns    154482759
+BenchmarkFloatLog10                  6.31 ns         4.74 ns    112000000  (( 23.4 - 4.74)/4.74)*100 = 393.67 %
+BenchmarkFloatStdLog10               29.9 ns         23.4 ns     32000000
+BenchmarkDoubleInternalSin           48.0 ns         31.2 ns     16000000
+BenchmarkDoubleSin                   7.43 ns         5.45 ns    152048486  (( 6.70 - 5.45)/5.45)*100 = 22.94 %
+BenchmarkDoubleStdSin                7.73 ns         6.70 ns    112000000
+BenchmarkFloatInternalSin            4.81 ns         3.77 ns    186666667
+BenchmarkFloatSin                    4.81 ns         3.45 ns    248888889  (( 6.98 - 3.45)/3.45)*100 = 102.32 %
+BenchmarkFloatStdSin                 7.75 ns         6.98 ns    112000000
+BenchmarkDoubleInternalCos           47.3 ns         36.1 ns     20363636
+BenchmarkDoubleCos                   8.62 ns         6.80 ns     89600000  (( 7.19 - 6.80)/6.80)*100 = 5.73 %
+BenchmarkDoubleStdCos                8.53 ns         7.19 ns    100000000
+BenchmarkFloatInternalCos            5.67 ns         4.17 ns    194782609
+BenchmarkFloatCos                    4.68 ns         3.59 ns    208849115  (( 7.66 - 3.59)/3.59)*100 = 113.37 %
+BenchmarkFloatStdCos                 8.58 ns         7.66 ns    100000000
+BenchmarkDoubleInternalTan           55.5 ns         47.4 ns     11200000
+BenchmarkDoubleTan                   12.3 ns         9.49 ns     56000000  (( 5.93 - 9.49)/9.49)*100 = -37.51 %
+BenchmarkDoubleStdTan                8.39 ns         5.93 ns     89600000
+BenchmarkFloatInternalTan            6.78 ns         5.16 ns    100000000
+BenchmarkFloatTan                    5.73 ns         5.08 ns    160000000  (( 8.23 - 5.08)/5.08)*100 = 62.0 %
+BenchmarkFloatStdTan                 9.75 ns         8.23 ns    112000000
+BenchmarkDoubleInternalATan          8.41 ns         6.25 ns    100000000
+BenchmarkDoubleATan                  8.17 ns         5.62 ns    100000000  (( 6.10 - 5.62)/5.62)*100 = 8.43 %
+BenchmarkDoubleStdATan               8.59 ns         6.10 ns     89600000
+BenchmarkFloatInternalATan           5.61 ns         3.48 ns    165925926
+BenchmarkFloatATan                   5.89 ns         4.00 ns    160000000  (( 5.31 - 4.00)/4.00)*100 = 32.75 %
+BenchmarkFloatStdATan                7.01 ns         5.31 ns    100000000
+BenchmarkDoubleInternalASin          8.99 ns         6.28 ns     89600000
+BenchmarkDoubleASin                  8.63 ns         5.78 ns    100000000  (( 6.98 - 5.78)/5.78)*100 = 20.76 %
+BenchmarkDoubleStdASin               8.71 ns         6.98 ns     89600000
+BenchmarkFloatInternalASin           4.69 ns         3.90 ns    172307692
+BenchmarkFloatASin                   4.91 ns         3.61 ns    194782609  (( 4.74 - 3.61)/3.61)*100 = 31.30 %
+BenchmarkFloatStdASin                7.07 ns         4.74 ns    112000000
+BenchmarkDoubleInternalACos          7.37 ns         6.25 ns    100000000
+BenchmarkDoubleACos                  7.15 ns         5.00 ns    100000000  (( 6.80 - 5.00)/5.00)*100 = 36.0 %
+BenchmarkDoubleStdACos               8.74 ns         6.80 ns     89600000
+BenchmarkFloatInternalACos           5.72 ns         5.16 ns    100000000
+BenchmarkFloatACos                   5.39 ns         3.72 ns    192984615  (( 5.86 - 3.72)/3.72)*100 = 57.53 %
+BenchmarkFloatStdACos                6.93 ns         5.86 ns    112000000
+BenchmarkDoubleInternalATan2         12.7 ns         10.8 ns     89600000
+BenchmarkDoubleATan2                 13.8 ns         12.2 ns     44800000  (( 15.1 - 12.2)/12.2)*100 = 23.77 %
+BenchmarkDoubleStdATan2              20.9 ns         15.1 ns     37333333
+BenchmarkFloatInternalATan2          9.88 ns         7.81 ns    100000000
+BenchmarkFloatATan2                  9.75 ns         7.95 ns    112000000  (( 14.8 - 7.95)/7.95)*100 = 86.16 %
+BenchmarkFloatStdATan2               19.7 ns         14.8 ns     56000000
+</code></pre></div></div>
 
   </div>
 

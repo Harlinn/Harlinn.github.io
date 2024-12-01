@@ -21,6 +21,7 @@ var struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_
     [ "ScalarFMSub", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#afbb860afdfc339e1a8ad56e5bbf69dde", null ],
     [ "ScalarFNMAdd", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#a3041e66d0d3e1cda5807fadc03e8d9ba", null ],
     [ "ScalarFNMSub", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#a8a02caf98fc9ee51453ee03404330656", null ],
+    [ "Sqrt", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#a36e71e4c0be45f0516b832bb102e38ab", null ],
     [ "Store", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#a49fa75ceec8aa6cfee601d143c7c6617", null ],
     [ "Sub", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#a9477107107ab72842ed93ed5defd1b4f", null ],
     [ "UnaligedStore", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#a92228796e338766a1f25c2ef2b06585b", null ],

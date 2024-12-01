@@ -1,5 +1,6 @@
 var NAVTREEINDEX142 =
 {
+"class_harlinn_1_1_common_1_1_core_1_1_pointer_inactive.html#aaf6f5a5ac9369ffd8dcb3cc1a435ae1e":[2,0,1,0,0,294,2],
 "class_harlinn_1_1_common_1_1_core_1_1_pointer_inactive.html#aaf6f5a5ac9369ffd8dcb3cc1a435ae1e":[4,0,1,0,0,286,2],
 "class_harlinn_1_1_common_1_1_core_1_1_portable_device_key_collection.html":[2,0,1,0,0,295],
 "class_harlinn_1_1_common_1_1_core_1_1_portable_device_key_collection.html":[4,0,1,0,0,287],
@@ -248,6 +249,5 @@ var NAVTREEINDEX142 =
 "class_harlinn_1_1_common_1_1_core_1_1_process_access_mask.html#a0f119a168b2a1f499c0de181cd4e57d6":[2,0,1,0,0,300,3],
 "class_harlinn_1_1_common_1_1_core_1_1_process_access_mask.html#a0f119a168b2a1f499c0de181cd4e57d6":[4,0,1,0,0,292,3],
 "class_harlinn_1_1_common_1_1_core_1_1_process_access_mask.html#a203b2abd674fdf4fa53962e6ef9bc434":[2,0,1,0,0,300,13],
-"class_harlinn_1_1_common_1_1_core_1_1_process_access_mask.html#a203b2abd674fdf4fa53962e6ef9bc434":[4,0,1,0,0,292,13],
-"class_harlinn_1_1_common_1_1_core_1_1_process_access_mask.html#a2f5f4ec9cc5b9cb42a71d2efadf4b523":[2,0,1,0,0,300,37]
+"class_harlinn_1_1_common_1_1_core_1_1_process_access_mask.html#a203b2abd674fdf4fa53962e6ef9bc434":[4,0,1,0,0,292,13]
 };

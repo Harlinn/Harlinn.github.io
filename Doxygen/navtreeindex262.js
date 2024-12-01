@@ -1,5 +1,6 @@
 var NAVTREEINDEX262 =
 {
+"class_harlinn_1_1_windows_1_1_media_1_1_m_m_device_enumerator.html#a091f8568618d23b0e380cb2e8d4798eb":[2,0,1,3,7,215,2],
 "class_harlinn_1_1_windows_1_1_media_1_1_m_m_device_enumerator.html#a091f8568618d23b0e380cb2e8d4798eb":[4,0,1,3,6,215,2],
 "class_harlinn_1_1_windows_1_1_media_1_1_m_m_device_enumerator.html#a09b51f4f9a1c81d138dbd76be5fc7cbf":[2,0,1,3,7,215,8],
 "class_harlinn_1_1_windows_1_1_media_1_1_m_m_device_enumerator.html#a09b51f4f9a1c81d138dbd76be5fc7cbf":[4,0,1,3,6,215,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX262 =
 "class_harlinn_1_1_windows_1_1_media_1_1_transform_output_data_buffer.html#acc9226d3cb1a516887869cefc93d1f7b":[2,0,1,3,7,222,6],
 "class_harlinn_1_1_windows_1_1_media_1_1_transform_output_data_buffer.html#acc9226d3cb1a516887869cefc93d1f7b":[4,0,1,3,6,222,6],
 "class_harlinn_1_1_windows_1_1_media_1_1_transform_output_data_buffer.html#ad68cd8f81ec5d7dfe6cf63115712c2e6":[2,0,1,3,7,222,10],
-"class_harlinn_1_1_windows_1_1_media_1_1_transform_output_data_buffer.html#ad68cd8f81ec5d7dfe6cf63115712c2e6":[4,0,1,3,6,222,10],
-"class_harlinn_1_1_windows_1_1_media_1_1_transform_output_data_buffer.html#ae5b608f82725754bdded3dd3aa679f1a":[2,0,1,3,7,222,3]
+"class_harlinn_1_1_windows_1_1_media_1_1_transform_output_data_buffer.html#ad68cd8f81ec5d7dfe6cf63115712c2e6":[4,0,1,3,6,222,10]
 };

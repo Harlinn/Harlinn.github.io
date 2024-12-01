@@ -1,5 +1,6 @@
 var NAVTREEINDEX234 =
 {
+"class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_translate_transform3_d.html#aa3585ccc18eefd51751a15fd5a76cb3e":[2,0,1,3,4,3,38,3],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_translate_transform3_d.html#aa3585ccc18eefd51751a15fd5a76cb3e":[4,0,1,3,3,3,38,3],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_translate_transform3_d.html#abbb4ee0c38edacf872a3196af1492111":[2,0,1,3,4,3,38,4],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_translate_transform3_d.html#abbb4ee0c38edacf872a3196af1492111":[4,0,1,3,3,3,38,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX234 =
 "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_font_collection.html#ae288897f337c276c2247c89fca08780e":[2,0,1,3,4,4,3,0],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_font_collection.html#ae288897f337c276c2247c89fca08780e":[4,0,1,3,3,4,3,0],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_font_collection.html#ae6cc6af655357c6f09b910da80325f03":[2,0,1,3,4,4,3,2],
-"class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_font_collection.html#ae6cc6af655357c6f09b910da80325f03":[4,0,1,3,3,4,3,2],
-"class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_font_collection.html#af426973be8ae1d536d43e10a8d5d5ec8":[2,0,1,3,4,4,3,4]
+"class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_font_collection.html#ae6cc6af655357c6f09b910da80325f03":[4,0,1,3,3,4,3,2]
 };

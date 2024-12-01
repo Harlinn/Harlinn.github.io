@@ -1,5 +1,7 @@
 var NAVTREEINDEX331 =
 {
+"struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_type_impl_helper_3_011_00_01_t_00_01_types_8_8_8_01_4.html#af192d6f01472599bbd61cf0f0a6e361e":[4,0,1,0,0,22,0,17,2],
+"struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_optional_format_traits.html":[2,0,1,0,0,27,0,18],
 "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_optional_format_traits.html":[4,0,1,0,0,22,0,18],
 "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_optional_format_traits.html#a8eb905d6fafd2f65c7c2370827ed2225":[2,0,1,0,0,27,0,18,0],
 "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_optional_format_traits.html#a8eb905d6fafd2f65c7c2370827ed2225":[4,0,1,0,0,22,0,18,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX331 =
 "struct_harlinn_1_1_common_1_1_core_1_1_producer_token.html#a98b3caaa1bd619ee1df10dcf05967b8b":[4,0,1,0,0,295,7],
 "struct_harlinn_1_1_common_1_1_core_1_1_producer_token.html#ac77c3583af133c29d4e26d4bb8605ce4":[2,0,1,0,0,303,9],
 "struct_harlinn_1_1_common_1_1_core_1_1_producer_token.html#ac77c3583af133c29d4e26d4bb8605ce4":[4,0,1,0,0,295,9],
-"struct_harlinn_1_1_common_1_1_core_1_1_producer_token.html#acba648df3f4a57ebad8a53b10db7c405":[2,0,1,0,0,303,0],
-"struct_harlinn_1_1_common_1_1_core_1_1_producer_token.html#acba648df3f4a57ebad8a53b10db7c405":[4,0,1,0,0,295,0],
-"struct_harlinn_1_1_common_1_1_core_1_1_producer_token.html#ad19c85fb77470697eb578844aeb059ad":[2,0,1,0,0,303,3]
+"struct_harlinn_1_1_common_1_1_core_1_1_producer_token.html#acba648df3f4a57ebad8a53b10db7c405":[2,0,1,0,0,303,0]
 };

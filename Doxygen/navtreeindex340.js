@@ -1,5 +1,11 @@
 var NAVTREEINDEX340 =
 {
+"struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_iris.html":[4,0,1,3,0,3,2],
+"struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_iris.html#a317649dee4c74451224c028581f43fdd":[2,0,1,3,0,3,2,0],
+"struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_iris.html#a317649dee4c74451224c028581f43fdd":[4,0,1,3,0,3,2,0],
+"struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_iris.html#a843ddb33e176d0a9342ee3e54104c288":[2,0,1,3,0,3,2,1],
+"struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_iris.html#a843ddb33e176d0a9342ee3e54104c288":[4,0,1,3,0,3,2,1],
+"struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_pan.html":[2,0,1,3,0,3,3],
 "struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_pan.html":[4,0,1,3,0,3,3],
 "struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_pan.html#a216ce1cc8608323fd889913d82f510e7":[2,0,1,3,0,3,3,1],
 "struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_pan.html#a216ce1cc8608323fd889913d82f510e7":[4,0,1,3,0,3,3,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX340 =
 "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a86cc11699e07f768650d4a2ca96b46e5":[4,0,1,3,3,2,51,11],
 "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a8a551ff9a4122c58773c18a0710c8344":[2,0,1,3,4,2,51,0],
 "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a8a551ff9a4122c58773c18a0710c8344":[4,0,1,3,3,2,51,0],
-"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a8f043e48e9da1e61f5d69f1b92d1196b":[2,0,1,3,4,2,51,6],
-"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a8f043e48e9da1e61f5d69f1b92d1196b":[4,0,1,3,3,2,51,6],
-"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a9a266703085a7c4df9a2874cd6346ff7":[2,0,1,3,4,2,51,3],
-"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a9a266703085a7c4df9a2874cd6346ff7":[4,0,1,3,3,2,51,3],
-"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#acf6ea23e3cefdb42ba780886f178eeb1":[2,0,1,3,4,2,51,13],
-"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#acf6ea23e3cefdb42ba780886f178eeb1":[4,0,1,3,3,2,51,13],
-"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#acfc139f09c5c1076ed8d44187c777e59":[2,0,1,3,4,2,51,10]
+"struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a8f043e48e9da1e61f5d69f1b92d1196b":[2,0,1,3,4,2,51,6]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX243 =
 {
+"class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_resolution.html#a1c6b47fea239024ab2884ebe88941b19":[2,0,1,3,4,6,34,3],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_resolution.html#a1c6b47fea239024ab2884ebe88941b19":[4,0,1,3,3,6,34,3],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_resolution.html#a43b814b3c9ecef90f4b9cc700a455b68":[2,0,1,3,4,6,34,8],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_resolution.html#a43b814b3c9ecef90f4b9cc700a455b68":[4,0,1,3,3,6,34,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX243 =
 "class_harlinn_1_1_windows_1_1_graphics_1_1_properties.html":[2,0,1,3,4,82],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_properties.html":[4,0,1,3,3,82],
 "class_harlinn_1_1_windows_1_1_graphics_1_1_properties.html#a06b067cd6b9ca490c01a0f04836b4154":[2,0,1,3,4,82,29],
-"class_harlinn_1_1_windows_1_1_graphics_1_1_properties.html#a06b067cd6b9ca490c01a0f04836b4154":[4,0,1,3,3,82,29],
-"class_harlinn_1_1_windows_1_1_graphics_1_1_properties.html#a09d76ddf81656c1634690f89eb6823d0":[2,0,1,3,4,82,11]
+"class_harlinn_1_1_windows_1_1_graphics_1_1_properties.html#a06b067cd6b9ca490c01a0f04836b4154":[4,0,1,3,3,82,29]
 };

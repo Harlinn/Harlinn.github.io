@@ -151,6 +151,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a6d07db29974ce19a7199880540873988" id="r_a6d07db29974ce19a7199880540873988"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d07db29974ce19a7199880540873988">Div</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> lhs, <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> rhs) noexcept</td></tr>
 <tr class="memdesc:a6d07db29974ce19a7199880540873988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devides one float32 vector by another.  <br /></td></tr>
 <tr class="separator:a6d07db29974ce19a7199880540873988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e71e4c0be45f0516b832bb102e38ab" id="r_a36e71e4c0be45f0516b832bb102e38ab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36e71e4c0be45f0516b832bb102e38ab">Sqrt</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v) noexcept</td></tr>
+<tr class="memdesc:a36e71e4c0be45f0516b832bb102e38ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square Root of Single-Precision Floating-Point Values.  <br /></td></tr>
+<tr class="separator:a36e71e4c0be45f0516b832bb102e38ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397ddd57a0a214566a235f3ddb5ed6de" id="r_a397ddd57a0a214566a235f3ddb5ed6de"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a397ddd57a0a214566a235f3ddb5ed6de">FMAdd</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> a, <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> b, <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> c) noexcept</td></tr>
 <tr class="memdesc:a397ddd57a0a214566a235f3ddb5ed6de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply-adds packed single-precision floating-point values using three float32 vectors.  <br /></td></tr>
 <tr class="separator:a397ddd57a0a214566a235f3ddb5ed6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1031,6 +1034,42 @@ template&lt;size_t N&gt; </div>
 </dl>
 <p>Performs a set of scalar <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html">SIMD</a> negated multiply-subtract computation on scalar single-precision floating-point values in the low 32-bits of three source operands, a, b, and c. The float32 values in two operands, a and b, are multiplied and the negated infinite precision intermediate result is obtained. From this negated intermediate result, the float32 value in the third operand, c, is subtracted. The final result is rounded to the nearest float32 value. </p>
 <dl class="section return"><dt>Returns</dt><dd>Result of the negated multiply-subtract operation.</dd></dl>
+
+</div>
+</div>
+<a id="a36e71e4c0be45f0516b832bb102e38ab" name="a36e71e4c0be45f0516b832bb102e38ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36e71e4c0be45f0516b832bb102e38ab">&#9670;&#160;</a></span>Sqrt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; float, N &gt;::Sqrt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Square Root of Single-Precision Floating-Point Values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>

@@ -157,10 +157,10 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 <tr class="separator:a97d07e0ba34ed48ba8589792d87c0167"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81e5071fe9454b80f97ed0f1dea66bbb" id="r_a81e5071fe9454b80f97ed0f1dea66bbb"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81e5071fe9454b80f97ed0f1dea66bbb">ScaleByN</a> (float x, int n) noexcept</td></tr>
 <tr class="separator:a81e5071fe9454b80f97ed0f1dea66bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0983027858d220ebf51be80835f9c4c" id="r_ad0983027858d220ebf51be80835f9c4c"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0983027858d220ebf51be80835f9c4c">FMod</a> (double x, double y) noexcept</td></tr>
-<tr class="separator:ad0983027858d220ebf51be80835f9c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40747723b06a5c8320aa94e3d199eaa8" id="r_a40747723b06a5c8320aa94e3d199eaa8"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40747723b06a5c8320aa94e3d199eaa8">FMod</a> (float x, float y) noexcept</td></tr>
-<tr class="separator:a40747723b06a5c8320aa94e3d199eaa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0a01f83d05ae5624df92fe06ec4122" id="r_a3a0a01f83d05ae5624df92fe06ec4122"><td class="memTemplParams" colspan="2">template&lt;typename FloatT &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;FloatT&gt;</td></tr>
+<tr class="memitem:a3a0a01f83d05ae5624df92fe06ec4122"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; FloatT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3a0a01f83d05ae5624df92fe06ec4122">FMod</a> (FloatT x, FloatT y) noexcept</td></tr>
+<tr class="separator:a3a0a01f83d05ae5624df92fe06ec4122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a363cdf1f1361eac563c69e692d64a49f" id="r_a363cdf1f1361eac563c69e692d64a49f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;T&gt;</td></tr>
 <tr class="memitem:a363cdf1f1361eac563c69e692d64a49f"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a363cdf1f1361eac563c69e692d64a49f">Exp</a> (T x) noexcept</td></tr>
@@ -560,7 +560,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the absolute value of a floating point value. </p>
-<p><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_runtime.html">Runtime</a> performance is equivalent to std::fabs and std::fabsf since those functions are used unless the function is constexpr evaluated. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -603,7 +602,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the principal value of the arc cosine of x. </p>
-<p>This function can be constexpr evaluated, and at runtime performs 90.89 % better than std::acos for double precision floating point values, and 107.69 % better than std::acos for single floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -646,7 +644,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the principal value of the arc sine of x. </p>
-<p>This function can be constexpr evaluated, and at runtime performs 59.78 % better than std::asin for double precision floating point values, and 109.87 % better than std::asin for single floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -689,7 +686,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the principal value of the arc tangent of x. </p>
-<p>This function can be constexpr evaluated, and at runtime performs 6.56 % better than std::atan for double precision floating point values, and 78.08 % better than std::atan for single floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -736,7 +732,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the arc tangent of x / y using the signs of arguments to determine the correct quadrant. </p>
-<p>This function can be constexpr evaluated, and at runtime performs 44.03 % better than std::atan2 for double precision floating point values, and 36.17 % better than std::atan2 for single floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -784,7 +779,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the arc tangent of x / y using the signs of arguments to determine the correct quadrant. </p>
-<p>This function can be constexpr evaluated, and at runtime performs 44.03 % better than std::atan2 for double precision floating point values, and 36.17 % better than std::atan2 for single floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -828,7 +822,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the smallest integer value not less than value. </p>
-<p>This implementation can be constexpr evaluated, this function is 15 % faster than std::ceil for both single and double precision floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -981,7 +974,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 
 <p>Clamp. </p>
 <p>If the value is within [minimumValue, maximumValue], the function returns value, otherwise returns the nearest boundary. </p>
-<p>This implementation can be constexpr evaluated, this function is 7 % faster than <a class="el" href="namespacestd.html#a896723b77ca2b9d4aee3067c0b7eafb1">std::clamp</a> for both single and double precision floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -1158,7 +1150,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Composes a floating point value with the magnitude of <code>magnitude</code> and the sign of <code>signValue</code>. </p>
-<p>This implementation can be constexpr evaluated, and improves runtime performance for double precision floating point values by 490 %, and by 1.82 % for single precision floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -1202,7 +1193,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the cosine of x given in radians. </p>
-<p>This implementation can be constexpr evaluated, and performs 14.93 % better than std::cos for single precision floating point values. Calls std::cos double precision floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -1319,7 +1309,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes <code>e</code>, <code>2.7182818</code>, raised to the given power <code>x</code>. </p>
-<p>This implementation can be constexpr evaluated, and calls the standard implementation at runtime. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -1362,7 +1351,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the largest integer value not greater than value. </p>
-<p>This implementation can be constexpr evaluated, this function is 15 % faster than std::floor for both single and double precision floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -1478,24 +1466,27 @@ requires <a class="el" href="namespace_harlinn_1_1_windows_1_1_internal.html#aab
 
 </div>
 </div>
-<a id="ad0983027858d220ebf51be80835f9c4c" name="ad0983027858d220ebf51be80835f9c4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0983027858d220ebf51be80835f9c4c">&#9670;&#160;</a></span>FMod() <span class="overload">[1/2]</span></h2>
+<a id="a3a0a01f83d05ae5624df92fe06ec4122" name="a3a0a01f83d05ae5624df92fe06ec4122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a0a01f83d05ae5624df92fe06ec4122">&#9670;&#160;</a></span>FMod()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename FloatT &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;FloatT&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double Harlinn::Common::Core::Math::FMod </td>
+          <td class="memname">std::remove_cvref_t&lt; FloatT &gt; Harlinn::Common::Core::Math::FMod </td>
           <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+          <td class="paramtype">FloatT</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+          <td class="paramtype">FloatT</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1504,55 +1495,21 @@ requires <a class="el" href="namespace_harlinn_1_1_windows_1_1_internal.html#aab
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Computes the double precision floating point remainder of the division operation <code>x / y</code>. </p>
-<p>This implementation can be constexpr evaluated, and improves runtime performance by 13.38 %. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>A double precision floating point value. </td></tr>
-    <tr><td class="paramname">y</td><td>A double precision floating point value. </td></tr>
+<p>Computes the point remainder of the division operation <code>x / y</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">FloatT</td><td>A floating point type. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The double precision floating point remainder of the division operation <code>x / y</code>. </dd></dl>
-
-</div>
-</div>
-<a id="a40747723b06a5c8320aa94e3d199eaa8" name="a40747723b06a5c8320aa94e3d199eaa8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40747723b06a5c8320aa94e3d199eaa8">&#9670;&#160;</a></span>FMod() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Harlinn::Common::Core::Math::FMod </td>
-          <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Computes the single precision floating point remainder of the division operation <code>x / y</code>. </p>
-<p>This implementation can be constexpr evaluated, and improves runtime performance by 89.59 %. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>A single precision floating point value. </td></tr>
-    <tr><td class="paramname">y</td><td>A single precision floating point value. </td></tr>
+    <tr><td class="paramname">x</td><td>A floating point value. </td></tr>
+    <tr><td class="paramname">y</td><td>A floating point value. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The single precision floating point remainder of the division operation <code>x / y</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The floating point remainder of the division operation <code>x / y</code>. </dd></dl>
 
 </div>
 </div>
@@ -1582,7 +1539,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Decomposes the given floating point value val into a normalized fraction and an integral power of two. </p>
-<p>Currently this implementation is more than 6 times faster than std::frexp. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -1628,7 +1584,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Decomposes the given floating point value val into a normalized fraction and an integral power of two. </p>
-<p>Currently this implementation is more than 6 times faster than std::frexp. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -1678,7 +1633,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Decomposes the given floating point value val into a normalized fraction and an integral power of two. </p>
-<p>Currently this implementation is more than 6 times faster than std::frexp. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -1728,7 +1682,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Decomposes the given floating point value val into a normalized fraction and an integral power of two. </p>
-<p>Currently this implementation is more than 6 times faster than std::frexp. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -1778,7 +1731,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the square root of the sum of the squares of x and y, without undue overflow or underflow at intermediate stages of the computation. </p>
-<p>This implementation can be constexpr evaluated, and calls the standard implementation at runtime. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -1865,7 +1817,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Determines if the given floating point number val is positive or negative infinity. </p>
-<p><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_runtime.html">Runtime</a> performance is equivalent to std::isinf, but this implementation can be constexpr evaluated. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -1951,7 +1902,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Determines if the given floating point number, val, is a not-a-number (NaN) value. </p>
-<p><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_runtime.html">Runtime</a> performance is equivalent to std::isnan, but this implementation can be constexpr evaluated. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -1990,7 +1940,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2029,7 +1979,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2064,7 +2014,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2098,7 +2048,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2223,7 +2173,6 @@ requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa44
 </table>
 </div><div class="memdoc">
 <p>Computes the linear interpolation between a and b, if the parameter t is inside [​0​, 1), the linear extrapolation otherwise, i.e. the result of a + t * ( b - a ) with accounting for floating point calculation imprecision. </p>
-<p>This implementation can be constexpr evaluated, and improves runtime performance by 33 %. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td></td></tr>
@@ -2306,7 +2255,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the natural, base e, logarithm of <code>x</code>. </p>
-<p>This implementation can be constexpr evaluated, and calls the standard implementation at runtime. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -2349,7 +2297,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the common, base 10, logarithm of x. </p>
-<p>This implementation can be constexpr evaluated, but at runtime calls std::log10f for single precision floating point values and std::log10 for double precision floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -2392,7 +2339,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the binary, base-2, logarithm of x. </p>
-<p>This implementation can be constexpr evaluated, and at runtime performs 251% better than std::log2 for single precision floating point values, and uses std::log2 for double precision floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -2859,7 +2805,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Decomposes floating-point value val into its integral and fractional parts, each with the same type and sign as val. </p>
-<p>Currently 37 % faster than std::modf for double precision floating point values, and 27 % faster for single precision floating point values. </p>
 <p>This implementation can also be constexpr evaluated. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -2907,7 +2852,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Decomposes floating-point value val into its integral and fractional parts, each with the same type and sign as val. </p>
-<p>Currently 37 % faster than std::modf for double precision floating point values, and 27 % faster for single precision floating point values. </p>
 <p>This implementation can also be constexpr evaluated. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -2956,7 +2900,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Decomposes floating-point value val into its integral and fractional parts, each with the same type and sign as val. </p>
-<p>Currently 37 % faster than std::modf for double precision floating point values, and 27 % faster for single precision floating point values. </p>
 <p>This implementation can also be constexpr evaluated. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -3002,7 +2945,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Returns the next representable value of x in the direction of y. If x equals to y, y is returned. </p>
-<p>This function can be constexpr evaluated, and at runtime if performs 740.07 % better than std::nextafter for double precision values, </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>A double precision floating point value. </td></tr>
@@ -3041,7 +2983,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Returns the next representable value of x in the direction of y. If x equals to y, y is returned. </p>
-<p>This function can be constexpr evaluated, and at runtime if performs 232.39 % better than std::nextafter for double precision values, </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>A single precision floating point value. </td></tr>
@@ -3079,7 +3020,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Return the largest floating point number y of the same type as x such that y &lt; x. If no such y exists, e.g. if x is -Inf or NaN, then return x. </p>
-<p>This function can be constexpr evaluated, and performs 1839.04 % better than <code>std::nextafter( x, -std::numeric_limits&lt;double&gt;::infinity( ) )</code> for double precision floating point values, and similarly 370.61 % better for single precision floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -3122,7 +3062,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Return the smallest floating point number y of the same type as x such that x &lt; y. If no such y exists, e.g. if x is Inf or NaN, then return x. </p>
-<p>This function can be constexpr evaluated, and performs 2783.78 % better than <code>std::nextafter( x, std::numeric_limits&lt;double&gt;::infinity( ) )</code> for double precision floating point values, and similarly 586.95 % better for single precision floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -3208,7 +3147,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the nearest integer to value, in floating-point format, rounding halfway cases away from zero. </p>
-<p>This implementation can be constexpr evaluated, for double precision floating point values this function is more then 11 times faster than std::round, For single precision floating point values this function is 40 % faster than std::round. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -3296,7 +3234,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa4443a5
 </div><div class="memdoc">
 <p>Multiplies a double precision floating point value <code>x</code> multplied by <code>FLT_RADIX</code> raised to power <code>n</code>. </p>
 <p>FLT_RADIX is the radix used by the representation of the floating point types. </p>
-<p>This implementation can be constexpr evaluated, and improves runtime performance by 421 %. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>A double precision floating point value. </td></tr>
@@ -3336,7 +3273,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa4443a5
 </div><div class="memdoc">
 <p>Multiplies a double precision floating point value <code>x</code> multplied by <code>FLT_RADIX</code> raised to power <code>n</code>. </p>
 <p>FLT_RADIX is the radix used by the representation of the floating point types. </p>
-<p>This implementation can be constexpr evaluated, and improves runtime performance by 467 %. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>A double precision floating point value. </td></tr>
@@ -3649,7 +3585,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the sine of x given in radians. </p>
-<p>This implementation can be constexpr evaluated, and performs 14.38 % better than std::sin for single precision floating point values. Calls std::sin double precision floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
@@ -3833,7 +3768,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 <p>Computes the nearest integer not greater in magnitude than value. </p>
-<p>This implementation can be constexpr evaluated, for double precision floating point values this function is close to 8 times faster than std::trunc, For single precision floating point values this function is 6 % faster than std::trunc. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
