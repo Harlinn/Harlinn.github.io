@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Windows Syncronization | Harlinn</title>
+<title>C++ classes for Working with Threads, Processes and Kernel Mode Synchronization. | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Windows Syncronization" />
+<meta property="og:title" content="C++ classes for Working with Threads, Processes and Kernel Mode Synchronization." />
 <meta name="author" content="Espen Harlinn" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is my personal Github site," />
@@ -15,9 +15,9 @@
 <meta property="og:site_name" content="Harlinn" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Windows Syncronization" />
+<meta property="twitter:title" content="C++ classes for Working with Threads, Processes and Kernel Mode Synchronization." />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal Github site,","headline":"Windows Syncronization","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/WindowsSynchronization.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal Github site,","headline":"C++ classes for Working with Threads, Processes and Kernel Mode Synchronization.","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/WindowsSynchronization.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /></head>
 <body><header class="site-header" role="banner">
@@ -40,12 +40,13 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Windows Syncronization</h1>
+    <h1 class="post-title">C++ classes for Working with Threads, Processes and Kernel Mode Synchronization.</h1>
   </header>
 
   <div class="post-content">
-    <h1 id="introduction">Introduction</h1>
-<p>This article is about the synchronization mechanisms available on the Windows platform using the Visual C++ compiler and the Windows API. To simplify the use of some of the synchronization mechanisms, I have created a set of classes that mainly wraps concurrency mechanisms provided by the Windows API:</p>
+    <p>The Harlinn.Common.Core library comes with C++ classes that simplifies multithreaded<br />
+software development for Windows. Threads, Processes and Kernel Mode Synchronization
+objects can easily be created an managed, using:</p>
 
 <ul>
   <li><a href="#waitablehandle"><code class="language-plaintext highlighter-rouge">WaitableHandle</code></a>: Base class for waitable Windows kernel objects
@@ -61,7 +62,10 @@
 </ul>
 
 <h2 id="kernel-object-synchronization">Kernel Object Synchronization</h2>
-<p>Synchronization can be performed using several synchronization mechanisms that are backed by Windows kernel object implementations. These are the most heavyweight synchronization mechanisms provided by the Win32/64 API, and the most versatile:</p>
+
+<p>Synchronization can be performed using several synchronization mechanisms that are 
+backed by Windows kernel object implementations. These are the most heavyweight 
+synchronization mechanisms provided by the Win32/64 API, and the most versatile:</p>
 
 <ul>
   <li>They can be named, putting them in the kernel object namespace.</li>

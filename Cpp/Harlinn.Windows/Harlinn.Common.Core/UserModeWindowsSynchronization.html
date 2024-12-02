@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Windows User Mode Syncronization | Harlinn</title>
+<title>C++ classes for Windows User Mode Synchronization | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Windows User Mode Syncronization" />
+<meta property="og:title" content="C++ classes for Windows User Mode Synchronization" />
 <meta name="author" content="Espen Harlinn" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is my personal Github site," />
@@ -15,9 +15,9 @@
 <meta property="og:site_name" content="Harlinn" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Windows User Mode Syncronization" />
+<meta property="twitter:title" content="C++ classes for Windows User Mode Synchronization" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal Github site,","headline":"Windows User Mode Syncronization","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/UserModeWindowsSynchronization.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal Github site,","headline":"C++ classes for Windows User Mode Synchronization","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/UserModeWindowsSynchronization.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /></head>
 <body><header class="site-header" role="banner">
@@ -40,11 +40,419 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Windows User Mode Syncronization</h1>
+    <h1 class="post-title">C++ classes for Windows User Mode Synchronization</h1>
   </header>
 
   <div class="post-content">
-    
+    <p>The Windows API provides a set of synchronization mechanisms that are 
+can only be used to synchronize operations within a single process. These are
+called user-mode synchronization mechanisms.</p>
+
+<p>The Harlinn.Common.Core library comes with C++ classes for working with 
+the user-mode synchronization mechanisms that is implemented by the Windows C
+API.</p>
+
+<p>The user-mode synchronization mechanisms can avoid an expensive round-trip 
+to kernel mode when objects are not locked, or the lock is released within 
+a few thousand CPU cycles, which is most of the time. A thread starting a 
+real wait operation and giving up the rest of its time-slice, must still 
+enter kernel mode since it is only here that the system can schedule a 
+thread for execution.</p>
+
+<h2 id="criticalsection">CriticalSection</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">CriticalSection</code> class wraps a <code class="language-plaintext highlighter-rouge">CRITICAL_SECTION</code> struct, adding no addition 
+data members. The class is not copy constructible, or copy assignable, or 
+move constructible or move assignable.</p>
+
+<p>When a thread tries to acquire a lock on a critical section that is locked, 
+the thread spins, trying to acquire the lock on the critical section without 
+giving up the current time-slice for the thread. If the lock cannot be acquired 
+before the loop is done, the thread goes to sleep to wait for the critical 
+section to be released.</p>
+
+<p><code class="language-plaintext highlighter-rouge">CriticalSection</code> implements a synchronization mechanism that is similar to a 
+mutex object, but it can only be used to synchronize the threads of a single process.</p>
+
+<pre><code class="language-C++">size_t counter = 0;
+CriticalSection criticalSection;
+criticalSection.Enter( );
+ThreadGroup threadGroup;
+for ( int i = 0; i &lt; 100; ++i )
+{
+    threadGroup.Add( [i, &amp;criticalSection, &amp;counter]( )
+    {
+        auto id = i + 1;
+        for ( int i = 0; i &lt; 10; ++i )
+        {
+            PrintLn( "T{}: waiting", id );
+            std::unique_lock lock( criticalSection );
+            PrintLn( "T{}: acquired CriticalSection", id );
+            ++counter;
+            PrintLn( "T{}: value {}", id, counter );
+        }
+    } );
+}
+criticalSection.Leave( );
+PrintLn( "Main thread waiting on background threads" );
+threadGroup.join( );
+PrintLn( "Final value {}", counter );
+</code></pre>
+
+<h3 id="constructors">Constructors</h3>
+
+<p>CriticalSection has a single constructor:</p>
+
+<pre><code class="language-C++">explicit CriticalSection( UInt32 spinCount = DefaultSpinCount, bool noDebugInfo = true );
+</code></pre>
+
+<p>The <code class="language-plaintext highlighter-rouge">spinCount</code> argument specifies the spin count for the critical section.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">noDebugInfo</code> argument specifies that the OS should not create debug 
+information for the critical section.</p>
+
+<p>The constructor uses <code class="language-plaintext highlighter-rouge">InitializeCriticalSectionEx</code> to initialize the 
+<code class="language-plaintext highlighter-rouge">CRITICAL_SECTION</code> structure, and if the <code class="language-plaintext highlighter-rouge">noDebugInfo</code> argument is <code class="language-plaintext highlighter-rouge">true</code>, 
+then the constructor will pass <code class="language-plaintext highlighter-rouge">CRITICAL_SECTION_NO_DEBUG_INFO</code> to the 
+<code class="language-plaintext highlighter-rouge">InitializeCriticalSectionEx</code> function.</p>
+
+<p>As of Vista, Windows Server 2008, Microsoft changed the way <code class="language-plaintext highlighter-rouge">InitializeCriticalSection</code> works.</p>
+
+<p>As far as I understand it, <code class="language-plaintext highlighter-rouge">InitializeCriticalSection</code>, <code class="language-plaintext highlighter-rouge">InitializeCriticalSectionAndSpinCount</code> 
+and <code class="language-plaintext highlighter-rouge">InitializeCriticalSectionEx</code> without the <code class="language-plaintext highlighter-rouge">CRITICAL_SECTION_NO_DEBUG_INFO</code>; 
+now allocates some memory used for debug information, in the process address space, 
+that is not released by <code class="language-plaintext highlighter-rouge">DeleteCriticalSection</code>. This will cause the process to 
+leak a tiny amount of memory for each critical section that is deleted.</p>
+
+<h3 id="tryenter-and-try_lock"><code class="language-plaintext highlighter-rouge">TryEnter</code> and <code class="language-plaintext highlighter-rouge">try_lock</code></h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">TryEnter</code> function tries to acquire a lock on the critical section 
+without blocking. If successful, the calling thread takes ownership of 
+the critical section and must call <code class="language-plaintext highlighter-rouge">Leave()</code> or <code class="language-plaintext highlighter-rouge">unlock()</code> to release the 
+lock. The <code class="language-plaintext highlighter-rouge">try_lock()</code> function just calls <code class="language-plaintext highlighter-rouge">TryEnter()</code>.</p>
+
+<h3 id="enter-and-lock"><code class="language-plaintext highlighter-rouge">Enter</code> and <code class="language-plaintext highlighter-rouge">lock</code></h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">Enter()</code> function returns when the thread has acquired ownership 
+of the lock on the critical section. The <code class="language-plaintext highlighter-rouge">lock()</code> function just calls 
+<code class="language-plaintext highlighter-rouge">Enter()</code>.</p>
+
+<h3 id="leave-and-unlock"><code class="language-plaintext highlighter-rouge">Leave</code> and <code class="language-plaintext highlighter-rouge">unlock</code></h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">Leave()</code> function releases ownership of the lock on the critical 
+section. <code class="language-plaintext highlighter-rouge">Leave()</code> must be called for each successful call to 
+<code class="language-plaintext highlighter-rouge">TryEnter()</code> or <code class="language-plaintext highlighter-rouge">Enter()</code>.</p>
+
+<h2 id="slimreaderwriterlock"><code class="language-plaintext highlighter-rouge">SlimReaderWriterLock</code></h2>
+
+<p><code class="language-plaintext highlighter-rouge">SlimReaderWriterLock</code> class wraps a <code class="language-plaintext highlighter-rouge">SRWLOCK</code> struct, adding no 
+additional data members. The class is not copy constructible, or 
+copy assignable, or move constructible or move assignable. The default 
+constructor initializes the <code class="language-plaintext highlighter-rouge">SRWLOCK</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">SlimReaderWriterLock</code> is used to allow concurrent read access 
+by multiple threads, while ensuring that when a thread writes 
+to the protected resource it will have exclusive access, blocking 
+other writers and readers.</p>
+
+<h3 id="constructors-1">Constructors</h3>
+
+<p><code class="language-plaintext highlighter-rouge">SlimReaderWriterLock</code> has a single constructor:</p>
+
+<pre><code class="language-C++">SlimReaderWriterLock( ) noexcept
+</code></pre>
+
+<p>The constructor calls <code class="language-plaintext highlighter-rouge">InitializeSRWLock(…)</code> to initialize the 
+<code class="language-plaintext highlighter-rouge">SRWLOCK</code> structure for the object.</p>
+
+<h3 id="acquireexclusive-and-lock"><code class="language-plaintext highlighter-rouge">AcquireExclusive</code> and <code class="language-plaintext highlighter-rouge">lock</code></h3>
+
+<p>Acquires the slim reader/writer lock in exclusive mode.</p>
+
+<h3 id="acquireshared-and-lock_shared"><code class="language-plaintext highlighter-rouge">AcquireShared</code> and <code class="language-plaintext highlighter-rouge">lock_shared</code></h3>
+
+<p>Acquires the slim reader/writer lock in shared mode.</p>
+
+<h3 id="tryacquireexclusive-and-try_lock"><code class="language-plaintext highlighter-rouge">TryAcquireExclusive</code> and <code class="language-plaintext highlighter-rouge">try_lock</code></h3>
+
+<p>Tries to acquire the slim reader/writer lock in exclusive mode.</p>
+
+<h3 id="tryacquireshared-and-try_lock_shared"><code class="language-plaintext highlighter-rouge">TryAcquireShared</code> and <code class="language-plaintext highlighter-rouge">try_lock_shared</code></h3>
+
+<p>Tries to acquire the slim reader/writer lock in shared mode.</p>
+
+<h3 id="releaseexclusive-and-unlock"><code class="language-plaintext highlighter-rouge">ReleaseExclusive</code> and <code class="language-plaintext highlighter-rouge">unlock</code></h3>
+
+<p>Releases a lock that was acquired in exclusive mode.</p>
+
+<h3 id="releaseshared-and-unlock_shared"><code class="language-plaintext highlighter-rouge">ReleaseShared</code> and <code class="language-plaintext highlighter-rouge">unlock_shared</code></h3>
+
+<p>Releases a lock that was acquired in shared mode.</p>
+
+<h2 id="conditionvariable">ConditionVariable</h2>
+
+<p><code class="language-plaintext highlighter-rouge">ConditionVariable</code> class wraps a <code class="language-plaintext highlighter-rouge">CONDITION_VARIABLE</code> structure, 
+adding no additional data members. The class is not copy constructible, 
+or copy assignable, or move constructible or move assignable. The 
+default constructor initializes the <code class="language-plaintext highlighter-rouge">CONDITION_VARIABLE</code>.</p>
+
+<p>Condition variables are designed to let us wait on a change notification 
+on a resource protected by a <code class="language-plaintext highlighter-rouge">CriticalSection</code> or <code class="language-plaintext highlighter-rouge">SlimReaderWriterLock</code>.</p>
+
+<p>To demonstrate, here is a simple multi-producer, multi consumer, queue:</p>
+
+<pre><code class="language-C++">class SimpleQueue
+{
+    ConditionVariable queueEmpty_;
+    ConditionVariable queueFull_;
+    CriticalSection criticalSection_;
+    size_t lastItemProduced_ = 0;
+    size_t queueSize_ = 0;
+    size_t startOffset_ = 0;
+    bool closed_ = false;
+public:
+    static constexpr size_t MaxQueueSize = 50;
+    using Container = std::array&lt;size_t, MaxQueueSize&gt;;
+private:
+    Container conatainer_;
+public:
+    SimpleQueue( )
+    {
+    }
+    void Close( )
+    {
+        {
+            std::unique_lock lock( criticalSection_ );
+            closed_ = true;
+        }
+        queueEmpty_.WakeAll( );
+        queueFull_.WakeAll( );
+    }
+
+    bool Push( size_t item )
+    {
+        {
+            std::unique_lock lock( criticalSection_ );
+            while ( queueSize_ == MaxQueueSize &amp;&amp; closed_ == false )
+            {
+                queueFull_.Sleep( criticalSection_ );
+            }
+            if ( closed_ )
+            {
+                return false;
+            }
+            auto containerOffset = ( startOffset_ + queueSize_ ) % MaxQueueSize;
+            conatainer_[containerOffset] = item;
+            queueSize_++;
+        }
+        queueEmpty_.Wake( );
+        return true;
+    }
+private:
+    size_t PopValue( )
+    {
+        auto result = conatainer_[startOffset_];
+        queueSize_--;
+        startOffset_++;
+        if ( startOffset_ == MaxQueueSize )
+        {
+            startOffset_ = 0;
+        }
+        return result;
+    }
+public:
+    bool Pop( size_t&amp; item )
+    {
+        bool result = false;
+        {
+            std::unique_lock lock( criticalSection_ );
+            if ( closed_ == false )
+            {
+                while ( queueSize_ == 0 &amp;&amp; closed_ == false )
+                {
+                    queueEmpty_.Sleep( criticalSection_ );
+                }
+            }
+            if( queueSize_ )
+            {
+                item = PopValue( );
+                result = true;
+            }
+        }
+        if ( result &amp;&amp; closed_ == false )
+        {
+            queueFull_.Wake( );
+        }
+        return result;
+    }
+};
+</code></pre>
+
+<p>Items can be pushed on the queue if it is not closed, and items 
+can be popped as long as the queue is not closed or there are 
+items in the queue.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Push(…)</code> function takes an exclusive lock on the queue, and 
+if the queue is full, it waits on the <code class="language-plaintext highlighter-rouge">ConditionVariable</code> <code class="language-plaintext highlighter-rouge">queueFull_</code> by calling <code class="language-plaintext highlighter-rouge">Sleep(criticalSection_)</code>. 
+<code class="language-plaintext highlighter-rouge">Sleep(…)</code> releases the specified critical section and initializes 
+the wait as an atomic operation. The critical section is re-acquired 
+before the call to <code class="language-plaintext highlighter-rouge">Sleep(…)</code> completes. This allows other threads to 
+acquire the critical section and remove elements from the queue. 
+Before returning the <code class="language-plaintext highlighter-rouge">Push(…)</code> function calls <code class="language-plaintext highlighter-rouge">queueEmpty_.Wake( )</code> to 
+release a single thread waiting for items to appear in the queue. 
+The logic behind the <code class="language-plaintext highlighter-rouge">Pop(…)</code> is the same, except that this function 
+will wait if the queue is empty, and notify waiting producers 
+that there is room for more items after an item is removed from the queue.</p>
+
+<p>This queue is quite simple to use:</p>
+
+<pre><code class="language-C++">SimpleQueue queue;
+std::atomic&lt;size_t&gt; generated;
+std::atomic&lt;size_t&gt; consumed;
+ThreadGroup producerThreadGroup;
+ThreadGroup consumerThreadGroup;
+
+for ( int i = 0; i &lt; 4; ++i )
+{
+    producerThreadGroup.Add( [i , &amp;queue,&amp;generated]( )
+    {
+        while ( queue.Push( 1 ) )
+        {
+            ++generated;
+        }
+        printf( "Producer %d done.\n", i + 1 );
+    } );
+}
+for ( int i = 0; i &lt; 4; ++i )
+{
+    consumerThreadGroup.Add( [i, &amp;queue, &amp;consumed]( )
+    {
+        size_t value = 0;
+        while ( queue.Pop( value ) )
+        {
+            ++consumed;
+        }
+        printf( "Consumer %d done.\n", i + 1 );
+    } );
+}
+
+puts( "Main thread going to sleep" );
+CurrentThread::Sleep( TimeSpan::FromSeconds( 2 ) );
+puts( "Main thread closing the queue" );
+queue.Close( );
+puts( "Main thread waiting on producer threads" );
+producerThreadGroup.join( );
+puts( "Main thread waiting on consumer threads" );
+consumerThreadGroup.join( );
+size_t sent = generated;
+size_t received = consumed;
+printf( "Result: produced %zu values and consumed %zu values\n", sent, received );
+</code></pre>
+
+<h3 id="constructors-2">Constructors</h3>
+
+<p><code class="language-plaintext highlighter-rouge">ConditionVariable</code> has a single constructor:</p>
+
+<pre><code class="language-C++">ConditionVariable( ) noexcept;
+</code></pre>
+
+<p>The constructor calls <code class="language-plaintext highlighter-rouge">InitializeConditionVariable(…)</code> to initialize the 
+<code class="language-plaintext highlighter-rouge">CONDITION_VARIABLE</code> structure for the object.</p>
+
+<h3 id="wake">Wake</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">Wake()</code> function wakes a single thread waiting on the condition variable.</p>
+
+<h3 id="wakeall">WakeAll</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">WakeAll()</code> function wakes all threads waiting on the condition variable.</p>
+
+<h3 id="sleep">Sleep</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">Sleep</code> function has the following overloads:</p>
+
+<pre><code class="language-C++">bool Sleep( const CriticalSection&amp; criticalSection,
+            DWORD timeoutInMillis = INFINITE ) const;
+bool Sleep( const CriticalSection&amp; criticalSection,
+            const TimeSpan&amp; timeout ) const;
+bool Sleep( const SlimReaderWriterLock&amp; slimReaderWriterLock,
+            DWORD timeoutInMillis = INFINITE, bool sharedMode = false ) const;
+bool Sleep( const SlimReaderWriterLock&amp; slimReaderWriterLock,
+            const TimeSpan&amp; timeout, bool sharedMode = false ) const;
+</code></pre>
+
+<p>The first and second overload sleeps on the specified condition variable 
+and releases the specified critical section as an atomic operation.</p>
+
+<p>The third and fourth overload sleeps on the specified condition variable 
+and releases the specified <code class="language-plaintext highlighter-rouge">SlimReaderWriterLock</code> as an atomic operation. 
+If <code class="language-plaintext highlighter-rouge">sharedMode</code> is true, the lock is held in share mode, otherwise the 
+lock must be held in exclusive mode when calling the functions.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">timeout</code> argument specifies the interval after which the functions 
+returns, regardless of the outcome of the <code class="language-plaintext highlighter-rouge">Sleep</code>. The function returns 
+<code class="language-plaintext highlighter-rouge">false</code> if a timeout occurred, <code class="language-plaintext highlighter-rouge">true</code> otherwise.</p>
+
+<h2 id="synchronizationbarrier">SynchronizationBarrier</h2>
+
+<p>A synchronization barrier allows multiple threads to wait until all 
+threads have reached a stage of execution where they wait until the 
+last thread arrives, and then they all continue their execution.</p>
+
+<p><code class="language-plaintext highlighter-rouge">SynchronizationBarrier</code> class wraps a <code class="language-plaintext highlighter-rouge">SYNCHRONIZATION_BARRIER</code> struct, 
+adding no additional data members. The class is not copy constructible, 
+or copy assignable, or move constructible or move assignable. 
+The default constructor initializes the <code class="language-plaintext highlighter-rouge">SYNCHRONIZATION_BARRIER</code> 
+structure.</p>
+
+<h3 id="constructors-3">Constructors</h3>
+<p>SynchronizationBarrier has a single constructor:</p>
+
+<pre><code class="language-C++">explicit SynchronizationBarrier( UInt32 totalThreads, Int32 spinCount = -1 );
+</code></pre>
+
+<p>The <code class="language-plaintext highlighter-rouge">totalThreads</code> argument specifies the number of threads that 
+must enter the barrier, before all the threads are allowed to 
+continue.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">spinCount</code> argument specifies the number of times threads 
+will spin while waiting for other threads to arrive at the barrier. 
+If this parameter is -1, the thread spins 2000 times. When the 
+thread exceeds <code class="language-plaintext highlighter-rouge">spinCount</code>, the thread blocks unless it called 
+<code class="language-plaintext highlighter-rouge">Enter(…)</code> with <code class="language-plaintext highlighter-rouge">SynchronizationBarrierFlags::SpinOnly</code>.</p>
+
+<h3 id="enter">Enter</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">Enter(…)</code> function causes the calling thread to wait until 
+the required number of threads have entered the barrier.</p>
+
+<h2 id="timerqueue">TimerQueue</h2>
+
+<p><code class="language-plaintext highlighter-rouge">TimerQueue</code> is a wrapper around the Windows timer queue. The 
+implementation makes it easy to specify the callback using 
+anything that is invokable, and an arbitrary number of arguments 
+can be passed to the invokable implementation in the same way 
+parameters can be passed to <code class="language-plaintext highlighter-rouge">std::thread</code>.</p>
+
+<pre><code class="language-C++">size_t counter = 0;
+EventWaitHandle event( true );
+
+TimerQueue timerQueue;
+auto timer = timerQueue.CreateTimer( 100, 100, TimerQueueTimerFlags::Default, 
+                                    [&amp;counter,&amp;event]( )
+{
+    counter++;
+    if ( counter == 5 )
+    {
+        event.Signal( );
+    }
+} );
+
+event.Wait( );
+timer.Close( );
+timerQueue.Close( );
+</code></pre>
+
 
   </div>
 

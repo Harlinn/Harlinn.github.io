@@ -134,7 +134,7 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Exp( T x ) noexcept
 <p>For some functions like <code class="language-plaintext highlighter-rouge">Tan</code>, the performance of the <code class="language-plaintext highlighter-rouge">constexpr</code> path , varies greatly.</p>
 
 <p><code class="language-plaintext highlighter-rouge">Math::Internal::TanImpl</code> usually performs about 40 % worse than <code class="language-plaintext highlighter-rouge">std::tan</code>, but in approximately 1 
-out of every 5<sup>th</sup> run of the benchmarks, the <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Tan</code> beats
+out of every 10<sup>th</sup> run of the benchmarks, the <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Tan</code> beats
 <code class="language-plaintext highlighter-rouge">std::tan</code>. When the runtime performance of the <code class="language-plaintext highlighter-rouge">constexpr</code> path is unstable and performs worse 
 than the standard implementations in more than 1 out of every 4<sup>th</sup> run of 
 the benchmarks, the functions in <code class="language-plaintext highlighter-rouge">HCCMath.h</code> always call the standard 
