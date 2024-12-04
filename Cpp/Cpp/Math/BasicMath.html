@@ -58,6 +58,13 @@ functions can be <code class="language-plaintext highlighter-rouge">constexpr</c
 and can be verified by building and executing <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Benchmarks/Math/BasicMathBenchmarks">BasicMathBenchmarks</a> 
 included in the <a href="/Cpp/Harlinn.Windows/Harlinn.Windows.html">Harlinn.Windows solution</a>.</p>
 
+<h2 id="pbrto-a-micro-optimized-raytracing-app">PBRTO a micro optimized raytracing app</h2>
+
+<p>PBRTO is a micro optimized version of <a href="https://github.com/mmp/pbrt-v4">PBRT-v4</a>, created as an example of how the 
+functionality in <code class="language-plaintext highlighter-rouge">HCCMath.h</code> and <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> can be used to optimize the 
+performance of a real, computationally intensive, app. It’s now about <code class="language-plaintext highlighter-rouge">35</code> % 
+faster than the release build of the original PBRT. <a href="pbrto.html">more…</a></p>
+
 <h2 id="rationale">Rationale</h2>
 
 <p>The functions was initially developed to enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of mathematical expressions, because nothing
@@ -90,34 +97,6 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Abs( T val ) noexcept
 
 <p>While calling the standard C/C++ implementation at runtime, unless the benchmarks prove 
 that the <code class="language-plaintext highlighter-rouge">constexpr</code> , or some other, implementation - performs consistently better.</p>
-
-<p>Initial expectations for the runtime performance of the code that was implemented 
-for <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation was low, but to my surprise it turned out that several 
-of the functions outperformed the standard C and C++ implementations. The <code class="language-plaintext highlighter-rouge">constexpr</code> 
-implementation of <code class="language-plaintext highlighter-rouge">Sin</code> outperforms <code class="language-plaintext highlighter-rouge">std::sin</code> by approximately <code class="language-plaintext highlighter-rouge">100</code> % for single 
-precision floating point numbers:</p>
-
-<pre><code class="language-C++">    template&lt;typename T&gt;
-        requires IsFloatingPoint&lt;T&gt;
-    constexpr inline std::remove_cvref_t&lt;T&gt; Sin( T x ) noexcept
-    {
-        if ( std::is_constant_evaluated( ) )
-        {
-            return Math::Internal::SinImpl( x );
-        }
-        else
-        {
-            if constexpr ( std::is_same_v&lt;std::remove_cvref_t&lt;T&gt;, float&gt; )
-            {
-                return Math::Internal::SinImpl( x );
-            }
-            else
-            {
-                return std::sin( x );
-            }
-        }
-    }
-</code></pre>
 
 <p>While <code class="language-plaintext highlighter-rouge">Exp</code> outperforms <code class="language-plaintext highlighter-rouge">std::exp</code> by <code class="language-plaintext highlighter-rouge">1200</code> % for double 
 precision floating point numbers, and by <code class="language-plaintext highlighter-rouge">1000</code> % for single 
@@ -222,9 +201,13 @@ point values, and by approximately <code class="language-plaintext highlighter-r
 point values, and by approximately <code class="language-plaintext highlighter-rouge">1300</code> % for single precision floating point values.</p>
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">Hypot</code> computes square root of the sum of the squares of two numbers.</p>
+    <p><code class="language-plaintext highlighter-rouge">Hypot</code> computes square root of the sum of the squares of two or three numbers.</p>
 
-    <p>At runtime <code class="language-plaintext highlighter-rouge">Hypot</code> calls <code class="language-plaintext highlighter-rouge">std::hypot</code>.</p>
+    <p>The two argument version of <code class="language-plaintext highlighter-rouge">Hypot</code> outperforms <code class="language-plaintext highlighter-rouge">std::hypot</code> by approximately <code class="language-plaintext highlighter-rouge">270</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">230</code> % for single precision floating point values.</p>
+
+    <p>The three argument version of <code class="language-plaintext highlighter-rouge">Hypot</code> outperforms <code class="language-plaintext highlighter-rouge">std::hypot</code> by approximately <code class="language-plaintext highlighter-rouge">190</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">320</code> % for single precision floating point values.</p>
   </li>
 </ul>
 
@@ -237,16 +220,20 @@ the trigonometric functions, especially for single precision floating point valu
   <li>
     <p><code class="language-plaintext highlighter-rouge">Sin</code> computes the sine of its argument given in radians.</p>
 
-    <p><code class="language-plaintext highlighter-rouge">Sin</code> outperforms <code class="language-plaintext highlighter-rouge">std::sin</code> by approximately <code class="language-plaintext highlighter-rouge">100</code> % for single precision 
-floating point values, and calls <code class="language-plaintext highlighter-rouge">std::sin</code> for double precision 
-floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">Sin</code> calls <code class="language-plaintext highlighter-rouge">std::sin</code> at runtime for both single and double precision values.</p>
+
+    <p>The <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Sin</code> outperforms <code class="language-plaintext highlighter-rouge">std::sin</code> by approximately <code class="language-plaintext highlighter-rouge">100</code> % for single precision 
+floating point values, but performs worse when both the sine and the cosine
+is calculated for the same value.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">Cos</code> computes the cosine of its argument given in radians.</p>
 
-    <p><code class="language-plaintext highlighter-rouge">Cos</code> outperforms <code class="language-plaintext highlighter-rouge">std::cos</code> by approximately <code class="language-plaintext highlighter-rouge">110</code> % for single precision 
-floating point values, and calls <code class="language-plaintext highlighter-rouge">std::cos</code> for double precision 
-floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">Cos</code> calls <code class="language-plaintext highlighter-rouge">std::cos</code> at runtime for both single and double precision values.</p>
+
+    <p>The <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Cos</code> outperforms <code class="language-plaintext highlighter-rouge">std::cos</code> by approximately <code class="language-plaintext highlighter-rouge">110</code> % for single precision 
+floating point values, but performs worse when both the sine and the cosine
+is calculated for the same value.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">Tan</code> computes the tangent of its argument given in radians.</p>
@@ -521,11 +508,15 @@ BenchmarkFloatInternalExpImpl        4.98 ns         3.81 ns    172307692
 BenchmarkFloatExp                    4.75 ns         3.72 ns    172307692  (( 40.8 - 3.72)/3.72)*100 = 996.77 %
 BenchmarkFloatStdExp                 53.0 ns         40.8 ns     14933333
 BenchmarkDoubleInternalHypot         7.47 ns         5.16 ns    112000000
-BenchmarkDoubleHypot                 7.74 ns         6.98 ns     89600000  (( 5.72 - 6.98)/6.98)*100 = -18.05 %
+BenchmarkDoubleHypot                 1.79 ns         1.54 ns    640000000  (( 5.72 - 1.54)/1.54)*100 = 271.42 %
 BenchmarkDoubleStdHypot              6.90 ns         5.72 ns    112000000
 BenchmarkFloatInternalHypot          6.35 ns         5.72 ns    112000000
-BenchmarkFloatHypot                  6.67 ns         5.16 ns    100000000  (( 5.00 - 5.16)/5.16)*100 = -3.1 %
+BenchmarkFloatHypot                  2.00 ns         1.51 ns    497777778  (( 5.00 - 1.51)/1.51)*100 = 231.13 %
 BenchmarkFloatStdHypot               6.95 ns         5.00 ns    100000000
+BenchmarkDoubleHypot3                3.28 ns         2.23 ns    280000000  (( 6.56 - 2.23)/2.23)*100 = 194.17 %
+BenchmarkDoubleStdHypot3             7.20 ns         6.56 ns    112000000
+BenchmarkFloatHypot3                 2.04 ns         1.46 ns    448000000  (( 6.26 - 1.46)/1.46)*100 = 328.77 %
+BenchmarkFloatStdHypot3              6.81 ns         6.26 ns    172307692
 BenchmarkDoubleInternalLog           7.62 ns         5.87 ns    138416552
 BenchmarkDoubleLog                   7.05 ns         5.72 ns    112000000  (( 20.9 - 5.72)/5.72)*100 = 265.38 %
 BenchmarkDoubleStdLog                29.8 ns         20.9 ns     34461538
