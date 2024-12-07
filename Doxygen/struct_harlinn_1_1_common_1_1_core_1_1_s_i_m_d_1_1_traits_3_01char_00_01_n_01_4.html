@@ -109,6 +109,16 @@ $(function(){initNavTree('struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_tra
 <div class="contents">
 
 <p><code>#include &lt;HCCSIMD.h&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Harlinn::Common::Core::SIMD::Traits&lt; char, N &gt;:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01char_00_01_n_01_4__inherit__graph.svg" width="179" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Harlinn::Common::Core::SIMD::Traits&lt; char, N &gt;:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01char_00_01_n_01_4__coll__graph.svg" width="179" height="124"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -116,6 +126,8 @@ Public Types</h2></td></tr>
 <tr class="separator:a54ee09c5b4573dc6767014638beba198"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abba171b888ae9585da8c564e0f8c96a6" id="r_abba171b888ae9585da8c564e0f8c96a6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abba171b888ae9585da8c564e0f8c96a6">SIMDType</a> = typename DataTypeTraits::Type</td></tr>
 <tr class="separator:abba171b888ae9585da8c564e0f8c96a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e08ee3e615ccc8ee9f219a8af76a1a" id="r_a28e08ee3e615ccc8ee9f219a8af76a1a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28e08ee3e615ccc8ee9f219a8af76a1a">ArrayType</a> = std::array&lt;<a class="el" href="#a54ee09c5b4573dc6767014638beba198">Type</a>, N&gt;</td></tr>
+<tr class="separator:a28e08ee3e615ccc8ee9f219a8af76a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -129,8 +141,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ab9dd59e9b34c666c921d509bc0ea1757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86fa0b2868068fc4f5221ba94d9e7be0" id="r_a86fa0b2868068fc4f5221ba94d9e7be0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86fa0b2868068fc4f5221ba94d9e7be0">Store</a> (<a class="el" href="#a54ee09c5b4573dc6767014638beba198">Type</a> *dest, <a class="el" href="#abba171b888ae9585da8c564e0f8c96a6">SIMDType</a> src) noexcept</td></tr>
 <tr class="separator:a86fa0b2868068fc4f5221ba94d9e7be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacad6a161cd1bb3b5e3335c74e247519" id="r_aacad6a161cd1bb3b5e3335c74e247519"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacad6a161cd1bb3b5e3335c74e247519">UnaligedStore</a> (<a class="el" href="#a54ee09c5b4573dc6767014638beba198">Type</a> *dest, <a class="el" href="#abba171b888ae9585da8c564e0f8c96a6">SIMDType</a> src) noexcept</td></tr>
-<tr class="separator:aacad6a161cd1bb3b5e3335c74e247519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37da64ed252ada378c9d93b56148388" id="r_ad37da64ed252ada378c9d93b56148388"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad37da64ed252ada378c9d93b56148388">UnalignedStore</a> (<a class="el" href="#a54ee09c5b4573dc6767014638beba198">Type</a> *dest, <a class="el" href="#abba171b888ae9585da8c564e0f8c96a6">SIMDType</a> src) noexcept</td></tr>
+<tr class="separator:ad37da64ed252ada378c9d93b56148388"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03f3430f2aa9dfcf5541ca14a50c4c06" id="r_a03f3430f2aa9dfcf5541ca14a50c4c06"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#abba171b888ae9585da8c564e0f8c96a6">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03f3430f2aa9dfcf5541ca14a50c4c06">Add</a> (<a class="el" href="#abba171b888ae9585da8c564e0f8c96a6">SIMDType</a> lhs, <a class="el" href="#abba171b888ae9585da8c564e0f8c96a6">SIMDType</a> rhs) noexcept</td></tr>
 <tr class="memdesc:a03f3430f2aa9dfcf5541ca14a50c4c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two int8 vectors.  <br /></td></tr>
 <tr class="separator:a03f3430f2aa9dfcf5541ca14a50c4c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,6 +158,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:abe17f2d527e649f6a475758410d001b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a510ce83f23d7897ce46cb681f1c77e2f" id="r_a510ce83f23d7897ce46cb681f1c77e2f"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a510ce83f23d7897ce46cb681f1c77e2f">SIMDTypeSize</a> = DataTypeTraits::Size</td></tr>
 <tr class="separator:a510ce83f23d7897ce46cb681f1c77e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d8555dda086d2ba33579db2aa42f4d5" id="r_a8d8555dda086d2ba33579db2aa42f4d5"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d8555dda086d2ba33579db2aa42f4d5">SIMDTypeCapacity</a> = <a class="el" href="#ac6a7fee875d1dec67eec404914fa45e6">UseShortSIMDType</a> ? 16 : 32</td></tr>
+<tr class="separator:a8d8555dda086d2ba33579db2aa42f4d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41ab76d43b970bc50657f63465119684" id="r_a41ab76d43b970bc50657f63465119684"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41ab76d43b970bc50657f63465119684">Capacity</a> = <a class="el" href="#ac6a7fee875d1dec67eec404914fa45e6">UseShortSIMDType</a> ? 16 : ( ( N + 31 ) &amp; static_cast&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt;( -32 ) )</td></tr>
 <tr class="separator:a41ab76d43b970bc50657f63465119684"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99c3c2c09c19a2e74713d35c33aef3f0" id="r_a99c3c2c09c19a2e74713d35c33aef3f0"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99c3c2c09c19a2e74713d35c33aef3f0">SIMDIterations</a> = ( <a class="el" href="#a41ab76d43b970bc50657f63465119684">Capacity</a> * sizeof( <a class="el" href="#a54ee09c5b4573dc6767014638beba198">Type</a> ) ) / <a class="el" href="#a510ce83f23d7897ce46cb681f1c77e2f">SIMDTypeSize</a></td></tr>
@@ -162,6 +176,22 @@ Static Private Attributes</h2></td></tr>
 <tr class="separator:ac6a7fee875d1dec67eec404914fa45e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a28e08ee3e615ccc8ee9f219a8af76a1a" name="a28e08ee3e615ccc8ee9f219a8af76a1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28e08ee3e615ccc8ee9f219a8af76a1a">&#9670;&#160;</a></span>ArrayType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; char, N &gt;::ArrayType = std::array&lt;<a class="el" href="#a54ee09c5b4573dc6767014638beba198">Type</a>, N&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2543074d5244930c8814bf14986b0a26" name="a2543074d5244930c8814bf14986b0a26"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2543074d5244930c8814bf14986b0a26">&#9670;&#160;</a></span>DataTypeTraits</h2>
 
@@ -390,37 +420,6 @@ template&lt;size_t N&gt; </div>
 
 </div>
 </div>
-<a id="aacad6a161cd1bb3b5e3335c74e247519" name="aacad6a161cd1bb3b5e3335c74e247519"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aacad6a161cd1bb3b5e3335c74e247519">&#9670;&#160;</a></span>UnaligedStore()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;size_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; char, N &gt;::UnaligedStore </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#a54ee09c5b4573dc6767014638beba198">Type</a> *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#abba171b888ae9585da8c564e0f8c96a6">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>src</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ab9dd59e9b34c666c921d509bc0ea1757" name="ab9dd59e9b34c666c921d509bc0ea1757"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab9dd59e9b34c666c921d509bc0ea1757">&#9670;&#160;</a></span>UnalignedLoad()</h2>
 
@@ -437,6 +436,37 @@ template&lt;size_t N&gt; </div>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#a54ee09c5b4573dc6767014638beba198">Type</a> *</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad37da64ed252ada378c9d93b56148388" name="ad37da64ed252ada378c9d93b56148388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad37da64ed252ada378c9d93b56148388">&#9670;&#160;</a></span>UnalignedStore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; char, N &gt;::UnalignedStore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a54ee09c5b4573dc6767014638beba198">Type</a> *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#abba171b888ae9585da8c564e0f8c96a6">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>src</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -561,6 +591,30 @@ template&lt;size_t N&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; char, N &gt;::SIMDIterations = ( <a class="el" href="#a41ab76d43b970bc50657f63465119684">Capacity</a> * sizeof( <a class="el" href="#a54ee09c5b4573dc6767014638beba198">Type</a> ) ) / <a class="el" href="#a510ce83f23d7897ce46cb681f1c77e2f">SIMDTypeSize</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d8555dda086d2ba33579db2aa42f4d5" name="a8d8555dda086d2ba33579db2aa42f4d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d8555dda086d2ba33579db2aa42f4d5">&#9670;&#160;</a></span>SIMDTypeCapacity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; char, N &gt;::SIMDTypeCapacity = <a class="el" href="#ac6a7fee875d1dec67eec404914fa45e6">UseShortSIMDType</a> ? 16 : 32</td>
         </tr>
       </table>
   </td>

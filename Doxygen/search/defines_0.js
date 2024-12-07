@@ -44,7 +44,7 @@ var searchData=
   ['_5f_5fhccloggeroptions_5fh_5f_5f_41',['__HCCLOGGEROPTIONS_H__',['../_h_c_c_logger_options_8h.html#aeee9701ed905feb3f6a1f57b6af9651e',1,'HCCLoggerOptions.h']]],
   ['_5f_5fhcclogging_5fh_5f_5f_42',['__HCCLOGGING_H__',['../_h_c_c_logging_8h.html#a6bf9758207875cc45d0d35ec83df1b02',1,'HCCLogging.h']]],
   ['_5f_5fhccmath_5fh_5f_5f_43',['__HCCMATH_H__',['../_h_c_c_math_8h.html#afbcd9169731c9fcb587f9abb813f3d19',1,'HCCMath.h']]],
-  ['_5f_5fhccmatrix_5fh_5f_5f_44',['__HCCMATRIX_H__',['../_h_c_c_matrix_8h.html#a43e697fdf45c23bef0ffc520166a2b46',1,'HCCMatrix.h']]],
+  ['_5f_5fhccmatrix_5fh_5f_5f_44',['__HCCMATRIX_H__',['../_h_c_c_vector_math_8h.html#a43e697fdf45c23bef0ffc520166a2b46',1,'HCCVectorMath.h']]],
   ['_5f_5fhccmemory_5fh_5f_5f_45',['__HCCMEMORY_H__',['../_h_c_c_memory_8h.html#ac49053ddb554a47085c483d4d145dfea',1,'HCCMemory.h']]],
   ['_5f_5fhccmeta_5fh_5f_5f_46',['__HCCMETA_H__',['../_h_c_c_meta_8h.html#a18260e8d42a30de0a2f95468eb47e097',1,'HCCMeta.h']]],
   ['_5f_5fhccobj_5fh_5f_5f_47',['__HCCOBJ_H__',['../_h_c_c_obj_8h.html#ae103541a1abccea64204e50ff055ece8',1,'HCCObj.h']]],

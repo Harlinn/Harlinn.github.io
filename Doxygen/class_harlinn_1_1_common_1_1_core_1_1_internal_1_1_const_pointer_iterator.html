@@ -169,6 +169,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa5896f2824bc8ecbfea7b05ad0a4390c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0eaca79cb14b0e7d8c72ae2b9a42e6d" id="r_ac0eaca79cb14b0e7d8c72ae2b9a42e6d"><td class="memItemLeft" align="right" valign="top">constexpr std::strong_ordering&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0eaca79cb14b0e7d8c72ae2b9a42e6d">operator&lt;=&gt;</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_const_pointer_iterator.html">ConstPointerIterator</a> &amp;other) const noexcept</td></tr>
 <tr class="separator:ac0eaca79cb14b0e7d8c72ae2b9a42e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeda07206192d721783829ea0fcc8fb0" id="r_aeeda07206192d721783829ea0fcc8fb0"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeeda07206192d721783829ea0fcc8fb0">operator==</a> (nullptr_t) const noexcept</td></tr>
+<tr class="separator:aeeda07206192d721783829ea0fcc8fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6087240b88194c57fbecc6e90d001612" id="r_a6087240b88194c57fbecc6e90d001612"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6087240b88194c57fbecc6e90d001612">operator!=</a> (nullptr_t) const noexcept</td></tr>
+<tr class="separator:a6087240b88194c57fbecc6e90d001612"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -357,7 +361,7 @@ template&lt;typename ContainerT &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -396,6 +400,33 @@ template&lt;typename ContainerT &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6087240b88194c57fbecc6e90d001612" name="a6087240b88194c57fbecc6e90d001612"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6087240b88194c57fbecc6e90d001612">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ContainerT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_const_pointer_iterator.html">Harlinn::Common::Core::Internal::ConstPointerIterator</a>&lt; ContainerT &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">nullptr_t</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="abb95bb36534adfc772e1e6225f894c1c" name="abb95bb36534adfc772e1e6225f894c1c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb95bb36534adfc772e1e6225f894c1c">&#9670;&#160;</a></span>operator*()</h2>
 
@@ -721,7 +752,7 @@ template&lt;typename ContainerT &gt; </div>
 </div>
 </div>
 <a id="aa5896f2824bc8ecbfea7b05ad0a4390c" name="aa5896f2824bc8ecbfea7b05ad0a4390c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5896f2824bc8ecbfea7b05ad0a4390c">&#9670;&#160;</a></span>operator==()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5896f2824bc8ecbfea7b05ad0a4390c">&#9670;&#160;</a></span>operator==() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -735,6 +766,33 @@ template&lt;typename ContainerT &gt; </div>
           <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_const_pointer_iterator.html">Harlinn::Common::Core::Internal::ConstPointerIterator</a>&lt; ContainerT &gt;::operator== </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_const_pointer_iterator.html">ConstPointerIterator</a>&lt; ContainerT &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">nodiscard</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeeda07206192d721783829ea0fcc8fb0" name="aeeda07206192d721783829ea0fcc8fb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeda07206192d721783829ea0fcc8fb0">&#9670;&#160;</a></span>operator==() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ContainerT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_const_pointer_iterator.html">Harlinn::Common::Core::Internal::ConstPointerIterator</a>&lt; ContainerT &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">nullptr_t</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>

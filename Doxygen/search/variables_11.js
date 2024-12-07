@@ -136,12 +136,11 @@ var searchData=
   ['rovssupported_133',['ROVsSupported',['../struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#acfc139f09c5c1076ed8d44187c777e59',1,'Harlinn::Windows::Graphics::D3D12::FeatureDataD3D12Options']]],
   ['rowcount_5f_134',['rowCount_',['../class_harlinn_1_1_o_c_i_1_1_array_data_reader.html#aeae087410fec9f9448aa199339b97ff4',1,'Harlinn::OCI::ArrayDataReader']]],
   ['rowpitch_135',['RowPitch',['../struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_info.html#af95c3333a8070c763ebc823921da1f3d',1,'Harlinn::Windows::Graphics::D3D12::SubresourceInfo::RowPitch'],['../struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_footprint.html#af664cc68b9667abe6bcb02062ead7393',1,'Harlinn::Windows::Graphics::D3D12::SubresourceFootprint::RowPitch']]],
-  ['rows_136',['Rows',['../class_harlinn_1_1_common_1_1_core_1_1_math_1_1_matrix_base.html#afc1afb8c4d755c6c52f8099cf0e40c14',1,'Harlinn::Common::Core::Math::MatrixBase']]],
-  ['rowsfetched_5f_137',['rowsFetched_',['../class_harlinn_1_1_o_c_i_1_1_data_reader_base.html#a8133729b5bdb637275f0af1f516fca2b',1,'Harlinn::OCI::DataReaderBase']]],
-  ['rowversion_5f_138',['rowVersion_',['../class_harlinn_1_1_common_1_1_core_1_1_data_1_1_deleted_data.html#a48af93a93cf1590aa9c6e4d2e9f49ec2',1,'Harlinn::Common::Core::Data::DeletedData']]],
-  ['rpcid_5f_139',['rpcId_',['../class_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_package.html#adced67f92de0d4e1890f12ce71cd88a8',1,'Harlinn::Common::Core::Security::SecurityPackage']]],
-  ['rpcidnone_140',['RpcIdNone',['../class_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_package.html#a4efa83cd990552d9c2a84ac676b26151',1,'Harlinn::Common::Core::Security::SecurityPackage']]],
-  ['rtformats_141',['RTFormats',['../struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_target_format_array.html#ae0671a7d4ed35b0ebf182378c06b069e',1,'Harlinn::Windows::Graphics::D3D12::RenderTargetFormatArray']]],
-  ['rtvformats_142',['RTVFormats',['../struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_pipeline_state_desc.html#aec836b5b9d87662f681f67083fe486ea',1,'Harlinn::Windows::Graphics::D3D12::GraphicsPipelineStateDesc']]],
-  ['runtimebufferconverter_5f_143',['runtimeBufferConverter_',['../class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#aa2ade5acc1657770cabc7d068e110ff1',1,'Harlinn::Common::Core::Logging::LogManager']]]
+  ['rowsfetched_5f_136',['rowsFetched_',['../class_harlinn_1_1_o_c_i_1_1_data_reader_base.html#a8133729b5bdb637275f0af1f516fca2b',1,'Harlinn::OCI::DataReaderBase']]],
+  ['rowversion_5f_137',['rowVersion_',['../class_harlinn_1_1_common_1_1_core_1_1_data_1_1_deleted_data.html#a48af93a93cf1590aa9c6e4d2e9f49ec2',1,'Harlinn::Common::Core::Data::DeletedData']]],
+  ['rpcid_5f_138',['rpcId_',['../class_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_package.html#adced67f92de0d4e1890f12ce71cd88a8',1,'Harlinn::Common::Core::Security::SecurityPackage']]],
+  ['rpcidnone_139',['RpcIdNone',['../class_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_package.html#a4efa83cd990552d9c2a84ac676b26151',1,'Harlinn::Common::Core::Security::SecurityPackage']]],
+  ['rtformats_140',['RTFormats',['../struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_target_format_array.html#ae0671a7d4ed35b0ebf182378c06b069e',1,'Harlinn::Windows::Graphics::D3D12::RenderTargetFormatArray']]],
+  ['rtvformats_141',['RTVFormats',['../struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_pipeline_state_desc.html#aec836b5b9d87662f681f67083fe486ea',1,'Harlinn::Windows::Graphics::D3D12::GraphicsPipelineStateDesc']]],
+  ['runtimebufferconverter_5f_142',['runtimeBufferConverter_',['../class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#aa2ade5acc1657770cabc7d068e110ff1',1,'Harlinn::Common::Core::Logging::LogManager']]]
 ];

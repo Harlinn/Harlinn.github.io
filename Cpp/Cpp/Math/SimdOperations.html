@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Single Instruction Multiple Data (SIMD) | Harlinn</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Single Instruction Multiple Data (SIMD)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is my personal Github site," />
+<meta property="og:description" content="This is my personal Github site," />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Cpp/Math/SimdOperations.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Cpp/Math/SimdOperations.html" />
+<meta property="og:site_name" content="Harlinn" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Single Instruction Multiple Data (SIMD)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal Github site,","headline":"Single Instruction Multiple Data (SIMD)","url":"https://harlinn.github.io/Cpp/Cpp/Math/SimdOperations.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Harlinn</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Cpp/Cpp.html">C++</a><a class="page-link" href="/Databases/Databases.html">Databases</a><a class="page-link" href="/DotNet/DotNet.html">.Net</a><a class="page-link" href="/Java/Java.html">Java</a><a class="page-link" href="/Julia/Julia.html">Julia</a><a class="page-link" href="/Python/Python.html">Python</a><a class="page-link" href="/R/R.html">R</a><a class="page-link" href="/Rust/Rust.html">Rust</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Single Instruction Multiple Data (SIMD)</h1>
+  </header>
+
+  <div class="post-content">
+    <p>Single Instruction Multiple Data (SIMD) is a parallel computing technolgy 
+where a single instruction is executed simultaneously on multiple data 
+points. The technolgy is often used to implement artificial intelligence (AI), 
+machine learning (ML), and other data science solutions. SIMD is a key 
+feature of modern processors, enabling efficient data processing and increasing 
+computational performance. As demand for high-performance computing continues 
+to grow, understanding and using SIMD will be increasingly important for 
+optimizing applications and algorithms.</p>
+
+<p>The interface to SIMD operations in <a href="/Cpp/Harlinn.Windows/Harlinn.Common.Core/Harlinn.Common.Core.html">Harlinn.Common.Core</a> 
+is provided in <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> contained within the <code class="language-plaintext highlighter-rouge">namespace Harlinn::Common::Core::SIMD</code> namespace through a set of specializations
+of the template:</p>
+
+<pre><code class="language-C++">template&lt;typename T, size_t N&gt;
+struct Traits : public std::false_type
+{
+    using Type = std::remove_cvref_t&lt;T&gt;;
+};
+</code></pre>
+<p>Where <code class="language-plaintext highlighter-rouge">T</code> is the type of the values to use in the computations, and <code class="language-plaintext highlighter-rouge">N</code> is 
+the number of valid elements in the SIMD type. The SIMD type is a representation 
+of a CPU register used for SIMD operations. The Intel/AMD x64 architecture
+provides several SIMD types:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__m128</code> types: These types are used with the Streaming SIMD Extensions and Streaming SIMD Extensions 2 instructions intrinsics, and maps to the XMM[0-7] registers.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">__m128</code>: Holds four 32-bit floating point values.</li>
+      <li><code class="language-plaintext highlighter-rouge">__m128i</code>: Holds sixteen 8-bit, eight 16-bit, four 32-bit, or two 64-bit integer values.</li>
+      <li><code class="language-plaintext highlighter-rouge">__m128d</code>: Holds two 64-bit floating point values.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">__m256</code> types: These types are used with the AVX/AVX2 extensions, and maps to the YMM[0-15] registers.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">__m256</code>: Holds eight 32-bit floating point values.</li>
+      <li><code class="language-plaintext highlighter-rouge">__m256i</code>: Holds thirty-two 8-bit, sixteen 16-bit, eight 32-bit, or four 64-bit integer values.</li>
+      <li><code class="language-plaintext highlighter-rouge">__m256d</code>: Holds four 64-bit double precision floating point values.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">__m512</code> types: These types are used with the AVX 512 extensions, and maps to the ZMM[0-31] registers.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">__m512</code>: Holds sixteen 32-bit floating point values.</li>
+      <li><code class="language-plaintext highlighter-rouge">__m512i</code>: Holds sixty-four 8-bit, thirty-two 16-bit, sixteen 32-bit, or eight 64-bit integer values.</li>
+      <li><code class="language-plaintext highlighter-rouge">__m512d</code>: Holds eight 64-bit double precision floating point values.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>These data types are not basic C/C++ data types, and have several usage restrictions:</p>
+
+<ul>
+  <li>Can only be used on either side of an assignment, as a return value, or as a parameter. Cannot be used in regular arithmetic expressions <code class="language-plaintext highlighter-rouge">+</code>, <code class="language-plaintext highlighter-rouge">-</code>, <code class="language-plaintext highlighter-rouge">*</code>, <code class="language-plaintext highlighter-rouge">/</code>, etc.</li>
+  <li>Can be used as objects in aggregates, such as unions, to access the byte elements and structures.</li>
+  <li>Can only be operated on using intrinsic functions implemented by the compiler.</li>
+</ul>
+
+<p>Before doing any operations on SIMD type variables, they must be loaded using special intrinsic functions:</p>
+
+<pre><code class="language-C++">_mm256_load_ps( ptrToFloats );
+</code></pre>
+
+<p>Where, in this case, <code class="language-plaintext highlighter-rouge">ptrToFloats</code> is a 32 byte aligned pointer to 8 single precision floating point values.</p>
+
+<p>The C/C++ compiler handles register allocation and instruction scheduling, but using the SIMD extensions can be complex:</p>
+
+<pre><code class="language-C++">auto rmm1 = _mm_shuffle_ps( a, a, _MM_SHUFFLE( 3, 0, 2, 1 ) );
+auto rmm2 = _mm_shuffle_ps( b, b, _MM_SHUFFLE( 3, 1, 0, 2 ) );
+auto rmm3 = _mm_mul_ps( rmm1, b );
+auto rmm4 = _mm_mul_ps( rmm1, rmm2 );
+auto rmm5 = _mm_shuffle_ps( rmm3, rmm3, _MM_SHUFFLE( 3, 0, 2, 1 ) );
+return _mm_sub_ps( rmm4, rmm5 );
+</code></pre>
+
+<p>The above computes the cross product between two vectors, <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code>, each containing 
+three 32-bit floating point values.</p>
+
+<p>Using the <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;float,3&gt;</code>, reduces the above to:</p>
+
+<pre><code class="language-C++">return SIMD::Traits&lt;float,3&gt;( a, b );
+</code></pre>
+
+<p>While:</p>
+
+<pre><code class="language-C++">return SIMD::Traits&lt;float,2&gt;( a, b );
+</code></pre>
+
+<p>calculates the cross product for vectors with only two elements, expanding to:</p>
+
+<pre><code class="language-C++">auto rmm1 = _mm_permute_ps( b, _MM_SHUFFLE( 0, 1, 0, 1 ) );
+rmm1 = _mm_mul_ps( rmm1, a );
+auto rmm2 = _mm_permute_ps( rmm1, _MM_SHUFFLE( 1, 1, 1, 1 ) );
+rmm1 = _mm_sub_ss( rmm1, rmm2 );
+return _mm_permute_ps( rmm1, _MM_SHUFFLE( 0, 0, 0, 0 ) );
+</code></pre>
+
+<p>Both operates on a <code class="language-plaintext highlighter-rouge">__m128</code> holding four 32-bit floating point values, but 
+last one calculates the cross product using only the values contained within the two
+lowest order positions of the <code class="language-plaintext highlighter-rouge">__m128</code>.</p>
+
+<p>The purpose of specializations of <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T, N&gt;</code> is to have a mechanism for
+selecting implementations that are implemented for <code class="language-plaintext highlighter-rouge">T</code> and optimized for <code class="language-plaintext highlighter-rouge">N</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T, N&gt;</code> specializations are used to implement a set of C++
+classes that really simplifies SIMD development. These classes are contained in 
+the <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code> header file.</p>
+
+<pre><code class="language-C++">using Vector = Math::Vector&lt;float, 4&gt;;
+
+Vector v1( 1.0f, 2.0f, 3.f, 1.0f );
+Vector v2( 1.0f, 2.0f, 3.f, 1.0f );
+Vector v3 = v1 + v2 + v1 + v2 + v1 + v2;
+
+</code></pre>
+
+<p>Which the compiler turns into:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    using Vector = Math::Vector&lt;float, 4&gt;;
+
+    Vector v1( 1.0f, 2.0f, 3.f, 1.0f );
+00007FF6C7F162D8  vmovdqu     xmm4,xmmword ptr [__xmm@3f80000040400000400000003f800000 (07FF6C8387F60h)]  
+    Vector v2( 1.0f, 2.0f, 3.f, 1.0f );
+    Vector v3 = v1 + v2 + v1 + v2 + v1 + v2;
+00007FF6C7F162E0  vaddps      xmm0,xmm4,xmm4  
+00007FF6C7F162E4  vaddps      xmm1,xmm0,xmm4  
+00007FF6C7F162E8  vaddps      xmm2,xmm1,xmm4  
+00007FF6C7F162EC  vaddps      xmm3,xmm2,xmm4  
+00007FF6C7F162F0  vaddps      xmm6,xmm3,xmm4  
+</code></pre></div></div>
+
+<p>The compiler detects that the two vectors are identical, and only
+do a single load of the data into xmm4, and then generates 
+code for the additions. Obviously <code class="language-plaintext highlighter-rouge">v1</code> could just be multiplied by 6.</p>
+
+<p>Ideally, the compiler would generate optimal code for any computations,
+and it usually comes close - and when enabled using the <code class="language-plaintext highlighter-rouge">/arch:AVX</code>, <code class="language-plaintext highlighter-rouge">/arch:AVX2</code>, <code class="language-plaintext highlighter-rouge">/arch:AVX512</code>
+or <code class="language-plaintext highlighter-rouge">/arch:AVX10.1</code> switches, it will utilize SIMD operations to improve performance. 
+This just requires a rebuild of the solution, and will often improve performance significantly.</p>
+
+<p>Note that AVX was introduced with the Sandy Bridge micro architecture back in 2011, 
+while AVX2 came later with the Haswell micro architecture in 2012, and AMD added support
+for AVX2 in 2015. So it’s generally safe to assume that any modern server, or workstation,
+supports AVX2.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Vector&lt;float,2&gt;</code>, <code class="language-plaintext highlighter-rouge">Vector&lt;float,3&gt;</code> and <code class="language-plaintext highlighter-rouge">Vector&lt;float,4&gt;</code> are specializations of <code class="language-plaintext highlighter-rouge">Vector&lt;T,N&gt;</code> that 
+supports a wider repertoire of operations than the general <code class="language-plaintext highlighter-rouge">Vector&lt;T,N&gt;</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Vector&lt;float,2&gt;</code> is derived from the <code class="language-plaintext highlighter-rouge">Tuple2</code> template, <code class="language-plaintext highlighter-rouge">Vector&lt;float,3&gt;</code> is derived 
+from the <code class="language-plaintext highlighter-rouge">Tuple3</code>, and <code class="language-plaintext highlighter-rouge">Vector&lt;float,4&gt;</code> is derived from <code class="language-plaintext highlighter-rouge">Tuple4</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Tuple2</code> has two data fields <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> has <code class="language-plaintext highlighter-rouge">x</code>, <code class="language-plaintext highlighter-rouge">y</code> and <code class="language-plaintext highlighter-rouge">z</code>, and finally 
+<code class="language-plaintext highlighter-rouge">Tuple4</code> has <code class="language-plaintext highlighter-rouge">x</code>, <code class="language-plaintext highlighter-rouge">y</code>, <code class="language-plaintext highlighter-rouge">z</code> and <code class="language-plaintext highlighter-rouge">z</code>. The three template classes can be instantiated 
+for arithmetic data types.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Tuple3</code> has a sibling template called <code class="language-plaintext highlighter-rouge">Tuple3Simd</code> defined for it. <code class="language-plaintext highlighter-rouge">Tuple3Simd</code> has 
+only one data field, <code class="language-plaintext highlighter-rouge">simd</code>, and the type of this field gets selected at compile time 
+as the narrowest SIMD datatype capable of holding the three values of <code class="language-plaintext highlighter-rouge">Tuple3</code>.</p>
+
+<p>To implement addition for <code class="language-plaintext highlighter-rouge">Tuple3</code> and its sibling <code class="language-plaintext highlighter-rouge">Tuple3Simd</code> there are four
+overloads of the <code class="language-plaintext highlighter-rouge">+</code> operator. The first overload implements addition for
+<code class="language-plaintext highlighter-rouge">Tuple3Simd</code> and <b>does not load data into the SIMD type</b>. If <code class="language-plaintext highlighter-rouge">Tuple3</code> is instantiated 
+for the <code class="language-plaintext highlighter-rouge">float</code> type, then the actual addition is performed by the 
+<code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;float,3&gt;::Add( SIMDType a, SIMDType b )</code> function and <code class="language-plaintext highlighter-rouge">SIMDType</code> is
+selected to be <code class="language-plaintext highlighter-rouge">__m128</code> which can hold up to four 32-bit floating point values.</p>
+
+<pre><code class="language-C++">template&lt;typename DerivedT, typename NumberT&gt;
+inline Tuple3Simd&lt;Tuple3&lt;DerivedT, NumberT&gt;&gt; 
+operator + ( const Tuple3Simd&lt;Tuple3&lt;DerivedT, NumberT&gt;&gt;&amp; lhs, 
+            const Tuple3Simd&lt;Tuple3&lt;DerivedT, NumberT&gt;&gt;&amp; rhs )
+{
+    using Traits = typename Tuple3&lt;DerivedT, NumberT&gt;::Traits;
+    return Traits::Add( lhs.simd, rhs.simd );
+}
+</code></pre>
+
+<p>The next overload is addition between an instantiation of the <code class="language-plaintext highlighter-rouge">Tuple3</code> template class and 
+its <code class="language-plaintext highlighter-rouge">Tuple3Simd</code> sibling, calling <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;float,3&gt;::Load( const float* values )</code>
+to load the three 32-bit floating point values held by the <code class="language-plaintext highlighter-rouge">Tuple3</code> based object into
+a <code class="language-plaintext highlighter-rouge">__m128</code> before passing the result to <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;float,3&gt;::Add( SIMDType a, SIMDType b )</code>.</p>
+
+<pre><code class="language-C++">template&lt;typename DerivedT, typename NumberT&gt;
+inline Tuple3Simd&lt;Tuple3&lt;DerivedT, NumberT&gt;&gt; 
+operator + ( const Tuple3&lt;DerivedT, NumberT&gt;&amp; lhs, 
+            const Tuple3Simd&lt;Tuple3&lt;DerivedT, NumberT&gt;&gt;&amp; rhs )
+{
+    using Traits = typename Tuple3&lt;DerivedT, NumberT&gt;::Traits;
+    return Traits::Add( Traits::Load( lhs.values.data( ) ), 
+                        rhs.simd );
+}
+</code></pre>
+<p><code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;float,3&gt;::Add( SIMDType a, SIMDType b )</code> returns a <code class="language-plaintext highlighter-rouge">__m128</code>
+which gets assigned to the <code class="language-plaintext highlighter-rouge">simd</code> field of the <code class="language-plaintext highlighter-rouge">Tuple3Simd</code> type.</p>
+
+<p>Similarly, the next two overloads loads the data for the <code class="language-plaintext highlighter-rouge">Tuple3</code> arguments into
+a <code class="language-plaintext highlighter-rouge">__m128</code>.</p>
+<pre><code class="language-C++">template&lt;typename DerivedT, typename NumberT&gt;
+inline Tuple3Simd&lt;Tuple3&lt;DerivedT, NumberT&gt;&gt; 
+operator + ( const Tuple3Simd&lt;Tuple3&lt;DerivedT, NumberT&gt;&gt;&amp; lhs, 
+            const Tuple3&lt;DerivedT, NumberT&gt;&amp; rhs )
+{
+    using Traits = typename Tuple3&lt;DerivedT, NumberT&gt;::Traits;
+    return Traits::Add( lhs.simd, 
+                        Traits::Load( rhs.values.data( ) ) );
+}
+template&lt;typename DerivedT, typename NumberT&gt;
+inline Tuple3Simd&lt;Tuple3&lt;DerivedT, NumberT&gt;&gt; 
+operator + ( const Tuple3&lt;DerivedT, NumberT&gt;&amp; lhs, 
+            const Tuple3&lt;DerivedT, NumberT&gt;&amp; rhs )
+{
+    using Traits = typename Tuple3&lt;DerivedT, NumberT&gt;::Traits;
+    return Traits::Add( Traits::Load( lhs.values.data( ) ), 
+                        Traits::Load( rhs.values.data( ) ) );
+}
+</code></pre>
+
+<p>The four overloads are needed to avoid unnecessary loads and stores 
+from the XMM register holding the <code class="language-plaintext highlighter-rouge">__m128</code> while the return type preserves
+C++ ability to distinguish between overloads based on the argument types.</p>
+
+<pre><code class="language-C++">using Vector = Math::Vector&lt;float, 3&gt;;
+
+Vector v1( FloatGenerator( ), FloatGenerator( ), FloatGenerator( ) );
+Vector v2( FloatGenerator( ), FloatGenerator( ), FloatGenerator( ) );
+
+Vector result = Dot( Abs( Max( Ceil( -v1 ), Floor( v2 ) ) ), v2 );
+</code></pre>
+<p>In the above code, the data gets loaded into a <code class="language-plaintext highlighter-rouge">__m128</code> when that is required,
+and only stored into a vector object when assigned to <code class="language-plaintext highlighter-rouge">result</code>.</p>
+
+<p>Below are two benchmarks, the first using <code class="language-plaintext highlighter-rouge">Math::Vector&lt;float, 3&gt;</code>, 
+while the second uses <code class="language-plaintext highlighter-rouge">pbrt::Vector3f</code>.</p>
+
+<pre><code class="language-C++">static void BenchmarkVector3( benchmark::State&amp; state )
+{
+    using namespace Harlinn::Common::Core::Math;
+    using Vector = Math::Vector&lt;float, 3&gt;;
+    DoubleGenerator.Reset( );
+
+    for ( auto _ : state )
+    {
+        Vector v1( FloatGenerator( ), FloatGenerator( ), FloatGenerator( ) );
+        Vector v2( FloatGenerator( ), FloatGenerator( ), FloatGenerator( ) );
+        benchmark::DoNotOptimize( Dot( Abs( Max( Ceil( -v1 ), Floor( v2 ) ) ), v2 ) );
+    }
+}
+BENCHMARK( BenchmarkVector3 );
+
+static void BenchmarkPBRTVector3f( benchmark::State&amp; state )
+{
+    using namespace pbrt;
+    using Vector = pbrt::Vector3f;
+    DoubleGenerator.Reset( );
+
+
+    for ( auto _ : state )
+    {
+        Vector v1( FloatGenerator( ), FloatGenerator( ), FloatGenerator( ) );
+        Vector v2( FloatGenerator( ), FloatGenerator( ), FloatGenerator( ) );
+        benchmark::DoNotOptimize( Dot( Abs( Max( Ceil( -v1 ), Floor( v2 ) ) ), v2 ) );
+    }
+}
+BENCHMARK( BenchmarkPBRTVector3f );
+</code></pre>
+<p><code class="language-plaintext highlighter-rouge">BenchmarkVector2</code> runs <code class="language-plaintext highlighter-rouge">20</code> % faster than <code class="language-plaintext highlighter-rouge">BenchmarkPBRTVector3f</code> which is
+optimized by the compiler for the AVX2 instruction set:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-------------------------------------------------------------------
+Benchmark                         Time             CPU   Iterations
+-------------------------------------------------------------------
+BenchmarkVector3               5.63 ns         4.85 ns    186666667
+BenchmarkPBRTVector3f          7.08 ns         5.86 ns    112000000
+</code></pre></div></div>
+
+<p>The following operations are currently supported: <code class="language-plaintext highlighter-rouge">+</code>, <code class="language-plaintext highlighter-rouge">-</code>, unary <code class="language-plaintext highlighter-rouge">-</code>, <code class="language-plaintext highlighter-rouge">*</code>, <code class="language-plaintext highlighter-rouge">/</code>,
+<code class="language-plaintext highlighter-rouge">+=</code>, <code class="language-plaintext highlighter-rouge">-=</code>, <code class="language-plaintext highlighter-rouge">*=</code>, <code class="language-plaintext highlighter-rouge">/=</code>, <code class="language-plaintext highlighter-rouge">Abs</code>, <code class="language-plaintext highlighter-rouge">Min</code>, <code class="language-plaintext highlighter-rouge">Max</code>, <code class="language-plaintext highlighter-rouge">Sqr</code>, <code class="language-plaintext highlighter-rouge">Ceil</code>, <code class="language-plaintext highlighter-rouge">Floor</code>, <code class="language-plaintext highlighter-rouge">Round</code>, 
+<code class="language-plaintext highlighter-rouge">Trunc</code>, <code class="language-plaintext highlighter-rouge">Lerp</code>, <code class="language-plaintext highlighter-rouge">Saturate</code>, <code class="language-plaintext highlighter-rouge">Sqrt</code>, <code class="language-plaintext highlighter-rouge">FMA</code>, <code class="language-plaintext highlighter-rouge">FMSub</code>, <code class="language-plaintext highlighter-rouge">Sin</code>, <code class="language-plaintext highlighter-rouge">Cos</code>, <code class="language-plaintext highlighter-rouge">Tan</code>, 
+<code class="language-plaintext highlighter-rouge">ASin</code>, <code class="language-plaintext highlighter-rouge">ACos</code>, <code class="language-plaintext highlighter-rouge">ATan</code>, <code class="language-plaintext highlighter-rouge">ATan2</code>, <code class="language-plaintext highlighter-rouge">SinH</code>, <code class="language-plaintext highlighter-rouge">CosH</code>, <code class="language-plaintext highlighter-rouge">TanH</code>, <code class="language-plaintext highlighter-rouge">ASinH</code>, <code class="language-plaintext highlighter-rouge">ACosH</code>, 
+<code class="language-plaintext highlighter-rouge">ATanH</code>, <code class="language-plaintext highlighter-rouge">Log</code>, <code class="language-plaintext highlighter-rouge">Log1P</code>, <code class="language-plaintext highlighter-rouge">Log10</code>, <code class="language-plaintext highlighter-rouge">Log2</code>, <code class="language-plaintext highlighter-rouge">Exp</code>, <code class="language-plaintext highlighter-rouge">Exp10</code>, <code class="language-plaintext highlighter-rouge">Exp2</code>, <code class="language-plaintext highlighter-rouge">ExpM1</code>, 
+<code class="language-plaintext highlighter-rouge">Pow</code>, <code class="language-plaintext highlighter-rouge">Hypot</code>, and <code class="language-plaintext highlighter-rouge">Permute</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Dot</code> is implemented for the <code class="language-plaintext highlighter-rouge">Vector&lt;float,2&gt;</code>, <code class="language-plaintext highlighter-rouge">Vector&lt;float,3&gt;</code> and 
+<code class="language-plaintext highlighter-rouge">Vector&lt;float,4&gt;</code> specializations.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Harlinn</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Harlinn</li><li><a class="u-email" href="mailto:espen@harlinn.no">espen@harlinn.no</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Harlinn"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Harlinn</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is my personal Github site, </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -771,12 +771,16 @@ var annotated_dup =
               [ "QuietNaNUnsignedValue< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quiet_na_n_unsigned_value_3_01double_01_4.html", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quiet_na_n_unsigned_value_3_01double_01_4" ],
               [ "QuietNaNUnsignedValue< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quiet_na_n_unsigned_value_3_01float_01_4.html", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quiet_na_n_unsigned_value_3_01float_01_4" ]
             ] ],
-            [ "Matrix", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_matrix.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_matrix" ],
-            [ "Matrix< FloatT, 2, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_matrix_3_01_float_t_00_012_00_012_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_matrix_3_01_float_t_00_012_00_012_01_4" ],
-            [ "Matrix< FloatT, 3, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_matrix_3_01_float_t_00_013_00_013_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_matrix_3_01_float_t_00_013_00_013_01_4" ],
-            [ "Matrix< FloatT, 4, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_matrix_3_01_float_t_00_014_00_014_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_matrix_3_01_float_t_00_014_00_014_01_4" ],
-            [ "MatrixBase", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_matrix_base.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_matrix_base" ],
-            [ "Vector", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector" ]
+            [ "Tuple2", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2" ],
+            [ "Tuple2Simd", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2_simd.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2_simd" ],
+            [ "Tuple3", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3" ],
+            [ "Tuple3Simd", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3_simd.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3_simd" ],
+            [ "Tuple4", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4" ],
+            [ "Tuple4Simd", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4_simd.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4_simd" ],
+            [ "Vector", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector" ],
+            [ "Vector< float, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_012_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_012_01_4" ],
+            [ "Vector< float, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_013_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_013_01_4" ],
+            [ "Vector< float, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_014_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_014_01_4" ]
           ] ],
           [ "Messaging", "namespace_harlinn_1_1_common_1_1_core_1_1_messaging.html", [
             [ "MessageQueueException", "class_harlinn_1_1_common_1_1_core_1_1_messaging_1_1_message_queue_exception.html", "class_harlinn_1_1_common_1_1_core_1_1_messaging_1_1_message_queue_exception" ]
