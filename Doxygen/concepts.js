@@ -38,6 +38,15 @@ var concepts =
           [ "LMDB", "namespace_harlinn_1_1_common_1_1_core_1_1_l_m_d_b.html", [
             [ "ValueType", "concept_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_1_1_value_type.html", null ]
           ] ],
+          [ "Math", "namespace_harlinn_1_1_common_1_1_core_1_1_math.html", [
+            [ "Internal", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html", [
+              [ "SimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_simd_type.html", null ],
+              [ "TupleType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_tuple_type.html", null ],
+              [ "SquareMatrixSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_square_matrix_simd_type.html", null ],
+              [ "SquareMatrixType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_square_matrix_type.html", null ]
+            ] ],
+            [ "FloatingPoint", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html", null ]
+          ] ],
           [ "Persistent", "namespace_harlinn_1_1_common_1_1_core_1_1_persistent.html", [
             [ "Internal", "namespace_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal.html", [
               [ "WriterCanWrite", "concept_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_writer_can_write.html", null ],

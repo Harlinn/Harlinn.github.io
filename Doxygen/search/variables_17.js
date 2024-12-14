@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['x_0',['X',['../struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tiled_resource_coordinate.html#aa06a0bda568e24047c4c206137c65d70',1,'Harlinn::Windows::Graphics::D3D12::TiledResourceCoordinate::X'],['../struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_sample_position.html#ac404b1f4747a919dbcba3a4c6aa53d4b',1,'Harlinn::Windows::Graphics::D3D12::SamplePosition::X']]],
+  ['x_0',['X',['../struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1m128_select.html#a190e5b6592511103f80766bed6cdde62',1,'Harlinn::Common::Core::SIMD::Traits&lt; float, N &gt;::m128Select::X'],['../struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tiled_resource_coordinate.html#aa06a0bda568e24047c4c206137c65d70',1,'Harlinn::Windows::Graphics::D3D12::TiledResourceCoordinate::X'],['../struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_sample_position.html#ac404b1f4747a919dbcba3a4c6aa53d4b',1,'Harlinn::Windows::Graphics::D3D12::SamplePosition::X']]],
   ['x_1',['x',['../union_harlinn_1_1_common_1_1_core_1_1details_1_1max__align__t.html#ab7625f92ef96d847d3aa080e1ea65a83',1,'Harlinn::Common::Core::details::max_align_t::x'],['../class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html#a607a9f02c801fd5a08b9ab552208f846',1,'Harlinn::Common::Core::Math::Tuple2::x'],['../class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3.html#ae09917e23b28cb6f27aec17c18c15ef4',1,'Harlinn::Common::Core::Math::Tuple3::x'],['../class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#a6a50ab51d2ddd100ab2c559e327eec6d',1,'Harlinn::Common::Core::Math::Tuple4::x'],['../class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_rectangle.html#aeb28f3cb4b4abca70db878a26e290f08',1,'Harlinn::Windows::Graphics::Imaging::Rectangle::x']]],
-  ['x509asnencoding_2',['X509AsnEncoding',['../class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_encoding_type.html#afcb461e38e0cc9ea5888b2aea350e253',1,'Harlinn::Common::Core::Crypto::EncodingType']]],
-  ['x509ndrencoding_3',['X509NdrEncoding',['../class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_encoding_type.html#a95ac3f659e351addbcd65b067c3facc7',1,'Harlinn::Common::Core::Crypto::EncodingType']]],
-  ['x_5f_4',['x_',['../class_harlinn_1_1_windows_1_1_point_t.html#af418fbb71ddec33a2b139f9bd979f3c8',1,'Harlinn::Windows::PointT']]],
-  ['xxh_5fg_5fdispatch_5',['XXH_g_dispatch',['../group__dispatch.html#ga0a9ce50b09c207c32a8333d2421f2e4d',1,'xxh_x86dispatch.c']]],
-  ['xxh_5fg_5fdispatch128_6',['XXH_g_dispatch128',['../group__dispatch.html#ga390b8e45e3cb022095cad491058abd05',1,'xxh_x86dispatch.c']]],
-  ['xxh_5fkdispatch_7',['XXH_kDispatch',['../group__dispatch.html#ga98359f36ec13f91a3b29f69e9e6ef7a7',1,'xxh_x86dispatch.c']]],
-  ['xxh_5fkdispatch128_8',['XXH_kDispatch128',['../group__dispatch.html#gaaf2f02141bbb506599fc00e6f9531cb1',1,'xxh_x86dispatch.c']]]
+  ['x0_2',['X0',['../struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1m256_select.html#a42aa0760fd4526d88de45485d51758fd',1,'Harlinn::Common::Core::SIMD::Traits&lt; float, N &gt;::m256Select']]],
+  ['x1_3',['X1',['../struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1m256_select.html#adb18a2a920c182d0392ae149943d6cc1',1,'Harlinn::Common::Core::SIMD::Traits&lt; float, N &gt;::m256Select']]],
+  ['x509asnencoding_4',['X509AsnEncoding',['../class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_encoding_type.html#afcb461e38e0cc9ea5888b2aea350e253',1,'Harlinn::Common::Core::Crypto::EncodingType']]],
+  ['x509ndrencoding_5',['X509NdrEncoding',['../class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_encoding_type.html#a95ac3f659e351addbcd65b067c3facc7',1,'Harlinn::Common::Core::Crypto::EncodingType']]],
+  ['x_5f_6',['x_',['../class_harlinn_1_1_windows_1_1_point_t.html#af418fbb71ddec33a2b139f9bd979f3c8',1,'Harlinn::Windows::PointT']]],
+  ['xxh_5fg_5fdispatch_7',['XXH_g_dispatch',['../group__dispatch.html#ga0a9ce50b09c207c32a8333d2421f2e4d',1,'xxh_x86dispatch.c']]],
+  ['xxh_5fg_5fdispatch128_8',['XXH_g_dispatch128',['../group__dispatch.html#ga390b8e45e3cb022095cad491058abd05',1,'xxh_x86dispatch.c']]],
+  ['xxh_5fkdispatch_9',['XXH_kDispatch',['../group__dispatch.html#ga98359f36ec13f91a3b29f69e9e6ef7a7',1,'xxh_x86dispatch.c']]],
+  ['xxh_5fkdispatch128_10',['XXH_kDispatch128',['../group__dispatch.html#gaaf2f02141bbb506599fc00e6f9531cb1',1,'xxh_x86dispatch.c']]]
 ];

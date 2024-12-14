@@ -52,16 +52,27 @@ computational performance. As demand for high-performance computing continues
 to grow, understanding and using SIMD will be increasingly important for 
 optimizing applications and algorithms.</p>
 
+<ul>
+  <li><a href="#single-instruction-multiple-data">Single Instruction Multiple Data</a></li>
+  <li><a href="#fast-linear-algebra-for-games-and-graphics">Fast Linear Algebra for Games and Graphics</a></li>
+</ul>
+
+<h1 id="single-instruction-multiple-data">Single Instruction Multiple Data</h1>
 <p>The interface to SIMD operations in <a href="/Cpp/Harlinn.Windows/Harlinn.Common.Core/Harlinn.Common.Core.html">Harlinn.Common.Core</a> 
-is provided in <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> contained within the <code class="language-plaintext highlighter-rouge">namespace Harlinn::Common::Core::SIMD</code> namespace through a set of specializations
+is provided in <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> contained within the <code class="language-plaintext highlighter-rouge">Harlinn::Common::Core::SIMD</code> namespace through a set of specializations
 of the template:</p>
 
 <pre><code class="language-C++">template&lt;typename T, size_t N&gt;
 struct Traits : public std::false_type
 {
-    using Type = std::remove_cvref_t&lt;T&gt;;
 };
 </code></pre>
+
+<p>The <code class="language-plaintext highlighter-rouge">Traits&lt;T,N&gt;</code> specializations provides access to the SIMD intrinsic functions, 
+and strives to maintain a uniform set of names for the implemented functions. The
+second template argument is sometimes used to select function implementations
+optimized for <code class="language-plaintext highlighter-rouge">N</code> elements in the SIMD type.</p>
+
 <p>Where <code class="language-plaintext highlighter-rouge">T</code> is the type of the values to use in the computations, and <code class="language-plaintext highlighter-rouge">N</code> is 
 the number of valid elements in the SIMD type. The SIMD type is a representation 
 of a CPU register used for SIMD operations. The Intel/AMD x64 architecture
@@ -103,8 +114,28 @@ provides several SIMD types:</p>
 
 <pre><code class="language-C++">_mm256_load_ps( ptrToFloats );
 </code></pre>
-
 <p>Where, in this case, <code class="language-plaintext highlighter-rouge">ptrToFloats</code> is a 32 byte aligned pointer to 8 single precision floating point values.</p>
+
+<p>The <a href="https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html">Intel Intrinsics Guide</a> contains 
+a brief description of the available intrinsic functions. It’s a bit short on details, and the relevant
+details can be found in the <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html">Intel 64 and IA-32 Architectures Software Developer Manuals</a>.</p>
+
+<p>The number of available intrinsic functions can be a bit overwhelming, and the <code class="language-plaintext highlighter-rouge">Traits&lt;T,N&gt;</code> specializations
+groups the intrinsic functions according to the type they are designed to work with.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Traits&lt;float,4&gt;::Swizzle&lt;0,1,2,3&gt;( v )</code> and <code class="language-plaintext highlighter-rouge">Traits&lt;double,4&gt;::Swizzle&lt;0,1,2,3&gt;( v )</code> will 
+both reverse the order of the <code class="language-plaintext highlighter-rouge">4</code> elements in <code class="language-plaintext highlighter-rouge">v</code>, and the first will invoke <code class="language-plaintext highlighter-rouge">_mm_permute_ps</code> while
+the second invokes <code class="language-plaintext highlighter-rouge">_mm256_permute4x64_pd</code>, not <code class="language-plaintext highlighter-rouge">_mm256_permute_pd</code> which can only swap values inside a 128 bit lane,
+and not <code class="language-plaintext highlighter-rouge">_mm_permute_pd</code> which operates on the <code class="language-plaintext highlighter-rouge">__m128d</code> SIMD type and can only hold two double precision values.</p>
+
+<p>The template arguments mimics the <code class="language-plaintext highlighter-rouge">_MM_SHUFFLE</code> macro, where the first argument selects the value
+that goes into the highest position in the resulting SIMD type, the second argument selects the value
+that goes into the second highest positions, the third selects the value that goes into the second lowest 
+position, and the fourth selects the value that goes into the lowest position. <code class="language-plaintext highlighter-rouge">0</code> selects the value
+from the lowest position in <code class="language-plaintext highlighter-rouge">v</code>, while <code class="language-plaintext highlighter-rouge">3</code> selects the value from the highest position in <code class="language-plaintext highlighter-rouge">v</code>.</p>
+
+<p>There are more than <code class="language-plaintext highlighter-rouge">80</code> intrinsic functions with <em>permute</em> in their name, and just separating them
+by the type they operate on makes SIMD development more manageable.</p>
 
 <p>The C/C++ compiler handles register allocation and instruction scheduling, but using the SIMD extensions can be complex:</p>
 
@@ -121,12 +152,12 @@ three 32-bit floating point values.</p>
 
 <p>Using the <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;float,3&gt;</code>, reduces the above to:</p>
 
-<pre><code class="language-C++">return SIMD::Traits&lt;float,3&gt;( a, b );
+<pre><code class="language-C++">return SIMD::Traits&lt;float,3&gt;::Cross( a, b );
 </code></pre>
 
 <p>While:</p>
 
-<pre><code class="language-C++">return SIMD::Traits&lt;float,2&gt;( a, b );
+<pre><code class="language-C++">return SIMD::Traits&lt;float,2&gt;::Cross( a, b );
 </code></pre>
 
 <p>calculates the cross product for vectors with only two elements, expanding to:</p>
@@ -142,12 +173,42 @@ return _mm_permute_ps( rmm1, _MM_SHUFFLE( 0, 0, 0, 0 ) );
 last one calculates the cross product using only the values contained within the two
 lowest order positions of the <code class="language-plaintext highlighter-rouge">__m128</code>.</p>
 
+<h1 id="fast-linear-algebra-for-games-and-graphics">Fast Linear Algebra for Games and Graphics</h1>
+
+<p>The library contains a set of linear algebra classes that are optimized
+for games and other graphic intensive apps. The operations are implemented
+using a blend of SIMD and regular C/C++, and the code is highly optimized,
+performing as well as, and sometimes outperforming, the <a href="https://github.com/microsoft/DirectXMath">DirectXMath</a>
+library.</p>
+
+<ul>
+  <li><a href="#vector"><code class="language-plaintext highlighter-rouge">Vector</code></a> is template for fixed size vectors of integer or floating point values.</li>
+  <li>
+    <p><a href="#tuple2-tuple3-and-tuple4"><code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code></a> 
+are template classes that holds <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">3</code> or <code class="language-plaintext highlighter-rouge">4</code> integer or floating point 
+values. They are used to implement specializations of <code class="language-plaintext highlighter-rouge">Vector</code> and other
+classes holding <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">3</code> or <code class="language-plaintext highlighter-rouge">4</code> integer or floating point values.</p>
+
+    <ul>
+      <li><a href="#vector2f-vector3f-vector4f-vector2i-vector3i-vector4i"><code class="language-plaintext highlighter-rouge">Vector2f</code>, <code class="language-plaintext highlighter-rouge">Vector3f</code>, <code class="language-plaintext highlighter-rouge">Vector4f</code>, <code class="language-plaintext highlighter-rouge">Vector2i</code>, <code class="language-plaintext highlighter-rouge">Vector3i</code>, <code class="language-plaintext highlighter-rouge">Vector4i</code></a></li>
+      <li><a href="#normal3f-and-normal3i"><code class="language-plaintext highlighter-rouge">Normal3f</code> and <code class="language-plaintext highlighter-rouge">Normal3i</code></a></li>
+      <li><a href="#point3f-and-point3i"><code class="language-plaintext highlighter-rouge">Point3f</code> and <code class="language-plaintext highlighter-rouge">Point3i</code></a></li>
+    </ul>
+  </li>
+  <li><a href="#quaternion"><code class="language-plaintext highlighter-rouge">Quaternion</code></a></li>
+</ul>
+
 <p>The purpose of specializations of <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T, N&gt;</code> is to have a mechanism for
-selecting implementations that are implemented for <code class="language-plaintext highlighter-rouge">T</code> and optimized for <code class="language-plaintext highlighter-rouge">N</code>.</p>
+selecting implementations that are implemented for <code class="language-plaintext highlighter-rouge">T</code> and optimized for <code class="language-plaintext highlighter-rouge">N</code> elements,
+when developing the C++ templates classes and template functions that forms the core
+of the linear algebra features of the library.</p>
 
 <p>The <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T, N&gt;</code> specializations are used to implement a set of C++
 classes that really simplifies SIMD development. These classes are contained in 
 the <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code> header file.</p>
+
+<p>The library exploits the ability of C++ to create zero-overhead abstractions,
+making client code quite readable:</p>
 
 <pre><code class="language-C++">using Vector = Math::Vector&lt;float, 4&gt;;
 
@@ -155,6 +216,19 @@ Vector v1( 1.0f, 2.0f, 3.f, 1.0f );
 Vector v2( 1.0f, 2.0f, 3.f, 1.0f );
 Vector v3 = v1 + v2 + v1 + v2 + v1 + v2;
 
+</code></pre>
+<p>where the <code class="language-plaintext highlighter-rouge">+</code> operator is implemented as:</p>
+
+<pre><code class="language-C++">template&lt;Internal::TupleType T, 
+        Internal::TupleType U, 
+        typename ResultT = typename T::Simd&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline ResultT operator + ( const T&amp; lhs, const U&amp; rhs ) noexcept
+{
+    using Traits = typename T::Traits;
+    return Traits::Add( Traits::Load( lhs.values.data( ) ), 
+                            Traits::Load( rhs.values.data( ) ) );
+}
 </code></pre>
 
 <p>Which the compiler turns into:</p>
@@ -176,6 +250,63 @@ Vector v3 = v1 + v2 + v1 + v2 + v1 + v2;
 do a single load of the data into xmm4, and then generates 
 code for the additions. Obviously <code class="language-plaintext highlighter-rouge">v1</code> could just be multiplied by 6.</p>
 
+<p>The important thing is that <b>there are no unnecessary artifacts</b> caused 
+by using the classes.</p>
+
+<p>Rearranging, and grouping, the terms:</p>
+
+<pre><code class="language-C++">Vector v3 = ( v1 + v2 ) + ( v1 + v2 ) + ( v1 + v2 );
+</code></pre>
+
+<p>improves the generated code significantly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>00007FF6BC1F39E8  vaddps      xmm1,xmm6,xmm6  
+00007FF6BC1F39EC  vaddps      xmm0,xmm1,xmm1  
+00007FF6BC1F39F0  vaddps      xmm1,xmm0,xmm1 
+</code></pre></div></div>
+<p>Reducing the number of <code class="language-plaintext highlighter-rouge">vaddps</code> operations to just three.</p>
+
+<p>Doing the same thing using <a href="https://github.com/microsoft/DirectXMath">DirectXMath</a> 
+requires a bit more work:</p>
+
+<pre><code class="language-C++">
+XMFLOAT4A v1( { 1.0f, 2.0f, 3.f, 1.0f } );
+XMFLOAT4A v2( { 1.0f, 2.0f, 3.f, 1.0f } );
+auto v1Loaded = XMLoadFloat4A( &amp;v1 );
+auto v2Loaded = XMLoadFloat4A( &amp;v2 );
+        
+auto v3Loaded = XMVectorAdd(
+        XMVectorAdd( 
+            XMVectorAdd( 
+                v1Loaded,
+                v2Loaded ),
+            v1Loaded ),
+        XMVectorAdd( 
+            XMVectorAdd( 
+                v2Loaded,
+                v1Loaded ),
+            v2Loaded ) );
+
+</code></pre>
+
+<p>Benchmarking the above <a href="https://github.com/microsoft/DirectXMath">DirectXMath</a> 
+code against</p>
+
+<pre><code class="language-C++">`Vector v3 = ( v1 + v2 ) + ( v1 + v2 ) + ( v1 + v2 );`
+</code></pre>
+
+<p>yields:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>----------------------------------------------------------------------------------
+Benchmark                                        Time             CPU   Iterations
+----------------------------------------------------------------------------------
+BenchmarkVector2MultipleAdds                  4.36 ns         3.35 ns    224000000
+BenchmarkVector2MultipleXMVectorAdd           4.56 ns         3.77 ns    165925926
+</code></pre></div></div>
+
+<p>So, there is rarely any overhead to using the library, compared to working directly
+with the SIMD compiler intrinsics.</p>
+
 <p>Ideally, the compiler would generate optimal code for any computations,
 and it usually comes close - and when enabled using the <code class="language-plaintext highlighter-rouge">/arch:AVX</code>, <code class="language-plaintext highlighter-rouge">/arch:AVX2</code>, <code class="language-plaintext highlighter-rouge">/arch:AVX512</code>
 or <code class="language-plaintext highlighter-rouge">/arch:AVX10.1</code> switches, it will utilize SIMD operations to improve performance. 
@@ -186,26 +317,365 @@ while AVX2 came later with the Haswell micro architecture in 2012, and AMD added
 for AVX2 in 2015. So it’s generally safe to assume that any modern server, or workstation,
 supports AVX2.</p>
 
+<h2 id="vector">Vector</h2>
+
+<p>Vector is a C++ template class that holds a fixed number of elements:</p>
+
+<pre><code class="language-C++">template&lt;typename ValueT, size_t N&gt;
+class alignas( Math::Internal::SIMD::Traits&lt;ValueT,N&gt;::AlignAs ) Vector
+{
+  ...
+};
+</code></pre>
+
+<p>The template supports the unary <code class="language-plaintext highlighter-rouge">-</code>, <code class="language-plaintext highlighter-rouge">-</code>, <code class="language-plaintext highlighter-rouge">+</code>, <code class="language-plaintext highlighter-rouge">*</code>, <code class="language-plaintext highlighter-rouge">/</code>, <code class="language-plaintext highlighter-rouge">-=</code>, <code class="language-plaintext highlighter-rouge">+=</code>, <code class="language-plaintext highlighter-rouge">*=</code>, <code class="language-plaintext highlighter-rouge">/=</code>, 
+and <code class="language-plaintext highlighter-rouge">[]</code> operators. The basic mathematical operators are <code class="language-plaintext highlighter-rouge">constexpr</code> implemented,
+allowing code to be evaluated at compile time, while using SIMD instructions at
+runtime, but <a href="https://eigen.tuxfamily.org">Eigen</a> and <a href="https://arma.sourceforge.net/">Armadillo</a> 
+are far better alternatives for general linear algebra.</p>
+
+<h2 id="tuple2-tuple3-and-tuple4">Tuple2, Tuple3 and Tuple4</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code> templates implements most of the magic, 
+together with the <code class="language-plaintext highlighter-rouge">TupleSimd</code> template, required to provide an efficient
+set of classes and templates that can handle linear algebra for games, 
+graphic apps, and other apps that work with two and/or three dimensional data.</p>
+
+<p>When working with data in two dimensions, it’s a common convention that the
+type holding two dimensional data has two data fields, <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code>. Similarly
+a type holding three dimensional data is expected to have three data fields
+named <code class="language-plaintext highlighter-rouge">x</code>, <code class="language-plaintext highlighter-rouge">y</code> and <code class="language-plaintext highlighter-rouge">z</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Tuple2</code> template fills this role for two dimensional data:</p>
+<pre><code class="language-C++">template&lt;class DerivedT, typename T&gt;
+class Tuple2
+{
+public:
+  ...
+    union
+    {
+        ArrayType values;
+        struct
+        {
+            value_type x, y;
+        };
+    };
+  ...
+};
+</code></pre>
+
+<p>where <code class="language-plaintext highlighter-rouge">values</code> is a <code class="language-plaintext highlighter-rouge">std::array&lt;value_type,2&gt;</code> sharing the location of
+<code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code> in memory. Setting <code class="language-plaintext highlighter-rouge">v.values[0] = 0</code> is the same as <code class="language-plaintext highlighter-rouge">v.x = 0</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">DerivedT</code> is required to be a class derived from the <code class="language-plaintext highlighter-rouge">Tuple2</code> template,
+and <code class="language-plaintext highlighter-rouge">value_type</code> is declared as <code class="language-plaintext highlighter-rouge">using value_type = T;</code>.</p>
+
+<p>Similarly the <code class="language-plaintext highlighter-rouge">Tuple3</code> template fills this role for three dimensional data:</p>
+
+<pre><code class="language-C++">template&lt;class DerivedT, typename T&gt;
+class Tuple3
+{
+public:
+  ...
+    union
+    {
+        ArrayType values;
+        struct
+        {
+            value_type x, y, z;
+        };
+    };
+  ...
+};
+</code></pre>
+<p>and here <code class="language-plaintext highlighter-rouge">values</code> is a <code class="language-plaintext highlighter-rouge">std::array&lt;value_type,3&gt;</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Tuple4</code> adds an additional field <code class="language-plaintext highlighter-rouge">w</code>, and uses <code class="language-plaintext highlighter-rouge">std::array&lt;value_type,4&gt;</code>
+for the values array.</p>
+
+<p>To use SIMD on the Intel/AMD x64 architecture, data must, as mentioned,
+be loaded into a SIMD type that is an abstract representation of an
+AVX or SSE4 register. The <code class="language-plaintext highlighter-rouge">TupleSimd</code> template represents SIMD types
+using one of the <code class="language-plaintext highlighter-rouge">SIMD::Traits</code> specializations combined with
+a tuple type.</p>
+
+<pre><code class="language-C++">template&lt;typename TraitsT, typename TupleT&gt;
+class TupleSimd : public Internal::TupleBase
+{
+  ...    
+};
+</code></pre>
+<p><code class="language-plaintext highlighter-rouge">TupleSimd</code> fills this role for each of the <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code> 
+template classes.</p>
+
+<h3 id="tuple2-tuple3-and-tuple4-implementation-details">Tuple2, Tuple3 and Tuple4 implementation details</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code> have similar implementations, following
+the same pattern:</p>
+
+<pre><code class="language-C++">template&lt;typename DerivedT, typename T&gt;
+class Tuple3 : public Internal::TupleBase
+{
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">Internal::TupleBase</code> is used as the base class for the 
+<code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code> enabling the use of <a href="https://en.cppreference.com/w/cpp/types/is_base_of"><code class="language-plaintext highlighter-rouge">std::is_base_of_v&lt;,&gt;</code></a>
+to distinguish between types that are derived from <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code>
+and those that are not, and this is used to ensure that the templates designed for 
+<code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code> will only be enabled for classes derived from either of them.</p>
+
+<p>Inside the template definition, <code class="language-plaintext highlighter-rouge">DerivedType</code>, which is a class or struct derived from 
+the <code class="language-plaintext highlighter-rouge">Tuple3</code> template, is defined together with <code class="language-plaintext highlighter-rouge">value_type</code> and <code class="language-plaintext highlighter-rouge">size_type</code>.</p>
+
+<pre><code class="language-C++">public:
+    using DerivedType = DerivedT;
+    using value_type = T;
+    using size_type = size_t;
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">Tuple3</code> holds three values, <code class="language-plaintext highlighter-rouge">x</code>, <code class="language-plaintext highlighter-rouge">y</code> and <code class="language-plaintext highlighter-rouge">z</code>, as its main purpose is to 
+be a storage for three dimensional coordinates, and <code class="language-plaintext highlighter-rouge">Size</code> specifies the
+number of values that <code class="language-plaintext highlighter-rouge">Tuple3</code> holds.</p>
+
+<pre><code class="language-C++">    static constexpr size_type Size = 3;
+
+    using Traits = SIMD::Traits&lt;value_type, Size&gt;;
+    using SIMDType = typename Traits::SIMDType;
+</code></pre>
+<p>Above <code class="language-plaintext highlighter-rouge">Traits</code> is defined for <code class="language-plaintext highlighter-rouge">value_type</code> and <code class="language-plaintext highlighter-rouge">Size</code>, selecting
+the <code class="language-plaintext highlighter-rouge">SIMD::Traits</code> specialization that fits the requirements for 
+<code class="language-plaintext highlighter-rouge">Tuple3</code>.</p>
+
+<p>Next <code class="language-plaintext highlighter-rouge">ArrayType</code> is defined:</p>
+
+<pre><code class="language-C++">    using ArrayType = typename Traits::ArrayType;
+</code></pre>
+
+<p>This is the same as <code class="language-plaintext highlighter-rouge">std::array&lt;value_type,Size&gt;</code>, and while <code class="language-plaintext highlighter-rouge">x</code>, <code class="language-plaintext highlighter-rouge">y</code> and <code class="language-plaintext highlighter-rouge">z</code>
+is the common notation for three dimensional information, <code class="language-plaintext highlighter-rouge">values</code>, 
+as defined below, is much more convenient when developing templates 
+that will work with <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code>, <code class="language-plaintext highlighter-rouge">Tuple4</code> and any class derived from 
+either of them.</p>
+
+<p>The mathematical operations are performed using the <code class="language-plaintext highlighter-rouge">Simd</code> 
+type which holds a SIMD vector using the <code class="language-plaintext highlighter-rouge">TupleSimd</code> instantiated
+for the <code class="language-plaintext highlighter-rouge">Traits</code> and the class derived from the <code class="language-plaintext highlighter-rouge">Tuple3</code> template,
+ensuring that each derived class gets a unique <code class="language-plaintext highlighter-rouge">TupleSimd</code> C++ type.</p>
+
+<pre><code class="language-C++">    using Simd = TupleSimd&lt;Traits, DerivedType&gt;;
+</code></pre>
+<p>The data fields of <code class="language-plaintext highlighter-rouge">Tuple3</code>:</p>
+<pre><code class="language-C++">    union
+    {
+        ArrayType values;
+        struct
+        {
+            value_type x, y, z;
+        };
+    };
+</code></pre>
+<p>The default constructor ensures that <code class="language-plaintext highlighter-rouge">x</code>, <code class="language-plaintext highlighter-rouge">y</code> and <code class="language-plaintext highlighter-rouge">z</code> are initialized to
+<code class="language-plaintext highlighter-rouge">0</code>.</p>
+
+<pre><code class="language-C++">    Tuple3( ) noexcept
+            : x{}, y{}, z{}
+    { }
+
+    Tuple3( value_type xv, value_type yv, value_type zv ) noexcept
+        : x( xv ), y( yv ), z( zv )
+    { }
+
+</code></pre>
+
+<p>The next constructor initializes a <code class="language-plaintext highlighter-rouge">Tuple3</code> from a compatible <code class="language-plaintext highlighter-rouge">TupleSimd</code>,
+which is any <code class="language-plaintext highlighter-rouge">TupleSimd</code> instantiated for the same <code class="language-plaintext highlighter-rouge">SIMD::Traits</code> specialization
+as <code class="language-plaintext highlighter-rouge">Tuple3</code>. <code class="language-plaintext highlighter-rouge">SIMD::Traits</code> has a <code class="language-plaintext highlighter-rouge">ToArray</code> function that stores the values
+in the SIMD type in a <code class="language-plaintext highlighter-rouge">std::array&lt;&gt;</code> with the same type as <code class="language-plaintext highlighter-rouge">ArrayType</code> and 
+returns the data.</p>
+
+<pre><code class="language-C++">
+    template&lt;Internal::SimdType T&gt;
+        requires std::is_same_v&lt;Traits, typename T::Traits&gt;
+    Tuple3( const T&amp; other ) noexcept
+        : values( Traits::ToArray( other.simd ) )
+    { }
+
+    template&lt;Internal::SimdType T&gt;
+        requires std::is_same_v&lt;Traits, typename T::Traits&gt;
+    DerivedType&amp; operator = ( const T&amp; other ) noexcept
+    {
+        values = Traits::ToArray( other.simd );
+        return static_cast&lt; DerivedType&amp; &gt;( *this );
+    }
+
+    constexpr bool operator == ( const Tuple3&amp; other ) const noexcept
+    {
+        return IsSameValue( x, other.x ) &amp;&amp; IsSameValue( y, other.y ) 
+                            &amp;&amp; IsSameValue( z, other.z );
+    }
+    constexpr bool operator != ( const Tuple3&amp; other ) const noexcept
+    {
+        return !IsSameValue( x, other.x ) || !IsSameValue( y, other.y ) 
+                            || !IsSameValue( z, other.z );
+    }
+
+</code></pre>
+<p>Compare the <code class="language-plaintext highlighter-rouge">Tuple3</code> with a compatible <code class="language-plaintext highlighter-rouge">TupleSimd</code>:</p>
+
+<pre><code class="language-C++">
+    template&lt;Internal::SimdType T&gt;
+        requires std::is_same_v&lt;Traits, typename T::Traits&gt;
+    bool operator == ( const T&amp; other ) const noexcept
+    {
+        return Traits::Equals( Traits::Load( values.data( ) ), other.simd );
+    }
+
+    template&lt;Internal::SimdType T&gt;
+        requires std::is_same_v&lt;Traits, typename T::Traits&gt;
+    bool operator != ( const T&amp; other ) const noexcept
+    {
+        return Traits::Equals( Traits::Load( values.data( ) ), other.simd ) == false;
+    }
+
+</code></pre>
+<p>The only mathematical operation implemented for <code class="language-plaintext highlighter-rouge">Tuple3</code> is negation, note that
+the type of the return value is <code class="language-plaintext highlighter-rouge">Simd</code>, the <code class="language-plaintext highlighter-rouge">TupleSimd</code> specialization for
+this <code class="language-plaintext highlighter-rouge">Tuple3</code>.</p>
+
+<pre><code class="language-C++">    Simd operator-( ) const noexcept
+    {
+        return Traits::Negate( Traits::Load( values.data( ) ) );
+    }
+
+    void Assign( value_type xv, value_type yv, value_type zv ) noexcept
+    {
+        x = xv;
+        y = yv;
+        z = zv;
+    }
+    void Assign( const ArrayType&amp; src ) noexcept
+    {
+        values = src;
+    }
+    void Assign( SIMDType src ) noexcept
+    {
+        values = Traits::ToArray( src );
+    }
+</code></pre>
+
+<p>The ability to check for <code class="language-plaintext highlighter-rouge">NaN</code> or infinity should not require use of SIMD registers.</p>
+
+<pre><code class="language-C++">
+    bool HasNaN( ) const noexcept
+    {
+        return std::isnan( x ) || std::isnan( y ) || std::isnan( z );
+    }
+
+    bool IsFinite( ) const noexcept
+    {
+        return std::isfinite( x ) &amp;&amp; std::isfinite( y ) &amp;&amp; std::isfinite( z );
+    }
+
+    bool IsInfinite( ) const noexcept
+    {
+        return std::isinf( x ) || std::isinf( y ) || std::isinf( z );
+    }
+
+};
+</code></pre>
+
+<p>The library defines two internal concepts. <code class="language-plaintext highlighter-rouge">Internal::TupleType</code> and <code class="language-plaintext highlighter-rouge">Internal::SimdType</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code> matches the <code class="language-plaintext highlighter-rouge">Internal::TupleType</code> concept, while
+any <code class="language-plaintext highlighter-rouge">TupleSimd</code> derived type matches the <code class="language-plaintext highlighter-rouge">Internal::SimdType</code> concept.</p>
+
+<p>In the code below, <code class="language-plaintext highlighter-rouge">Internal::IsCompatible&lt;T,U&gt;</code> is used to verify that
+<code class="language-plaintext highlighter-rouge">T</code> and <code class="language-plaintext highlighter-rouge">U</code> are compatible types using the same <code class="language-plaintext highlighter-rouge">SIMD::Traits</code> specialization.</p>
+
+<p>The first overload will be used when both arguments are compatible <code class="language-plaintext highlighter-rouge">TupleSimd</code>
+based objects, so the implementation can perform the addition without
+any loading of values into a SIMD datatype.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T,U&gt;
+inline T operator + ( const T&amp; lhs, const U&amp; rhs ) noexcept
+{
+    using Traits = typename T::Traits;
+    return Traits::Add( lhs.simd, rhs.simd );
+}
+</code></pre>
+
+<p>The second overload accepts <code class="language-plaintext highlighter-rouge">TupleSimd</code> for the left hand argument,
+and any compatible <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> or <code class="language-plaintext highlighter-rouge">Tuple4</code> as its right hand argument.</p>
+
+<p>The implementation loads the data from the tuple type, before performing
+the addition, returning <code class="language-plaintext highlighter-rouge">T</code> which is a <code class="language-plaintext highlighter-rouge">TupleSimd</code> based type.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T operator + ( const T&amp; lhs, const U&amp; rhs ) noexcept
+{
+    using Traits = typename T::Traits;
+    return Traits::Add( lhs.simd, Traits::Load( rhs.values.data( ) ) );
+}
+</code></pre>
+<p>The third overload accepts the same type of arguments as the second,
+but takes a <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> or <code class="language-plaintext highlighter-rouge">Tuple4</code> as its left hand argument,
+and <code class="language-plaintext highlighter-rouge">TupleSimd</code> for the right hand argument.</p>
+
+<p>This time the contents of <code class="language-plaintext highlighter-rouge">lhs</code> gets loaded before performing the addition.</p>
+<pre><code class="language-C++">template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T operator + ( const U&amp; lhs, const T&amp; rhs ) noexcept
+{
+    using Traits = typename T::Traits;
+    return Traits::Add( Traits::Load( lhs.values.data( ) ), rhs.simd );
+}
+</code></pre>
+<p>The fourth, and last, overload, accepts compatible <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> or <code class="language-plaintext highlighter-rouge">Tuple4</code>
+for both the left hand side and the right hand side of the addition, loading data
+for both arguments before performing the addition.</p>
+<pre><code class="language-C++">template&lt;Internal::TupleType T, Internal::TupleType U, 
+                            typename ResultT = typename T::Simd&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline ResultT operator + ( const T&amp; lhs, const U&amp; rhs ) noexcept
+{
+    using Traits = typename T::Traits;
+    return Traits::Add( Traits::Load( lhs.values.data( ) ), 
+                                Traits::Load( rhs.values.data( ) ) );
+}
+
+</code></pre>
+
+<p>Loading to and storing from the SIMD types is done using the <code class="language-plaintext highlighter-rouge">values</code> field of
+the <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code> types, so they can all share the same
+operator and function implementations:</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Round( const T&amp; t ) noexcept
+{
+    using Traits = typename T::Traits;
+    return Traits::Round( t.simd );
+}
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Round( const T&amp; t ) noexcept
+{
+    using Traits = typename T::Traits;
+    return Traits::Round( Traits::Load( t.values.data( ) ) );
+}
+
+</code></pre>
+
+<p>The operators and functions nearly always return a <code class="language-plaintext highlighter-rouge">TupleSimd</code> based type,
+ensuring that data is only loaded into a SIMD type when necessary.</p>
+
+<h3 id="vector2f-vector3f-vector4f-vector2i-vector3i-vector4i">Vector2f, Vector3f, Vector4f, Vector2i, Vector3i, Vector4i</h3>
+
 <p><code class="language-plaintext highlighter-rouge">Vector&lt;float,2&gt;</code>, <code class="language-plaintext highlighter-rouge">Vector&lt;float,3&gt;</code> and <code class="language-plaintext highlighter-rouge">Vector&lt;float,4&gt;</code> are specializations of <code class="language-plaintext highlighter-rouge">Vector&lt;T,N&gt;</code> that 
 supports a wider repertoire of operations than the general <code class="language-plaintext highlighter-rouge">Vector&lt;T,N&gt;</code>.</p>
 
 <p><code class="language-plaintext highlighter-rouge">Vector&lt;float,2&gt;</code> is derived from the <code class="language-plaintext highlighter-rouge">Tuple2</code> template, <code class="language-plaintext highlighter-rouge">Vector&lt;float,3&gt;</code> is derived 
 from the <code class="language-plaintext highlighter-rouge">Tuple3</code>, and <code class="language-plaintext highlighter-rouge">Vector&lt;float,4&gt;</code> is derived from <code class="language-plaintext highlighter-rouge">Tuple4</code>.</p>
-
-<p><code class="language-plaintext highlighter-rouge">Tuple2</code> has two data fields <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> has <code class="language-plaintext highlighter-rouge">x</code>, <code class="language-plaintext highlighter-rouge">y</code> and <code class="language-plaintext highlighter-rouge">z</code>, and finally 
-<code class="language-plaintext highlighter-rouge">Tuple4</code> has <code class="language-plaintext highlighter-rouge">x</code>, <code class="language-plaintext highlighter-rouge">y</code>, <code class="language-plaintext highlighter-rouge">z</code> and <code class="language-plaintext highlighter-rouge">z</code>. The three template classes can be instantiated 
-for arithmetic data types.</p>
-
-<p><code class="language-plaintext highlighter-rouge">Tuple3</code> has a sibling template called <code class="language-plaintext highlighter-rouge">Tuple3Simd</code> defined for it. <code class="language-plaintext highlighter-rouge">Tuple3Simd</code> has 
-only one data field, <code class="language-plaintext highlighter-rouge">simd</code>, and the type of this field gets selected at compile time 
-as the narrowest SIMD datatype capable of holding the three values of <code class="language-plaintext highlighter-rouge">Tuple3</code>.</p>
-
-<p>To implement addition for <code class="language-plaintext highlighter-rouge">Tuple3</code> and its sibling <code class="language-plaintext highlighter-rouge">Tuple3Simd</code> there are four
-overloads of the <code class="language-plaintext highlighter-rouge">+</code> operator. The first overload implements addition for
-<code class="language-plaintext highlighter-rouge">Tuple3Simd</code> and <b>does not load data into the SIMD type</b>. If <code class="language-plaintext highlighter-rouge">Tuple3</code> is instantiated 
-for the <code class="language-plaintext highlighter-rouge">float</code> type, then the actual addition is performed by the 
-<code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;float,3&gt;::Add( SIMDType a, SIMDType b )</code> function and <code class="language-plaintext highlighter-rouge">SIMDType</code> is
-selected to be <code class="language-plaintext highlighter-rouge">__m128</code> which can hold up to four 32-bit floating point values.</p>
 
 <pre><code class="language-C++">template&lt;typename DerivedT, typename NumberT&gt;
 inline Tuple3Simd&lt;Tuple3&lt;DerivedT, NumberT&gt;&gt; 
@@ -324,6 +794,11 @@ BenchmarkPBRTVector3f          7.08 ns         5.86 ns    112000000
 
 <p><code class="language-plaintext highlighter-rouge">Dot</code> is implemented for the <code class="language-plaintext highlighter-rouge">Vector&lt;float,2&gt;</code>, <code class="language-plaintext highlighter-rouge">Vector&lt;float,3&gt;</code> and 
 <code class="language-plaintext highlighter-rouge">Vector&lt;float,4&gt;</code> specializations.</p>
+
+<h4 id="normal3f-and-normal3i">Normal3f and Normal3i</h4>
+<h4 id="point3f-and-point3i">Point3f and Point3i</h4>
+<h2 id="quaternion">Quaternion</h2>
+
 
   </div>
 

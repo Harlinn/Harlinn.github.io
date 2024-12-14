@@ -1,5 +1,6 @@
 var struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01_u_int16_00_01_n_01_4 =
 [
+    [ "Union", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01_u_int16_00_01_n_01_4_1_1_union.html", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01_u_int16_00_01_n_01_4_1_1_union" ],
     [ "ArrayType", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01_u_int16_00_01_n_01_4.html#a024a132b4683ae359458cba90ae50bdd", null ],
     [ "DataTypeTraits", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01_u_int16_00_01_n_01_4.html#ad0f16dbc2a00083e709caecc627d5d46", null ],
     [ "SIMDType", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01_u_int16_00_01_n_01_4.html#a16c2ab03b6984f13896e414d1ace5bfb", null ],
@@ -19,5 +20,6 @@ var struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01_u_int16_00_01
     [ "SIMDIterations", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01_u_int16_00_01_n_01_4.html#ae6b0996b3d011d546b8f5d5f44386006", null ],
     [ "SIMDTypeCapacity", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01_u_int16_00_01_n_01_4.html#ac3ef3f3e62fec2b01fc07ce798d08e58", null ],
     [ "SIMDTypeSize", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01_u_int16_00_01_n_01_4.html#a56f85793da957ff7853b539c375c9763", null ],
+    [ "Size", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01_u_int16_00_01_n_01_4.html#ab14ba9828dc04d5954d504a38a8a39ca", null ],
     [ "UseShortSIMDType", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01_u_int16_00_01_n_01_4.html#aa6ff9cfbb35c0a98e4ca29f2730d5ed6", null ]
 ];

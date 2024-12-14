@@ -111,12 +111,12 @@ $(function(){initNavTree('class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.
 <div class="dynheader">
 Inheritance diagram for Harlinn::Common::Core::Math::Tuple4&lt; DerivedT, T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4__inherit__graph.svg" width="214" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4__inherit__graph.svg" width="990" height="223"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for Harlinn::Common::Core::Math::Tuple4&lt; DerivedT, T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4__coll__graph.svg" width="204" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4__coll__graph.svg" width="264" height="198"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
@@ -137,27 +137,51 @@ Public Types</h2></td></tr>
 <tr class="separator:a275153caf6308fd990c1991e28d2e3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5147fd537bfbc237d8387b7b17e6858a" id="r_a5147fd537bfbc237d8387b7b17e6858a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5147fd537bfbc237d8387b7b17e6858a">ArrayType</a> = typename Traits::ArrayType</td></tr>
 <tr class="separator:a5147fd537bfbc237d8387b7b17e6858a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fdbe6cc5d1ddd15354c884d82ec41cf" id="r_a0fdbe6cc5d1ddd15354c884d82ec41cf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fdbe6cc5d1ddd15354c884d82ec41cf">SimdImpl</a> = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4_simd.html">Tuple4Simd</a>&lt;DerivedT&gt;</td></tr>
-<tr class="separator:a0fdbe6cc5d1ddd15354c884d82ec41cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1bbe513fdbcc3ffb07eab749bcaf9d8" id="r_ae1bbe513fdbcc3ffb07eab749bcaf9d8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1bbe513fdbcc3ffb07eab749bcaf9d8">Simd</a> = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple_simd.html">TupleSimd</a>&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e3">Traits</a>, DerivedT&gt;</td></tr>
+<tr class="memdesc:ae1bbe513fdbcc3ffb07eab749bcaf9d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mathematical operations are performed using this type which holds a <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html">SIMD</a> vector. <br  />
+  <br /></td></tr>
+<tr class="separator:ae1bbe513fdbcc3ffb07eab749bcaf9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa22457920996b9dbd7722b811ec32228" id="r_aa22457920996b9dbd7722b811ec32228"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa22457920996b9dbd7722b811ec32228">Tuple4</a> (<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> xv, <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> yv, <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> zv, <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> wv)</td></tr>
-<tr class="separator:aa22457920996b9dbd7722b811ec32228"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a785a4405e75a17a4975d1a5aa600cec5" id="r_a785a4405e75a17a4975d1a5aa600cec5"><td class="memTemplParams" colspan="2">template&lt;class DerivedT2 , typename T2 &gt; <br />
-requires std::is_same_v&lt;DerivedT2, DerivedT&gt;&amp;&amp; std::is_same_v&lt;T2, T&gt;</td></tr>
-<tr class="memitem:a785a4405e75a17a4975d1a5aa600cec5"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a785a4405e75a17a4975d1a5aa600cec5">Tuple4</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4_simd.html">Tuple4Simd</a>&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT2, T2 &gt; &gt; &amp;other)</td></tr>
-<tr class="separator:a785a4405e75a17a4975d1a5aa600cec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3ebb69749cfed83f5d7a9e37a7db523" id="r_ae3ebb69749cfed83f5d7a9e37a7db523"><td class="memTemplParams" colspan="2">template&lt;class DerivedT2 , typename T2 &gt; <br />
-requires std::is_same_v&lt;DerivedT2, DerivedT&gt;&amp;&amp; std::is_same_v&lt;T2, T&gt;</td></tr>
-<tr class="memitem:ae3ebb69749cfed83f5d7a9e37a7db523"><td class="memTemplItemLeft" align="right" valign="top">DerivedT &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae3ebb69749cfed83f5d7a9e37a7db523">operator=</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4_simd.html">Tuple4Simd</a>&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT2, T2 &gt; &gt; &amp;other)</td></tr>
-<tr class="separator:ae3ebb69749cfed83f5d7a9e37a7db523"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70c73d276e81459f895e83d4c8e7b702" id="r_a70c73d276e81459f895e83d4c8e7b702"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70c73d276e81459f895e83d4c8e7b702">Assign</a> (<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> xv, <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> yv, <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> zv, <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> wv)</td></tr>
-<tr class="separator:a70c73d276e81459f895e83d4c8e7b702"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53f891add52b06fc9b7d485993b4a5bb" id="r_a53f891add52b06fc9b7d485993b4a5bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53f891add52b06fc9b7d485993b4a5bb">Assign</a> (const <a class="el" href="#a5147fd537bfbc237d8387b7b17e6858a">ArrayType</a> &amp;src)</td></tr>
-<tr class="separator:a53f891add52b06fc9b7d485993b4a5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed6498def615e87986869710a073edd8" id="r_aed6498def615e87986869710a073edd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed6498def615e87986869710a073edd8">Assign</a> (<a class="el" href="#a275153caf6308fd990c1991e28d2e3a7">SIMDType</a> src)</td></tr>
-<tr class="separator:aed6498def615e87986869710a073edd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab47489624de2e92c8c597a3b5cc261af" id="r_ab47489624de2e92c8c597a3b5cc261af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab47489624de2e92c8c597a3b5cc261af">Tuple4</a> () noexcept</td></tr>
+<tr class="separator:ab47489624de2e92c8c597a3b5cc261af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7ba4ccfccf52003e815a3d3ebf8d673" id="r_aa7ba4ccfccf52003e815a3d3ebf8d673"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7ba4ccfccf52003e815a3d3ebf8d673">Tuple4</a> (<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> xv, <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> yv, <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> zv, <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> wv) noexcept</td></tr>
+<tr class="separator:aa7ba4ccfccf52003e815a3d3ebf8d673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea0e4e492c63e5b1d1249b55e7f147f8" id="r_aea0e4e492c63e5b1d1249b55e7f147f8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires ( T::Loaded&amp;&amp; T::Size == <a class="el" href="#a33ae8b991a3e47efd3568642044cd2ba">Size</a> &amp;&amp; std::is_same_v&lt;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>, typename T::value_type&gt; )</td></tr>
+<tr class="memitem:aea0e4e492c63e5b1d1249b55e7f147f8"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aea0e4e492c63e5b1d1249b55e7f147f8">Tuple4</a> (const T &amp;other) noexcept</td></tr>
+<tr class="separator:aea0e4e492c63e5b1d1249b55e7f147f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace589eccba863493668427c07e2c55c5" id="r_ace589eccba863493668427c07e2c55c5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires ( T::Loaded&amp;&amp; T::Size == <a class="el" href="#a33ae8b991a3e47efd3568642044cd2ba">Size</a> &amp;&amp; std::is_same_v&lt;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>, typename T::value_type&gt; )</td></tr>
+<tr class="memitem:ace589eccba863493668427c07e2c55c5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ace589eccba863493668427c07e2c55c5">operator=</a> (const T &amp;other) noexcept</td></tr>
+<tr class="separator:ace589eccba863493668427c07e2c55c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a278e03f57b026a26e79e264e29cdbcea" id="r_a278e03f57b026a26e79e264e29cdbcea"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a278e03f57b026a26e79e264e29cdbcea">operator==</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a> &amp;other) const noexcept</td></tr>
+<tr class="separator:a278e03f57b026a26e79e264e29cdbcea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9453ac013f715e0433728d15276c5eb" id="r_ae9453ac013f715e0433728d15276c5eb"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9453ac013f715e0433728d15276c5eb">operator!=</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a> &amp;other) const noexcept</td></tr>
+<tr class="separator:ae9453ac013f715e0433728d15276c5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcab66bf98e80dc64992d226fac42f7d" id="r_afcab66bf98e80dc64992d226fac42f7d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires ( T::Loaded&amp;&amp; T::Size == <a class="el" href="#a33ae8b991a3e47efd3568642044cd2ba">Size</a> &amp;&amp; std::is_same_v&lt;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>, typename T::value_type&gt; )</td></tr>
+<tr class="memitem:afcab66bf98e80dc64992d226fac42f7d"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afcab66bf98e80dc64992d226fac42f7d">operator==</a> (const T &amp;other) const noexcept</td></tr>
+<tr class="separator:afcab66bf98e80dc64992d226fac42f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01528148ae474c37b7b65d2f9923734e" id="r_a01528148ae474c37b7b65d2f9923734e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires ( T::Loaded&amp;&amp; T::Size == <a class="el" href="#a33ae8b991a3e47efd3568642044cd2ba">Size</a> &amp;&amp; std::is_same_v&lt;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>, typename T::value_type&gt; )</td></tr>
+<tr class="memitem:a01528148ae474c37b7b65d2f9923734e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a01528148ae474c37b7b65d2f9923734e">operator!=</a> (const T &amp;other) const noexcept</td></tr>
+<tr class="separator:a01528148ae474c37b7b65d2f9923734e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10704fa41adde3bbf688c71cdf18be6c" id="r_a10704fa41adde3bbf688c71cdf18be6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae1bbe513fdbcc3ffb07eab749bcaf9d8">Simd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10704fa41adde3bbf688c71cdf18be6c">operator-</a> () const noexcept</td></tr>
+<tr class="separator:a10704fa41adde3bbf688c71cdf18be6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e2ef92f08957f5dca27dcca2432b9ff" id="r_a2e2ef92f08957f5dca27dcca2432b9ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e2ef92f08957f5dca27dcca2432b9ff">Assign</a> (<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> xv, <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> yv, <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> zv, <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> wv) noexcept</td></tr>
+<tr class="separator:a2e2ef92f08957f5dca27dcca2432b9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30be6e844f74781223772a7def5dc985" id="r_a30be6e844f74781223772a7def5dc985"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30be6e844f74781223772a7def5dc985">Assign</a> (const <a class="el" href="#a5147fd537bfbc237d8387b7b17e6858a">ArrayType</a> &amp;src) noexcept</td></tr>
+<tr class="separator:a30be6e844f74781223772a7def5dc985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c335f1d96c4436474c8d128fd2ed9c" id="r_a33c335f1d96c4436474c8d128fd2ed9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33c335f1d96c4436474c8d128fd2ed9c">Assign</a> (<a class="el" href="#a275153caf6308fd990c1991e28d2e3a7">SIMDType</a> src) noexcept</td></tr>
+<tr class="separator:a33c335f1d96c4436474c8d128fd2ed9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5857238b80561f26d317c15ad87a0664" id="r_a5857238b80561f26d317c15ad87a0664"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5857238b80561f26d317c15ad87a0664">HasNaN</a> () const noexcept</td></tr>
+<tr class="separator:a5857238b80561f26d317c15ad87a0664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97a19456643a1e006c9d5e051411215" id="r_ad97a19456643a1e006c9d5e051411215"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad97a19456643a1e006c9d5e051411215">IsFinite</a> () const noexcept</td></tr>
+<tr class="separator:ad97a19456643a1e006c9d5e051411215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a157dac5efacc5d1307a48afead19253d" id="r_a157dac5efacc5d1307a48afead19253d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a157dac5efacc5d1307a48afead19253d">IsInfinite</a> () const noexcept</td></tr>
+<tr class="separator:a157dac5efacc5d1307a48afead19253d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -184,6 +208,10 @@ Public Attributes</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a33ae8b991a3e47efd3568642044cd2ba" id="r_a33ae8b991a3e47efd3568642044cd2ba"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="#ada5716b8e99dd6ac088ac0a84d609121">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33ae8b991a3e47efd3568642044cd2ba">Size</a> = 4</td></tr>
 <tr class="separator:a33ae8b991a3e47efd3568642044cd2ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecb070fbdc2795d554ef4a561a665f28" id="r_aecb070fbdc2795d554ef4a561a665f28"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecb070fbdc2795d554ef4a561a665f28">Loaded</a> = false</td></tr>
+<tr class="separator:aecb070fbdc2795d554ef4a561a665f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab97498ea432ad2a19889164d0cbf426f" id="r_ab97498ea432ad2a19889164d0cbf426f"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab97498ea432ad2a19889164d0cbf426f">Unloaded</a> = true</td></tr>
+<tr class="separator:ab97498ea432ad2a19889164d0cbf426f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34b6c7037b82a677f3267efb5de6e593" id="r_a34b6c7037b82a677f3267efb5de6e593"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="#ada5716b8e99dd6ac088ac0a84d609121">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34b6c7037b82a677f3267efb5de6e593">Capacity</a> = <a class="el" href="#a33ae8b991a3e47efd3568642044cd2ba">Size</a></td></tr>
 <tr class="separator:a34b6c7037b82a677f3267efb5de6e593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -220,8 +248,8 @@ template&lt;typename DerivedT , typename T &gt; </div>
 
 </div>
 </div>
-<a id="a0fdbe6cc5d1ddd15354c884d82ec41cf" name="a0fdbe6cc5d1ddd15354c884d82ec41cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fdbe6cc5d1ddd15354c884d82ec41cf">&#9670;&#160;</a></span>SimdImpl</h2>
+<a id="ae1bbe513fdbcc3ffb07eab749bcaf9d8" name="ae1bbe513fdbcc3ffb07eab749bcaf9d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1bbe513fdbcc3ffb07eab749bcaf9d8">&#9670;&#160;</a></span>Simd</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,10 +257,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 template&lt;typename DerivedT , typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::SimdImpl = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4_simd.html">Tuple4Simd</a>&lt;DerivedT&gt;</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Simd = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple_simd.html">TupleSimd</a>&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e3">Traits</a>, DerivedT&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The mathematical operations are performed using this type which holds a <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html">SIMD</a> vector. <br  />
+ </p>
 
 </div>
 </div>
@@ -333,8 +364,35 @@ template&lt;typename DerivedT , typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa22457920996b9dbd7722b811ec32228" name="aa22457920996b9dbd7722b811ec32228"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa22457920996b9dbd7722b811ec32228">&#9670;&#160;</a></span>Tuple4() <span class="overload">[1/2]</span></h2>
+<a id="ab47489624de2e92c8c597a3b5cc261af" name="ab47489624de2e92c8c597a3b5cc261af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab47489624de2e92c8c597a3b5cc261af">&#9670;&#160;</a></span>Tuple4() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedT , typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Tuple4 </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7ba4ccfccf52003e815a3d3ebf8d673" name="aa7ba4ccfccf52003e815a3d3ebf8d673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7ba4ccfccf52003e815a3d3ebf8d673">&#9670;&#160;</a></span>Tuple4() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,24 +425,23 @@ template&lt;typename DerivedT , typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a785a4405e75a17a4975d1a5aa600cec5" name="a785a4405e75a17a4975d1a5aa600cec5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a785a4405e75a17a4975d1a5aa600cec5">&#9670;&#160;</a></span>Tuple4() <span class="overload">[2/2]</span></h2>
+<a id="aea0e4e492c63e5b1d1249b55e7f147f8" name="aea0e4e492c63e5b1d1249b55e7f147f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea0e4e492c63e5b1d1249b55e7f147f8">&#9670;&#160;</a></span>Tuple4() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; <br />
-requires std::is_same_v&lt;DerivedT2, DerivedT&gt;&amp;&amp; std::is_same_v&lt;T2, T&gt;</div>
+template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memtemplate">
-template&lt;class DerivedT2 , typename T2 &gt; <br />
-requires std::is_same_v&lt;DerivedT2, DerivedT&gt;&amp;&amp; std::is_same_v&lt;T2, T&gt;</div>
+template&lt;typename T &gt; <br />
+requires ( T::Loaded&amp;&amp; T::Size == <a class="el" href="#a33ae8b991a3e47efd3568642044cd2ba">Size</a> &amp;&amp; std::is_same_v&lt;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>, typename T::value_type&gt; )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -392,13 +449,13 @@ requires std::is_same_v&lt;DerivedT2, DerivedT&gt;&amp;&amp; std::is_same_v&lt;T
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Tuple4 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4_simd.html">Tuple4Simd</a>&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT2, T2 &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -406,8 +463,8 @@ requires std::is_same_v&lt;DerivedT2, DerivedT&gt;&amp;&amp; std::is_same_v&lt;T
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a53f891add52b06fc9b7d485993b4a5bb" name="a53f891add52b06fc9b7d485993b4a5bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53f891add52b06fc9b7d485993b4a5bb">&#9670;&#160;</a></span>Assign() <span class="overload">[1/3]</span></h2>
+<a id="a30be6e844f74781223772a7def5dc985" name="a30be6e844f74781223772a7def5dc985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30be6e844f74781223772a7def5dc985">&#9670;&#160;</a></span>Assign() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,15 +483,15 @@ template&lt;typename DerivedT , typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aed6498def615e87986869710a073edd8" name="aed6498def615e87986869710a073edd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed6498def615e87986869710a073edd8">&#9670;&#160;</a></span>Assign() <span class="overload">[2/3]</span></h2>
+<a id="a33c335f1d96c4436474c8d128fd2ed9c" name="a33c335f1d96c4436474c8d128fd2ed9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33c335f1d96c4436474c8d128fd2ed9c">&#9670;&#160;</a></span>Assign() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -453,15 +510,15 @@ template&lt;typename DerivedT , typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a70c73d276e81459f895e83d4c8e7b702" name="a70c73d276e81459f895e83d4c8e7b702"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70c73d276e81459f895e83d4c8e7b702">&#9670;&#160;</a></span>Assign() <span class="overload">[3/3]</span></h2>
+<a id="a2e2ef92f08957f5dca27dcca2432b9ff" name="a2e2ef92f08957f5dca27dcca2432b9ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e2ef92f08957f5dca27dcca2432b9ff">&#9670;&#160;</a></span>Assign() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -494,32 +551,261 @@ template&lt;typename DerivedT , typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ae3ebb69749cfed83f5d7a9e37a7db523" name="ae3ebb69749cfed83f5d7a9e37a7db523"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3ebb69749cfed83f5d7a9e37a7db523">&#9670;&#160;</a></span>operator=()</h2>
+<a id="a5857238b80561f26d317c15ad87a0664" name="a5857238b80561f26d317c15ad87a0664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5857238b80561f26d317c15ad87a0664">&#9670;&#160;</a></span>HasNaN()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; <br />
-requires std::is_same_v&lt;DerivedT2, DerivedT&gt;&amp;&amp; std::is_same_v&lt;T2, T&gt;</div>
-<div class="memtemplate">
-template&lt;class DerivedT2 , typename T2 &gt; <br />
-requires std::is_same_v&lt;DerivedT2, DerivedT&gt;&amp;&amp; std::is_same_v&lt;T2, T&gt;</div>
+template&lt;typename DerivedT , typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">DerivedT &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator= </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::HasNaN </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4_simd.html">Tuple4Simd</a>&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT2, T2 &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad97a19456643a1e006c9d5e051411215" name="ad97a19456643a1e006c9d5e051411215"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad97a19456643a1e006c9d5e051411215">&#9670;&#160;</a></span>IsFinite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedT , typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::IsFinite </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a157dac5efacc5d1307a48afead19253d" name="a157dac5efacc5d1307a48afead19253d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a157dac5efacc5d1307a48afead19253d">&#9670;&#160;</a></span>IsInfinite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedT , typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::IsInfinite </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01528148ae474c37b7b65d2f9923734e" name="a01528148ae474c37b7b65d2f9923734e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01528148ae474c37b7b65d2f9923734e">&#9670;&#160;</a></span>operator!=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedT , typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename T &gt; <br />
+requires ( T::Loaded&amp;&amp; T::Size == <a class="el" href="#a33ae8b991a3e47efd3568642044cd2ba">Size</a> &amp;&amp; std::is_same_v&lt;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>, typename T::value_type&gt; )</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9453ac013f715e0433728d15276c5eb" name="ae9453ac013f715e0433728d15276c5eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9453ac013f715e0433728d15276c5eb">&#9670;&#160;</a></span>operator!=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedT , typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT, T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10704fa41adde3bbf688c71cdf18be6c" name="a10704fa41adde3bbf688c71cdf18be6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10704fa41adde3bbf688c71cdf18be6c">&#9670;&#160;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedT , typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae1bbe513fdbcc3ffb07eab749bcaf9d8">Simd</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace589eccba863493668427c07e2c55c5" name="ace589eccba863493668427c07e2c55c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace589eccba863493668427c07e2c55c5">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedT , typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename T &gt; <br />
+requires ( T::Loaded&amp;&amp; T::Size == <a class="el" href="#a33ae8b991a3e47efd3568642044cd2ba">Size</a> &amp;&amp; std::is_same_v&lt;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>, typename T::value_type&gt; )</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afcab66bf98e80dc64992d226fac42f7d" name="afcab66bf98e80dc64992d226fac42f7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcab66bf98e80dc64992d226fac42f7d">&#9670;&#160;</a></span>operator==() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedT , typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename T &gt; <br />
+requires ( T::Loaded&amp;&amp; T::Size == <a class="el" href="#a33ae8b991a3e47efd3568642044cd2ba">Size</a> &amp;&amp; std::is_same_v&lt;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>, typename T::value_type&gt; )</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a278e03f57b026a26e79e264e29cdbcea" name="a278e03f57b026a26e79e264e29cdbcea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a278e03f57b026a26e79e264e29cdbcea">&#9670;&#160;</a></span>operator==() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedT , typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT, T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -563,6 +849,30 @@ template&lt;typename DerivedT , typename T &gt; </div>
 
 </div>
 </div>
+<a id="aecb070fbdc2795d554ef4a561a665f28" name="aecb070fbdc2795d554ef4a561a665f28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecb070fbdc2795d554ef4a561a665f28">&#9670;&#160;</a></span>Loaded</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedT , typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Loaded = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a33ae8b991a3e47efd3568642044cd2ba" name="a33ae8b991a3e47efd3568642044cd2ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a33ae8b991a3e47efd3568642044cd2ba">&#9670;&#160;</a></span>Size</h2>
 
@@ -576,6 +886,30 @@ template&lt;typename DerivedT , typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="#ada5716b8e99dd6ac088ac0a84d609121">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Size = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab97498ea432ad2a19889164d0cbf426f" name="ab97498ea432ad2a19889164d0cbf426f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab97498ea432ad2a19889164d0cbf426f">&#9670;&#160;</a></span>Unloaded</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedT , typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Unloaded = true</td>
         </tr>
       </table>
   </td>

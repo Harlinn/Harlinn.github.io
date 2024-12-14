@@ -95,12 +95,12 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Abs( T val ) noexcept
 }
 </code></pre>
 
-<p>While calling the standard C/C++ implementation at runtime, unless the benchmarks prove 
+<p>and call the standard C/C++ implementation at runtime, unless the benchmarks prove 
 that the <code class="language-plaintext highlighter-rouge">constexpr</code> , or some other, implementation - performs consistently better.</p>
 
-<p>While <code class="language-plaintext highlighter-rouge">Exp</code> outperforms <code class="language-plaintext highlighter-rouge">std::exp</code> by <code class="language-plaintext highlighter-rouge">1200</code> % for double 
-precision floating point numbers, and by <code class="language-plaintext highlighter-rouge">1000</code> % for single 
-precision floating point numbers.</p>
+<p>A few functions, like <code class="language-plaintext highlighter-rouge">Exp</code>, outperforms the standard implementation spectacularly,
+and accurately - in this case with a maximum detected deviation of <code class="language-plaintext highlighter-rouge">2.18599e-16</code> compared
+to <code class="language-plaintext highlighter-rouge">std::exp</code> for double precision floating point values.</p>
 
 <pre><code class="language-C++">template&lt;typename T&gt;
     requires IsFloatingPoint&lt;T&gt;
@@ -110,14 +110,66 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Exp( T x ) noexcept
 }
 </code></pre>
 
+<p><code class="language-plaintext highlighter-rouge">Exp</code>, and several other functions, are based on open source code released by Sun Microsystems, 
+between 1993 and 2004, adapted to C++ 20 <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation, and some functions, like <code class="language-plaintext highlighter-rouge">Hypot</code>, 
+use the <a href="SimdOperations.html"><code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T.N&gt;</code> specializations</a> to achieve excellent runtime performance.</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+constexpr inline std::remove_cvref_t&lt;T&gt; Hypot( T x, T y, T z ) noexcept
+{
+    if ( std::is_constant_evaluated( ) )
+    {
+        return Sqrt( x*x + y*y + z*z );
+    }
+    else
+    {
+        using FloatT = std::remove_cvref_t&lt;T&gt;;
+        using Traits = SIMD::Traits&lt;FloatT, 3&gt;;
+
+        auto v = Traits::Set( z, y, x );
+        v = Traits::Mul( v, v );
+        v = Traits::HSum( v );
+        v = Traits::Sqrt( v );
+        return Traits::Lower( v );
+
+    }
+}
+</code></pre>
+
+<p>Extensive unit tests, available <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Tests/Harlinn.Common.Core.Math.Tests">here</a>, 
+strives to prove the accuracy of the computations.</p>
+
 <p>For some functions like <code class="language-plaintext highlighter-rouge">Tan</code>, the performance of the <code class="language-plaintext highlighter-rouge">constexpr</code> path , varies greatly.</p>
 
-<p><code class="language-plaintext highlighter-rouge">Math::Internal::TanImpl</code> usually performs about 40 % worse than <code class="language-plaintext highlighter-rouge">std::tan</code>, but in approximately 1 
-out of every 10<sup>th</sup> run of the benchmarks, the <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Tan</code> beats
-<code class="language-plaintext highlighter-rouge">std::tan</code>. When the runtime performance of the <code class="language-plaintext highlighter-rouge">constexpr</code> path is unstable and performs worse 
-than the standard implementations in more than 1 out of every 4<sup>th</sup> run of 
-the benchmarks, the functions in <code class="language-plaintext highlighter-rouge">HCCMath.h</code> always call the standard 
-C/C++ implementation at runtime.</p>
+<p><code class="language-plaintext highlighter-rouge">Math::Internal::TanImpl</code> performs about 40 % worse than <code class="language-plaintext highlighter-rouge">std::tan</code>, for double precision
+floating point values, but <code class="language-plaintext highlighter-rouge">Math::Internal::TanImpl</code> beats <code class="language-plaintext highlighter-rouge">std::tan</code>, for single precision
+floating point values, by more than <code class="language-plaintext highlighter-rouge">60</code> %, and splitting the execution path between 
+<code class="language-plaintext highlighter-rouge">Math::Internal::TanImpl</code> for single precision floating point values, and <code class="language-plaintext highlighter-rouge">std::tan</code>
+provides the best solution:</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+constexpr inline std::remove_cvref_t&lt;T&gt; Tan( T x ) noexcept
+{
+    if ( std::is_constant_evaluated( ) )
+    {
+        return Math::Internal::TanImpl( x );
+    }
+    else
+    {
+        using FloatType = std::remove_cvref_t&lt;T&gt;;
+        if constexpr ( std::is_same_v&lt;FloatType, float&gt; )
+        {
+            return Math::Internal::TanImpl( x );
+        }
+        else
+        {
+            return std::tan( x );
+        }
+    }
+}
+</code></pre>
 
 <p><a href="#basicmathbenchmarks-results">BasicMathBenchmarks results</a>, at the bottom of this page, shows how
 the performance numbers were calculated.</p>
@@ -168,24 +220,40 @@ of the benchmarks.</p>
 
     <p><code class="language-plaintext highlighter-rouge">Exp</code> outperforms <code class="language-plaintext highlighter-rouge">std::exp</code> by approximately <code class="language-plaintext highlighter-rouge">1200</code> % for double precision floating
 point values, and by approximately <code class="language-plaintext highlighter-rouge">1000</code> % for single precision floating point values.</p>
+
+    <p>The maximum detected deviation between <code class="language-plaintext highlighter-rouge">std::exp</code> and <code class="language-plaintext highlighter-rouge">Exp</code> is <code class="language-plaintext highlighter-rouge">1.18844e-07</code> for single precision
+floating point values, and <code class="language-plaintext highlighter-rouge">2.18599e-16</code> for double precision floating point values, for argument
+values in the range <code class="language-plaintext highlighter-rouge">-9</code> to <code class="language-plaintext highlighter-rouge">10</code>, tested with a uniform random distribution of <code class="language-plaintext highlighter-rouge">10'000</code> values.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">Log</code> computes natural, base <strong>e</strong>, logarithm (ln x)</p>
 
     <p><code class="language-plaintext highlighter-rouge">Log</code> outperforms <code class="language-plaintext highlighter-rouge">std::log</code> by approximately <code class="language-plaintext highlighter-rouge">260</code> % for double precision floating
 point values, and by approximately <code class="language-plaintext highlighter-rouge">400</code> % for single precision floating point values.</p>
+
+    <p>The maximum detected deviation between <code class="language-plaintext highlighter-rouge">std::log</code> and <code class="language-plaintext highlighter-rouge">Log</code> is <code class="language-plaintext highlighter-rouge">1.18795e-07</code> for single precision
+floating point values, and <code class="language-plaintext highlighter-rouge">2.04848e-16</code> for double precision floating point values, for argument
+values in the range <code class="language-plaintext highlighter-rouge">0</code> to <code class="language-plaintext highlighter-rouge">100000</code>, tested with a uniform random distribution of <code class="language-plaintext highlighter-rouge">10'000</code> values.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">Log2</code> base 2 logarithm of the given number (log<sub>2</sub><code class="language-plaintext highlighter-rouge">x</code>).</p>
 
     <p><code class="language-plaintext highlighter-rouge">Log2</code> outperforms <code class="language-plaintext highlighter-rouge">std::log2</code> by approximately <code class="language-plaintext highlighter-rouge">270</code> % for double precision floating
 point values, and by approximately <code class="language-plaintext highlighter-rouge">250</code> % for single precision floating point values.</p>
+
+    <p>The maximum detected deviation between <code class="language-plaintext highlighter-rouge">std::log2</code> and <code class="language-plaintext highlighter-rouge">Log2</code> is <code class="language-plaintext highlighter-rouge">1.18288e-07</code> for single precision
+floating point values, and <code class="language-plaintext highlighter-rouge">2.1882e-16</code> for double precision floating point values, for argument
+values in the range <code class="language-plaintext highlighter-rouge">0</code> to <code class="language-plaintext highlighter-rouge">100000</code>, tested with a uniform random distribution of <code class="language-plaintext highlighter-rouge">10'000</code> values.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">Log10</code> computes common (base 10) logarithm (log<sub>10</sub><code class="language-plaintext highlighter-rouge">x</code> )</p>
 
     <p><code class="language-plaintext highlighter-rouge">Log10</code> outperforms <code class="language-plaintext highlighter-rouge">std::log10</code> by approximately <code class="language-plaintext highlighter-rouge">360</code> % for double precision floating
 point values, and by approximately <code class="language-plaintext highlighter-rouge">390</code> % for single precision floating point values.</p>
+
+    <p>The maximum detected deviation between <code class="language-plaintext highlighter-rouge">std::log10</code> and <code class="language-plaintext highlighter-rouge">Log10</code> is <code class="language-plaintext highlighter-rouge">1.18216e-07</code> for single precision
+floating point values, and <code class="language-plaintext highlighter-rouge">2.0154e-16</code> for double precision floating point values, for argument
+values in the range <code class="language-plaintext highlighter-rouge">0</code> to <code class="language-plaintext highlighter-rouge">100000</code>, tested with a uniform random distribution of <code class="language-plaintext highlighter-rouge">10'000</code> values.</p>
   </li>
 </ul>
 
@@ -225,6 +293,10 @@ the trigonometric functions, especially for single precision floating point valu
     <p>The <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Sin</code> outperforms <code class="language-plaintext highlighter-rouge">std::sin</code> by approximately <code class="language-plaintext highlighter-rouge">100</code> % for single precision 
 floating point values, but performs worse when both the sine and the cosine
 is calculated for the same value.</p>
+
+    <p>The maximum deviation between <code class="language-plaintext highlighter-rouge">std::sin</code> and the <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Sin</code> is <code class="language-plaintext highlighter-rouge">1.19182e-07</code> for single precision
+floating point values, and <code class="language-plaintext highlighter-rouge">2.22045e-16</code> for double precision floating point values, tested for all possible single 
+precision floating point argument values for in the range <code class="language-plaintext highlighter-rouge">-((2*pi)+epsilon)</code> to <code class="language-plaintext highlighter-rouge">((2*pi)+epsilon)</code>.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">Cos</code> computes the cosine of its argument given in radians.</p>
@@ -234,6 +306,10 @@ is calculated for the same value.</p>
     <p>The <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Cos</code> outperforms <code class="language-plaintext highlighter-rouge">std::cos</code> by approximately <code class="language-plaintext highlighter-rouge">110</code> % for single precision 
 floating point values, but performs worse when both the sine and the cosine
 is calculated for the same value.</p>
+
+    <p>The maximum deviation between <code class="language-plaintext highlighter-rouge">std::cos</code> and the <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Cos</code> is <code class="language-plaintext highlighter-rouge">1.19187e-07</code> for single precision
+floating point values, and <code class="language-plaintext highlighter-rouge">2.22044e-16</code> for double precision floating point values, tested for all possible single 
+precision floating point argument values for in the range <code class="language-plaintext highlighter-rouge">-((2*pi)+epsilon)</code> to <code class="language-plaintext highlighter-rouge">((2*pi)+epsilon)</code>.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">Tan</code> computes the tangent of its argument given in radians.</p>
@@ -243,31 +319,51 @@ floating point values,</p>
 
     <p><code class="language-plaintext highlighter-rouge">Tan</code> calls std::tan at runtime, with a consistent performance penalty of up to <code class="language-plaintext highlighter-rouge">40</code> %
 compared to calling <code class="language-plaintext highlighter-rouge">std::tan</code> directly for double precision floating point values.</p>
+
+    <p>The maximum deviation between <code class="language-plaintext highlighter-rouge">std::tan</code> and the <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Tan</code> is <code class="language-plaintext highlighter-rouge">1.19209e-07</code> for single precision
+floating point values, and <code class="language-plaintext highlighter-rouge">2.22045e-16</code> for double precision floating point values, tested for all possible single 
+precision floating point argument values for in the range <code class="language-plaintext highlighter-rouge">-((2*pi)+epsilon)</code> to <code class="language-plaintext highlighter-rouge">((2*pi)+epsilon)</code>.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">ASin</code> computes arc sine of its argument.</p>
 
     <p><code class="language-plaintext highlighter-rouge">ASin</code> outperforms <code class="language-plaintext highlighter-rouge">std::asin</code> by approximately <code class="language-plaintext highlighter-rouge">20</code> % for double precision floating
 point values, and by approximately <code class="language-plaintext highlighter-rouge">30</code> % for single precision floating point values.</p>
+
+    <p>The maximum deviation between <code class="language-plaintext highlighter-rouge">std::asin</code> and <code class="language-plaintext highlighter-rouge">ASin</code> is <code class="language-plaintext highlighter-rouge">2.27673e-07</code> for single precision
+floating point values, and <code class="language-plaintext highlighter-rouge">2.22044e-16</code> for double precision floating point values, tested for all possible single 
+precision floating point argument values for in the range <code class="language-plaintext highlighter-rouge">-1.0</code> to <code class="language-plaintext highlighter-rouge">1.0</code>.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">ACos</code> computes the arc cosine of its argument.</p>
 
     <p><code class="language-plaintext highlighter-rouge">ACos</code> outperforms <code class="language-plaintext highlighter-rouge">std::acos</code> by approximately <code class="language-plaintext highlighter-rouge">30</code> % for double precision floating
 point values, and by approximately <code class="language-plaintext highlighter-rouge">50</code> % for single precision floating point values.</p>
+
+    <p>The maximum deviation between <code class="language-plaintext highlighter-rouge">std::acos</code> and <code class="language-plaintext highlighter-rouge">ACos</code> is <code class="language-plaintext highlighter-rouge">1.19209e-07</code> for single precision
+floating point values, and <code class="language-plaintext highlighter-rouge">2.22044e-16</code> for double precision floating point values, tested for all possible single 
+precision floating point argument values for in the range <code class="language-plaintext highlighter-rouge">-1.0</code> to <code class="language-plaintext highlighter-rouge">1.0</code>.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">ATan</code> computes the arc tangent of its argument.</p>
 
     <p><code class="language-plaintext highlighter-rouge">ATan</code> outperforms <code class="language-plaintext highlighter-rouge">std::atan</code> by approximately <code class="language-plaintext highlighter-rouge">5</code> % for double precision floating
 point values, and by approximately <code class="language-plaintext highlighter-rouge">30</code> % for single precision floating point values.</p>
+
+    <p>The maximum detected deviation between <code class="language-plaintext highlighter-rouge">std::atan</code> and <code class="language-plaintext highlighter-rouge">ATan</code> is <code class="language-plaintext highlighter-rouge">0.0</code> for single precision
+floating point values, and <code class="language-plaintext highlighter-rouge">0.0</code> for double precision floating point values, tested with a 
+uniform random distribution of <code class="language-plaintext highlighter-rouge">10'000</code> values in the range <code class="language-plaintext highlighter-rouge">-10'000</code> to <code class="language-plaintext highlighter-rouge">10'000</code>.</p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">ATan2</code> computes the arc tangent of <code class="language-plaintext highlighter-rouge">x</code> / <code class="language-plaintext highlighter-rouge">y</code>, its two arguments, using signs 
 to determine quadrants.</p>
 
-    <p><code class="language-plaintext highlighter-rouge">ATan2</code> outperforms <code class="language-plaintext highlighter-rouge">std::acos</code> by approximately <code class="language-plaintext highlighter-rouge">20</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">80</code> % for single precision floating point values.</p>
+    <p><code class="language-plaintext highlighter-rouge">ATan2</code> outperforms <code class="language-plaintext highlighter-rouge">std::atan2</code> by approximately <code class="language-plaintext highlighter-rouge">20</code> % for double precision floating
+point values, and by approximately <code class="language-plaintext highlighter-rouge">40</code> % for single precision floating point values.</p>
+
+    <p>The maximum detected deviation between <code class="language-plaintext highlighter-rouge">std::atan2</code> and <code class="language-plaintext highlighter-rouge">ATan2</code> is <code class="language-plaintext highlighter-rouge">0.0</code> for single precision
+floating point values, and <code class="language-plaintext highlighter-rouge">0.0</code> for double precision floating point values, tested with a 
+uniform random distribution of <code class="language-plaintext highlighter-rouge">10'000</code> values in the range <code class="language-plaintext highlighter-rouge">-10'000</code> to <code class="language-plaintext highlighter-rouge">10'000</code>.</p>
   </li>
 </ul>
 
@@ -535,22 +631,22 @@ BenchmarkDoubleStdLog10              32.5 ns         28.9 ns     24888889
 BenchmarkFloatInternalLog10          6.59 ns         4.96 ns    154482759
 BenchmarkFloatLog10                  6.31 ns         4.74 ns    112000000  (( 23.4 - 4.74)/4.74)*100 = 393.67 %
 BenchmarkFloatStdLog10               29.9 ns         23.4 ns     32000000
-BenchmarkDoubleInternalSin           48.0 ns         31.2 ns     16000000
+BenchmarkDoubleInternalSin           10.7 ns         8.37 ns     74666667
 BenchmarkDoubleSin                   7.43 ns         5.45 ns    152048486  (( 6.70 - 5.45)/5.45)*100 = 22.94 %
 BenchmarkDoubleStdSin                7.73 ns         6.70 ns    112000000
-BenchmarkFloatInternalSin            4.81 ns         3.77 ns    186666667
+BenchmarkFloatInternalSin            4.76 ns         4.01 ns    179200000
 BenchmarkFloatSin                    4.81 ns         3.45 ns    248888889  (( 6.98 - 3.45)/3.45)*100 = 102.32 %
 BenchmarkFloatStdSin                 7.75 ns         6.98 ns    112000000
-BenchmarkDoubleInternalCos           47.3 ns         36.1 ns     20363636
+BenchmarkDoubleInternalCos           9.63 ns         7.97 ns    100000000
 BenchmarkDoubleCos                   8.62 ns         6.80 ns     89600000  (( 7.19 - 6.80)/6.80)*100 = 5.73 %
 BenchmarkDoubleStdCos                8.53 ns         7.19 ns    100000000
 BenchmarkFloatInternalCos            5.67 ns         4.17 ns    194782609
 BenchmarkFloatCos                    4.68 ns         3.59 ns    208849115  (( 7.66 - 3.59)/3.59)*100 = 113.37 %
 BenchmarkFloatStdCos                 8.58 ns         7.66 ns    100000000
-BenchmarkDoubleInternalTan           55.5 ns         47.4 ns     11200000
+BenchmarkDoubleInternalTan           17.2 ns         14.8 ns     56000000
 BenchmarkDoubleTan                   12.3 ns         9.49 ns     56000000  (( 5.93 - 9.49)/9.49)*100 = -37.51 %
 BenchmarkDoubleStdTan                8.39 ns         5.93 ns     89600000
-BenchmarkFloatInternalTan            6.78 ns         5.16 ns    100000000
+BenchmarkFloatInternalTan            5.79 ns         4.88 ns    112000000
 BenchmarkFloatTan                    5.73 ns         5.08 ns    160000000  (( 8.23 - 5.08)/5.08)*100 = 62.0 %
 BenchmarkFloatStdTan                 9.75 ns         8.23 ns    112000000
 BenchmarkDoubleInternalATan          8.41 ns         6.25 ns    100000000
@@ -574,9 +670,9 @@ BenchmarkFloatStdACos                6.93 ns         5.86 ns    112000000
 BenchmarkDoubleInternalATan2         12.7 ns         10.8 ns     89600000
 BenchmarkDoubleATan2                 13.8 ns         12.2 ns     44800000  (( 15.1 - 12.2)/12.2)*100 = 23.77 %
 BenchmarkDoubleStdATan2              20.9 ns         15.1 ns     37333333
-BenchmarkFloatInternalATan2          9.88 ns         7.81 ns    100000000
-BenchmarkFloatATan2                  9.75 ns         7.95 ns    112000000  (( 14.8 - 7.95)/7.95)*100 = 86.16 %
-BenchmarkFloatStdATan2               19.7 ns         14.8 ns     56000000
+BenchmarkFloatInternalATan2          10.4 ns         7.32 ns     74666667
+BenchmarkFloatATan2                  9.75 ns         7.95 ns    112000000  (( 11.6 - 7.95)/7.95)*100 = 45.91 %
+BenchmarkFloatStdATan2               13.4 ns         11.6 ns     49777778
 </code></pre></div></div>
 
   </div>

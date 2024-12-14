@@ -276,6 +276,7 @@ var menudata={children:[
 {text:"n",url:"functions_type_n.html#index_n"},
 {text:"o",url:"functions_type_o.html#index_o"},
 {text:"p",url:"functions_type_p.html#index_p"},
+{text:"q",url:"functions_type_q.html#index_q"},
 {text:"r",url:"functions_type_r.html#index_r"},
 {text:"s",url:"functions_type_s.html#index_s"},
 {text:"t",url:"functions_type_t.html#index_t"},

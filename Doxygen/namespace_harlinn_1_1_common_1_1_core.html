@@ -4322,6 +4322,10 @@ requires <a class="el" href="#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&l
 <tr class="separator:a8317136fff00c1f6affbaa02fe5890aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b36d3246220967396794742c4b4c08b" id="r_a2b36d3246220967396794742c4b4c08b"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a789293c13583af2e0a4926d068e0415e">Double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b36d3246220967396794742c4b4c08b">ReverseBits</a> (<a class="el" href="#a789293c13583af2e0a4926d068e0415e">Double</a> val) noexcept</td></tr>
 <tr class="separator:a2b36d3246220967396794742c4b4c08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbd773fdfc61fb4da005bd509384bc25" id="r_acbd773fdfc61fb4da005bd509384bc25"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:acbd773fdfc61fb4da005bd509384bc25"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acbd773fdfc61fb4da005bd509384bc25">IndexOfBitFromMSB</a> (unsigned long *index, T bits)</td></tr>
+<tr class="separator:acbd773fdfc61fb4da005bd509384bc25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8934dd5bf3cc25bd1474b50e1e3fa7e" id="r_af8934dd5bf3cc25bd1474b50e1e3fa7e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8934dd5bf3cc25bd1474b50e1e3fa7e">CreateBitMask64</a> (unsigned numberOfBitsToSet) noexcept</td></tr>
 <tr class="memdesc:af8934dd5bf3cc25bd1474b50e1e3fa7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a bit-mask.  <br /></td></tr>
 <tr class="separator:af8934dd5bf3cc25bd1474b50e1e3fa7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4371,6 +4375,22 @@ requires ( sizeof( T2 ) == 8 ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href
 requires ( sizeof( T1 ) == 8 ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href="#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>, T2&gt; || std::is_same_v&lt;<a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, T2&gt; ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href="#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>, T3&gt; || std::is_same_v&lt;<a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, T3&gt; ) &amp;&amp; requires( <a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a> v1 ) { { std::bit_cast&lt;T1&gt;( v1 ) }-&gt;std::same_as&lt;T1&gt;; }</td></tr>
 <tr class="memitem:a6abfbc60f12da148c1c56a4657cb5c89"><td class="memTemplItemLeft" align="right" valign="top">constexpr T1&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6abfbc60f12da148c1c56a4657cb5c89">From32BitsTo64Bits</a> (T2 high32Bits, T3 low32Bits) noexcept</td></tr>
 <tr class="separator:a6abfbc60f12da148c1c56a4657cb5c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ef7b024f4505391e7ce0029ff55cc73" id="r_a3ef7b024f4505391e7ce0029ff55cc73"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ef7b024f4505391e7ce0029ff55cc73">Exponent</a> (double value) noexcept</td></tr>
+<tr class="separator:a3ef7b024f4505391e7ce0029ff55cc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f84845dba38911d9dbd7182ff338d9a" id="r_a5f84845dba38911d9dbd7182ff338d9a"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f84845dba38911d9dbd7182ff338d9a">Exponent</a> (float v) noexcept</td></tr>
+<tr class="separator:a5f84845dba38911d9dbd7182ff338d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac576da397823a2ff8a85a76cea069751" id="r_ac576da397823a2ff8a85a76cea069751"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac576da397823a2ff8a85a76cea069751">Significand</a> (double value) noexcept</td></tr>
+<tr class="separator:ac576da397823a2ff8a85a76cea069751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2231abaaa9fb0b4999e6ea1ffdd436b8" id="r_a2231abaaa9fb0b4999e6ea1ffdd436b8"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2231abaaa9fb0b4999e6ea1ffdd436b8">Significand</a> (float v) noexcept</td></tr>
+<tr class="separator:a2231abaaa9fb0b4999e6ea1ffdd436b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e512ed5cb2646a1a89bd25aed3522d" id="r_ae1e512ed5cb2646a1a89bd25aed3522d"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1e512ed5cb2646a1a89bd25aed3522d">SignBit</a> (double value)</td></tr>
+<tr class="separator:ae1e512ed5cb2646a1a89bd25aed3522d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa27414454de523af8aa513d8e8c537c5" id="r_aa27414454de523af8aa513d8e8c537c5"><td class="memItemLeft" align="right" valign="top">constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa27414454de523af8aa513d8e8c537c5">SignBit</a> (float v)</td></tr>
+<tr class="separator:aa27414454de523af8aa513d8e8c537c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7392fd4b54d784ba9172c11807b772fe" id="r_a7392fd4b54d784ba9172c11807b772fe"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7392fd4b54d784ba9172c11807b772fe">FlipSign</a> (double a, double b)</td></tr>
+<tr class="separator:a7392fd4b54d784ba9172c11807b772fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a0b3360987842959945c225bc3739e5" id="r_a9a0b3360987842959945c225bc3739e5"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a0b3360987842959945c225bc3739e5">FlipSign</a> (float a, float b)</td></tr>
+<tr class="separator:a9a0b3360987842959945c225bc3739e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c6d63288a5ed5a3ef131157529f1d8" id="r_a33c6d63288a5ed5a3ef131157529f1d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33c6d63288a5ed5a3ef131157529f1d8">MemCopy</a> (char *dest, const char *source, size_t length) noexcept</td></tr>
 <tr class="separator:a33c6d63288a5ed5a3ef131157529f1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f64b8420d0752fe9941d32799b40037" id="r_a2f64b8420d0752fe9941d32799b40037"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f64b8420d0752fe9941d32799b40037">MemCopy</a> (wchar_t *dest, const wchar_t *source, size_t length) noexcept</td></tr>
@@ -4496,10 +4516,18 @@ requires std::is_floating_point_v&lt;T&gt;</td></tr>
 requires <a class="el" href="#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;T&gt;</td></tr>
 <tr class="memitem:a23df29f8ece8e4932a022c961f8d9fbb"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a23df29f8ece8e4932a022c961f8d9fbb">IsPowerOfTwo</a> (T v) noexcept</td></tr>
 <tr class="separator:a23df29f8ece8e4932a022c961f8d9fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16bc88655c1d1e2f629d4f6150ca7c20" id="r_a16bc88655c1d1e2f629d4f6150ca7c20"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires <a class="el" href="#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;T&gt;</td></tr>
+<tr class="memitem:a16bc88655c1d1e2f629d4f6150ca7c20"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a16bc88655c1d1e2f629d4f6150ca7c20">IsPowerOf2</a> (T v) noexcept</td></tr>
+<tr class="separator:a16bc88655c1d1e2f629d4f6150ca7c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eec457fc75071c5d07325df571e2ec6" id="r_a5eec457fc75071c5d07325df571e2ec6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
 requires std::is_enum_v&lt;std::remove_cvref_t&lt;T&gt;&gt;</td></tr>
 <tr class="memitem:a5eec457fc75071c5d07325df571e2ec6"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5eec457fc75071c5d07325df571e2ec6">IsPowerOfTwo</a> (T v) noexcept</td></tr>
 <tr class="separator:a5eec457fc75071c5d07325df571e2ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370018a91acfd7e115591b8b9bb736be" id="r_a370018a91acfd7e115591b8b9bb736be"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_enum_v&lt;std::remove_cvref_t&lt;T&gt;&gt;</td></tr>
+<tr class="memitem:a370018a91acfd7e115591b8b9bb736be"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a370018a91acfd7e115591b8b9bb736be">IsPowerOf2</a> (T v) noexcept</td></tr>
+<tr class="separator:a370018a91acfd7e115591b8b9bb736be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abee4fd455c3839f0ecbe31b297529a61" id="r_abee4fd455c3839f0ecbe31b297529a61"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#af82811a69582d9f85a78627741d07b19">Byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abee4fd455c3839f0ecbe31b297529a61">NextPowerOfTwo</a> (<a class="el" href="#af82811a69582d9f85a78627741d07b19">Byte</a> v) noexcept</td></tr>
 <tr class="separator:abee4fd455c3839f0ecbe31b297529a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0791884a8acdcf2e5da44b97ebed04a7" id="r_a0791884a8acdcf2e5da44b97ebed04a7"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0791884a8acdcf2e5da44b97ebed04a7">NextPowerOfTwo</a> (<a class="el" href="#a6b02859d5fc5a3399e9345f3e6027242">SByte</a> v) noexcept</td></tr>
@@ -11735,6 +11763,56 @@ template&lt;SimpleCharSpanLike SpanT&gt; </div>
 
 </div>
 </div>
+<a id="a3ef7b024f4505391e7ce0029ff55cc73" name="a3ef7b024f4505391e7ce0029ff55cc73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ef7b024f4505391e7ce0029ff55cc73">&#9670;&#160;</a></span>Exponent() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Harlinn::Common::Core::Exponent </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f84845dba38911d9dbd7182ff338d9a" name="a5f84845dba38911d9dbd7182ff338d9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f84845dba38911d9dbd7182ff338d9a">&#9670;&#160;</a></span>Exponent() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Harlinn::Common::Core::Exponent </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab9442dd93d1e89209957b8c4ccec3d18" name="ab9442dd93d1e89209957b8c4ccec3d18"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab9442dd93d1e89209957b8c4ccec3d18">&#9670;&#160;</a></span>ExtractBits32()</h2>
 
@@ -11822,6 +11900,64 @@ template&lt;SimpleCharSpanLike SpanT&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the extracted bits, with the first extracted bit at position 0, the least significant bit in the returned value. </dd></dl>
+
+</div>
+</div>
+<a id="a7392fd4b54d784ba9172c11807b772fe" name="a7392fd4b54d784ba9172c11807b772fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7392fd4b54d784ba9172c11807b772fe">&#9670;&#160;</a></span>FlipSign() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Harlinn::Common::Core::FlipSign </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a0b3360987842959945c225bc3739e5" name="a9a0b3360987842959945c225bc3739e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a0b3360987842959945c225bc3739e5">&#9670;&#160;</a></span>FlipSign() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Harlinn::Common::Core::FlipSign </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -12980,6 +13116,38 @@ template&lt;typename CharType &gt; </div>
 
 </div>
 </div>
+<a id="acbd773fdfc61fb4da005bd509384bc25" name="acbd773fdfc61fb4da005bd509384bc25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbd773fdfc61fb4da005bd509384bc25">&#9670;&#160;</a></span>IndexOfBitFromMSB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Harlinn::Common::Core::IndexOfBitFromMSB </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long *</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>bits</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a59e4dc439f3191700fbc932fdc45b9f1" name="a59e4dc439f3191700fbc932fdc45b9f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a59e4dc439f3191700fbc932fdc45b9f1">&#9670;&#160;</a></span>IsAlnum() <span class="overload">[1/2]</span></h2>
 
@@ -13356,6 +13524,62 @@ requires std::is_enum_v&lt;EnumT&gt;&amp;&amp; std::conjunction_v&lt;std::is_sam
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16bc88655c1d1e2f629d4f6150ca7c20" name="a16bc88655c1d1e2f629d4f6150ca7c20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16bc88655c1d1e2f629d4f6150ca7c20">&#9670;&#160;</a></span>IsPowerOf2() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; <br />
+requires <a class="el" href="#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Harlinn::Common::Core::IsPowerOf2 </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a370018a91acfd7e115591b8b9bb736be" name="a370018a91acfd7e115591b8b9bb736be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a370018a91acfd7e115591b8b9bb736be">&#9670;&#160;</a></span>IsPowerOf2() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; <br />
+requires std::is_enum_v&lt;std::remove_cvref_t&lt;T&gt;&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Harlinn::Common::Core::IsPowerOf2 </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -21562,6 +21786,106 @@ requires ( sizeof( T2 ) == 8 ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1e512ed5cb2646a1a89bd25aed3522d" name="ae1e512ed5cb2646a1a89bd25aed3522d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e512ed5cb2646a1a89bd25aed3522d">&#9670;&#160;</a></span>SignBit() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::Common::Core::SignBit </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa27414454de523af8aa513d8e8c537c5" name="aa27414454de523af8aa513d8e8c537c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa27414454de523af8aa513d8e8c537c5">&#9670;&#160;</a></span>SignBit() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Harlinn::Common::Core::SignBit </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac576da397823a2ff8a85a76cea069751" name="ac576da397823a2ff8a85a76cea069751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac576da397823a2ff8a85a76cea069751">&#9670;&#160;</a></span>Significand() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::Common::Core::Significand </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2231abaaa9fb0b4999e6ea1ffdd436b8" name="a2231abaaa9fb0b4999e6ea1ffdd436b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2231abaaa9fb0b4999e6ea1ffdd436b8">&#9670;&#160;</a></span>Significand() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Harlinn::Common::Core::Significand </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

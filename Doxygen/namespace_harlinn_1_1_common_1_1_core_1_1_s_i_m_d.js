@@ -47,5 +47,6 @@ var namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d =
       [ "m512", "namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a81f751d1a95891a5fac3a87d2b2fc77fa1203b03444281b3a7ccd40b4487dbd3b", null ],
       [ "m512i", "namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a81f751d1a95891a5fac3a87d2b2fc77fa214e767a471fa98ba46e26da71d14e63", null ],
       [ "m512d", "namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a81f751d1a95891a5fac3a87d2b2fc77fab2e8b3f6eea4260311d0579967530dcf", null ]
-    ] ]
+    ] ],
+    [ "IsSIMDType", "namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a6d416b506b1c6743520484c5241bf8f7", null ]
 ];
