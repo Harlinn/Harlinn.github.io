@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>PBRTO a micro optimized raytracing app | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="PBRTO a micro optimized raytracing app" />
@@ -18,9 +18,198 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","description":"This is my personal Github site,","headline":"PBRTO a micro optimized raytracing app","url":"https://harlinn.github.io/Cpp/Cpp/Math/pbrto.html"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="importmap">
+        {
+            "imports":
+            {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.171.0/build/three.module.min.js" ,
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.171.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
 <body><header class="site-header" role="banner">
+    <div id="animatedHeader" height="120px" width="100%">
+        <script type="x-shader/x-vertex" id="vertexshader">
+            attribute float scale;
+            void main() {
+                vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+                gl_PointSize = scale * ( 100.0 / - mvPosition.z );
+                gl_Position = projectionMatrix * mvPosition;
+            }
 
+        </script>
+
+        <script type="x-shader/x-fragment" id="fragmentshader">
+            uniform vec3 color;
+            void main() {
+                if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 )  discard;
+                gl_FragColor = vec4( color, 0.8 );
+            }
+        </script>
+
+        <script type="module">
+
+			import * as THREE from 'three';
+
+			const SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
+
+			let container; 
+			let camera, scene, renderer;
+
+			let particles, count = 0;
+
+			let mouseX = 0, mouseY = 0;
+
+			let animatedHeaderHeight = 120;
+
+            let windowHalfX = window.innerWidth / 2;
+            let windowHalfY = animatedHeaderHeight/2.0;
+
+			init();
+
+			function init() {
+
+                container = document.querySelector('#animatedHeader');
+
+                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.z = 1000;
+
+				scene = new THREE.Scene();
+
+				//
+
+				const numParticles = AMOUNTX * AMOUNTY;
+
+				const positions = new Float32Array( numParticles * 3 );
+				const scales = new Float32Array( numParticles );
+
+				let i = 0, j = 0;
+
+				for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
+
+					for ( let iy = 0; iy < AMOUNTY; iy ++ ) {
+
+						positions[ i ] = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 ); // x
+						positions[ i + 1 ] = 0; // y
+						positions[ i + 2 ] = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 ); // z
+
+						scales[ j ] = 1;
+
+						i += 3;
+						j ++;
+
+					}
+
+				}
+
+				const geometry = new THREE.BufferGeometry();
+				geometry.setAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
+				geometry.setAttribute( 'scale', new THREE.BufferAttribute( scales, 1 ) );
+
+				const material = new THREE.ShaderMaterial( {
+
+					uniforms: {
+						color: { value: new THREE.Color( 0xffffff ) },
+					},
+					vertexShader: document.getElementById( 'vertexshader' ).textContent,
+					fragmentShader: document.getElementById( 'fragmentshader' ).textContent
+
+				} );
+
+				//
+
+				particles = new THREE.Points( geometry, material );
+				scene.add( particles );
+
+				//
+
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+                renderer.setSize(window.innerWidth, animatedHeaderHeight );
+				renderer.setAnimationLoop( animate );
+				container.appendChild( renderer.domElement );
+
+				container.style.touchAction = 'none';
+				container.addEventListener( 'pointermove', onPointerMove );
+
+				//
+
+                window.addEventListener( 'resize', onWindowResize );
+
+			}
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+
+				camera.aspect = window.innerWidth / animatedHeaderHeight; 
+				camera.updateProjectionMatrix();
+
+				renderer.setSize(window.innerWidth, animatedHeaderHeight);
+
+			}
+
+			//
+
+			function onPointerMove( event ) {
+
+				if ( event.isPrimary === false ) return;
+
+				mouseX = event.clientX - windowHalfX;
+				mouseY = event.clientY - windowHalfY;
+
+			}
+
+			//
+
+			function animate() {
+				render();
+
+			}
+
+			function render() {
+
+				camera.position.x += ( mouseX - camera.position.x ) * .05;
+				camera.position.y += ( - mouseY - camera.position.y ) * .05;
+				camera.lookAt( scene.position );
+
+				const positions = particles.geometry.attributes.position.array;
+				const scales = particles.geometry.attributes.scale.array;
+
+				let i = 0, j = 0;
+
+				for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
+
+					for ( let iy = 0; iy < AMOUNTY; iy ++ ) {
+
+						positions[ i + 1 ] = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) +
+										( Math.sin( ( iy + count ) * 0.5 ) * 50 );
+
+						scales[ j ] = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 20 +
+										( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 20;
+
+						i += 3;
+						j ++;
+
+					}
+
+				}
+
+				particles.geometry.attributes.position.needsUpdate = true;
+				particles.geometry.attributes.scale.needsUpdate = true;
+
+				renderer.render( scene, camera );
+
+				count += 0.1;
+
+			}
+
+        </script>
+
+    </div>
   <div class="wrapper"><a class="site-title" rel="author" href="/">Harlinn</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
@@ -43,13 +232,268 @@
   </header>
 
   <div class="post-content">
-    <p>PBRTO is a micro optimized version of <a href="https://github.com/mmp/pbrt-v4">PBRT-v4</a>, created as an example of how the 
-functionality in <code class="language-plaintext highlighter-rouge">HCCMath.h</code> and <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> can be used to optimize the 
-performance of a real, computationally intensive, app. It’s now about <code class="language-plaintext highlighter-rouge">35</code> % 
+    <p>PBRTO is a micro optimized version of <a href="https://github.com/mmp/pbrt-v4">PBRT-v4</a>, under development 
+as an example of how the functionality in <code class="language-plaintext highlighter-rouge">HCCMath.h</code> and <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> can be used to 
+optimize the performance of real, computationally intensive, apps. It’s now about <code class="language-plaintext highlighter-rouge">35</code> % 
 faster than the release build of the original PBRT.</p>
 
-<p>Most of the solution is contained within <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Examples/Core/Math/Harlinn.pbrto">Harlinn.pbrto</a>.</p>
+<p>PBRT is a well written piece of software, with a code base that is, 
+for such a complex undertaking, easy to understand and modify.</p>
 
+<p>The original, unmodified version, performs very well and it’s simple to integrate with <a href="https://www.blender.org/">blender</a>, 
+using <a href="https://github.com/NicNel/bpbrt4">pbrt-v4 render engine/exporter add-on for Blender</a>.</p>
+
+<p>Most of the solution is contained within the <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Examples/Core/Math/Harlinn.pbrto">Harlinn.pbrto</a>
+project. This project builds PBRT at a dynamic link library, which makes it easy to create benchmarks
+for the original PBRT code,</p>
+
+<p>PBRT has its own set of optimized mathematical functions, and it’s only when we 
+start comparing the vector and matrix operations, that it becomes clear that
+really significant performance improvements are possible.</p>
+
+<p>Matrix addition can be improved by <code class="language-plaintext highlighter-rouge">330</code> %, matrix multiplication by
+<code class="language-plaintext highlighter-rouge">1000</code> %, matrix determinant by <code class="language-plaintext highlighter-rouge">450</code> %, and the matrix inverse by <code class="language-plaintext highlighter-rouge">690</code> %:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>----------------------------------------------------------------------------------
+Benchmark                                        Time             CPU   Iterations
+----------------------------------------------------------------------------------
+BenchmarkDoubleGenerator                      1.90 ns         1.68 ns    344615385
+BenchmarkFloatGenerator                       1.42 ns         1.13 ns    647432258
+BenchmarkDoubleIsSameValue                    1.69 ns         1.38 ns    373333333
+BenchmarkFloatIsSameValue                     2.14 ns         1.95 ns    344615385
+BenchmarkDoubleIsZero                         2.30 ns         2.18 ns    344615385
+BenchmarkFloatIsZero                          1.77 ns         1.36 ns    448000000
+BenchmarkDoubleIsNaN                          1.80 ns         1.57 ns    448000000
+BenchmarkDoubleStdIsNaN                       1.80 ns         1.67 ns    373333333
+BenchmarkDoublePbrtoIsNaN                     1.71 ns         1.50 ns    407272727
+BenchmarkFloatIsNaN                           1.40 ns         1.07 ns    497777778
+BenchmarkFloatStdIsNaN                        1.39 ns         1.15 ns    640000000
+BenchmarkFloatPbrtoIsNaN                      1.49 ns         1.35 ns    497777778
+BenchmarkDoubleSignum                         2.33 ns         2.07 ns    407272727
+BenchmarkDoubleNaiveSignum                    1.96 ns         1.51 ns    373333333
+BenchmarkFloatSignum                          2.52 ns         2.26 ns    373333333
+BenchmarkFloatNaiveSignum                     1.93 ns         1.63 ns    344615385
+BenchmarkDoubleDeg2Rad                        2.31 ns         2.03 ns    407272727
+BenchmarkDoublePbrtRadians                    2.03 ns         1.54 ns    497777778
+BenchmarkFloatDeg2Rad                         1.96 ns         1.70 ns    497777778
+BenchmarkFloatPbrtRadians                     1.93 ns         1.73 ns    407272727
+BenchmarkDoubleRad2Deg                        1.96 ns         1.81 ns    448000000
+BenchmarkDoublePbrtDegrees                    1.63 ns         1.42 ns    373333333
+BenchmarkFloatRad2Deg                         2.10 ns         1.77 ns    344615385
+BenchmarkFloatPbrtDegrees                     1.93 ns         1.77 ns    344615385
+BenchmarkDoubleNextAfter                      6.91 ns         5.44 ns    112000000
+BenchmarkDoubleStdNextAfter                   11.4 ns         9.52 ns     64000000
+BenchmarkFloatNextAfter                       3.90 ns         3.22 ns    203636364
+BenchmarkFloatStdNextAfter                    11.8 ns         10.9 ns     74666667
+BenchmarkDoubleInternalSqrt                   41.4 ns         35.7 ns     17920000
+BenchmarkDoubleSqrt                           1.83 ns         1.54 ns    497777778
+BenchmarkDoubleStdSqrt                        27.9 ns         24.0 ns     28000000
+BenchmarkDoublePbrtSqrt                       28.4 ns         21.5 ns     32000000
+BenchmarkFloatInternalSqrt                    13.4 ns         11.7 ns     56000000
+BenchmarkFloatSqrt                            1.53 ns         1.26 ns    497777778
+BenchmarkFloatStdSqrt                         25.9 ns         22.5 ns     32000000
+BenchmarkFloatPbrtSqrt                        24.6 ns         18.4 ns     40727273
+BenchmarkDoubleNextDown                       2.31 ns         2.02 ns    448000000
+BenchmarkDoubleStdNextDown                    11.6 ns         8.37 ns    112000000
+BenchmarkFloatNextDown                        2.55 ns         2.34 ns    280000000
+BenchmarkFloatStdNextDown                     10.9 ns         9.59 ns     89600000
+BenchmarkFloatPbrtNextFloatDown               3.33 ns         2.62 ns    280000000
+BenchmarkDoubleNextUp                         4.06 ns         3.56 ns    224000000
+BenchmarkDoubleStdNextUp                      11.7 ns         9.84 ns     74666667
+BenchmarkFloatNextUp                          4.26 ns         3.60 ns    186666667
+BenchmarkFloatStdNextUp                       12.0 ns         8.79 ns    112000000
+BenchmarkFloatPbrtNextFloatUp                 3.57 ns         2.79 ns    224000000
+BenchmarkDoubleIsInf                          1.72 ns         1.51 ns    560000000
+BenchmarkDoubleStdIsInf                       1.75 ns         1.45 ns    560000000
+BenchmarkFloatIsInf                           1.67 ns         1.30 ns    407272727
+BenchmarkFloatStdIsInf                        1.49 ns         1.40 ns    746666667
+BenchmarkFloatPbrtIsInf                       1.55 ns         1.40 ns    746666667
+BenchmarkDoubleInternalAbs                    2.38 ns         2.15 ns    320000000
+BenchmarkDoubleAbs                            2.29 ns         1.84 ns    373333333
+BenchmarkDoubleStdAbs                         1.68 ns         1.49 ns    640000000
+BenchmarkDoublePbrtAbs                        1.70 ns         1.59 ns    373333333
+BenchmarkFloatInternalAbs                     2.43 ns         2.02 ns    448000000
+BenchmarkFloatAbs                             1.54 ns         1.43 ns    448000000
+BenchmarkFloatStdAbs                          1.69 ns         1.46 ns    448000000
+BenchmarkFloatPbrtAbs                         1.61 ns         1.15 ns    640000000
+BenchmarkDoubleSignBit                        1.42 ns         1.22 ns    743348148
+BenchmarkDoubleStdSignBit                     2.65 ns         2.31 ns    263529412
+BenchmarkFloatSignBit                         1.64 ns         1.27 ns    640000000
+BenchmarkFloatStdSignBit                      3.10 ns         2.51 ns    224000000
+BenchmarkDoubleFRExp                          3.15 ns         2.51 ns    248888889
+BenchmarkDoubleStdFRExp                       16.4 ns         16.0 ns     49777778
+BenchmarkFloatFRExp                           3.48 ns         2.86 ns    213333333
+BenchmarkFloatStdFRExp                        17.5 ns         14.2 ns     74666667
+BenchmarkDoubleModF                           3.34 ns         2.85 ns    280000000
+BenchmarkDoubleStdModF                        4.77 ns         4.49 ns    160000000
+BenchmarkFloatModF                            3.50 ns         3.30 ns    213333333
+BenchmarkFloatStdModF                         4.29 ns         3.85 ns    186666667
+BenchmarkDoubleMin                            1.94 ns         1.55 ns    373333333
+BenchmarkDoubleStdMin                         1.89 ns         1.62 ns    560000000
+BenchmarkFloatMin                             1.55 ns         1.46 ns    448000000
+BenchmarkFloatStdMin                          1.77 ns         1.51 ns    560000000
+BenchmarkDoubleMax                            1.79 ns         1.45 ns    344615385
+BenchmarkDoubleStdMax                         2.43 ns         1.68 ns    344615385
+BenchmarkFloatMax                             2.00 ns         1.72 ns    344615385
+BenchmarkFloatStdMax                          2.04 ns         1.84 ns    407272727
+BenchmarkDoubleTrunc                          1.64 ns         1.42 ns    560000000
+BenchmarkDoubleStdTrunc                       8.44 ns         7.81 ns    112000000
+BenchmarkFloatTrunc                           1.58 ns         1.29 ns    448000000
+BenchmarkFloatStdTrunc                        1.60 ns         1.33 ns    448000000
+BenchmarkDoubleFloor                          1.80 ns         1.46 ns    448000000
+BenchmarkDoubleStdFloor                       1.74 ns         1.19 ns    448000000
+BenchmarkFloatFloor                           1.62 ns         1.45 ns    560000000
+BenchmarkFloatStdFloor                        1.67 ns         1.34 ns    560000000
+BenchmarkDoubleCeil                           1.66 ns         1.22 ns    448000000
+BenchmarkDoubleStdCeil                        1.82 ns         1.64 ns    448000000
+BenchmarkFloatCeil                            1.62 ns         1.53 ns    448000000
+BenchmarkFloatStdCeil                         1.62 ns         1.26 ns    497777778
+BenchmarkDoubleRound                          1.70 ns         1.30 ns    746666667
+BenchmarkDoubleStdRound                       12.2 ns         8.58 ns     74666667
+BenchmarkFloatRound                           2.28 ns         2.04 ns    298666667
+BenchmarkFloatStdRound                        2.30 ns         1.86 ns    320000000
+BenchmarkDoubleClamp                          2.17 ns         2.04 ns    344615385
+BenchmarkDoubleStdClamp                       2.11 ns         1.60 ns    497777778
+BenchmarkFloatClamp                           2.27 ns         1.95 ns    344615385
+BenchmarkFloatStdClamp                        2.02 ns         1.73 ns    497777778
+BenchmarkFloatPbrtClamp                       3.72 ns         3.22 ns    203636364
+BenchmarkDoubleInternalLerpImpl               3.43 ns         2.46 ns    280000000
+BenchmarkDoubleLerp                           8.67 ns         6.17 ns    111502223
+BenchmarkDoubleStdLerp                        8.73 ns         8.23 ns    112000000
+BenchmarkFloatLerp                            8.15 ns         7.53 ns    112000000
+BenchmarkFloatInternalLerpImpl                3.24 ns         2.58 ns    224000000
+BenchmarkFloatStdLerp                         8.67 ns         7.53 ns    112000000
+BenchmarkFloatPbrtLerp                        1.87 ns         1.57 ns    746666667
+BenchmarkDoubleCopySign                       1.72 ns         1.46 ns    448000000
+BenchmarkDoubleStdCopySign                    6.28 ns         4.59 ns    129486452
+BenchmarkDoublePbrtCopySign                   6.45 ns         5.53 ns    138416552
+BenchmarkFloatCopySign                        1.67 ns         1.19 ns    448000000
+BenchmarkFloatStdCopySign                     1.60 ns         1.60 ns    448000000
+BenchmarkFloatPbrtCopySign                    1.72 ns         1.49 ns    640000000
+BenchmarkDoubleScaleByN                       3.78 ns         3.22 ns    213333333
+BenchmarkDoubleStdScaleByN                    9.81 ns         7.95 ns     74666667
+BenchmarkFloatScaleByN                        3.64 ns         2.85 ns    263529412
+BenchmarkFloatStdScaleByN                     10.2 ns         9.63 ns     74666667
+BenchmarkDoubleFMod                           9.86 ns         8.79 ns     64000000
+BenchmarkDoubleStdFMod                        9.21 ns         8.51 ns    112000000
+BenchmarkFloatFMod                            11.4 ns         9.52 ns     64000000
+BenchmarkFloatStdFMod                         10.9 ns         9.77 ns     89600000
+BenchmarkFloatPbrtFMod                        10.5 ns         9.59 ns     89600000
+BenchmarkDoubleInternalExpImpl                5.61 ns         4.75 ns    154482759
+BenchmarkDoubleExp                            5.59 ns         5.00 ns    100000000
+BenchmarkDoubleStdExp                         47.9 ns         37.9 ns     17302069
+BenchmarkFloatInternalExpImpl                 5.33 ns         4.27 ns    179200000
+BenchmarkFloatExp                             5.21 ns         3.92 ns    179200000
+BenchmarkFloatStdExp                          53.6 ns         47.9 ns     16000000
+BenchmarkFloatPbrtFastExp                     3.42 ns         3.11 ns    235789474
+BenchmarkDoubleInternalHypot                  6.83 ns         5.16 ns    112000000
+BenchmarkDoubleHypot                          2.21 ns         1.81 ns    448000000
+BenchmarkDoubleStdHypot                       7.32 ns         5.30 ns    112000000
+BenchmarkFloatInternalHypot                   6.22 ns         5.62 ns    100000000
+BenchmarkFloatHypot                           1.94 ns         1.69 ns    407272727
+BenchmarkFloatStdHypot                        5.24 ns         4.71 ns    149333333
+BenchmarkDoubleHypot3                         3.27 ns         2.32 ns    235789474
+BenchmarkDoubleStdHypot3                      7.96 ns         7.11 ns    112000000
+BenchmarkFloatHypot3                          2.16 ns         1.93 ns    640000000
+BenchmarkFloatStdHypot3                       8.06 ns         7.85 ns     89600000
+BenchmarkDoubleInternalLog                    7.57 ns         6.25 ns    100000000
+BenchmarkDoubleLog                            7.53 ns         6.98 ns     89600000
+BenchmarkDoubleStdLog                         29.3 ns         23.7 ns     26352941
+BenchmarkFloatInternalLog                     6.42 ns         5.00 ns    100000000
+BenchmarkFloatLog                             6.04 ns         5.47 ns    100000000
+BenchmarkFloatStdLog                          27.9 ns         20.8 ns     26352941
+BenchmarkDoubleInternalLog2                   7.97 ns         6.42 ns    112000000
+BenchmarkDoubleLog2                           7.71 ns         7.32 ns     89600000
+BenchmarkDoubleStdLog2                        33.9 ns         25.5 ns     26352941
+BenchmarkFloatInternalLog2                    7.29 ns         5.62 ns    100000000
+BenchmarkFloatLog2                            7.29 ns         7.11 ns    112000000
+BenchmarkFloatStdLog2                         32.8 ns         28.3 ns     24888889
+BenchmarkDoubleInternalLog10                  8.84 ns         7.66 ns    100000000
+BenchmarkDoubleLog10                          8.69 ns         7.19 ns    100000000
+BenchmarkDoubleStdLog10                       34.7 ns         27.9 ns     22400000
+BenchmarkFloatInternalLog10                   7.32 ns         7.03 ns    100000000
+BenchmarkFloatLog10                           7.39 ns         6.63 ns     89600000
+BenchmarkFloatStdLog10                        32.1 ns         30.5 ns     23578947
+BenchmarkDoubleInternalSin                    10.7 ns         8.37 ns     74666667
+BenchmarkDoubleSin                            7.75 ns         5.75 ns     89600000
+BenchmarkDoubleStdSin                         8.02 ns         6.42 ns    112000000
+BenchmarkFloatInternalSin                     4.76 ns         4.01 ns    179200000
+BenchmarkFloatSin                             8.95 ns         7.25 ns    112000000
+BenchmarkFloatStdSin                          9.90 ns         7.81 ns    100000000
+BenchmarkDoubleInternalCos                    9.63 ns         7.97 ns    100000000
+BenchmarkDoubleCos                            7.04 ns         6.84 ns    112000000
+BenchmarkDoubleStdCos                         7.84 ns         6.42 ns    112000000
+BenchmarkFloatInternalCos                     4.87 ns         3.85 ns    194782609
+BenchmarkFloatCos                             7.49 ns         5.00 ns    100000000
+BenchmarkFloatStdCos                          7.43 ns         5.86 ns    112000000
+BenchmarkDoubleInternalTan                    17.2 ns         14.8 ns     56000000
+BenchmarkDoubleTan                            12.1 ns         10.1 ns     89600000
+BenchmarkDoubleStdTan                         8.33 ns         7.95 ns    112000000
+BenchmarkFloatInternalTan                     5.79 ns         4.88 ns    112000000
+BenchmarkFloatTan                             6.02 ns         5.30 ns    112000000
+BenchmarkFloatStdTan                          7.99 ns         7.03 ns    100000000
+BenchmarkDoubleInternalATan                   7.54 ns         6.45 ns     89600000
+BenchmarkDoubleATan                           8.05 ns         6.98 ns    112000000
+BenchmarkDoubleStdATan                        8.37 ns         7.39 ns    112000000
+BenchmarkFloatInternalATan                    5.77 ns         4.73 ns    194782609
+BenchmarkFloatATan                            5.57 ns         5.16 ns    100000000
+BenchmarkFloatStdATan                         7.16 ns         5.86 ns    112000000
+BenchmarkDoubleInternalASin                   8.53 ns         6.91 ns     74666667
+BenchmarkDoubleASin                           8.61 ns         7.53 ns    112000000
+BenchmarkDoubleStdASin                        8.45 ns         6.72 ns    100000000
+BenchmarkFloatInternalASin                    6.55 ns         4.60 ns    112000000
+BenchmarkFloatASin                            6.36 ns         5.30 ns    112000000
+BenchmarkFloatStdASin                         7.69 ns         5.93 ns     89600000
+BenchmarkDoubleInternalACos                   7.44 ns         5.58 ns    112000000
+BenchmarkDoubleACos                           7.84 ns         6.80 ns     89600000
+BenchmarkDoubleStdACos                        8.13 ns         6.42 ns    112000000
+BenchmarkFloatInternalACos                    5.89 ns         5.16 ns    100000000
+BenchmarkFloatACos                            5.20 ns         4.53 ns    179200000
+BenchmarkFloatStdACos                         8.10 ns         5.94 ns    100000000
+BenchmarkDoubleInternalATan2                  13.1 ns         10.3 ns     74666667
+BenchmarkDoubleATan2                          13.6 ns         12.8 ns     74666667
+BenchmarkDoubleStdATan2                       19.1 ns         17.3 ns     40727273
+BenchmarkFloatInternalATan2                   10.4 ns         7.32 ns     74666667
+BenchmarkFloatATan2                           9.47 ns         7.81 ns    112000000
+BenchmarkFloatStdATan2                        13.4 ns         11.6 ns     49777778
+BenchmarkPbrtSquareMatrixAdd                  11.0 ns         9.63 ns     74666667
+BenchmarkSquareMatrixAdd                      2.75 ns         2.45 ns    344615385
+BenchmarkSquareMatrixSub                      2.74 ns         2.32 ns    248888889
+BenchmarkPbrtSquareMatrixScalarMultiply       3.63 ns         3.02 ns    263529412
+BenchmarkSquareMatrixScalarMultiply           2.10 ns         2.09 ns    344615385
+BenchmarkPbrtSquareMatrixMultiply             32.0 ns         23.9 ns     32000000
+BenchmarkSquareMatrixMultiply                 4.65 ns         3.74 ns    280000000
+BenchmarkPbrtSquareMatrixDeterminant          14.6 ns         13.7 ns     56000000
+BenchmarkXMMatrixDeterminant                  2.89 ns         2.78 ns    320000000
+BenchmarkSquareMatrixDeterminant              3.11 ns         2.46 ns    280000000
+BenchmarkPbrtSquareMatrixInverse               134 ns          124 ns      8960000
+BenchmarkXMMatrixInverse                      15.1 ns         13.5 ns     49777778
+BenchmarkSquareMatrixInverse                  16.7 ns         15.6 ns     56000000
+BenchmarkVector2MultipleAdds                  4.44 ns         3.38 ns    235789474
+BenchmarkVector2MultipleXMVectorAdd           4.54 ns         3.36 ns    172307692
+BenchmarkVector2MultipleOperations            4.46 ns         3.84 ns    154482759
+BenchmarkPBRTVector2fMultipleOperations       6.97 ns         6.56 ns    112000000
+BenchmarkMathFMA1                             1.85 ns         1.66 ns    461388506
+BenchmarkPbrtFMA1                             2.05 ns         1.80 ns    407272727
+BenchmarkMathFMA2                             3.62 ns         3.18 ns    186666667
+BenchmarkPbrtFMA2                             2.92 ns         2.37 ns    263529412
+BenchmarkMathFMA3                             4.04 ns         3.38 ns    235789474
+BenchmarkPbrtFMA3                             3.64 ns         2.78 ns    213333333
+BenchmarkMathQuaternionAdd                    4.33 ns         4.27 ns    186666667
+BenchmarkPbrtQuaternionAdd                    4.32 ns         4.10 ns    213333333
+BenchmarkMathPoint3Distance                   3.91 ns         3.30 ns    213333333
+BenchmarkPbrtPoint3Distance                   3.95 ns         3.30 ns    203636364
+BenchmarkMathPoint3DistanceSquared            3.91 ns         3.49 ns    344615385
+BenchmarkPbrtPoint3DistanceSquared            3.62 ns         3.15 ns    213333333
+BenchmarkMathVector3Cross                     2.86 ns         2.68 ns    280000000
+BenchmarkMathPbrtVector3Cross                 2.72 ns         2.25 ns    298666667
+BenchmarkMathVector4Cross                     2.87 ns         2.35 ns    298666667
+BenchmarkMathVector3Dot                       3.14 ns         2.54 ns    320000000
+BenchmarkPbrtVector3Dot                       2.97 ns         2.76 ns    248888889
+BenchmarkMathVector3AngleBetween              7.46 ns         5.00 ns    100000000
+BenchmarkPbrtVector3AngleBetween              12.9 ns         11.2 ns     64000000
+BenchmarkXMVector3AngleBetweenVectors         11.3 ns         8.79 ns     64000000
+</code></pre></div></div>
 
   </div>
 

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Harlinn.Windows | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Harlinn.Windows" />
@@ -18,9 +18,198 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","description":"This is my personal Github site,","headline":"Harlinn.Windows","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Windows.html"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="importmap">
+        {
+            "imports":
+            {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.171.0/build/three.module.min.js" ,
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.171.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
 <body><header class="site-header" role="banner">
+    <div id="animatedHeader" height="120px" width="100%">
+        <script type="x-shader/x-vertex" id="vertexshader">
+            attribute float scale;
+            void main() {
+                vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+                gl_PointSize = scale * ( 100.0 / - mvPosition.z );
+                gl_Position = projectionMatrix * mvPosition;
+            }
 
+        </script>
+
+        <script type="x-shader/x-fragment" id="fragmentshader">
+            uniform vec3 color;
+            void main() {
+                if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 )  discard;
+                gl_FragColor = vec4( color, 0.8 );
+            }
+        </script>
+
+        <script type="module">
+
+			import * as THREE from 'three';
+
+			const SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
+
+			let container; 
+			let camera, scene, renderer;
+
+			let particles, count = 0;
+
+			let mouseX = 0, mouseY = 0;
+
+			let animatedHeaderHeight = 120;
+
+            let windowHalfX = window.innerWidth / 2;
+            let windowHalfY = animatedHeaderHeight/2.0;
+
+			init();
+
+			function init() {
+
+                container = document.querySelector('#animatedHeader');
+
+                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.z = 1000;
+
+				scene = new THREE.Scene();
+
+				//
+
+				const numParticles = AMOUNTX * AMOUNTY;
+
+				const positions = new Float32Array( numParticles * 3 );
+				const scales = new Float32Array( numParticles );
+
+				let i = 0, j = 0;
+
+				for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
+
+					for ( let iy = 0; iy < AMOUNTY; iy ++ ) {
+
+						positions[ i ] = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 ); // x
+						positions[ i + 1 ] = 0; // y
+						positions[ i + 2 ] = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 ); // z
+
+						scales[ j ] = 1;
+
+						i += 3;
+						j ++;
+
+					}
+
+				}
+
+				const geometry = new THREE.BufferGeometry();
+				geometry.setAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
+				geometry.setAttribute( 'scale', new THREE.BufferAttribute( scales, 1 ) );
+
+				const material = new THREE.ShaderMaterial( {
+
+					uniforms: {
+						color: { value: new THREE.Color( 0xffffff ) },
+					},
+					vertexShader: document.getElementById( 'vertexshader' ).textContent,
+					fragmentShader: document.getElementById( 'fragmentshader' ).textContent
+
+				} );
+
+				//
+
+				particles = new THREE.Points( geometry, material );
+				scene.add( particles );
+
+				//
+
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+                renderer.setSize(window.innerWidth, animatedHeaderHeight );
+				renderer.setAnimationLoop( animate );
+				container.appendChild( renderer.domElement );
+
+				container.style.touchAction = 'none';
+				container.addEventListener( 'pointermove', onPointerMove );
+
+				//
+
+                window.addEventListener( 'resize', onWindowResize );
+
+			}
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+
+				camera.aspect = window.innerWidth / animatedHeaderHeight; 
+				camera.updateProjectionMatrix();
+
+				renderer.setSize(window.innerWidth, animatedHeaderHeight);
+
+			}
+
+			//
+
+			function onPointerMove( event ) {
+
+				if ( event.isPrimary === false ) return;
+
+				mouseX = event.clientX - windowHalfX;
+				mouseY = event.clientY - windowHalfY;
+
+			}
+
+			//
+
+			function animate() {
+				render();
+
+			}
+
+			function render() {
+
+				camera.position.x += ( mouseX - camera.position.x ) * .05;
+				camera.position.y += ( - mouseY - camera.position.y ) * .05;
+				camera.lookAt( scene.position );
+
+				const positions = particles.geometry.attributes.position.array;
+				const scales = particles.geometry.attributes.scale.array;
+
+				let i = 0, j = 0;
+
+				for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
+
+					for ( let iy = 0; iy < AMOUNTY; iy ++ ) {
+
+						positions[ i + 1 ] = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) +
+										( Math.sin( ( iy + count ) * 0.5 ) * 50 );
+
+						scales[ j ] = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 20 +
+										( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 20;
+
+						i += 3;
+						j ++;
+
+					}
+
+				}
+
+				particles.geometry.attributes.position.needsUpdate = true;
+				particles.geometry.attributes.scale.needsUpdate = true;
+
+				renderer.render( scene, camera );
+
+				count += 0.1;
+
+			}
+
+        </script>
+
+    </div>
   <div class="wrapper"><a class="site-title" rel="author" href="/">Harlinn</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
@@ -51,6 +240,12 @@ libraries. The solution also include several of my own C++ libraries, created
 to improve the safety of Windows software development, while maintaining the
 performance expected of C++.</p>
 
+<p>The solution has been actively developed since 2009, and is used in critical,
+distributed, high performance analytics and real-time timeseries servers.</p>
+
+<p>Not everything in the solution is usable, some things are works in progress, 
+and not among the libraries mentioned below.</p>
+
 <h2 id="build-instructions">Build instructions</h2>
 
 <p>To build the Harlinn.Windows solution you need to download the solution from the <a href="https://github.com/Harlinn/Harlinn.Windows">Harlinn.Windows repository</a> 
@@ -66,31 +261,41 @@ to more than a million timeseries. <a href="Harlinn.Common.Core/Harlinn.Common.C
 
 <h2 id="harlinnoci">Harlinn.OCI</h2>
 
-<p>Harlinn.OCI was developed to leverage the Oracle OCI C API in
-a critical, high performance, server implementation.</p>
+<p>Harlinn.OCI is a C++ library for working with the <a href="https://docs.oracle.com/en/database/oracle/oracle-database/23/lnoci/index.html">Oracle Call Interface</a> (OCI).
+Harlinn.OCI was developed to leverage the Oracle OCI C API in
+a critical, high performance, server implementations.</p>
 
-<p>Learn about the <a href="Harlinn.OCI/Harlinn.OCI.html">Harlinn.OCI</a> C++ library.</p>
+<p>Initially designed in 2014 to improve the performance for a suite of servers, 
+that had been developed, deployed and maintained for more than 20 years - 
+and in use by most of the Power Utility companies in northern Europe. <a href="Harlinn.OCI/Harlinn.OCI.html">more…</a></p>
 
 <h2 id="harlinnodbc">Harlinn.ODBC</h2>
 
-<p>Harlinn.ODBC was developed to work with Microsoft SQL Server, it’s a
-fast, comprehensive and convenient set of C++ classes that wraps the 
-ODBC C API.</p>
-
-<p>Learn about the <a href="Harlinn.ODBC/Harlinn.ODBC.html">Harlinn.ODBC</a> C++ library.</p>
+<p>Harlinn.ODBC was developed to work with Microsoft SQL Server, and originally designed 
+for use with a Vessel Traffic Management System (VTMS). The library provides
+a fast, comprehensive and convenient set of C++ classes that wraps the 
+ODBC C API. <a href="Harlinn.ODBC/Harlinn.ODBC.html">more…</a></p>
 
 <h2 id="harlinnwindows">Harlinn.Windows</h2>
 
-<p>The Harlinn.Windows library is a C++ class library that is useful for writing 
-graphical user interfaces.</p>
-
-<p>Learn about the <a href="Harlinn.Windows/Harlinn.Windows.html">Harlinn.Windows</a> C++ library.</p>
+<p>The Harlinn.Windows library contains C++ classes for working with <a href="https://learn.microsoft.com/en-us/windows/win32/direct3d11/atoc-dx-graphics-direct3d-11">Direct3D 11</a>,
+<a href="https://learn.microsoft.com/en-us/windows/win32/direct3d12/what-is-directx-12-">Direct3D 12</a>,
+<a href="https://learn.microsoft.com/en-us/windows/win32/direct2d/direct2d-portal">Direct2D</a>,
+<a href="https://learn.microsoft.com/en-us/windows/win32/directwrite/direct-write-portal">DirectWrite</a>,
+<a href="https://learn.microsoft.com/en-us/windows/win32/wic/-wic-lh">Windows Imaging Component</a>,
+<a href="https://learn.microsoft.com/en-us/windows/win32/direct3ddxgi/d3d10-graphics-programming-guide-dxgi">Microsoft DirectX Graphics Infrastructure</a>,
+<a href="https://learn.microsoft.com/en-us/windows/win32/directcomp/directcomposition-portal">DirectComposition</a>,
+<a href="https://learn.microsoft.com/en-us/windows/win32/medfound/microsoft-media-foundation-sdk">Microsoft Media Foundation</a>,
+<a href="https://learn.microsoft.com/en-us/windows/win32/gdiplus/-gdiplus-gdi-start">GDI+</a>,
+and <a href="https://learn.microsoft.com/en-us/windows/win32/gdi/windows-gdi">GDI</a> APIs. <a href="Harlinn.Windows/Harlinn.Windows.html">more…</a></p>
 
 <h2 id="third-party-libraries">Third Party Libraries</h2>
 
-<p>The Harlinn.Windows solution includes 158 popular C and C++ libraries.</p>
+<p>The Harlinn.Windows solution includes 158 popular open source C and C++ libraries.</p>
 
-<p>Learn more about the <a href="3rdParty/3rdParty.html">3<sup>rd</sup> party</a> C and C++ libraries.</p>
+<p>Several of the libraries have been extensively modified to build them as dynamic 
+link libraries, and still provide the full capabilities of the original libraries on the 
+Windows platform. <a href="3rdParty/3rdParty.html">more…</a></p>
 
 <h2 id="tools">Tools</h2>
 

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Optimized basic math functions | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Optimized basic math functions" />
@@ -18,9 +18,198 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","description":"This is my personal Github site,","headline":"Optimized basic math functions","url":"https://harlinn.github.io/Cpp/Cpp/Math/BasicMath.html"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="importmap">
+        {
+            "imports":
+            {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.171.0/build/three.module.min.js" ,
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.171.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
 <body><header class="site-header" role="banner">
+    <div id="animatedHeader" height="120px" width="100%">
+        <script type="x-shader/x-vertex" id="vertexshader">
+            attribute float scale;
+            void main() {
+                vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+                gl_PointSize = scale * ( 100.0 / - mvPosition.z );
+                gl_Position = projectionMatrix * mvPosition;
+            }
 
+        </script>
+
+        <script type="x-shader/x-fragment" id="fragmentshader">
+            uniform vec3 color;
+            void main() {
+                if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 )  discard;
+                gl_FragColor = vec4( color, 0.8 );
+            }
+        </script>
+
+        <script type="module">
+
+			import * as THREE from 'three';
+
+			const SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
+
+			let container; 
+			let camera, scene, renderer;
+
+			let particles, count = 0;
+
+			let mouseX = 0, mouseY = 0;
+
+			let animatedHeaderHeight = 120;
+
+            let windowHalfX = window.innerWidth / 2;
+            let windowHalfY = animatedHeaderHeight/2.0;
+
+			init();
+
+			function init() {
+
+                container = document.querySelector('#animatedHeader');
+
+                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.z = 1000;
+
+				scene = new THREE.Scene();
+
+				//
+
+				const numParticles = AMOUNTX * AMOUNTY;
+
+				const positions = new Float32Array( numParticles * 3 );
+				const scales = new Float32Array( numParticles );
+
+				let i = 0, j = 0;
+
+				for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
+
+					for ( let iy = 0; iy < AMOUNTY; iy ++ ) {
+
+						positions[ i ] = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 ); // x
+						positions[ i + 1 ] = 0; // y
+						positions[ i + 2 ] = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 ); // z
+
+						scales[ j ] = 1;
+
+						i += 3;
+						j ++;
+
+					}
+
+				}
+
+				const geometry = new THREE.BufferGeometry();
+				geometry.setAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
+				geometry.setAttribute( 'scale', new THREE.BufferAttribute( scales, 1 ) );
+
+				const material = new THREE.ShaderMaterial( {
+
+					uniforms: {
+						color: { value: new THREE.Color( 0xffffff ) },
+					},
+					vertexShader: document.getElementById( 'vertexshader' ).textContent,
+					fragmentShader: document.getElementById( 'fragmentshader' ).textContent
+
+				} );
+
+				//
+
+				particles = new THREE.Points( geometry, material );
+				scene.add( particles );
+
+				//
+
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+                renderer.setSize(window.innerWidth, animatedHeaderHeight );
+				renderer.setAnimationLoop( animate );
+				container.appendChild( renderer.domElement );
+
+				container.style.touchAction = 'none';
+				container.addEventListener( 'pointermove', onPointerMove );
+
+				//
+
+                window.addEventListener( 'resize', onWindowResize );
+
+			}
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+
+				camera.aspect = window.innerWidth / animatedHeaderHeight; 
+				camera.updateProjectionMatrix();
+
+				renderer.setSize(window.innerWidth, animatedHeaderHeight);
+
+			}
+
+			//
+
+			function onPointerMove( event ) {
+
+				if ( event.isPrimary === false ) return;
+
+				mouseX = event.clientX - windowHalfX;
+				mouseY = event.clientY - windowHalfY;
+
+			}
+
+			//
+
+			function animate() {
+				render();
+
+			}
+
+			function render() {
+
+				camera.position.x += ( mouseX - camera.position.x ) * .05;
+				camera.position.y += ( - mouseY - camera.position.y ) * .05;
+				camera.lookAt( scene.position );
+
+				const positions = particles.geometry.attributes.position.array;
+				const scales = particles.geometry.attributes.scale.array;
+
+				let i = 0, j = 0;
+
+				for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
+
+					for ( let iy = 0; iy < AMOUNTY; iy ++ ) {
+
+						positions[ i + 1 ] = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) +
+										( Math.sin( ( iy + count ) * 0.5 ) * 50 );
+
+						scales[ j ] = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 20 +
+										( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 20;
+
+						i += 3;
+						j ++;
+
+					}
+
+				}
+
+				particles.geometry.attributes.position.needsUpdate = true;
+				particles.geometry.attributes.scale.needsUpdate = true;
+
+				renderer.render( scene, camera );
+
+				count += 0.1;
+
+			}
+
+        </script>
+
+    </div>
   <div class="wrapper"><a class="site-title" rel="author" href="/">Harlinn</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
@@ -46,9 +235,11 @@
     <p>C++ is often used to create software that performs mathematical operations efficiently.</p>
 
 <p>Complex computations are put together using the functionality provided by the standard C and C++ libraries
-as the basic building blocks. The header, <a href="/Doxygen/_h_c_c_math_8h.html"><code class="language-plaintext highlighter-rouge">HCCMath.h</code></a> provides alternatives
+as the basic building blocks. The header, <code class="language-plaintext highlighter-rouge">HCCMath.h</code> provides alternatives
 to many of the basic mathematical function that is specified in the C and C++ standards. All of the
 functions can be <code class="language-plaintext highlighter-rouge">constexpr</code> evaluated, and several offer surprising performance benefits as well.</p>
+
+<p><img src="assets/BasicMath.svg" alt="" /></p>
 
 <p>The functions are implemented in the <a href="/Doxygen/namespace_harlinn_1_1_common_1_1_core_1_1_math.html"><code class="language-plaintext highlighter-rouge">Harlinn::Common::Core::Math</code> namespace</a>.</p>
 
@@ -60,9 +251,9 @@ included in the <a href="/Cpp/Harlinn.Windows/Harlinn.Windows.html">Harlinn.Wind
 
 <h2 id="pbrto-a-micro-optimized-raytracing-app">PBRTO a micro optimized raytracing app</h2>
 
-<p>PBRTO is a micro optimized version of <a href="https://github.com/mmp/pbrt-v4">PBRT-v4</a>, created as an example of how the 
-functionality in <code class="language-plaintext highlighter-rouge">HCCMath.h</code> and <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> can be used to optimize the 
-performance of a real, computationally intensive, app. It’s now about <code class="language-plaintext highlighter-rouge">35</code> % 
+<p>PBRTO is a micro optimized version of <a href="https://github.com/mmp/pbrt-v4">PBRT-v4</a>, under development 
+as an example of how the functionality in <code class="language-plaintext highlighter-rouge">HCCMath.h</code>, <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> and <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code> can be used to 
+optimize the performance of real, computationally intensive, apps. It’s now about <code class="language-plaintext highlighter-rouge">35</code> % 
 faster than the release build of the original PBRT. <a href="pbrto.html">more…</a></p>
 
 <h2 id="rationale">Rationale</h2>
@@ -98,6 +289,8 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Abs( T val ) noexcept
 <p>and call the standard C/C++ implementation at runtime, unless the benchmarks prove 
 that the <code class="language-plaintext highlighter-rouge">constexpr</code> , or some other, implementation - performs consistently better.</p>
 
+<h3 id="fast-and-accurate-internal-implementation">Fast and Accurate Internal Implementation</h3>
+
 <p>A few functions, like <code class="language-plaintext highlighter-rouge">Exp</code>, outperforms the standard implementation spectacularly,
 and accurately - in this case with a maximum detected deviation of <code class="language-plaintext highlighter-rouge">2.18599e-16</code> compared
 to <code class="language-plaintext highlighter-rouge">std::exp</code> for double precision floating point values.</p>
@@ -111,7 +304,11 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Exp( T x ) noexcept
 </code></pre>
 
 <p><code class="language-plaintext highlighter-rouge">Exp</code>, and several other functions, are based on open source code released by Sun Microsystems, 
-between 1993 and 2004, adapted to C++ 20 <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation, and some functions, like <code class="language-plaintext highlighter-rouge">Hypot</code>, 
+between 1993 and 2004, adapted to C++ 20 <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation.</p>
+
+<h3 id="using-simdtraitstn">Using <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T.N&gt;</code></h3>
+
+<p>and some functions, like <code class="language-plaintext highlighter-rouge">Hypot</code>, 
 use the <a href="SimdOperations.html"><code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T.N&gt;</code> specializations</a> to achieve excellent runtime performance.</p>
 
 <pre><code class="language-C++">template&lt;typename T&gt;
@@ -132,7 +329,6 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Hypot( T x, T y, T z ) noexcept
         v = Traits::HSum( v );
         v = Traits::Sqrt( v );
         return Traits::Lower( v );
-
     }
 }
 </code></pre>
@@ -140,7 +336,7 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Hypot( T x, T y, T z ) noexcept
 <p>Extensive unit tests, available <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Tests/Harlinn.Common.Core.Math.Tests">here</a>, 
 strives to prove the accuracy of the computations.</p>
 
-<p>For some functions like <code class="language-plaintext highlighter-rouge">Tan</code>, the performance of the <code class="language-plaintext highlighter-rouge">constexpr</code> path , varies greatly.</p>
+<h3 id="using-the-standard-and-the-internal-implementation-at-runtime">Using the standard, and the internal, implementation at runtime.</h3>
 
 <p><code class="language-plaintext highlighter-rouge">Math::Internal::TanImpl</code> performs about 40 % worse than <code class="language-plaintext highlighter-rouge">std::tan</code>, for double precision
 floating point values, but <code class="language-plaintext highlighter-rouge">Math::Internal::TanImpl</code> beats <code class="language-plaintext highlighter-rouge">std::tan</code>, for single precision
@@ -172,13 +368,14 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Tan( T x ) noexcept
 </code></pre>
 
 <p><a href="#basicmathbenchmarks-results">BasicMathBenchmarks results</a>, at the bottom of this page, shows how
-the performance numbers were calculated.</p>
+the performance numbers were calculated. The runtime execution path for each function is selected, 
+as shown, based on its performance in the benchmarks.</p>
 
 <h2 id="basic-operations">Basic operations</h2>
 
 <ul>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">Abs</code> which returns the absolute value <code class="language-plaintext highlighter-rouge">|x|</code> for <code class="language-plaintext highlighter-rouge">x</code>, is implemented for 
+    <p><code class="language-plaintext highlighter-rouge">Abs</code> which returns the absolute value \(|x|\) for <code class="language-plaintext highlighter-rouge">x</code>, is implemented for 
 floating point types, signed integers and unsigned integers. Calls <code class="language-plaintext highlighter-rouge">std::abs</code>
 at runtime.</p>
   </li>
@@ -317,7 +514,7 @@ precision floating point argument values for in the range <code class="language-
     <p><code class="language-plaintext highlighter-rouge">Tan</code> outperforms <code class="language-plaintext highlighter-rouge">std::tan</code> by approximately <code class="language-plaintext highlighter-rouge">60</code> % for single precision 
 floating point values,</p>
 
-    <p><code class="language-plaintext highlighter-rouge">Tan</code> calls std::tan at runtime, with a consistent performance penalty of up to <code class="language-plaintext highlighter-rouge">40</code> %
+    <p><code class="language-plaintext highlighter-rouge">Tan</code> calls std::tan at runtime, with a consistent performance penalty of about <code class="language-plaintext highlighter-rouge">20</code> %
 compared to calling <code class="language-plaintext highlighter-rouge">std::tan</code> directly for double precision floating point values.</p>
 
     <p>The maximum deviation between <code class="language-plaintext highlighter-rouge">std::tan</code> and the <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Tan</code> is <code class="language-plaintext highlighter-rouge">1.19209e-07</code> for single precision
@@ -581,10 +778,12 @@ BenchmarkDoubleClamp                 2.23 ns         1.46 ns    448000000  (( 1.
 BenchmarkDoubleStdClamp              2.04 ns         1.67 ns    746666667
 BenchmarkFloatClamp                  2.09 ns         1.59 ns    560000000  equal
 BenchmarkFloatStdClamp               2.41 ns         1.59 ns    344615385
-BenchmarkDoubleLerp                  2.98 ns         2.12 ns    235789474  (( 2.40 - 2.12)/2.12)*100 = 13.21 %
-BenchmarkDoubleStdLerp               3.04 ns         2.40 ns    280000000
-BenchmarkFloatLerp                   2.91 ns         2.15 ns    320000000  (( 1.85 - 2.15)/2.15)*100 = -13.95 %
-BenchmarkFloatStdLerp                2.49 ns         1.85 ns    497777778
+BenchmarkDoubleInternalLerpImpl      3.43 ns         2.46 ns    280000000  (( 8.23 - 2.46)/2.46)*100 = 234.55 %
+BenchmarkDoubleLerp                  8.67 ns         6.17 ns    111502223  (( 8.23 - 6.17)/6.17)*100 = 33.39 %
+BenchmarkDoubleStdLerp               8.73 ns         8.23 ns    112000000
+BenchmarkFloatInternalLerpImpl       3.24 ns         2.58 ns    224000000  (( 7.53 - 2.15)/2.15)*100 = 250.23 %
+BenchmarkFloatLerp                   8.15 ns         7.53 ns    112000000  (( 7.53 - 7.53)/7.53)*100 = 0 %
+BenchmarkFloatStdLerp                8.67 ns         7.53 ns    112000000
 BenchmarkDoubleCopySign              1.75 ns         1.26 ns    497777778  (( 5.16 - 1.26)/1.26)*100 = 309.52 %
 BenchmarkDoubleStdCopySign           6.30 ns         5.16 ns    112000000
 BenchmarkFloatCopySign               1.69 ns         1.23 ns    407272727  (( 1.36 - 1.23)/1.23)*100 = 10.57 %
