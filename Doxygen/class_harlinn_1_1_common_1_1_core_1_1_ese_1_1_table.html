@@ -5698,20 +5698,20 @@ requires (std::is_base_of_v&lt; JET_RETRIEVECOLUMN, typename SpanT::value_type&g
 <li>
 <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa71c1814cc10465a29c98721f5580304abcfbf127fae6ea1f8c33173f2d2fd3b7">Ese::Result::WarningBufferTruncated</a>: The entire column value could not be retrieved because the given buffer is smaller than the size of the column.  </li>
 </ul>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> ReadSensorPoint( <span class="keyword">const</span> <a class="code hl_class" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Ese::Table</a>&amp; <a class="code hl_variable" href="namespace_harlinn_1_1_common_1_1_core.html#aec2d7e95dfd81e76a185fa1c129321b1">table</a>, SensorPoint&amp; sensorPoint )<span class="keyword"> const</span></div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> ReadSensorPoint( <span class="keyword">const</span> <a class="code hl_class" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Ese::Table</a>&amp; <a class="code hl_variable" href="namespace_harlinn_1_1_common_1_1_core.html#ad2891e0b53d65279133b4177ecc51a60">table</a>, SensorPoint&amp; sensorPoint )<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword"></span>{</div>
 <div class="line">    <a class="code hl_typedef" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a> timestamp = 0;</div>
 <div class="line">    std::array&lt;Ese::RetrieveColumn, 3&gt; retrieveColumns;</div>
 <div class="line">    retrieveColumns[ 0 ].Bind( timestampColumnId_, timestamp );</div>
 <div class="line">    retrieveColumns[ 1 ].Bind( flagsColumnId_, sensorPoint.Flags );</div>
 <div class="line">    retrieveColumns[ 2 ].Bind( valueColumnId_, sensorPoint.Value );</div>
-<div class="line">    <a class="code hl_variable" href="namespace_harlinn_1_1_common_1_1_core.html#aec2d7e95dfd81e76a185fa1c129321b1">table</a>.RetrieveColumns( retrieveColumns );</div>
+<div class="line">    <a class="code hl_variable" href="namespace_harlinn_1_1_common_1_1_core.html#ad2891e0b53d65279133b4177ecc51a60">table</a>.RetrieveColumns( retrieveColumns );</div>
 <div class="line">    sensorPoint.Timestamp = <a class="code hl_enumvalue" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a02ba6c1b46fa199c2df41d5875577c3da8cf10d2341ed01492506085688270c1e">DateTime</a>( timestamp );</div>
 <div class="line">}</div>
 <div class="ttc" id="aclass_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table_html"><div class="ttname"><a href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Harlinn::Common::Core::Ese::Table</a></div><div class="ttdef"><b>Definition</b> HCCEse.h:2036</div></div>
 <div class="ttc" id="anamespace_harlinn_1_1_common_1_1_core_1_1_ese_html_a02ba6c1b46fa199c2df41d5875577c3da8cf10d2341ed01492506085688270c1e"><div class="ttname"><a href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a02ba6c1b46fa199c2df41d5875577c3da8cf10d2341ed01492506085688270c1e">Harlinn::Common::Core::Ese::ColumnType::DateTime</a></div><div class="ttdeci">@ DateTime</div><div class="ttdoc">A double-precision (8-byte) floating point number that represents a date in fractional days since the...</div></div>
 <div class="ttc" id="anamespace_harlinn_1_1_common_1_1_core_html_a934f1e669bbe888bfa94af14a3647296"><div class="ttname"><a href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Harlinn::Common::Core::Int64</a></div><div class="ttdeci">long long Int64</div><div class="ttdef"><b>Definition</b> HCCDef.h:442</div></div>
-<div class="ttc" id="anamespace_harlinn_1_1_common_1_1_core_html_aec2d7e95dfd81e76a185fa1c129321b1"><div class="ttname"><a href="namespace_harlinn_1_1_common_1_1_core.html#aec2d7e95dfd81e76a185fa1c129321b1">Harlinn::Common::Core::table</a></div><div class="ttdeci">static union Harlinn::Common::Core::@8 table</div></div>
+<div class="ttc" id="anamespace_harlinn_1_1_common_1_1_core_html_ad2891e0b53d65279133b4177ecc51a60"><div class="ttname"><a href="namespace_harlinn_1_1_common_1_1_core.html#ad2891e0b53d65279133b4177ecc51a60">Harlinn::Common::Core::table</a></div><div class="ttdeci">static union Harlinn::Common::Core::@0 table</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

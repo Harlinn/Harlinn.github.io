@@ -30,7 +30,7 @@ var searchData=
   ['eightbimresolutioninfoproperties_27',['EightBIMResolutionInfoProperties',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.html#a1e5c7d4358dcf07259bf376bfbf024ce',1,'Harlinn::Windows::Graphics::Imaging']]],
   ['ekm_28',['EKM',['../struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_token_binding_info.html#a2266f913445cd8f0b3ef90b3e3be1b73',1,'Harlinn::Common::Core::Http::RequestTokenBindingInfo']]],
   ['ekmsize_29',['EKMSize',['../struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_token_binding_info.html#a85396786a625ebe9d2ac44232ff8f627',1,'Harlinn::Common::Core::Http::RequestTokenBindingInfo']]],
-  ['elapsed_30',['Elapsed',['../class_harlinn_1_1_common_1_1_core_1_1_stopwatch.html#a46eb61fc1e9df37a3b35b5ef1a74aa83',1,'Harlinn::Common::Core::Stopwatch']]],
+  ['elapsed_30',['Elapsed',['../class_harlinn_1_1_common_1_1_core_1_1_net_1_1_sync_1_1_multimedia_timer.html#a6f591df1d27dc75a7734a219e5913458',1,'Harlinn::Common::Core.Net.Sync.MultimediaTimer.Elapsed'],['../class_harlinn_1_1_common_1_1_core_1_1_stopwatch.html#a46eb61fc1e9df37a3b35b5ef1a74aa83',1,'Harlinn::Common::Core::Stopwatch::Elapsed() const']]],
   ['elapsedmilliseconds_31',['ElapsedMilliseconds',['../class_harlinn_1_1_common_1_1_core_1_1_stopwatch.html#a58671673dfb64883a7c58aa0ea0260b0',1,'Harlinn::Common::Core::Stopwatch']]],
   ['elapsedticks_32',['ElapsedTicks',['../class_harlinn_1_1_common_1_1_core_1_1_stopwatch.html#a8b781def900b13ceb5e2c907b7b85764',1,'Harlinn::Common::Core::Stopwatch']]],
   ['elapsedticks_5f_33',['elapsedTicks_',['../class_harlinn_1_1_common_1_1_core_1_1_stopwatch.html#ab2d1eddf7d76e3fef276c42e2137d125',1,'Harlinn::Common::Core::Stopwatch']]],

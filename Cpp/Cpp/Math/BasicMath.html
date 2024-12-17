@@ -243,22 +243,27 @@ functions can be <code class="language-plaintext highlighter-rouge">constexpr</c
 
 <p>The functions are implemented in the <a href="/Doxygen/namespace_harlinn_1_1_common_1_1_core_1_1_math.html"><code class="language-plaintext highlighter-rouge">Harlinn::Common::Core::Math</code> namespace</a>.</p>
 
-<h2 id="benchmarks">Benchmarks</h2>
+<h3 id="unit-tests">Unit Tests</h3>
+
+<p>Extensive unit tests, available <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Tests/Harlinn.Common.Core.Math.Tests">here</a>, 
+strives to prove the accuracy of the computations.</p>
+
+<h3 id="benchmarks">Benchmarks</h3>
 
 <p>The performance of the functions is benchmarked using the <a href="https://github.com/google/benchmark">Google benchmark</a> library, 
 and can be verified by building and executing <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Benchmarks/Math/BasicMathBenchmarks">BasicMathBenchmarks</a> 
 included in the <a href="/Cpp/Harlinn.Windows/Harlinn.Windows.html">Harlinn.Windows solution</a>.</p>
 
-<h2 id="pbrto-a-micro-optimized-raytracing-app">PBRTO a micro optimized raytracing app</h2>
+<h3 id="pbrto-a-micro-optimized-raytracing-app">PBRTO a micro optimized raytracing app</h3>
 
 <p>PBRTO is a micro optimized version of <a href="https://github.com/mmp/pbrt-v4">PBRT-v4</a>, under development 
 as an example of how the functionality in <code class="language-plaintext highlighter-rouge">HCCMath.h</code>, <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> and <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code> can be used to 
 optimize the performance of real, computationally intensive, apps. It’s now about <code class="language-plaintext highlighter-rouge">35</code> % 
 faster than the release build of the original PBRT. <a href="pbrto.html">more…</a></p>
 
-<h2 id="rationale">Rationale</h2>
+<h2 id="background">Background</h2>
 
-<p>The functions was initially developed to enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of mathematical expressions, because nothing
+<p>The functions was created to enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of mathematical expressions, since nothing
 improves runtime performance as much as making the compiler calculate the results at compile time.</p>
 
 <p>This is achieved by providing a specific code path that will only be evaluated at compile time:</p>
@@ -308,7 +313,7 @@ between 1993 and 2004, adapted to C++ 20 <code class="language-plaintext highlig
 
 <h3 id="using-simdtraitstn">Using <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T.N&gt;</code></h3>
 
-<p>and some functions, like <code class="language-plaintext highlighter-rouge">Hypot</code>, 
+<p>Some functions, like <code class="language-plaintext highlighter-rouge">Hypot</code>, 
 use the <a href="SimdOperations.html"><code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T.N&gt;</code> specializations</a> to achieve excellent runtime performance.</p>
 
 <pre><code class="language-C++">template&lt;typename T&gt;
@@ -332,9 +337,6 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Hypot( T x, T y, T z ) noexcept
     }
 }
 </code></pre>
-
-<p>Extensive unit tests, available <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Tests/Harlinn.Common.Core.Math.Tests">here</a>, 
-strives to prove the accuracy of the computations.</p>
 
 <h3 id="using-the-standard-and-the-internal-implementation-at-runtime">Using the standard, and the internal, implementation at runtime.</h3>
 

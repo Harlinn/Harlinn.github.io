@@ -1257,6 +1257,9 @@ var hierarchy =
     [ "Harlinn::Common::Core::ConcurrentQueue< T, Traits >::FreeList< N >", "struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_free_list.html", null ],
     [ "Harlinn::Common::Core::ConcurrentQueue< T, Traits >::FreeList< Harlinn::Common::Core::ConcurrentQueue::Block >", "struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_free_list.html", null ],
     [ "Harlinn::Common::Core::ConcurrentQueue< T, Traits >::FreeListNode< N >", "struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_free_list_node.html", null ],
+    [ "Harlinn.Common.Core.Net.Generators.Generator", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_generators_1_1_generator.html", [
+      [ "Harlinn.Common.Core.Net.Generators.SineGenerator", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_generators_1_1_sine_generator.html", null ]
+    ] ],
     [ "Harlinn::Common::Core::Security::GenericMapping", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_generic_mapping.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::GraphicsPipelineStateDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_pipeline_state_desc.html", null ],
     [ "GUID", null, [
@@ -1557,7 +1560,9 @@ var hierarchy =
     ] ],
     [ "IDisposable", null, [
       [ "Harlinn.Common.Core.Net.Data.IDataContextBase< TKind >", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_i_data_context_base.html", null ],
-      [ "Harlinn.Common.Core.Net.Entities.EntityContextBase< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_entity_context_base.html", null ]
+      [ "Harlinn.Common.Core.Net.Entities.EntityContextBase< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_entity_context_base.html", null ],
+      [ "Harlinn.Common.Core.Net.Sync.MultimediaTimer", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_sync_1_1_multimedia_timer.html", null ],
+      [ "Harlinn.Common.Core.Net.Sync.WaitableTimer", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_sync_1_1_waitable_timer.html", null ]
     ] ],
     [ "IEditableObject", null, [
       [ "Harlinn.Common.Core.Net.Entities.BaseEntity< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_base_entity.html", null ]
@@ -1621,6 +1626,7 @@ var hierarchy =
       [ "Harlinn.Common.Core.Net.Collections.Generic.SortedListEx< TKey, TValue >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_list_ex.html", null ],
       [ "Harlinn.Common.Core.Net.Collections.Generic.SortedWeakReferenceList< TKey, TValue >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_weak_reference_list.html", null ]
     ] ],
+    [ "Harlinn.Common.Core.Net.IO.IReadWrite", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_i_o_1_1_i_read_write.html", null ],
     [ "IRevertibleChangeTracking", null, [
       [ "Harlinn.Common.Core.Net.Entities.BaseEntity< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_base_entity.html", null ]
     ] ],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX127 =
 {
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_session.html":[4,0,1,0,0,17,3,0,7],
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_session.html#a0fae97bd6ddb564b2c81b77a9cb3d55a":[2,0,1,0,0,21,3,0,7,11],
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_session.html#a0fae97bd6ddb564b2c81b77a9cb3d55a":[4,0,1,0,0,17,3,0,7,11],
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_session.html#a19e4a48ab7cd380b02585c1dea596fce":[2,0,1,0,0,21,3,0,7,20],
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_session.html#a19e4a48ab7cd380b02585c1dea596fce":[4,0,1,0,0,17,3,0,7,20],
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_session.html#a1f0c8f2008ef8a0b68d585f4a59b1512":[2,0,1,0,0,21,3,0,7,6],
 "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_session.html#a1f0c8f2008ef8a0b68d585f4a59b1512":[4,0,1,0,0,17,3,0,7,6],
 "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_session.html#a303d6d93e30e7e739b7be84aee1cb3f9":[2,0,1,0,0,21,3,0,7,18],
 "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_session.html#a303d6d93e30e7e739b7be84aee1cb3f9":[4,0,1,0,0,17,3,0,7,18],
@@ -243,11 +249,5 @@ var NAVTREEINDEX127 =
 "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_text_sink_options.html#ac1aa923396480218410786787c38e370":[4,0,1,0,0,17,3,4,8],
 "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_text_sink_options.html#ac3bcf501d99130d57c83d2767ab21a75":[2,0,1,0,0,21,3,4,5],
 "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_text_sink_options.html#ac3bcf501d99130d57c83d2767ab21a75":[4,0,1,0,0,17,3,4,5],
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_text_sink_options.html#acdfbfc7c441fcc23e0c0f599e48b47a0":[2,0,1,0,0,21,3,4,6],
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_text_sink_options.html#acdfbfc7c441fcc23e0c0f599e48b47a0":[4,0,1,0,0,17,3,4,6],
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_text_sink_options.html#ad94cd7c0852307f838e4cf66b9a4851e":[2,0,1,0,0,21,3,4,10],
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_text_sink_options.html#ad94cd7c0852307f838e4cf66b9a4851e":[4,0,1,0,0,17,3,4,10],
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_text_sink_options.html#ae485b72128359677e9a61f4a635d436d":[2,0,1,0,0,21,3,4,11],
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_text_sink_options.html#ae485b72128359677e9a61f4a635d436d":[4,0,1,0,0,17,3,4,11],
-"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_text_sink_options.html#ae5ddb9a981836a86bdef77e28484c8b3":[2,0,1,0,0,21,3,4,0]
+"class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_text_sink_options.html#acdfbfc7c441fcc23e0c0f599e48b47a0":[2,0,1,0,0,21,3,4,6]
 };

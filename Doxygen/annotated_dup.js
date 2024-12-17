@@ -849,9 +849,18 @@ var annotated_dup =
               [ "EventContextUpdatedEventArgs", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_event_context_updated_event_args.html", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_event_context_updated_event_args" ],
               [ "IBaseEntityFactory", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_i_base_entity_factory.html", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_i_base_entity_factory" ]
             ] ],
+            [ "Generators", "namespace_harlinn_1_1_common_1_1_core_1_1_net_1_1_generators.html", [
+              [ "Generator", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_generators_1_1_generator.html", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_generators_1_1_generator" ],
+              [ "SineGenerator", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_generators_1_1_sine_generator.html", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_generators_1_1_sine_generator" ]
+            ] ],
             [ "IO", "namespace_harlinn_1_1_common_1_1_core_1_1_net_1_1_i_o.html", [
               [ "BinaryReaderExtensions", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_i_o_1_1_binary_reader_extensions.html", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_i_o_1_1_binary_reader_extensions" ],
-              [ "BinaryWriterExtensions", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_i_o_1_1_binary_writer_extensions.html", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_i_o_1_1_binary_writer_extensions" ]
+              [ "BinaryWriterExtensions", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_i_o_1_1_binary_writer_extensions.html", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_i_o_1_1_binary_writer_extensions" ],
+              [ "IReadWrite", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_i_o_1_1_i_read_write.html", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_i_o_1_1_i_read_write" ]
+            ] ],
+            [ "Sync", "namespace_harlinn_1_1_common_1_1_core_1_1_net_1_1_sync.html", [
+              [ "MultimediaTimer", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_sync_1_1_multimedia_timer.html", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_sync_1_1_multimedia_timer" ],
+              [ "WaitableTimer", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_sync_1_1_waitable_timer.html", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_sync_1_1_waitable_timer" ]
             ] ],
             [ "ArrayExtensions", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_array_extensions.html", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_array_extensions" ],
             [ "Currency", "struct_harlinn_1_1_common_1_1_core_1_1_net_1_1_currency.html", "struct_harlinn_1_1_common_1_1_core_1_1_net_1_1_currency" ],

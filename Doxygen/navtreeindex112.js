@@ -1,5 +1,11 @@
 var NAVTREEINDEX112 =
 {
+"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_listener_base.html#af82567a25350b3a2974ae8b4963a9948":[4,0,1,0,0,14,3,1,7,6],
+"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_listener_base.html#afb4a9d6c532ef7f8551e1e37eea1f8be":[2,0,1,0,0,18,4,1,7,1],
+"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_listener_base.html#afb4a9d6c532ef7f8551e1e37eea1f8be":[4,0,1,0,0,14,3,1,7,1],
+"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_simple_connection_handler.html":[2,0,1,0,0,18,4,1,8],
+"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_simple_connection_handler.html":[4,0,1,0,0,14,3,1,8],
+"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_simple_connection_handler.html#a12471dab73f5796d184dae5a282ccf1d":[2,0,1,0,0,18,4,1,8,1],
 "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_simple_connection_handler.html#a12471dab73f5796d184dae5a282ccf1d":[4,0,1,0,0,14,3,1,8,1],
 "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_simple_connection_handler.html#a66841da75e1d2e2307f14c5fa5fc21c9":[2,0,1,0,0,18,4,1,8,0],
 "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_simple_connection_handler.html#a66841da75e1d2e2307f14c5fa5fc21c9":[4,0,1,0,0,14,3,1,8,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX112 =
 "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket.html#acedf4409a1bdc9fcb4edd58ff796c10f":[4,0,1,0,0,14,3,23,63],
 "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket.html#ad1f477a0a7def0a3fed16fe43c140a68":[2,0,1,0,0,18,4,24,73],
 "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket.html#ad1f477a0a7def0a3fed16fe43c140a68":[4,0,1,0,0,14,3,23,73],
-"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket.html#ad308f243421bbfce978d17310449cad0":[2,0,1,0,0,18,4,24,48],
-"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket.html#ad308f243421bbfce978d17310449cad0":[4,0,1,0,0,14,3,23,48],
-"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket.html#ad4800881a438b1be24fee0dd0d612829":[2,0,1,0,0,18,4,24,53],
-"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket.html#ad4800881a438b1be24fee0dd0d612829":[4,0,1,0,0,14,3,23,53],
-"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket.html#ad67f3016d484dc2bdb10553c830b241c":[2,0,1,0,0,18,4,24,135],
-"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket.html#ad67f3016d484dc2bdb10553c830b241c":[4,0,1,0,0,14,3,23,135],
-"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket.html#ad8ca2b3dca5a30bcc95637dd0c8ed469":[2,0,1,0,0,18,4,24,88]
+"class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket.html#ad308f243421bbfce978d17310449cad0":[2,0,1,0,0,18,4,24,48]
 };

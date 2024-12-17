@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Harlinn.GeographicLib.Net - for solving geodesic problems. | Harlinn</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Harlinn.GeographicLib.Net - for solving geodesic problems." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is my personal Github site," />
+<meta property="og:description" content="This is my personal Github site," />
+<link rel="canonical" href="https://harlinn.github.io/DotNet/Harlinn.GeographicLib.Net/Harlinn.GeographicLib.Net.html" />
+<meta property="og:url" content="https://harlinn.github.io/DotNet/Harlinn.GeographicLib.Net/Harlinn.GeographicLib.Net.html" />
+<meta property="og:site_name" content="Harlinn" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Harlinn.GeographicLib.Net - for solving geodesic problems." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal Github site,","headline":"Harlinn.GeographicLib.Net - for solving geodesic problems.","url":"https://harlinn.github.io/DotNet/Harlinn.GeographicLib.Net/Harlinn.GeographicLib.Net.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="importmap">
+        {
+            "imports":
+            {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.171.0/build/three.module.min.js" ,
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.171.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body><header class="site-header" role="banner">
+    <div id="animatedHeader" height="120px" width="100%">
+        <script type="x-shader/x-vertex" id="vertexshader">
+            attribute float scale;
+            void main() {
+                vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+                gl_PointSize = scale * ( 100.0 / - mvPosition.z );
+                gl_Position = projectionMatrix * mvPosition;
+            }
+
+        </script>
+
+        <script type="x-shader/x-fragment" id="fragmentshader">
+            uniform vec3 color;
+            void main() {
+                if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 )  discard;
+                gl_FragColor = vec4( color, 0.8 );
+            }
+        </script>
+
+        <script type="module">
+
+			import * as THREE from 'three';
+
+			const SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
+
+			let container; 
+			let camera, scene, renderer;
+
+			let particles, count = 0;
+
+			let mouseX = 0, mouseY = 0;
+
+			let animatedHeaderHeight = 120;
+
+            let windowHalfX = window.innerWidth / 2;
+            let windowHalfY = animatedHeaderHeight/2.0;
+
+			init();
+
+			function init() {
+
+                container = document.querySelector('#animatedHeader');
+
+                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.z = 1000;
+
+				scene = new THREE.Scene();
+
+				//
+
+				const numParticles = AMOUNTX * AMOUNTY;
+
+				const positions = new Float32Array( numParticles * 3 );
+				const scales = new Float32Array( numParticles );
+
+				let i = 0, j = 0;
+
+				for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
+
+					for ( let iy = 0; iy < AMOUNTY; iy ++ ) {
+
+						positions[ i ] = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 ); // x
+						positions[ i + 1 ] = 0; // y
+						positions[ i + 2 ] = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 ); // z
+
+						scales[ j ] = 1;
+
+						i += 3;
+						j ++;
+
+					}
+
+				}
+
+				const geometry = new THREE.BufferGeometry();
+				geometry.setAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
+				geometry.setAttribute( 'scale', new THREE.BufferAttribute( scales, 1 ) );
+
+				const material = new THREE.ShaderMaterial( {
+
+					uniforms: {
+						color: { value: new THREE.Color( 0xffffff ) },
+					},
+					vertexShader: document.getElementById( 'vertexshader' ).textContent,
+					fragmentShader: document.getElementById( 'fragmentshader' ).textContent
+
+				} );
+
+				//
+
+				particles = new THREE.Points( geometry, material );
+				scene.add( particles );
+
+				//
+
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+                renderer.setSize(window.innerWidth, animatedHeaderHeight );
+				renderer.setAnimationLoop( animate );
+				container.appendChild( renderer.domElement );
+
+				container.style.touchAction = 'none';
+				container.addEventListener( 'pointermove', onPointerMove );
+
+				//
+
+                window.addEventListener( 'resize', onWindowResize );
+
+			}
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+
+				camera.aspect = window.innerWidth / animatedHeaderHeight; 
+				camera.updateProjectionMatrix();
+
+				renderer.setSize(window.innerWidth, animatedHeaderHeight);
+
+			}
+
+			//
+
+			function onPointerMove( event ) {
+
+				if ( event.isPrimary === false ) return;
+
+				mouseX = event.clientX - windowHalfX;
+				mouseY = event.clientY - windowHalfY;
+
+			}
+
+			//
+
+			function animate() {
+				render();
+
+			}
+
+			function render() {
+
+				camera.position.x += ( mouseX - camera.position.x ) * .05;
+				camera.position.y += ( - mouseY - camera.position.y ) * .05;
+				camera.lookAt( scene.position );
+
+				const positions = particles.geometry.attributes.position.array;
+				const scales = particles.geometry.attributes.scale.array;
+
+				let i = 0, j = 0;
+
+				for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
+
+					for ( let iy = 0; iy < AMOUNTY; iy ++ ) {
+
+						positions[ i + 1 ] = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) +
+										( Math.sin( ( iy + count ) * 0.5 ) * 50 );
+
+						scales[ j ] = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 20 +
+										( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 20;
+
+						i += 3;
+						j ++;
+
+					}
+
+				}
+
+				particles.geometry.attributes.position.needsUpdate = true;
+				particles.geometry.attributes.scale.needsUpdate = true;
+
+				renderer.render( scene, camera );
+
+				count += 0.1;
+
+			}
+
+        </script>
+
+    </div>
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Harlinn</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Cpp/Cpp.html">C++</a><a class="page-link" href="/Databases/Databases.html">Databases</a><a class="page-link" href="/DotNet/DotNet.html">.Net</a><a class="page-link" href="/Java/Java.html">Java</a><a class="page-link" href="/Julia/Julia.html">Julia</a><a class="page-link" href="/Python/Python.html">Python</a><a class="page-link" href="/R/R.html">R</a><a class="page-link" href="/Rust/Rust.html">Rust</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Harlinn.GeographicLib.Net - for solving geodesic problems.</h1>
+  </header>
+
+  <div class="post-content">
+    <p>The library can be used to solve geodesic and rhumb line calculations, 
+convert between geographic, UTM, UPS, MGRS, geocentric, and local cartesian coordinates,
+solve gravity and geomagnetic field calculations.</p>
+
+<p>Implemented in C++/CLI to provide access to the functionality of
+the <a href="https://github.com/geographiclib/geographiclib">GeographicLib</a> library.</p>
+
+<p>Harlinn.GeographicLib.Net works with the release build of 
+<a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/3rdParty/Harlinn.geographiclib">Harlinn.GeographicLib</a>.</p>
+
+<p>The information below was copied from the original <a href="https://github.com/geographiclib/geographiclib">GeographicLib</a> 
+documentation and altered slightly, as Harlinn.GeographicLib.Net will mostly be used
+from apps written in C#.</p>
+
+<h3 id="geodesic-calculations">Geodesic calculations</h3>
+
+<p>The shortest path between two points on an ellipsoid at \((lat_1, lon_1)\) and \((lat_2, lon_2)\) 
+is called the geodesic. Its length is \(s_{12}\) and the geodesic from point 1 to point 2 has 
+azimuths \(azi_1\) and \(azi_2\) at the two end points. (The azimuth is the heading measured 
+clockwise from north. \(azi_2\) is the “forward” azimuth, i.e., the heading that takes you 
+beyond point 2 not back to point 1.) In the figure below, latitude is labeled \(φ\), longitude 
+\(λ\) (with \(λ_{12} = λ_2 − λ_1\)), and azimuth \(α\).</p>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Geodesic_problem_on_an_ellipsoid.svg" width="300" /></p>
+
+<p>Given \(lat_1\), \(lon_1\), \(azi_1\), and \(s_{12}\), we can determine 
+\(lat_2\), \(lon_2\), and \(azi_2\). This is the direct geodesic problem 
+and its solution is given by the function <code class="language-plaintext highlighter-rouge">Geodesic.Direct</code>. (If \(s_{12}\) 
+is sufficiently large that the geodesic wraps more than halfway around the earth, 
+there will be another geodesic between the points with a smaller \(s_{12}\).)</p>
+
+<p>Given \(lat_1\), \(lon_1\), \(lat_2\), and \(lon_2\), we can determine 
+\(azi_1\), \(azi_2\), and \(s_{12}\). This is the inverse geodesic problem, 
+whose solution is given by <code class="language-plaintext highlighter-rouge">Geodesic.Inverse</code>. Usually, the solution to 
+the inverse problem is unique. In cases where there are multiple solutions 
+(all with the same \(s_{12}\), of course), all the solutions can be easily 
+generated once a particular solution is provided.</p>
+
+<p>The standard way of specifying the direct problem is the specify the distance 
+\(s_{12}\) to the second point. However it is sometimes useful instead to specify 
+the arc length \(a_{12}\) (in degrees) on the auxiliary sphere. This is a 
+mathematical construct used in solving the geodesic problems. The solution of 
+the direct problem in this form is provided by <code class="language-plaintext highlighter-rouge">Geodesic.ArcDirect</code>. An arc 
+length in excess of \(180°\) indicates that the geodesic is not a shortest path. 
+In addition, the arc length between an equatorial crossing and the next extremum 
+of latitude for a geodesic is \(90°\).</p>
+
+<p>This class can also calculate several other quantities related to geodesics. These are:</p>
+<ul>
+  <li><em>reduced length</em>. If we fix the first point and increase \(azi_1\) by \(dazi_1\) (radians), 
+the second point is displaced \(m_{12} dazi_1\) in the direction \(azi_2 + 90°\). 
+The quantity \(m_{12}\) is called the “reduced length” and is symmetric under interchange 
+of the two points. On a curved surface the reduced length obeys a symmetry relation, 
+\(m_{12} + m_{21} = 0\). On a flat surface, we have \(m_{12} = s_{12}\). The ratio 
+\(s_{12}/m_{12}\) gives the azimuthal scale for an azimuthal equidistant projection.</li>
+  <li><em>geodesic scale</em>. Consider a reference geodesic and a second geodesic parallel to 
+this one at point 1 and separated by a small distance \(dt\). The separation of the two 
+geodesics at point 2 is \(M_{12} dt\) where \(M_{12}\) is called the “geodesic scale”. 
+\(M_{21}\) is defined similarly (with the geodesics being parallel at point 2). On a 
+flat surface, we have \(M_{12} = M_{21} = 1\). The quantity \(1/M_{12}\) gives the scale 
+of the Cassini-Soldner projection.</li>
+  <li><em>area</em>. The area between the geodesic from point 1 to point 2 and the equation is 
+represented by \(S_{12}\); it is the area, measured counter-clockwise, of the geodesic 
+quadrilateral with corners \((lat_1,lon_1)\), \((0,lon_1)\), \((0,lon_2)\), and 
+\((lat_2,lon_2)\). It can be used to compute the area of any geodesic polygon.</li>
+</ul>
+
+<p>Overloaded versions of <code class="language-plaintext highlighter-rouge">Geodesic.Direct</code>, <code class="language-plaintext highlighter-rouge">Geodesic.ArcDirect,</code> and <code class="language-plaintext highlighter-rouge">Geodesic.Inverse</code> 
+allow these quantities to be returned. In addition there are general functions 
+<code class="language-plaintext highlighter-rouge">Geodesic.GenDirect</code>, and <code class="language-plaintext highlighter-rouge">Geodesic.GenInverse</code> which allow an arbitrary set of 
+results to be computed. The quantities \(m_{12}\), \(M_{12}\), \(M_{21}\) which all 
+specify the behavior of nearby geodesics obey addition rules. If points 1, 2, and 3 
+all lie on a single geodesic, then the following rules hold:</p>
+
+\[\begin{eqnarray}
+s_{13} = s_{12} + s_{23} \nonumber \\
+a_{13} = a_{12} + a_{23} \nonumber \\
+S_{13} = S_{12} + S_{23} \nonumber \\
+m_{13} = m_{12} M_{23} + m_{23} M_{21} \nonumber \\
+M_{13} = M_{12} M_{23} − (1 − M_{12} M_{21}) m_{23} / m_{12} \nonumber \\
+M_{31} = M_{32} M_{21} − (1 − M_{23} M_{32}) m_{12} / m_{23} \nonumber
+\end{eqnarray}\]
+
+<p>Additional functionality is provided by the <code class="language-plaintext highlighter-rouge">GeodesicLine</code> class, which allows a 
+sequence of points along a geodesic to be computed.</p>
+
+<h4 id="geodesic-example">Geodesic example</h4>
+
+<pre><code class="language-C#">using Harlinn.GeographicLib.Net;
+
+namespace GeodesicExample
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Geodesic geod = Geodesic.WGS84;
+
+            // Sample direct calculation, travelling about NE from JFK
+            double lat1 = 40.6, lon1 = -73.8, s12 = 5.5e6, azi1 = 51;
+            double lat2, lon2;
+            geod.Direct(lat1, lon1, azi1, out s12, out lat2, out lon2);
+
+            Console.WriteLine($"Latitude: {lat2}, Longitude:{lon2}");
+
+            // Sample inverse calculation, JFK to LHR
+
+            // JFK Airport
+            lat1 = 40.6;
+            lon1 = -73.8;
+
+            // LHR Airport
+            lat2 = 51.6; 
+            lon2 = -0.5;  
+            
+            geod.Inverse(lat1, lon1, lat2, lon2, out s12);
+
+            Console.WriteLine($"Distance: {s12}");
+        }
+    }
+}
+</code></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Latitude: 51,88456450560677, Longitude:-1,1411728612008574
+Distance: 5551759,400318679
+</code></pre></div></div>
+
+<h3 id="geodesicline">GeodesicLine</h3>
+
+<p>A geodesic line.</p>
+
+<p><code class="language-plaintext highlighter-rouge">GeodesicLine</code> facilitates the determination of a series of points on a 
+single geodesic. The starting point \((lat_1, lon_1)\) and the azimuth 
+\(azi_1\) are specified in the constructor; alternatively, the <code class="language-plaintext highlighter-rouge">Geodesic::Line</code> 
+method can be used to create a <code class="language-plaintext highlighter-rouge">GeodesicLine</code>. <code class="language-plaintext highlighter-rouge">GeodesicLine.Position</code> returns 
+the location of point 2 a distance \(s_{12} along the geodesic. In addition, 
+`GeodesicLine.ArcPosition` gives the position of point 2 an arc length\)a_{12}$$ 
+along the geodesic.</p>
+
+<p>You can register the position of a reference point 3 a distance (arc length), 
+\(s_{13}\) (\(a_{13}\)) along the geodesic with the <code class="language-plaintext highlighter-rouge">GeodesicLine.SetDistance</code> 
+(<code class="language-plaintext highlighter-rouge">GeodesicLine.SetArc</code>) functions. Points a fractional distance along the line 
+can be found by providing, for example, <code class="language-plaintext highlighter-rouge">0.5 * Distance</code> as an argument to 
+<code class="language-plaintext highlighter-rouge">GeodesicLine.Position</code>. The <code class="language-plaintext highlighter-rouge">Geodesic.InverseLine</code> or <code class="language-plaintext highlighter-rouge">Geodesic.DirectLine</code> 
+methods return <code class="language-plaintext highlighter-rouge">GeodesicLine</code> objects with point 3 set to the point 2 of the 
+corresponding geodesic problem. <code class="language-plaintext highlighter-rouge">GeodesicLine</code> objects created with the public 
+constructor or with <code class="language-plaintext highlighter-rouge">Geodesic.Line</code> have \(s_{13}\) and \(a_{13}\) set to <code class="language-plaintext highlighter-rouge">NaN</code>s.</p>
+
+<p>The calculations are accurate to better than 15 nm (15 nanometers). See Sec. 9 of 
+<a href="https://arxiv.org/abs/1102.1215v1">arXiv:1102.1215v1</a> for details. With <code class="language-plaintext highlighter-rouge">exact = false</code> 
+(the default) in the constructor for the <code class="language-plaintext highlighter-rouge">Geodesic</code> object, the algorithms used 
+by this class are based on series expansions using the flattening \(f\) as a small 
+parameter. These are only accurate for \(|f| &lt; 0.02\); however reasonably accurate 
+results will be obtained for \(|f| &lt; 0.2\). For very eccentric ellipsoids, set 
+<code class="language-plaintext highlighter-rouge">exact = true</code> in the constructor for the <code class="language-plaintext highlighter-rouge">Geodesic</code> object; this will delegate 
+the calculations to <code class="language-plaintext highlighter-rouge">GeodesicLineExact</code>.</p>
+
+<h4 id="geodesicline-example">GeodesicLine example</h4>
+
+<pre><code class="language-C#">using Harlinn.GeographicLib.Net;
+
+namespace GeodesicLineExample
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Geodesic geod = Geodesic.WGS84;
+
+            double
+              // JFK airport
+              lat1 = 40.640, lon1 = -73.779,
+              // SIN airport
+              lat2 = 1.359, lon2 = 103.989; 
+
+            GeodesicLine line = geod.InverseLine(lat1, lon1, lat2, lon2);
+
+            // Nominal distance between points = 500 km
+            double ds0 = 500e3;
+
+            // The number of intervals
+            int num = (int)Math.Ceiling(line.Distance / ds0);
+
+            double ds = line.Distance / num;
+            for (int i = 0; i &lt;= num; ++i)
+            {
+                double lat, lon;
+                line.Position(i * ds, out lat, out lon);
+                Console.WriteLine($"{i} -&gt; Latitude: {lat}, Longitude: {lon} ");
+            }
+        }
+    }
+}
+</code></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 -&gt; Latitude: 40,64, Longitude: -73,779
+1 -&gt; Latitude: 45,088624522948315, Longitude: -73,41639124870959
+2 -&gt; Latitude: 49,53243435521155, Longitude: -72,99265573206968
+3 -&gt; Latitude: 53,97096253429303, Longitude: -72,48430287040067
+4 -&gt; Latitude: 58,40353976434537, Longitude: -71,85489098898533
+5 -&gt; Latitude: 62,829059340035606, Longitude: -71,04452466778625
+6 -&gt; Latitude: 67,24547195373592, Longitude: -69,94724090357691
+7 -&gt; Latitude: 71,64856286681426, Longitude: -68,35623186483937
+8 -&gt; Latitude: 76,02845249253366, Longitude: -65,80772484891887
+9 -&gt; Latitude: 80,3567290132899, Longitude: -61,014890489628954
+10 -&gt; Latitude: 84,51420549018647, Longitude: -48,83492431665228
+11 -&gt; Latitude: 87,45474332671364, Longitude: 3,894014378845668
+12 -&gt; Latitude: 85,295259509238, Longitude: 71,94358213809562
+13 -&gt; Latitude: 81,22103811744249, Longitude: 87,60160059653242
+14 -&gt; Latitude: 76,91141529030632, Longitude: 93,21228048415551
+15 -&gt; Latitude: 72,53859298991506, Longitude: 96,06333035970746
+16 -&gt; Latitude: 68,13910398636213, Longitude: 97,79733028285946
+17 -&gt; Latitude: 63,72494286554836, Longitude: 98,97301258675924
+18 -&gt; Latitude: 59,301058336202594, Longitude: 99,83082330184723
+19 -&gt; Latitude: 54,86980145924297, Longitude: 100,49102303937627
+20 -&gt; Latitude: 50,432415581007945, Longitude: 101,02040715447234
+21 -&gt; Latitude: 45,98963410041732, Longitude: 101,45907366928466
+22 -&gt; Latitude: 41,54195282757638, Longitude: 101,83259447654174
+23 -&gt; Latitude: 37,089765877640964, Longitude: 102,15809755054522
+24 -&gt; Latitude: 32,633437629751434, Longitude: 102,44754031410375
+25 -&gt; Latitude: 28,17334176771984, Longitude: 102,70958072995484
+26 -&gt; Latitude: 23,709881876563497, Longitude: 102,95070239501462
+27 -&gt; Latitude: 19,243500881260854, Longitude: 103,17592172947425
+28 -&gt; Latitude: 14,774683272647815, Longitude: 103,38925110492858
+29 -&gt; Latitude: 10,303952429663326, Longitude: 103,59401483935383
+30 -&gt; Latitude: 5,831864516291208, Longitude: 103,79307473649479
+31 -&gt; Latitude: 1,3589999999999611, Longitude: 103,989
+</code></pre></div></div>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Harlinn</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Harlinn</li><li><a class="u-email" href="mailto:espen@harlinn.no">espen@harlinn.no</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Harlinn"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Harlinn</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is my personal Github site, </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

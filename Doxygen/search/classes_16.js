@@ -1,7 +1,7 @@
 var searchData=
 [
   ['waitablehandle_0',['WaitableHandle',['../class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html',1,'Harlinn::Common::Core']]],
-  ['waitabletimer_1',['WaitableTimer',['../class_harlinn_1_1_common_1_1_core_1_1_waitable_timer.html',1,'Harlinn::Common::Core']]],
+  ['waitabletimer_1',['WaitableTimer',['../class_harlinn_1_1_common_1_1_core_1_1_net_1_1_sync_1_1_waitable_timer.html',1,'Harlinn.Common.Core.Net.Sync.WaitableTimer'],['../class_harlinn_1_1_common_1_1_core_1_1_waitable_timer.html',1,'Harlinn::Common::Core::WaitableTimer']]],
   ['waitabletimeraccessmask_2',['WaitableTimerAccessMask',['../class_harlinn_1_1_common_1_1_core_1_1_waitable_timer_access_mask.html',1,'Harlinn::Common::Core']]],
   ['waiteventcommdevicerequest_3',['WaitEventCommDeviceRequest',['../class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_wait_event_comm_device_request.html',1,'Harlinn::Common::Core::IO']]],
   ['waitfordemandstartrequest_4',['WaitForDemandStartRequest',['../class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_wait_for_demand_start_request.html',1,'Harlinn::Common::Core::Http::Server']]],
