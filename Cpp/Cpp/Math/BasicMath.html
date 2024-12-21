@@ -232,12 +232,13 @@
   </header>
 
   <div class="post-content">
-    <p>C++ is often used to create software that performs mathematical operations efficiently.</p>
+    <p>In C++, like any other programming language, computations are performed using the available set
+of operators and a set of core mathematical functions provided by the standard C and C++ libraries.</p>
 
-<p>Complex computations are put together using the functionality provided by the standard C and C++ libraries
-as the basic building blocks. The header, <code class="language-plaintext highlighter-rouge">HCCMath.h</code> provides alternatives
-to many of the basic mathematical function that is specified in the C and C++ standards. All of the
-functions can be <code class="language-plaintext highlighter-rouge">constexpr</code> evaluated, and several offer surprising performance benefits as well.</p>
+<p>Complex computations are put together using this functionality as building blocks. The header, 
+<code class="language-plaintext highlighter-rouge">HCCMath.h</code> provides alternatives to many of the core mathematical function that is specified in 
+the C and C++ standards. All of the functions can be <code class="language-plaintext highlighter-rouge">constexpr</code> evaluated, and several offer 
+surprising performance benefits as well.</p>
 
 <p><img src="assets/BasicMath.svg" alt="" /></p>
 
@@ -253,6 +254,17 @@ strives to prove the accuracy of the computations.</p>
 <p>The performance of the functions is benchmarked using the <a href="https://github.com/google/benchmark">Google benchmark</a> library, 
 and can be verified by building and executing <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Benchmarks/Math/BasicMathBenchmarks">BasicMathBenchmarks</a> 
 included in the <a href="/Cpp/Harlinn.Windows/Harlinn.Windows.html">Harlinn.Windows solution</a>.</p>
+
+<p>Benchmarks for a single inline function cannot be relied upon to accurately determine how well the 
+function will perform perform in a real application. For release builds, the compiler and linker,
+employs global optimization strategies, attempting to optimize the operations across all
+the compilation units. The global optimization strategies will often find optimization
+opportunities that are very hard to detect and implement manually, and the only way to really determine
+if one set of functions performs better than another, is to try them out in a real, computationally intensive,
+application.</p>
+
+<p>It is, however, unlikely that a set of functions that performs worse than another, in a reasonable
+set of benchmarks, can outperform the other in a real application.</p>
 
 <h3 id="pbrto-a-micro-optimized-raytracing-app">PBRTO a micro optimized raytracing app</h3>
 
@@ -294,11 +306,123 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Abs( T val ) noexcept
 <p>and call the standard C/C++ implementation at runtime, unless the benchmarks prove 
 that the <code class="language-plaintext highlighter-rouge">constexpr</code> , or some other, implementation - performs consistently better.</p>
 
-<h3 id="fast-and-accurate-internal-implementation">Fast and Accurate Internal Implementation</h3>
+<h3 id="testing">Testing</h3>
 
-<p>A few functions, like <code class="language-plaintext highlighter-rouge">Exp</code>, outperforms the standard implementation spectacularly,
-and accurately - in this case with a maximum detected deviation of <code class="language-plaintext highlighter-rouge">2.18599e-16</code> compared
-to <code class="language-plaintext highlighter-rouge">std::exp</code> for double precision floating point values.</p>
+<p>The functions in the <code class="language-plaintext highlighter-rouge">Math</code> namespace that use the <code class="language-plaintext highlighter-rouge">constepr</code> path implementation
+at runtime are thoroughly tested, and the tests tries to determine the maximum 
+deviation between the standard function and the corresponding function in the <code class="language-plaintext highlighter-rouge">Math</code> namespace.</p>
+
+<p>Deviation is calculated by the <code class="language-plaintext highlighter-rouge">Deviation</code> function below.</p>
+
+<p>The value passed for the first argument is the expected result, usually calculated using
+the standard implementation, while the value calculated by the corresponding function
+in the <code class="language-plaintext highlighter-rouge">Math</code> namespace is passed as the second argument.</p>
+
+<pre><code class="language-C++">inline double Deviation( double first, double second )
+{
+    // If both is NaN, the results don't deviate
+    if ( std::isnan( first ) )
+    {
+        if ( std::isnan( second ) )
+        {
+            return 0.0;
+        }
+        return std::numeric_limits&lt;double&gt;::infinity( );
+    }
+    else if ( std::isnan( second ) )
+    {
+        // The second value is NaN, but not the first
+        return std::numeric_limits&lt;double&gt;::infinity( );
+    }
+    if ( std::isinf( first ) )
+    {
+        if ( std::isinf( second ) )
+        {
+            if ( first &gt; 0. &amp;&amp; second &gt; 0. )
+            {
+                // Both values are +infinity
+                return 0;
+            }
+            else if ( first &lt; 0. &amp;&amp; second &lt; 0. )
+            {
+                // Both values are -infinity
+                return 0;
+            }
+            // Opposite signs
+            return std::numeric_limits&lt;double&gt;::infinity( );
+        }
+        // only the first value is infinite
+        return std::numeric_limits&lt;double&gt;::infinity( );
+    }
+    else if ( std::isinf( second ) )
+    {
+        // only the second value is infinite
+        return std::numeric_limits&lt;double&gt;::infinity( );
+    }
+
+    // Avoid division by zero
+    if ( first != 0.0 )
+    {
+        using std::abs;
+        if ( first &lt;= second )
+        {
+            return abs( second - first ) / abs( first );
+        }
+        else
+        {
+            return abs( first - second ) / abs( first );
+        }
+    }
+    else
+    {
+        // When second is very close to zero, the result is zero deviation
+        constexpr double veryCloseToZero = 5e-323;
+        auto absSecond = abs( second );
+        if ( absSecond &lt;= veryCloseToZero )
+        {
+            return 0.0;
+        }
+        // May still be very close to zero, but will cause the test to fail.
+        return 1.0;
+    }
+}
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">Math::Sin</code> fails for extreme arguments, but have been tested for every possible
+representation of a single precision floating point value between -42781604.0 and 42781604.0.</p>
+
+<p>Over this interval the maximum deviation between the results of <code class="language-plaintext highlighter-rouge">Math::Sin</code> and 
+<code class="language-plaintext highlighter-rouge">std::sin</code> is <code class="language-plaintext highlighter-rouge">1.19207726377e-07</code> for for the argument <code class="language-plaintext highlighter-rouge">-61926.5507812</code>.</p>
+
+<p>Testing for every possible value between <code class="language-plaintext highlighter-rouge">-2.0 * M_PI</code> and <code class="language-plaintext highlighter-rouge">2.0 * M_PI</code>, the 
+maximum deviation between <code class="language-plaintext highlighter-rouge">std::sin</code> and <code class="language-plaintext highlighter-rouge">Math::Sin</code> is <code class="language-plaintext highlighter-rouge">1.1916077923e-07</code> for the argument <code class="language-plaintext highlighter-rouge">-0.252785384655</code>.</p>
+
+<p>This test passed <code class="language-plaintext highlighter-rouge">2'173'837'309</code> different values to the two functions, and for the majority of the cases, 
+<code class="language-plaintext highlighter-rouge">2'106'866'672</code>, the results are identical.</p>
+
+<p>For <code class="language-plaintext highlighter-rouge">-0.252785384655</code>, <code class="language-plaintext highlighter-rouge">std::sin</code> returns <code class="language-plaintext highlighter-rouge">-0.250101774931</code>, while <code class="language-plaintext highlighter-rouge">Math::Sin</code> returns <code class="language-plaintext highlighter-rouge">-0.250101804733</code>.</p>
+
+<p><a href="https://julialang.org/">Julia</a> evaluates the value to <code class="language-plaintext highlighter-rouge">-0.250101804733</code> using:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>julia&gt; a::Float32 = -0.252785384655
+-0.252785384655
+julia&gt; @printf("%.12f",sin(a))
+-0.250101804733
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Math::Sin</code> is about two times faster than <code class="language-plaintext highlighter-rouge">std::sin</code> for single precision floating point values,
+and both return approximate values. The approximation performed by <code class="language-plaintext highlighter-rouge">Math::Sin</code> should be well within
+the margin of error required for the majority of applications.</p>
+
+<h3 id="exceptional-performance">Exceptional performance</h3>
+
+<p>A few functions outperforms the standard implementation spectacularly, and <code class="language-plaintext highlighter-rouge">Exp</code> 
+outperforms <code class="language-plaintext highlighter-rouge">std::exp</code> by <code class="language-plaintext highlighter-rouge">1200</code> %.</p>
+
+<p>The two implementations returns the same result for <code class="language-plaintext highlighter-rouge">2261694913</code> out of <code class="language-plaintext highlighter-rouge">2288746510</code> cases, 
+when tested with double precision floating point argument values, evenly distributed
+over the interval <code class="language-plaintext highlighter-rouge">[-744.0, 710.0]</code>. The maximum deviation, <code class="language-plaintext highlighter-rouge">1.56426946755e-12</code>
+was obtained when passing <code class="language-plaintext highlighter-rouge">-717.256469727</code> as the argument to the functions.</p>
 
 <pre><code class="language-C++">template&lt;typename T&gt;
     requires IsFloatingPoint&lt;T&gt;
@@ -333,7 +457,7 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Hypot( T x, T y, T z ) noexcept
         v = Traits::Mul( v, v );
         v = Traits::HSum( v );
         v = Traits::Sqrt( v );
-        return Traits::Lower( v );
+        return Traits::First( v );
     }
 }
 </code></pre>
