@@ -105,7 +105,6 @@ $(function(){initNavTree('class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_
 <a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Harlinn::Common::Core::Math::SquareMatrix&lt; FloatT, N &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -142,6 +141,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adbe39e10961e6fee4860b1aa1ba36c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af338fbb7d435048ac0dc0696ea7d16b7" id="r_af338fbb7d435048ac0dc0696ea7d16b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af338fbb7d435048ac0dc0696ea7d16b7">SquareMatrix</a> (const <a class="el" href="#a5152210a7d4634adb99d1ec5f00abc6a">value_type</a>(&amp;mat)[N][N])</td></tr>
 <tr class="separator:af338fbb7d435048ac0dc0696ea7d16b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77e7bc3f1083200edea9dd78a8a23e75" id="r_a77e7bc3f1083200edea9dd78a8a23e75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77e7bc3f1083200edea9dd78a8a23e75">SquareMatrix</a> (const <a class="el" href="#a5152210a7d4634adb99d1ec5f00abc6a">value_type</a> mat[N][N])</td></tr>
+<tr class="separator:a77e7bc3f1083200edea9dd78a8a23e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9ceb0d740b35325b25e2497db16bf66" id="r_af9ceb0d740b35325b25e2497db16bf66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9ceb0d740b35325b25e2497db16bf66">SquareMatrix</a> (const <a class="el" href="#adc8547b86d6cefe1f58a7b4af6e691ee">Simd</a> &amp;simd) noexcept</td></tr>
 <tr class="separator:af9ceb0d740b35325b25e2497db16bf66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22afe2f5fb3f459bfe327597981529fc" id="r_a22afe2f5fb3f459bfe327597981529fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22afe2f5fb3f459bfe327597981529fc">SquareMatrix</a> (const <a class="el" href="#a99d118b69ea25fcf48c0163372b81461">Data</a> &amp;data) noexcept</td></tr>
@@ -208,12 +209,6 @@ Private Attributes</h2></td></tr>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a3827372d8fd8820e7d2e584afb85efab" id="r_a3827372d8fd8820e7d2e584afb85efab"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="#a99d118b69ea25fcf48c0163372b81461">Data</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3827372d8fd8820e7d2e584afb85efab">DefaultValue</a> = <a class="el" href="#a498bf6b6caf7aaedcdd58a84930fd230">MakeDefaultValue</a>( )</td></tr>
 <tr class="separator:a3827372d8fd8820e7d2e584afb85efab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a14999169231fc62a267fee669b1d3c36" id="r_a14999169231fc62a267fee669b1d3c36"><td class="memTemplParams" colspan="2">template&lt;typename FloatT , size_t N&gt; </td></tr>
-<tr class="memitem:a14999169231fc62a267fee669b1d3c36"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; FloatT, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a14999169231fc62a267fee669b1d3c36">operator*</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; FloatT, N &gt; &amp;matrix1, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; FloatT, N &gt; &amp;matrix2)</td></tr>
-<tr class="separator:a14999169231fc62a267fee669b1d3c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a90965bf9896e672e1ee9c0c124266808" name="a90965bf9896e672e1ee9c0c124266808"></a>
@@ -298,7 +293,7 @@ template&lt;typename FloatT , size_t N&gt; </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adbe39e10961e6fee4860b1aa1ba36c75" name="adbe39e10961e6fee4860b1aa1ba36c75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbe39e10961e6fee4860b1aa1ba36c75">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adbe39e10961e6fee4860b1aa1ba36c75">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,7 +320,7 @@ template&lt;typename FloatT , size_t N&gt; </div>
 </div>
 </div>
 <a id="af338fbb7d435048ac0dc0696ea7d16b7" name="af338fbb7d435048ac0dc0696ea7d16b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af338fbb7d435048ac0dc0696ea7d16b7">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af338fbb7d435048ac0dc0696ea7d16b7">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,8 +346,35 @@ template&lt;typename FloatT , size_t N&gt; </div>
 
 </div>
 </div>
+<a id="a77e7bc3f1083200edea9dd78a8a23e75" name="a77e7bc3f1083200edea9dd78a8a23e75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77e7bc3f1083200edea9dd78a8a23e75">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename FloatT , size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">Harlinn::Common::Core::Math::SquareMatrix</a>&lt; FloatT, N &gt;::SquareMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a5152210a7d4634adb99d1ec5f00abc6a">value_type</a></td>          <td class="paramname"><span class="paramname"><em>mat</em></span>[N][N]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af9ceb0d740b35325b25e2497db16bf66" name="af9ceb0d740b35325b25e2497db16bf66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9ceb0d740b35325b25e2497db16bf66">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af9ceb0d740b35325b25e2497db16bf66">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -379,7 +401,7 @@ template&lt;typename FloatT , size_t N&gt; </div>
 </div>
 </div>
 <a id="a22afe2f5fb3f459bfe327597981529fc" name="a22afe2f5fb3f459bfe327597981529fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22afe2f5fb3f459bfe327597981529fc">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a22afe2f5fb3f459bfe327597981529fc">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -406,7 +428,7 @@ template&lt;typename FloatT , size_t N&gt; </div>
 </div>
 </div>
 <a id="ad43d95f17a0ba7d9e7a274fbb683b9e1" name="ad43d95f17a0ba7d9e7a274fbb683b9e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad43d95f17a0ba7d9e7a274fbb683b9e1">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad43d95f17a0ba7d9e7a274fbb683b9e1">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -845,40 +867,6 @@ template&lt;typename FloatT , size_t N&gt; </div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
-<a id="a14999169231fc62a267fee669b1d3c36" name="a14999169231fc62a267fee669b1d3c36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14999169231fc62a267fee669b1d3c36">&#9670;&#160;</a></span>operator*</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename FloatT , size_t N&gt; </div>
-<div class="memtemplate">
-template&lt;typename FloatT , size_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; FloatT, N &gt; operator* </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; FloatT, N &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>matrix1</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; FloatT, N &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>matrix2</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

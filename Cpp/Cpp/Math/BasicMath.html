@@ -247,7 +247,7 @@ surprising performance benefits as well.</p>
 <h3 id="unit-tests">Unit Tests</h3>
 
 <p>Extensive unit tests, available <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Tests/Harlinn.Common.Core.Math.Tests">here</a>, 
-strives to prove the accuracy of the computations.</p>
+strives to demonstrate the accuracy of the computations.</p>
 
 <h3 id="benchmarks">Benchmarks</h3>
 
@@ -305,6 +305,23 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Abs( T val ) noexcept
 
 <p>and call the standard C/C++ implementation at runtime, unless the benchmarks prove 
 that the <code class="language-plaintext highlighter-rouge">constexpr</code> , or some other, implementation - performs consistently better.</p>
+
+<h3 id="implementation-quality">Implementation quality</h3>
+
+<p>The quality of the <code class="language-plaintext highlighter-rouge">constexpr</code> path for the functions implemented in <code class="language-plaintext highlighter-rouge">HCCMath.h</code> is good, 
+but the quality of the standard C and C++ implementations are often better as they can 
+usually handle any input argument value. Calling <code class="language-plaintext highlighter-rouge">std::sin(1.7976931348623158e+308)</code> works,
+and will return a reasonable value for the argument, but calling <code class="language-plaintext highlighter-rouge">std::sin(1.7976931348623158e+308)</code>
+is rarely, if ever, a reasonable thing to do. The difference between the highest value
+for a double precision floating point variable, <code class="language-plaintext highlighter-rouge">1.7976931348623158e+308</code>, and
+second highest value, <code class="language-plaintext highlighter-rouge">1.7976931348623155e+308</code>, is <code class="language-plaintext highlighter-rouge">1.99584030953472e+292</code>,
+which is approximately equal to <code class="language-plaintext highlighter-rouge">2 * M_PI * 3.176478508845091e+291</code>.</p>
+
+<p>Many C and C++ libraries include fast alternatives to several of the standard C and C++ mathematical
+functions. These alternatives are usually good enough for their intended</p>
+
+<p><code class="language-plaintext highlighter-rouge">Math::Internal::FModImpl</code>, <code class="language-plaintext highlighter-rouge">Sqrt</code>, <code class="language-plaintext highlighter-rouge">ScaleByN</code> and the trigonometric functions, are based on open source code released by Sun Microsystems, 
+adapted to C++ 20 <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation.</p>
 
 <h3 id="testing">Testing</h3>
 
@@ -431,9 +448,6 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Exp( T x ) noexcept
     return Math::Internal::ExpImpl( x );
 }
 </code></pre>
-
-<p><code class="language-plaintext highlighter-rouge">Exp</code>, and several other functions, are based on open source code released by Sun Microsystems, 
-between 1993 and 2004, adapted to C++ 20 <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation.</p>
 
 <h3 id="using-simdtraitstn">Using <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T.N&gt;</code></h3>
 

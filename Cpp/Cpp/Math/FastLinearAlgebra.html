@@ -240,27 +240,88 @@ library.</p>
 
 <ul>
   <li><a href="#vector"><code class="language-plaintext highlighter-rouge">Vector</code></a> is template for fixed size vectors of integer or floating point values.</li>
-  <li>
-    <p><a href="#tuple2-tuple3-and-tuple4"><code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code></a> 
+  <li><a href="#tuple2-tuple3-and-tuple4"><code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code></a> 
 are template classes that holds <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">3</code> or <code class="language-plaintext highlighter-rouge">4</code> integer or floating point 
 values. They are used to implement specializations of <code class="language-plaintext highlighter-rouge">Vector</code> and other
-classes holding <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">3</code> or <code class="language-plaintext highlighter-rouge">4</code> integer or floating point values.</p>
-
+classes holding <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">3</code> or <code class="language-plaintext highlighter-rouge">4</code> integer or floating point values.
     <ul>
+      <li><a href="#tuple2-tuple3-tuple4-and-tuplesimd-functions"><code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code>, <code class="language-plaintext highlighter-rouge">Tuple4</code> and <code class="language-plaintext highlighter-rouge">TupleSimd</code> Functions</a>
+        <ul>
+          <li><a href="#hsum-and-scalarhsum">HSum and ScalarHSum</a></li>
+          <li><a href="#hprod-and-scalarhprod">HProd and ScalarHProd</a></li>
+          <li><a href="#abs">Abs</a></li>
+          <li><a href="#min">Min</a></li>
+          <li><a href="#max">Max</a></li>
+          <li><a href="#sqr">Sqr</a></li>
+          <li><a href="#ceil">Ceil</a></li>
+          <li><a href="#floor">Floor</a></li>
+          <li><a href="#round">Round</a></li>
+          <li><a href="#trunc">Trunc</a></li>
+          <li><a href="#lerp">Lerp</a></li>
+          <li><a href="#clamp">Clamp</a></li>
+          <li><a href="#saturate">Saturate</a></li>
+          <li><a href="#sqrt">Sqrt</a></li>
+          <li><a href="#reciprocalsqrt">ReciprocalSqrt</a></li>
+          <li><a href="#reciprocal">Reciprocal</a></li>
+          <li><a href="#fma">FMA</a></li>
+          <li><a href="#fmsub">FMSub</a></li>
+          <li><a href="#fmaddsub">FMAddSub</a></li>
+          <li><a href="#fmsubadd">FMSubAdd</a></li>
+          <li><a href="#fnmadd">FNMAdd</a></li>
+          <li><a href="#fnmsub">FNMSub</a></li>
+          <li><a href="#sin">Sin</a></li>
+          <li><a href="#cos">Cos</a></li>
+          <li><a href="#tan">Tan</a></li>
+          <li><a href="#asin">ASin</a></li>
+          <li><a href="#acos">ACos</a></li>
+          <li><a href="#atan">ATan</a></li>
+          <li><a href="#atan2">ATan2</a></li>
+          <li><a href="#modangles">ModAngles</a></li>
+          <li><a href="#addangles">AddAngles</a></li>
+          <li><a href="#subtractangles">SubtractAngles</a></li>
+          <li><a href="#sinh">SinH</a></li>
+          <li><a href="#cosh">CosH</a></li>
+          <li><a href="#tanh">TanH</a></li>
+          <li><a href="#asinh">ASinH</a></li>
+          <li><a href="#acosh">ACosH</a></li>
+          <li><a href="#atanh">ATanH</a></li>
+          <li><a href="#log">Log</a></li>
+          <li><a href="#log1p">Log1P</a></li>
+          <li><a href="#log10">Log10</a></li>
+          <li><a href="#log2">Log2</a></li>
+          <li><a href="#exp">Exp</a></li>
+          <li><a href="#exp10">Exp10</a></li>
+          <li><a href="#exp2">Exp2</a></li>
+          <li><a href="#expm1">ExpM1</a></li>
+          <li><a href="#pow">Pow</a></li>
+          <li><a href="#hypot">Hypot</a></li>
+          <li><a href="#hermite">Hermite</a></li>
+          <li><a href="#dot-and-scalardot">Dot and ScalarDot</a></li>
+          <li><a href="#absdot-and-scalarabsdot">AbsDot and ScalarAbsDot</a></li>
+          <li><a href="#cross">Cross</a></li>
+          <li><a href="#lengthsquared-and-scalarlengthsquared">LengthSquared and ScalarLengthSquared</a></li>
+          <li><a href="#length-and-scalarlength">Length and ScalarLength</a></li>
+          <li><a href="#normalize">Normalize</a></li>
+          <li><a href="#reciprocallength-and-scalarreciprocallength">ReciprocalLength and ScalarReciprocalLength</a></li>
+          <li><a href="#distancesquared-and-scalardistancesquared">DistanceSquared and ScalarDistanceSquared</a></li>
+          <li><a href="#distance-and-scalardistance">Distance and ScalarDistance</a></li>
+        </ul>
+      </li>
       <li><a href="#vector2f-vector3f-vector4f-vector2i-vector3i-vector4i"><code class="language-plaintext highlighter-rouge">Vector2f</code>, <code class="language-plaintext highlighter-rouge">Vector3f</code>, <code class="language-plaintext highlighter-rouge">Vector4f</code>, <code class="language-plaintext highlighter-rouge">Vector2i</code>, <code class="language-plaintext highlighter-rouge">Vector3i</code>, <code class="language-plaintext highlighter-rouge">Vector4i</code></a></li>
       <li><a href="#normal3f-and-normal3i"><code class="language-plaintext highlighter-rouge">Normal3f</code> and <code class="language-plaintext highlighter-rouge">Normal3i</code></a></li>
       <li><a href="#point3f-and-point3i"><code class="language-plaintext highlighter-rouge">Point3f</code> and <code class="language-plaintext highlighter-rouge">Point3i</code></a></li>
     </ul>
   </li>
   <li><a href="#quaternion"><code class="language-plaintext highlighter-rouge">Quaternion</code></a></li>
+  <li><a href="#squarematrix"><code class="language-plaintext highlighter-rouge">SquareMatrix</code></a></li>
 </ul>
 
-<p>The purpose of specializations of <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T, N&gt;</code> is to have a mechanism for
+<p>The purpose of specializations of <a href="SimdOperations.html"><code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T, N&gt;</code></a> is to have a mechanism for
 selecting implementations that are implemented for <code class="language-plaintext highlighter-rouge">T</code> and optimized for <code class="language-plaintext highlighter-rouge">N</code> elements,
 for developing the C++ templates classes and template functions that forms the core
 of the linear algebra features of the library.</p>
 
-<p>The <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T, N&gt;</code> specializations are used to implement a set of C++
+<p>The <a href="SimdOperations.html"><code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T, N&gt;</code></a> specializations are used to implement a set of C++
 classes that simplifies SIMD development. These classes are contained in 
 the <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code> header file.</p>
 
@@ -398,6 +459,10 @@ together with the <code class="language-plaintext highlighter-rouge">TupleSimd</
 set of classes and templates that can handle linear algebra for games, 
 graphic apps, and other apps that work with two and/or three dimensional data.</p>
 
+<p>The template arguments are the type derived from the template and the type used
+to store each coordinate’s value. Since the templates know their derived type, 
+the templates can operate on, and return values of the derived type.</p>
+
 <p>When working with data in two dimensions, it’s a common convention that the
 type holding two dimensional data has two data fields, <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code>. Similarly
 a type holding three dimensional data is expected to have three data fields
@@ -405,7 +470,7 @@ named <code class="language-plaintext highlighter-rouge">x</code>, <code class="
 
 <p>The <code class="language-plaintext highlighter-rouge">Tuple2</code> template fills this role for two dimensional data:</p>
 <pre><code class="language-C++">template&lt;class DerivedT, typename T&gt;
-class Tuple2
+class Tuple2 : public Internal::TupleBase
 {
 public:
   ...
@@ -424,13 +489,17 @@ public:
 <p>where <code class="language-plaintext highlighter-rouge">values</code> is a <code class="language-plaintext highlighter-rouge">std::array&lt;value_type,2&gt;</code> sharing the location of
 <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code> in memory. Setting <code class="language-plaintext highlighter-rouge">v.values[0] = 0</code> is the same as <code class="language-plaintext highlighter-rouge">v.x = 0</code>.</p>
 
+<p>The union between <code class="language-plaintext highlighter-rouge">values</code> and <code class="language-plaintext highlighter-rouge">struct { value_type x, y; }</code> is important
+as it provides a generic way to access the coordinates held by the object
+without explicitly accessing each value through <code class="language-plaintext highlighter-rouge">x</code> or <code class="language-plaintext highlighter-rouge">y</code>.</p>
+
 <p><code class="language-plaintext highlighter-rouge">DerivedT</code> is required to be a class derived from the <code class="language-plaintext highlighter-rouge">Tuple2</code> template,
 and <code class="language-plaintext highlighter-rouge">value_type</code> is declared as <code class="language-plaintext highlighter-rouge">using value_type = T;</code>.</p>
 
 <p>Similarly the <code class="language-plaintext highlighter-rouge">Tuple3</code> template fills this role for three dimensional data:</p>
 
 <pre><code class="language-C++">template&lt;class DerivedT, typename T&gt;
-class Tuple3
+class Tuple3 : public Internal::TupleBase
 {
 public:
   ...
@@ -450,20 +519,53 @@ public:
 <p><code class="language-plaintext highlighter-rouge">Tuple4</code> adds an additional field <code class="language-plaintext highlighter-rouge">w</code>, and uses <code class="language-plaintext highlighter-rouge">std::array&lt;value_type,4&gt;</code>
 for the values array.</p>
 
+<p>The <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code> templates are derived from the
+empty <code class="language-plaintext highlighter-rouge">Internal::TupleBase</code> struct.</p>
+
+<pre><code class="language-C++">namespace Internal
+{
+    struct TupleBase
+    { };
+}
+</code></pre>
+<p>This provides a mechanism used to distinguish between types derived from
+<code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code>; and types that are not:</p>
+
+<pre><code class="language-C++">namespace Internal
+{
+    template&lt;typename T&gt;
+    concept TupleType = std::is_base_of_v&lt;TupleBase, T&gt;;
+}
+</code></pre>
+
 <p>To use SIMD on the Intel/AMD x64 architecture, data must, as mentioned,
 be loaded into a SIMD type that is an abstract representation of an
 AVX or SSE4 register. The <code class="language-plaintext highlighter-rouge">TupleSimd</code> template represents SIMD types
-using one of the <code class="language-plaintext highlighter-rouge">SIMD::Traits</code> specializations combined with
+using one of the <a href="SimdOperations.html"><code class="language-plaintext highlighter-rouge">SIMD::Traits</code></a> specializations combined with
 a tuple type.</p>
 
 <pre><code class="language-C++">template&lt;typename TraitsT, typename TupleT&gt;
-class TupleSimd : public Internal::TupleBase
+class TupleSimd : public Internal::TupleSimdBase
 {
   ...    
 };
 </code></pre>
 <p><code class="language-plaintext highlighter-rouge">TupleSimd</code> fills this role for each of the <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code> 
 template classes.</p>
+
+<pre><code class="language-C++">template&lt;class DerivedT, typename T&gt;
+class Tuple3 : public Internal::TupleBase
+{
+public:
+    using DerivedType = DerivedT;
+  ...
+    using Simd = TupleSimd&lt;Traits, DerivedType&gt;;
+  ...
+};
+</code></pre>
+
+<p>The above definition of <code class="language-plaintext highlighter-rouge">Tuple3::Simd</code> ensures that each class
+derived from <code class="language-plaintext highlighter-rouge">Tuple3</code> gets a distinct <code class="language-plaintext highlighter-rouge">Tuple3::Simd</code> C++ type.</p>
 
 <h3 id="tuple2-tuple3-and-tuple4-implementation-details">Tuple2, Tuple3 and Tuple4 implementation details</h3>
 
@@ -481,8 +583,8 @@ to distinguish between types that are derived from <code class="language-plainte
 and those that are not, and this is used to ensure that the templates designed for 
 <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code> will only be enabled for classes derived from either of them.</p>
 
-<p>Inside the template definition, <code class="language-plaintext highlighter-rouge">DerivedType</code>, which is a class or struct derived from 
-the <code class="language-plaintext highlighter-rouge">Tuple3</code> template, is defined together with <code class="language-plaintext highlighter-rouge">value_type</code> and <code class="language-plaintext highlighter-rouge">size_type</code>.</p>
+<p>Inside the template definition, <code class="language-plaintext highlighter-rouge">DerivedType</code> is defined as the class or struct derived from 
+the <code class="language-plaintext highlighter-rouge">Tuple3</code> template, together with <code class="language-plaintext highlighter-rouge">value_type</code> and <code class="language-plaintext highlighter-rouge">size_type</code>.</p>
 
 <pre><code class="language-C++">public:
     using DerivedType = DerivedT;
@@ -595,16 +697,201 @@ returns the data.</p>
     }
 
 </code></pre>
-<p>The only mathematical operation implemented for <code class="language-plaintext highlighter-rouge">Tuple3</code> is negation, note that
-the type of the return value is <code class="language-plaintext highlighter-rouge">Simd</code>, the <code class="language-plaintext highlighter-rouge">TupleSimd</code> specialization for
-this <code class="language-plaintext highlighter-rouge">Tuple3</code>.</p>
+<p>Negation loads the data of <code class="language-plaintext highlighter-rouge">Tuple3</code> into a <code class="language-plaintext highlighter-rouge">SIMDType</code>, calls <code class="language-plaintext highlighter-rouge">Traits::Negate</code> returning 
+the result as a <code class="language-plaintext highlighter-rouge">Tuple3::Simd</code>, the <code class="language-plaintext highlighter-rouge">TupleSimd</code> specialization for
+this <code class="language-plaintext highlighter-rouge">Tuple3</code> type:</p>
 
 <pre><code class="language-C++">    Simd operator-( ) const noexcept
     {
         return Traits::Negate( Traits::Load( values.data( ) ) );
     }
 
-    void Assign( value_type xv, value_type yv, value_type zv ) noexcept
+</code></pre>
+<p><code class="language-plaintext highlighter-rouge">Tuple3</code> overloads the <code class="language-plaintext highlighter-rouge">+=</code>, <code class="language-plaintext highlighter-rouge">-=</code>, <code class="language-plaintext highlighter-rouge">*=</code> and <code class="language-plaintext highlighter-rouge">/=</code> operators, and each operator
+accepts a <code class="language-plaintext highlighter-rouge">const</code> reference to a <code class="language-plaintext highlighter-rouge">Simd</code>, <code class="language-plaintext highlighter-rouge">const</code> reference to a <code class="language-plaintext highlighter-rouge">Tuple3</code>, or 
+a scalar - note that the overloads returns a reference to <code class="language-plaintext highlighter-rouge">DerivedType</code>:</p>
+
+<pre><code class="language-C++">
+    DerivedType&amp; operator += ( const Simd&amp; other ) noexcept
+    {
+        values = Traits::ToArray( Traits::Add( Traits::Load( values ), other.simd ) );
+        return static_cast&lt; DerivedType&amp; &gt;(*this );
+    }
+
+    DerivedType&amp; operator += ( const Tuple3&amp; other ) noexcept
+    {
+        x += other.x;
+        y += other.y;
+        z += other.z;
+        return static_cast&lt; DerivedType&amp; &gt;( *this );
+    }
+
+    DerivedType&amp; operator += ( const value_type&amp; value ) noexcept
+    {
+        x += value;
+        y += value;
+        z += value;
+        return static_cast&lt; DerivedType&amp; &gt;( *this );
+    }
+
+    DerivedType&amp; operator -= ( const Simd&amp; other ) noexcept
+    {
+        values = Traits::ToArray( Traits::Sub( Traits::Load( values ), other.simd ) );
+        return static_cast&lt; DerivedType&amp; &gt;( *this );
+    }
+
+    DerivedType&amp; operator -= ( const Tuple3&amp; other ) noexcept
+    {
+        x -= other.x;
+        y -= other.y;
+        z -= other.z;
+        return static_cast&lt; DerivedType&amp; &gt;( *this );
+    }
+
+    DerivedType&amp; operator -= ( const value_type&amp; value ) noexcept
+    {
+        x -= value;
+        y -= value;
+        z -= value;
+        return static_cast&lt; DerivedType&amp; &gt;( *this );
+    }
+
+    DerivedType&amp; operator *= ( const Simd&amp; other ) noexcept
+    {
+        values = Traits::ToArray( Traits::Mul( Traits::Load( values ), other.simd ) );
+        return static_cast&lt; DerivedType&amp; &gt;( *this );
+    }
+
+    DerivedType&amp; operator *= ( const Tuple3&amp; other ) noexcept
+    {
+        x *= other.x;
+        y *= other.y;
+        z *= other.z;
+        return static_cast&lt; DerivedType&amp; &gt;( *this );
+    }
+
+    DerivedType&amp; operator *= ( const value_type&amp; value ) noexcept
+    {
+        x *= value;
+        y *= value;
+        z *= value;
+        return static_cast&lt; DerivedType&amp; &gt;( *this );
+    }
+
+
+    DerivedType&amp; operator /= ( const Simd&amp; other ) noexcept
+    {
+        values = Traits::ToArray( Traits::Div( Traits::Load( values ), other.simd ) );
+        return static_cast&lt; DerivedType&amp; &gt;( *this );
+    }
+
+    DerivedType&amp; operator /= ( const Tuple3&amp; other ) noexcept
+    {
+        x /= other.x;
+        y /= other.y;
+        z /= other.z;
+        return static_cast&lt; DerivedType&amp; &gt;( *this );
+    }
+
+    DerivedType&amp; operator /= ( const value_type&amp; value ) noexcept
+    {
+        x /= value;
+        y /= value;
+        z /= value;
+        return static_cast&lt; DerivedType&amp; &gt;( *this );
+    }
+</code></pre>
+<p>Since <code class="language-plaintext highlighter-rouge">Tuple3</code> is a container, it implements common container member functions:</p>
+
+<pre><code class="language-C++">    const_reference operator[]( size_t index ) const noexcept
+    {
+        return values[ index ];
+    }
+
+    reference operator[]( size_t index ) noexcept
+    {
+        return values[ index ];
+    }
+
+    const_pointer data( ) const noexcept
+    {
+        return values.data( );
+    }
+    pointer data( ) noexcept
+    {
+        return values.data( );
+    }
+
+    constexpr size_t size( ) const noexcept
+    {
+        return Size;
+    }
+
+    const_reference front( ) const noexcept
+    {
+        return values.front( );
+    }
+    reference front( ) noexcept
+    {
+        return values.front( );
+    }
+
+    const_reference back( ) const noexcept
+    {
+        return values.back( );
+    }
+    reference back( ) noexcept
+    {
+        return values.back( );
+    }
+
+    const_iterator begin( ) const noexcept
+    {
+        return values.begin( );
+    }
+    const_iterator cbegin( ) const noexcept
+    {
+        return values.cbegin( );
+    }
+    iterator begin( ) noexcept
+    {
+        return values.begin( );
+    }
+    const_iterator end( ) const noexcept
+    {
+        return values.end( );
+    }
+    const_iterator cend( ) const noexcept
+    {
+        return values.cend( );
+    }
+    iterator end( ) noexcept
+    {
+        return values.end( );
+    }
+    const_reverse_iterator rbegin( ) const noexcept
+    {
+        return values.rbegin( );
+    }
+    reverse_iterator rbegin( ) noexcept
+    {
+        return values.rbegin( );
+    }
+    const_reverse_iterator rend( ) const noexcept
+    {
+        return values.rend( );
+    }
+    reverse_iterator rend( ) noexcept
+    {
+        return values.rend( );
+    }
+</code></pre>
+<p>The above provides a reasonable level of integration with the standard C++ library.</p>
+
+<p>Calling the <code class="language-plaintext highlighter-rouge">Assign</code> member functions from derived classes can be more convenient
+than calling <code class="language-plaintext highlighter-rouge">Base::operator = ( arrayOfData )</code>.</p>
+
+<pre><code class="language-C++">    void Assign( value_type xv, value_type yv, value_type zv ) noexcept
     {
         x = xv;
         y = yv;
@@ -620,7 +907,7 @@ this <code class="language-plaintext highlighter-rouge">Tuple3</code>.</p>
     }
 </code></pre>
 
-<p>The ability to check for <code class="language-plaintext highlighter-rouge">NaN</code> or infinity should not require use of SIMD registers.</p>
+<p>The ability to check for <code class="language-plaintext highlighter-rouge">NaN</code> or infinity:</p>
 
 <pre><code class="language-C++">
     bool HasNaN( ) const noexcept
@@ -651,7 +938,7 @@ any <code class="language-plaintext highlighter-rouge">TupleSimd</code> derived 
 
 <p>The first overload will be used when both arguments are compatible <code class="language-plaintext highlighter-rouge">TupleSimd</code>
 based objects, so the implementation can perform the addition without
-any loading of values into a SIMD datatype.</p>
+any loading of values into a SIMD datatype/register.</p>
 
 <pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::SimdType U&gt;
     requires Internal::IsCompatible&lt;T,U&gt;
@@ -738,6 +1025,1450 @@ and <code class="language-plaintext highlighter-rouge">Tuple4</code>:</p>
 <code class="language-plaintext highlighter-rouge">Normalize</code>, <code class="language-plaintext highlighter-rouge">ReciprocalLength</code>, <code class="language-plaintext highlighter-rouge">DistanceSquared</code>, <code class="language-plaintext highlighter-rouge">Distance</code>, <code class="language-plaintext highlighter-rouge">HProd</code>
 <code class="language-plaintext highlighter-rouge">HSum</code>, <code class="language-plaintext highlighter-rouge">DifferenceOfProducts</code>, <code class="language-plaintext highlighter-rouge">SumOfProducts</code></p>
 
+<h3 id="tuple2-tuple3-tuple4-and-tuplesimd-functions">Tuple2, Tuple3, Tuple4 and TupleSimd Functions</h3>
+
+<p>The functions that work with the <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code>, <code class="language-plaintext highlighter-rouge">Tuple4</code> and <code class="language-plaintext highlighter-rouge">TupleSimd</code> types
+generally returning a <code class="language-plaintext highlighter-rouge">TupleSimd</code> holding the result of the operation.</p>
+
+<p>There are usually several overloads for each function, allowing the values
+held by the <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code> types to be automatically
+loaded into a SIMD type/register.</p>
+
+<p>Functions that calculate a single scalar value, returns a <code class="language-plaintext highlighter-rouge">TupleSimd</code> where every
+element holds the calculated value. These functions also have an implementation that 
+returns the scalar as single value. For instance, <code class="language-plaintext highlighter-rouge">Dot</code> returns a <code class="language-plaintext highlighter-rouge">TupleSimd</code>, while <code class="language-plaintext highlighter-rouge">ScalarDot</code> returns
+a floating point value of the same type as a single element from the <code class="language-plaintext highlighter-rouge">TupleSimd</code> type.</p>
+
+<h4 id="hsum-and-scalarhsum">HSum and ScalarHSum</h4>
+
+<p>Calculates the horizontal sum of the elements in the vector.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T HSum( const T&amp; t ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::value_type&gt;
+inline ResultT ScalarHSum( const T&amp; t ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT HSum( const T&amp; t ) noexcept;
+
+</code></pre>
+
+<h4 id="hprod-and-scalarhprod">HProd and ScalarHProd</h4>
+
+<p>Calculates the horizontal product of the elements in the vector.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T HProd( const T&amp; t ) noexcept;
+
+template&lt;Internal::SimdType T&gt;
+inline auto ScalarHProd( const T&amp; t ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::value_type&gt;
+inline ResultT ScalarHProd( const T&amp; t ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT HProd( const T&amp; t ) noexcept;
+</code></pre>
+
+<h4 id="abs">Abs</h4>
+
+<p>Computes the absolute value of each element held by the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Abs( const T&amp; t ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Abs( const T&amp; t ) noexcept;
+</code></pre>
+
+<h4 id="min">Min</h4>
+
+<p>Makes a comparison between the elements held by the two arguments, and 
+returns a TupleSimd containing the smallest elements.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Min( const T&amp; lhs, const U&amp; rhs ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Min( const T&amp; lhs, const U&amp; rhs ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Min( const U&amp; lhs, const T&amp; rhs ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, 
+                typename ResultT = typename T::Simd&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline ResultT Min( const T&amp; lhs, const U&amp; rhs ) noexcept;
+</code></pre>
+
+<h4 id="max">Max</h4>
+
+<p>Makes a comparison between the elements held by the two arguments, and 
+returns a TupleSimd containing the largest elements.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Max( const T&amp; lhs, const U&amp; rhs ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Max( const T&amp; lhs, const U&amp; rhs ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Max( const U&amp; lhs, const T&amp; rhs ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, 
+                typename ResultT = typename T::Simd&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline ResultT Max( const T&amp; lhs, const U&amp; rhs ) noexcept;
+</code></pre>
+
+<h4 id="sqr">Sqr</h4>
+
+<p>Computes the square value of each element held by the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Sqr( const T&amp; t ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Sqr( const T&amp; t ) noexcept;
+</code></pre>
+
+<h4 id="ceil">Ceil</h4>
+
+<p>Computes the ceiling of each element held by the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Ceil( const T&amp; t ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Ceil( const T&amp; t ) noexcept;
+</code></pre>
+
+<h4 id="floor">Floor</h4>
+
+<p>Computes the floor of each element held by the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Floor( const T&amp; t ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Floor( const T&amp; t ) noexcept;
+</code></pre>
+
+<h4 id="round">Round</h4>
+
+<p>Rounds each element held by the argument towards the nearest even integer.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Round( const T&amp; t ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Round( const T&amp; t ) noexcept;
+</code></pre>
+
+<h4 id="trunc">Trunc</h4>
+
+<p>Rounds each element held by the argument to the nearest integer in the direction of zero.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Trunc( const T&amp; t ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Trunc( const T&amp; t ) noexcept;
+</code></pre>
+
+<h4 id="lerp">Lerp</h4>
+
+<p>Calculates the linear interpolation between the
+the elements of <code class="language-plaintext highlighter-rouge">a</code> and the elements of <code class="language-plaintext highlighter-rouge">b</code>, for elements of
+<code class="language-plaintext highlighter-rouge">c</code> is inside [0,1), or the linear extrapolation for elements
+in <code class="language-plaintext highlighter-rouge">c</code> outside [0,1).</p>
+
+<pre><code class="language-C++">template&lt;typename NumberT, Internal::SimdType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt; &amp;&amp; Internal::IsCompatible&lt;T, U&gt; 
+inline T Lerp( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::TupleType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T Lerp( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U Lerp( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::TupleType U, 
+                                    typename ResultT = typename T::Simd&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT Lerp( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T Lerp( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T Lerp( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U Lerp( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline S Lerp( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T Lerp( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T Lerp( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U Lerp( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, 
+                                    typename ResultT = typename T::Simd &gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT Lerp( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+</code></pre>
+
+<h4 id="clamp">Clamp</h4>
+
+<p>Returns the elements of v, if the elements are between their
+respective boundaries specified the elements of lowerBounds
+and the elements of upperBounds, otherwise the value of nearest
+boundary is returned.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T Clamp( const S&amp; v, const T&amp; lowerBounds, const U&amp; upperBounds ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T Clamp( const S&amp; v, const T&amp; lowerBounds, const U&amp; upperBounds ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U Clamp( const S&amp; v, const T&amp; lowerBounds, const U&amp; upperBounds ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline S Clamp( const S&amp; v, const T&amp; lowerBounds, const U&amp; upperBounds ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T Clamp( const S&amp; v, const T&amp; lowerBounds, const U&amp; upperBounds ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T Clamp( const S&amp; v, const T&amp; lowerBounds, const U&amp; upperBounds ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U Clamp( const S&amp; v, const T&amp; lowerBounds, const U&amp; upperBounds ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, 
+                                        typename ResultT = typename S::Simd&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT Clamp( const S&amp; v, const T&amp; lowerBounds, const U&amp; upperBounds ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::TupleType U, 
+                                        typename ResultT = typename T::Simd&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt; &amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT Clamp( NumberT v, const T&amp; lowerBounds, const U&amp; upperBounds ) noexcept;
+</code></pre>
+
+<h4 id="saturate">Saturate</h4>
+
+<p>Saturates the elements of v to the range 0.0 to 1.0.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Saturate( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Saturate( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="sqrt">Sqrt</h4>
+
+<p>Calculates the square root of each element in the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Sqrt( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Sqrt( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="reciprocalsqrt">ReciprocalSqrt</h4>
+
+<p>Calculates the reciprocal square root of each element in the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T ReciprocalSqrt( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT ReciprocalSqrt( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="reciprocal">Reciprocal</h4>
+
+<p>Calculates the reciprocal of each element in the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Reciprocal( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Reciprocal( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="fma">FMA</h4>
+
+<p>Multiplies the corresponding elements of a and b, adding the result to the corresponding element of c.</p>
+
+<pre><code class="language-C++">template&lt;typename NumberT, Internal::SimdType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMA( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::TupleType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMA( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMA( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::TupleType U, 
+                                    typename ResultT = typename T::Simd&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FMA( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMA( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::TupleType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMA( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMA( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::TupleType U, 
+                                    typename ResultT = typename T::Simd&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FMA( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMA( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMA( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMA( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline S FMA( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMA( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMA( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMA( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, 
+                                        typename ResultT = typename T::Simd &gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FMA( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+</code></pre>
+
+<h4 id="fmsub">FMSub</h4>
+
+<p>Performs a set of multiply-subtract computation on a, b, and c. Corresponding values in two operands, 
+a and b, are multiplied and the infinite precision intermediate results are obtained. From the 
+infinite precision intermediate results, the values in the third operand, c, are subtracted. 
+The final results are rounded to the nearest floating point values.</p>
+
+<pre><code class="language-C++">template&lt;typename NumberT, Internal::SimdType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSub( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::TupleType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSub( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMSub( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FMSub( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSub( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::TupleType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSub( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMSub( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FMSub( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline S FMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd &gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+</code></pre>
+
+<h4 id="fmaddsub">FMAddSub</h4>
+
+<p>Performs a set of multiply-add-subtract computation on a, b, and c. Corresponding values in two operands, a and b, are 
+multiplied and infinite precision intermediate results are obtained. The odd values in the third operand, 
+c, are added to the intermediate results while the even values are subtracted from them. The final results 
+are rounded to the nearest floating point values.</p>
+
+<pre><code class="language-C++">template&lt;typename NumberT, Internal::SimdType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMAddSub( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::TupleType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMAddSub( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMAddSub( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FMAddSub( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMAddSub( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::TupleType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMAddSub( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMAddSub( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FMAddSub( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMAddSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMAddSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMAddSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline S FMAddSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMAddSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMAddSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMAddSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd &gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FMAddSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+</code></pre>
+
+<h4 id="fmsubadd">FMSubAdd</h4>
+
+<p>Performs a set of multiply-subtract-add computation on a, b, and c. Corresponding values in two operands, a and b, 
+are multiplied and infinite precision intermediate results are obtained. The odd values in the third 
+operand, c, are subtracted from the intermediate results while the even values are added to them. 
+The final results are rounded to the nearest floating point values.</p>
+
+<pre><code class="language-C++">template&lt;typename NumberT, Internal::SimdType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSubAdd( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::TupleType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSubAdd( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMSubAdd( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FMSubAdd( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSubAdd( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::TupleType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSubAdd( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMSubAdd( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FMSubAdd( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSubAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSubAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMSubAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline S FMSubAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSubAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FMSubAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FMSubAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd &gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FMSubAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+</code></pre>
+
+<h4 id="fnmadd">FNMAdd</h4>
+
+<p>Performs a set of negated multiply-add computation on a, b, and c. Corresponding values in two operands, 
+a and b, are multiplied and the negated infinite precision intermediate results are added to 
+the values in the third operand, c, after which the final results are rounded to the nearest 
+floating point values.</p>
+
+<pre><code class="language-C++">template&lt;typename NumberT, Internal::SimdType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMAdd( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::TupleType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMAdd( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FNMAdd( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FNMAdd( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMAdd( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::TupleType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMAdd( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FNMAdd( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FNMAdd( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FNMAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline S FNMAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FNMAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd &gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FNMAdd( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+</code></pre>
+
+<h4 id="fnmsub">FNMSub</h4>
+
+<p>Performs a set of negated multiply-subtract computation on a, b, and c. The values in two operands, a and b, 
+are multiplied and the negated infinite precision intermediate result is obtained. From this negated 
+intermediate result, the value in the third operand, c, is subtracted. The final result is rounded 
+to the nearest floating point value.</p>
+
+<pre><code class="language-C++">template&lt;typename NumberT, Internal::SimdType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMSub( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::TupleType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMSub( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FNMSub( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FNMSub( NumberT a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMSub( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::SimdType T, Internal::TupleType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMSub( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::SimdType U&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FNMSub( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;typename NumberT, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires std::is_arithmetic_v&lt;NumberT&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FNMSub( const T&amp; a, NumberT b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FNMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline S FNMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline T FNMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline U FNMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd &gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;T, U&gt;
+inline ResultT FNMSub( const S&amp; a, const T&amp; b, const U&amp; c ) noexcept;
+</code></pre>
+
+<h4 id="sin">Sin</h4>
+
+<p>Calculates the sine of each element in the argument expressed in radians.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Sin( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Sin( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="cos">Cos</h4>
+
+<p>Calculates the cosine of each element in the argument expressed in radians.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Cos( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Cos( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="tan">Tan</h4>
+
+<p>Calculates the tangent of each element in the argument expressed in radians.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Tan( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Tan( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="asin">ASin</h4>
+
+<p>Calculates the inverse sine of each element in the argument, in radians.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T ASin( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT ASin( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="acos">ACos</h4>
+
+<p>Calculates the inverse cosine of each element in the argument, in radians.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T ACos( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT ACos( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="atan">ATan</h4>
+
+<p>Calculates the inverse tangent of each element in the argument, in radians.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T ATan( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT ATan( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="atan2">ATan2</h4>
+
+<p>Calculates the inverse tangent of each element in x divided by the
+corresponding element in y, in radians.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T ATan2( const T&amp; x, const U&amp; y ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T ATan2( const T&amp; x, const U&amp; y ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T ATan2( const U&amp; x, const T&amp; y ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline ResultT ATan2( const T&amp; x, const U&amp; y ) noexcept;
+</code></pre>
+
+<h4 id="modangles">ModAngles</h4>
+
+<p>Calculates the angle modulo \(2\pi\) of each element in the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T ModAngles( const T&amp; angles );
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT ModAngles( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="addangles">AddAngles</h4>
+
+<p>Adds the angles in the corresponding elements of v1 and v2.
+The argument angles must be in the range \([-\pi,\pi)\), and the
+computed angles will be in the range \([-\pi,\pi)\).</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T AddAngles( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T AddAngles( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T AddAngles( const U&amp; v1, const T&amp; v2 ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline ResultT AddAngles( const T&amp; v1, const U&amp; v2 ) noexcept;
+</code></pre>
+
+<h4 id="subtractangles">SubtractAngles</h4>
+
+<p>Subtracts the angles in v2 from the corresponding elements of v1.
+The argument angles must be in the range \([-\pi,\pi)\), and the
+computed angles will be in the range \([-\pi,\pi)\)</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T SubtractAngles( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T SubtractAngles( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T SubtractAngles( const U&amp; v1, const T&amp; v2 ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline ResultT SubtractAngles( const T&amp; v1, const U&amp; v2 ) noexcept;
+</code></pre>
+
+<h4 id="sinh">SinH</h4>
+
+<p>Calculates the hyperbolic sine of each element in the argument expressed in radians.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T SinH( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT SinH( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="cosh">CosH</h4>
+
+<p>Calculates the hyperbolic cosine of each element in the argument expressed in radians.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T CosH( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT CosH( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="tanh">TanH</h4>
+
+<p>Calculates the hyperbolic tangent of each element in the argument expressed in radians.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T TanH( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT TanH( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="asinh">ASinH</h4>
+
+<p>Calculates the inverse hyperbolic sine of each element in the argument, in radians.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T ASinH( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT ASinH( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="acosh">ACosH</h4>
+
+<p>Calculates the inverse hyperbolic cosine of each element in the argument, in radians.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T ACosH( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT ACosH( const T&amp; v ) noexcept;
+</code></pre>
+<h4 id="atanh">ATanH</h4>
+
+<p>Calculates the inverse hyperbolic tangent of each element in the argument, in radians.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T ATanH( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT ATanH( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="log">Log</h4>
+
+<p>Calculates the natural logarithm of each element in the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Log( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Log( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="log1p">Log1P</h4>
+
+<p>Calculates the natural logarithm of \(1 +\) each element in the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Log1P( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Log1P( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="log10">Log10</h4>
+
+<p>Calculates the base-10 logarithm, \(log_{10}\), of each element in the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Log10( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Log10( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="log2">Log2</h4>
+
+<p>Calculates the base-2 logarithm, \(log_{2}\), of each element in the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Log2( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Log2( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="exp">Exp</h4>
+
+<p>Calculates \(e\) (Euler’s number, 2.7182818…), raised to the power of each element in the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Exp( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Exp( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="exp10">Exp10</h4>
+
+<p>Calculates the base-10 exponential of each element in the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Exp10( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Exp10( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="exp2">Exp2</h4>
+
+<p>Calculates the base-2 exponential of each element in the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Exp2( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Exp2( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="expm1">ExpM1</h4>
+
+<p>Calculates  \(e\) (Euler’s number, 2.7182818…), raised to the power 
+of each element in the argument, \(-1.0\).</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T ExpM1( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT ExpM1( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="pow">Pow</h4>
+
+<p>Calculates the elements in <code class="language-plaintext highlighter-rouge">base</code> raised to the corresponding elements in <code class="language-plaintext highlighter-rouge">exponent</code>.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Pow( const T&amp; base, const U&amp; exponent ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Pow( const T&amp; base, const U&amp; exponent ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Pow( const U&amp; base, const T&amp; exponent ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline ResultT Pow( const T&amp; base, const U&amp; exponent ) noexcept;
+</code></pre>
+
+<h4 id="hypot">Hypot</h4>
+
+<p>Calculates the square root of the sum of the squares of each corresponding 
+element in x and y, without undue overflow or underflow at intermediate 
+stages of the computation.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Hypot( const T&amp; x, const U&amp; y ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Hypot( const T&amp; x, const U&amp; y ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Hypot( const U&amp; x, const T&amp; y ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline ResultT Hypot( const T&amp; x, const U&amp; y ) noexcept;
+</code></pre>
+
+<h4 id="hermite">Hermite</h4>
+
+<p>Calculates the Hermite spline interpolation, using the specified arguments.</p>
+
+<pre><code class="language-C++">
+template&lt;Internal::SimdType T, Internal::SimdType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::SimdType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::SimdType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::SimdType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::SimdType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::SimdType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::SimdType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::SimdType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;T, U&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, V&gt; &amp;&amp; 
+            Internal::IsCompatible&lt;T, W&gt;
+inline T Hermite( const T&amp; firstPosition, const U&amp; firstTangent, 
+                    const V&amp; secondPosition, const W&amp; secondTangent, 
+                    typename T::value_type t ) noexcept;
+</code></pre>
+
+<h4 id="dot-and-scalardot">Dot and ScalarDot</h4>
+
+<p>Calculates the dot product between v1 and v2.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Dot( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Dot( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Dot( const U&amp; v1, const T&amp; v2 ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline ResultT Dot( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+constexpr inline typename T::value_type ScalarDot( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+constexpr inline typename T::value_type ScalarDot( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+constexpr inline typename T::value_type ScalarDot( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::value_type&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+constexpr inline ResultT ScalarDot( const T&amp; v1, const U&amp; v2 ) noexcept;
+</code></pre>
+
+<h4 id="absdot-and-scalarabsdot">AbsDot and ScalarAbsDot</h4>
+
+<p>Calculates the absolute value of the dot product between v1 and v2.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T AbsDot( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T AbsDot( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T AbsDot( const U&amp; v1, const T&amp; v2 ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline ResultT AbsDot( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline auto ScalarAbsDot( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline auto ScalarAbsDot( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline auto ScalarAbsDot( const U&amp; v1, const T&amp; v2 ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline auto ScalarAbsDot( const T&amp; v1, const U&amp; v2 ) noexcept;
+</code></pre>
+
+<h4 id="cross">Cross</h4>
+
+<p>Calculates the cross product between v1 and v2.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Cross( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Cross( const T&amp; v1, const U&amp; v2 ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Cross( const U&amp; v1, const T&amp; v2 ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline ResultT Cross( const T&amp; v1, const U&amp; v2 ) noexcept;
+</code></pre>
+
+<h4 id="lengthsquared-and-scalarlengthsquared">LengthSquared and ScalarLengthSquared</h4>
+
+<p>Calculates the squared length of v.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T LengthSquared( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT LengthSquared( const T&amp; v ) noexcept;
+
+template&lt;Internal::SimdType T&gt;
+inline auto ScalarLengthSquared( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T&gt;
+inline auto ScalarLengthSquared( const T&amp; v ) noexcept;
+
+</code></pre>
+
+<h4 id="length-and-scalarlength">Length and ScalarLength</h4>
+
+<p>Calculates the length of v.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Length( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Length( const T&amp; v ) noexcept;
+
+template&lt;Internal::SimdType T&gt;
+inline auto ScalarLength( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T&gt;
+inline auto ScalarLength( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="normalize">Normalize</h4>
+
+<p>Normalizes v.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T Normalize( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT Normalize( const T&amp; v ) noexcept;
+</code></pre>
+<h4 id="reciprocallength-and-scalarreciprocallength">ReciprocalLength and ScalarReciprocalLength</h4>
+
+<p>Calculates the reciprocal length of v.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T&gt;
+inline T ReciprocalLength( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::Simd&gt;
+inline ResultT ReciprocalLength( const T&amp; v ) noexcept;
+
+template&lt;Internal::SimdType T&gt;
+inline auto ScalarReciprocalLength( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T&gt;
+inline auto ScalarReciprocalLength( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="distancesquared-and-scalardistancesquared">DistanceSquared and ScalarDistanceSquared</h4>
+
+<p>Calculates the squared distance between p1 and p2.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T DistanceSquared( const T&amp; p1, const U&amp; p2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T DistanceSquared( const T&amp; p1, const U&amp; p2 ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T DistanceSquared( const U&amp; p1, const T&amp; p2 ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline ResultT DistanceSquared( const T&amp; p1, const U&amp; p2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline auto ScalarDistanceSquared( const T&amp; p1, const U&amp; p2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline auto ScalarDistanceSquared( const T&amp; p1, const U&amp; p2 ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline auto ScalarDistanceSquared( const U&amp; p1, const T&amp; p2 ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline auto ScalarDistanceSquared( const T&amp; p1, const U&amp; p2 ) noexcept;
+</code></pre>
+
+<h4 id="distance-and-scalardistance">Distance and ScalarDistance</h4>
+
+<p>Calculates the distance between p1 and p2.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Distance( const T&amp; p1, const U&amp; p2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Distance( const T&amp; p1, const U&amp; p2 ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline T Distance( const U&amp; p1, const T&amp; p2 ) noexcept;
+
+template&lt;Internal::TupleType T, Internal::TupleType U, typename ResultT = typename T::Simd&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline ResultT Distance( const T&amp; p1, const U&amp; p2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline auto ScalarDistance( const T&amp; p1, const U&amp; p2 ) noexcept;
+
+template&lt;Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline auto ScalarDistance( const T&amp; p1, const U&amp; p2 ) noexcept;
+
+template&lt;Internal::TupleType U, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;T, U&gt;
+inline auto ScalarDistance( const U&amp; p1, const T&amp; p2 ) noexcept;
+</code></pre>
+
+<hr />
+
 <h3 id="vector2f-vector3f-vector4f-vector2i-vector3i-vector4i">Vector2f, Vector3f, Vector4f, Vector2i, Vector3i, Vector4i</h3>
 
 <p><code class="language-plaintext highlighter-rouge">Vector&lt;float,2&gt;</code>, <code class="language-plaintext highlighter-rouge">Vector&lt;float,3&gt;</code> and <code class="language-plaintext highlighter-rouge">Vector&lt;float,4&gt;</code> are specializations of <code class="language-plaintext highlighter-rouge">Vector&lt;T,N&gt;</code> that 
@@ -757,17 +2488,18 @@ public:
     using Traits = Base::Traits;
 
     Vector( ) noexcept = default;
+    explicit Vector( float v ) noexcept
+        : Base( v, v, v )
+    { }
     Vector( float xv, float yv, float zv ) noexcept
         : Base( xv, yv, zv )
-    {
-    }
+    { }
 
     template&lt;typename T&gt;
         requires std::is_same_v&lt;typename T::SIMDType, typename Traits::SIMDType &gt;
     Vector( const T&amp; other ) noexcept
         : Base( other )
-    {
-    }
+    { }
 };
 </code></pre>
 
@@ -816,8 +2548,26 @@ BenchmarkPBRTVector3f          7.08 ns         5.86 ns    112000000
 </code></pre></div></div>
 
 <h4 id="normal3f-and-normal3i">Normal3f and Normal3i</h4>
+
+<p>The surface normal is a vector perpendicular to 
+a surface at a specific position. It can be defined as the cross product 
+of any two nonparallel vectors that are tangent to the surface at a point. 
+Normals are similar to vectors, but it’s important to 
+distinguish between the two of them: since normals are defined in terms 
+of their relationship to a surface, they behave differently than 
+vectors in some situations, particularly when applying transformations.</p>
+
 <h4 id="point3f-and-point3i">Point3f and Point3i</h4>
+
+<p>A point is a zero-dimensional location in 2D or 3D space. The Point2i/f and Point3i/f 
+classes represent points in the obvious way: using \(x, y, z\)  (in 3D) coordinates 
+with respect to a coordinate system. Although the same representation is used for 
+vectors, the fact that a point represents a position whereas a vector represents a 
+direction leads to a number of important differences in how they are treated.</p>
+
 <h2 id="quaternion">Quaternion</h2>
+
+<h2 id="squarematrix">SquareMatrix</h2>
 
   </div>
 

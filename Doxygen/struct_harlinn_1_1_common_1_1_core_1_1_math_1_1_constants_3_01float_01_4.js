@@ -7,6 +7,8 @@ var struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4 =
     [ "InvPi", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html#adf5173d03a9f1e63d308bb7205996c3e", null ],
     [ "MachineEpsilon", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html#af2e9feda4b549057148fb77306a47c53", null ],
     [ "MinusOne", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html#aee18a91688d371063f7949f3960651e5", null ],
+    [ "MinusZero", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html#a70bd515177249edd7c53ee2c7e129317", null ],
+    [ "NegativePi", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html#a44fefef2dd63b294c8b2111d7144a7aa", null ],
     [ "One", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html#aabaad313351f2bdec37ac231a37e9e84", null ],
     [ "OneMinusEpsilon", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html#a840e3dba3a7c7e40302474d133f12cfe", null ],
     [ "Pi", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html#a28f4d6c182430bd5328917dd01b5c81e", null ],
@@ -15,5 +17,7 @@ var struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4 =
     [ "PiTimes2", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html#aaea3b08346703b347dda6628fea272e1", null ],
     [ "ShadowEpsilon", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html#a6526946d0f3ab9443da3e42e3264201f", null ],
     [ "Sqrt2", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html#a11f9a0e4261a861de4ea8a87c861a698", null ],
+    [ "Three", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html#ad3c3a97ff5fc9934409dde9baf0750f3", null ],
+    [ "Two", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html#aa0e56fb6e3546a5dd09dcaf0839b320b", null ],
     [ "Zero", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html#a9eeb5900ba5bbee0554a0a4ea1fbf56d", null ]
 ];

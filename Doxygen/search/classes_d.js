@@ -22,7 +22,7 @@ var searchData=
   ['nomove_5fif_3c_20false_20_3e_19',['nomove_if&lt; false &gt;',['../struct_harlinn_1_1_common_1_1_core_1_1details_1_1nomove__if_3_01false_01_4.html',1,'Harlinn::Common::Core::details']]],
   ['nonclientmetrics_20',['NonClientMetrics',['../class_harlinn_1_1_windows_1_1_non_client_metrics.html',1,'Harlinn::Windows']]],
   ['normal3f_21',['Normal3f',['../class_harlinn_1_1_common_1_1_core_1_1_math_1_1_normal3f.html',1,'Harlinn::Common::Core::Math']]],
-  ['normalizedfloat_22',['NormalizedFloat',['../class_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_normalized_float.html',1,'Harlinn::Common::Core::Math::Internal']]],
+  ['normalizedfloat_22',['NormalizedFloat',['../class_harlinn_1_1_common_1_1_core_1_1_math_1_1_normalized_float.html',1,'Harlinn::Common::Core::Math']]],
   ['notation_23',['Notation',['../class_harlinn_1_1_common_1_1_core_1_1_xml_1_1_dom_1_1_notation.html',1,'Harlinn::Common::Core::Xml::Dom']]],
   ['notfinitenumberexception_24',['NotFiniteNumberException',['../class_harlinn_1_1_common_1_1_core_1_1_not_finite_number_exception.html',1,'Harlinn::Common::Core']]],
   ['notificationentry_25',['NotificationEntry',['../class_harlinn_1_1_common_1_1_core_1_1_zero_mq_1_1_z_m_q_notification_server_1_1_notification_entry.html',1,'Harlinn::Common::Core::ZeroMq::ZMQNotificationServer']]],
@@ -36,5 +36,6 @@ var searchData=
   ['number_33',['Number',['../struct_harlinn_1_1_o_c_i_1_1_number.html',1,'Harlinn::OCI']]],
   ['numberarraybasedefine_34',['NumberArrayBaseDefine',['../class_harlinn_1_1_o_c_i_1_1_number_array_base_define.html',1,'Harlinn::OCI']]],
   ['numberbasedefine_35',['NumberBaseDefine',['../class_harlinn_1_1_o_c_i_1_1_number_base_define.html',1,'Harlinn::OCI']]],
-  ['numeric_36',['Numeric',['../class_harlinn_1_1_o_d_b_c_1_1_numeric.html',1,'Harlinn::ODBC']]]
+  ['numeric_36',['Numeric',['../class_harlinn_1_1_o_d_b_c_1_1_numeric.html',1,'Harlinn::ODBC']]],
+  ['numerictest_37',['NumericTest',['../struct_harlinn_1_1_common_1_1_core_1_1_test_1_1_numeric_test.html',1,'Harlinn::Common::Core::Test']]]
 ];

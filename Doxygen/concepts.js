@@ -45,12 +45,18 @@ var concepts =
               [ "SquareMatrixSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_square_matrix_simd_type.html", null ],
               [ "SquareMatrixType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_square_matrix_type.html", null ]
             ] ],
-            [ "FloatingPoint", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html", null ]
+            [ "FloatingPointType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point_type.html", null ]
           ] ],
           [ "Persistent", "namespace_harlinn_1_1_common_1_1_core_1_1_persistent.html", [
             [ "Internal", "namespace_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal.html", [
               [ "WriterCanWrite", "concept_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_writer_can_write.html", null ],
               [ "ReaderCanRead", "concept_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_reader_can_read.html", null ]
+            ] ]
+          ] ],
+          [ "Test", "namespace_harlinn_1_1_common_1_1_core_1_1_test.html", [
+            [ "Generators", "namespace_harlinn_1_1_common_1_1_core_1_1_test_1_1_generators.html", [
+              [ "IsRandomGenerator", "concept_harlinn_1_1_common_1_1_core_1_1_test_1_1_generators_1_1_is_random_generator.html", null ],
+              [ "IsRangeGenerator", "concept_harlinn_1_1_common_1_1_core_1_1_test_1_1_generators_1_1_is_range_generator.html", null ]
             ] ]
           ] ],
           [ "Types", "namespace_harlinn_1_1_common_1_1_core_1_1_types.html", [

@@ -17,6 +17,7 @@ var searchData=
   ['executableinfocursor_14',['ExecutableInfoCursor',['../class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_storage.html#af4d8803801b20b949655db0d854d2ea4',1,'Harlinn::Common::Core::Logging::Storage']]],
   ['executableinfocursorptr_15',['ExecutableInfoCursorPtr',['../class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_storage.html#aa57d5f7ebb0ba9eca853f648cf06e8a5',1,'Harlinn::Common::Core::Logging::Storage']]],
   ['executableinfoptr_16',['ExecutableInfoPtr',['../class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_storage.html#aebca1240a238f56e67ea1652a711d4e7',1,'Harlinn::Common::Core::Logging::Storage']]],
-  ['exportstypeptr_17',['ExportsTypePtr',['../namespace_harlinn_1_1_common_1_1_core_1_1_doxygen.html#a5c911975aa7202072d61d04e4a21cd2a',1,'Harlinn::Common::Core::Doxygen']]],
-  ['exporttypeptr_18',['ExportTypePtr',['../namespace_harlinn_1_1_common_1_1_core_1_1_doxygen.html#a9c2c33f2d01613e24ac17a06b464bdea',1,'Harlinn::Common::Core::Doxygen']]]
+  ['exponenttype_17',['ExponentType',['../struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html#a7596df42fb996511bed64fb901a321e0',1,'Harlinn::Common::Core::Math::FloatingPoint']]],
+  ['exportstypeptr_18',['ExportsTypePtr',['../namespace_harlinn_1_1_common_1_1_core_1_1_doxygen.html#a5c911975aa7202072d61d04e4a21cd2a',1,'Harlinn::Common::Core::Doxygen']]],
+  ['exporttypeptr_19',['ExportTypePtr',['../namespace_harlinn_1_1_common_1_1_core_1_1_doxygen.html#a9c2c33f2d01613e24ac17a06b464bdea',1,'Harlinn::Common::Core::Doxygen']]]
 ];

@@ -573,6 +573,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_int64_bit_traits.html">Int64BitTraits</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_integer.html">Integer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A typed wrapper for integral types.  <a href="class_harlinn_1_1_common_1_1_core_1_1_integer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_interlocked_linked_list.html">InterlockedLinkedList</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_interval.html">Interval</a></td></tr>
@@ -944,6 +947,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_shell_item.html">ShellItem</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_shell_item_array.html">ShellItemArray</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Sign</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the sign of a signed arithmetic type.  <a href="class_harlinn_1_1_common_1_1_core_1_1_sign.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">SimpleConcurrentQueue</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple blocking fixed size queue.  <a href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html#details">More...</a><br /></td></tr>
@@ -4293,35 +4299,67 @@ requires <a class="el" href="#af88ee468e12f2c8fd71ef18773d86f13">IsGuid</a>&lt;T
 requires <a class="el" href="#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;std::remove_cvref_t&lt;T&gt;&gt;</td></tr>
 <tr class="memitem:a3b21aa62eaa53e7f77c501bf9474bb6e"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3b21aa62eaa53e7f77c501bf9474bb6e">ByteSwap</a> (T value)</td></tr>
 <tr class="separator:a3b21aa62eaa53e7f77c501bf9474bb6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1672bd18a41db22e2d465afd90580c" id="r_a6f1672bd18a41db22e2d465afd90580c"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t N&gt; <br />
+requires <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;T&gt; &amp;&amp; (N &lt;= CHAR_BIT * sizeof( T ) )</td></tr>
+<tr class="memitem:a6f1672bd18a41db22e2d465afd90580c"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6f1672bd18a41db22e2d465afd90580c">MaskTrailingOnes</a> ()</td></tr>
+<tr class="memdesc:a6f1672bd18a41db22e2d465afd90580c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a bitmask with the <code>N</code> right-most bits set to 1, and all other bits set to 0.  <br /></td></tr>
+<tr class="separator:a6f1672bd18a41db22e2d465afd90580c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4565d7e0a529173f541d22dac61709c9" id="r_a4565d7e0a529173f541d22dac61709c9"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t N&gt; <br />
+requires <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;T&gt; &amp;&amp; ( N &lt;= CHAR_BIT * sizeof( T ) )</td></tr>
+<tr class="memitem:a4565d7e0a529173f541d22dac61709c9"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4565d7e0a529173f541d22dac61709c9">MaskLeadingOnes</a> ()</td></tr>
+<tr class="memdesc:a4565d7e0a529173f541d22dac61709c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a bitmask with the <code>N</code> left-most bits set to 1, and all other bits set to 0.  <br /></td></tr>
+<tr class="separator:a4565d7e0a529173f541d22dac61709c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b38b6c1cb173d8764b7d166127c90fb" id="r_a3b38b6c1cb173d8764b7d166127c90fb"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t N&gt; <br />
+requires <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;T&gt; &amp;&amp; ( N &lt;= CHAR_BIT * sizeof( T ) )</td></tr>
+<tr class="memitem:a3b38b6c1cb173d8764b7d166127c90fb"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3b38b6c1cb173d8764b7d166127c90fb">MaskTrailingZeros</a> ()</td></tr>
+<tr class="memdesc:a3b38b6c1cb173d8764b7d166127c90fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a bitmask with the <code>N</code> right-most bits set to 0, and all other bits set to 1.  <br /></td></tr>
+<tr class="separator:a3b38b6c1cb173d8764b7d166127c90fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6be7830bb7803d01d27bb6c4e4d7fed" id="r_ab6be7830bb7803d01d27bb6c4e4d7fed"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t N&gt; <br />
+requires <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;T&gt; &amp;&amp; ( N &lt;= CHAR_BIT * sizeof( T ) )</td></tr>
+<tr class="memitem:ab6be7830bb7803d01d27bb6c4e4d7fed"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab6be7830bb7803d01d27bb6c4e4d7fed">MaskLeadingZeros</a> ()</td></tr>
+<tr class="memdesc:ab6be7830bb7803d01d27bb6c4e4d7fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a bitmask with the <code>N</code> left-most bits set to 0, and all other bits set to 1.  <br /></td></tr>
+<tr class="separator:ab6be7830bb7803d01d27bb6c4e4d7fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4708697c9bb6029978d73afb47f73db8" id="r_a4708697c9bb6029978d73afb47f73db8"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#af82811a69582d9f85a78627741d07b19">Byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4708697c9bb6029978d73afb47f73db8">ReverseBits</a> (<a class="el" href="#af82811a69582d9f85a78627741d07b19">Byte</a> b) noexcept</td></tr>
 <tr class="memdesc:a4708697c9bb6029978d73afb47f73db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the order of the bits of a byte.  <br /></td></tr>
 <tr class="separator:a4708697c9bb6029978d73afb47f73db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4156e0081e957f8e301fb3d7604ee7e5" id="r_a4156e0081e957f8e301fb3d7604ee7e5"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4156e0081e957f8e301fb3d7604ee7e5">ReverseBits</a> (<a class="el" href="#a6b02859d5fc5a3399e9345f3e6027242">SByte</a> b) noexcept</td></tr>
+<tr class="memdesc:a4156e0081e957f8e301fb3d7604ee7e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the order of the bits of a SByte.  <br /></td></tr>
 <tr class="separator:a4156e0081e957f8e301fb3d7604ee7e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66259b468cc8b87f53a109b2ba3c2884" id="r_a66259b468cc8b87f53a109b2ba3c2884"><td class="memItemLeft" align="right" valign="top">constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66259b468cc8b87f53a109b2ba3c2884">ReverseBits</a> (char b) noexcept</td></tr>
+<tr class="memdesc:a66259b468cc8b87f53a109b2ba3c2884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the order of the bits of a char.  <br /></td></tr>
 <tr class="separator:a66259b468cc8b87f53a109b2ba3c2884"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a409f71819ef75ee8c28bd529a1ebbf" id="r_a3a409f71819ef75ee8c28bd529a1ebbf"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a409f71819ef75ee8c28bd529a1ebbf">ReverseBits</a> (<a class="el" href="#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> val) noexcept</td></tr>
+<tr class="memdesc:a3a409f71819ef75ee8c28bd529a1ebbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the order of the bits of an UInt16.  <br /></td></tr>
 <tr class="separator:a3a409f71819ef75ee8c28bd529a1ebbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07d1565fde2e6a269091bb2bcfe745ed" id="r_a07d1565fde2e6a269091bb2bcfe745ed"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07d1565fde2e6a269091bb2bcfe745ed">ReverseBits</a> (<a class="el" href="#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a> val) noexcept</td></tr>
+<tr class="memdesc:a07d1565fde2e6a269091bb2bcfe745ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the order of the bits of an Int16.  <br /></td></tr>
 <tr class="separator:a07d1565fde2e6a269091bb2bcfe745ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bac9eabdde2a878dd41bb11f4d2b8ec" id="r_a5bac9eabdde2a878dd41bb11f4d2b8ec"><td class="memItemLeft" align="right" valign="top">constexpr wchar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bac9eabdde2a878dd41bb11f4d2b8ec">ReverseBits</a> (wchar_t val) noexcept</td></tr>
 <tr class="separator:a5bac9eabdde2a878dd41bb11f4d2b8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7cc4828ff77244e12fe6812643490d0" id="r_af7cc4828ff77244e12fe6812643490d0"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7cc4828ff77244e12fe6812643490d0">ReverseBits</a> (<a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> val) noexcept</td></tr>
+<tr class="memdesc:af7cc4828ff77244e12fe6812643490d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the order of the bits of an UInt32.  <br /></td></tr>
 <tr class="separator:af7cc4828ff77244e12fe6812643490d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a735bef73bd973e0a1793fb187496fad5" id="r_a735bef73bd973e0a1793fb187496fad5"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a735bef73bd973e0a1793fb187496fad5">ReverseBits</a> (<a class="el" href="#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> val) noexcept</td></tr>
+<tr class="memdesc:a735bef73bd973e0a1793fb187496fad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the order of the bits of an Int32.  <br /></td></tr>
 <tr class="separator:a735bef73bd973e0a1793fb187496fad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e786e55d738f24db7c1c1e0ce588b7d" id="r_a9e786e55d738f24db7c1c1e0ce588b7d"><td class="memItemLeft" align="right" valign="top">constexpr long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e786e55d738f24db7c1c1e0ce588b7d">ReverseBits</a> (long val) noexcept</td></tr>
+<tr class="memdesc:a9e786e55d738f24db7c1c1e0ce588b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the order of the bits of a long.  <br /></td></tr>
 <tr class="separator:a9e786e55d738f24db7c1c1e0ce588b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e48861f08457cf644bb2998891ce4e7" id="r_a8e48861f08457cf644bb2998891ce4e7"><td class="memItemLeft" align="right" valign="top">constexpr unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e48861f08457cf644bb2998891ce4e7">ReverseBits</a> (unsigned long val) noexcept</td></tr>
+<tr class="memdesc:a8e48861f08457cf644bb2998891ce4e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the order of the bits of an unsigned long.  <br /></td></tr>
 <tr class="separator:a8e48861f08457cf644bb2998891ce4e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e34762cc9a14d7832fc5ae651b7ae54" id="r_a4e34762cc9a14d7832fc5ae651b7ae54"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e34762cc9a14d7832fc5ae651b7ae54">ReverseBits</a> (<a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a> val) noexcept</td></tr>
+<tr class="memdesc:a4e34762cc9a14d7832fc5ae651b7ae54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the order of the bits of an UInt64.  <br /></td></tr>
 <tr class="separator:a4e34762cc9a14d7832fc5ae651b7ae54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65d83bf0af4685c569303d51c87342a6" id="r_a65d83bf0af4685c569303d51c87342a6"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a934f1e669bbe888bfa94af14a3647296">Int64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65d83bf0af4685c569303d51c87342a6">ReverseBits</a> (<a class="el" href="#a934f1e669bbe888bfa94af14a3647296">Int64</a> val) noexcept</td></tr>
+<tr class="memdesc:a65d83bf0af4685c569303d51c87342a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the order of the bits of an Int64.  <br /></td></tr>
 <tr class="separator:a65d83bf0af4685c569303d51c87342a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8317136fff00c1f6affbaa02fe5890aa" id="r_a8317136fff00c1f6affbaa02fe5890aa"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#ac69fb0d67e0a3064a2048954e78298ba">Single</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8317136fff00c1f6affbaa02fe5890aa">ReverseBits</a> (<a class="el" href="#ac69fb0d67e0a3064a2048954e78298ba">Single</a> val) noexcept</td></tr>
-<tr class="separator:a8317136fff00c1f6affbaa02fe5890aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b36d3246220967396794742c4b4c08b" id="r_a2b36d3246220967396794742c4b4c08b"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a789293c13583af2e0a4926d068e0415e">Double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b36d3246220967396794742c4b4c08b">ReverseBits</a> (<a class="el" href="#a789293c13583af2e0a4926d068e0415e">Double</a> val) noexcept</td></tr>
-<tr class="separator:a2b36d3246220967396794742c4b4c08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac83e1c72ea50d6d05a9e11366c9cc1b1" id="r_ac83e1c72ea50d6d05a9e11366c9cc1b1"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#ac69fb0d67e0a3064a2048954e78298ba">Single</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac83e1c72ea50d6d05a9e11366c9cc1b1">ReverseBits</a> (float val) noexcept</td></tr>
+<tr class="memdesc:ac83e1c72ea50d6d05a9e11366c9cc1b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the order of the bits of a float.  <br /></td></tr>
+<tr class="separator:ac83e1c72ea50d6d05a9e11366c9cc1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f91abc816d82572663afe96ae8ad9e" id="r_ac2f91abc816d82572663afe96ae8ad9e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a789293c13583af2e0a4926d068e0415e">Double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2f91abc816d82572663afe96ae8ad9e">ReverseBits</a> (double val) noexcept</td></tr>
+<tr class="memdesc:ac2f91abc816d82572663afe96ae8ad9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the order of the bits of a double.  <br /></td></tr>
+<tr class="separator:ac2f91abc816d82572663afe96ae8ad9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbd773fdfc61fb4da005bd509384bc25" id="r_acbd773fdfc61fb4da005bd509384bc25"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
 requires std::is_integral_v&lt;T&gt;</td></tr>
 <tr class="memitem:acbd773fdfc61fb4da005bd509384bc25"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acbd773fdfc61fb4da005bd509384bc25">IndexOfBitFromMSB</a> (unsigned long *index, T bits)</td></tr>
@@ -4340,20 +4378,25 @@ requires std::is_integral_v&lt;T&gt;</td></tr>
 <tr class="separator:ab9442dd93d1e89209957b8c4ccec3d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6845932f1ad2f08d901160db9ae5a6db" id="r_a6845932f1ad2f08d901160db9ae5a6db"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
 <tr class="memitem:a6845932f1ad2f08d901160db9ae5a6db"><td class="memTemplItemLeft" align="right" valign="top">const void *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6845932f1ad2f08d901160db9ae5a6db">AlignTo</a> (const void *address)</td></tr>
+<tr class="memdesc:a6845932f1ad2f08d901160db9ae5a6db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the address that is aligned on an <code>N</code> byte boundary greater, or equal, to <code>address</code>.  <br /></td></tr>
 <tr class="separator:a6845932f1ad2f08d901160db9ae5a6db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01d1486889d74d1600235cd8714d5e4b" id="r_a01d1486889d74d1600235cd8714d5e4b"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
 <tr class="memitem:a01d1486889d74d1600235cd8714d5e4b"><td class="memTemplItemLeft" align="right" valign="top">void *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a01d1486889d74d1600235cd8714d5e4b">AlignTo</a> (void *address)</td></tr>
+<tr class="memdesc:a01d1486889d74d1600235cd8714d5e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the address that is aligned on an <code>N</code> byte boundary greater, or equal, to <code>address</code>.  <br /></td></tr>
 <tr class="separator:a01d1486889d74d1600235cd8714d5e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa90b20e4942406a3b99fa9c24a17fc7" id="r_aaa90b20e4942406a3b99fa9c24a17fc7"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
 <tr class="memitem:aaa90b20e4942406a3b99fa9c24a17fc7"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aaa90b20e4942406a3b99fa9c24a17fc7">AlignedPaddingFor</a> (const void *address)</td></tr>
+<tr class="memdesc:aaa90b20e4942406a3b99fa9c24a17fc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the number of bytes between the argument <code>address</code> and an address that is aligned on an <code>N</code> byte boundary greater, or equal, to <code>address</code>.  <br /></td></tr>
 <tr class="separator:aaa90b20e4942406a3b99fa9c24a17fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac258a8e838a8822ed21d88f295e4fb0c" id="r_ac258a8e838a8822ed21d88f295e4fb0c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
 requires <a class="el" href="#afac614f86d084a92f001e7253150418b">IsGUID</a>&lt;T&gt;</td></tr>
 <tr class="memitem:ac258a8e838a8822ed21d88f295e4fb0c"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac258a8e838a8822ed21d88f295e4fb0c">ByteSwap</a> (const T &amp;guid) noexcept</td></tr>
+<tr class="memdesc:ac258a8e838a8822ed21d88f295e4fb0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the bytes of the Data1, Data2 and Data3 fields of a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> or GUID, while leaving Data4 as it is.  <br /></td></tr>
 <tr class="separator:ac258a8e838a8822ed21d88f295e4fb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a648cae90710574742e641837e454ecc2" id="r_a648cae90710574742e641837e454ecc2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
 requires (<a class="el" href="#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;std::remove_cvref_t&lt;T&gt;&gt; || std::is_enum_v&lt;std::remove_cvref_t&lt;T&gt;&gt; )</td></tr>
 <tr class="memitem:a648cae90710574742e641837e454ecc2"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a648cae90710574742e641837e454ecc2">ByteSwap</a> (const T value) noexcept</td></tr>
+<tr class="memdesc:a648cae90710574742e641837e454ecc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverses the bytes of a floating point value, or an enum.  <br /></td></tr>
 <tr class="separator:a648cae90710574742e641837e454ecc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f0a31200eb4fb19f3ddbb1d8c8de93a" id="r_a7f0a31200eb4fb19f3ddbb1d8c8de93a"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; <br />
 requires ( sizeof( T2 ) == 8 ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href="#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>, T1&gt; || std::is_same_v&lt;<a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, T1&gt; ) &amp;&amp; requires( T2 t2 ) { { std::bit_cast&lt;<a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;( t2 ) }-&gt;std::convertible_to&lt;<a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;; }</td></tr>
@@ -5606,30 +5649,30 @@ Variables</h2></td></tr>
 <tr class="separator:a798dafb191e7f90ca4656e7182d5c7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a560a6de46a4677b7892262e01fd23a4a" id="r_a560a6de46a4677b7892262e01fd23a4a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a560a6de46a4677b7892262e01fd23a4a">mainThreadId</a> = 0xFFFFFFFFFFFFFFFF</td></tr>
 <tr class="separator:a560a6de46a4677b7892262e01fd23a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2891e0b53d65279133b4177ecc51a60" id="r_ad2891e0b53d65279133b4177ecc51a60"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memitem:aec2d7e95dfd81e76a185fa1c129321b1" id="r_aec2d7e95dfd81e76a185fa1c129321b1"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51959a8e8a27e0063a6bb0cef1930305" id="r_a51959a8e8a27e0063a6bb0cef1930305"><td class="memItemLeft" >&#160;&#160;&#160;uint32_t&#160;&#160;&#160;<a class="el" href="#ab2767921e5dea1114523541a07855bf6">Harlinn::Common::Core::dword_table</a> [16][256]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a51959a8e8a27e0063a6bb0cef1930305"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fc059cb9d55ea02fd805b7d57da8a7f" id="r_a7fc059cb9d55ea02fd805b7d57da8a7f"><td class="memItemLeft" >&#160;&#160;&#160;uint64_t&#160;&#160;&#160;<a class="el" href="#a0ac8f52195847525cf4026ff3a9c61e6">Harlinn::Common::Core::qword_array</a> [2048]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a7fc059cb9d55ea02fd805b7d57da8a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2891e0b53d65279133b4177ecc51a60" id="r_ad2891e0b53d65279133b4177ecc51a60"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2891e0b53d65279133b4177ecc51a60">table</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ad2891e0b53d65279133b4177ecc51a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf77099bd7c5bce13d532392f2aed6dd" id="r_adf77099bd7c5bce13d532392f2aed6dd"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memitem:a90ac21e42c305bd15175b1cb376233e7" id="r_a90ac21e42c305bd15175b1cb376233e7"><td class="memItemLeft" >&#160;&#160;&#160;uint32_t&#160;&#160;&#160;<a class="el" href="#ab2767921e5dea1114523541a07855bf6">Harlinn::Common::Core::dword_table</a> [16][256]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a90ac21e42c305bd15175b1cb376233e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceead3d0fe23b529bb110aa41cb34601" id="r_aceead3d0fe23b529bb110aa41cb34601"><td class="memItemLeft" >&#160;&#160;&#160;uint64_t&#160;&#160;&#160;<a class="el" href="#a0ac8f52195847525cf4026ff3a9c61e6">Harlinn::Common::Core::qword_array</a> [2048]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:aceead3d0fe23b529bb110aa41cb34601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2d7e95dfd81e76a185fa1c129321b1" id="r_aec2d7e95dfd81e76a185fa1c129321b1"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec2d7e95dfd81e76a185fa1c129321b1">table</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:aec2d7e95dfd81e76a185fa1c129321b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4dcff9d2d646e727a92b210717ff29a" id="r_aa4dcff9d2d646e727a92b210717ff29a"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af736471be964dfdf8253adc5edaea102" id="r_af736471be964dfdf8253adc5edaea102"><td class="memItemLeft" >&#160;&#160;&#160;uint32_t&#160;&#160;&#160;<a class="el" href="#ab2767921e5dea1114523541a07855bf6">Harlinn::Common::Core::dword_table</a> [4][256]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:af736471be964dfdf8253adc5edaea102"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03824a830939ea00c96b2b9d993971aa" id="r_a03824a830939ea00c96b2b9d993971aa"><td class="memItemLeft" >&#160;&#160;&#160;uint64_t&#160;&#160;&#160;<a class="el" href="#a0ac8f52195847525cf4026ff3a9c61e6">Harlinn::Common::Core::qword_array</a> [512]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a03824a830939ea00c96b2b9d993971aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf77099bd7c5bce13d532392f2aed6dd" id="r_adf77099bd7c5bce13d532392f2aed6dd"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf77099bd7c5bce13d532392f2aed6dd">long_shifts</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:adf77099bd7c5bce13d532392f2aed6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4488813bb7e5410634436c420aeb8160" id="r_a4488813bb7e5410634436c420aeb8160"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memitem:a1b8647c6a6e6361ea1a74d798aeb409a" id="r_a1b8647c6a6e6361ea1a74d798aeb409a"><td class="memItemLeft" >&#160;&#160;&#160;uint32_t&#160;&#160;&#160;<a class="el" href="#ab2767921e5dea1114523541a07855bf6">Harlinn::Common::Core::dword_table</a> [4][256]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a1b8647c6a6e6361ea1a74d798aeb409a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfff07ea76ecbdabd8ae08087d07d60c" id="r_abfff07ea76ecbdabd8ae08087d07d60c"><td class="memItemLeft" >&#160;&#160;&#160;uint64_t&#160;&#160;&#160;<a class="el" href="#a0ac8f52195847525cf4026ff3a9c61e6">Harlinn::Common::Core::qword_array</a> [512]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:abfff07ea76ecbdabd8ae08087d07d60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4dcff9d2d646e727a92b210717ff29a" id="r_aa4dcff9d2d646e727a92b210717ff29a"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4dcff9d2d646e727a92b210717ff29a">long_shifts</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:aa4dcff9d2d646e727a92b210717ff29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a419b23046cd2e66f376f5b50c07b910b" id="r_a419b23046cd2e66f376f5b50c07b910b"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1899670a5b15d3c3a57a49a07a1bd425" id="r_a1899670a5b15d3c3a57a49a07a1bd425"><td class="memItemLeft" >&#160;&#160;&#160;uint32_t&#160;&#160;&#160;<a class="el" href="#ab2767921e5dea1114523541a07855bf6">Harlinn::Common::Core::dword_table</a> [4][256]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a1899670a5b15d3c3a57a49a07a1bd425"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea5ffd8567ff0c0fa89b5c36976cf80b" id="r_aea5ffd8567ff0c0fa89b5c36976cf80b"><td class="memItemLeft" >&#160;&#160;&#160;uint64_t&#160;&#160;&#160;<a class="el" href="#a0ac8f52195847525cf4026ff3a9c61e6">Harlinn::Common::Core::qword_array</a> [512]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:aea5ffd8567ff0c0fa89b5c36976cf80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4488813bb7e5410634436c420aeb8160" id="r_a4488813bb7e5410634436c420aeb8160"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4488813bb7e5410634436c420aeb8160">short_shifts</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a4488813bb7e5410634436c420aeb8160"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6486a50b953f5103448bb7cf5c3916c1" id="r_a6486a50b953f5103448bb7cf5c3916c1"><td class="memItemLeft" >&#160;&#160;&#160;uint32_t&#160;&#160;&#160;<a class="el" href="#ab2767921e5dea1114523541a07855bf6">Harlinn::Common::Core::dword_table</a> [4][256]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a6486a50b953f5103448bb7cf5c3916c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69174df80fe344cefb83a9b15c1c5fde" id="r_a69174df80fe344cefb83a9b15c1c5fde"><td class="memItemLeft" >&#160;&#160;&#160;uint64_t&#160;&#160;&#160;<a class="el" href="#a0ac8f52195847525cf4026ff3a9c61e6">Harlinn::Common::Core::qword_array</a> [512]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a69174df80fe344cefb83a9b15c1c5fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a419b23046cd2e66f376f5b50c07b910b" id="r_a419b23046cd2e66f376f5b50c07b910b"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a419b23046cd2e66f376f5b50c07b910b">short_shifts</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a419b23046cd2e66f376f5b50c07b910b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe4b52268aee8196b0e092065e51c422" id="r_afe4b52268aee8196b0e092065e51c422"><td class="memItemLeft" align="right" valign="top">uint32_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe4b52268aee8196b0e092065e51c422">crc32cImpl</a> )(const uint8_t *, size_t, uint32_t) = <a class="el" href="#a1847895aee9512aefcd18c0cb9437529">crc32c_sw</a></td></tr>
 <tr class="separator:afe4b52268aee8196b0e092065e51c422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f9b3afb776859d2dc218bcb6f4256e8" id="r_a8f9b3afb776859d2dc218bcb6f4256e8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -8377,6 +8420,21 @@ template&lt;size_t N&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Calculates the number of bytes between the argument <code>address</code> and an address that is aligned on an <code>N</code> byte boundary greater, or equal, to <code>address</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">N</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 </div>
 </div>
 <a id="a6845932f1ad2f08d901160db9ae5a6db" name="a6845932f1ad2f08d901160db9ae5a6db"></a>
@@ -8404,6 +8462,21 @@ template&lt;size_t N&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Calculates the address that is aligned on an <code>N</code> byte boundary greater, or equal, to <code>address</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">N</td><td>The requested alignment. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>The address to calculate the alignment for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The aligned address. </dd></dl>
+
 </div>
 </div>
 <a id="a01d1486889d74d1600235cd8714d5e4b" name="a01d1486889d74d1600235cd8714d5e4b"></a>
@@ -8430,6 +8503,21 @@ template&lt;size_t N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculates the address that is aligned on an <code>N</code> byte boundary greater, or equal, to <code>address</code>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">N</td><td>The requested alignment. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>The address to calculate the alignment for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The aligned address. </dd></dl>
 
 </div>
 </div>
@@ -9044,6 +9132,21 @@ requires <a class="el" href="#afac614f86d084a92f001e7253150418b">IsGUID</a>&lt;T
 </table>
 </div><div class="memdoc">
 
+<p>Swaps the bytes of the Data1, Data2 and Data3 fields of a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> or GUID, while leaving Data4 as it is. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> or GUID</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">guid</td><td>A GUID type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The GUID type with the bytes swapped. </dd></dl>
+
 </div>
 </div>
 <a id="a5abd07a37f9be02dfffa2d986a83a68a" name="a5abd07a37f9be02dfffa2d986a83a68a"></a>
@@ -9155,6 +9258,21 @@ requires (<a class="el" href="#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoin
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reverses the bytes of a floating point value, or an enum. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>A floating point type, or an enum type. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result. </dd></dl>
 
 </div>
 </div>
@@ -14078,6 +14196,158 @@ template&lt;class... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>Creates a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_tuple.html">Tuple</a> from the arguments. </p>
+
+</div>
+</div>
+<a id="a4565d7e0a529173f541d22dac61709c9" name="a4565d7e0a529173f541d22dac61709c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4565d7e0a529173f541d22dac61709c9">&#9670;&#160;</a></span>MaskLeadingOnes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t N&gt; <br />
+requires <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;T&gt; &amp;&amp; ( N &lt;= CHAR_BIT * sizeof( T ) )</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T Harlinn::Common::Core::MaskLeadingOnes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a bitmask with the <code>N</code> left-most bits set to 1, and all other bits set to 0. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>An unsigned integral type. </td></tr>
+    <tr><td class="paramname">N</td><td>The number if rightmost bits to set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The bitmask. </dd></dl>
+
+</div>
+</div>
+<a id="ab6be7830bb7803d01d27bb6c4e4d7fed" name="ab6be7830bb7803d01d27bb6c4e4d7fed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6be7830bb7803d01d27bb6c4e4d7fed">&#9670;&#160;</a></span>MaskLeadingZeros()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t N&gt; <br />
+requires <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;T&gt; &amp;&amp; ( N &lt;= CHAR_BIT * sizeof( T ) )</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T Harlinn::Common::Core::MaskLeadingZeros </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a bitmask with the <code>N</code> left-most bits set to 0, and all other bits set to 1. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>An unsigned integral type. </td></tr>
+    <tr><td class="paramname">N</td><td>The number if rightmost bits to clear. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The bitmask. </dd></dl>
+
+</div>
+</div>
+<a id="a6f1672bd18a41db22e2d465afd90580c" name="a6f1672bd18a41db22e2d465afd90580c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f1672bd18a41db22e2d465afd90580c">&#9670;&#160;</a></span>MaskTrailingOnes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t N&gt; <br />
+requires <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;T&gt; &amp;&amp; (N &lt;= CHAR_BIT * sizeof( T ) )</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T Harlinn::Common::Core::MaskTrailingOnes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a bitmask with the <code>N</code> right-most bits set to 1, and all other bits set to 0. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>An unsigned integral type. </td></tr>
+    <tr><td class="paramname">N</td><td>The number if rightmost bits to set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The bitmask. </dd></dl>
+
+</div>
+</div>
+<a id="a3b38b6c1cb173d8764b7d166127c90fb" name="a3b38b6c1cb173d8764b7d166127c90fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b38b6c1cb173d8764b7d166127c90fb">&#9670;&#160;</a></span>MaskTrailingZeros()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t N&gt; <br />
+requires <a class="el" href="#a6ea5b0316a1a3e551bf56276e133c6ce">IsUnsignedInteger</a>&lt;T&gt; &amp;&amp; ( N &lt;= CHAR_BIT * sizeof( T ) )</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T Harlinn::Common::Core::MaskTrailingZeros </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a bitmask with the <code>N</code> right-most bits set to 0, and all other bits set to 1. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>An unsigned integral type. </td></tr>
+    <tr><td class="paramname">N</td><td>The number if rightmost bits to clear. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The bitmask. </dd></dl>
 
 </div>
 </div>
@@ -21397,10 +21667,12 @@ requires requires( Reader r, <a class="el" href="#af82811a69582d9f85a78627741d07
 </table>
 </div><div class="memdoc">
 
+<p>Reverses the order of the bits of a char. </p>
+
 </div>
 </div>
-<a id="a2b36d3246220967396794742c4b4c08b" name="a2b36d3246220967396794742c4b4c08b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b36d3246220967396794742c4b4c08b">&#9670;&#160;</a></span>ReverseBits() <span class="overload">[3/14]</span></h2>
+<a id="ac2f91abc816d82572663afe96ae8ad9e" name="ac2f91abc816d82572663afe96ae8ad9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2f91abc816d82572663afe96ae8ad9e">&#9670;&#160;</a></span>ReverseBits() <span class="overload">[3/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -21411,7 +21683,7 @@ requires requires( Reader r, <a class="el" href="#af82811a69582d9f85a78627741d07
         <tr>
           <td class="memname"><a class="el" href="#a789293c13583af2e0a4926d068e0415e">Double</a> Harlinn::Common::Core::ReverseBits </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#a789293c13583af2e0a4926d068e0415e">Double</a></td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -21422,10 +21694,39 @@ requires requires( Reader r, <a class="el" href="#af82811a69582d9f85a78627741d07
 </table>
 </div><div class="memdoc">
 
+<p>Reverses the order of the bits of a double. </p>
+
+</div>
+</div>
+<a id="ac83e1c72ea50d6d05a9e11366c9cc1b1" name="ac83e1c72ea50d6d05a9e11366c9cc1b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac83e1c72ea50d6d05a9e11366c9cc1b1">&#9670;&#160;</a></span>ReverseBits() <span class="overload">[4/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ac69fb0d67e0a3064a2048954e78298ba">Single</a> Harlinn::Common::Core::ReverseBits </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reverses the order of the bits of a float. </p>
+
 </div>
 </div>
 <a id="a07d1565fde2e6a269091bb2bcfe745ed" name="a07d1565fde2e6a269091bb2bcfe745ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07d1565fde2e6a269091bb2bcfe745ed">&#9670;&#160;</a></span>ReverseBits() <span class="overload">[4/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a07d1565fde2e6a269091bb2bcfe745ed">&#9670;&#160;</a></span>ReverseBits() <span class="overload">[5/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -21447,10 +21748,12 @@ requires requires( Reader r, <a class="el" href="#af82811a69582d9f85a78627741d07
 </table>
 </div><div class="memdoc">
 
+<p>Reverses the order of the bits of an Int16. </p>
+
 </div>
 </div>
 <a id="a735bef73bd973e0a1793fb187496fad5" name="a735bef73bd973e0a1793fb187496fad5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a735bef73bd973e0a1793fb187496fad5">&#9670;&#160;</a></span>ReverseBits() <span class="overload">[5/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a735bef73bd973e0a1793fb187496fad5">&#9670;&#160;</a></span>ReverseBits() <span class="overload">[6/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -21472,10 +21775,12 @@ requires requires( Reader r, <a class="el" href="#af82811a69582d9f85a78627741d07
 </table>
 </div><div class="memdoc">
 
+<p>Reverses the order of the bits of an Int32. </p>
+
 </div>
 </div>
 <a id="a65d83bf0af4685c569303d51c87342a6" name="a65d83bf0af4685c569303d51c87342a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65d83bf0af4685c569303d51c87342a6">&#9670;&#160;</a></span>ReverseBits() <span class="overload">[6/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d83bf0af4685c569303d51c87342a6">&#9670;&#160;</a></span>ReverseBits() <span class="overload">[7/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -21497,10 +21802,12 @@ requires requires( Reader r, <a class="el" href="#af82811a69582d9f85a78627741d07
 </table>
 </div><div class="memdoc">
 
+<p>Reverses the order of the bits of an Int64. </p>
+
 </div>
 </div>
 <a id="a9e786e55d738f24db7c1c1e0ce588b7d" name="a9e786e55d738f24db7c1c1e0ce588b7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e786e55d738f24db7c1c1e0ce588b7d">&#9670;&#160;</a></span>ReverseBits() <span class="overload">[7/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e786e55d738f24db7c1c1e0ce588b7d">&#9670;&#160;</a></span>ReverseBits() <span class="overload">[8/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -21522,10 +21829,12 @@ requires requires( Reader r, <a class="el" href="#af82811a69582d9f85a78627741d07
 </table>
 </div><div class="memdoc">
 
+<p>Reverses the order of the bits of a long. </p>
+
 </div>
 </div>
 <a id="a4156e0081e957f8e301fb3d7604ee7e5" name="a4156e0081e957f8e301fb3d7604ee7e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4156e0081e957f8e301fb3d7604ee7e5">&#9670;&#160;</a></span>ReverseBits() <span class="overload">[8/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4156e0081e957f8e301fb3d7604ee7e5">&#9670;&#160;</a></span>ReverseBits() <span class="overload">[9/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -21547,30 +21856,7 @@ requires requires( Reader r, <a class="el" href="#af82811a69582d9f85a78627741d07
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a8317136fff00c1f6affbaa02fe5890aa" name="a8317136fff00c1f6affbaa02fe5890aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8317136fff00c1f6affbaa02fe5890aa">&#9670;&#160;</a></span>ReverseBits() <span class="overload">[9/14]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#ac69fb0d67e0a3064a2048954e78298ba">Single</a> Harlinn::Common::Core::ReverseBits </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="#ac69fb0d67e0a3064a2048954e78298ba">Single</a></td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Reverses the order of the bits of a SByte. </p>
 
 </div>
 </div>
@@ -21597,6 +21883,8 @@ requires requires( Reader r, <a class="el" href="#af82811a69582d9f85a78627741d07
 </table>
 </div><div class="memdoc">
 
+<p>Reverses the order of the bits of an UInt16. </p>
+
 </div>
 </div>
 <a id="af7cc4828ff77244e12fe6812643490d0" name="af7cc4828ff77244e12fe6812643490d0"></a>
@@ -21621,6 +21909,8 @@ requires requires( Reader r, <a class="el" href="#af82811a69582d9f85a78627741d07
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reverses the order of the bits of an UInt32. </p>
 
 </div>
 </div>
@@ -21647,6 +21937,8 @@ requires requires( Reader r, <a class="el" href="#af82811a69582d9f85a78627741d07
 </table>
 </div><div class="memdoc">
 
+<p>Reverses the order of the bits of an UInt64. </p>
+
 </div>
 </div>
 <a id="a8e48861f08457cf644bb2998891ce4e7" name="a8e48861f08457cf644bb2998891ce4e7"></a>
@@ -21671,6 +21963,8 @@ requires requires( Reader r, <a class="el" href="#af82811a69582d9f85a78627741d07
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reverses the order of the bits of an unsigned long. </p>
 
 </div>
 </div>
@@ -38275,8 +38569,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="adf77099bd7c5bce13d532392f2aed6dd" name="adf77099bd7c5bce13d532392f2aed6dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf77099bd7c5bce13d532392f2aed6dd">&#9670;&#160;</a></span>[union]</h2>
+<a id="aa4dcff9d2d646e727a92b210717ff29a" name="aa4dcff9d2d646e727a92b210717ff29a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4dcff9d2d646e727a92b210717ff29a">&#9670;&#160;</a></span>[union]</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -39161,8 +39455,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a4488813bb7e5410634436c420aeb8160" name="a4488813bb7e5410634436c420aeb8160"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4488813bb7e5410634436c420aeb8160">&#9670;&#160;</a></span>[union]</h2>
+<a id="a419b23046cd2e66f376f5b50c07b910b" name="a419b23046cd2e66f376f5b50c07b910b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a419b23046cd2e66f376f5b50c07b910b">&#9670;&#160;</a></span>[union]</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -39379,8 +39673,8 @@ template&lt;<a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a> N
 
 </div>
 </div>
-<a id="ad2891e0b53d65279133b4177ecc51a60" name="ad2891e0b53d65279133b4177ecc51a60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2891e0b53d65279133b4177ecc51a60">&#9670;&#160;</a></span>[union]</h2>
+<a id="aec2d7e95dfd81e76a185fa1c129321b1" name="aec2d7e95dfd81e76a185fa1c129321b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2d7e95dfd81e76a185fa1c129321b1">&#9670;&#160;</a></span>[union]</h2>
 
 <div class="memitem">
 <div class="memproto">

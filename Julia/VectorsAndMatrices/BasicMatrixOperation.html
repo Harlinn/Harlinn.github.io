@@ -238,49 +238,32 @@ programming languages.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>julia&gt; using LinearAlgebra
 </code></pre></div></div>
-<p>In Julia matrices are in the column major format:</p>
+<p>In Julia the rows of the matrices are separated by a semi-colon <code class="language-plaintext highlighter-rouge">;</code>:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>julia&gt; M1 = [2/7 −6/7 3/7 1; 6/7 3/7 2/7 2; −3/7 2/7 6/7 3; 0 0 0 1]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>julia&gt; M1 = [0.285714  0.857143 -0.428571 0.0;
+               -0.857143 0.428571 0.285714 0.0;
+               0.428571 0.285714 0.857143 0.0;
+               1.0 2.0 3.0 1.0]
 4×4 Matrix{Float64}:
-  0.285714  -0.857143  0.428571  1.0
-  0.857143   0.428571  0.285714  2.0
- -0.428571   0.285714  0.857143  3.0
-  0.0        0.0       0.0       1.0
-</code></pre></div></div>
-
-<p>So, when creating data for the tests for the <a href="/Cpp/Cpp/Math/SimdOperations.html">linear algebra 
-functions</a> in 
-<a href="/Cpp/Harlinn.Windows/Harlinn.Common.Core/Harlinn.Common.Core/html">Harlinn.Common.Core</a>, 
-the matrices must be transposed:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>julia&gt; M1T = transpose(M1)
-4×4 transpose(::Matrix{Float64}) with eltype Float64:
   0.285714  0.857143  -0.428571  0.0
  -0.857143  0.428571   0.285714  0.0
   0.428571  0.285714   0.857143  0.0
   1.0       2.0        3.0       1.0
 </code></pre></div></div>
-<p>To get the data for the expected result of <code class="language-plaintext highlighter-rouge">Math::Inverse</code>,<br />
-use Julias’ <code class="language-plaintext highlighter-rouge">inv</code> function:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>julia&gt; M2 = inv(M1)
+<p>To get accurate data for the test of the <code class="language-plaintext highlighter-rouge">Math::Inverse</code> function in <a href="/Cpp/Cpp/Math/FastLinearAlgebra.html">HCCVectorMath.h</a>
+using Julia:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>julia&gt; inv(M1)
 4×4 Matrix{Float64}:
-  0.285714  0.857143  -0.428571  -0.714286
- -0.857143  0.428571   0.285714  -0.857143
-  0.428571  0.285714   0.857143  -3.57143
-  0.0       0.0        0.0        1.0
+  0.285714  -0.857143   0.428571  -2.77556e-17
+  0.857143   0.428571   0.285714   2.77556e-17
+ -0.428571   0.285714   0.857143   0.0
+ -0.714288  -0.857142  -3.57143    1.0
 </code></pre></div></div>
-<p>Transpose the result:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>julia&gt; M2T = transpose(M2)
-4×4 transpose(::Matrix{Float64}) with eltype Float64:
-  0.285714  -0.857143   0.428571  0.0
-  0.857143   0.428571   0.285714  0.0
- -0.428571   0.285714   0.857143  0.0
- -0.714286  -0.857143  -3.57143   1.0
-</code></pre></div></div>
 <p>Now, the data can be copied from the Julia console and 
-pasted into a unit test for the function.</p>
+pasted into a unit test for the <code class="language-plaintext highlighter-rouge">Math::Inverse</code> function.</p>
 
 <pre><code class="language-C++">BOOST_AUTO_TEST_CASE( InverseTest1 )
 {
@@ -304,6 +287,7 @@ pasted into a unit test for the function.</p>
 
 
 </code></pre>
+
 
   </div>
 

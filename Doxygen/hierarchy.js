@@ -1140,6 +1140,7 @@ var hierarchy =
       [ "Harlinn::Common::Core::Types::Adapters::TypeAdapter< T >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_adapters_1_1_type_adapter.html", null ],
       [ "Harlinn::Common::Core::VariantTypeTraits< T >", "struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html", null ]
     ] ],
+    [ "Harlinn::Common::Core::Math::Internal::FastPowImpl< FloatT >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_fast_pow_impl.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::FeatureDataArchitecture", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_architecture.html", [
       [ "Harlinn::Windows::Graphics::D3D12::FeatureDataArchitecture1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_architecture1.html", null ]
     ] ],
@@ -1197,7 +1198,7 @@ var hierarchy =
     [ "Harlinn::Common::Core::FixedString< CharT, maxSize, true >", "class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html", [
       [ "Harlinn::ODBC::FixedDBString< CharT, maxSize >", "class_harlinn_1_1_o_d_b_c_1_1_fixed_d_b_string.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::Math::Internal::FloatingPoint< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_floating_point.html", null ],
+    [ "Harlinn::Common::Core::Math::FloatingPoint< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html", null ],
     [ "Harlinn::Common::Core::Http::FlowrateInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_flowrate_info.html", null ],
     [ "Harlinn::Windows::DirectShow::AMCameraControl::Focus", "struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_focus.html", null ],
     [ "Harlinn::Windows::Fonts::Font", "class_harlinn_1_1_windows_1_1_fonts_1_1_font.html", null ],
@@ -1609,6 +1610,14 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::InputElementDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_input_element_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::InputLayoutDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_input_layout_desc.html", null ],
     [ "Harlinn::Common::Core::Ese::Instance", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance.html", null ],
+    [ "Harlinn::Common::Core::Integer< T >", "class_harlinn_1_1_common_1_1_core_1_1_integer.html", null ],
+    [ "Harlinn::Common::Core::Integer< Int32 >", "class_harlinn_1_1_common_1_1_core_1_1_integer.html", [
+      [ "Harlinn::Common::Core::Math::BiasedExponent< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_biased_exponent.html", null ],
+      [ "Harlinn::Common::Core::Math::Exponent< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html", null ]
+    ] ],
+    [ "Harlinn::Common::Core::Integer< Internal::StorageType< T >::type >", "class_harlinn_1_1_common_1_1_core_1_1_integer.html", [
+      [ "Harlinn::Common::Core::Math::Significand< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html", null ]
+    ] ],
     [ "std::integral_constant", null, [
       [ "Harlinn::Common::Core::Internal::_Repeat_for< _Nx, T >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1___repeat__for.html", null ]
     ] ],
@@ -1617,6 +1626,7 @@ var hierarchy =
     ] ],
     [ "Harlinn::Common::Core::Network::InterfaceTable", "class_harlinn_1_1_common_1_1_core_1_1_network_1_1_interface_table.html", null ],
     [ "Harlinn::Common::Core::InterlockedLinkedList", "class_harlinn_1_1_common_1_1_core_1_1_interlocked_linked_list.html", null ],
+    [ "Harlinn::Common::Core::Math::Interval< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_interval.html", null ],
     [ "boost::icl::interval_bound_type< Harlinn::Common::Core::Interval >", "structboost_1_1icl_1_1interval__bound__type_3_01_harlinn_1_1_common_1_1_core_1_1_interval_01_4.html", null ],
     [ "boost::icl::interval_traits< Harlinn::Common::Core::Interval >", "structboost_1_1icl_1_1interval__traits_3_01_harlinn_1_1_common_1_1_core_1_1_interval_01_4.html", null ],
     [ "Harlinn::Common::Core::IO::IOCompletionPort", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_i_o_completion_port.html", [
@@ -1840,12 +1850,13 @@ var hierarchy =
     [ "NONCLIENTMETRICS", null, [
       [ "Harlinn::Windows::NonClientMetrics", "class_harlinn_1_1_windows_1_1_non_client_metrics.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::Math::Internal::NormalizedFloat< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_normalized_float.html", null ],
+    [ "Harlinn::Common::Core::Math::NormalizedFloat< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_normalized_float.html", null ],
     [ "Harlinn::Common::Core::ZeroMq::ZMQNotificationServer::NotificationEntry::NotificationMessage", "struct_harlinn_1_1_common_1_1_core_1_1_zero_mq_1_1_z_m_q_notification_server_1_1_notification_entry_1_1_notification_message.html", null ],
     [ "NT_TIB", null, [
       [ "Harlinn::Common::Core::CurrentThread::Internal::ThreadEnvironmentBlock", "struct_harlinn_1_1_common_1_1_core_1_1_current_thread_1_1_internal_1_1_thread_environment_block.html", null ]
     ] ],
     [ "Harlinn::OCI::Number", "struct_harlinn_1_1_o_c_i_1_1_number.html", null ],
+    [ "Harlinn::Common::Core::Test::NumericTest", "struct_harlinn_1_1_common_1_1_core_1_1_test_1_1_numeric_test.html", null ],
     [ "Com::ObjectBase", null, [
       [ "Harlinn::Common::Core::IWbemObjectSinkImplementationBase< IWbemObjectSinkDispatcher, IWbemObjectSink, boost::container::small_vector< WbemClassObject, 64 > >", "class_harlinn_1_1_common_1_1_core_1_1_i_wbem_object_sink_implementation_base.html", [
         [ "Harlinn::Common::Core::IWbemObjectSinkDispatcherBase< IWbemObjectSinkDispatcher, IWbemObjectSink, boost::container::small_vector< WbemClassObject, 64 > >", "class_harlinn_1_1_common_1_1_core_1_1_i_wbem_object_sink_dispatcher_base.html", [
@@ -1990,8 +2001,17 @@ var hierarchy =
     [ "Harlinn::Common::Core::Math::Internal::QuietNaNUnsignedValue< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quiet_na_n_unsigned_value.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::QuietNaNUnsignedValue< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quiet_na_n_unsigned_value_3_01double_01_4.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::QuietNaNUnsignedValue< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quiet_na_n_unsigned_value_3_01float_01_4.html", null ],
+    [ "Harlinn::Common::Core::Test::Generators::RandomGeneratorBase", "class_harlinn_1_1_common_1_1_core_1_1_test_1_1_generators_1_1_random_generator_base.html", [
+      [ "Harlinn::Common::Core::Test::Generators::RandomGenerator< ValueT, N >", "struct_harlinn_1_1_common_1_1_core_1_1_test_1_1_generators_1_1_random_generator.html", null ]
+    ] ],
     [ "Harlinn::Windows::Graphics::D3D12::Range", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_range.html", null ],
     [ "Harlinn::Windows::Range", "class_harlinn_1_1_windows_1_1_range.html", null ],
+    [ "Harlinn::Common::Core::Test::Generators::RangeGeneratorBase", "class_harlinn_1_1_common_1_1_core_1_1_test_1_1_generators_1_1_range_generator_base.html", [
+      [ "Harlinn::Common::Core::Test::Generators::RangeGenerator< ValueT >", "struct_harlinn_1_1_common_1_1_core_1_1_test_1_1_generators_1_1_range_generator.html", null ]
+    ] ],
+    [ "Harlinn::Common::Core::Math::Internal::RangeReduction< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction.html", null ],
+    [ "Harlinn::Common::Core::Math::Internal::RangeReduction< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction_3_01double_01_4.html", null ],
+    [ "Harlinn::Common::Core::Math::Internal::RangeReduction< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction_3_01float_01_4.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::RangeUInt64", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_range_u_int64.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::RasterizerDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_rasterizer_desc.html", null ],
     [ "Harlinn::Common::Core::Demangle::detail::Converter::Raw< T >", "struct_harlinn_1_1_common_1_1_core_1_1_demangle_1_1detail_1_1_converter_1_1_raw.html", null ],
@@ -2227,6 +2247,7 @@ var hierarchy =
     [ "SID_IDENTIFIER_AUTHORITY", null, [
       [ "Harlinn::Common::Core::Security::SecurityId::IdentifierAuthority", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_id_1_1_identifier_authority.html", null ]
     ] ],
+    [ "Harlinn::Common::Core::Sign", "class_harlinn_1_1_common_1_1_core_1_1_sign.html", null ],
     [ "Harlinn::Common::Core::SimpleConcurrentQueue< T, maxQueueSize >", "class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html", null ],
     [ "Harlinn::Common::Core::SimpleConcurrentQueue< MessageT, 10 *1024 >", "class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html", null ],
     [ "Harlinn::Common::Core::SimpleConcurrentQueue< MessageT, maxQueueSize >", "class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html", null ],
@@ -2318,6 +2339,10 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::StencilOperationsDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stencil_operations_desc.html", null ],
     [ "Harlinn::Common::Core::StgMedium", "class_harlinn_1_1_common_1_1_core_1_1_stg_medium.html", null ],
     [ "Harlinn::Common::Core::Stopwatch", "class_harlinn_1_1_common_1_1_core_1_1_stopwatch.html", null ],
+    [ "Harlinn::Common::Core::Math::Internal::StorageType< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type.html", null ],
+    [ "Harlinn::Common::Core::Math::Internal::StorageType< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type_3_01double_01_4.html", null ],
+    [ "Harlinn::Common::Core::Math::Internal::StorageType< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type_3_01float_01_4.html", null ],
+    [ "Harlinn::Common::Core::Math::Internal::StorageType< value_type >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type.html", null ],
     [ "Harlinn::Common::Core::IO::Blocks::Stream", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_blocks_1_1_stream.html", null ],
     [ "Harlinn::Common::Core::Demangle::TextOutput::StreamApplyObject", "class_harlinn_1_1_common_1_1_core_1_1_demangle_1_1_text_output_1_1_stream_apply_object.html", null ],
     [ "Harlinn::Windows::Media::MediaObject::StreamCount", "struct_harlinn_1_1_windows_1_1_media_1_1_media_object_1_1_stream_count.html", null ],

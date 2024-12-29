@@ -18,6 +18,6 @@ var searchData=
   ['queuefull_5f_15',['queueFull_',['../class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html#a9510dae865e1c4bfb31b96b650816a43',1,'Harlinn::Common::Core::SimpleConcurrentQueue']]],
   ['queuehanedle_5f_16',['queueHanedle_',['../class_harlinn_1_1_common_1_1_core_1_1_timer_queue_timer.html#ac8873fbbb6f5c2b6f91905845dc51b8b',1,'Harlinn::Common::Core::TimerQueueTimer']]],
   ['queuesize_5f_17',['queueSize_',['../class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html#a6b753062dfc6e5be40e8b51eea770c02',1,'Harlinn::Common::Core::SimpleConcurrentQueue']]],
-  ['quietnanvalue_18',['QuietNaNValue',['../struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_floating_point.html#af336d01e8a31c87353c75e76ce6bf620',1,'Harlinn::Common::Core::Math::Internal::FloatingPoint']]],
+  ['quietnanvalue_18',['QuietNaNValue',['../struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html#a7b73280029d43361f390940f36d90e44',1,'Harlinn::Common::Core::Math::FloatingPoint']]],
   ['qword_5farray_19',['qword_array',['../namespace_harlinn_1_1_common_1_1_core.html#a0ac8f52195847525cf4026ff3a9c61e6',1,'Harlinn::Common::Core']]]
 ];
