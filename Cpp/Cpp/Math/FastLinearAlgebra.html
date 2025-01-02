@@ -245,75 +245,17 @@ are template classes that holds <code class="language-plaintext highlighter-roug
 values. They are used to implement specializations of <code class="language-plaintext highlighter-rouge">Vector</code> and other
 classes holding <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">3</code> or <code class="language-plaintext highlighter-rouge">4</code> integer or floating point values.
     <ul>
-      <li><a href="#tuple2-tuple3-tuple4-and-tuplesimd-functions"><code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code>, <code class="language-plaintext highlighter-rouge">Tuple4</code> and <code class="language-plaintext highlighter-rouge">TupleSimd</code> Functions</a>
-        <ul>
-          <li><a href="#hsum-and-scalarhsum">HSum and ScalarHSum</a></li>
-          <li><a href="#hprod-and-scalarhprod">HProd and ScalarHProd</a></li>
-          <li><a href="#abs">Abs</a></li>
-          <li><a href="#min">Min</a></li>
-          <li><a href="#max">Max</a></li>
-          <li><a href="#sqr">Sqr</a></li>
-          <li><a href="#ceil">Ceil</a></li>
-          <li><a href="#floor">Floor</a></li>
-          <li><a href="#round">Round</a></li>
-          <li><a href="#trunc">Trunc</a></li>
-          <li><a href="#lerp">Lerp</a></li>
-          <li><a href="#clamp">Clamp</a></li>
-          <li><a href="#saturate">Saturate</a></li>
-          <li><a href="#sqrt">Sqrt</a></li>
-          <li><a href="#reciprocalsqrt">ReciprocalSqrt</a></li>
-          <li><a href="#reciprocal">Reciprocal</a></li>
-          <li><a href="#fma">FMA</a></li>
-          <li><a href="#fmsub">FMSub</a></li>
-          <li><a href="#fmaddsub">FMAddSub</a></li>
-          <li><a href="#fmsubadd">FMSubAdd</a></li>
-          <li><a href="#fnmadd">FNMAdd</a></li>
-          <li><a href="#fnmsub">FNMSub</a></li>
-          <li><a href="#sin">Sin</a></li>
-          <li><a href="#cos">Cos</a></li>
-          <li><a href="#tan">Tan</a></li>
-          <li><a href="#asin">ASin</a></li>
-          <li><a href="#acos">ACos</a></li>
-          <li><a href="#atan">ATan</a></li>
-          <li><a href="#atan2">ATan2</a></li>
-          <li><a href="#modangles">ModAngles</a></li>
-          <li><a href="#addangles">AddAngles</a></li>
-          <li><a href="#subtractangles">SubtractAngles</a></li>
-          <li><a href="#sinh">SinH</a></li>
-          <li><a href="#cosh">CosH</a></li>
-          <li><a href="#tanh">TanH</a></li>
-          <li><a href="#asinh">ASinH</a></li>
-          <li><a href="#acosh">ACosH</a></li>
-          <li><a href="#atanh">ATanH</a></li>
-          <li><a href="#log">Log</a></li>
-          <li><a href="#log1p">Log1P</a></li>
-          <li><a href="#log10">Log10</a></li>
-          <li><a href="#log2">Log2</a></li>
-          <li><a href="#exp">Exp</a></li>
-          <li><a href="#exp10">Exp10</a></li>
-          <li><a href="#exp2">Exp2</a></li>
-          <li><a href="#expm1">ExpM1</a></li>
-          <li><a href="#pow">Pow</a></li>
-          <li><a href="#hypot">Hypot</a></li>
-          <li><a href="#hermite">Hermite</a></li>
-          <li><a href="#dot-and-scalardot">Dot and ScalarDot</a></li>
-          <li><a href="#absdot-and-scalarabsdot">AbsDot and ScalarAbsDot</a></li>
-          <li><a href="#cross">Cross</a></li>
-          <li><a href="#lengthsquared-and-scalarlengthsquared">LengthSquared and ScalarLengthSquared</a></li>
-          <li><a href="#length-and-scalarlength">Length and ScalarLength</a></li>
-          <li><a href="#normalize">Normalize</a></li>
-          <li><a href="#reciprocallength-and-scalarreciprocallength">ReciprocalLength and ScalarReciprocalLength</a></li>
-          <li><a href="#distancesquared-and-scalardistancesquared">DistanceSquared and ScalarDistanceSquared</a></li>
-          <li><a href="#distance-and-scalardistance">Distance and ScalarDistance</a></li>
-        </ul>
+      <li>
+        <p><a href="#tuple2-tuple3-tuple4-and-tuplesimd-functions"><code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code>, <code class="language-plaintext highlighter-rouge">Tuple4</code> and <code class="language-plaintext highlighter-rouge">TupleSimd</code> Functions</a></p>
       </li>
       <li><a href="#vector2f-vector3f-vector4f-vector2i-vector3i-vector4i"><code class="language-plaintext highlighter-rouge">Vector2f</code>, <code class="language-plaintext highlighter-rouge">Vector3f</code>, <code class="language-plaintext highlighter-rouge">Vector4f</code>, <code class="language-plaintext highlighter-rouge">Vector2i</code>, <code class="language-plaintext highlighter-rouge">Vector3i</code>, <code class="language-plaintext highlighter-rouge">Vector4i</code></a></li>
       <li><a href="#normal3f-and-normal3i"><code class="language-plaintext highlighter-rouge">Normal3f</code> and <code class="language-plaintext highlighter-rouge">Normal3i</code></a></li>
       <li><a href="#point3f-and-point3i"><code class="language-plaintext highlighter-rouge">Point3f</code> and <code class="language-plaintext highlighter-rouge">Point3i</code></a></li>
     </ul>
   </li>
-  <li><a href="#quaternion"><code class="language-plaintext highlighter-rouge">Quaternion</code></a></li>
   <li><a href="#squarematrix"><code class="language-plaintext highlighter-rouge">SquareMatrix</code></a></li>
+  <li><a href="#quaternion"><code class="language-plaintext highlighter-rouge">Quaternion</code></a></li>
+  <li><a href="#transform"><code class="language-plaintext highlighter-rouge">Transform</code></a></li>
 </ul>
 
 <p>The purpose of specializations of <a href="SimdOperations.html"><code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T, N&gt;</code></a> is to have a mechanism for
@@ -612,7 +554,7 @@ the <code class="language-plaintext highlighter-rouge">SIMD::Traits</code> speci
 
 <p>This is the same as <code class="language-plaintext highlighter-rouge">std::array&lt;value_type,Size&gt;</code>, and while <code class="language-plaintext highlighter-rouge">x</code>, <code class="language-plaintext highlighter-rouge">y</code> and <code class="language-plaintext highlighter-rouge">z</code>
 is the common notation for three dimensional information, <code class="language-plaintext highlighter-rouge">values</code>, 
-as defined below, is much more convenient when developing templates 
+as defined below, is more convenient for developing templates 
 that will work with <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code>, <code class="language-plaintext highlighter-rouge">Tuple4</code> and any class derived from 
 either of them.</p>
 
@@ -1026,6 +968,67 @@ and <code class="language-plaintext highlighter-rouge">Tuple4</code>:</p>
 <code class="language-plaintext highlighter-rouge">HSum</code>, <code class="language-plaintext highlighter-rouge">DifferenceOfProducts</code>, <code class="language-plaintext highlighter-rouge">SumOfProducts</code></p>
 
 <h3 id="tuple2-tuple3-tuple4-and-tuplesimd-functions">Tuple2, Tuple3, Tuple4 and TupleSimd Functions</h3>
+
+<ul>
+  <li><a href="#hsum-and-scalarhsum">HSum and ScalarHSum</a></li>
+  <li><a href="#hprod-and-scalarhprod">HProd and ScalarHProd</a></li>
+  <li><a href="#abs">Abs</a></li>
+  <li><a href="#min">Min</a></li>
+  <li><a href="#max">Max</a></li>
+  <li><a href="#sqr">Sqr</a></li>
+  <li><a href="#ceil">Ceil</a></li>
+  <li><a href="#floor">Floor</a></li>
+  <li><a href="#round">Round</a></li>
+  <li><a href="#trunc">Trunc</a></li>
+  <li><a href="#lerp">Lerp</a></li>
+  <li><a href="#clamp">Clamp</a></li>
+  <li><a href="#saturate">Saturate</a></li>
+  <li><a href="#sqrt">Sqrt</a></li>
+  <li><a href="#reciprocalsqrt">ReciprocalSqrt</a></li>
+  <li><a href="#reciprocal">Reciprocal</a></li>
+  <li><a href="#fma">FMA</a></li>
+  <li><a href="#fmsub">FMSub</a></li>
+  <li><a href="#fmaddsub">FMAddSub</a></li>
+  <li><a href="#fmsubadd">FMSubAdd</a></li>
+  <li><a href="#fnmadd">FNMAdd</a></li>
+  <li><a href="#fnmsub">FNMSub</a></li>
+  <li><a href="#sin">Sin</a></li>
+  <li><a href="#cos">Cos</a></li>
+  <li><a href="#tan">Tan</a></li>
+  <li><a href="#asin">ASin</a></li>
+  <li><a href="#acos">ACos</a></li>
+  <li><a href="#atan">ATan</a></li>
+  <li><a href="#atan2">ATan2</a></li>
+  <li><a href="#modangles">ModAngles</a></li>
+  <li><a href="#addangles">AddAngles</a></li>
+  <li><a href="#subtractangles">SubtractAngles</a></li>
+  <li><a href="#sinh">SinH</a></li>
+  <li><a href="#cosh">CosH</a></li>
+  <li><a href="#tanh">TanH</a></li>
+  <li><a href="#asinh">ASinH</a></li>
+  <li><a href="#acosh">ACosH</a></li>
+  <li><a href="#atanh">ATanH</a></li>
+  <li><a href="#log">Log</a></li>
+  <li><a href="#log1p">Log1P</a></li>
+  <li><a href="#log10">Log10</a></li>
+  <li><a href="#log2">Log2</a></li>
+  <li><a href="#exp">Exp</a></li>
+  <li><a href="#exp10">Exp10</a></li>
+  <li><a href="#exp2">Exp2</a></li>
+  <li><a href="#expm1">ExpM1</a></li>
+  <li><a href="#pow">Pow</a></li>
+  <li><a href="#hypot">Hypot</a></li>
+  <li><a href="#hermite">Hermite</a></li>
+  <li><a href="#dot-and-scalardot">Dot and ScalarDot</a></li>
+  <li><a href="#absdot-and-scalarabsdot">AbsDot and ScalarAbsDot</a></li>
+  <li><a href="#cross">Cross</a></li>
+  <li><a href="#lengthsquared-and-scalarlengthsquared">LengthSquared and ScalarLengthSquared</a></li>
+  <li><a href="#length-and-scalarlength">Length and ScalarLength</a></li>
+  <li><a href="#normalize">Normalize</a></li>
+  <li><a href="#reciprocallength-and-scalarreciprocallength">ReciprocalLength and ScalarReciprocalLength</a></li>
+  <li><a href="#distancesquared-and-scalardistancesquared">DistanceSquared and ScalarDistanceSquared</a></li>
+  <li><a href="#distance-and-scalardistance">Distance and ScalarDistance</a></li>
+</ul>
 
 <p>The functions that work with the <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code>, <code class="language-plaintext highlighter-rouge">Tuple4</code> and <code class="language-plaintext highlighter-rouge">TupleSimd</code> types
 generally returning a <code class="language-plaintext highlighter-rouge">TupleSimd</code> holding the result of the operation.</p>
@@ -2565,9 +2568,42 @@ with respect to a coordinate system. Although the same representation is used fo
 vectors, the fact that a point represents a position whereas a vector represents a 
 direction leads to a number of important differences in how they are treated.</p>
 
+<h2 id="squarematrix">SquareMatrix</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">SquareMatrix</code> template class is used to represent transformations that can be applied
+to vectors, points and surface normals.</p>
+
+<p>The template is designed as a row oriented matrix, that can be instantiated for 
+single and double precision floating point types. The template can be instantiated
+as a \(2 x 2\), \(3 x 3\) or \(4 x 4\) matrix.</p>
+
+<p>Internally, computations on \(2 x 2\) matrices are performed using a single SIMD type/register,
+while operations on \(3 x 3\) and \(4 x 4\) matrices are performed using one
+SIMD register for each row.</p>
+
+<p><code class="language-plaintext highlighter-rouge">SquareMatrix</code> support matrix addition, scalar addition, matrix multiplication, scalar multiplication, 
+the matrices can be transposed using <code class="language-plaintext highlighter-rouge">Transpose</code> and inverted using <code class="language-plaintext highlighter-rouge">Inverse</code>, and <code class="language-plaintext highlighter-rouge">Determinant</code> calculates
+the determinant. The default constructor creates an identity matrix, so <code class="language-plaintext highlighter-rouge">SquareMatrix</code> handles the usual
+operations associated with small square matrices.</p>
+
 <h2 id="quaternion">Quaternion</h2>
 
-<h2 id="squarematrix">SquareMatrix</h2>
+<p>Quaternions provides a compact representation of rotations.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Quaternion</code> template can be used with both single and double precision floating
+point types.</p>
+
+<p>Like the tuple templates, there is a <code class="language-plaintext highlighter-rouge">QuaternionSimd</code> template that represents
+quaternions loaded into a SIMD register.</p>
+
+<h2 id="transform">Transform</h2>
+
+<p>A transform is a mapping from vectors to vectors or points to points.</p>
+
+<p>Taking a point, vector, or normal defined with respect to one coordinate frame and 
+finding its coordinate values with respect to another coordinate frame is a useful 
+capability.</p>
+
 
   </div>
 

@@ -264,13 +264,61 @@ struct Traits : public std::false_type
 };
 </code></pre>
 
+<p>The motivation for creating the <code class="language-plaintext highlighter-rouge">Traits&lt;T,N&gt;</code> specializations is that they can be used to implement C++ templates
+providing a common implementation that can be used with multiple data types. Like the multiplication for
+quaternions:</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;T&gt; QuaternionMultiply(const QuaternionSimd&lt;T&gt;&amp; q1, 
+                                    const QuaternionSimd&lt;T&gt;&amp; q2 )
+{
+    using QuaternionSimd = QuaternionSimd&lt;T&gt;;
+    using Traits = typename QuaternionSimd::Traits;
+    using FloatT = typename Traits::Type;
+    using Constants = Constants&lt;FloatT&gt;;
+    constexpr Traits::SIMDType controlWZYX = 
+        { { Constants::One, Constants::MinusOne, 
+            Constants::One, Constants::MinusOne } };
+    constexpr Traits::SIMDType controlZWXY = 
+        { { Constants::One, Constants::One, 
+            Constants::MinusOne, Constants::MinusOne } };
+    constexpr Traits::SIMDType controlYXWZ = 
+        { { Constants::MinusOne, Constants::One, 
+            Constants::One, Constants::MinusOne } };
+            
+    auto q2X = Traits::At&lt;0&gt;( q2.simd );
+    auto q2Y = Traits::At&lt;1&gt;( q2.simd );
+    auto q2Z = Traits::At&lt;2&gt;( q2.simd );
+    auto result = Traits::At&lt;3&gt;( q2.simd );
+            
+    result = Traits::Mul( result, q1.simd );
+    auto q1Swizzle = Traits::Swizzle&lt;0, 1, 2, 3&gt;( q1.simd );
+            
+    q2X = Traits::Mul( q2X, q1Swizzle );
+    q1Swizzle = Traits::Swizzle&lt;2, 3, 0, 1&gt;( q1Swizzle );
+            
+    result = Traits::FMAdd( q2X, controlWZYX, result );
+            
+    q2Y = Traits::Mul( q2Y, q1Swizzle );
+    q1Swizzle = Traits::Swizzle&lt;0, 1, 2, 3&gt;( q1Swizzle );
+            
+    q2Y = Traits::Mul( q2Y, controlZWXY );
+    q2Z = Traits::Mul( q2Z, q1Swizzle );
+            
+    q2Y = Traits::FMAdd( q2Z, controlYXWZ, q2Y );
+    result = Traits::Add( result, q2Y );
+    return result;
+}
+</code></pre>
+
 <p>The <code class="language-plaintext highlighter-rouge">Traits&lt;T,N&gt;</code> specializations provides access to the SIMD intrinsic functions, 
 and strives to maintain a uniform set of names for the implemented functions. The
 second template argument is sometimes used to select function implementations
 optimized for <code class="language-plaintext highlighter-rouge">N</code> elements in the SIMD type.</p>
 
-<p>Where <code class="language-plaintext highlighter-rouge">T</code> is the type of the values to use in the computations, and <code class="language-plaintext highlighter-rouge">N</code> is 
-the number of valid elements in the SIMD type. The SIMD type is a representation 
+<p><code class="language-plaintext highlighter-rouge">T</code> is the type of the values to use in the computations, and <code class="language-plaintext highlighter-rouge">N</code> is 
+the required number of valid elements in the SIMD type. The SIMD type is a representation 
 of a CPU register used for SIMD operations. The Intel/AMD x64 architecture
 provides several SIMD types:</p>
 
@@ -298,12 +346,12 @@ provides several SIMD types:</p>
   </li>
 </ul>
 
-<p>These data types are not basic C/C++ data types, and have several usage restrictions:</p>
+<p>The above data types are not basic C/C++ data types, and have several usage restrictions:</p>
 
 <ul>
   <li>Can only be used on either side of an assignment, as a return value, or as a parameter. Cannot be used in regular arithmetic expressions <code class="language-plaintext highlighter-rouge">+</code>, <code class="language-plaintext highlighter-rouge">-</code>, <code class="language-plaintext highlighter-rouge">*</code>, <code class="language-plaintext highlighter-rouge">/</code>, etc.</li>
   <li>Can be used as objects in aggregates, such as unions, to access the byte elements and structures.</li>
-  <li>Can only be operated on using intrinsic functions implemented by the compiler.</li>
+  <li>Can only be operated on using the intrinsic functions implemented by the compiler.</li>
 </ul>
 
 <p>Before doing any operations on SIMD type variables, they must be loaded using special intrinsic functions:</p>
@@ -312,12 +360,110 @@ provides several SIMD types:</p>
 </code></pre>
 <p>Where, in this case, <code class="language-plaintext highlighter-rouge">ptrToFloats</code> is a 32 byte aligned pointer to 8 single precision floating point values.</p>
 
+<h3 id="the-intel-intrinsics-guide">The Intel Intrinsics Guide</h3>
+
 <p>The <a href="https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html">Intel Intrinsics Guide</a> contains 
-a brief description of the available intrinsic functions. It’s a bit short on details, and the relevant
+a brief description of the available intrinsic functions. It’s a bit short on details, but when needed - the relevant
 details can be found in the <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html">Intel 64 and IA-32 Architectures Software Developer Manuals</a>.</p>
 
+<h3 id="simdtraitstn">SIMD::Traits&lt;T,N&gt;</h3>
+
+<p>All the intrinsic functions have unique, C style names, making it awkward to use them directly inside 
+templates. The intrinsic for adding two <code class="language-plaintext highlighter-rouge">__m128</code> variables is called <code class="language-plaintext highlighter-rouge">_mm_add_ps</code>:</p>
+
+<pre><code class="language-C++">auto v3 = _mm_add_ps(v1,v2);
+</code></pre>
+<p><code class="language-plaintext highlighter-rouge">_mm_add_ps</code> operates on single precision floating point values, adding the four values held by
+<code class="language-plaintext highlighter-rouge">v1</code> to the corresponding four values held by <code class="language-plaintext highlighter-rouge">v2</code> and storing the result in <code class="language-plaintext highlighter-rouge">v3</code>.</p>
+
+<p>The intrinsic for adding two <code class="language-plaintext highlighter-rouge">__m128d</code> variables is called <code class="language-plaintext highlighter-rouge">_mm_add_pd</code>:</p>
+<pre><code class="language-C++">auto v3 = _mm_add_pd(v1,v2);
+</code></pre>
+<p><code class="language-plaintext highlighter-rouge">_mm_add_pd</code> does the same job as <code class="language-plaintext highlighter-rouge">_mm_add_ps</code>, but operates on double precision floating point values, 
+and only two of those fits inside a <code class="language-plaintext highlighter-rouge">__m128d</code> variable.</p>
+
+<p>The intrinsic that actually performs the same operation as <code class="language-plaintext highlighter-rouge">_mm_add_ps</code> for 
+double precision floating point values is called <code class="language-plaintext highlighter-rouge">_mm256_add_pd</code>:</p>
+
+<pre><code class="language-C++">auto v3 = _mm256_add_pd(v1,v2);
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">_mm256_add_pd</code> works with two <code class="language-plaintext highlighter-rouge">__m256d</code> variables, and they hold four double 
+precision floating point values.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Traits&lt;T,N&gt;</code> specializations are a practical solution, wrapping the various 
+intrinsic functions, making them accessible using the same name:</p>
+
+<pre><code class="language-C++">using Traits = Traits&lt;float,4&gt;;
+auto v3 = Traits::Add(v1,v2);
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">Traits&lt;float,4&gt;</code> and <code class="language-plaintext highlighter-rouge">Traits&lt;double,4&gt;</code> holds the same number of elements.</p>
+
+<pre><code class="language-C++">using Traits = Traits&lt;double,4&gt;;
+auto v3 = Traits::Add(v1,v2);
+</code></pre>
+
+<p>This can be used to implement a template that adds the corresponding elements of two vectors:</p>
+
+<pre><code class="language-C++">template&lt;typename ValueT&gt;
+    requires std::is_same_v&lt;ValueT,char&gt; || std::is_same_v&lt;ValueT, Byte&gt; || 
+                std::is_same_v&lt;ValueT, SByte&gt; || std::is_same_v&lt;ValueT, Int16&gt; || 
+                std::is_same_v&lt;ValueT, UInt16&gt; || std::is_same_v&lt;ValueT, Int32&gt; || 
+                std::is_same_v&lt;ValueT, UInt32&gt; || std::is_same_v&lt;ValueT, Int64&gt; || 
+                std::is_same_v&lt;ValueT, UInt64&gt; || std::is_same_v&lt;ValueT, float&gt; || 
+                std::is_same_v&lt;ValueT, double&gt;
+std::vector&lt;ValueT&gt; Add( const std::vector&lt;ValueT&gt;&amp; v1, 
+                    const std::vector&lt;ValueT&gt;&amp; v2 )
+{
+    using Limits = SIMD::TraitLimits&lt;ValueT&gt;;
+    using Traits = SIMD::Traits&lt;ValueT, Limits::Size&gt;;
+
+    size_t resultSize = std::max( v1.size( ), v2.size( ) );
+    size_t operationCount = std::min( v1.size( ), v2.size( ) );
+    size_t iterationCount = operationCount / Limits::Size;
+    size_t remainingCount = operationCount % Limits::Size;
+
+    std::vector result;
+    result.resize( resultSize );
+
+    const auto* p1 = v1.data( );
+    const auto* p2 = v2.data( );
+    auto* pR = result.data( );
+    for ( size_t i = 0; i &lt; iterationCount; ++i )
+    {
+        Traits::Store( pR, Traits::Add( Traits::Load( p1 ), Traits::Load( p2 ) ) );
+        p1 += Limits::Size;
+        p2 += Limits::Size;
+        pR += Limits::Size;
+    }
+    for ( size_t i = 0; i &lt; remainingCount; ++i )
+    {
+        *pR = *p1 + *p2;
+        p1++;
+        p2++;
+        pR++;
+    }
+    if ( v1.size( ) &gt; v2.size( ) )
+    {
+        std::copy( p1, p1 + ( resultSize - operationCount ), pR );
+    }
+    else if ( v1.size( ) &lt; v2.size( ) )
+    {
+        std::copy( p2, p2 + ( resultSize - operationCount ), pR );
+    }
+    return result;
+}
+
+</code></pre>
+
+<p>The above example works for any of the supported data types, and uses <code class="language-plaintext highlighter-rouge">SIMD::TraitLimits&lt;ValueT&gt;::Size</code>
+to get the optimal value of <code class="language-plaintext highlighter-rouge">N</code> for the type <code class="language-plaintext highlighter-rouge">ValueT</code>.</p>
+
 <p>The number of available intrinsic functions can be a bit overwhelming, and the <code class="language-plaintext highlighter-rouge">Traits&lt;T,N&gt;</code> specializations
-groups the intrinsic functions according to the type they are designed to work with.</p>
+groups the intrinsic functions according to the type they are designed to work with. The various
+<code class="language-plaintext highlighter-rouge">Traits&lt;T,N&gt;</code> specializations do not support the same set of functions, but do share a common subset
+of operations.</p>
 
 <p><code class="language-plaintext highlighter-rouge">Traits&lt;float,4&gt;::Swizzle&lt;0,1,2,3&gt;( v )</code> and <code class="language-plaintext highlighter-rouge">Traits&lt;double,4&gt;::Swizzle&lt;0,1,2,3&gt;( v )</code> will 
 both reverse the order of the <code class="language-plaintext highlighter-rouge">4</code> elements in <code class="language-plaintext highlighter-rouge">v</code>, and the first will invoke <code class="language-plaintext highlighter-rouge">_mm_permute_ps</code> while
