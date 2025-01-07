@@ -1028,13 +1028,26 @@ and <code class="language-plaintext highlighter-rouge">Tuple4</code>:</p>
   <li><a href="#reciprocallength-and-scalarreciprocallength">ReciprocalLength and ScalarReciprocalLength</a></li>
   <li><a href="#distancesquared-and-scalardistancesquared">DistanceSquared and ScalarDistanceSquared</a></li>
   <li><a href="#distance-and-scalardistance">Distance and ScalarDistance</a></li>
+  <li><a href="#inbounds">InBounds</a></li>
+  <li><a href="#clamplength">ClampLength</a></li>
+  <li><a href="#reflect">Reflect</a></li>
+  <li><a href="#refract">Refract</a></li>
+  <li><a href="#orthogonal">Orthogonal</a></li>
+  <li><a href="#differenceofproducts">DifferenceOfProducts</a></li>
+  <li><a href="#sumofproducts">SumOfProducts</a></li>
+  <li><a href="#barycentric">BaryCentric</a></li>
+  <li><a href="#catmullrom">CatmullRom</a></li>
+  <li><a href="#mincomponentvalue">MinComponentValue</a></li>
+  <li><a href="#maxcomponentvalue">MaxComponentValue</a></li>
+  <li><a href="#mincomponentindex">MinComponentIndex</a></li>
+  <li><a href="#maxcomponentindex">MaxComponentIndex</a></li>
 </ul>
 
 <p>The functions that work with the <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code>, <code class="language-plaintext highlighter-rouge">Tuple4</code> and <code class="language-plaintext highlighter-rouge">TupleSimd</code> types
-generally returning a <code class="language-plaintext highlighter-rouge">TupleSimd</code> holding the result of the operation.</p>
+generally returns a <code class="language-plaintext highlighter-rouge">TupleSimd</code> holding the result of the operation.</p>
 
 <p>There are usually several overloads for each function, allowing the values
-held by the <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code> types to be automatically
+held by the <code class="language-plaintext highlighter-rouge">Tuple2</code>, <code class="language-plaintext highlighter-rouge">Tuple3</code> and <code class="language-plaintext highlighter-rouge">Tuple4</code> derived types to be automatically
 loaded into a SIMD type/register.</p>
 
 <p>Functions that calculate a single scalar value, returns a <code class="language-plaintext highlighter-rouge">TupleSimd</code> where every
@@ -2470,6 +2483,685 @@ template&lt;Internal::TupleType U, Internal::SimdType T&gt;
 inline auto ScalarDistance( const U&amp; p1, const T&amp; p2 ) noexcept;
 </code></pre>
 
+<h4 id="inbounds">InBounds</h4>
+
+<p>Detects if the elements of a vector are within bounds.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType S, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;
+inline S InBounds( const S&amp; v, const T&amp; bounds ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;
+inline S InBounds( const S&amp; v, const T&amp; bounds ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;
+inline T InBounds( const S&amp; v, const T&amp; bounds ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;
+inline typename S::Simd InBounds( const S&amp; v, const T&amp; bounds ) noexcept;
+
+</code></pre>
+
+<h4 id="clamplength">ClampLength</h4>
+
+<p>Clamps the length of a vector to a given range.</p>
+<pre><code class="language-C++">template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt; &amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline S ClampLength( const S&amp; v, const T&amp; lengthMin, const U&amp; lengthMax ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline S ClampLength( const S&amp; v, const T&amp; lengthMin, const U&amp; lengthMax ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline S ClampLength( const S&amp; v, const T&amp; lengthMin, const U&amp; lengthMax ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline S ClampLength( const S&amp; v, const T&amp; lengthMin, const U&amp; lengthMax ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline typename S::Simd ClampLength( const S&amp; v, const T&amp; lengthMin, const U&amp; lengthMax ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline typename S::Simd ClampLength( const S&amp; v, const T&amp; lengthMin, const U&amp; lengthMax ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline typename S::Simd ClampLength( const S&amp; v, const T&amp; lengthMin, const U&amp; lengthMax ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline typename S::Simd ClampLength( const S&amp; v, const T&amp; lengthMin, const U&amp; lengthMax ) noexcept;
+
+template&lt;Internal::SimdType S, typename T, typename U&gt;
+    requires IsFloatingPoint&lt;T&gt; &amp;&amp; IsFloatingPoint&lt;U&gt;
+inline S ClampLength( const S&amp; v, const T lengthMin, const U lengthMax ) noexcept;
+
+template&lt;Internal::TupleType S, typename T, typename U&gt;
+    requires IsFloatingPoint&lt;T&gt;&amp;&amp; IsFloatingPoint&lt;U&gt;
+inline S ClampLength( const S&amp; v, const T lengthMin, const U lengthMax ) noexcept;
+</code></pre>
+
+<h4 id="reflect">Reflect</h4>
+
+<p>Reflects an incident vector across a normal vector.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType S, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;
+inline S Reflect( const S&amp; incident, const T&amp; normal ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;
+inline S Reflect( const S&amp; incident, const T&amp; normal ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;
+inline T Reflect( const S&amp; incident, const T&amp; normal ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;
+inline typename S::Simd Reflect( const S&amp; incident, const T&amp; normal ) noexcept;
+
+</code></pre>
+
+<h4 id="refract">Refract</h4>
+
+<p>Refracts an incident vector across a normal vector.</p>
+
+<pre><code class="language-C++">
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt; &amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline S Refract( const S&amp; incident, const T&amp; normal, const U&amp; refractionIndex ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline S Refract( const S&amp; incident, const T&amp; normal, const U&amp; refractionIndex ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline S Refract( const S&amp; incident, const T&amp; normal, const U&amp; refractionIndex ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline S Refract( const S&amp; incident, const T&amp; normal, const U&amp; refractionIndex ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline typename S::Simd Refract( const S&amp; incident, const T&amp; normal, const U&amp; refractionIndex ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline typename S::Simd Refract( const S&amp; incident, const T&amp; normal, const U&amp; refractionIndex ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline typename S::Simd Refract( const S&amp; incident, const T&amp; normal, const U&amp; refractionIndex ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;
+inline typename S::Simd Refract( const S&amp; incident, const T&amp; normal, const U&amp; refractionIndex ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, typename U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; IsFloatingPoint&lt;U&gt;
+inline S Refract( const S&amp; incident, const T&amp; normal, const U refractionIndex ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, typename U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; IsFloatingPoint&lt;U&gt;
+inline S Refract( const S&amp; incident, const T&amp; normal, const U refractionIndex ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, typename U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; IsFloatingPoint&lt;U&gt;
+inline typename S::Simd Refract( const S&amp; incident, const T&amp; normal, const U refractionIndex ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, typename U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; IsFloatingPoint&lt;U&gt;
+inline typename S::Simd Refract( const S&amp; incident, const T&amp; normal, const U refractionIndex ) noexcept;
+</code></pre>
+
+<h4 id="orthogonal">Orthogonal</h4>
+
+<p>Computes a vector perpendicular to the argument vector.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType S&gt;
+inline S Orthogonal( const S&amp; v ) noexcept;
+
+template&lt;Internal::TupleType S&gt;
+inline typename S::Simd Orthogonal( const S&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="differenceofproducts">DifferenceOfProducts</h4>
+
+<p>Calculates the difference between the product of the first and the second argument, 
+and the product of the third and fourth argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, Internal::SimdType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt; &amp;&amp; Internal::IsCompatible&lt;S, U&gt; &amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline T DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline S DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U, Internal::SimdType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline S DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline S DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, Internal::SimdType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline S DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline S DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U, Internal::SimdType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline S DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline S DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline T DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U, Internal::SimdType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline T DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline T DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, Internal::SimdType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline U DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline U DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, Internal::SimdType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline V DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline typename S::Simd DifferenceOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+</code></pre>
+
+<h4 id="sumofproducts">SumOfProducts</h4>
+
+<p>Calculates the sum of the product of the first and the second argument, 
+and the product of the third and fourth argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, Internal::SimdType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt; &amp;&amp; Internal::IsCompatible&lt;S, U&gt; &amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline T SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline S SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U, Internal::SimdType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline S SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline S SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, Internal::SimdType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline S SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline S SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U, Internal::SimdType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline S SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline S SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline T SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U, Internal::SimdType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline T SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline T SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, Internal::SimdType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline U SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline U SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, Internal::SimdType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline V SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, Internal::TupleType V&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;
+inline typename S::Simd SumOfProducts( const S&amp; v1, const T&amp; v2, const U&amp; v3, const V&amp; v4 ) noexcept;
+</code></pre>
+
+<h4 id="barycentric">BaryCentric</h4>
+
+<p>Calculates a point in Barycentric coordinates, using the specified triangle.</p>
+
+<p>see https://en.wikipedia.org/wiki/Barycentric_coordinate_system</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt; &amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; f, const W&amp; g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, typename V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt; &amp;&amp; Internal::IsCompatible&lt;S, U&gt; &amp;&amp; IsFloatingPoint&lt;V&gt; &amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V f, const W g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U, typename V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; IsFloatingPoint&lt;V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V f, const W g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, typename V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; IsFloatingPoint&lt;V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V f, const W g ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U, typename V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; IsFloatingPoint&lt;V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V f, const W g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U, typename V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; IsFloatingPoint&lt;V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V f, const W g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U, typename V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; IsFloatingPoint&lt;V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V f, const W g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, typename V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; IsFloatingPoint&lt;V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V f, const W g ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, typename V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; IsFloatingPoint&lt;V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd BaryCentric( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V f, const W g ) noexcept;
+
+</code></pre>
+
+<h4 id="catmullrom">CatmullRom</h4>
+
+<p>Calculates the Catmull-Rom interpolation, using the specified positions.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, Internal::TupleType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, Internal::SimdType V, Internal::SimdType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, Internal::SimdType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, Internal::TupleType V, Internal::TupleType W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; Internal::IsCompatible&lt;S, W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W&amp; t ) noexcept;
+
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, Internal::SimdType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U, Internal::TupleType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U, Internal::SimdType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U, Internal::TupleType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, Internal::SimdType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::SimdType U, Internal::TupleType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U, Internal::SimdType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::SimdType S, Internal::TupleType T, Internal::TupleType U, Internal::TupleType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline S CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U, Internal::SimdType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::SimdType U, Internal::TupleType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U, Internal::SimdType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::SimdType T, Internal::TupleType U, Internal::TupleType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, Internal::SimdType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::SimdType U, Internal::TupleType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, Internal::SimdType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+
+template&lt;Internal::TupleType S, Internal::TupleType T, Internal::TupleType U, Internal::TupleType V, typename W&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt;&amp;&amp; Internal::IsCompatible&lt;S, V&gt;&amp;&amp; IsFloatingPoint&lt;W&gt;
+inline typename S::Simd CatmullRom( const S&amp; p1, const T&amp; p2, const U&amp; p3, const V&amp; p4, const W t ) noexcept;
+</code></pre>
+
+<h4 id="mincomponentvalue">MinComponentValue</h4>
+
+<p>Retrieves the lowest value held by the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, typename ResultT = typename T::value_type &gt;
+inline ResultT MinComponentValue( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::value_type&gt;
+constexpr inline ResultT MinComponentValue( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="maxcomponentvalue">MaxComponentValue</h4>
+
+<p>Retrieves the highest value held by the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, typename ResultT = typename T::value_type &gt;
+inline ResultT MaxComponentValue( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::value_type&gt;
+constexpr inline ResultT MaxComponentValue( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="mincomponentindex">MinComponentIndex</h4>
+
+<p>Retrieves the offset of the lowest value held by the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, typename ResultT = typename T::value_type &gt;
+inline ResultT MinComponentIndex( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::value_type&gt;
+constexpr inline ResultT MinComponentIndex( const T&amp; v ) noexcept;
+</code></pre>
+
+<h4 id="maxcomponentindex">MaxComponentIndex</h4>
+
+<p>Retrieves the offset of the highest value held by the argument.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType T, typename ResultT = typename T::value_type &gt;
+inline ResultT MaxComponentIndex( const T&amp; v ) noexcept;
+
+template&lt;Internal::TupleType T, typename ResultT = typename T::value_type&gt;
+constexpr inline ResultT MaxComponentIndex( const T&amp; v ) noexcept;
+</code></pre>
+
 <hr />
 
 <h3 id="vector2f-vector3f-vector4f-vector2i-vector3i-vector4i">Vector2f, Vector3f, Vector4f, Vector2i, Vector3i, Vector4i</h3>
@@ -2550,7 +3242,17 @@ BenchmarkVector3               5.63 ns         4.85 ns    186666667
 BenchmarkPBRTVector3f          7.08 ns         5.86 ns    112000000
 </code></pre></div></div>
 
-<h4 id="normal3f-and-normal3i">Normal3f and Normal3i</h4>
+<h4 id="vector-functions">Vector functions</h4>
+
+<h5 id="anglebetween">AngleBetween</h5>
+
+<p>Calculates the angle in radians between two vectors.</p>
+
+<h5 id="anglebetweennormals">AngleBetweenNormals</h5>
+
+<p>Calculates the angle in radians between two normalized vectors.</p>
+
+<h3 id="normal3f-and-normal3i">Normal3f and Normal3i</h3>
 
 <p>The surface normal is a vector perpendicular to 
 a surface at a specific position. It can be defined as the cross product 
@@ -2560,13 +3262,21 @@ distinguish between the two of them: since normals are defined in terms
 of their relationship to a surface, they behave differently than 
 vectors in some situations, particularly when applying transformations.</p>
 
-<h4 id="point3f-and-point3i">Point3f and Point3i</h4>
+<h4 id="normal3f-functions">Normal3f functions</h4>
+
+<h3 id="point3f-and-point3i">Point3f and Point3i</h3>
 
 <p>A point is a zero-dimensional location in 2D or 3D space. The Point2i/f and Point3i/f 
 classes represent points in the obvious way: using \(x, y, z\)  (in 3D) coordinates 
 with respect to a coordinate system. Although the same representation is used for 
 vectors, the fact that a point represents a position whereas a vector represents a 
 direction leads to a number of important differences in how they are treated.</p>
+
+<h4 id="point3f">Point3f</h4>
+
+<h5 id="linepointdistance">LinePointDistance</h5>
+
+<p>Calculates the minimum distance between a line and a point.</p>
 
 <h2 id="squarematrix">SquareMatrix</h2>
 
@@ -2595,6 +3305,236 @@ point types.</p>
 
 <p>Like the tuple templates, there is a <code class="language-plaintext highlighter-rouge">QuaternionSimd</code> template that represents
 quaternions loaded into a SIMD register.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Quaternion</code> and <code class="language-plaintext highlighter-rouge">QuaternionSimd</code> supports addition, subtraction, multiplication, 
+scalar multiplication and scalar division.</p>
+
+<h3 id="quaternion-member-functions">Quaternion member functions</h3>
+
+<h4 id="constructors">Constructors</h4>
+
+<pre><code class="language-C++">constexpr Quaternion( ) noexcept;
+</code></pre>
+<p>The default constructor initializes <code class="language-plaintext highlighter-rouge">v.x</code>, <code class="language-plaintext highlighter-rouge">v.y</code>, <code class="language-plaintext highlighter-rouge">v.z</code> and <code class="language-plaintext highlighter-rouge">w</code> to <code class="language-plaintext highlighter-rouge">0.0</code>.</p>
+
+<pre><code class="language-C++">constexpr Quaternion( ValueType xv, ValueType yv, ValueType zv, ValueType wv ) noexcept;
+</code></pre>
+<p>Initializes <code class="language-plaintext highlighter-rouge">v.x</code> to <code class="language-plaintext highlighter-rouge">xv</code>, <code class="language-plaintext highlighter-rouge">v.y</code> to <code class="language-plaintext highlighter-rouge">yv</code>, <code class="language-plaintext highlighter-rouge">v.z</code> to <code class="language-plaintext highlighter-rouge">zv</code> and <code class="language-plaintext highlighter-rouge">w</code> to <code class="language-plaintext highlighter-rouge">wv</code>.</p>
+
+<pre><code class="language-C++">constexpr Quaternion( const Vector&lt;ValueType,3&gt;&amp; vv, ValueType wv ) noexcept;
+</code></pre>
+
+<p>Initializes <code class="language-plaintext highlighter-rouge">v</code> to <code class="language-plaintext highlighter-rouge">xv</code> and <code class="language-plaintext highlighter-rouge">w</code> to <code class="language-plaintext highlighter-rouge">wv</code>.</p>
+
+<pre><code class="language-C++">Quaternion( const Simd&amp; qsimd ) noexcept
+</code></pre>
+<p>Initializes the quaternion using the values held by <code class="language-plaintext highlighter-rouge">qsimd.simd</code>.</p>
+
+<pre><code class="language-C++">Quaternion( ValueType pitch, ValueType yaw, ValueType roll ) noexcept
+</code></pre>
+<p>Creates a quaternion based on the pitch, yaw, and roll (Euler angles),
+where:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pitch</code> is the angle of rotation around the x-axis, in radians.</li>
+  <li><code class="language-plaintext highlighter-rouge">yaw</code> is the angle of rotation around the y-axis, in radians.</li>
+  <li><code class="language-plaintext highlighter-rouge">roll</code> is the angle of rotation around the z-axis, in radians.</li>
+</ul>
+
+<h3 id="quaternion-functions">Quaternion functions</h3>
+
+<h4 id="dot">Dot</h4>
+
+<p>Calculates the dot product of two quaternions.</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename Vector&lt;T,4&gt;::Simd Dot( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1, 
+                                const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q2 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename Vector&lt;T, 4&gt;::Simd Dot( const Quaternion&lt;T&gt;&amp; q1, 
+                                const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q2 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename Vector&lt;T, 4&gt;::Simd Dot( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1, 
+                                const Quaternion&lt;T&gt;&amp; q2 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename Vector&lt;T, 4&gt;::Simd Dot( const Quaternion&lt;T&gt;&amp; q1, 
+                                const Quaternion&lt;T&gt;&amp; q2 ) noexcept;
+</code></pre>
+
+<h4 id="length-and-scalarlength-1">Length and ScalarLength</h4>
+
+<p>Calculates the magnitude of a quaternion.</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename Vector&lt;T, 4&gt;::Simd Length( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename Vector&lt;T, 4&gt;::Simd Length( const Quaternion&lt;T&gt;&amp; q1 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename T ScalarLength( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename T ScalarLength( const Quaternion&lt;T&gt;&amp; q1 ) noexcept;
+</code></pre>
+
+<h4 id="lengthsquared-and-scalarlengthsquared-1">LengthSquared and ScalarLengthSquared</h4>
+
+<p>Calculates the square of the magnitude of a quaternion.</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename Vector&lt;T, 4&gt;::Simd LengthSquared( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename Vector&lt;T, 4&gt;::Simd LengthSquared( const Quaternion&lt;T&gt;&amp; q1 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename T ScalarLengthSquared( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename T ScalarLengthSquared( const Quaternion&lt;T&gt;&amp; q1 ) noexcept;
+</code></pre>
+
+<h4 id="reciprocallength-and-scalarreciprocallength-1">ReciprocalLength and ScalarReciprocalLength</h4>
+
+<p>Calculates the reciprocal of the magnitude of a quaternion.</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename Vector&lt;T, 4&gt;::Simd ReciprocalLength( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename Vector&lt;T, 4&gt;::Simd ReciprocalLength( const Quaternion&lt;T&gt;&amp; q1 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename T ScalarReciprocalLength( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+typename T ScalarReciprocalLength( const Quaternion&lt;T&gt;&amp; q1 ) noexcept;
+</code></pre>
+
+<h4 id="conjugate">Conjugate</h4>
+
+<p>Calculates the conjugate of a quaternion.</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Conjugate( const Quaternion&lt;T&gt;&amp; q1 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Normalize( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1 ) noexcept;
+</code></pre>
+
+<h4 id="normalize-1">Normalize</h4>
+
+<p>Normalizes a quaternion.</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Normalize( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Normalize( const Quaternion&lt;T&gt;&amp; q1 ) noexcept;
+</code></pre>
+
+<h4 id="inverse">Inverse</h4>
+
+<p>Calculates the inverse of a quaternion.</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Inverse( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Inverse( const Quaternion&lt;T&gt;&amp; q1 ) noexcept;
+</code></pre>
+
+<h4 id="log-1">Log</h4>
+
+<p>Calculates the natural logarithm of a unit quaternion.</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Log( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1 ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Log( const Quaternion&lt;T&gt;&amp; q1 ) noexcept;
+</code></pre>
+
+<h4 id="slerp">Slerp</h4>
+
+<p>Spherical linear interpolation between two unit quaternions.</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Slerp( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1, 
+                                    const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q2, 
+                                    const typename Vector&lt;T, 4&gt;::Simd&amp; t ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Slerp( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1, 
+                                    const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q2, 
+                                    const Vector&lt;T, 4&gt;&amp; t ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Slerp( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1, 
+                                    const Quaternion&lt;T&gt;&amp; q2, 
+                                    const typename Vector&lt;T, 4&gt;::Simd&amp; t ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Slerp( const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q1, 
+                                    const Quaternion&lt;T&gt;&amp; q2, 
+                                    const Vector&lt;T, 4&gt;&amp; t ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Slerp( const Quaternion&lt;T&gt;&amp; q1, 
+                                    const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q2, 
+                                    const typename Vector&lt;T, 4&gt;::Simd&amp; t ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Slerp( const Quaternion&lt;T&gt;&amp; q1, 
+                                    const QuaternionSimd&lt;Quaternion&lt;T&gt;&gt;&amp; q2, 
+                                    const Vector&lt;T, 4&gt;&amp; t ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Slerp( const Quaternion&lt;T&gt;&amp; q1, 
+                                    const Quaternion&lt;T&gt;&amp; q2, 
+                                    const typename Vector&lt;T, 4&gt;::Simd&amp; t ) noexcept;
+
+template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Slerp( const Quaternion&lt;T&gt;&amp; q1, 
+                                    const Quaternion&lt;T&gt;&amp; q2, 
+                                    const Vector&lt;T, 4&gt;&amp; t ) noexcept;
+
+</code></pre>
 
 <h2 id="transform">Transform</h2>
 

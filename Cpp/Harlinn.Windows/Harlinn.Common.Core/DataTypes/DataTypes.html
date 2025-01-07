@@ -3,21 +3,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Binary | Harlinn</title>
+<title>Core C++ classes and templates | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Binary" />
-<meta name="author" content="Espen Harlinn" />
+<meta property="og:title" content="Core C++ classes and templates" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is my personal Github site," />
 <meta property="og:description" content="This is my personal Github site," />
-<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/DataTypes/Binary.html" />
-<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/DataTypes/Binary.html" />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/DataTypes/DataTypes.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/DataTypes/DataTypes.html" />
 <meta property="og:site_name" content="Harlinn" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Binary" />
+<meta property="twitter:title" content="Core C++ classes and templates" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal Github site,","headline":"Binary","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/DataTypes/Binary.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal Github site,","headline":"Core C++ classes and templates","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/DataTypes/DataTypes.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -229,17 +228,67 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Binary</h1>
+    <h1 class="post-title">Core C++ classes and templates</h1>
   </header>
 
   <div class="post-content">
-    <p><a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_binary.html"><code class="language-plaintext highlighter-rouge">Binary</code></a> is a reference counted <code class="language-plaintext highlighter-rouge">Byte</code> buffer.</p>
+    <p>The <a href="/Cpp/Harlinn.Windows/Harlinn.Common.Core/Harlinn.Common.Core.html">Harlinn.Common.Core</a> library
+has its own set of core C++ classes and templates that are used throughout the
+library.</p>
+
+<h3 id="basicstring">BasicString</h3>
+<p><a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_basic_string.html"><code class="language-plaintext highlighter-rouge">BasicString</code></a> is a template class implementing a reference counted C++ string type.</p>
+
+<p>The API is similar to the API exposed by <code class="language-plaintext highlighter-rouge">std::basic_string</code>, and it’s used throughout 
+the <a href="/Cpp/Harlinn.Windows/Harlinn.Common.Core/Harlinn.Common.Core.html">Harlinn.Common.Core</a> library 
+as a container for sequences of the <code class="language-plaintext highlighter-rouge">char</code> or <code class="language-plaintext highlighter-rouge">wchar_t</code> character types. <a href="BasicString.html">more…</a></p>
+
+<h3 id="binary">Binary</h3>
+<p><a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_binary.html"><code class="language-plaintext highlighter-rouge">Binary</code></a> is a reference counted <code class="language-plaintext highlighter-rouge">Byte</code> buffer.</p>
 
 <p>The primary use case is to be able to pass incoming data to multiple threads for processing, or for using
-multiple threads to dispatch a block of data to multiple destinations. As the threads completes their work
-the reference count will be decremented until the final <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_binary.html"><code class="language-plaintext highlighter-rouge">Binary</code></a>
-is destroyed and the reference count reaches <code class="language-plaintext highlighter-rouge">0</code>, causing the internal buffer to be deleted.</p>
+multiple threads to dispatch a block of data to multiple destinations. <a href="Binary.html">more…</a></p>
 
+<h3 id="currency">Currency</h3>
+
+<p>A <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_currency.html"><code class="language-plaintext highlighter-rouge">Currency</code></a> object wraps a 64-bit integer, 
+scaled by 10,000 to give a fixed-point number with 15 digits to the left of the decimal point and 4 digits 
+to the right.</p>
+
+<p>This representation provides a range of <code class="language-plaintext highlighter-rouge">-922,337,203,685,477.5808</code> to <code class="language-plaintext highlighter-rouge">922,337,203,685,477.5807</code>.</p>
+
+<p>The Currency type is useful for calculations involving money and for fixed-point calculations 
+in which accuracy is important.</p>
+
+<h3 id="datetime">DateTime</h3>
+
+<p>Represents an instant in time, in UTC.</p>
+
+<p>The <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_date_time.html"><code class="language-plaintext highlighter-rouge">DateTime</code></a> class 
+represents dates and times with values ranging from <code class="language-plaintext highlighter-rouge">00:00:00</code> (midnight), January 1, 0001 Anno Domini (Common Era) through <code class="language-plaintext highlighter-rouge">23:59:59</code>, 
+December 31, <code class="language-plaintext highlighter-rouge">9999</code> A.D. (C.E.) in the Gregorian calendar.</p>
+
+<p>Time values are measured in 100-nanosecond units called ticks. A particular date 
+is the number of ticks since <code class="language-plaintext highlighter-rouge">12:00</code> midnight, January 1, 0001 A.D. (C.E.) in 
+the Gregorian calendar. The number excludes ticks that would be added by leap 
+seconds. For example, a ticks value of 31241376000000000L represents the date 
+Friday, January 01, 0100 <code class="language-plaintext highlighter-rouge">12:00:00</code> midnight.</p>
+
+<h3 id="guid">Guid</h3>
+
+<p>A <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_guid.html"><code class="language-plaintext highlighter-rouge">Guid</code></a> is a 128-bit value 
+that can be used across all computers and networks wherever a unique identifier is required. 
+Such an identifier has a very low probability of being duplicated.</p>
+
+<h3 id="timespan">TimeSpan</h3>
+
+<p>A <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_time_span.html"><code class="language-plaintext highlighter-rouge">TimeSpan</code></a> object 
+represents a time interval measured as a positive or negative number of days, hours, 
+minutes, seconds, and fractions of a second.</p>
+
+<p>The value of a TimeSpan object is the number of ticks that equal the 
+represented time interval. A tick is equal to 100 nanoseconds, or one ten-millionth 
+of a second.</p>
 
   </div>
 

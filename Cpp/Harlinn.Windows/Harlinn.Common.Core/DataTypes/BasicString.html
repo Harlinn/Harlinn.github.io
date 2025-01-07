@@ -3,21 +3,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Binary | Harlinn</title>
+<title>BasicString | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Binary" />
-<meta name="author" content="Espen Harlinn" />
+<meta property="og:title" content="BasicString" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is my personal Github site," />
 <meta property="og:description" content="This is my personal Github site," />
-<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/DataTypes/Binary.html" />
-<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/DataTypes/Binary.html" />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/DataTypes/BasicString.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/DataTypes/BasicString.html" />
 <meta property="og:site_name" content="Harlinn" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Binary" />
+<meta property="twitter:title" content="BasicString" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal Github site,","headline":"Binary","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/DataTypes/Binary.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal Github site,","headline":"BasicString","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/DataTypes/BasicString.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -229,16 +228,123 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Binary</h1>
+    <h1 class="post-title">BasicString</h1>
   </header>
 
   <div class="post-content">
-    <p><a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_binary.html"><code class="language-plaintext highlighter-rouge">Binary</code></a> is a reference counted <code class="language-plaintext highlighter-rouge">Byte</code> buffer.</p>
+    <p><a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_basic_string.html"><code class="language-plaintext highlighter-rouge">BasicString</code></a> is a template class implementing a reference counted C++ string type.</p>
 
-<p>The primary use case is to be able to pass incoming data to multiple threads for processing, or for using
-multiple threads to dispatch a block of data to multiple destinations. As the threads completes their work
-the reference count will be decremented until the final <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_binary.html"><code class="language-plaintext highlighter-rouge">Binary</code></a>
-is destroyed and the reference count reaches <code class="language-plaintext highlighter-rouge">0</code>, causing the internal buffer to be deleted.</p>
+<p>The API is similar to the API exposed by <code class="language-plaintext highlighter-rouge">std::basic_string</code>, and it’s used throughout 
+the <a href="/Cpp/Harlinn.Windows/Harlinn.Common.Core/Harlinn.Common.Core.html">Harlinn.Common.Core</a> library 
+as a container for sequences of the <code class="language-plaintext highlighter-rouge">char</code> or <code class="language-plaintext highlighter-rouge">wchar_t</code> character types.</p>
+
+<p>The internal representation of the string data is:</p>
+<pre><code class="language-C++">template&lt; typename T &gt;
+struct Data
+{
+    using CharType = T;
+    size_t referenceCount_ = 1;
+    size_t size_ = 0;
+    CharType buffer_[1024];
+
+    size_t AddRef( ) noexcept
+    {
+        return InterlockedIncrementSizeT( &amp;referenceCount_ );
+    }
+
+    size_t DecRef( ) noexcept
+    {
+        return InterlockedDecrementSizeT( &amp;referenceCount_ );
+    }
+};
+</code></pre>
+
+<p>The above specifies the layout of the string data, which is basically</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Member</th>
+      <th>Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Reference count</td>
+      <td>8 bytes</td>
+    </tr>
+    <tr>
+      <td>Number of characters</td>
+      <td>8 bytes</td>
+    </tr>
+    <tr>
+      <td>The first character</td>
+      <td><code class="language-plaintext highlighter-rouge">sizeof(CharType)</code></td>
+    </tr>
+    <tr>
+      <td>The second character</td>
+      <td><code class="language-plaintext highlighter-rouge">sizeof(CharType)</code></td>
+    </tr>
+    <tr>
+      <td>.</td>
+      <td>.</td>
+    </tr>
+    <tr>
+      <td>.</td>
+      <td>.</td>
+    </tr>
+    <tr>
+      <td>The <code class="language-plaintext highlighter-rouge">size_</code><sup>th</sup> character</td>
+      <td><code class="language-plaintext highlighter-rouge">sizeof(CharType)</code></td>
+    </tr>
+    <tr>
+      <td>Terminating zero</td>
+      <td><code class="language-plaintext highlighter-rouge">sizeof(CharType)</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The buffer size doesn’t really mean anything, it could be set to <code class="language-plaintext highlighter-rouge">1</code> and it would change nothing.
+Setting it to something quite a bit larger is just convenient for debugging purposes, and nothing else.</p>
+
+<p>The <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_basic_string.html"><code class="language-plaintext highlighter-rouge">BasicString</code></a> template has a single 
+data member, <code class="language-plaintext highlighter-rouge">Data* data_</code>, so the the size of a <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_basic_string.html"><code class="language-plaintext highlighter-rouge">BasicString</code></a>
+object is just the size of this pointer.</p>
+
+<p>A <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_basic_string.html"><code class="language-plaintext highlighter-rouge">BasicString</code></a> of length <code class="language-plaintext highlighter-rouge">0</code> 
+does have a data object, so initializing a container with a large number of empty <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_basic_string.html"><code class="language-plaintext highlighter-rouge">BasicString</code></a> 
+objects is cheap, and so is copying the contents of the <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_basic_string.html"><code class="language-plaintext highlighter-rouge">BasicString</code></a>
+object, as no allocation will occur, since all that is needed is incrementing the reference count.</p>
+
+<pre><code class="language-C++">BasicString( const BasicString&amp; other ) noexcept
+    : data_( other.data_ )
+{
+    if ( data_ )
+    {
+        data_-&gt;AddRef( );
+    }
+}
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">BasicString</code> can be move constructed:</p>
+<pre><code class="language-C++">BasicString( BasicString&amp;&amp; other ) noexcept
+    : data_( other.data_ )
+{
+    other.data_ = nullptr;
+}
+</code></pre>
+<p>and move assigned:</p>
+
+<pre><code class="language-C++">BasicString&amp; operator = ( BasicString&amp;&amp; other ) noexcept
+{
+    std::swap( other.data_, data_ );
+    return *this;
+}
+</code></pre>
+
+<p><a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_basic_string.html"><code class="language-plaintext highlighter-rouge">BasicString</code></a> objects are not thread safe, 
+but <a href="/Doxygen/class_harlinn_1_1_common_1_1_core_1_1_basic_string.html"><code class="language-plaintext highlighter-rouge">BasicString</code></a> objects on different threads can
+share the same reference counted <code class="language-plaintext highlighter-rouge">Data</code> object.</p>
 
 
   </div>
