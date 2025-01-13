@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['moodycamel_5falignas_0',['MOODYCAMEL_ALIGNAS',['../_h_c_c_concurrent_queue_8h.html#a9410af73fc034ec08471af2dee94592b',1,'HCCConcurrentQueue.h']]],
-  ['moodycamel_5faligned_5ftype_5flike_1',['MOODYCAMEL_ALIGNED_TYPE_LIKE',['../_h_c_c_concurrent_queue_8h.html#a50f91507797db95aa074e348ee09db21',1,'HCCConcurrentQueue.h']]],
-  ['moodycamel_5falignof_2',['MOODYCAMEL_ALIGNOF',['../_h_c_c_concurrent_queue_8h.html#ad5944e0b11228fe60c48bbddf60b90fa',1,'HCCConcurrentQueue.h']]]
+  ['jet_5funicode_0',['JET_UNICODE',['../_h_c_c_ese_result_8h.html#a7a2da97689d576e99b92e088d3ab086e',1,'HCCEseResult.h']]],
+  ['jet_5fversion_1',['JET_VERSION',['../_h_c_c_ese_result_8h.html#a5d5cc38f69b49dd11e688ed486f4c29a',1,'HCCEseResult.h']]]
 ];

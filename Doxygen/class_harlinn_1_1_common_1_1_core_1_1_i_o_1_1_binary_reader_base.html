@@ -127,72 +127,72 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa40dbbe10ac213caad8ed37421251ec3" id="r_aa40dbbe10ac213caad8ed37421251ec3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa40dbbe10ac213caad8ed37421251ec3">ReadSize</a> ()</td></tr>
 <tr class="memdesc:aa40dbbe10ac213caad8ed37421251ec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads size information from the underlying stream. This is usually the count of elements that comes next in the stream.  <br /></td></tr>
 <tr class="separator:aa40dbbe10ac213caad8ed37421251ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68f85b322a8e9000279bc4281bb4d01e" id="r_a68f85b322a8e9000279bc4281bb4d01e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;T&gt;</td></tr>
-<tr class="memitem:a68f85b322a8e9000279bc4281bb4d01e"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a68f85b322a8e9000279bc4281bb4d01e">Read</a> ()</td></tr>
+<tr class="memitem:a68f85b322a8e9000279bc4281bb4d01e" id="r_a68f85b322a8e9000279bc4281bb4d01e"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a68f85b322a8e9000279bc4281bb4d01e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a68f85b322a8e9000279bc4281bb4d01e">Read</a> ()</td></tr>
 <tr class="memdesc:a68f85b322a8e9000279bc4281bb4d01e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a boolean value from the stream.  <br /></td></tr>
 <tr class="separator:a68f85b322a8e9000279bc4281bb4d01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1a6b83df66692d29acb7e11833a9fd8" id="r_ad1a6b83df66692d29acb7e11833a9fd8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;T&gt;</td></tr>
-<tr class="memitem:ad1a6b83df66692d29acb7e11833a9fd8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad1a6b83df66692d29acb7e11833a9fd8">Read</a> (T &amp;value)</td></tr>
+<tr class="memitem:ad1a6b83df66692d29acb7e11833a9fd8" id="r_ad1a6b83df66692d29acb7e11833a9fd8"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:ad1a6b83df66692d29acb7e11833a9fd8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad1a6b83df66692d29acb7e11833a9fd8">Read</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value)</td></tr>
 <tr class="memdesc:ad1a6b83df66692d29acb7e11833a9fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a boolean value from the stream and writes it to the bool variable referenced by the value parameter.  <br /></td></tr>
 <tr class="separator:ad1a6b83df66692d29acb7e11833a9fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1f5cbaf9fdc2db55e43bd8e0134e51a" id="r_ac1f5cbaf9fdc2db55e43bd8e0134e51a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;T&gt; ) == 1 ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;T&gt; )</td></tr>
-<tr class="memitem:ac1f5cbaf9fdc2db55e43bd8e0134e51a"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac1f5cbaf9fdc2db55e43bd8e0134e51a">Read</a> (T &amp;value)</td></tr>
+<tr class="memitem:ac1f5cbaf9fdc2db55e43bd8e0134e51a" id="r_ac1f5cbaf9fdc2db55e43bd8e0134e51a"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) == 1 ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; )</td></tr>
+<tr class="memitem:ac1f5cbaf9fdc2db55e43bd8e0134e51a"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac1f5cbaf9fdc2db55e43bd8e0134e51a">Read</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value)</td></tr>
 <tr class="memdesc:ac1f5cbaf9fdc2db55e43bd8e0134e51a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a non-boolean byte sized value from the stream and writes it to the byte sized variable referenced by the value parameter.  <br /></td></tr>
 <tr class="separator:ac1f5cbaf9fdc2db55e43bd8e0134e51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfbb086e6f6cd6ac05cda6f2646680ef" id="r_acfbb086e6f6cd6ac05cda6f2646680ef"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;T&gt; ) == 1 ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;T&gt; )</td></tr>
-<tr class="memitem:acfbb086e6f6cd6ac05cda6f2646680ef"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acfbb086e6f6cd6ac05cda6f2646680ef">Read</a> ()</td></tr>
+<tr class="memitem:acfbb086e6f6cd6ac05cda6f2646680ef" id="r_acfbb086e6f6cd6ac05cda6f2646680ef"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) == 1 ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; )</td></tr>
+<tr class="memitem:acfbb086e6f6cd6ac05cda6f2646680ef"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acfbb086e6f6cd6ac05cda6f2646680ef">Read</a> ()</td></tr>
 <tr class="memdesc:acfbb086e6f6cd6ac05cda6f2646680ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a non-boolean byte sized value from the stream and returns the value.  <br /></td></tr>
 <tr class="separator:acfbb086e6f6cd6ac05cda6f2646680ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ff9c4aa500ad761e6bfd11b0d80ee6e" id="r_a9ff9c4aa500ad761e6bfd11b0d80ee6e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires ( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt; || std::is_enum_v&lt;T&gt; ) &amp;&amp; sizeof( std::remove_cvref_t&lt;T&gt; ) &gt; 1 )</td></tr>
-<tr class="memitem:a9ff9c4aa500ad761e6bfd11b0d80ee6e"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9ff9c4aa500ad761e6bfd11b0d80ee6e">Read</a> (T &amp;value)</td></tr>
+<tr class="memitem:a9ff9c4aa500ad761e6bfd11b0d80ee6e" id="r_a9ff9c4aa500ad761e6bfd11b0d80ee6e"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || std::is_enum_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) &amp;&amp; sizeof( std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) &gt; 1 )</td></tr>
+<tr class="memitem:a9ff9c4aa500ad761e6bfd11b0d80ee6e"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9ff9c4aa500ad761e6bfd11b0d80ee6e">Read</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value)</td></tr>
 <tr class="memdesc:a9ff9c4aa500ad761e6bfd11b0d80ee6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a value with size greater than 1 from the stream and writes it to the variable referenced by the value parameter.  <br /></td></tr>
 <tr class="separator:a9ff9c4aa500ad761e6bfd11b0d80ee6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90e836cd18968a0cafda530f752b90a3" id="r_a90e836cd18968a0cafda530f752b90a3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires ( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt; || std::is_enum_v&lt;T&gt;) &amp;&amp; sizeof( std::remove_cvref_t&lt;T&gt; ) &gt; 1 )</td></tr>
-<tr class="memitem:a90e836cd18968a0cafda530f752b90a3"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a90e836cd18968a0cafda530f752b90a3">Read</a> ()</td></tr>
+<tr class="memitem:a90e836cd18968a0cafda530f752b90a3" id="r_a90e836cd18968a0cafda530f752b90a3"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || std::is_enum_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;) &amp;&amp; sizeof( std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) &gt; 1 )</td></tr>
+<tr class="memitem:a90e836cd18968a0cafda530f752b90a3"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a90e836cd18968a0cafda530f752b90a3">Read</a> ()</td></tr>
 <tr class="memdesc:a90e836cd18968a0cafda530f752b90a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a value with size greater than 1 from the stream and returns the value.  <br /></td></tr>
 <tr class="separator:a90e836cd18968a0cafda530f752b90a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a675fb444da51b3a848e7195d86e83817" id="r_a675fb444da51b3a848e7195d86e83817"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772fff215b5c4590253c2511d02f9">IsStdOptional</a>&lt;T&gt;</td></tr>
-<tr class="memitem:a675fb444da51b3a848e7195d86e83817"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a675fb444da51b3a848e7195d86e83817">Read</a> (T &amp;value)</td></tr>
+<tr class="memitem:a675fb444da51b3a848e7195d86e83817" id="r_a675fb444da51b3a848e7195d86e83817"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772fff215b5c4590253c2511d02f9">IsStdOptional</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a675fb444da51b3a848e7195d86e83817"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a675fb444da51b3a848e7195d86e83817">Read</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value)</td></tr>
 <tr class="memdesc:a675fb444da51b3a848e7195d86e83817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a std::optional from the stream and places the result in the variable referenced by the argument.  <br /></td></tr>
 <tr class="separator:a675fb444da51b3a848e7195d86e83817"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c61b6fe6ce2b25c6fcff4a3e466eed7" id="r_a1c61b6fe6ce2b25c6fcff4a3e466eed7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772fff215b5c4590253c2511d02f9">IsStdOptional</a>&lt;T&gt;</td></tr>
-<tr class="memitem:a1c61b6fe6ce2b25c6fcff4a3e466eed7"><td class="memTemplItemLeft" align="right" valign="top">std::remove_cvref_t&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1c61b6fe6ce2b25c6fcff4a3e466eed7">Read</a> ()</td></tr>
+<tr class="memitem:a1c61b6fe6ce2b25c6fcff4a3e466eed7" id="r_a1c61b6fe6ce2b25c6fcff4a3e466eed7"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772fff215b5c4590253c2511d02f9">IsStdOptional</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a1c61b6fe6ce2b25c6fcff4a3e466eed7"><td class="memTemplItemLeft" align="right" valign="top">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1c61b6fe6ce2b25c6fcff4a3e466eed7">Read</a> ()</td></tr>
 <tr class="memdesc:a1c61b6fe6ce2b25c6fcff4a3e466eed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a std::optional from the stream and returns the result.  <br /></td></tr>
 <tr class="separator:a1c61b6fe6ce2b25c6fcff4a3e466eed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84b722cb6baad23fd965938817de1d8e" id="r_a84b722cb6baad23fd965938817de1d8e"><td class="memTemplParams" colspan="2">template&lt;StringLike T&gt; </td></tr>
-<tr class="memitem:a84b722cb6baad23fd965938817de1d8e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a84b722cb6baad23fd965938817de1d8e">Read</a> (T &amp;result)</td></tr>
+<tr class="memitem:a84b722cb6baad23fd965938817de1d8e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a84b722cb6baad23fd965938817de1d8e">Read</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;result)</td></tr>
 <tr class="memdesc:a84b722cb6baad23fd965938817de1d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a string from the stream and places the result in the value referenced by the argument.  <br /></td></tr>
 <tr class="separator:a84b722cb6baad23fd965938817de1d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bf40558f363badf08737deb7fd0248a" id="r_a9bf40558f363badf08737deb7fd0248a"><td class="memTemplParams" colspan="2">template&lt;StringLike T&gt; </td></tr>
-<tr class="memitem:a9bf40558f363badf08737deb7fd0248a"><td class="memTemplItemLeft" align="right" valign="top">std::remove_cvref_t&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9bf40558f363badf08737deb7fd0248a">Read</a> ()</td></tr>
+<tr class="memitem:a9bf40558f363badf08737deb7fd0248a"><td class="memTemplItemLeft" align="right" valign="top">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9bf40558f363badf08737deb7fd0248a">Read</a> ()</td></tr>
 <tr class="memdesc:a9bf40558f363badf08737deb7fd0248a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a string from the stream and returns the result.  <br /></td></tr>
 <tr class="separator:a9bf40558f363badf08737deb7fd0248a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21d33693bacb8551e6610ed8d94c3111" id="r_a21d33693bacb8551e6610ed8d94c3111"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;T&gt;&amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;typename T::value_type&gt; )</td></tr>
-<tr class="memitem:a21d33693bacb8551e6610ed8d94c3111"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a21d33693bacb8551e6610ed8d94c3111">Read</a> (T &amp;result)</td></tr>
+<tr class="memitem:a21d33693bacb8551e6610ed8d94c3111" id="r_a21d33693bacb8551e6610ed8d94c3111"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;typename T::value_type&gt; )</td></tr>
+<tr class="memitem:a21d33693bacb8551e6610ed8d94c3111"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a21d33693bacb8551e6610ed8d94c3111">Read</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;result)</td></tr>
 <tr class="memdesc:a21d33693bacb8551e6610ed8d94c3111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a sequence of bytes representing boolean values from the stream and places the result in the value referenced by the argument.  <br /></td></tr>
 <tr class="separator:a21d33693bacb8551e6610ed8d94c3111"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad256671f802cf08e8782eeb868519c0e" id="r_ad256671f802cf08e8782eeb868519c0e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires (( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;T&gt; || std::is_same_v&lt;T,<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_binary.html">Binary</a>&gt; ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;typename T::value_type&gt; ) || ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a60bc92951249ceb918d65917838305d3">IsCoreVector</a>&lt;T&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; ) )</td></tr>
-<tr class="memitem:ad256671f802cf08e8782eeb868519c0e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad256671f802cf08e8782eeb868519c0e">Read</a> (T &amp;result)</td></tr>
+<tr class="memitem:ad256671f802cf08e8782eeb868519c0e" id="r_ad256671f802cf08e8782eeb868519c0e"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires (( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>,<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_binary.html">Binary</a>&gt; ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;typename T::value_type&gt; ) || ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a60bc92951249ceb918d65917838305d3">IsCoreVector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; ) )</td></tr>
+<tr class="memitem:ad256671f802cf08e8782eeb868519c0e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad256671f802cf08e8782eeb868519c0e">Read</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;result)</td></tr>
 <tr class="memdesc:ad256671f802cf08e8782eeb868519c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a sequence of elements representing non-boolean values from the stream and places the result in the value referenced by the argument.  <br /></td></tr>
 <tr class="separator:ad256671f802cf08e8782eeb868519c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50447364b1de7351b9112981b2f7d1ee" id="r_a50447364b1de7351b9112981b2f7d1ee"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#adafcb7fbe10799003538b29cfc910d36">IsArrayContainer</a>&lt;T&gt; )</td></tr>
-<tr class="memitem:a50447364b1de7351b9112981b2f7d1ee"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a50447364b1de7351b9112981b2f7d1ee">Read</a> (T &amp;result)</td></tr>
+<tr class="memitem:a50447364b1de7351b9112981b2f7d1ee" id="r_a50447364b1de7351b9112981b2f7d1ee"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#adafcb7fbe10799003538b29cfc910d36">IsArrayContainer</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; )</td></tr>
+<tr class="memitem:a50447364b1de7351b9112981b2f7d1ee"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a50447364b1de7351b9112981b2f7d1ee">Read</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;result)</td></tr>
 <tr class="memdesc:a50447364b1de7351b9112981b2f7d1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a sequence of elements representing values from the stream and places the result in the value referenced by the argument.  <br /></td></tr>
 <tr class="separator:a50447364b1de7351b9112981b2f7d1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a856dbadcc04ef683404b862c5f0598a1" id="r_a856dbadcc04ef683404b862c5f0598a1"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t N&gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt;</td></tr>
-<tr class="memitem:a856dbadcc04ef683404b862c5f0598a1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a856dbadcc04ef683404b862c5f0598a1">Read</a> (T(&amp;result)[N])</td></tr>
+<tr class="memitem:a856dbadcc04ef683404b862c5f0598a1" id="r_a856dbadcc04ef683404b862c5f0598a1"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a856dbadcc04ef683404b862c5f0598a1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a856dbadcc04ef683404b862c5f0598a1">Read</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>(&amp;result)[N])</td></tr>
 <tr class="memdesc:a856dbadcc04ef683404b862c5f0598a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a sequence of elements representing values from the stream and places the result in the value referenced by the argument.  <br /></td></tr>
 <tr class="separator:a856dbadcc04ef683404b862c5f0598a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -301,14 +301,14 @@ template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;T&gt;</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
+          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -340,14 +340,14 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd38
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;T&gt; ) == 1 ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;T&gt; )</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) == 1 ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::remove_cvref_t&lt; T &gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
+          <td class="memname">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -379,14 +379,14 @@ requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires ( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt; || std::is_enum_v&lt;T&gt;) &amp;&amp; sizeof( std::remove_cvref_t&lt;T&gt; ) &gt; 1 )</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || std::is_enum_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;) &amp;&amp; sizeof( std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) &gt; 1 )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::remove_cvref_t&lt; T &gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
+          <td class="memname">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -418,14 +418,14 @@ requires ( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f3
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772fff215b5c4590253c2511d02f9">IsStdOptional</a>&lt;T&gt;</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772fff215b5c4590253c2511d02f9">IsStdOptional</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::remove_cvref_t&lt; T &gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
+          <td class="memname">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -463,7 +463,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::remove_cvref_t&lt; T &gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
+          <td class="memname">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -503,7 +503,7 @@ template&lt;StringLike T&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
           <td>(</td>
-          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -538,8 +538,8 @@ template&lt;StringLike T&gt; </div>
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;T&gt;&amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;typename T::value_type&gt; )</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;typename T::value_type&gt; )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -547,7 +547,7 @@ requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a46547
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
           <td>(</td>
-          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -582,8 +582,8 @@ requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a46547
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires (( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;T&gt; || std::is_same_v&lt;T,<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_binary.html">Binary</a>&gt; ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;typename T::value_type&gt; ) || ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a60bc92951249ceb918d65917838305d3">IsCoreVector</a>&lt;T&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; ) )</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires (( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>,<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_binary.html">Binary</a>&gt; ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;typename T::value_type&gt; ) || ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a60bc92951249ceb918d65917838305d3">IsCoreVector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; ) )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -591,7 +591,7 @@ requires (( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
           <td>(</td>
-          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -626,8 +626,8 @@ requires (( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#adafcb7fbe10799003538b29cfc910d36">IsArrayContainer</a>&lt;T&gt; )</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#adafcb7fbe10799003538b29cfc910d36">IsArrayContainer</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -635,7 +635,7 @@ requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
           <td>(</td>
-          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -670,8 +670,8 @@ requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;T&gt;</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -679,7 +679,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd38
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
           <td>(</td>
-          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -714,8 +714,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd38
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;T&gt; ) == 1 ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;T&gt; )</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) == 1 ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -723,7 +723,7 @@ requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
           <td>(</td>
-          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -758,8 +758,8 @@ requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires ( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt; || std::is_enum_v&lt;T&gt; ) &amp;&amp; sizeof( std::remove_cvref_t&lt;T&gt; ) &gt; 1 )</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || std::is_enum_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) &amp;&amp; sizeof( std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) &gt; 1 )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -767,7 +767,7 @@ requires ( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f3
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
           <td>(</td>
-          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -802,8 +802,8 @@ requires ( (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f3
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772fff215b5c4590253c2511d02f9">IsStdOptional</a>&lt;T&gt;</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772fff215b5c4590253c2511d02f9">IsStdOptional</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -811,7 +811,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772f
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
           <td>(</td>
-          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -846,8 +846,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772f
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T , size_t N&gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt;</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -855,7 +855,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html">Harlinn::Common::Core::IO::BinaryReaderBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Read </td>
           <td>(</td>
-          <td class="paramtype">T(&amp;)</td>          <td class="paramname"><span class="paramname"><em>result</em></span>[N]</td><td>)</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>(&amp;)</td>          <td class="paramname"><span class="paramname"><em>result</em></span>[N]</td><td>)</td>
           <td></td>
         </tr>
       </table>

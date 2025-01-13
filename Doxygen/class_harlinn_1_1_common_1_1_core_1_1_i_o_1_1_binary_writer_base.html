@@ -129,52 +129,52 @@ Public Member Functions</h2></td></tr>
 requires SimpleStringLike&lt;SpanT&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af8790c2b66ce43805a19c4cbcaf610fd">IsStdBasicStringView</a>&lt;SpanT&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab65d6077a874b0405083ddc1e1b87ada">IsBasicStringView</a>&lt;SpanT&gt;</td></tr>
 <tr class="memitem:a308f7acf9d7ace0c2dfeda18147c35ba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a308f7acf9d7ace0c2dfeda18147c35ba">Write</a> (const SpanT &amp;value)</td></tr>
 <tr class="separator:a308f7acf9d7ace0c2dfeda18147c35ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bf8efdf87f9927fa78a6c3f54426555" id="r_a5bf8efdf87f9927fa78a6c3f54426555"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires ( std::is_same_v&lt;char,T&gt; || std::is_same_v&lt;wchar_t, T&gt; )</td></tr>
-<tr class="memitem:a5bf8efdf87f9927fa78a6c3f54426555"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5bf8efdf87f9927fa78a6c3f54426555">Write</a> (const T *str)</td></tr>
+<tr class="memitem:a5bf8efdf87f9927fa78a6c3f54426555" id="r_a5bf8efdf87f9927fa78a6c3f54426555"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( std::is_same_v&lt;char,<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || std::is_same_v&lt;wchar_t, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; )</td></tr>
+<tr class="memitem:a5bf8efdf87f9927fa78a6c3f54426555"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5bf8efdf87f9927fa78a6c3f54426555">Write</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *str)</td></tr>
 <tr class="memdesc:a5bf8efdf87f9927fa78a6c3f54426555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a zero teminated string of characters to the stream as a span of characters.  <br /></td></tr>
 <tr class="separator:a5bf8efdf87f9927fa78a6c3f54426555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d4070c13a442a2376c5c9f459080b49" id="r_a5d4070c13a442a2376c5c9f459080b49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d4070c13a442a2376c5c9f459080b49">WriteSize</a> (size_t size)</td></tr>
 <tr class="memdesc:a5d4070c13a442a2376c5c9f459080b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes size information to the stream.  <br /></td></tr>
 <tr class="separator:a5d4070c13a442a2376c5c9f459080b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c3fc5af01713161b5dee8f7d9d8166b" id="r_a3c3fc5af01713161b5dee8f7d9d8166b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;T&gt;</td></tr>
-<tr class="memitem:a3c3fc5af01713161b5dee8f7d9d8166b"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3c3fc5af01713161b5dee8f7d9d8166b">Write</a> (const T value)</td></tr>
+<tr class="memitem:a3c3fc5af01713161b5dee8f7d9d8166b" id="r_a3c3fc5af01713161b5dee8f7d9d8166b"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a3c3fc5af01713161b5dee8f7d9d8166b"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3c3fc5af01713161b5dee8f7d9d8166b">Write</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> value)</td></tr>
 <tr class="memdesc:a3c3fc5af01713161b5dee8f7d9d8166b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a boolean value to the stream.  <br /></td></tr>
 <tr class="separator:a3c3fc5af01713161b5dee8f7d9d8166b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e2150516094b8e2e24d54509a58fe74" id="r_a1e2150516094b8e2e24d54509a58fe74"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires (( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;T&gt; ) == 1 ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;T&gt; &amp;&amp; (std::is_enum_v&lt;std::remove_cvref_t&lt;T&gt;&gt; == false) )</td></tr>
-<tr class="memitem:a1e2150516094b8e2e24d54509a58fe74"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1e2150516094b8e2e24d54509a58fe74">Write</a> (const T value)</td></tr>
+<tr class="memitem:a1e2150516094b8e2e24d54509a58fe74" id="r_a1e2150516094b8e2e24d54509a58fe74"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires (( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) == 1 ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; (std::is_enum_v&lt;std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&gt; == false) )</td></tr>
+<tr class="memitem:a1e2150516094b8e2e24d54509a58fe74"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1e2150516094b8e2e24d54509a58fe74">Write</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> value)</td></tr>
 <tr class="memdesc:a1e2150516094b8e2e24d54509a58fe74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a byte sized value to the stream.  <br /></td></tr>
 <tr class="separator:a1e2150516094b8e2e24d54509a58fe74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d21df2f3519ac2c2842b336b29abd2e" id="r_a0d21df2f3519ac2c2842b336b29abd2e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;T&gt; ) &gt; 1 &amp;&amp; (std::is_enum_v&lt;std::remove_cvref_t&lt;T&gt;&gt; == false))</td></tr>
-<tr class="memitem:a0d21df2f3519ac2c2842b336b29abd2e"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0d21df2f3519ac2c2842b336b29abd2e">Write</a> (const T value)</td></tr>
+<tr class="memitem:a0d21df2f3519ac2c2842b336b29abd2e" id="r_a0d21df2f3519ac2c2842b336b29abd2e"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) &gt; 1 &amp;&amp; (std::is_enum_v&lt;std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&gt; == false))</td></tr>
+<tr class="memitem:a0d21df2f3519ac2c2842b336b29abd2e"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0d21df2f3519ac2c2842b336b29abd2e">Write</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> value)</td></tr>
 <tr class="memdesc:a0d21df2f3519ac2c2842b336b29abd2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a value with a size larger than 1 byte to the stream.  <br /></td></tr>
 <tr class="separator:a0d21df2f3519ac2c2842b336b29abd2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1058e4d1d4677d7a5a6006b08afd7143" id="r_a1058e4d1d4677d7a5a6006b08afd7143"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires std::is_enum_v&lt;std::remove_cvref_t&lt;T&gt;&gt;</td></tr>
-<tr class="memitem:a1058e4d1d4677d7a5a6006b08afd7143"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1058e4d1d4677d7a5a6006b08afd7143">Write</a> (const T value)</td></tr>
+<tr class="memitem:a1058e4d1d4677d7a5a6006b08afd7143" id="r_a1058e4d1d4677d7a5a6006b08afd7143"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires std::is_enum_v&lt;std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&gt;</td></tr>
+<tr class="memitem:a1058e4d1d4677d7a5a6006b08afd7143"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1058e4d1d4677d7a5a6006b08afd7143">Write</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> value)</td></tr>
 <tr class="memdesc:a1058e4d1d4677d7a5a6006b08afd7143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes an enum value to a stream.  <br /></td></tr>
 <tr class="separator:a1058e4d1d4677d7a5a6006b08afd7143"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c18738cdc5dde398881b8554886a91b" id="r_a6c18738cdc5dde398881b8554886a91b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772fff215b5c4590253c2511d02f9">IsStdOptional</a>&lt;T&gt;</td></tr>
-<tr class="memitem:a6c18738cdc5dde398881b8554886a91b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6c18738cdc5dde398881b8554886a91b">Write</a> (const T &amp;value)</td></tr>
+<tr class="memitem:a6c18738cdc5dde398881b8554886a91b" id="r_a6c18738cdc5dde398881b8554886a91b"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772fff215b5c4590253c2511d02f9">IsStdOptional</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a6c18738cdc5dde398881b8554886a91b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6c18738cdc5dde398881b8554886a91b">Write</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value)</td></tr>
 <tr class="memdesc:a6c18738cdc5dde398881b8554886a91b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes an optional to a stream.  <br /></td></tr>
 <tr class="separator:a6c18738cdc5dde398881b8554886a91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bc2276a7279158a816b6efbcc625d84" id="r_a6bc2276a7279158a816b6efbcc625d84"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;typename T::value_type&gt; &amp;&amp; requires ( const T&amp; t) { { t.size( ) }-&gt;std::same_as&lt;typename T::size_type&gt;; { t.begin( ) }-&gt;std::same_as&lt;typename T::const_iterator&gt;; { t.end( ) }-&gt;std::same_as&lt;typename T::const_iterator&gt;; }</td></tr>
-<tr class="memitem:a6bc2276a7279158a816b6efbcc625d84"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6bc2276a7279158a816b6efbcc625d84">Write</a> (const T &amp;values)</td></tr>
+<tr class="memitem:a6bc2276a7279158a816b6efbcc625d84" id="r_a6bc2276a7279158a816b6efbcc625d84"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;typename T::value_type&gt; &amp;&amp; requires ( const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&amp; t) { { t.size( ) }-&gt;std::same_as&lt;typename T::size_type&gt;; { t.begin( ) }-&gt;std::same_as&lt;typename T::const_iterator&gt;; { t.end( ) }-&gt;std::same_as&lt;typename T::const_iterator&gt;; }</td></tr>
+<tr class="memitem:a6bc2276a7279158a816b6efbcc625d84"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6bc2276a7279158a816b6efbcc625d84">Write</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;values)</td></tr>
 <tr class="memdesc:a6bc2276a7279158a816b6efbcc625d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a std::vector&lt;bool&gt; or another container that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_span_like.html" title="Matches most containers with sequential memory layout.">SimpleSpanLike</a> concept with a value type of bool to a stream.  <br /></td></tr>
 <tr class="separator:a6bc2276a7279158a816b6efbcc625d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a410c89df88df4b35e2926d54ae0adb44" id="r_a410c89df88df4b35e2926d54ae0adb44"><td class="memTemplParams" colspan="2">template&lt;SimpleSpanLike T&gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;typename T::value_type&gt; &amp;&amp; ( SimpleStringLike&lt;T&gt; == false &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af8790c2b66ce43805a19c4cbcaf610fd">IsStdBasicStringView</a>&lt;T&gt; == false &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab65d6077a874b0405083ddc1e1b87ada">IsBasicStringView</a>&lt;T&gt; == false )</td></tr>
-<tr class="memitem:a410c89df88df4b35e2926d54ae0adb44"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a410c89df88df4b35e2926d54ae0adb44">Write</a> (const T &amp;values)</td></tr>
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;typename T::value_type&gt; &amp;&amp; ( SimpleStringLike&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; == false &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af8790c2b66ce43805a19c4cbcaf610fd">IsStdBasicStringView</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; == false &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab65d6077a874b0405083ddc1e1b87ada">IsBasicStringView</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; == false )</td></tr>
+<tr class="memitem:a410c89df88df4b35e2926d54ae0adb44"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a410c89df88df4b35e2926d54ae0adb44">Write</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;values)</td></tr>
 <tr class="memdesc:a410c89df88df4b35e2926d54ae0adb44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a container that satisfies the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_span_like.html" title="Matches most containers with sequential memory layout.">SimpleSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept or IsStdBasicStringView&lt;T&gt; and IsBasicStringView&lt;T&gt;; to a stream if the value type is not bool.  <br /></td></tr>
 <tr class="separator:a410c89df88df4b35e2926d54ae0adb44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28b788b78ddc134957220b2bb1be7575" id="r_a28b788b78ddc134957220b2bb1be7575"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t N&gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt;</td></tr>
-<tr class="memitem:a28b788b78ddc134957220b2bb1be7575"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a28b788b78ddc134957220b2bb1be7575">Write</a> (const T(&amp;values)[N])</td></tr>
+<tr class="memitem:a28b788b78ddc134957220b2bb1be7575" id="r_a28b788b78ddc134957220b2bb1be7575"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a28b788b78ddc134957220b2bb1be7575"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a28b788b78ddc134957220b2bb1be7575">Write</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>(&amp;values)[N])</td></tr>
 <tr class="memdesc:a28b788b78ddc134957220b2bb1be7575"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a c-style array of any of the basic types to a stream.  <br /></td></tr>
 <tr class="separator:a28b788b78ddc134957220b2bb1be7575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -187,8 +187,8 @@ Static Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a8994fd33ede96d3b407b672952c9e7bd" id="r_a8994fd33ede96d3b407b672952c9e7bd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a8994fd33ede96d3b407b672952c9e7bd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8994fd33ede96d3b407b672952c9e7bd">WriteInNetworkByteOrder</a> (const T *data, size_t dataSize)</td></tr>
+<tr class="memitem:a8994fd33ede96d3b407b672952c9e7bd" id="r_a8994fd33ede96d3b407b672952c9e7bd"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
+<tr class="memitem:a8994fd33ede96d3b407b672952c9e7bd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8994fd33ede96d3b407b672952c9e7bd">WriteInNetworkByteOrder</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *data, size_t dataSize)</td></tr>
 <tr class="memdesc:a8994fd33ede96d3b407b672952c9e7bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes values to the underlying stream in network byte order.  <br /></td></tr>
 <tr class="separator:a8994fd33ede96d3b407b672952c9e7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -330,8 +330,8 @@ requires SimpleStringLike&lt;SpanT&gt; || <a class="el" href="namespace_harlinn_
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772fff215b5c4590253c2511d02f9">IsStdOptional</a>&lt;T&gt;</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772fff215b5c4590253c2511d02f9">IsStdOptional</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -339,7 +339,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772f
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_writer_base.html">Harlinn::Common::Core::IO::BinaryWriterBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Write </td>
           <td>(</td>
-          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -374,8 +374,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a03e772f
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;typename T::value_type&gt; &amp;&amp; requires ( const T&amp; t) { { t.size( ) }-&gt;std::same_as&lt;typename T::size_type&gt;; { t.begin( ) }-&gt;std::same_as&lt;typename T::const_iterator&gt;; { t.end( ) }-&gt;std::same_as&lt;typename T::const_iterator&gt;; }</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;typename T::value_type&gt; &amp;&amp; requires ( const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&amp; t) { { t.size( ) }-&gt;std::same_as&lt;typename T::size_type&gt;; { t.begin( ) }-&gt;std::same_as&lt;typename T::const_iterator&gt;; { t.end( ) }-&gt;std::same_as&lt;typename T::const_iterator&gt;; }</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -383,7 +383,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd38
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_writer_base.html">Harlinn::Common::Core::IO::BinaryWriterBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Write </td>
           <td>(</td>
-          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>values</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>values</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -419,7 +419,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd38
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
 template&lt;SimpleSpanLike T&gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;typename T::value_type&gt; &amp;&amp; ( SimpleStringLike&lt;T&gt; == false &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af8790c2b66ce43805a19c4cbcaf610fd">IsStdBasicStringView</a>&lt;T&gt; == false &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab65d6077a874b0405083ddc1e1b87ada">IsBasicStringView</a>&lt;T&gt; == false )</div>
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;typename T::value_type&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;typename T::value_type&gt; &amp;&amp; ( SimpleStringLike&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; == false &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af8790c2b66ce43805a19c4cbcaf610fd">IsStdBasicStringView</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; == false &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab65d6077a874b0405083ddc1e1b87ada">IsBasicStringView</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; == false )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -427,7 +427,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_writer_base.html">Harlinn::Common::Core::IO::BinaryWriterBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Write </td>
           <td>(</td>
-          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>values</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>values</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -462,8 +462,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires ( std::is_same_v&lt;char,T&gt; || std::is_same_v&lt;wchar_t, T&gt; )</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( std::is_same_v&lt;char,<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || std::is_same_v&lt;wchar_t, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -471,7 +471,7 @@ requires ( std::is_same_v&lt;char,T&gt; || std::is_same_v&lt;wchar_t, T&gt; )</d
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_writer_base.html">Harlinn::Common::Core::IO::BinaryWriterBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Write </td>
           <td>(</td>
-          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -506,8 +506,8 @@ requires ( std::is_same_v&lt;char,T&gt; || std::is_same_v&lt;wchar_t, T&gt; )</d
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;T&gt;</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd389547aa25c898e25662e88577d">IsBoolean</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -515,7 +515,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd38
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_writer_base.html">Harlinn::Common::Core::IO::BinaryWriterBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Write </td>
           <td>(</td>
-          <td class="paramtype">const T</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -550,8 +550,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a5d3dd38
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires (( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;T&gt; ) == 1 ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;T&gt; &amp;&amp; (std::is_enum_v&lt;std::remove_cvref_t&lt;T&gt;&gt; == false) )</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires (( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) == 1 ) &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aac28cef00b691f983b2c8c94a03e27ed">IsNotBoolean</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; (std::is_enum_v&lt;std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&gt; == false) )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -559,7 +559,7 @@ requires (( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f3
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_writer_base.html">Harlinn::Common::Core::IO::BinaryWriterBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Write </td>
           <td>(</td>
-          <td class="paramtype">const T</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -594,8 +594,8 @@ requires (( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f3
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;T&gt; ) &gt; 1 &amp;&amp; (std::is_enum_v&lt;std::remove_cvref_t&lt;T&gt;&gt; == false))</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; sizeof( std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) &gt; 1 &amp;&amp; (std::is_enum_v&lt;std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&gt; == false))</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -603,7 +603,7 @@ requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_writer_base.html">Harlinn::Common::Core::IO::BinaryWriterBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Write </td>
           <td>(</td>
-          <td class="paramtype">const T</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -638,8 +638,8 @@ requires ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires std::is_enum_v&lt;std::remove_cvref_t&lt;T&gt;&gt;</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires std::is_enum_v&lt;std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -647,7 +647,7 @@ requires std::is_enum_v&lt;std::remove_cvref_t&lt;T&gt;&gt;</div>
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_writer_base.html">Harlinn::Common::Core::IO::BinaryWriterBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Write </td>
           <td>(</td>
-          <td class="paramtype">const T</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -682,8 +682,8 @@ requires std::is_enum_v&lt;std::remove_cvref_t&lt;T&gt;&gt;</div>
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T , size_t N&gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;T&gt;</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef85abf4ed1c79aeb0b3d2599a2">IsBasicType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -691,7 +691,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab8f38ef
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_writer_base.html">Harlinn::Common::Core::IO::BinaryWriterBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::Write </td>
           <td>(</td>
-          <td class="paramtype">const T(&amp;)</td>          <td class="paramname"><span class="paramname"><em>values</em></span>[N]</td><td>)</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>(&amp;)</td>          <td class="paramname"><span class="paramname"><em>values</em></span>[N]</td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -762,7 +762,7 @@ template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt
 <div class="memtemplate">
 template&lt;typename Derived , bool networkByteOrder, bool use7BitEncodedSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -770,7 +770,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_writer_base.html">Harlinn::Common::Core::IO::BinaryWriterBase</a>&lt; Derived, networkByteOrder, use7BitEncodedSize &gt;::WriteInNetworkByteOrder </td>
           <td>(</td>
-          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -2,7 +2,7 @@ var class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector =
 [
     [ "Indices", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector.html#ae9ade591e075ca140ca88ecbaf7fad55", null ],
     [ "SIMDType", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector.html#a387074e36d0c0eaaadf40557cbd849c6", null ],
-    [ "Traits", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector.html#acb6474149efe8ac73acaf33e4d0d7aef", null ],
+    [ "Traits", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector.html#a2b49dfa42e5b587dd55be55ab657ccf8", null ],
     [ "UIntType", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector.html#a979bdf41f24edb8d4be72d8d8980b154", null ],
     [ "ValueType", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector.html#af558febf4aa9837afd89975654b23d8c", null ],
     [ "Vector", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector.html#a04a969e361039fb345dedfe4fc20f777", null ],

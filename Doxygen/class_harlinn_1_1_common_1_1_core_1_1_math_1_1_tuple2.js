@@ -66,6 +66,7 @@ var class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2 =
     [ "rend", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html#a7cc56709c67880893ade04834559aa76", null ],
     [ "rend", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html#a93aada632e9ee78ee974c83236c3361e", null ],
     [ "size", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html#ac80ea8a904969468575df214b3e4e042", null ],
+    [ "ToSimd", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html#ae39a3751cd3c0d5eb7d39ad900bea327", null ],
     [ "ToString", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html#aea1885becfdf3594238e1025cbd3550a", null ],
     [ "Capacity", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html#a1562cae6af7e040e3947abc241a7265e", null ],
     [ "Loaded", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html#a039257e9c47e2043dd68c4da6819d777", null ],

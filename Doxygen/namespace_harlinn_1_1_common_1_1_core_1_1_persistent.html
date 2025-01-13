@@ -200,15 +200,15 @@ Functions</h2></td></tr>
 <tr class="separator:adb70a190c1598f084c8d54fe14772206"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17bd7e157222346b54eb70e40457eebb" id="r_a17bd7e157222346b54eb70e40457eebb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17bd7e157222346b54eb70e40457eebb">IsBasicTypeDescriptor</a> (const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *descriptor, size_t descriptorSize) noexcept</td></tr>
 <tr class="separator:a17bd7e157222346b54eb70e40457eebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbb3eaf0b964036d6d342300f543d32c" id="r_afbb3eaf0b964036d6d342300f543d32c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires ((<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;T&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a60bc92951249ceb918d65917838305d3">IsCoreVector</a>&lt;T&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a187b6e268eb670dbe6e52c673cccdf96">IsStdSpan</a>&lt;T&gt;) &amp;&amp; std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, typename std::remove_cvref_t&lt;T&gt;::value_type &gt;)</td></tr>
-<tr class="memitem:afbb3eaf0b964036d6d342300f543d32c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afbb3eaf0b964036d6d342300f543d32c">IsBasicTypeDescriptor</a> (const T &amp;bytes)</td></tr>
+<tr class="memitem:afbb3eaf0b964036d6d342300f543d32c" id="r_afbb3eaf0b964036d6d342300f543d32c"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ((<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a60bc92951249ceb918d65917838305d3">IsCoreVector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a187b6e268eb670dbe6e52c673cccdf96">IsStdSpan</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;) &amp;&amp; std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, typename std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;::value_type &gt;)</td></tr>
+<tr class="memitem:afbb3eaf0b964036d6d342300f543d32c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afbb3eaf0b964036d6d342300f543d32c">IsBasicTypeDescriptor</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;bytes)</td></tr>
 <tr class="separator:afbb3eaf0b964036d6d342300f543d32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac89ad38b09a565d47123fdaf1693530c" id="r_ac89ad38b09a565d47123fdaf1693530c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac89ad38b09a565d47123fdaf1693530c">IsIntegerBasicTypeDescriptor</a> (const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *descriptor, size_t descriptorSize) noexcept</td></tr>
 <tr class="separator:ac89ad38b09a565d47123fdaf1693530c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab30255dc49f6e5de121d661b33f3e6d3" id="r_ab30255dc49f6e5de121d661b33f3e6d3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
-requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;T&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a60bc92951249ceb918d65917838305d3">IsCoreVector</a>&lt;T&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a187b6e268eb670dbe6e52c673cccdf96">IsStdSpan</a>&lt;T&gt; ) &amp;&amp; std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, typename std::remove_cvref_t&lt;T&gt;::value_type &gt; )</td></tr>
-<tr class="memitem:ab30255dc49f6e5de121d661b33f3e6d3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab30255dc49f6e5de121d661b33f3e6d3">IsIntegerBasicTypeDescriptor</a> (const T &amp;bytes)</td></tr>
+<tr class="memitem:ab30255dc49f6e5de121d661b33f3e6d3" id="r_ab30255dc49f6e5de121d661b33f3e6d3"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a60bc92951249ceb918d65917838305d3">IsCoreVector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a187b6e268eb670dbe6e52c673cccdf96">IsStdSpan</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) &amp;&amp; std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, typename std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;::value_type &gt; )</td></tr>
+<tr class="memitem:ab30255dc49f6e5de121d661b33f3e6d3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab30255dc49f6e5de121d661b33f3e6d3">IsIntegerBasicTypeDescriptor</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;bytes)</td></tr>
 <tr class="separator:ab30255dc49f6e5de121d661b33f3e6d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa327f62591bfb43bd3c271e95e85523c" id="r_aa327f62591bfb43bd3c271e95e85523c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_c_c_def_8h.html#afb06ae686742fde98e6427c4a1e2206c">HCC_EXPORT</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa327f62591bfb43bd3c271e95e85523c">FormatTo</a> (const char *formatString, size_t formatStringLength, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *argumentDescriptor, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *arguments, size_t argumentsSize, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_memory_stream.html">IO::MemoryStream</a> &amp;destination)</td></tr>
 <tr class="separator:aa327f62591bfb43bd3c271e95e85523c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -227,8 +227,8 @@ Variables</h2></td></tr>
 <tr class="memitem:ac65a4e07eed4db1534b6fffa3d9bfdb4" id="r_ac65a4e07eed4db1534b6fffa3d9bfdb4"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac65a4e07eed4db1534b6fffa3d9bfdb4">MinimumValidTypeDescriptorDataSize</a> = 4</td></tr>
 <tr class="memdesc:ac65a4e07eed4db1534b6fffa3d9bfdb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The minimum number of bytes required to hold a valid type description.  <br /></td></tr>
 <tr class="separator:ac65a4e07eed4db1534b6fffa3d9bfdb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a073361932fa3e1d7e2e24d550a80afae" id="r_a073361932fa3e1d7e2e24d550a80afae"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a073361932fa3e1d7e2e24d550a80afae"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a073361932fa3e1d7e2e24d550a80afae">IsConstant</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal.html#a8af9c813f63beb08badc59076cb681e9">Persistent::Internal::IsConstantImpl</a>&lt;std::remove_cvref_t&lt;T&gt;&gt;</td></tr>
+<tr class="memitem:a073361932fa3e1d7e2e24d550a80afae" id="r_a073361932fa3e1d7e2e24d550a80afae"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
+<tr class="memitem:a073361932fa3e1d7e2e24d550a80afae"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a073361932fa3e1d7e2e24d550a80afae">IsConstant</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal.html#a8af9c813f63beb08badc59076cb681e9">Persistent::Internal::IsConstantImpl</a>&lt;std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&gt;</td></tr>
 <tr class="separator:a073361932fa3e1d7e2e24d550a80afae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf788751225243f48ea6041eccc2ee49" id="r_adf788751225243f48ea6041eccc2ee49"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf788751225243f48ea6041eccc2ee49">TypeSize</a> = sizeof( <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_type.html">Type</a> )</td></tr>
 <tr class="separator:adf788751225243f48ea6041eccc2ee49"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -430,8 +430,8 @@ template&lt;typename ... Args&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires ((<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;T&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a60bc92951249ceb918d65917838305d3">IsCoreVector</a>&lt;T&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a187b6e268eb670dbe6e52c673cccdf96">IsStdSpan</a>&lt;T&gt;) &amp;&amp; std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, typename std::remove_cvref_t&lt;T&gt;::value_type &gt;)</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ((<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a60bc92951249ceb918d65917838305d3">IsCoreVector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a187b6e268eb670dbe6e52c673cccdf96">IsStdSpan</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;) &amp;&amp; std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, typename std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;::value_type &gt;)</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -439,7 +439,7 @@ requires ((<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a46547
         <tr>
           <td class="memname">bool Harlinn::Common::Core::Persistent::IsBasicTypeDescriptor </td>
           <td>(</td>
-          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>bytes</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bytes</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -516,8 +516,8 @@ template&lt;typename ... Args&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; <br />
-requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;T&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a60bc92951249ceb918d65917838305d3">IsCoreVector</a>&lt;T&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a187b6e268eb670dbe6e52c673cccdf96">IsStdSpan</a>&lt;T&gt; ) &amp;&amp; std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, typename std::remove_cvref_t&lt;T&gt;::value_type &gt; )</div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465471258616fc9c9308030f56ce92be">IsStdVector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a60bc92951249ceb918d65917838305d3">IsCoreVector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a187b6e268eb670dbe6e52c673cccdf96">IsStdSpan</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; ) &amp;&amp; std::is_same_v&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, typename std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;::value_type &gt; )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -525,7 +525,7 @@ requires ( ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a465
         <tr>
           <td class="memname">bool Harlinn::Common::Core::Persistent::IsIntegerBasicTypeDescriptor </td>
           <td>(</td>
-          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>bytes</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bytes</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -673,13 +673,13 @@ template&lt;typename Writer , typename ... Args&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Harlinn::Common::Core::Persistent::IsConstant = <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal.html#a8af9c813f63beb08badc59076cb681e9">Persistent::Internal::IsConstantImpl</a>&lt;std::remove_cvref_t&lt;T&gt;&gt;</td>
+          <td class="memname">bool Harlinn::Common::Core::Persistent::IsConstant = <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal.html#a8af9c813f63beb08badc59076cb681e9">Persistent::Internal::IsConstantImpl</a>&lt;std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&gt;</td>
         </tr>
       </table>
   </td>

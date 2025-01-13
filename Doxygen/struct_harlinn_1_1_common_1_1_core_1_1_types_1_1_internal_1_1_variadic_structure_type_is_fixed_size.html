@@ -109,14 +109,14 @@ $(function(){initNavTree('struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_inter
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a383c84c1340abcabaf6ad73ef0e86aee" id="r_a383c84c1340abcabaf6ad73ef0e86aee"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a383c84c1340abcabaf6ad73ef0e86aee">TypeTraits</a> = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;T&gt;</td></tr>
+<tr class="memitem:a383c84c1340abcabaf6ad73ef0e86aee" id="r_a383c84c1340abcabaf6ad73ef0e86aee"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a383c84c1340abcabaf6ad73ef0e86aee">TypeTraits</a> = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="separator:a383c84c1340abcabaf6ad73ef0e86aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae633434245b2f5ce3eb1d6d3891bda7c" id="r_ae633434245b2f5ce3eb1d6d3891bda7c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae633434245b2f5ce3eb1d6d3891bda7c">ElementType</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_meta.html#ab5b409558be9238c75f4d2ffa85e1b0b">Meta::At</a>&lt; typename TypeTraits::Types, i&gt;</td></tr>
 <tr class="separator:ae633434245b2f5ce3eb1d6d3891bda7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a30856bd6237738f238a1b052244cc4d2" id="r_a30856bd6237738f238a1b052244cc4d2"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30856bd6237738f238a1b052244cc4d2">value</a> = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_is_fixed_size.html">IsFixedSize</a>&lt;<a class="el" href="#ae633434245b2f5ce3eb1d6d3891bda7c">ElementType</a>&gt;::value ? <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_is_fixed_size.html">VariadicStructureTypeIsFixedSize</a>&lt;i - 1, T&gt;::value : false</td></tr>
+<tr class="memitem:a30856bd6237738f238a1b052244cc4d2" id="r_a30856bd6237738f238a1b052244cc4d2"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30856bd6237738f238a1b052244cc4d2">value</a> = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_is_fixed_size.html">IsFixedSize</a>&lt;<a class="el" href="#ae633434245b2f5ce3eb1d6d3891bda7c">ElementType</a>&gt;::value ? <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_is_fixed_size.html">VariadicStructureTypeIsFixedSize</a>&lt;i - 1, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;::value : false</td></tr>
 <tr class="separator:a30856bd6237738f238a1b052244cc4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
@@ -126,10 +126,10 @@ Static Public Attributes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;size_t i, typename T &gt; </div>
+template&lt;size_t i, typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_is_fixed_size.html">Harlinn::Common::Core::Types::Internal::VariadicStructureTypeIsFixedSize</a>&lt; i, T &gt;::ElementType = <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_meta.html#ab5b409558be9238c75f4d2ffa85e1b0b">Meta::At</a>&lt; typename TypeTraits::Types, i&gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_is_fixed_size.html">Harlinn::Common::Core::Types::Internal::VariadicStructureTypeIsFixedSize</a>&lt; i, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ElementType = <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_meta.html#ab5b409558be9238c75f4d2ffa85e1b0b">Meta::At</a>&lt; typename TypeTraits::Types, i&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -142,10 +142,10 @@ template&lt;size_t i, typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;size_t i, typename T &gt; </div>
+template&lt;size_t i, typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_is_fixed_size.html">Harlinn::Common::Core::Types::Internal::VariadicStructureTypeIsFixedSize</a>&lt; i, T &gt;::TypeTraits = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;T&gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_is_fixed_size.html">Harlinn::Common::Core::Types::Internal::VariadicStructureTypeIsFixedSize</a>&lt; i, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::TypeTraits = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -159,13 +159,13 @@ template&lt;size_t i, typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;size_t i, typename T &gt; </div>
+template&lt;size_t i, typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_is_fixed_size.html">Harlinn::Common::Core::Types::Internal::VariadicStructureTypeIsFixedSize</a>&lt; i, T &gt;::value = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_is_fixed_size.html">IsFixedSize</a>&lt;<a class="el" href="#ae633434245b2f5ce3eb1d6d3891bda7c">ElementType</a>&gt;::value ? <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_is_fixed_size.html">VariadicStructureTypeIsFixedSize</a>&lt;i - 1, T&gt;::value : false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_is_fixed_size.html">Harlinn::Common::Core::Types::Internal::VariadicStructureTypeIsFixedSize</a>&lt; i, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::value = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_is_fixed_size.html">IsFixedSize</a>&lt;<a class="el" href="#ae633434245b2f5ce3eb1d6d3891bda7c">ElementType</a>&gt;::value ? <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_is_fixed_size.html">VariadicStructureTypeIsFixedSize</a>&lt;i - 1, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;::value : false</td>
         </tr>
       </table>
   </td>

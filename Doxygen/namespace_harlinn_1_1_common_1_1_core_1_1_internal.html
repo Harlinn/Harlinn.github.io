@@ -196,8 +196,8 @@ Concepts</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a585f43ff31d161f299c429b8cb3368e0" id="r_a585f43ff31d161f299c429b8cb3368e0"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a585f43ff31d161f299c429b8cb3368e0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a585f43ff31d161f299c429b8cb3368e0">ToReferenceIfReferenceWrapper_t</a> = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_to_reference_if_reference_wrapper.html">ToReferenceIfReferenceWrapper</a>&lt;std::decay_t&lt;T&gt;&gt;::type</td></tr>
+<tr class="memitem:a585f43ff31d161f299c429b8cb3368e0" id="r_a585f43ff31d161f299c429b8cb3368e0"><td class="memTemplParams" colspan="2">template&lt;class <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
+<tr class="memitem:a585f43ff31d161f299c429b8cb3368e0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a585f43ff31d161f299c429b8cb3368e0">ToReferenceIfReferenceWrapper_t</a> = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_to_reference_if_reference_wrapper.html">ToReferenceIfReferenceWrapper</a>&lt;std::decay_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&gt;<a class="el" href="s__llrint_8inl.html#a53155e22eaa05190346890241be3367c">::type</a></td></tr>
 <tr class="separator:a585f43ff31d161f299c429b8cb3368e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -210,8 +210,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a213906e99c3bee33d7add088c2aeaee8" id="r_a213906e99c3bee33d7add088c2aeaee8"><td class="memTemplParams" colspan="2">template&lt;typename CollectionT , typename ValueT  = typename CollectionT::value_type, typename ReferenceT  = std::reference_wrapper&lt;ValueT&gt;&gt; </td></tr>
 <tr class="memitem:a213906e99c3bee33d7add088c2aeaee8"><td class="memTemplItemLeft" align="right" valign="top">ReferenceT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a213906e99c3bee33d7add088c2aeaee8">GetCollectionElement</a> (const CollectionT *collection, size_t index)</td></tr>
 <tr class="separator:a213906e99c3bee33d7add088c2aeaee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a6861229066f6c058c60553cb93075e" id="r_a5a6861229066f6c058c60553cb93075e"><td class="memTemplParams" colspan="2">template&lt;typename T , std::size_t... N&gt; </td></tr>
-<tr class="memitem:a5a6861229066f6c058c60553cb93075e"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5a6861229066f6c058c60553cb93075e">ByteSwapImpl</a> (T value, std::index_sequence&lt; N... &gt;)</td></tr>
+<tr class="memitem:a5a6861229066f6c058c60553cb93075e" id="r_a5a6861229066f6c058c60553cb93075e"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , std::size_t... N&gt; </td></tr>
+<tr class="memitem:a5a6861229066f6c058c60553cb93075e"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5a6861229066f6c058c60553cb93075e">ByteSwapImpl</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> value, std::index_sequence&lt; N... &gt;)</td></tr>
 <tr class="separator:a5a6861229066f6c058c60553cb93075e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84984f1b18cdefe96c4a3fc95bee7417" id="r_a84984f1b18cdefe96c4a3fc95bee7417"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84984f1b18cdefe96c4a3fc95bee7417">LengthOf</a> (const char *s) noexcept</td></tr>
 <tr class="separator:a84984f1b18cdefe96c4a3fc95bee7417"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -324,8 +324,8 @@ requires std::is_same_v&lt;CharT, char&gt; || std::is_same_v&lt;CharT, wchar_t&g
 <tr class="memitem:a3e4e2059bdf28788f8dd746d0241b046" id="r_a3e4e2059bdf28788f8dd746d0241b046"><td class="memTemplParams" colspan="2">template&lt;typename ... Types&gt; </td></tr>
 <tr class="memitem:a3e4e2059bdf28788f8dd746d0241b046"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3e4e2059bdf28788f8dd746d0241b046">MakeTupleDecayTypeHelper</a> (Types &amp;&amp;... args)</td></tr>
 <tr class="separator:a3e4e2059bdf28788f8dd746d0241b046"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a783f0169a8a33dfc91ca3cbec181efdb" id="r_a783f0169a8a33dfc91ca3cbec181efdb"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , size_t... I, size_t... J, typename T &gt; </td></tr>
-<tr class="memitem:a783f0169a8a33dfc91ca3cbec181efdb"><td class="memTemplItemLeft" align="right" valign="top">constexpr ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a783f0169a8a33dfc91ca3cbec181efdb">TupleCatImpl</a> (std::index_sequence&lt; I... &gt;, std::index_sequence&lt; J... &gt;, T &amp;&amp;arg)</td></tr>
+<tr class="memitem:a783f0169a8a33dfc91ca3cbec181efdb" id="r_a783f0169a8a33dfc91ca3cbec181efdb"><td class="memTemplParams" colspan="2">template&lt;typename ResultType , size_t... I, size_t... J, typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
+<tr class="memitem:a783f0169a8a33dfc91ca3cbec181efdb"><td class="memTemplItemLeft" align="right" valign="top">constexpr ResultType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a783f0169a8a33dfc91ca3cbec181efdb">TupleCatImpl</a> (std::index_sequence&lt; I... &gt;, std::index_sequence&lt; J... &gt;, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;&amp;arg)</td></tr>
 <tr class="separator:a783f0169a8a33dfc91ca3cbec181efdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -338,127 +338,127 @@ Variables</h2></td></tr>
 <tr class="separator:ab0dd13ca2c92557ff3977ee8326c87be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d65eb0cb5d9d38de358f54fe732af31" id="r_a3d65eb0cb5d9d38de358f54fe732af31"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d65eb0cb5d9d38de358f54fe732af31">crc24qLookupTable</a> [256]</td></tr>
 <tr class="separator:a3d65eb0cb5d9d38de358f54fe732af31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa603541dbc0fd8500b08988da0da50b1" id="r_aa603541dbc0fd8500b08988da0da50b1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa603541dbc0fd8500b08988da0da50b1" id="r_aa603541dbc0fd8500b08988da0da50b1"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:aa603541dbc0fd8500b08988da0da50b1"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa603541dbc0fd8500b08988da0da50b1">IsStdArrayImpl</a> = false</td></tr>
 <tr class="separator:aa603541dbc0fd8500b08988da0da50b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3ff83c716f214f87763b2c4d2ab26b1" id="r_ac3ff83c716f214f87763b2c4d2ab26b1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac3ff83c716f214f87763b2c4d2ab26b1" id="r_ac3ff83c716f214f87763b2c4d2ab26b1"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:ac3ff83c716f214f87763b2c4d2ab26b1"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac3ff83c716f214f87763b2c4d2ab26b1">IsStdVectorImpl</a> = false</td></tr>
 <tr class="separator:ac3ff83c716f214f87763b2c4d2ab26b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8da92c6c9fb59653f5a421b7cf20695" id="r_aa8da92c6c9fb59653f5a421b7cf20695"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa8da92c6c9fb59653f5a421b7cf20695" id="r_aa8da92c6c9fb59653f5a421b7cf20695"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:aa8da92c6c9fb59653f5a421b7cf20695"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa8da92c6c9fb59653f5a421b7cf20695">IsStdVectorBoolImpl</a> = false</td></tr>
 <tr class="separator:aa8da92c6c9fb59653f5a421b7cf20695"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fa711e92eaa077892a14d25a55102a5" id="r_a2fa711e92eaa077892a14d25a55102a5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2fa711e92eaa077892a14d25a55102a5" id="r_a2fa711e92eaa077892a14d25a55102a5"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a2fa711e92eaa077892a14d25a55102a5"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2fa711e92eaa077892a14d25a55102a5">IsStdDequeImpl</a> = false</td></tr>
 <tr class="separator:a2fa711e92eaa077892a14d25a55102a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee841f8b75f3be2e8e878892c75d41ad" id="r_aee841f8b75f3be2e8e878892c75d41ad"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aee841f8b75f3be2e8e878892c75d41ad" id="r_aee841f8b75f3be2e8e878892c75d41ad"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:aee841f8b75f3be2e8e878892c75d41ad"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aee841f8b75f3be2e8e878892c75d41ad">IsStdForwardListImpl</a> = false</td></tr>
 <tr class="separator:aee841f8b75f3be2e8e878892c75d41ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88e80bbd445374c8b13b2cdf7c62de9c" id="r_a88e80bbd445374c8b13b2cdf7c62de9c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a88e80bbd445374c8b13b2cdf7c62de9c" id="r_a88e80bbd445374c8b13b2cdf7c62de9c"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a88e80bbd445374c8b13b2cdf7c62de9c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a88e80bbd445374c8b13b2cdf7c62de9c">IsStdListImpl</a> = false</td></tr>
 <tr class="separator:a88e80bbd445374c8b13b2cdf7c62de9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5df255dff7c91c523f799331371dd3be" id="r_a5df255dff7c91c523f799331371dd3be"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5df255dff7c91c523f799331371dd3be" id="r_a5df255dff7c91c523f799331371dd3be"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a5df255dff7c91c523f799331371dd3be"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5df255dff7c91c523f799331371dd3be">IsStdSetImpl</a> = false</td></tr>
 <tr class="separator:a5df255dff7c91c523f799331371dd3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ae80324cb04eff6da38cf7fbe0048c8" id="r_a4ae80324cb04eff6da38cf7fbe0048c8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4ae80324cb04eff6da38cf7fbe0048c8" id="r_a4ae80324cb04eff6da38cf7fbe0048c8"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a4ae80324cb04eff6da38cf7fbe0048c8"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4ae80324cb04eff6da38cf7fbe0048c8">IsStdMapImpl</a> = false</td></tr>
 <tr class="separator:a4ae80324cb04eff6da38cf7fbe0048c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35172d37bf09eb61b00888f904dbe5e0" id="r_a35172d37bf09eb61b00888f904dbe5e0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a35172d37bf09eb61b00888f904dbe5e0" id="r_a35172d37bf09eb61b00888f904dbe5e0"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a35172d37bf09eb61b00888f904dbe5e0"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a35172d37bf09eb61b00888f904dbe5e0">IsStdMultisetImpl</a> = false</td></tr>
 <tr class="separator:a35172d37bf09eb61b00888f904dbe5e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0006830eaaa09c2009769bdc9c55855" id="r_af0006830eaaa09c2009769bdc9c55855"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af0006830eaaa09c2009769bdc9c55855" id="r_af0006830eaaa09c2009769bdc9c55855"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:af0006830eaaa09c2009769bdc9c55855"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af0006830eaaa09c2009769bdc9c55855">IsStdMultimapImpl</a> = false</td></tr>
 <tr class="separator:af0006830eaaa09c2009769bdc9c55855"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a849484f159bea0524e3d4abcfc28db4b" id="r_a849484f159bea0524e3d4abcfc28db4b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a849484f159bea0524e3d4abcfc28db4b" id="r_a849484f159bea0524e3d4abcfc28db4b"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a849484f159bea0524e3d4abcfc28db4b"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a849484f159bea0524e3d4abcfc28db4b">IsStdUnorderedSetImpl</a> = false</td></tr>
 <tr class="separator:a849484f159bea0524e3d4abcfc28db4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab81da350a22f727136d65836f95edf47" id="r_ab81da350a22f727136d65836f95edf47"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab81da350a22f727136d65836f95edf47" id="r_ab81da350a22f727136d65836f95edf47"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:ab81da350a22f727136d65836f95edf47"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab81da350a22f727136d65836f95edf47">IsStdUnorderedMapImpl</a> = false</td></tr>
 <tr class="separator:ab81da350a22f727136d65836f95edf47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed95661a33923b78ebe53eb628bf1f8f" id="r_aed95661a33923b78ebe53eb628bf1f8f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aed95661a33923b78ebe53eb628bf1f8f" id="r_aed95661a33923b78ebe53eb628bf1f8f"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:aed95661a33923b78ebe53eb628bf1f8f"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aed95661a33923b78ebe53eb628bf1f8f">IsStdUnorderedMultisetImpl</a> = false</td></tr>
 <tr class="separator:aed95661a33923b78ebe53eb628bf1f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9405849b7820e3194ee6c88a19f68731" id="r_a9405849b7820e3194ee6c88a19f68731"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9405849b7820e3194ee6c88a19f68731" id="r_a9405849b7820e3194ee6c88a19f68731"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a9405849b7820e3194ee6c88a19f68731"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9405849b7820e3194ee6c88a19f68731">IsStdUnorderedMultimapImpl</a> = false</td></tr>
 <tr class="separator:a9405849b7820e3194ee6c88a19f68731"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae05e9fcc169c31cc23809397511021c8" id="r_ae05e9fcc169c31cc23809397511021c8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae05e9fcc169c31cc23809397511021c8" id="r_ae05e9fcc169c31cc23809397511021c8"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:ae05e9fcc169c31cc23809397511021c8"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae05e9fcc169c31cc23809397511021c8">IsStdStackImpl</a> = false</td></tr>
 <tr class="separator:ae05e9fcc169c31cc23809397511021c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a230e9b7439d862f4a980d96c9bf157d6" id="r_a230e9b7439d862f4a980d96c9bf157d6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a230e9b7439d862f4a980d96c9bf157d6" id="r_a230e9b7439d862f4a980d96c9bf157d6"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a230e9b7439d862f4a980d96c9bf157d6"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a230e9b7439d862f4a980d96c9bf157d6">IsStdQueueImpl</a> = false</td></tr>
 <tr class="separator:a230e9b7439d862f4a980d96c9bf157d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a220dfd554acece3a6fb1966abe593b23" id="r_a220dfd554acece3a6fb1966abe593b23"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a220dfd554acece3a6fb1966abe593b23" id="r_a220dfd554acece3a6fb1966abe593b23"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a220dfd554acece3a6fb1966abe593b23"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a220dfd554acece3a6fb1966abe593b23">IsStdPriorityQueueImpl</a> = false</td></tr>
 <tr class="separator:a220dfd554acece3a6fb1966abe593b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a640af61355168d7f40c2413b3de0b66c" id="r_a640af61355168d7f40c2413b3de0b66c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a640af61355168d7f40c2413b3de0b66c" id="r_a640af61355168d7f40c2413b3de0b66c"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a640af61355168d7f40c2413b3de0b66c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a640af61355168d7f40c2413b3de0b66c">IsStdSpanImpl</a> = false</td></tr>
 <tr class="separator:a640af61355168d7f40c2413b3de0b66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47eccc8c4a57223f31737fd19709f82c" id="r_a47eccc8c4a57223f31737fd19709f82c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a47eccc8c4a57223f31737fd19709f82c" id="r_a47eccc8c4a57223f31737fd19709f82c"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a47eccc8c4a57223f31737fd19709f82c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a47eccc8c4a57223f31737fd19709f82c">IsStdBasicStringImpl</a> = false</td></tr>
 <tr class="separator:a47eccc8c4a57223f31737fd19709f82c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40d4b6cee736e45877eaee6bbc4d0661" id="r_a40d4b6cee736e45877eaee6bbc4d0661"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a40d4b6cee736e45877eaee6bbc4d0661" id="r_a40d4b6cee736e45877eaee6bbc4d0661"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a40d4b6cee736e45877eaee6bbc4d0661"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a40d4b6cee736e45877eaee6bbc4d0661">IsBasicStringImpl</a> = false</td></tr>
 <tr class="separator:a40d4b6cee736e45877eaee6bbc4d0661"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a831e562278ce8df042735c5b0405f7d2" id="r_a831e562278ce8df042735c5b0405f7d2"><td class="memTemplParams" colspan="2">template&lt;typename CharT &gt; </td></tr>
 <tr class="memitem:a831e562278ce8df042735c5b0405f7d2"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a831e562278ce8df042735c5b0405f7d2">IsBasicStringImpl&lt; BasicString&lt; CharT &gt; &gt;</a> = true</td></tr>
 <tr class="separator:a831e562278ce8df042735c5b0405f7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8648867d0197f8e4ad8d27ae68653a45" id="r_a8648867d0197f8e4ad8d27ae68653a45"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8648867d0197f8e4ad8d27ae68653a45" id="r_a8648867d0197f8e4ad8d27ae68653a45"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a8648867d0197f8e4ad8d27ae68653a45"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8648867d0197f8e4ad8d27ae68653a45">IsStdBasicStringViewImpl</a> = false</td></tr>
 <tr class="separator:a8648867d0197f8e4ad8d27ae68653a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae9557a3140ac3641ef32afcb60f4fec" id="r_aae9557a3140ac3641ef32afcb60f4fec"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aae9557a3140ac3641ef32afcb60f4fec" id="r_aae9557a3140ac3641ef32afcb60f4fec"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:aae9557a3140ac3641ef32afcb60f4fec"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aae9557a3140ac3641ef32afcb60f4fec">IsBasicStringViewImpl</a> = false</td></tr>
 <tr class="separator:aae9557a3140ac3641ef32afcb60f4fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec8723ee7ed5d3d59b4f6fb03ddf988e" id="r_aec8723ee7ed5d3d59b4f6fb03ddf988e"><td class="memTemplParams" colspan="2">template&lt;typename CharT &gt; </td></tr>
 <tr class="memitem:aec8723ee7ed5d3d59b4f6fb03ddf988e"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aec8723ee7ed5d3d59b4f6fb03ddf988e">IsBasicStringViewImpl&lt; BasicStringView&lt; CharT &gt; &gt;</a> = true</td></tr>
 <tr class="separator:aec8723ee7ed5d3d59b4f6fb03ddf988e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbbc61e2e4e22e3bc8bbcefd759ccfe0" id="r_afbbc61e2e4e22e3bc8bbcefd759ccfe0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:afbbc61e2e4e22e3bc8bbcefd759ccfe0" id="r_afbbc61e2e4e22e3bc8bbcefd759ccfe0"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:afbbc61e2e4e22e3bc8bbcefd759ccfe0"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afbbc61e2e4e22e3bc8bbcefd759ccfe0">IsCoreByteArrayImpl</a> = false</td></tr>
 <tr class="separator:afbbc61e2e4e22e3bc8bbcefd759ccfe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40c378c231a41d248191619de81dd4c0" id="r_a40c378c231a41d248191619de81dd4c0"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
 <tr class="memitem:a40c378c231a41d248191619de81dd4c0"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a40c378c231a41d248191619de81dd4c0">IsCoreByteArrayImpl&lt; ByteArray&lt; N &gt; &gt;</a> = true</td></tr>
 <tr class="separator:a40c378c231a41d248191619de81dd4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a922a1d4037a3f7d981dba4754c5388c6" id="r_a922a1d4037a3f7d981dba4754c5388c6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a922a1d4037a3f7d981dba4754c5388c6" id="r_a922a1d4037a3f7d981dba4754c5388c6"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a922a1d4037a3f7d981dba4754c5388c6"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a922a1d4037a3f7d981dba4754c5388c6">IsCoreVectorImpl</a> = false</td></tr>
 <tr class="separator:a922a1d4037a3f7d981dba4754c5388c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa037b5a7682c8a703b59d3c8cc739968" id="r_aa037b5a7682c8a703b59d3c8cc739968"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa037b5a7682c8a703b59d3c8cc739968" id="r_aa037b5a7682c8a703b59d3c8cc739968"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:aa037b5a7682c8a703b59d3c8cc739968"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa037b5a7682c8a703b59d3c8cc739968">IsCoreVectorImpl&lt; Vector&lt; T &gt; &gt;</a> = true</td></tr>
 <tr class="separator:aa037b5a7682c8a703b59d3c8cc739968"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b666b8b899701fba86982df806aca64" id="r_a4b666b8b899701fba86982df806aca64"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4b666b8b899701fba86982df806aca64" id="r_a4b666b8b899701fba86982df806aca64"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a4b666b8b899701fba86982df806aca64"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4b666b8b899701fba86982df806aca64">IsStdOptionalImpl</a> = false</td></tr>
 <tr class="separator:a4b666b8b899701fba86982df806aca64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f0730312f15dad02a8376d2101e1cba" id="r_a4f0730312f15dad02a8376d2101e1cba"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4f0730312f15dad02a8376d2101e1cba" id="r_a4f0730312f15dad02a8376d2101e1cba"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a4f0730312f15dad02a8376d2101e1cba"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4f0730312f15dad02a8376d2101e1cba">IsStdAnyImpl</a> = false</td></tr>
 <tr class="separator:a4f0730312f15dad02a8376d2101e1cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30dd689b4da56f97f0b02de91fcb6b5d" id="r_a30dd689b4da56f97f0b02de91fcb6b5d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a30dd689b4da56f97f0b02de91fcb6b5d" id="r_a30dd689b4da56f97f0b02de91fcb6b5d"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a30dd689b4da56f97f0b02de91fcb6b5d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a30dd689b4da56f97f0b02de91fcb6b5d">IsStdSharedPtrImpl</a> = false</td></tr>
 <tr class="separator:a30dd689b4da56f97f0b02de91fcb6b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3dbf1b831909346417da7eb7ada80e6" id="r_ab3dbf1b831909346417da7eb7ada80e6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab3dbf1b831909346417da7eb7ada80e6" id="r_ab3dbf1b831909346417da7eb7ada80e6"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:ab3dbf1b831909346417da7eb7ada80e6"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab3dbf1b831909346417da7eb7ada80e6">IsStdUniquePtrImpl</a> = false</td></tr>
 <tr class="separator:ab3dbf1b831909346417da7eb7ada80e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bb13e9d45240728f8609d69124de00d" id="r_a5bb13e9d45240728f8609d69124de00d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5bb13e9d45240728f8609d69124de00d" id="r_a5bb13e9d45240728f8609d69124de00d"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a5bb13e9d45240728f8609d69124de00d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5bb13e9d45240728f8609d69124de00d">IsStdPairImpl</a> = false</td></tr>
 <tr class="separator:a5bb13e9d45240728f8609d69124de00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18b1ad3c42be410bd5033c7a9e877901" id="r_a18b1ad3c42be410bd5033c7a9e877901"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a18b1ad3c42be410bd5033c7a9e877901" id="r_a18b1ad3c42be410bd5033c7a9e877901"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a18b1ad3c42be410bd5033c7a9e877901"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a18b1ad3c42be410bd5033c7a9e877901">IsStdTupleImpl</a> = false</td></tr>
 <tr class="separator:a18b1ad3c42be410bd5033c7a9e877901"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f7fd19e7b2782c73039e2568c4e30d1" id="r_a5f7fd19e7b2782c73039e2568c4e30d1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5f7fd19e7b2782c73039e2568c4e30d1" id="r_a5f7fd19e7b2782c73039e2568c4e30d1"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:a5f7fd19e7b2782c73039e2568c4e30d1"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5f7fd19e7b2782c73039e2568c4e30d1">IsStdVariantImpl</a> = false</td></tr>
 <tr class="separator:a5f7fd19e7b2782c73039e2568c4e30d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0ea798e3c13d1173297ce7986826fc0" id="r_af0ea798e3c13d1173297ce7986826fc0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af0ea798e3c13d1173297ce7986826fc0" id="r_af0ea798e3c13d1173297ce7986826fc0"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:af0ea798e3c13d1173297ce7986826fc0"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af0ea798e3c13d1173297ce7986826fc0">IsCoreTupleImpl</a> = false</td></tr>
 <tr class="separator:af0ea798e3c13d1173297ce7986826fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0f5dd8aa5d477b16db5de03e0fa5a28" id="r_aa0f5dd8aa5d477b16db5de03e0fa5a28"><td class="memTemplParams" colspan="2">template&lt;typename ... Types&gt; </td></tr>
 <tr class="memitem:aa0f5dd8aa5d477b16db5de03e0fa5a28"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa0f5dd8aa5d477b16db5de03e0fa5a28">IsCoreTupleImpl&lt; Tuple&lt; Types... &gt; &gt;</a> = true</td></tr>
 <tr class="separator:aa0f5dd8aa5d477b16db5de03e0fa5a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62e99d5cd0953b73dbbdbc23a527d0cb" id="r_a62e99d5cd0953b73dbbdbc23a527d0cb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a62e99d5cd0953b73dbbdbc23a527d0cb"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a62e99d5cd0953b73dbbdbc23a527d0cb">IsBasicTypeImpl</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a73f413b1bfbea35b494cb70e3f88876b">IsAnyOf_v</a>&lt;T, bool, char, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, wchar_t, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>, long, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, unsigned long, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>, float, double, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html">Currency</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a>&gt; || std::is_enum_v&lt;T&gt;</td></tr>
+<tr class="memitem:a62e99d5cd0953b73dbbdbc23a527d0cb" id="r_a62e99d5cd0953b73dbbdbc23a527d0cb"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
+<tr class="memitem:a62e99d5cd0953b73dbbdbc23a527d0cb"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a62e99d5cd0953b73dbbdbc23a527d0cb">IsBasicTypeImpl</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a73f413b1bfbea35b494cb70e3f88876b">IsAnyOf_v</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, bool, char, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, wchar_t, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>, long, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, unsigned long, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>, float, double, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html">Currency</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a>&gt; || std::is_enum_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="separator:a62e99d5cd0953b73dbbdbc23a527d0cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa67015f40688c715b6577a9e4d8fac98" id="r_aa67015f40688c715b6577a9e4d8fac98"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa67015f40688c715b6577a9e4d8fac98" id="r_aa67015f40688c715b6577a9e4d8fac98"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:aa67015f40688c715b6577a9e4d8fac98"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa67015f40688c715b6577a9e4d8fac98">IsTypeListImpl</a> = false</td></tr>
 <tr class="separator:aa67015f40688c715b6577a9e4d8fac98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3057a35b3bf977ff4a0b100ce56b25f1" id="r_a3057a35b3bf977ff4a0b100ce56b25f1"><td class="memTemplParams" colspan="2">template&lt;typename ... Types&gt; </td></tr>
 <tr class="memitem:a3057a35b3bf977ff4a0b100ce56b25f1"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3057a35b3bf977ff4a0b100ce56b25f1">IsTypeListImpl&lt; TypeList&lt; Types... &gt; &gt;</a> = true</td></tr>
 <tr class="separator:a3057a35b3bf977ff4a0b100ce56b25f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa3ad3e08b61a9861c86c03478ee0df8" id="r_aaa3ad3e08b61a9861c86c03478ee0df8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aaa3ad3e08b61a9861c86c03478ee0df8" id="r_aaa3ad3e08b61a9861c86c03478ee0df8"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
 <tr class="memitem:aaa3ad3e08b61a9861c86c03478ee0df8"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aaa3ad3e08b61a9861c86c03478ee0df8">IsStdComplexImpl</a> = false</td></tr>
 <tr class="separator:aaa3ad3e08b61a9861c86c03478ee0df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -469,10 +469,10 @@ Variables</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T &gt; </div>
+template&lt;class <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#a585f43ff31d161f299c429b8cb3368e0">Harlinn::Common::Core::Internal::ToReferenceIfReferenceWrapper_t</a> = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_to_reference_if_reference_wrapper.html">ToReferenceIfReferenceWrapper</a>&lt;std::decay_t&lt;T&gt;&gt;::type</td>
+          <td class="memname">using <a class="el" href="#a585f43ff31d161f299c429b8cb3368e0">Harlinn::Common::Core::Internal::ToReferenceIfReferenceWrapper_t</a> = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_to_reference_if_reference_wrapper.html">ToReferenceIfReferenceWrapper</a>&lt;std::decay_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&gt;<a class="el" href="s__llrint_8inl.html#a53155e22eaa05190346890241be3367c">::type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -589,15 +589,15 @@ requires std::is_same_v&lt;CharT, char&gt; || std::is_same_v&lt;CharT, wchar_t&g
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , std::size_t... N&gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , std::size_t... N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T Harlinn::Common::Core::Internal::ByteSwapImpl </td>
+          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> Harlinn::Common::Core::Internal::ByteSwapImpl </td>
           <td>(</td>
-          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2111,7 +2111,7 @@ template&lt;typename CharType , bool ignoreWhiteSpace, typename VectorT &gt; </d
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ResultType , size_t... I, size_t... J, typename T &gt; </div>
+template&lt;typename ResultType , size_t... I, size_t... J, typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2129,7 +2129,7 @@ template&lt;typename ResultType , size_t... I, size_t... J, typename T &gt; </di
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2218,7 +2218,7 @@ template&lt;std::size_t index, typename ... Args&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2266,7 +2266,7 @@ template&lt;typename CharT &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2314,13 +2314,13 @@ template&lt;typename CharT &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Harlinn::Common::Core::Internal::IsBasicTypeImpl = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a73f413b1bfbea35b494cb70e3f88876b">IsAnyOf_v</a>&lt;T, bool, char, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, wchar_t, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>, long, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, unsigned long, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>, float, double, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html">Currency</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a>&gt; || std::is_enum_v&lt;T&gt;</td>
+          <td class="memname">bool Harlinn::Common::Core::Internal::IsBasicTypeImpl = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a73f413b1bfbea35b494cb70e3f88876b">IsAnyOf_v</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, bool, char, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, wchar_t, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>, long, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, unsigned long, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>, float, double, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html">Currency</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a>&gt; || std::is_enum_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td>
         </tr>
       </table>
   </td>
@@ -2338,7 +2338,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2386,7 +2386,7 @@ template&lt;size_t N&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2434,7 +2434,7 @@ template&lt;typename ... Types&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2458,13 +2458,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="#a922a1d4037a3f7d981dba4754c5388c6">Harlinn::Common::Core::Internal::IsCoreVectorImpl</a>&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T &gt; &gt; = true</td>
+          <td class="memname">bool <a class="el" href="#a922a1d4037a3f7d981dba4754c5388c6">Harlinn::Common::Core::Internal::IsCoreVectorImpl</a>&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &gt; = true</td>
         </tr>
       </table>
   </td>
@@ -2482,7 +2482,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2506,7 +2506,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2530,7 +2530,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2554,7 +2554,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2578,13 +2578,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Harlinn::Common::Core::Internal::IsStdComplexImpl&lt; std::complex&lt; T &gt; &gt; = false</td>
+          <td class="memname">bool Harlinn::Common::Core::Internal::IsStdComplexImpl&lt; std::complex&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &gt; = false</td>
         </tr>
       </table>
   </td>
@@ -2602,7 +2602,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2626,7 +2626,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2650,7 +2650,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2674,7 +2674,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2698,7 +2698,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2722,7 +2722,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2746,13 +2746,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Harlinn::Common::Core::Internal::IsStdOptionalImpl&lt; std::optional&lt; T &gt; &gt; = false</td>
+          <td class="memname">bool Harlinn::Common::Core::Internal::IsStdOptionalImpl&lt; std::optional&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &gt; = false</td>
         </tr>
       </table>
   </td>
@@ -2770,7 +2770,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2794,7 +2794,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2818,7 +2818,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2842,7 +2842,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2866,13 +2866,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Harlinn::Common::Core::Internal::IsStdSharedPtrImpl&lt; std::shared_ptr&lt; T &gt; &gt; = false</td>
+          <td class="memname">bool Harlinn::Common::Core::Internal::IsStdSharedPtrImpl&lt; std::shared_ptr&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &gt; = false</td>
         </tr>
       </table>
   </td>
@@ -2890,7 +2890,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2914,7 +2914,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2938,7 +2938,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2962,7 +2962,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2986,7 +2986,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3010,7 +3010,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3034,7 +3034,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3058,7 +3058,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3082,7 +3082,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3106,7 +3106,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3130,7 +3130,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -3154,7 +3154,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

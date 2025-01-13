@@ -128,7 +128,7 @@ var searchData=
   ['const_5fnumeric_5fmax_125',['const_numeric_max',['../struct_harlinn_1_1_common_1_1_core_1_1details_1_1const__numeric__max.html',1,'Harlinn::Common::Core::details']]],
   ['constant_126',['Constant',['../class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_constant.html',1,'Harlinn::Common::Core::Persistent']]],
   ['constantformattraits_127',['ConstantFormatTraits',['../struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_constant_format_traits.html',1,'Harlinn::Common::Core::Persistent::Internal']]],
-  ['constants_128',['Constants',['../struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants.html',1,'Harlinn::Common::Core::Math']]],
+  ['constants_128',['Constants',['../struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants.html',1,'Harlinn::Common::Core::Math::Constants&lt; ArthmeticT &gt;'],['../struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html',1,'Harlinn::Common::Core::SIMD::Internal::Constants']]],
   ['constants_3c_20double_20_3e_129',['Constants&lt; double &gt;',['../struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01double_01_4.html',1,'Harlinn::Common::Core::Math']]],
   ['constants_3c_20float_20_3e_130',['Constants&lt; float &gt;',['../struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html',1,'Harlinn::Common::Core::Math']]],
   ['constpointeriterator_131',['ConstPointerIterator',['../class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_const_pointer_iterator.html',1,'Harlinn::Common::Core::Internal']]],

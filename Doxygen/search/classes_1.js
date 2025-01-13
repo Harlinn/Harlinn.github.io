@@ -177,5 +177,6 @@ var searchData=
   ['authenticationbasicparams_174',['AuthenticationBasicParams',['../struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_authentication_basic_params.html',1,'Harlinn::Common::Core::Http']]],
   ['authenticationdigestparams_175',['AuthenticationDigestParams',['../struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_authentication_digest_params.html',1,'Harlinn::Common::Core::Http']]],
   ['authenticationidentity_176',['AuthenticationIdentity',['../class_harlinn_1_1_common_1_1_core_1_1_security_1_1_authentication_identity.html',1,'Harlinn::Common::Core::Security']]],
-  ['authenticationinfo_177',['AuthenticationInfo',['../struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_authentication_info.html',1,'Harlinn::Common::Core::Http']]]
+  ['authenticationinfo_177',['AuthenticationInfo',['../struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_authentication_info.html',1,'Harlinn::Common::Core::Http']]],
+  ['axisangle_178',['AxisAngle',['../struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_1_1_axis_angle.html',1,'Harlinn::Common::Core::Math::Quaternion']]]
 ];

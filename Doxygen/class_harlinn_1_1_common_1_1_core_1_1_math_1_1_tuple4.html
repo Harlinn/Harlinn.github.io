@@ -123,7 +123,7 @@ Collaboration diagram for Harlinn::Common::Core::Math::Tuple4&lt; DerivedT, T &g
 Public Types</h2></td></tr>
 <tr class="memitem:adb4d8e50563adbe463a9ad7ac219aae4" id="r_adb4d8e50563adbe463a9ad7ac219aae4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> = DerivedT</td></tr>
 <tr class="separator:adb4d8e50563adbe463a9ad7ac219aae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11c0c45d77b7757fc64fc2487e903ec5" id="r_a11c0c45d77b7757fc64fc2487e903ec5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> = T</td></tr>
+<tr class="memitem:a11c0c45d77b7757fc64fc2487e903ec5" id="r_a11c0c45d77b7757fc64fc2487e903ec5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td></tr>
 <tr class="separator:a11c0c45d77b7757fc64fc2487e903ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada5716b8e99dd6ac088ac0a84d609121" id="r_ada5716b8e99dd6ac088ac0a84d609121"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada5716b8e99dd6ac088ac0a84d609121">size_type</a> = size_t</td></tr>
 <tr class="separator:ada5716b8e99dd6ac088ac0a84d609121"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +176,8 @@ requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e
 requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e3">Traits</a>, typename U::Traits&gt;</td></tr>
 <tr class="memitem:a5590b2d7f5877649505a586b864db024"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5590b2d7f5877649505a586b864db024">operator=</a> (const U &amp;other) noexcept</td></tr>
 <tr class="separator:a5590b2d7f5877649505a586b864db024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb0b1360ce1f7c9db904c0fb02b045c7" id="r_aeb0b1360ce1f7c9db904c0fb02b045c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae1a80adcfb4424e39a450f5d04fc4079">Simd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb0b1360ce1f7c9db904c0fb02b045c7">ToSimd</a> () const noexcept</td></tr>
+<tr class="separator:aeb0b1360ce1f7c9db904c0fb02b045c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a278e03f57b026a26e79e264e29cdbcea" id="r_a278e03f57b026a26e79e264e29cdbcea"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a278e03f57b026a26e79e264e29cdbcea">operator==</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a> &amp;other) const noexcept</td></tr>
 <tr class="separator:a278e03f57b026a26e79e264e29cdbcea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9453ac013f715e0433728d15276c5eb" id="r_ae9453ac013f715e0433728d15276c5eb"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9453ac013f715e0433728d15276c5eb">operator!=</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a> &amp;other) const noexcept</td></tr>
@@ -273,24 +275,24 @@ requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad57d94b358ce1673dcf0e708e7f5a509" id="r_ad57d94b358ce1673dcf0e708e7f5a509"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memitem:a181b530d7ecf1d5f8d88ac098e425259" id="r_a181b530d7ecf1d5f8d88ac098e425259"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a360b985f1632f7ed28cc2fbaa567a035" id="r_a360b985f1632f7ed28cc2fbaa567a035"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="#a5147fd537bfbc237d8387b7b17e6858a">ArrayType</a>&#160;&#160;&#160;<a class="el" href="#a9e424025db1fa0ecae2b27e10c04feff">values</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a360b985f1632f7ed28cc2fbaa567a035"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f4104536feabf2f166a9c7c5b1077e0" id="r_a7f4104536feabf2f166a9c7c5b1077e0"><td class="memItemLeft" >&#160;&#160;&#160;struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memitem:ae920ee4059f8243a3486941af459ba59" id="r_ae920ee4059f8243a3486941af459ba59"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="#a5147fd537bfbc237d8387b7b17e6858a">ArrayType</a>&#160;&#160;&#160;<a class="el" href="#a9e424025db1fa0ecae2b27e10c04feff">values</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ae920ee4059f8243a3486941af459ba59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38999d35ca4bf22e35f44ced3be9a7dd" id="r_a38999d35ca4bf22e35f44ced3be9a7dd"><td class="memItemLeft" >&#160;&#160;&#160;struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22128bb55d0b3de3b025b1317dd76797" id="r_a22128bb55d0b3de3b025b1317dd76797"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>&#160;&#160;&#160;<a class="el" href="#a6a50ab51d2ddd100ab2c559e327eec6d">x</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a22128bb55d0b3de3b025b1317dd76797"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0c86e034795e3fbdf3540297fa22474" id="r_ad0c86e034795e3fbdf3540297fa22474"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>&#160;&#160;&#160;<a class="el" href="#a7092a8b736895f02df62c5e7f24636e8">y</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ad0c86e034795e3fbdf3540297fa22474"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5b781e6f381997122b9954e8e9f3bac" id="r_aa5b781e6f381997122b9954e8e9f3bac"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>&#160;&#160;&#160;<a class="el" href="#ad261926be19f06cd890a13439fdb656a">z</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:aa5b781e6f381997122b9954e8e9f3bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73c5a5e2d3e7f17c625f83fe1c8d6aee" id="r_a73c5a5e2d3e7f17c625f83fe1c8d6aee"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>&#160;&#160;&#160;<a class="el" href="#ac2b0cec3c71768a704b1a4e130bbb8fa">w</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a73c5a5e2d3e7f17c625f83fe1c8d6aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f4104536feabf2f166a9c7c5b1077e0" id="r_a7f4104536feabf2f166a9c7c5b1077e0"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a7f4104536feabf2f166a9c7c5b1077e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad57d94b358ce1673dcf0e708e7f5a509" id="r_ad57d94b358ce1673dcf0e708e7f5a509"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ad57d94b358ce1673dcf0e708e7f5a509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad1c1be6441752bd4013e326ff0f082c" id="r_aad1c1be6441752bd4013e326ff0f082c"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>&#160;&#160;&#160;<a class="el" href="#a6a50ab51d2ddd100ab2c559e327eec6d">x</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:aad1c1be6441752bd4013e326ff0f082c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920819486834c658e15f5aa4f15f687a" id="r_a920819486834c658e15f5aa4f15f687a"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>&#160;&#160;&#160;<a class="el" href="#a7092a8b736895f02df62c5e7f24636e8">y</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a920819486834c658e15f5aa4f15f687a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8e8818aa27ba1024a0436ccc48cc4a5" id="r_ac8e8818aa27ba1024a0436ccc48cc4a5"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>&#160;&#160;&#160;<a class="el" href="#ad261926be19f06cd890a13439fdb656a">z</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ac8e8818aa27ba1024a0436ccc48cc4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb47fd95711cf0723f82bc4bf99dc63b" id="r_afb47fd95711cf0723f82bc4bf99dc63b"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>&#160;&#160;&#160;<a class="el" href="#ac2b0cec3c71768a704b1a4e130bbb8fa">w</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:afb47fd95711cf0723f82bc4bf99dc63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38999d35ca4bf22e35f44ced3be9a7dd" id="r_a38999d35ca4bf22e35f44ced3be9a7dd"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a38999d35ca4bf22e35f44ced3be9a7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a181b530d7ecf1d5f8d88ac098e425259" id="r_a181b530d7ecf1d5f8d88ac098e425259"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a181b530d7ecf1d5f8d88ac098e425259"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -310,10 +312,10 @@ Static Public Attributes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::ArrayType = typename Traits::ArrayType</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ArrayType = typename Traits::ArrayType</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -326,10 +328,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::const_iterator = typename ArrayType::const_iterator</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::const_iterator = typename ArrayType::const_iterator</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -342,10 +344,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::const_pointer = typename ArrayType::const_pointer</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::const_pointer = typename ArrayType::const_pointer</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -358,10 +360,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::const_reference = typename ArrayType::const_reference</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::const_reference = typename ArrayType::const_reference</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -374,10 +376,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::const_reverse_iterator = typename ArrayType::const_reverse_iterator</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::const_reverse_iterator = typename ArrayType::const_reverse_iterator</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -390,10 +392,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::DerivedType = DerivedT</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::DerivedType = DerivedT</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -406,10 +408,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::iterator = typename ArrayType::iterator</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::iterator = typename ArrayType::iterator</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -422,10 +424,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::pointer = typename ArrayType::pointer</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::pointer = typename ArrayType::pointer</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -438,10 +440,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::reference = typename ArrayType::reference</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::reference = typename ArrayType::reference</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -454,10 +456,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::reverse_iterator = typename ArrayType::reverse_iterator</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::reverse_iterator = typename ArrayType::reverse_iterator</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -470,10 +472,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Simd = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple_simd.html">TupleSimd</a>&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e3">Traits</a>, <a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a>&gt;</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Simd = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple_simd.html">TupleSimd</a>&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e3">Traits</a>, <a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -489,10 +491,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::SIMDType = typename Traits::SIMDType</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SIMDType = typename Traits::SIMDType</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -505,10 +507,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::size_type = size_t</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::size_type = size_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -521,10 +523,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::SizeType = <a class="el" href="#ada5716b8e99dd6ac088ac0a84d609121">size_type</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SizeType = <a class="el" href="#ada5716b8e99dd6ac088ac0a84d609121">size_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -537,10 +539,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Traits = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">SIMD::Traits</a>&lt;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>, <a class="el" href="#a33ae8b991a3e47efd3568642044cd2ba">Size</a>&gt;</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Traits = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">SIMD::Traits</a>&lt;<a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a>, <a class="el" href="#a33ae8b991a3e47efd3568642044cd2ba">Size</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -553,10 +555,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::value_type = T</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::value_type = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -569,10 +571,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::ValueType = <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ValueType = <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -586,13 +588,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Tuple4 </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Tuple4 </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -613,13 +615,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Tuple4 </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Tuple4 </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a></td>          <td class="paramname"><span class="paramname"><em>xv</em></span>, </td>
         </tr>
@@ -654,7 +656,7 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <div class="memtemplate">
 template&lt;Internal::SimdType U&gt; <br />
 requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e3">Traits</a>, typename U::Traits&gt;</div>
@@ -663,7 +665,7 @@ requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Tuple4 </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Tuple4 </td>
           <td>(</td>
           <td class="paramtype">const U &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
@@ -684,7 +686,7 @@ requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <div class="memtemplate">
 template&lt;Internal::TupleType U&gt; <br />
 requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e3">Traits</a>, typename U::Traits&gt;</div>
@@ -693,7 +695,7 @@ requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Tuple4 </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Tuple4 </td>
           <td>(</td>
           <td class="paramtype">const U &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
@@ -715,13 +717,13 @@ requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Assign </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Assign </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#a5147fd537bfbc237d8387b7b17e6858a">ArrayType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
           <td></td>
@@ -742,13 +744,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Assign </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Assign </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a275153caf6308fd990c1991e28d2e3a7">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
           <td></td>
@@ -769,13 +771,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Assign </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Assign </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a></td>          <td class="paramname"><span class="paramname"><em>xv</em></span>, </td>
         </tr>
@@ -810,13 +812,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a2ff9d2be8a862e5319b4739f5b1ae124">const_reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::back </td>
+          <td class="memname"><a class="el" href="#a2ff9d2be8a862e5319b4739f5b1ae124">const_reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::back </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -837,13 +839,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab11ea7817f107b83f8511c5b4b904258">reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::back </td>
+          <td class="memname"><a class="el" href="#ab11ea7817f107b83f8511c5b4b904258">reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::back </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -864,13 +866,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a51ccca9c6c6604f898243e04e3f43aa6">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::begin </td>
+          <td class="memname"><a class="el" href="#a51ccca9c6c6604f898243e04e3f43aa6">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::begin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -891,13 +893,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a9ae5dbaacc617565c3355206db3f04fd">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::begin </td>
+          <td class="memname"><a class="el" href="#a9ae5dbaacc617565c3355206db3f04fd">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::begin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -918,13 +920,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a51ccca9c6c6604f898243e04e3f43aa6">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::cbegin </td>
+          <td class="memname"><a class="el" href="#a51ccca9c6c6604f898243e04e3f43aa6">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::cbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -945,13 +947,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a51ccca9c6c6604f898243e04e3f43aa6">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::cend </td>
+          <td class="memname"><a class="el" href="#a51ccca9c6c6604f898243e04e3f43aa6">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::cend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -972,13 +974,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#aac98ec7a8efadcf6681f7af6f3ef5711">const_pointer</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::data </td>
+          <td class="memname"><a class="el" href="#aac98ec7a8efadcf6681f7af6f3ef5711">const_pointer</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::data </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -999,13 +1001,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#aa717426ffef5ff99682d0f9a38a7ad4b">pointer</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::data </td>
+          <td class="memname"><a class="el" href="#aa717426ffef5ff99682d0f9a38a7ad4b">pointer</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::data </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1026,13 +1028,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a51ccca9c6c6604f898243e04e3f43aa6">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::end </td>
+          <td class="memname"><a class="el" href="#a51ccca9c6c6604f898243e04e3f43aa6">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::end </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1053,13 +1055,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a9ae5dbaacc617565c3355206db3f04fd">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::end </td>
+          <td class="memname"><a class="el" href="#a9ae5dbaacc617565c3355206db3f04fd">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::end </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1080,13 +1082,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a2ff9d2be8a862e5319b4739f5b1ae124">const_reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::front </td>
+          <td class="memname"><a class="el" href="#a2ff9d2be8a862e5319b4739f5b1ae124">const_reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::front </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1107,13 +1109,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab11ea7817f107b83f8511c5b4b904258">reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::front </td>
+          <td class="memname"><a class="el" href="#ab11ea7817f107b83f8511c5b4b904258">reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::front </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1134,13 +1136,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::HasNaN </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::HasNaN </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1161,13 +1163,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::IsFinite </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsFinite </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1188,13 +1190,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::IsInfinite </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsInfinite </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1215,15 +1217,15 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator!= </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator!= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT, T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1242,7 +1244,7 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <div class="memtemplate">
 template&lt;Internal::SimdType U&gt; <br />
 requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e3">Traits</a>, typename U::Traits&gt;</div>
@@ -1251,7 +1253,7 @@ requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator!= </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator!= </td>
           <td>(</td>
           <td class="paramtype">const U &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
@@ -1272,13 +1274,13 @@ requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator!= </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator!= </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td> const</td>
@@ -1299,13 +1301,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator*= </td>
+          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator*= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ae1a80adcfb4424e39a450f5d04fc4079">Simd</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
@@ -1326,15 +1328,15 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator*= </td>
+          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator*= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT, T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1353,13 +1355,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator*= </td>
+          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator*= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -1380,13 +1382,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator+= </td>
+          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator+= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ae1a80adcfb4424e39a450f5d04fc4079">Simd</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
@@ -1407,15 +1409,15 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator+= </td>
+          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator+= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT, T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1434,13 +1436,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator+= </td>
+          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator+= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -1461,13 +1463,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ae1a80adcfb4424e39a450f5d04fc4079">Simd</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator- </td>
+          <td class="memname"><a class="el" href="#ae1a80adcfb4424e39a450f5d04fc4079">Simd</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator- </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1488,13 +1490,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator-= </td>
+          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator-= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ae1a80adcfb4424e39a450f5d04fc4079">Simd</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
@@ -1515,15 +1517,15 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator-= </td>
+          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator-= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT, T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1542,13 +1544,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator-= </td>
+          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator-= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -1569,13 +1571,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator/= </td>
+          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator/= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#ae1a80adcfb4424e39a450f5d04fc4079">Simd</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
@@ -1596,15 +1598,15 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator/= </td>
+          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator/= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT, T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1623,13 +1625,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator/= </td>
+          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator/= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -1650,7 +1652,7 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <div class="memtemplate">
 template&lt;Internal::SimdType U&gt; <br />
 requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e3">Traits</a>, typename U::Traits&gt;</div>
@@ -1659,7 +1661,7 @@ requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator= </td>
+          <td class="memname"><a class="el" href="#adb4d8e50563adbe463a9ad7ac219aae4">DerivedType</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator= </td>
           <td>(</td>
           <td class="paramtype">const U &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
@@ -1680,15 +1682,15 @@ requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator== </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator== </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT, T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1707,7 +1709,7 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <div class="memtemplate">
 template&lt;Internal::SimdType U&gt; <br />
 requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e3">Traits</a>, typename U::Traits&gt;</div>
@@ -1716,7 +1718,7 @@ requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator== </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator== </td>
           <td>(</td>
           <td class="paramtype">const U &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
@@ -1737,13 +1739,13 @@ requires std::is_same_v&lt;<a class="el" href="#a12e75302fb8f258450708326496a23e
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator== </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator== </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td> const</td>
@@ -1764,13 +1766,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a2ff9d2be8a862e5319b4739f5b1ae124">const_reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator[] </td>
+          <td class="memname"><a class="el" href="#a2ff9d2be8a862e5319b4739f5b1ae124">const_reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
           <td> const</td>
@@ -1791,13 +1793,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab11ea7817f107b83f8511c5b4b904258">reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::operator[] </td>
+          <td class="memname"><a class="el" href="#ab11ea7817f107b83f8511c5b4b904258">reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
           <td></td>
@@ -1818,13 +1820,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a3bd3540161cdbc4cc35aef3570f0ac13">const_reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::rbegin </td>
+          <td class="memname"><a class="el" href="#a3bd3540161cdbc4cc35aef3570f0ac13">const_reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::rbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1845,13 +1847,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a8f266481d01f7811e9947d7c44cecafe">reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::rbegin </td>
+          <td class="memname"><a class="el" href="#a8f266481d01f7811e9947d7c44cecafe">reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::rbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1872,13 +1874,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a3bd3540161cdbc4cc35aef3570f0ac13">const_reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::rend </td>
+          <td class="memname"><a class="el" href="#a3bd3540161cdbc4cc35aef3570f0ac13">const_reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::rend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1899,13 +1901,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a8f266481d01f7811e9947d7c44cecafe">reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::rend </td>
+          <td class="memname"><a class="el" href="#a8f266481d01f7811e9947d7c44cecafe">reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::rend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1926,13 +1928,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::size </td>
+          <td class="memname">size_t <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::size </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1947,19 +1949,46 @@ template&lt;typename DerivedT , typename T &gt; </div>
 
 </div>
 </div>
+<a id="aeb0b1360ce1f7c9db904c0fb02b045c7" name="aeb0b1360ce1f7c9db904c0fb02b045c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb0b1360ce1f7c9db904c0fb02b045c7">&#9670;&#160;</a></span>ToSimd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae1a80adcfb4424e39a450f5d04fc4079">Simd</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ToSimd </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8301560eb3564f1a1607064f1f52e7ac" name="a8301560eb3564f1a1607064f1f52e7ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8301560eb3564f1a1607064f1f52e7ac">&#9670;&#160;</a></span>ToString()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::ToString </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ToString </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1975,14 +2004,14 @@ template&lt;typename DerivedT , typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad57d94b358ce1673dcf0e708e7f5a509" name="ad57d94b358ce1673dcf0e708e7f5a509"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad57d94b358ce1673dcf0e708e7f5a509">&#9670;&#160;</a></span>[union]</h2>
+<a id="a181b530d7ecf1d5f8d88ac098e425259" name="a181b530d7ecf1d5f8d88ac098e425259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a181b530d7ecf1d5f8d88ac098e425259">&#9670;&#160;</a></span>[union]</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">union  { ... }  <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;</td>
+          <td class="memname">union  { ... }  <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1995,13 +2024,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ada5716b8e99dd6ac088ac0a84d609121">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Capacity = <a class="el" href="#a33ae8b991a3e47efd3568642044cd2ba">Size</a></td>
+          <td class="memname"><a class="el" href="#ada5716b8e99dd6ac088ac0a84d609121">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Capacity = <a class="el" href="#a33ae8b991a3e47efd3568642044cd2ba">Size</a></td>
         </tr>
       </table>
   </td>
@@ -2019,13 +2048,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Loaded = false</td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Loaded = false</td>
         </tr>
       </table>
   </td>
@@ -2043,13 +2072,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ada5716b8e99dd6ac088ac0a84d609121">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Size = 4</td>
+          <td class="memname"><a class="el" href="#ada5716b8e99dd6ac088ac0a84d609121">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Size = 4</td>
         </tr>
       </table>
   </td>
@@ -2067,13 +2096,13 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::Unloaded = true</td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Unloaded = true</td>
         </tr>
       </table>
   </td>
@@ -2091,10 +2120,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a5147fd537bfbc237d8387b7b17e6858a">ArrayType</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::values</td>
+          <td class="memname"><a class="el" href="#a5147fd537bfbc237d8387b7b17e6858a">ArrayType</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::values</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2107,10 +2136,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::w</td>
+          <td class="memname"><a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::w</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2123,10 +2152,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::x</td>
+          <td class="memname"><a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::x</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2139,10 +2168,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::y</td>
+          <td class="memname"><a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::y</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2155,10 +2184,10 @@ template&lt;typename DerivedT , typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename DerivedT , typename T &gt; </div>
+template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, T &gt;::z</td>
+          <td class="memname"><a class="el" href="#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Harlinn::Common::Core::Math::Tuple4</a>&lt; DerivedT, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::z</td>
         </tr>
       </table>
 </div><div class="memdoc">

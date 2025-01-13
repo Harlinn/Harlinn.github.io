@@ -120,7 +120,7 @@ Collaboration diagram for Harlinn::Common::Core::Math::FloatingPoint&lt; T &gt;:
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a5b4afa139d0e110d0b97aea665007078" id="r_a5b4afa139d0e110d0b97aea665007078"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> = std::remove_cvref_t&lt;T&gt;</td></tr>
+<tr class="memitem:a5b4afa139d0e110d0b97aea665007078" id="r_a5b4afa139d0e110d0b97aea665007078"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> = std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="separator:a5b4afa139d0e110d0b97aea665007078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1db7e2a284d9ed36c6e521fd4cad5df" id="r_ab1db7e2a284d9ed36c6e521fd4cad5df"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> = <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a></td></tr>
 <tr class="separator:ab1db7e2a284d9ed36c6e521fd4cad5df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,7 +130,7 @@ Public Types</h2></td></tr>
 <tr class="separator:a44903c00ab42c262d2e90f4d0c0a7956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0097aade1a35a69dcfcc129bbd95dfb4" id="r_a0097aade1a35a69dcfcc129bbd95dfb4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0097aade1a35a69dcfcc129bbd95dfb4">SignificandType</a> = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html">Math::Significand</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;</td></tr>
 <tr class="separator:a0097aade1a35a69dcfcc129bbd95dfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25f066e62a1a5f13c0a04ff87bafaee9" id="r_a25f066e62a1a5f13c0a04ff87bafaee9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type.html">Internal::StorageType</a>&lt;<a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a>&gt;::type</td></tr>
+<tr class="memitem:a25f066e62a1a5f13c0a04ff87bafaee9" id="r_a25f066e62a1a5f13c0a04ff87bafaee9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type.html">Internal::StorageType</a>&lt;<a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a>&gt;<a class="el" href="s__llrint_8inl.html#a53155e22eaa05190346890241be3367c">::type</a></td></tr>
 <tr class="separator:a25f066e62a1a5f13c0a04ff87bafaee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a597c1ec3a165a31ad92d5f2029e5c793" id="r_a597c1ec3a165a31ad92d5f2029e5c793"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a597c1ec3a165a31ad92d5f2029e5c793">UIntType</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aab5ac40cb0ff70d4fc1029bfdaa9279f">MakeUnsigned</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;</td></tr>
 <tr class="separator:a597c1ec3a165a31ad92d5f2029e5c793"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -346,7 +346,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:aeef560298f64f0e2ed062143cb4e4383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;<br />
 struct Harlinn::Common::Core::Math::FloatingPoint&lt; T &gt;</div><p>A template for encoding and decoding floating point values. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -361,10 +361,10 @@ struct Harlinn::Common::Core::Math::FloatingPoint&lt; T &gt;</div><p>A template 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::BiasedExponentType = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_biased_exponent.html">Math::BiasedExponent</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::BiasedExponentType = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_biased_exponent.html">Math::BiasedExponent</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -377,10 +377,10 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ExponentType = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Math::Exponent</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ExponentType = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Math::Exponent</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -393,10 +393,10 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::IntType = std::make_signed_t&lt;<a class="el" href="#a597c1ec3a165a31ad92d5f2029e5c793">UIntType</a>&gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IntType = std::make_signed_t&lt;<a class="el" href="#a597c1ec3a165a31ad92d5f2029e5c793">UIntType</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -409,10 +409,10 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SignificandType = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html">Math::Significand</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SignificandType = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html">Math::Significand</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -425,10 +425,10 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::StorageType = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type.html">Internal::StorageType</a>&lt;<a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a>&gt;::type</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::StorageType = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type.html">Internal::StorageType</a>&lt;<a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a>&gt;<a class="el" href="s__llrint_8inl.html#a53155e22eaa05190346890241be3367c">::type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -441,10 +441,10 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::UIntType = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aab5ac40cb0ff70d4fc1029bfdaa9279f">MakeUnsigned</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::UIntType = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aab5ac40cb0ff70d4fc1029bfdaa9279f">MakeUnsigned</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -457,10 +457,10 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::value_type = std::remove_cvref_t&lt;T&gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::value_type = std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -473,10 +473,10 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ValueType = <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a></td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ValueType = <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -490,13 +490,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::FloatingPoint </td>
+          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::FloatingPoint </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -517,13 +517,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::FloatingPoint </td>
+          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::FloatingPoint </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -544,13 +544,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::FloatingPoint </td>
+          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::FloatingPoint </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -571,13 +571,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::FloatingPoint </td>
+          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::FloatingPoint </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a></td>          <td class="paramname"><span class="paramname"><em>fraction</em></span>, </td>
         </tr>
@@ -608,13 +608,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Abs </td>
+          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Abs </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -635,13 +635,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Abs </td>
+          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Abs </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -662,13 +662,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::AsFloatingPoint </td>
+          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::AsFloatingPoint </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -689,13 +689,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a597c1ec3a165a31ad92d5f2029e5c793">UIntType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::AsUnsigned </td>
+          <td class="memname"><a class="el" href="#a597c1ec3a165a31ad92d5f2029e5c793">UIntType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::AsUnsigned </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -716,13 +716,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_biased_exponent.html">Math::BiasedExponent</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt; <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::BiasedExponent </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_biased_exponent.html">Math::BiasedExponent</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt; <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::BiasedExponent </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -743,13 +743,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Ceil </td>
+          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Ceil </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -770,13 +770,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Ceil </td>
+          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Ceil </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -797,13 +797,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::CreateValue </td>
+          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::CreateValue </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Core::Sign</a></td>          <td class="paramname"><span class="paramname"><em>sign</em></span>, </td>
         </tr>
@@ -833,13 +833,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Encode </td>
+          <td class="memname">static constexpr <a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Encode </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_biased_exponent.html">BiasedExponent</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>exp</em></span></td><td>)</td>
           <td></td>
@@ -860,13 +860,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Encode </td>
+          <td class="memname">static constexpr <a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Encode </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_biased_exponent.html">BiasedExponent</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>exp</em></span>, </td>
         </tr>
@@ -891,13 +891,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Encode </td>
+          <td class="memname">static constexpr <a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Encode </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Sign</a></td>          <td class="paramname"><span class="paramname"><em>sign</em></span>, </td>
         </tr>
@@ -927,13 +927,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Encode </td>
+          <td class="memname">static constexpr <a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Encode </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html">Significand</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -954,13 +954,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Math::Exponent</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt; <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Exponent </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Math::Exponent</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt; <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Exponent </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -981,13 +981,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ExponentFractionValue </td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ExponentFractionValue </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1008,13 +1008,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ExponentSignificandValue </td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ExponentSignificandValue </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1035,13 +1035,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ExponentValue </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ExponentValue </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1062,13 +1062,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ExtractExplicitExponent </td>
+          <td class="memname">int <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ExtractExplicitExponent </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1089,13 +1089,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ExtractExplicitMantissa </td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ExtractExplicitMantissa </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1116,13 +1116,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Floor </td>
+          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Floor </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1143,13 +1143,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Floor </td>
+          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Floor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -1170,13 +1170,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html">Math::Significand</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt; <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Fraction </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html">Math::Significand</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt; <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Fraction </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1197,13 +1197,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::FractionValue </td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::FractionValue </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1224,13 +1224,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Inf </td>
+          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Inf </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Core::Sign</a></td>          <td class="paramname"><span class="paramname"><em>sign</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html#af57775a57a6a9b97f479fe98e64a713a">Core::Sign::Positive</a></span></td><td>)</td>
           <td></td>
@@ -1251,13 +1251,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::IsFinite </td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsFinite </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1278,13 +1278,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::IsInf </td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsInf </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1305,13 +1305,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::IsInfOrNaN </td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsInfOrNaN </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1332,13 +1332,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::IsNaN </td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsNaN </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1359,13 +1359,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::IsNormal </td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsNormal </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1386,13 +1386,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::IsQuietNaN </td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsQuietNaN </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1413,13 +1413,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::IsSignalingNaN </td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsSignalingNaN </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1440,13 +1440,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::IsSubNormal </td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsSubNormal </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1467,13 +1467,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::IsZero </td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsZero </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1494,13 +1494,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::MakeValue </td>
+          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::MakeValue </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a></td>          <td class="paramname"><span class="paramname"><em>number</em></span>, </td>
         </tr>
@@ -1525,13 +1525,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html">Math::Significand</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt; <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Mantissa </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html">Math::Significand</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt; <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Mantissa </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1552,13 +1552,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::MantissaValue </td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::MantissaValue </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1579,13 +1579,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::MaskedMerge </td>
+          <td class="memname">static constexpr <a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::MaskedMerge </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a></td>          <td class="paramname"><span class="paramname"><em>first</em></span>, </td>
         </tr>
@@ -1616,15 +1616,15 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Max </td>
+          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Max </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a>&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1643,13 +1643,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Max </td>
+          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Max </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a></td>          <td class="paramname"><span class="paramname"><em>first</em></span>, </td>
         </tr>
@@ -1674,13 +1674,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Max </td>
+          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Max </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a></td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
@@ -1701,13 +1701,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::MaxNormal </td>
+          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::MaxNormal </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Core::Sign</a></td>          <td class="paramname"><span class="paramname"><em>sign</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html#af57775a57a6a9b97f479fe98e64a713a">Core::Sign::Positive</a></span></td><td>)</td>
           <td></td>
@@ -1728,13 +1728,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::MaxSubNormal </td>
+          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::MaxSubNormal </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Core::Sign</a></td>          <td class="paramname"><span class="paramname"><em>sign</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html#af57775a57a6a9b97f479fe98e64a713a">Core::Sign::Positive</a></span></td><td>)</td>
           <td></td>
@@ -1755,15 +1755,15 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Min </td>
+          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Min </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a>&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1782,13 +1782,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Min </td>
+          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Min </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a></td>          <td class="paramname"><span class="paramname"><em>first</em></span>, </td>
         </tr>
@@ -1813,13 +1813,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Min </td>
+          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Min </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a></td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
@@ -1840,13 +1840,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::MinNormal </td>
+          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::MinNormal </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Core::Sign</a></td>          <td class="paramname"><span class="paramname"><em>sign</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html#af57775a57a6a9b97f479fe98e64a713a">Core::Sign::Positive</a></span></td><td>)</td>
           <td></td>
@@ -1867,13 +1867,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::MinSubNormal </td>
+          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::MinSubNormal </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Core::Sign</a></td>          <td class="paramname"><span class="paramname"><em>sign</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html#af57775a57a6a9b97f479fe98e64a713a">Core::Sign::Positive</a></span></td><td>)</td>
           <td></td>
@@ -1894,13 +1894,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ModF </td>
+          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ModF </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>intPart</em></span></td><td>)</td>
           <td></td>
@@ -1921,13 +1921,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ModF </td>
+          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ModF </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
@@ -1952,13 +1952,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::NextTowardInf </td>
+          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::NextTowardInf </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1979,13 +1979,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::One </td>
+          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::One </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Core::Sign</a></td>          <td class="paramname"><span class="paramname"><em>sign</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html#af57775a57a6a9b97f479fe98e64a713a">Core::Sign::Positive</a></span></td><td>)</td>
           <td></td>
@@ -2006,13 +2006,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> &amp; <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::operator= </td>
+          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> &amp; <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator= </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -2033,13 +2033,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::QuietNaN </td>
+          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::QuietNaN </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Core::Sign</a></td>          <td class="paramname"><span class="paramname"><em>sign</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html#af57775a57a6a9b97f479fe98e64a713a">Core::Sign::Positive</a></span>, </td>
         </tr>
@@ -2064,13 +2064,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Round </td>
+          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Round </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2091,13 +2091,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Round </td>
+          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Round </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -2118,13 +2118,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SetBiasedExponent </td>
+          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SetBiasedExponent </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_biased_exponent.html">Math::BiasedExponent</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>biased</em></span></td><td>)</td>
           <td></td>
@@ -2145,13 +2145,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SetExponent </td>
+          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SetExponent </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -2172,13 +2172,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SetExponent </td>
+          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SetExponent </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Math::Exponent</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -2199,13 +2199,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SetFraction </td>
+          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SetFraction </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html">Math::Significand</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -2226,13 +2226,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SetFraction </td>
+          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SetFraction </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -2253,13 +2253,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SetMantissa </td>
+          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SetMantissa </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html">Math::Significand</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -2280,13 +2280,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SetMantissa </td>
+          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SetMantissa </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -2307,13 +2307,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SetSign </td>
+          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SetSign </td>
           <td>(</td>
           <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>value</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span></td><td>)</td>
           <td></td>
@@ -2334,13 +2334,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SetSign </td>
+          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SetSign </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Core::Sign</a></td>          <td class="paramname"><span class="paramname"><em>sign</em></span></td><td>)</td>
           <td></td>
@@ -2361,13 +2361,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SetSignificand </td>
+          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SetSignificand </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html">Math::Significand</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -2388,13 +2388,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SetSignificand </td>
+          <td class="memname">void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SetSignificand </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -2415,13 +2415,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Core::Sign</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Sign </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Core::Sign</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Sign </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2442,13 +2442,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SignalingNaN </td>
+          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SignalingNaN </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Core::Sign</a></td>          <td class="paramname"><span class="paramname"><em>sign</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html#af57775a57a6a9b97f479fe98e64a713a">Core::Sign::Positive</a></span>, </td>
         </tr>
@@ -2473,13 +2473,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Signed </td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Signed </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2500,13 +2500,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html">Math::Significand</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt; <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Significand </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html">Math::Significand</a>&lt; <a class="el" href="#a5b4afa139d0e110d0b97aea665007078">value_type</a> &gt; <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Significand </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2527,13 +2527,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SignificandValue </td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SignificandValue </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2554,13 +2554,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Trunc </td>
+          <td class="memname"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Trunc </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2581,13 +2581,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Trunc </td>
+          <td class="memname">static constexpr <a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Trunc </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -2608,13 +2608,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::Zero </td>
+          <td class="memname">static constexpr <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">FloatingPoint</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Zero </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html">Core::Sign</a></td>          <td class="paramname"><span class="paramname"><em>sign</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_sign.html#af57775a57a6a9b97f479fe98e64a713a">Core::Sign::Positive</a></span></td><td>)</td>
           <td></td>
@@ -2636,13 +2636,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ExponentBias = ( 1 &lt;&lt; ( <a class="el" href="#a49f12ae1c15460fefe479a8a279f5562">ExponentWidth</a> - 1 ) ) - 1</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ExponentBias = ( 1 &lt;&lt; ( <a class="el" href="#a49f12ae1c15460fefe479a8a279f5562">ExponentWidth</a> - 1 ) ) - 1</td>
         </tr>
       </table>
   </td>
@@ -2660,13 +2660,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ExponentFractionMask = <a class="el" href="#a29a4818cdcdb50eee1eaad4920af437a">FractionMask</a> | <a class="el" href="#a5a950e708d4c631b09e04af3f557b68e">ExponentMask</a></td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ExponentFractionMask = <a class="el" href="#a29a4818cdcdb50eee1eaad4920af437a">FractionMask</a> | <a class="el" href="#a5a950e708d4c631b09e04af3f557b68e">ExponentMask</a></td>
         </tr>
       </table>
   </td>
@@ -2684,13 +2684,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ExponentMask = ExponentMask&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>, <a class="el" href="#a597c1ec3a165a31ad92d5f2029e5c793">UIntType</a>&gt;</td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ExponentMask = ExponentMask&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>, <a class="el" href="#a597c1ec3a165a31ad92d5f2029e5c793">UIntType</a>&gt;</td>
         </tr>
       </table>
   </td>
@@ -2708,13 +2708,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ExponentSignMask = <a class="el" href="#a5a950e708d4c631b09e04af3f557b68e">ExponentMask</a> | <a class="el" href="#adb1dad3d73fb407d92dcf73c963886f2">SignMask</a></td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ExponentSignMask = <a class="el" href="#a5a950e708d4c631b09e04af3f557b68e">ExponentMask</a> | <a class="el" href="#adb1dad3d73fb407d92dcf73c963886f2">SignMask</a></td>
         </tr>
       </table>
   </td>
@@ -2732,13 +2732,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ExponentWidth = static_cast&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> &gt;( <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_exponent_width.html">Internal::ExponentWidth</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;::value )</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ExponentWidth = static_cast&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> &gt;( <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_exponent_width.html">Internal::ExponentWidth</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;::value )</td>
         </tr>
       </table>
   </td>
@@ -2756,13 +2756,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::FractionMask = FractionMask&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>, <a class="el" href="#a597c1ec3a165a31ad92d5f2029e5c793">UIntType</a>&gt;</td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::FractionMask = FractionMask&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>, <a class="el" href="#a597c1ec3a165a31ad92d5f2029e5c793">UIntType</a>&gt;</td>
         </tr>
       </table>
   </td>
@@ -2780,13 +2780,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::FractionWidth = static_cast&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> &gt;( <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_fraction_width.html">Internal::FractionWidth</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;::value )</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::FractionWidth = static_cast&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> &gt;( <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_fraction_width.html">Internal::FractionWidth</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;::value )</td>
         </tr>
       </table>
   </td>
@@ -2804,13 +2804,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::InfinityValue = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_infinity_unsigned_value.html">Internal::InfinityUnsignedValue</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;::value</td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::InfinityValue = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_infinity_unsigned_value.html">Internal::InfinityUnsignedValue</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;::value</td>
         </tr>
       </table>
   </td>
@@ -2828,13 +2828,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::MaxExponent = static_cast&lt; <a class="el" href="#a597c1ec3a165a31ad92d5f2029e5c793">UIntType</a> &gt;( <a class="el" href="#adc5daf6385f09287c0a5f88faecffc36">MaxExponentValue</a> ) &lt;&lt; <a class="el" href="#a62edb8167cfb1e53b6c53d02328fbff8">FractionWidth</a></td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::MaxExponent = static_cast&lt; <a class="el" href="#a597c1ec3a165a31ad92d5f2029e5c793">UIntType</a> &gt;( <a class="el" href="#adc5daf6385f09287c0a5f88faecffc36">MaxExponentValue</a> ) &lt;&lt; <a class="el" href="#a62edb8167cfb1e53b6c53d02328fbff8">FractionWidth</a></td>
         </tr>
       </table>
   </td>
@@ -2852,13 +2852,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::MaxExponentValue = ( 1 &lt;&lt; <a class="el" href="#a49f12ae1c15460fefe479a8a279f5562">ExponentWidth</a> ) - 1</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::MaxExponentValue = ( 1 &lt;&lt; <a class="el" href="#a49f12ae1c15460fefe479a8a279f5562">ExponentWidth</a> ) - 1</td>
         </tr>
       </table>
   </td>
@@ -2876,13 +2876,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::NegativeInfinityValue = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_negative_infinity_unsigned_value.html">Internal::NegativeInfinityUnsignedValue</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;::value</td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::NegativeInfinityValue = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_negative_infinity_unsigned_value.html">Internal::NegativeInfinityUnsignedValue</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;::value</td>
         </tr>
       </table>
   </td>
@@ -2900,13 +2900,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::NegativeZeroValue = <a class="el" href="#adb1dad3d73fb407d92dcf73c963886f2">SignMask</a></td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::NegativeZeroValue = <a class="el" href="#adb1dad3d73fb407d92dcf73c963886f2">SignMask</a></td>
         </tr>
       </table>
   </td>
@@ -2924,13 +2924,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::QuietNaNValue = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quiet_na_n_unsigned_value.html">Internal::QuietNaNUnsignedValue</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;::value</td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::QuietNaNValue = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quiet_na_n_unsigned_value.html">Internal::QuietNaNUnsignedValue</a>&lt;<a class="el" href="#ab1db7e2a284d9ed36c6e521fd4cad5df">ValueType</a>&gt;::value</td>
         </tr>
       </table>
   </td>
@@ -2948,13 +2948,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SignificandMask = <a class="el" href="#a29a4818cdcdb50eee1eaad4920af437a">FractionMask</a></td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SignificandMask = <a class="el" href="#a29a4818cdcdb50eee1eaad4920af437a">FractionMask</a></td>
         </tr>
       </table>
   </td>
@@ -2972,13 +2972,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SignificandWidth = <a class="el" href="#a62edb8167cfb1e53b6c53d02328fbff8">FractionWidth</a></td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SignificandWidth = <a class="el" href="#a62edb8167cfb1e53b6c53d02328fbff8">FractionWidth</a></td>
         </tr>
       </table>
   </td>
@@ -2996,13 +2996,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SignMask = ~( <a class="el" href="#a29a4818cdcdb50eee1eaad4920af437a">FractionMask</a> | <a class="el" href="#a5a950e708d4c631b09e04af3f557b68e">ExponentMask</a> )</td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SignMask = ~( <a class="el" href="#a29a4818cdcdb50eee1eaad4920af437a">FractionMask</a> | <a class="el" href="#a5a950e708d4c631b09e04af3f557b68e">ExponentMask</a> )</td>
         </tr>
       </table>
   </td>
@@ -3020,13 +3020,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::SignWidth = 1</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SignWidth = 1</td>
         </tr>
       </table>
   </td>
@@ -3044,13 +3044,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::StorageWidth = sizeof( <a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> ) * CHAR_BIT</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::StorageWidth = sizeof( <a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> ) * CHAR_BIT</td>
         </tr>
       </table>
   </td>
@@ -3068,13 +3068,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::TotalWidth = <a class="el" href="#a147b832b235a35c8e53d953e6021861d">SignWidth</a> + <a class="el" href="#a49f12ae1c15460fefe479a8a279f5562">ExponentWidth</a> + <a class="el" href="#a62edb8167cfb1e53b6c53d02328fbff8">FractionWidth</a></td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::TotalWidth = <a class="el" href="#a147b832b235a35c8e53d953e6021861d">SignWidth</a> + <a class="el" href="#a49f12ae1c15460fefe479a8a279f5562">ExponentWidth</a> + <a class="el" href="#a62edb8167cfb1e53b6c53d02328fbff8">FractionWidth</a></td>
         </tr>
       </table>
   </td>
@@ -3092,10 +3092,10 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::value_</td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::value_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -3108,13 +3108,13 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; T &gt;::ZeroValue = static_cast&lt; <a class="el" href="#a597c1ec3a165a31ad92d5f2029e5c793">UIntType</a> &gt;( 0 )</td>
+          <td class="memname"><a class="el" href="#a25f066e62a1a5f13c0a04ff87bafaee9">StorageType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html">Harlinn::Common::Core::Math::FloatingPoint</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ZeroValue = static_cast&lt; <a class="el" href="#a597c1ec3a165a31ad92d5f2029e5c793">UIntType</a> &gt;( 0 )</td>
         </tr>
       </table>
   </td>

@@ -1,5 +1,6 @@
 var struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m512d_01_4 =
 [
+    [ "IntegerType", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m512d_01_4.html#a56f47cc67c01815bff00e988973fb054", null ],
     [ "Type", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m512d_01_4.html#ac12c96453602c4541d02842c2ebd5354", null ],
     [ "AlignAs", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m512d_01_4.html#ad3c8ad6b5ccbdb73b870198d8b947dd7", null ],
     [ "Id", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m512d_01_4.html#ae84c13f5e871785e1fda70fff9f67478", null ],

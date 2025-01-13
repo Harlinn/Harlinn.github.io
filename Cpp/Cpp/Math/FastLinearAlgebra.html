@@ -256,6 +256,7 @@ classes holding <code class="language-plaintext highlighter-rouge">2</code>, <co
   <li><a href="#squarematrix"><code class="language-plaintext highlighter-rouge">SquareMatrix</code></a></li>
   <li><a href="#quaternion"><code class="language-plaintext highlighter-rouge">Quaternion</code></a></li>
   <li><a href="#transform"><code class="language-plaintext highlighter-rouge">Transform</code></a></li>
+  <li><a href="#benchmarks">Benchmarks</a></li>
 </ul>
 
 <p>The purpose of specializations of <a href="SimdOperations.html"><code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T, N&gt;</code></a> is to have a mechanism for
@@ -3252,6 +3253,23 @@ BenchmarkPBRTVector3f          7.08 ns         5.86 ns    112000000
 
 <p>Calculates the angle in radians between two normalized vectors.</p>
 
+<h5 id="transform">Transform</h5>
+
+<p>Transforms a 3D vector by a matrix.</p>
+
+<pre><code class="language-C++">inline Vector&lt;float, 3&gt;::Simd Transform( const Vector&lt;float, 3&gt;::Simd&amp; v, 
+                                        const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline Vector&lt;float, 3&gt;::Simd Transform( const Vector&lt;float, 3&gt;&amp; v, 
+                                        const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline Vector&lt;float, 3&gt;::Simd Transform( const Vector&lt;float, 3&gt;::Simd&amp; v, 
+                                        const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+
+inline Vector&lt;float, 3&gt;::Simd Transform( const Vector&lt;float, 3&gt;&amp; v, 
+                                        const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+</code></pre>
+
 <h3 id="normal3f-and-normal3i">Normal3f and Normal3i</h3>
 
 <p>The surface normal is a vector perpendicular to 
@@ -3263,6 +3281,39 @@ of their relationship to a surface, they behave differently than
 vectors in some situations, particularly when applying transformations.</p>
 
 <h4 id="normal3f-functions">Normal3f functions</h4>
+
+<h5 id="transform-1">Transform</h5>
+
+<p>Transforms the Normal3f object by the given matrix.</p>
+
+<pre><code class="language-C++">inline Normal3f::Simd Transform( const Normal3f::Simd&amp; v, 
+                                const SquareMatrix&lt;float, 3&gt;::Simd&amp; matrix );
+
+inline Normal3f::Simd Transform( const Normal3f::Simd&amp; v, 
+                                const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline Normal3f::Simd Transform( const Normal3f::Simd&amp; v, 
+                                const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline Normal3f::Simd Transform( const Normal3f&amp; v, 
+                                const SquareMatrix&lt;float, 3&gt;::Simd&amp; matrix );
+
+inline Normal3f::Simd Transform( const Normal3f&amp; v, 
+                                const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline Normal3f::Simd Transform( const Normal3f::Simd&amp; v, 
+                                const SquareMatrix&lt;float, 3&gt;&amp; matrix );
+
+inline Normal3f::Simd Transform( const Normal3f::Simd&amp; v, 
+                                const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+
+inline Normal3f::Simd Transform( const Normal3f&amp; v, 
+                                const SquareMatrix&lt;float, 3&gt;&amp; matrix );
+
+inline Normal3f::Simd Transform( const Normal3f&amp; v, 
+                                const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+
+</code></pre>
 
 <h3 id="point3f-and-point3i">Point3f and Point3i</h3>
 
@@ -3278,6 +3329,25 @@ direction leads to a number of important differences in how they are treated.</p
 
 <p>Calculates the minimum distance between a line and a point.</p>
 
+<h5 id="transform-2">Transform</h5>
+
+<p>Transforms the Point3f object by the provided transformation matrix.</p>
+
+<pre><code class="language-C++">
+inline Point3f::Simd Transform( const Point3f::Simd&amp; v, 
+                                const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline Point3f::Simd Transform( const Point3f&amp; v, 
+                                const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline Point3f::Simd Transform( const Point3f::Simd&amp; v, 
+                                const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+
+inline Point3f::Simd Transform( const Point3f&amp; v, 
+                                const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+
+</code></pre>
+
 <h2 id="squarematrix">SquareMatrix</h2>
 
 <p>The <code class="language-plaintext highlighter-rouge">SquareMatrix</code> template class is used to represent transformations that can be applied
@@ -3289,12 +3359,215 @@ as a \(2 x 2\), \(3 x 3\) or \(4 x 4\) matrix.</p>
 
 <p>Internally, computations on \(2 x 2\) matrices are performed using a single SIMD type/register,
 while operations on \(3 x 3\) and \(4 x 4\) matrices are performed using one
-SIMD register for each row.</p>
+SIMD type/register for each row.</p>
 
 <p><code class="language-plaintext highlighter-rouge">SquareMatrix</code> support matrix addition, scalar addition, matrix multiplication, scalar multiplication, 
 the matrices can be transposed using <code class="language-plaintext highlighter-rouge">Transpose</code> and inverted using <code class="language-plaintext highlighter-rouge">Inverse</code>, and <code class="language-plaintext highlighter-rouge">Determinant</code> calculates
 the determinant. The default constructor creates an identity matrix, so <code class="language-plaintext highlighter-rouge">SquareMatrix</code> handles the usual
 operations associated with small square matrices.</p>
+
+<h3 id="squarematrixfloat4-functions">SquareMatrix&lt;float,4&gt; functions</h3>
+
+<h4 id="transpose">Transpose</h4>
+
+<p>Calculates the transpose of the matrix.</p>
+
+<pre><code class="language-C++">inline SquareMatrix&lt;float, 4&gt;::Simd Transpose( const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline SquareMatrix&lt;float, 4&gt;::Simd Transpose( const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+
+</code></pre>
+
+<h4 id="inverse">Inverse</h4>
+
+<p>Calculates the inverse of the matrix.</p>
+
+<pre><code class="language-C++">inline SquareMatrix&lt;float, 4&gt;::Simd Inverse( const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix, 
+                                            typename Vector&lt;float, 4&gt;::Simd* determinant = nullptr );
+
+inline typename SquareMatrix&lt;float, 4&gt;::Simd Inverse( const SquareMatrix&lt;float, 4&gt;&amp; matrix, 
+                                            typename Vector&lt;float, 4&gt;::Simd* determinant = nullptr );
+
+</code></pre>
+
+<h4 id="determinant-and-scalardeterminant">Determinant and ScalarDeterminant</h4>
+
+<p>Calculates the determinant of a matrix.</p>
+
+<pre><code class="language-C++">inline typename Vector&lt;float,4&gt;::Simd Determinant( const typename SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline typename Vector&lt;float, 4&gt;::Simd Determinant( const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+
+inline float ScalarDeterminant( const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline float ScalarDeterminant( const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+
+</code></pre>
+
+<h4 id="translation">Translation</h4>
+
+<p>Creates a translation matrix using the provided offsets.</p>
+
+<pre><code class="language-C++">inline SquareMatrix&lt;float, 4&gt;::Simd Translation( float offsetX, float offsetY, float offsetZ );
+
+template&lt;Internal::SimdType S&gt;
+    requires (S::Size &gt; 2) &amp;&amp; std::is_same_v&lt;typename S::value_type, float&gt;
+inline SquareMatrix&lt;float, 4&gt;::Simd Translation( const S&amp; offsets );
+
+template&lt;Internal::TupleType S&gt;
+    requires ( S::Size &gt; 2 ) &amp;&amp; std::is_same_v&lt;typename S::value_type, float&gt;
+inline SquareMatrix&lt;float, 4&gt;::Simd Translation( const S&amp; offsets );
+
+</code></pre>
+
+<h4 id="scaling">Scaling</h4>
+
+<p>Creates a transformation matrix for scaling along 
+the x-axis, y-axis, and z-axis.</p>
+
+<pre><code class="language-C++">inline SquareMatrix&lt;float, 4&gt;::Simd Scaling( float scaleX, float scaleY, float scaleZ );
+
+template&lt;Internal::SimdType S&gt;
+    requires ( S::Size &gt; 2 )
+inline SquareMatrix&lt;float, 4&gt;::Simd Scaling( const S&amp; v ) noexcept;
+
+template&lt;Internal::TupleType S&gt;
+    requires ( S::Size &gt; 2 )
+inline SquareMatrix&lt;float, 4&gt;::Simd Scaling( const S&amp; v ) noexcept;
+
+</code></pre>
+
+<h4 id="rotation">Rotation</h4>
+
+<p>Creates a transformation matrix that rotates about the y-axis, 
+then the x-axis, and finally the z-axis.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType S&gt;
+    requires (S::Size &gt; 2)
+inline SquareMatrix&lt;float, 4&gt;::Simd Rotation( const S&amp; v ) noexcept;
+
+template&lt;Internal::TupleType S&gt;
+    requires ( S::Size &gt; 2 )
+inline SquareMatrix&lt;float, 4&gt;::Simd Rotation( const S&amp; v ) noexcept;
+
+inline SquareMatrix&lt;float, 4&gt;::Simd Rotation( float xAxisRotation, 
+                        float yAxisRotation, float zAxisRotation ) noexcept;
+</code></pre>
+
+<h4 id="rotationnormal">RotationNormal</h4>
+
+<p>Creates a matrix that rotates around a normalized vector.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType S&gt;
+    requires ( S::Size &gt; 2 ) 
+inline SquareMatrix&lt;float, 4&gt;::Simd RotationNormal( const S&amp; normalizedAxis, float angle ) noexcept;
+
+template&lt;Internal::TupleType S&gt;
+    requires ( S::Size &gt; 2 )
+inline SquareMatrix&lt;float, 4&gt;::Simd RotationNormal( const S&amp; normalizedAxis, float angle ) noexcept;
+
+</code></pre>
+
+<h4 id="rotationaxis">RotationAxis</h4>
+
+<p>Creates a matrix that rotates around an arbitrary axis.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType S&gt;
+    requires ( S::Size &gt; 2 )
+inline SquareMatrix&lt;float, 4&gt;::Simd RotationAxis( const S&amp; axis, float angle ) noexcept;
+
+template&lt;Internal::TupleType S&gt;
+    requires ( S::Size &gt; 2 )
+inline SquareMatrix&lt;float, 4&gt;::Simd RotationAxis( const S&amp; axis, float angle ) noexcept;
+</code></pre>
+
+<h4 id="rotationquaternion">RotationQuaternion</h4>
+
+<p>Creates a rotation matrix from a quaternion.</p>
+
+<pre><code class="language-C++">inline SquareMatrix&lt;float, 4&gt;::Simd RotationQuaternion( const QuaternionSimd&lt;Quaternion&lt;float&gt;&gt;&amp; q );
+
+inline SquareMatrix&lt;float, 4&gt;::Simd RotationQuaternion( const Quaternion&lt;float&gt;&amp; q );
+
+</code></pre>
+
+<h4 id="transformationmatrix">TransformationMatrix</h4>
+
+<p>Creates a transformation matrix.</p>
+
+<pre><code class="language-C++">inline SquareMatrix&lt;float, 4&gt;::Simd TransformationMatrix( const Point3f::Simd&amp; scalingOrigin, 
+                            const QuaternionSimd&lt;Quaternion&lt;float&gt;&gt;&amp; scalingOrientationQuaternion, 
+                            const Vector&lt;float,3&gt;::Simd&amp; scaling,
+                            const Point3f::Simd&amp; rotationOrigin, 
+                            const QuaternionSimd&lt;Quaternion&lt;float&gt;&gt;&amp; rotationQuaternion, 
+                            const Vector&lt;float, 3&gt;::Simd&amp; translation );
+
+
+</code></pre>
+
+<h4 id="affinetransformationmatrix">AffineTransformationMatrix</h4>
+
+<p>Creates an affine transformation matrix.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType S, Internal::SimdType T, typename U, Internal::SimdType W&gt;
+        requires (S::Size &gt; 2) &amp;&amp; (T::Size &gt; 2) &amp;&amp; (W::Size &gt; 2) &amp;&amp; IsFloatingPoint&lt;U&gt; &amp;&amp;
+            std::is_same_v&lt;typename S::value_type,U&gt; &amp;&amp; 
+                std::is_same_v&lt;typename T::value_type, U&gt; &amp;&amp; 
+                std::is_same_v&lt;typename W::value_type, U&gt;
+    inline SquareMatrix&lt;U, 4&gt;::Simd AffineTransformationMatrix( const S&amp; scaling,
+                                        const T&amp; rotationOrigin,
+                                        const QuaternionSimd&lt;Quaternion&lt;U&gt;&gt;&amp; rotationQuaternion,
+                                        const W&amp; translation )
+
+</code></pre>
+
+<h4 id="transform-3">Transform</h4>
+
+<p>Applies a transformation matrix to a 3D vector.</p>
+
+<pre><code class="language-C++">inline Vector&lt;float, 3&gt;::Simd Transform( const Vector&lt;float, 3&gt;::Simd&amp; v, 
+                                        const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline Vector&lt;float, 3&gt;::Simd Transform( const Vector&lt;float, 3&gt;&amp; v, 
+                                        const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline Vector&lt;float, 3&gt;::Simd Transform( const Vector&lt;float, 3&gt;::Simd&amp; v, 
+                                        const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+
+inline Vector&lt;float, 3&gt;::Simd Transform( const Vector&lt;float, 3&gt;&amp; v, 
+                                        const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+
+</code></pre>
+<p>Applies a transformation matrix to a 3D coordinate.</p>
+
+<pre><code class="language-C++">inline Point3f::Simd Transform( const Point3f::Simd&amp; p, 
+                                const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline Point3f::Simd Transform( const Point3f&amp; p, 
+                                const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline Point3f::Simd Transform( const Point3f::Simd&amp; p, 
+                                const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+
+inline Point3f::Simd Transform( const Point3f&amp; p, 
+                                const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+</code></pre>
+
+<p>Applies a transformation matrix to a normal.</p>
+
+<pre><code class="language-C++">inline Normal3f::Simd Transform( const Normal3f::Simd&amp; n, 
+                                const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline Normal3f::Simd Transform( const Normal3f&amp; n, 
+                                const SquareMatrix&lt;float, 4&gt;::Simd&amp; matrix );
+
+inline Normal3f::Simd Transform( const Normal3f::Simd&amp; n, 
+                                const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+
+inline Normal3f::Simd Transform( const Normal3f&amp; n, 
+                                const SquareMatrix&lt;float, 4&gt;&amp; matrix );
+
+</code></pre>
 
 <h2 id="quaternion">Quaternion</h2>
 
@@ -3456,7 +3729,7 @@ template&lt;typename T&gt;
 QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Normalize( const Quaternion&lt;T&gt;&amp; q1 ) noexcept;
 </code></pre>
 
-<h4 id="inverse">Inverse</h4>
+<h4 id="inverse-1">Inverse</h4>
 
 <p>Calculates the inverse of a quaternion.</p>
 
@@ -3536,7 +3809,7 @@ QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Slerp( const Quaternion&lt;T&gt;&amp; 
 
 </code></pre>
 
-<h2 id="transform">Transform</h2>
+<h2 id="transform-4">Transform</h2>
 
 <p>A transform is a mapping from vectors to vectors or points to points.</p>
 
@@ -3544,6 +3817,38 @@ QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Slerp( const Quaternion&lt;T&gt;&amp; 
 finding its coordinate values with respect to another coordinate frame is a useful 
 capability.</p>
 
+<h2 id="benchmarks">Benchmarks</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-------------------------------------------------------------------------------------
+Benchmark                                           Time             CPU   Iterations
+-------------------------------------------------------------------------------------
+BenchmarkPointRotationAxis                       13.3 ns         9.21 ns     56000000
+BenchmarkPointXMMatrixRotationAxis               19.9 ns         17.1 ns     44800000
+BenchmarkVectorRotationAxis                      12.2 ns         10.9 ns     74666667
+BenchmarkVectorXMMatrixRotationAxis              18.9 ns         15.0 ns     40727273
+BenchmarkNormalRotationAxis                      12.3 ns         9.77 ns     64000000
+BenchmarkNormalXMMatrixRotationAxis              18.9 ns         14.8 ns     56000000
+BenchmarkPointTranslation                        3.29 ns         2.93 ns    224000000
+BenchmarkPointXMMatrixTranslation                3.86 ns         3.05 ns    235789474
+BenchmarkVectorTranslation                       3.25 ns         2.49 ns    213333333
+BenchmarkVectorXMMatrixTranslation               3.41 ns         2.93 ns    224000000
+BenchmarkNormalTranslation                       2.43 ns         1.99 ns    344615385
+BenchmarkNormalXMMatrixTranslation               2.50 ns         2.31 ns    263529412
+BenchmarkPointScaling                            3.66 ns         3.00 ns    224000000
+BenchmarkPointXMMatrixScaling                    3.65 ns         3.18 ns    235789474
+BenchmarkVectorScaling                           3.04 ns         2.78 ns    235789474
+BenchmarkVectorXMMatrixScaling                   3.51 ns         2.61 ns    263529412
+BenchmarkNormalScaling                           3.20 ns         2.67 ns    263529412
+BenchmarkNormalXMMatrixScaling                   4.00 ns         3.37 ns    213333333
+BenchmarkPointTransformationMatrix               3.47 ns         2.64 ns    248888889
+BenchmarkPointXMMatrixTransformation             3.82 ns         3.22 ns    213333333
+BenchmarkVectorTransformationMatrix              4.11 ns         3.44 ns    154482759
+BenchmarkVectorXMMatrixTransformation            3.45 ns         2.67 ns    298666667
+BenchmarkNormalTransformationMatrix              3.50 ns         2.69 ns    320000000
+BenchmarkNormalXMMatrixTransformation            3.39 ns         3.09 ns    298666667
+BenchmarkPointAffineTransformationMatrix         33.5 ns         22.9 ns     28000000
+BenchmarkPointXMMatrixAffineTransformation       31.4 ns         25.1 ns     24888889
+</code></pre></div></div>
 
   </div>
 

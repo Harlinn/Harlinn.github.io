@@ -9,6 +9,7 @@ var namespacemembers_vars =
     [ "f", "namespacemembers_vars_f.html", null ],
     [ "h", "namespacemembers_vars_h.html", null ],
     [ "i", "namespacemembers_vars_i.html", null ],
+    [ "k", "namespacemembers_vars_k.html", null ],
     [ "l", "namespacemembers_vars_l.html", null ],
     [ "m", "namespacemembers_vars_m.html", null ],
     [ "n", "namespacemembers_vars_n.html", null ],
@@ -19,5 +20,8 @@ var namespacemembers_vars =
     [ "s", "namespacemembers_vars_s.html", null ],
     [ "t", "namespacemembers_vars_t.html", null ],
     [ "u", "namespacemembers_vars_u.html", null ],
-    [ "v", "namespacemembers_vars_v.html", null ]
+    [ "v", "namespacemembers_vars_v.html", null ],
+    [ "w", "namespacemembers_vars_w.html", null ],
+    [ "x", "namespacemembers_vars_x.html", null ],
+    [ "z", "namespacemembers_vars_z.html", null ]
 ];

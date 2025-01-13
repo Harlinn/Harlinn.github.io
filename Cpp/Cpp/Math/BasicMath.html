@@ -312,16 +312,17 @@ that the <code class="language-plaintext highlighter-rouge">constexpr</code> , o
 but the quality of the standard C and C++ implementations are often better as they can 
 usually handle any input argument value. Calling <code class="language-plaintext highlighter-rouge">std::sin(1.7976931348623158e+308)</code> works,
 and will return a reasonable value for the argument, but calling <code class="language-plaintext highlighter-rouge">std::sin(1.7976931348623158e+308)</code>
-is rarely, if ever, a reasonable thing to do. The difference between the highest value
-for a double precision floating point variable, <code class="language-plaintext highlighter-rouge">1.7976931348623158e+308</code>, and
-second highest value, <code class="language-plaintext highlighter-rouge">1.7976931348623155e+308</code>, is <code class="language-plaintext highlighter-rouge">1.99584030953472e+292</code>,
-which is approximately equal to <code class="language-plaintext highlighter-rouge">2 * M_PI * 3.176478508845091e+291</code>.</p>
+is rarely, if ever, a reasonable thing to do.</p>
+
+<p>The difference between the highest value for a double precision floating point variable, 
+<code class="language-plaintext highlighter-rouge">1.7976931348623158e+308</code>, and second highest value, <code class="language-plaintext highlighter-rouge">1.7976931348623155e+308</code>, is 
+<code class="language-plaintext highlighter-rouge">1.99584030953472e+292</code>, which is approximately equal to <code class="language-plaintext highlighter-rouge">2 * M_PI * 3.176478508845091e+291</code>, an 
+incomprehensible number of full revolutions around the circle. Most apps requires
+sine calculations over the range \(\pm 2 \pi\), and that offers an
+optimization opportunity.</p>
 
 <p>Many C and C++ libraries include fast alternatives to several of the standard C and C++ mathematical
-functions. These alternatives are usually good enough for their intended</p>
-
-<p><code class="language-plaintext highlighter-rouge">Math::Internal::FModImpl</code>, <code class="language-plaintext highlighter-rouge">Sqrt</code>, <code class="language-plaintext highlighter-rouge">ScaleByN</code> and the trigonometric functions, are based on open source code released by Sun Microsystems, 
-adapted to C++ 20 <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation.</p>
+functions. These alternatives are usually good enough for their intended domain.</p>
 
 <h3 id="testing">Testing</h3>
 

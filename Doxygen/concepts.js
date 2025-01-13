@@ -42,10 +42,18 @@ var concepts =
             [ "Internal", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html", [
               [ "SimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_simd_type.html", null ],
               [ "TupleType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_tuple_type.html", null ],
+              [ "QuaternionSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quaternion_simd_type.html", null ],
+              [ "QuaternionType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quaternion_type.html", null ],
               [ "SquareMatrixSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_square_matrix_simd_type.html", null ],
               [ "SquareMatrixType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_square_matrix_type.html", null ]
             ] ],
-            [ "FloatingPointType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point_type.html", null ]
+            [ "FloatingPointType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point_type.html", null ],
+            [ "VectorType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_type.html", null ],
+            [ "VectorSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_simd_type.html", null ],
+            [ "PointType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_point_type.html", null ],
+            [ "PointSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_point_simd_type.html", null ],
+            [ "NormalType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_normal_type.html", null ],
+            [ "NormalSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_normal_simd_type.html", null ]
           ] ],
           [ "Persistent", "namespace_harlinn_1_1_common_1_1_core_1_1_persistent.html", [
             [ "Internal", "namespace_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal.html", [
