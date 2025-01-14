@@ -232,11 +232,15 @@
   </header>
 
   <div class="post-content">
-    <p>The library contains a set of linear algebra classes that are optimized
-for games and other graphic intensive apps. The operations are implemented
-using a blend of SIMD and regular C/C++, performing as well as, and sometimes 
+    <p>The library contains a set of linear algebra classes and function that are optimized
+for games and other graphic intensive apps. The operations are 
+implemented using a blend of SIMD and regular C/C++, performing as well as, and sometimes 
 outperforming, the <a href="https://github.com/microsoft/DirectXMath">DirectXMath</a>
 library.</p>
+
+<p>The classes and functions are designed to make it easier to implement, understand and 
+maintain efficient vectorized solutions, and the <a href="#benchmarks">Benchmarks</a> says it all 
+when it comes to the efficiency of this implementation.</p>
 
 <ul>
   <li><a href="#vector"><code class="language-plaintext highlighter-rouge">Vector</code></a> is template for fixed size vectors of integer or floating point values.</li>
@@ -3500,7 +3504,7 @@ inline SquareMatrix&lt;float, 4&gt;::Simd RotationQuaternion( const Quaternion&l
                             const Vector&lt;float,3&gt;::Simd&amp; scaling,
                             const Point3f::Simd&amp; rotationOrigin, 
                             const QuaternionSimd&lt;Quaternion&lt;float&gt;&gt;&amp; rotationQuaternion, 
-                            const Vector&lt;float, 3&gt;::Simd&amp; translation );
+                            const Vector&lt;float, 3&gt;::Simd&amp; translation ) noexcept;
 
 
 </code></pre>
@@ -3517,7 +3521,56 @@ inline SquareMatrix&lt;float, 4&gt;::Simd RotationQuaternion( const Quaternion&l
     inline SquareMatrix&lt;U, 4&gt;::Simd AffineTransformationMatrix( const S&amp; scaling,
                                         const T&amp; rotationOrigin,
                                         const QuaternionSimd&lt;Quaternion&lt;U&gt;&gt;&amp; rotationQuaternion,
-                                        const W&amp; translation )
+                                        const W&amp; translation ) noexcept;
+
+</code></pre>
+
+<h4 id="lookto">LookTo</h4>
+
+<p>Creates a view matrix using the left-handed coordinate system for the
+provided camera position, camera direction, and up direction.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType S, Internal::SimdType T, Internal::SimdType U&gt;
+    requires Internal::IsCompatible&lt;S,T&gt; &amp;&amp; Internal::IsCompatible&lt;S, U&gt; &amp;&amp; (S::Size == 3)
+inline SquareMatrix&lt;typename S::value_type, 4&gt;::Simd LookTo( const S&amp; cameraPosition, 
+                                                            const T&amp; cameraDirection, 
+                                                            const U&amp; upDirection ) noexcept;
+</code></pre>
+
+<h4 id="lookat">LookAt</h4>
+
+<p>Creates a view matrix using the left-handed coordinate system for the
+provided camera position, focal point, and up direction.</p>
+
+<pre><code class="language-C++">template&lt;Internal::SimdType S, Internal::SimdType T, Internal::TupleType U&gt;
+    requires Internal::IsCompatible&lt;S, T&gt;&amp;&amp; Internal::IsCompatible&lt;S, U&gt; &amp;&amp; ( S::Size == 3 )
+inline SquareMatrix&lt;typename S::value_type, 4&gt;::Simd LookAt( const S&amp; cameraPosition, 
+                                                            const T&amp; focusPosition, 
+                                                            const U&amp; upDirection ) noexcept;
+</code></pre>
+
+<h4 id="perspectiveprojection">PerspectiveProjection</h4>
+
+<p>Creates a left-handed perspective projection matrix.</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+inline SquareMatrix&lt;T, 4&gt;::Simd PerspectiveProjection( T viewWidth, 
+                                                    T viewHeight, 
+                                                    T nearZ, 
+                                                    T farZ ) noexcept;
+</code></pre>
+
+<h4 id="perspectivefovprojection">PerspectiveFovProjection</h4>
+
+<p>Creates a left-handed perspective projection matrix based on a field of view.</p>
+
+<pre><code class="language-C++">template&lt;typename T&gt;
+    requires IsFloatingPoint&lt;T&gt;
+inline SquareMatrix&lt;T, 4&gt;::Simd PerspectiveFovProjection( T fovAngleY, 
+                                                        T aspectRatio, 
+                                                        T nearZ, 
+                                                        T farZ ) noexcept;
 
 </code></pre>
 
@@ -3819,35 +3872,66 @@ capability.</p>
 
 <h2 id="benchmarks">Benchmarks</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-------------------------------------------------------------------------------------
-Benchmark                                           Time             CPU   Iterations
--------------------------------------------------------------------------------------
-BenchmarkPointRotationAxis                       13.3 ns         9.21 ns     56000000
-BenchmarkPointXMMatrixRotationAxis               19.9 ns         17.1 ns     44800000
-BenchmarkVectorRotationAxis                      12.2 ns         10.9 ns     74666667
-BenchmarkVectorXMMatrixRotationAxis              18.9 ns         15.0 ns     40727273
-BenchmarkNormalRotationAxis                      12.3 ns         9.77 ns     64000000
-BenchmarkNormalXMMatrixRotationAxis              18.9 ns         14.8 ns     56000000
-BenchmarkPointTranslation                        3.29 ns         2.93 ns    224000000
-BenchmarkPointXMMatrixTranslation                3.86 ns         3.05 ns    235789474
-BenchmarkVectorTranslation                       3.25 ns         2.49 ns    213333333
-BenchmarkVectorXMMatrixTranslation               3.41 ns         2.93 ns    224000000
-BenchmarkNormalTranslation                       2.43 ns         1.99 ns    344615385
-BenchmarkNormalXMMatrixTranslation               2.50 ns         2.31 ns    263529412
-BenchmarkPointScaling                            3.66 ns         3.00 ns    224000000
-BenchmarkPointXMMatrixScaling                    3.65 ns         3.18 ns    235789474
-BenchmarkVectorScaling                           3.04 ns         2.78 ns    235789474
-BenchmarkVectorXMMatrixScaling                   3.51 ns         2.61 ns    263529412
-BenchmarkNormalScaling                           3.20 ns         2.67 ns    263529412
-BenchmarkNormalXMMatrixScaling                   4.00 ns         3.37 ns    213333333
-BenchmarkPointTransformationMatrix               3.47 ns         2.64 ns    248888889
-BenchmarkPointXMMatrixTransformation             3.82 ns         3.22 ns    213333333
-BenchmarkVectorTransformationMatrix              4.11 ns         3.44 ns    154482759
-BenchmarkVectorXMMatrixTransformation            3.45 ns         2.67 ns    298666667
-BenchmarkNormalTransformationMatrix              3.50 ns         2.69 ns    320000000
-BenchmarkNormalXMMatrixTransformation            3.39 ns         3.09 ns    298666667
-BenchmarkPointAffineTransformationMatrix         33.5 ns         22.9 ns     28000000
-BenchmarkPointXMMatrixAffineTransformation       31.4 ns         25.1 ns     24888889
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--------------------------------------------------------------------------------------
+Benchmark                                            Time             CPU   Iterations
+--------------------------------------------------------------------------------------
+BenchmarkPointRotationAxis                        13.4 ns         10.5 ns     64000000
+BenchmarkPointXMMatrixRotationAxis                20.2 ns         16.5 ns     56000000
+BenchmarkVectorRotationAxis                       13.5 ns         10.5 ns     64000000
+BenchmarkVectorXMMatrixRotationAxis               19.3 ns         16.1 ns     40727273
+BenchmarkNormalRotationAxis                       13.2 ns         10.9 ns     74334815
+BenchmarkNormalXMMatrixRotationAxis               19.8 ns         17.1 ns     44800000
+BenchmarkPointTranslation                         3.53 ns         2.85 ns    263529412
+BenchmarkPointXMMatrixTranslation                 3.85 ns         2.98 ns    235789474
+BenchmarkVectorTranslation                        2.89 ns         2.51 ns    298666667
+BenchmarkVectorXMMatrixTranslation                3.93 ns         3.31 ns    235789474
+BenchmarkNormalTranslation                        2.21 ns         1.83 ns    298666667
+BenchmarkNormalXMMatrixTranslation                2.78 ns         2.02 ns    263529412
+BenchmarkPointScaling                             3.48 ns         2.90 ns    280000000
+BenchmarkPointXMMatrixScaling                     3.76 ns         3.28 ns    224000000
+BenchmarkVectorScaling                            3.59 ns         3.20 ns    248888889
+BenchmarkVectorXMMatrixScaling                    4.51 ns         3.85 ns    194782609
+BenchmarkNormalScaling                            3.58 ns         2.92 ns    203636364
+BenchmarkNormalXMMatrixScaling                    3.80 ns         2.76 ns    248888889
+BenchmarkPointTransformationMatrix                3.28 ns         2.58 ns    344615385
+BenchmarkPointXMMatrixTransformation              3.25 ns         2.68 ns    280000000
+BenchmarkVectorTransformationMatrix               3.20 ns         2.61 ns    263529412
+BenchmarkVectorXMMatrixTransformation             3.35 ns         2.92 ns    235789474
+BenchmarkNormalTransformationMatrix               3.33 ns         2.55 ns    263529412
+BenchmarkNormalXMMatrixTransformation             3.04 ns         2.73 ns    320000000
+BenchmarkPointAffineTransformationMatrix          34.0 ns         24.6 ns     40727273
+BenchmarkPointXMMatrixAffineTransformation        30.7 ns         27.3 ns     32000000
+BenchmarkVectorAffineTransformationMatrix         33.6 ns         28.5 ns     26352941
+BenchmarkVectorXMMatrixAffineTransformation       31.6 ns         24.5 ns     24888889
+BenchmarkNormalAffineTransformationMatrix         32.9 ns         26.4 ns     24888889
+BenchmarkNormalXMMatrixAffineTransformation       30.7 ns         25.6 ns     29866667
+BenchmarkPointLookTo                              17.9 ns         15.4 ns     64000000
+BenchmarkPointXMMatrixLookToLH                    24.2 ns         17.6 ns     32000000
+BenchmarkVectorLookTo                             17.5 ns         13.7 ns     56000000
+BenchmarkVectorXMMatrixLookToLH                   23.5 ns         20.3 ns     40727273
+BenchmarkNormalLookTo                             17.6 ns         14.4 ns     64000000
+BenchmarkNormalXMMatrixLookToLH                   23.1 ns         20.5 ns     32000000
+BenchmarkPointLookAt                              19.5 ns         16.2 ns     56000000
+BenchmarkPointXMMatrixLookAtLH                    28.8 ns         26.2 ns     29866667
+BenchmarkVectorLookAt                             19.3 ns         15.7 ns     74666667
+BenchmarkVectorXMMatrixLookAtLH                   26.8 ns         20.5 ns     32000000
+BenchmarkNormalLookAt                             18.5 ns         15.1 ns     49777778
+BenchmarkNormalXMMatrixLookAtLH                   27.9 ns         23.1 ns     34461538
+BenchmarkPointPerspectiveProjection               3.11 ns         2.57 ns    248888889
+BenchmarkPointXMMatrixPerspectiveLH               4.58 ns         2.68 ns    186666667
+BenchmarkVectorPerspectiveProjection              3.31 ns         2.79 ns    280000000
+BenchmarkVectorXMMatrixPerspectiveLH              4.14 ns         3.93 ns    194782609
+BenchmarkVectorPerspectiveProjection              3.30 ns         2.76 ns    248888889
+BenchmarkNormalXMMatrixPerspectiveLH              3.42 ns         3.08 ns    213333333
+BenchmarkPointPerspectiveFovProjection            11.9 ns         8.54 ns     64000000
+BenchmarkPointXMMatrixPerspectiveFovLH            16.6 ns         12.8 ns     56000000
+BenchmarkVectorPerspectiveFovProjection           11.3 ns         8.28 ns    100000000
+BenchmarkVectorXMMatrixPerspectiveFovLH           15.6 ns         14.2 ns     56000000
+BenchmarkNormalPerspectiveFovProjection           10.5 ns         8.59 ns    100000000
+BenchmarkNormalXMMatrixPerspectiveFovLH           15.6 ns         11.5 ns     64000000
+BenchmarkPointProject                             43.9 ns         36.8 ns     20363636
+BenchmarkPointXMVector3Project                    57.6 ns         47.4 ns     11200000
+
 </code></pre></div></div>
 
   </div>
