@@ -239,14 +239,148 @@ a new home, and this is it.</p>
 
 <h2 id="experience">Experience:</h2>
 
-<ul>
-  <li>
-    <p>Chief Architect, Sea Surveillance AS, July 2021 - December 2024</p>
+<h3 id="chief-architect-sea-surveillance-as-july-2021---december-2024">Chief Architect, Sea Surveillance AS, July 2021 - December 2024</h3>
 
-    <p><img src="/assets/vtmsui.png" alt="VTMS UI" /></p>
-  </li>
-  <li>Senior Software Architect, Ulriken Consulting AS, December 2020 - July 2021</li>
-  <li>Chief Architect, Powel, October 2014 - 2020</li>
+<p>Developed a Vessel Traffic Management Solution (VTMS) solution in C# called iSurv.</p>
+
+<p><img src="/assets/vtmsui.png" alt="VTMS UI" /></p>
+
+<p>The core of the solution is a Windows service developed in C# for .Net 8, with a service API 
+implemented using <a href="https://netmq.readthedocs.io/en/latest/">Net MQ</a>. The service
+uses a Microsoft SQL Server database with 355 tables to store its data.</p>
+
+<p>The service receives <a href="https://en.wikipedia.org/wiki/Automatic_identification_system">AIS</a> data over 
+UDP, controls radars and receives radar video using a proprietary TCP based protocol, and controls 
+<a href="https://en.wikipedia.org/wiki/Pan%E2%80%93tilt%E2%80%93zoom_camera">PTZ</a> cameras using the <a href="https://www.onvif.org/">ONVIF</a> web services 
+implemented by networked cameras.</p>
+
+<p>The user interface was developed as a Windows Forms app in .Net 8, using 
+custom controls provided by <a href="https://www.devexpress.com/products/net/controls/winforms">DevExpress</a>.</p>
+
+<p>The service implements a message notification service based on <a href="https://netmq.readthedocs.io/en/latest/">Net MQ</a>
+that eliminates the need for periodic polling for data by the user interface, as all changes are published
+over Net MQ to subscribing apps, including radar video.</p>
+
+<p>The user interface receives and renders camera video over the <a href="https://en.wikipedia.org/wiki/Real-Time_Streaming_Protocol#:~:text=The%20Real%2DTime%20Streaming%20Protocol,over%20a%20suitable%20transport%20protocol.">real-time Streaming Protocol (RTSP)</a>
+using an embedded <a href="https://www.videolan.org/vlc/">VLC media player</a>.</p>
+
+<p>Map information can be provided by <a href="https://www.bing.com/maps">Bing Maps</a>, <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, or as tiles
+directly from the service app.</p>
+
+<p>There is also a Windows service that provides map information using <a href="https://www.c-map.com/">C-MAP</a> that can be configured 
+as a tile source for the solution.</p>
+
+<p>The solution uses <a href="https://github.com/geographiclib/geographiclib">GeographicLib</a> to accurately translate latitude, longitude and 
+altitude into cartesian 3D coordinates required to calculate the pan, tilt and zoom values used to control the camera
+when tracking a vessel at sea. The ONVIF API provides an API function that performs this operation, but
+unfortunately this feature is seldom implemented by the cameras.</p>
+
+<h3 id="senior-software-architect-ulriken-consulting-as-december-2020---july-2021">Senior Software Architect, Ulriken Consulting AS, December 2020 - July 2021</h3>
+
+<p>Consultant for Sea Surveillance AS.</p>
+
+<h3 id="chief-architect-powel-october-2014---2020">Chief Architect, Powel, October 2014 - 2020</h3>
+
+<h4 id="mesh">Mesh</h4>
+
+<p><a href="https://www.volue.com/products-and-services/volue-smart-power-automated-production-planning-and-trading">Mesh</a> is an 
+analytics and data management solution, optimized for timeseries operations, that provides context to data and is 
+the foundation for the Volue Smart Power solutions.</p>
+
+<p>I worked as the technical lead on the <a href="https://www.volue.com/products-and-services/volue-smart-power-automated-production-planning-and-trading">Mesh</a> development project, 
+which lasted throughout my time with Powel ASA, now a part of <a href="https://www.volue.com/">Volue ASA</a>.</p>
+
+<p>The core of the Mesh solution was developed in C++, including:</p>
+
+<ul>
+  <li>The analytics engine, a high performance timeseries analytics engine that executes complex queries against thousands of timeseries, using
+a proprietary query language.</li>
+  <li>The local timeseries storage, a high performance timeseries database engine, written on top of Microsofts’ extensible storage engine. 
+The local timeseries storage was implemented using the <a href="/Cpp/Harlinn.Windows/Harlinn.Common.Core/ESE/EsePart1.html">Harlinn.Common.Core</a> 
+library.</li>
+  <li>The Oracle data exchange, for synchronizing the local timeseries storage with data stored in an Oracle database. The Oracle data 
+exchange was implemented using the <a href="/Cpp/Harlinn.Windows/Harlinn.OCI/Harlinn.OCI.html">Harlinn.OCI</a> library.</li>
+  <li>The Mesh messaging service, a messaging API for Mesh implemented using <a href="https://zeromq.org/">Zero MQ</a>, able to handle
+both binary and XML formatted messages. This was the only API that fully exposing the capabilities of Mesh.</li>
+</ul>
+
+<p>The Mesh core services are tightly integrated with .Net, which hosts the core services, providing 
+.Net service APIs to the Mesh solution, implemented in C#.</p>
+
+<p>The Mesh solution also includes a C# client library for working with the Mesh messaging service 
+using the binary message format, providing the fastest data exchange mechanisms between Mesh
+.Net clients and the Mesh service.</p>
+
+<h4 id="mesh-explorer">Mesh Explorer</h4>
+
+<p>Mesh Explorer is a WinForms application developed in C# using components from <a href="https://www.devexpress.com/products/net/controls/winforms/">DevExpress</a>
+developed as a tool for the Mesh development team.</p>
+
+<p>Mesh Explorer is used to explore the structure of a Mesh database, allowing users to view and edit all aspects of a Mesh
+database.</p>
+
+<h4 id="nimbus">Nimbus</h4>
+
+<p>Nimbus is the user interface for Powels’ production planning processes, implemented in C# as a WPF application.</p>
+
+<p>It is used to view, analyze and edit data and to execute optimizations and simulations of power plants.</p>
+
+<p>Integration between Nimbus and Mesh, was an integral part of the Mesh development project.</p>
+
+<p>Nimbus consumes many of the .Net service APIs exposed by Mesh, and several of the .Net based service
+APIs were initially designed specifically for Nimbus.</p>
+
+<h4 id="inflow">Inflow</h4>
+
+<p>Inflow is used to forecast inflow to reservoirs and power plants. With Inflow, operators can control their 
+water resources, and plan their power production more accurately.</p>
+
+<p>Increasing the performance of Inflow was one of the prime motivations for the Mesh development project.</p>
+
+<p>Inflow was developed using C++ and initially worked directly with the Oracle RDBMS.</p>
+
+<p>The Mesh solution includes a C++ client library for working with the Mesh messaging service 
+using the binary message format, providing the fastest data exchange mechanisms between Mesh
+clients and the Mesh service. This library and the Mesh messaging service was initially 
+developed to improve the performance of the communication between Inflow and Mesh.</p>
+
+<h4 id="deltaxe">DeltaXE</h4>
+
+<p>DeltaXE is a trade and logistics solution for the European power and gas markets 
+that serves as a real-time position management solution capturing all trades and 
+positions across all markets.</p>
+
+<p>DeltaXE is a <a href="https://www.oracle.com/java/weblogic/">WebLogic</a> <a href="https://jakarta.ee/">Jakarta EE</a> service application.</p>
+
+<p>I was, initially, engaged to troubleshoot multithread issues inside the server, review the design of the solution, and plan 
+a path for integration with Powels Smart Energy software portfolio. Working with the DeltaXE team in Basel, Switzerland,
+was enjoyable, and always interesting.</p>
+
+<h4 id="valider">Valider</h4>
+
+<p><a href="https://www.valider.no/">Valider</a> chose Powel for the development of <a href="https://www.iot-now.com/2014/05/19/20604-valider-chooses-powel-norways-largest-smart-metering-platform/">Norways largest smart metering platform</a>.</p>
+
+<p>The core of the AMS service developed for <a href="https://www.valider.no/">Valider</a> was developed as a set of <a href="https://jakarta.ee/">Jakarta EE</a> services
+running on <a href="https://www.oracle.com/java/weblogic/">WebLogic</a>. The solution was initially developed by an external partner,
+while the last stages of the development was performed by a team of Powel developers located in Gdansk. I was brought into
+the project to help identify and resolve performance issues - working closely with the developers in Gdansk, helping to
+optimize the database throughput.</p>
+
+<h4 id="sales-support-and-customer-integration">Sales support and customer integration</h4>
+
+<p>As one of the Chief Architects, my role included presenting the technical
+architecture of the Smart Energy Software portfolio at sales meetings, and
+working out the deployment details in cooperation with the customers.</p>
+
+<p>Deployment and integration with a large customer, is always a process, and as the
+provider of a complex suite of software that must be integrated with the customers
+existing ecosystem, Powel always provided the adaptions, as needed, to facilitate this 
+integration. This process usually involved all the teams responsible for the 
+various components going into the final solution, working in collaboration
+with each other and the customer.</p>
+
+<h3 id="other-roles">Other roles</h3>
+<ul>
   <li>C++ Expert, ISO C++ Standards Committee, February 2012 - present</li>
   <li>Owner, Harlinn.com, September 2010 - present</li>
   <li>Principal Architect, Goodtech, Feb 2012 - Oct 2014</li>
@@ -257,6 +391,40 @@ a new home, and this is it.</p>
   <li>Senior Software Architect, Seamos, August 1996 - December 2000</li>
   <li>Consultant, Freelance consultant, June 1992 - June 1996</li>
 </ul>
+
+<p>I worked on the Optimum Software portfolio from the late 90’s until the operations 
+of Optimum Production AS was shut down by its new owners in 2009. The Optimum Software portfolio
+was used to optimize the production for the Ekofisk oilfield.</p>
+
+<p>The Optimum Software portfolio was initially developed as a Java EE server, and was moved to the
+.Net platform in 2003.</p>
+
+<p>The Optimum Software portfolio was based on Weatherford’s WellFlo and ReO simulation and optimization software.</p>
+
+<p>At the time, ReO and WellFlo were standalone software packages, requiring manual modelling and data entry.</p>
+
+<p>The Optimum Software portfolio retrieved real-time production data, well-test data and optimization
+goals from an Oracle database at ConocoPhillips. The data was then automatically fed into ReO and WellFlo, before 
+performing a network flow analysis to select a good starting point for the ReO optimization process.</p>
+
+<p>After ReO completed it’s optimization process, the software calculated the optimal valve settings, writing
+the new settings back into the Oracle database at ConocoPhillips, enabling automatic adjustment of the
+valves’ settings.</p>
+
+<p>The Optimum Software portfolio included a Windows service, handling:</p>
+
+<ul>
+  <li>Retrieval of data from oracle.</li>
+  <li>Starting and initializing the ReO and WellFlo software.</li>
+  <li>Performing the initial network flow analysis.</li>
+  <li>Running the optimizations.</li>
+  <li>Calculating the valve settings.</li>
+  <li>Storing the results in the Oracle database.</li>
+  <li>Exposing a data service API, for access to all relevant data.</li>
+</ul>
+
+<p>In, addition, there was a user interface developed as a Windows Forms application in C#, and a
+simpler web app, providing read-only access to the visualizations and optimization results.</p>
 
 <h2 id="awards">Awards:</h2>
 

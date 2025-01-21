@@ -171,7 +171,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1d9334cc5155a68b8e0afbd5d05f2127"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84e37908efbdf6de10177413e6629526" id="r_a84e37908efbdf6de10177413e6629526"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84e37908efbdf6de10177413e6629526">Vector</a> (float xv, float yv, float zv, float wv) noexcept</td></tr>
 <tr class="separator:a84e37908efbdf6de10177413e6629526"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5cfc5891484e983518b03e57955900b" id="r_ab5cfc5891484e983518b03e57955900b"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+<tr class="memitem:aeae7520efd265e6357f924994db9380a" id="r_aeae7520efd265e6357f924994db9380a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeae7520efd265e6357f924994db9380a">Vector</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#a5147fd537bfbc237d8387b7b17e6858a">ArrayType</a> &amp;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#a9e424025db1fa0ecae2b27e10c04feff">values</a>) noexcept</td></tr>
+<tr class="separator:aeae7520efd265e6357f924994db9380a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5cfc5891484e983518b03e57955900b" id="r_ab5cfc5891484e983518b03e57955900b"><td class="memTemplParams" colspan="2">template&lt;Internal::TupleType T&gt; <br />
+requires std::is_same_v&lt;typename T::SIMDType, typename Traits::SIMDType &gt;</td></tr>
+<tr class="memitem:ab5cfc5891484e983518b03e57955900b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab5cfc5891484e983518b03e57955900b">Vector</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;other) noexcept</td></tr>
+<tr class="separator:ab5cfc5891484e983518b03e57955900b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5cfc5891484e983518b03e57955900b" id="r_ab5cfc5891484e983518b03e57955900b"><td class="memTemplParams" colspan="2">template&lt;Internal::SimdType T&gt; <br />
 requires std::is_same_v&lt;typename T::SIMDType, typename Traits::SIMDType &gt;</td></tr>
 <tr class="memitem:ab5cfc5891484e983518b03e57955900b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab5cfc5891484e983518b03e57955900b">Vector</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;other) noexcept</td></tr>
 <tr class="separator:ab5cfc5891484e983518b03e57955900b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,6 +186,8 @@ requires std::is_same_v&lt;typename T::SIMDType, typename Traits::SIMDType &gt;<
 <tr class="separator:ab47489624de2e92c8c597a3b5cc261af inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7ba4ccfccf52003e815a3d3ebf8d673 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4" id="r_aa7ba4ccfccf52003e815a3d3ebf8d673"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#aa7ba4ccfccf52003e815a3d3ebf8d673">Tuple4</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> xv, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> yv, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> zv, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> wv) noexcept</td></tr>
 <tr class="separator:aa7ba4ccfccf52003e815a3d3ebf8d673 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e825e0b21fb0e2c31672478ef9eaf8 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4" id="r_ad4e825e0b21fb0e2c31672478ef9eaf8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#ad4e825e0b21fb0e2c31672478ef9eaf8">Tuple4</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#a5147fd537bfbc237d8387b7b17e6858a">ArrayType</a> &amp;a) noexcept</td></tr>
+<tr class="separator:ad4e825e0b21fb0e2c31672478ef9eaf8 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab27c201f8bfbd1f306f57adac5674cc7 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4" id="r_ab27c201f8bfbd1f306f57adac5674cc7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#ab27c201f8bfbd1f306f57adac5674cc7">Tuple4</a> (const U &amp;other) noexcept</td></tr>
 <tr class="separator:ab27c201f8bfbd1f306f57adac5674cc7 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab27c201f8bfbd1f306f57adac5674cc7 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4" id="r_ab27c201f8bfbd1f306f57adac5674cc7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#ab27c201f8bfbd1f306f57adac5674cc7">Tuple4</a> (const U &amp;other) noexcept</td></tr>
@@ -188,6 +196,8 @@ requires std::is_same_v&lt;typename T::SIMDType, typename Traits::SIMDType &gt;<
 <tr class="separator:a5590b2d7f5877649505a586b864db024 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb0b1360ce1f7c9db904c0fb02b045c7 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4" id="r_aeb0b1360ce1f7c9db904c0fb02b045c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#ae1a80adcfb4424e39a450f5d04fc4079">Simd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#aeb0b1360ce1f7c9db904c0fb02b045c7">ToSimd</a> () const noexcept</td></tr>
 <tr class="separator:aeb0b1360ce1f7c9db904c0fb02b045c7 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4170cb6423e11a29ffe975fd9a8c4fd inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4" id="r_ac4170cb6423e11a29ffe975fd9a8c4fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#ac4170cb6423e11a29ffe975fd9a8c4fd">operator Simd</a> () const noexcept</td></tr>
+<tr class="separator:ac4170cb6423e11a29ffe975fd9a8c4fd inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a278e03f57b026a26e79e264e29cdbcea inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4" id="r_a278e03f57b026a26e79e264e29cdbcea"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#a278e03f57b026a26e79e264e29cdbcea">operator==</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html">Tuple4</a> &amp;other) const noexcept</td></tr>
 <tr class="separator:a278e03f57b026a26e79e264e29cdbcea inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbbb0f484df70407b7ab100dc689d34f inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4" id="r_adbbb0f484df70407b7ab100dc689d34f"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#adbbb0f484df70407b7ab100dc689d34f">operator==</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#a11c0c45d77b7757fc64fc2487e903ec5">value_type</a> value) const noexcept</td></tr>
@@ -365,7 +375,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4534266b0e1a72e7011004aa44fd980c" name="a4534266b0e1a72e7011004aa44fd980c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4534266b0e1a72e7011004aa44fd980c">&#9670;&#160;</a></span>Vector() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4534266b0e1a72e7011004aa44fd980c">&#9670;&#160;</a></span>Vector() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -390,7 +400,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a1d9334cc5155a68b8e0afbd5d05f2127" name="a1d9334cc5155a68b8e0afbd5d05f2127"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d9334cc5155a68b8e0afbd5d05f2127">&#9670;&#160;</a></span>Vector() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d9334cc5155a68b8e0afbd5d05f2127">&#9670;&#160;</a></span>Vector() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -415,7 +425,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a84e37908efbdf6de10177413e6629526" name="a84e37908efbdf6de10177413e6629526"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84e37908efbdf6de10177413e6629526">&#9670;&#160;</a></span>Vector() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a84e37908efbdf6de10177413e6629526">&#9670;&#160;</a></span>Vector() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -453,13 +463,66 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="aeae7520efd265e6357f924994db9380a" name="aeae7520efd265e6357f924994db9380a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeae7520efd265e6357f924994db9380a">&#9670;&#160;</a></span>Vector() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector.html">Harlinn::Common::Core::Math::Vector</a>&lt; float, 4 &gt;::Vector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html#a5147fd537bfbc237d8387b7b17e6858a">ArrayType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>values</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab5cfc5891484e983518b03e57955900b" name="ab5cfc5891484e983518b03e57955900b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5cfc5891484e983518b03e57955900b">&#9670;&#160;</a></span>Vector() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5cfc5891484e983518b03e57955900b">&#9670;&#160;</a></span>Vector() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+template&lt;Internal::TupleType T&gt; <br />
+requires std::is_same_v&lt;typename T::SIMDType, typename Traits::SIMDType &gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector.html">Harlinn::Common::Core::Math::Vector</a>&lt; float, 4 &gt;::Vector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5cfc5891484e983518b03e57955900b" name="ab5cfc5891484e983518b03e57955900b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5cfc5891484e983518b03e57955900b">&#9670;&#160;</a></span>Vector() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Internal::SimdType T&gt; <br />
 requires std::is_same_v&lt;typename T::SIMDType, typename Traits::SIMDType &gt;</div>
 <table class="mlabels">
   <tr>

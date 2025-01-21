@@ -50,6 +50,8 @@ var concepts =
             [ "FloatingPointType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point_type.html", null ],
             [ "VectorType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_type.html", null ],
             [ "VectorSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_simd_type.html", null ],
+            [ "ScalarType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_type.html", null ],
+            [ "ScalarSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_simd_type.html", null ],
             [ "PointType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_point_type.html", null ],
             [ "PointSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_point_simd_type.html", null ],
             [ "NormalType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_normal_type.html", null ],

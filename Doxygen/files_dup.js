@@ -185,6 +185,7 @@ var files_dup =
     [ "HWApplication.h", "_h_w_application_8h.html", "_h_w_application_8h" ],
     [ "HWApplicationOptions.h", "_h_w_application_options_8h.html", "_h_w_application_options_8h" ],
     [ "HWCameraUIControl.h", "_h_w_camera_u_i_control_8h.html", "_h_w_camera_u_i_control_8h" ],
+    [ "HWColor.h", "_h_w_color_8h.html", "_h_w_color_8h" ],
     [ "HWCommon.h", "_h_w_common_8h.html", "_h_w_common_8h" ],
     [ "HWContainerControl.h", "_h_w_container_control_8h.html", "_h_w_container_control_8h" ],
     [ "HWControl.cpp", "_h_w_control_8cpp.html", "_h_w_control_8cpp" ],

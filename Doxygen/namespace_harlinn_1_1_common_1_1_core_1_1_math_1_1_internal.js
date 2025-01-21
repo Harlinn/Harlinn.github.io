@@ -33,6 +33,7 @@ var namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal =
     [ "RangeReduction", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction.html", null ],
     [ "RangeReduction< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction_3_01double_01_4.html", null ],
     [ "RangeReduction< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction_3_01float_01_4.html", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction_3_01float_01_4" ],
+    [ "ScalarBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_scalar_base.html", null ],
     [ "StorageType", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type.html", null ],
     [ "StorageType< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type_3_01double_01_4.html", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type_3_01double_01_4" ],
     [ "StorageType< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type_3_01float_01_4.html", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type_3_01float_01_4" ],

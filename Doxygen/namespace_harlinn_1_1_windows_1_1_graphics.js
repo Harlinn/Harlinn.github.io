@@ -13,6 +13,7 @@ var namespace_harlinn_1_1_windows_1_1_graphics =
     [ "BitmapBrush1", "class_harlinn_1_1_windows_1_1_graphics_1_1_bitmap_brush1.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_bitmap_brush1" ],
     [ "BitmapRenderTarget", "class_harlinn_1_1_windows_1_1_graphics_1_1_bitmap_render_target.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_bitmap_render_target" ],
     [ "Brush", "class_harlinn_1_1_windows_1_1_graphics_1_1_brush.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_brush" ],
+    [ "Color", "class_harlinn_1_1_windows_1_1_graphics_1_1_color.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_color" ],
     [ "ColorContext", "class_harlinn_1_1_windows_1_1_graphics_1_1_color_context.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_color_context" ],
     [ "ColorContext1", "class_harlinn_1_1_windows_1_1_graphics_1_1_color_context1.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_color_context1" ],
     [ "CommandList", "class_harlinn_1_1_windows_1_1_graphics_1_1_command_list.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_command_list" ],
@@ -169,10 +170,13 @@ var namespace_harlinn_1_1_windows_1_1_graphics =
     [ "SizeF", "namespace_harlinn_1_1_windows_1_1_graphics.html#aaf15c4296458a4ad1b4705453a3b7181", null ],
     [ "SizeL", "namespace_harlinn_1_1_windows_1_1_graphics.html#a251f2fd9befa3438610369bb2a3d35b7", null ],
     [ "SizeU", "namespace_harlinn_1_1_windows_1_1_graphics.html#ab49eedc03302267fdce1007974a163cc", null ],
+    [ "Clamp", "namespace_harlinn_1_1_windows_1_1_graphics.html#a0173a0ab735b92a663e5a5f084c9465a", null ],
     [ "ConvertColorSpace", "namespace_harlinn_1_1_windows_1_1_graphics.html#a2eaa29fb6303b2041f53e88342a278b4", null ],
     [ "CreateDevice", "namespace_harlinn_1_1_windows_1_1_graphics.html#ae2772f5031f470667ddb6869bfe621a2", null ],
     [ "CreateDeviceContext", "namespace_harlinn_1_1_windows_1_1_graphics.html#af7f4de9380c023690f145fa6a06148ef", null ],
     [ "Length", "namespace_harlinn_1_1_windows_1_1_graphics.html#ad98f0439868cc219a707186e378dc59d", null ],
+    [ "Max", "namespace_harlinn_1_1_windows_1_1_graphics.html#a21c314ca4c6dc275d236600b32873aec", null ],
+    [ "Min", "namespace_harlinn_1_1_windows_1_1_graphics.html#a6d95afa719244fb8d1f1fe96588f0706", null ],
     [ "SinCos", "namespace_harlinn_1_1_windows_1_1_graphics.html#a70492713e10fe832cf6b027979254292", null ],
     [ "Tan", "namespace_harlinn_1_1_windows_1_1_graphics.html#a31f5c0c8953df45c729c1111f677993d", null ]
 ];

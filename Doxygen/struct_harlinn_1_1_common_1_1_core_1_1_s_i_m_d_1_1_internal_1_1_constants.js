@@ -24,6 +24,8 @@ var struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants =
     [ "SignMaskValue", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html#a6a2741e0d8cad6b6ff0e30b3b817b311", null ],
     [ "Sqrt2", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html#adc9deb85cb65aa559fa4067edfba31a7", null ],
     [ "Three", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html#acf2eeeb72fe3c67ebfdbdd7567930dff", null ],
+    [ "ThreePiOver4", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html#aa430a5d3ed25dc33b51cd6d387a87d99", null ],
     [ "Two", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html#ab171b867f476a8df3069af788279e38f", null ],
+    [ "TwoOverPi", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html#a886cb8e4a1ec55f921c28b4f33a237d8", null ],
     [ "Zero", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html#ab1234894c9a679fc2e7f0cca662e6c30", null ]
 ];

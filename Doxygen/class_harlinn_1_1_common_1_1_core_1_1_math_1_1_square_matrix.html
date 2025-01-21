@@ -105,6 +105,7 @@ $(function(){initNavTree('class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_
 <a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Harlinn::Common::Core::Math::SquareMatrix&lt; T, N &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -114,7 +115,7 @@ $(function(){initNavTree('class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_
 <div class="dynheader">
 Inheritance diagram for Harlinn::Common::Core::Math::SquareMatrix&lt; T, N &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix__inherit__graph.svg" width="194" height="272"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix__inherit__graph.svg" width="194" height="154"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for Harlinn::Common::Core::Math::SquareMatrix&lt; T, N &gt;:</div>
@@ -141,10 +142,14 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0319dd8b23ac324e233b2a307728104f" id="r_a0319dd8b23ac324e233b2a307728104f"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0319dd8b23ac324e233b2a307728104f">SquareMatrix</a> () noexcept=default</td></tr>
-<tr class="separator:a0319dd8b23ac324e233b2a307728104f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679d0094d3b20499e792f9dc19bc1a71" id="r_a679d0094d3b20499e792f9dc19bc1a71"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a679d0094d3b20499e792f9dc19bc1a71">SquareMatrix</a> () noexcept</td></tr>
+<tr class="separator:a679d0094d3b20499e792f9dc19bc1a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab30a9cee6d7e63752a5c5b8296cec89a" id="r_ab30a9cee6d7e63752a5c5b8296cec89a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab30a9cee6d7e63752a5c5b8296cec89a">SquareMatrix</a> (const <a class="el" href="#a6dd6d3581afeb6f85d61c1e604e3bb76">value_type</a> mat[<a class="el" href="#a8f6e606efd9f886097eeef750dd8adb9">Size</a>][<a class="el" href="#a8f6e606efd9f886097eeef750dd8adb9">Size</a>])</td></tr>
 <tr class="separator:ab30a9cee6d7e63752a5c5b8296cec89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a323415bf315021cc0a33642cf03901" id="r_a9a323415bf315021cc0a33642cf03901"><td class="memTemplParams" colspan="2">template&lt;SimpleSpanLike T&gt; <br />
+requires std::is_same_v&lt;typename T::value_type, <a class="el" href="#a6dd6d3581afeb6f85d61c1e604e3bb76">value_type</a>&gt;</td></tr>
+<tr class="memitem:a9a323415bf315021cc0a33642cf03901"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9a323415bf315021cc0a33642cf03901">SquareMatrix</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;mat)</td></tr>
+<tr class="separator:a9a323415bf315021cc0a33642cf03901"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca2bb1229f129b1886f7177ec2c38075" id="r_aca2bb1229f129b1886f7177ec2c38075"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca2bb1229f129b1886f7177ec2c38075">SquareMatrix</a> (const <a class="el" href="#ab6ec31b79ad751d1b3a49b3d8ff45d3a">Simd</a> &amp;simd) noexcept</td></tr>
 <tr class="separator:aca2bb1229f129b1886f7177ec2c38075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a419dc4f171f57b1045eceab3a3d38514" id="r_a419dc4f171f57b1045eceab3a3d38514"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a419dc4f171f57b1045eceab3a3d38514">SquareMatrix</a> (const <a class="el" href="#a4bbf51209c1fa26c994401010c04c730">MatrixData</a> &amp;data) noexcept</td></tr>
@@ -163,6 +168,8 @@ requires ( sizeof...( Args ) == ( ( N * N ) - 1 ) )</td></tr>
 <tr class="separator:a76e680065da4cd2bf24270c94b2df8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27726f317c2f002a130299fc594e6db1" id="r_a27726f317c2f002a130299fc594e6db1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab6ec31b79ad751d1b3a49b3d8ff45d3a">Simd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27726f317c2f002a130299fc594e6db1">ToSimd</a> () const noexcept</td></tr>
 <tr class="separator:a27726f317c2f002a130299fc594e6db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af87aeaa48fec2bee182b7ed63712e83c" id="r_af87aeaa48fec2bee182b7ed63712e83c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af87aeaa48fec2bee182b7ed63712e83c">operator Simd</a> () const noexcept</td></tr>
+<tr class="separator:af87aeaa48fec2bee182b7ed63712e83c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14dd8115e163edb8356a92f20990092f" id="r_a14dd8115e163edb8356a92f20990092f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14dd8115e163edb8356a92f20990092f">operator==</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a> &amp;other) const</td></tr>
 <tr class="separator:a14dd8115e163edb8356a92f20990092f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37528091b7aa7fec761e3c9c8c21c185" id="r_a37528091b7aa7fec761e3c9c8c21c185"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37528091b7aa7fec761e3c9c8c21c185">operator!=</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a> &amp;other) const</td></tr>
@@ -191,6 +198,12 @@ Static Public Attributes</h2></td></tr>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:ae9cd6829776b5b17016098c971bfb845" id="r_ae9cd6829776b5b17016098c971bfb845"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="#a4bbf51209c1fa26c994401010c04c730">MatrixData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9cd6829776b5b17016098c971bfb845">MakeDefaultValue</a> () noexcept</td></tr>
 <tr class="separator:ae9cd6829776b5b17016098c971bfb845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae3861fcf16df2a546ebf727cf8be1f" id="r_a6ae3861fcf16df2a546ebf727cf8be1f"><td class="memTemplParams" colspan="2">template&lt;SimpleSpanLike T&gt; <br />
+requires std::is_same_v&lt;typename T::value_type, <a class="el" href="#a6dd6d3581afeb6f85d61c1e604e3bb76">value_type</a>&gt;</td></tr>
+<tr class="memitem:a6ae3861fcf16df2a546ebf727cf8be1f"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a4bbf51209c1fa26c994401010c04c730">MatrixData</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6ae3861fcf16df2a546ebf727cf8be1f">MakeData</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;mat) noexcept</td></tr>
+<tr class="separator:a6ae3861fcf16df2a546ebf727cf8be1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab605078a8e660fb0984bfbd8ee06abf9" id="r_ab605078a8e660fb0984bfbd8ee06abf9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a4bbf51209c1fa26c994401010c04c730">MatrixData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab605078a8e660fb0984bfbd8ee06abf9">MakeData</a> (const <a class="el" href="#a6dd6d3581afeb6f85d61c1e604e3bb76">value_type</a> mat[<a class="el" href="#a8f6e606efd9f886097eeef750dd8adb9">Size</a>][<a class="el" href="#a8f6e606efd9f886097eeef750dd8adb9">Size</a>]) noexcept</td></tr>
+<tr class="separator:ab605078a8e660fb0984bfbd8ee06abf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -203,6 +216,11 @@ Static Private Attributes</h2></td></tr>
 <tr class="separator:a4636bdecff998ee0c72c88ca2f057590"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5feb1c93bef7fdac1957329a827be01c" id="r_a5feb1c93bef7fdac1957329a827be01c"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="#a4bbf51209c1fa26c994401010c04c730">MatrixData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5feb1c93bef7fdac1957329a827be01c">DefaultValue</a> = <a class="el" href="#ae9cd6829776b5b17016098c971bfb845">MakeDefaultValue</a>( )</td></tr>
 <tr class="separator:a5feb1c93bef7fdac1957329a827be01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a4f0b60fd0318b7a5b2133204d599f399" id="r_a4f0b60fd0318b7a5b2133204d599f399"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f0b60fd0318b7a5b2133204d599f399">operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a> &amp;m)</td></tr>
+<tr class="separator:a4f0b60fd0318b7a5b2133204d599f399"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a98f0ff6d9143754b311836ea9a88f467" name="a98f0ff6d9143754b311836ea9a88f467"></a>
@@ -318,8 +336,8 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0319dd8b23ac324e233b2a307728104f" name="a0319dd8b23ac324e233b2a307728104f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0319dd8b23ac324e233b2a307728104f">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[1/5]</span></h2>
+<a id="a679d0094d3b20499e792f9dc19bc1a71" name="a679d0094d3b20499e792f9dc19bc1a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a679d0094d3b20499e792f9dc19bc1a71">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +356,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -346,7 +364,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 </div>
 </div>
 <a id="ab30a9cee6d7e63752a5c5b8296cec89a" name="ab30a9cee6d7e63752a5c5b8296cec89a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab30a9cee6d7e63752a5c5b8296cec89a">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab30a9cee6d7e63752a5c5b8296cec89a">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -372,8 +390,38 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 
 </div>
 </div>
+<a id="a9a323415bf315021cc0a33642cf03901" name="a9a323415bf315021cc0a33642cf03901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a323415bf315021cc0a33642cf03901">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+<div class="memtemplate">
+template&lt;SimpleSpanLike T&gt; <br />
+requires std::is_same_v&lt;typename T::value_type, <a class="el" href="#a6dd6d3581afeb6f85d61c1e604e3bb76">value_type</a>&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">Harlinn::Common::Core::Math::SquareMatrix</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::SquareMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mat</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aca2bb1229f129b1886f7177ec2c38075" name="aca2bb1229f129b1886f7177ec2c38075"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca2bb1229f129b1886f7177ec2c38075">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aca2bb1229f129b1886f7177ec2c38075">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -400,7 +448,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 </div>
 </div>
 <a id="a419dc4f171f57b1045eceab3a3d38514" name="a419dc4f171f57b1045eceab3a3d38514"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a419dc4f171f57b1045eceab3a3d38514">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a419dc4f171f57b1045eceab3a3d38514">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -427,7 +475,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 </div>
 </div>
 <a id="a0243f0db0fde259ffbc1e3e74b63b2f8" name="a0243f0db0fde259ffbc1e3e74b63b2f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0243f0db0fde259ffbc1e3e74b63b2f8">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0243f0db0fde259ffbc1e3e74b63b2f8">&#9670;&#160;</a></span>SquareMatrix() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -521,6 +569,63 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 
 </div>
 </div>
+<a id="a6ae3861fcf16df2a546ebf727cf8be1f" name="a6ae3861fcf16df2a546ebf727cf8be1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ae3861fcf16df2a546ebf727cf8be1f">&#9670;&#160;</a></span>MakeData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+<div class="memtemplate">
+template&lt;SimpleSpanLike T&gt; <br />
+requires std::is_same_v&lt;typename T::value_type, <a class="el" href="#a6dd6d3581afeb6f85d61c1e604e3bb76">value_type</a>&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#a4bbf51209c1fa26c994401010c04c730">MatrixData</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">Harlinn::Common::Core::Math::SquareMatrix</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::MakeData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mat</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab605078a8e660fb0984bfbd8ee06abf9" name="ab605078a8e660fb0984bfbd8ee06abf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab605078a8e660fb0984bfbd8ee06abf9">&#9670;&#160;</a></span>MakeData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#a4bbf51209c1fa26c994401010c04c730">MatrixData</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">Harlinn::Common::Core::Math::SquareMatrix</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::MakeData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a6dd6d3581afeb6f85d61c1e604e3bb76">value_type</a></td>          <td class="paramname"><span class="paramname"><em>mat</em></span>[Size][Size]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae9cd6829776b5b17016098c971bfb845" name="ae9cd6829776b5b17016098c971bfb845"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae9cd6829776b5b17016098c971bfb845">&#9670;&#160;</a></span>MakeDefaultValue()</h2>
 
@@ -542,6 +647,33 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af87aeaa48fec2bee182b7ed63712e83c" name="af87aeaa48fec2bee182b7ed63712e83c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af87aeaa48fec2bee182b7ed63712e83c">&#9670;&#160;</a></span>operator Simd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">Harlinn::Common::Core::Math::SquareMatrix</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::operator <a class="el" href="#ab6ec31b79ad751d1b3a49b3d8ff45d3a">Simd</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -771,6 +903,9 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::string <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">Harlinn::Common::Core::Math::SquareMatrix</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::ToString </td>
@@ -779,6 +914,11 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -804,6 +944,38 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a4f0b60fd0318b7a5b2133204d599f399" name="a4f0b60fd0318b7a5b2133204d599f399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f0b60fd0318b7a5b2133204d599f399">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

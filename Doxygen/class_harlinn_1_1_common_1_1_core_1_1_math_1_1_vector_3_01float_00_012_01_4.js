@@ -5,5 +5,7 @@ var class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_012_01_4 
     [ "Vector", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_012_01_4.html#ae0235d820fe5793e38fa387b24adaa98", null ],
     [ "Vector", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_012_01_4.html#a3e256620c67d8362f6daf4b344c5b50e", null ],
     [ "Vector", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_012_01_4.html#a427e7fe7fe0a5b3557774fb49274c4c7", null ],
+    [ "Vector", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_012_01_4.html#a458d030f610a43e023415b891f39a7ee", null ],
+    [ "Vector", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_012_01_4.html#a65279862d7a89204b52e291636f4f77c", null ],
     [ "Vector", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_012_01_4.html#a65279862d7a89204b52e291636f4f77c", null ]
 ];

@@ -233,12 +233,12 @@
 
   <div class="post-content">
     <p>In C++, like any other programming language, computations are performed using the available set
-of operators and a set of core mathematical functions provided by the standard C and C++ libraries.</p>
+of operators, the intrinsic functions implemented by the compiler, and the set of core mathematical 
+functions provided by the standard C and C++ libraries, or some alternative implementation.</p>
 
-<p>Complex computations are put together using this functionality as building blocks. The header, 
-<code class="language-plaintext highlighter-rouge">HCCMath.h</code> provides alternatives to many of the core mathematical function that is specified in 
+<p>The header, <code class="language-plaintext highlighter-rouge">HCCMath.h</code> provides alternatives to many of the core mathematical function that is specified in 
 the C and C++ standards. All of the functions can be <code class="language-plaintext highlighter-rouge">constexpr</code> evaluated, and several offer 
-surprising performance benefits as well.</p>
+runtime performance benefits as well.</p>
 
 <p><img src="assets/BasicMath.svg" alt="" /></p>
 
@@ -278,53 +278,32 @@ faster than the release build of the original PBRT. <a href="pbrto.html">more…
 <p>The functions was created to enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of mathematical expressions, since nothing
 improves runtime performance as much as making the compiler calculate the results at compile time.</p>
 
-<p>This is achieved by providing a specific code path that will only be evaluated at compile time:</p>
+<p>Much of the code is based on version <code class="language-plaintext highlighter-rouge">0.8.5</code> of the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> 
+mathematical C library used by the <a href="https://julialang.org/">Julia</a> programming language.</p>
 
-<pre><code class="language-C++">template&lt;typename T&gt;
-    requires IsFloatingPoint&lt;T&gt; 
-constexpr inline std::remove_cvref_t&lt;T&gt; Abs( T val ) noexcept
-{
-    if ( std::is_constant_evaluated( ) )
-    {
-        return Internal::AbsImpl( val );
-    }
-    else
-    {
-        using FloatT = std::remove_cvref_t&lt;T&gt;;
-        if constexpr ( std::is_same_v&lt;FloatT, float&gt; )
-        {
-            return std::fabsf( val );
-        }
-        else
-        {
-            return std::fabs( val );
-        }
-    }
-}
-</code></pre>
+<p>The library does not include the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> floating
+point environment, and relies on the floating point environment provided by the
+Visual C++ runtime.</p>
 
-<p>and call the standard C/C++ implementation at runtime, unless the benchmarks prove 
-that the <code class="language-plaintext highlighter-rouge">constexpr</code> , or some other, implementation - performs consistently better.</p>
+<p>Some functions, like <code class="language-plaintext highlighter-rouge">Sin</code>, can only perform <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation for a subset of the
+possible arguments. <code class="language-plaintext highlighter-rouge">Sin</code> has no problems with <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation for \(\pm 20000^\circ\),
+but fails to <code class="language-plaintext highlighter-rouge">constexpr</code> evaluate <code class="language-plaintext highlighter-rouge">Sin(1.7976931348623158e+308)</code>.</p>
 
 <h3 id="implementation-quality">Implementation quality</h3>
 
-<p>The quality of the <code class="language-plaintext highlighter-rouge">constexpr</code> path for the functions implemented in <code class="language-plaintext highlighter-rouge">HCCMath.h</code> is good, 
-but the quality of the standard C and C++ implementations are often better as they can 
-usually handle any input argument value. Calling <code class="language-plaintext highlighter-rouge">std::sin(1.7976931348623158e+308)</code> works,
-and will return a reasonable value for the argument, but calling <code class="language-plaintext highlighter-rouge">std::sin(1.7976931348623158e+308)</code>
-is rarely, if ever, a reasonable thing to do.</p>
-
-<p>The difference between the highest value for a double precision floating point variable, 
-<code class="language-plaintext highlighter-rouge">1.7976931348623158e+308</code>, and second highest value, <code class="language-plaintext highlighter-rouge">1.7976931348623155e+308</code>, is 
-<code class="language-plaintext highlighter-rouge">1.99584030953472e+292</code>, which is approximately equal to <code class="language-plaintext highlighter-rouge">2 * M_PI * 3.176478508845091e+291</code>, an 
-incomprehensible number of full revolutions around the circle. Most apps requires
-sine calculations over the range \(\pm 2 \pi\), and that offers an
-optimization opportunity.</p>
-
-<p>Many C and C++ libraries include fast alternatives to several of the standard C and C++ mathematical
-functions. These alternatives are usually good enough for their intended domain.</p>
+<p>The quality of the implementation is, since it is based on <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a>,
+very high. <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> does many things very well, but sometimes
+the Visual C++ runtime, an intrinsic function, or other alternative implemented by the library, performs 
+better. When this is the case, the library selects the implementation with the best runtime performance.</p>
 
 <h3 id="testing">Testing</h3>
+
+<p>Rather extensive changes to the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> code was required to
+enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation, and there are currently 535 unit tests helping to ensure the quality
+of the mathematical parts of the library.</p>
+
+<p>Several of the tests execute the function under test 20 000 times using random generated values, while
+others try every possible value over the range of values most often used with the function.</p>
 
 <p>The functions in the <code class="language-plaintext highlighter-rouge">Math</code> namespace that use the <code class="language-plaintext highlighter-rouge">constepr</code> path implementation
 at runtime are thoroughly tested, and the tests tries to determine the maximum 
@@ -406,54 +385,19 @@ in the <code class="language-plaintext highlighter-rouge">Math</code> namespace 
 }
 </code></pre>
 
-<p><code class="language-plaintext highlighter-rouge">Math::Sin</code> fails for extreme arguments, but have been tested for every possible
-representation of a single precision floating point value between -42781604.0 and 42781604.0.</p>
-
-<p>Over this interval the maximum deviation between the results of <code class="language-plaintext highlighter-rouge">Math::Sin</code> and 
-<code class="language-plaintext highlighter-rouge">std::sin</code> is <code class="language-plaintext highlighter-rouge">1.19207726377e-07</code> for for the argument <code class="language-plaintext highlighter-rouge">-61926.5507812</code>.</p>
-
-<p>Testing for every possible value between <code class="language-plaintext highlighter-rouge">-2.0 * M_PI</code> and <code class="language-plaintext highlighter-rouge">2.0 * M_PI</code>, the 
-maximum deviation between <code class="language-plaintext highlighter-rouge">std::sin</code> and <code class="language-plaintext highlighter-rouge">Math::Sin</code> is <code class="language-plaintext highlighter-rouge">1.1916077923e-07</code> for the argument <code class="language-plaintext highlighter-rouge">-0.252785384655</code>.</p>
-
-<p>This test passed <code class="language-plaintext highlighter-rouge">2'173'837'309</code> different values to the two functions, and for the majority of the cases, 
-<code class="language-plaintext highlighter-rouge">2'106'866'672</code>, the results are identical.</p>
-
-<p>For <code class="language-plaintext highlighter-rouge">-0.252785384655</code>, <code class="language-plaintext highlighter-rouge">std::sin</code> returns <code class="language-plaintext highlighter-rouge">-0.250101774931</code>, while <code class="language-plaintext highlighter-rouge">Math::Sin</code> returns <code class="language-plaintext highlighter-rouge">-0.250101804733</code>.</p>
-
-<p><a href="https://julialang.org/">Julia</a> evaluates the value to <code class="language-plaintext highlighter-rouge">-0.250101804733</code> using:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>julia&gt; a::Float32 = -0.252785384655
--0.252785384655
-julia&gt; @printf("%.12f",sin(a))
--0.250101804733
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">Math::Sin</code> is about two times faster than <code class="language-plaintext highlighter-rouge">std::sin</code> for single precision floating point values,
-and both return approximate values. The approximation performed by <code class="language-plaintext highlighter-rouge">Math::Sin</code> should be well within
-the margin of error required for the majority of applications.</p>
-
 <h3 id="exceptional-performance">Exceptional performance</h3>
 
-<p>A few functions outperforms the standard implementation spectacularly, and <code class="language-plaintext highlighter-rouge">Exp</code> 
-outperforms <code class="language-plaintext highlighter-rouge">std::exp</code> by <code class="language-plaintext highlighter-rouge">1200</code> %.</p>
+<p>A few functions outperforms the standard implementation spectacularly, like <code class="language-plaintext highlighter-rouge">Exp</code> 
+which outperforms <code class="language-plaintext highlighter-rouge">std::exp</code> by <code class="language-plaintext highlighter-rouge">1200</code> %.</p>
 
 <p>The two implementations returns the same result for <code class="language-plaintext highlighter-rouge">2261694913</code> out of <code class="language-plaintext highlighter-rouge">2288746510</code> cases, 
-when tested with double precision floating point argument values, evenly distributed
-over the interval <code class="language-plaintext highlighter-rouge">[-744.0, 710.0]</code>. The maximum deviation, <code class="language-plaintext highlighter-rouge">1.56426946755e-12</code>
+and when tested with double precision floating point argument values, uniformly distributed
+over the interval <code class="language-plaintext highlighter-rouge">[-744.0, 710.0]</code>, the maximum deviation, <code class="language-plaintext highlighter-rouge">1.56426946755e-12</code>
 was obtained when passing <code class="language-plaintext highlighter-rouge">-717.256469727</code> as the argument to the functions.</p>
-
-<pre><code class="language-C++">template&lt;typename T&gt;
-    requires IsFloatingPoint&lt;T&gt;
-constexpr inline std::remove_cvref_t&lt;T&gt; Exp( T x ) noexcept
-{
-    return Math::Internal::ExpImpl( x );
-}
-</code></pre>
 
 <h3 id="using-simdtraitstn">Using <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T.N&gt;</code></h3>
 
-<p>Some functions, like <code class="language-plaintext highlighter-rouge">Hypot</code>, 
-use the <a href="SimdOperations.html"><code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T.N&gt;</code> specializations</a> to achieve excellent runtime performance.</p>
+<p>Some functions, like <code class="language-plaintext highlighter-rouge">Hypot</code>, use the <a href="SimdOperations.html"><code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T.N&gt;</code> specializations</a> to achieve excellent runtime performance.</p>
 
 <pre><code class="language-C++">template&lt;typename T&gt;
     requires IsFloatingPoint&lt;T&gt;
@@ -461,7 +405,7 @@ constexpr inline std::remove_cvref_t&lt;T&gt; Hypot( T x, T y, T z ) noexcept
 {
     if ( std::is_constant_evaluated( ) )
     {
-        return Sqrt( x*x + y*y + z*z );
+        return Math::Internal::OpenLibM::FastHypot( x, y );
     }
     else
     {
@@ -489,16 +433,23 @@ provides the best solution:</p>
     requires IsFloatingPoint&lt;T&gt;
 constexpr inline std::remove_cvref_t&lt;T&gt; Tan( T x ) noexcept
 {
+    using FloatT = std::remove_cvref_t&lt;T&gt;;
     if ( std::is_constant_evaluated( ) )
     {
-        return Math::Internal::TanImpl( x );
+        if constexpr ( std::is_same_v&lt;FloatT, float&gt; )
+        {
+            return Math::Internal::OpenLibM::tanf( x );
+        }
+        else
+        {
+            return Math::Internal::OpenLibM::tan( x );
+        }
     }
     else
     {
-        using FloatType = std::remove_cvref_t&lt;T&gt;;
-        if constexpr ( std::is_same_v&lt;FloatType, float&gt; )
+        if constexpr ( std::is_same_v&lt;FloatT, float&gt; )
         {
-            return Math::Internal::TanImpl( x );
+            return Math::Internal::OpenLibM::tanf( x );
         }
         else
         {

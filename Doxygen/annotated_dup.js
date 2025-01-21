@@ -792,6 +792,7 @@ var annotated_dup =
               [ "RangeReduction", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction.html", null ],
               [ "RangeReduction< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction_3_01double_01_4.html", null ],
               [ "RangeReduction< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction_3_01float_01_4.html", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction_3_01float_01_4" ],
+              [ "ScalarBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_scalar_base.html", null ],
               [ "StorageType", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type.html", null ],
               [ "StorageType< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type_3_01double_01_4.html", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type_3_01double_01_4" ],
               [ "StorageType< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type_3_01float_01_4.html", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type_3_01float_01_4" ],
@@ -816,6 +817,13 @@ var annotated_dup =
             [ "Point3i", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_point3i.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_point3i" ],
             [ "Quaternion", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion" ],
             [ "QuaternionSimd", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd" ],
+            [ "Scalar", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar.html", null ],
+            [ "Scalar< double, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01double_00_012_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01double_00_012_01_4" ],
+            [ "Scalar< double, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01double_00_013_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01double_00_013_01_4" ],
+            [ "Scalar< double, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01double_00_014_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01double_00_014_01_4" ],
+            [ "Scalar< float, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01float_00_012_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01float_00_012_01_4" ],
+            [ "Scalar< float, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01float_00_013_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01float_00_013_01_4" ],
+            [ "Scalar< float, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01float_00_014_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01float_00_014_01_4" ],
             [ "Significand", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_significand" ],
             [ "SquareMatrix", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix" ],
             [ "SquareMatrixSimd", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd.html", null ],
@@ -837,7 +845,10 @@ var annotated_dup =
             [ "Vector< float, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_014_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_014_01_4" ],
             [ "Vector< Int32, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_int32_00_012_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_int32_00_012_01_4" ],
             [ "Vector< Int32, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_int32_00_013_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_int32_00_013_01_4" ],
-            [ "Vector< Int32, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_int32_00_014_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_int32_00_014_01_4" ]
+            [ "Vector< Int32, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_int32_00_014_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_int32_00_014_01_4" ],
+            [ "Vector< UInt32, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_u_int32_00_012_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_u_int32_00_012_01_4" ],
+            [ "Vector< UInt32, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_u_int32_00_013_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_u_int32_00_013_01_4" ],
+            [ "Vector< UInt32, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_u_int32_00_014_01_4.html", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_u_int32_00_014_01_4" ]
           ] ],
           [ "Messaging", "namespace_harlinn_1_1_common_1_1_core_1_1_messaging.html", [
             [ "MessageQueueException", "class_harlinn_1_1_common_1_1_core_1_1_messaging_1_1_message_queue_exception.html", "class_harlinn_1_1_common_1_1_core_1_1_messaging_1_1_message_queue_exception" ]
@@ -2499,6 +2510,7 @@ var annotated_dup =
           [ "BitmapBrush1", "class_harlinn_1_1_windows_1_1_graphics_1_1_bitmap_brush1.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_bitmap_brush1" ],
           [ "BitmapRenderTarget", "class_harlinn_1_1_windows_1_1_graphics_1_1_bitmap_render_target.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_bitmap_render_target" ],
           [ "Brush", "class_harlinn_1_1_windows_1_1_graphics_1_1_brush.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_brush" ],
+          [ "Color", "class_harlinn_1_1_windows_1_1_graphics_1_1_color.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_color" ],
           [ "ColorContext", "class_harlinn_1_1_windows_1_1_graphics_1_1_color_context.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_color_context" ],
           [ "ColorContext1", "class_harlinn_1_1_windows_1_1_graphics_1_1_color_context1.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_color_context1" ],
           [ "CommandList", "class_harlinn_1_1_windows_1_1_graphics_1_1_command_list.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_command_list" ],
