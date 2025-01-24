@@ -3,21 +3,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Direct3D 12 Wrapper classes | Harlinn</title>
+<title>COM Interface Basics | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Direct3D 12 Wrapper classes" />
+<meta property="og:title" content="COM Interface Basics" />
 <meta name="author" content="Espen Harlinn" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is my personal Github site," />
 <meta property="og:description" content="This is my personal Github site," />
-<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Windows/Direct3D12/Direct3D12Wrappers.html" />
-<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Windows/Direct3D12/Direct3D12Wrappers.html" />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/COM/COMInterfaceBasics.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/COM/COMInterfaceBasics.html" />
 <meta property="og:site_name" content="Harlinn" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Direct3D 12 Wrapper classes" />
+<meta property="twitter:title" content="COM Interface Basics" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal Github site,","headline":"Direct3D 12 Wrapper classes","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Windows/Direct3D12/Direct3D12Wrappers.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal Github site,","headline":"COM Interface Basics","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/COM/COMInterfaceBasics.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -229,70 +229,109 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Direct3D 12 Wrapper classes</h1>
+    <h1 class="post-title">COM Interface Basics</h1>
   </header>
 
   <div class="post-content">
-    <p>The <a href="/Cpp/Harlinn.Windows/Harlinn.Windows/Harlinn.Windows.html">Harlinn.Windows</a> library comes with classes
-wrapping the Direct3D 12 interfaces, making code cleaner and easier to understand.</p>
+    <p>COM is many things, but at its core, it’s all about consuming and exposing functionality using 
+C++ virtual function tables derived from the <code class="language-plaintext highlighter-rouge">IUnknown</code> struct.</p>
 
-<p>The wrappers provide mainly two services:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IUnknown
+{
+public:
+    virtual HRESULT __stdcall QueryInterface( const GUID&amp; riid, void **ppvObject) = 0;
+    virtual unsigned long __stdcall AddRef( ) = 0;
+    virtual unsigned long __stdcall Release( ) = 0;
+};
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">IUnknown</code> can easily be implemented in C:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>typedef struct IUnknownVtbl
+{
+  HRESULT ( __stdcall *QueryInterface )( IUnknown * This, 
+                                        const GUID* riid, void **ppvObject);
+  unsigned long ( __stdcall *AddRef )( IUnknown * This );
+  unsigned long ( __stdcall *Release )( IUnknown * This );
+} IUnknownVtbl;
+
+typedef struct tagIUnknown
+{
+    struct IUnknownVtbl *lpVtbl;
+}IUnknown;
+</code></pre></div></div>
+<p>It’s just easier to write in C++, but a the end of the day, it’s just a definition of a structure 
+containing pointers to functions.</p>
+
+<p>With COM the calling app is responsible for releasing resources back to the implementation,
+and every instance of a COM interface must be released using the <code class="language-plaintext highlighter-rouge">Release</code> member function
+of the virtual function table. COM objects are reference counted, or at least they are expected
+to behave as if they are. Calling <code class="language-plaintext highlighter-rouge">Release</code> decrements the reference count of the object, and destroys 
+the object when the reference count becomes <code class="language-plaintext highlighter-rouge">0</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">AddRef</code> increments the reference count of the implementation, and apps should usually call <code class="language-plaintext highlighter-rouge">AddRef</code> when they 
+make copies of the interface pointer.</p>
+
+<p>COM object implements one, or more interfaces, and the role of <code class="language-plaintext highlighter-rouge">QueryInterface</code> is to provide
+access to the interfaces implemented by the object. Interfaces are identified by a <code class="language-plaintext highlighter-rouge">GUID</code>, 
+which is a 16 byte structure.</p>
+
+<p>All COM objects supports the <code class="language-plaintext highlighter-rouge">IUnknown</code> interface, and a query for the <code class="language-plaintext highlighter-rouge">IUnknown</code> interface on any of the 
+object’s interfaces must always return the same pointer value. This allows clients to determine 
+if two pointers point to the same object by calling <code class="language-plaintext highlighter-rouge">QueryInterface</code> with <code class="language-plaintext highlighter-rouge">IID_IUnknown</code> and comparing 
+the results. Pointers to other interfaces do not have this restriction.</p>
+
+<p>There are three requirements for the implementations of <code class="language-plaintext highlighter-rouge">QueryInterface</code>:</p>
+
 <ol>
-  <li>Error handling.</li>
-  <li>Automated COM interface lifetime management.</li>
+  <li>The set of interfaces that can be accessed using <code class="language-plaintext highlighter-rouge">QueryInterface</code> must be static. If a call to <code class="language-plaintext highlighter-rouge">QueryInterface</code> 
+for a pointer to an interface succeeds the first time, then it must succeed again, and when it fails the 
+first time, it must fail on all subsequent calls.</li>
+  <li>If a client calls <code class="language-plaintext highlighter-rouge">QueryInterface</code> successfully for another interface implemented by an object, 
+then a query through the obtained interface for the original interface must succeed.</li>
+  <li>If a client calls <code class="language-plaintext highlighter-rouge">QueryInterface</code> successfully for a second interface, and calls <code class="language-plaintext highlighter-rouge">QueryInterface</code> 
+successfully for a third interface, then a call to <code class="language-plaintext highlighter-rouge">QueryInterface</code> for the initial interface 
+through the third interface must succeed.</li>
 </ol>
 
-<p>Notice that the below code does not check for errors. This doesn’t mean that
-errors go unnoticed, it just means that this is something the wrapper classes 
-takes care of, throwing an exception if any error occurs.</p>
+<h3 id="error-handling-in-com">Error handling in COM</h3>
 
-<p>The wrapper classes are by no means a 3D engine framework, just wrappers 
-handling all the COM related stuff, and a myriad of other minor things
-that usually clutters Direct3D related code.</p>
+<p>Almost all COM functions and interface methods return a value of the type HRESULT. 
+The HRESULT is a way of returning a success, warning, or error value.</p>
 
-<pre><code class="language-C++">bool DXContext::CreateDeviceD3D( HWND hWnd )
+<p>According to the COM specification, a result of zero indicates success, and a nonzero result 
+indicates failure. Unfortunately this is not always true, and even some core COM interfaces
+does not follow this rule. When this is the case, it’s usually documented.</p>
+
+<p>The COM API provides two macros that is commonly used to detect if an operation
+succeeded or failed, appropriately called <code class="language-plaintext highlighter-rouge">SUCCEEDED</code> and <code class="language-plaintext highlighter-rouge">FAILED</code>.</p>
+
+<pre><code class="language-C++">IXMLDOMDocument3* ptr = ...
+IXMLDOMNode* node = nullptr;
+auto hr = ptr-&gt;QueryInterface( __uuidof( IXMLDOMNode ), ( void** )&amp;node );
+if ( FAILED( hr ) )
 {
-    dxgiFactory_ = Graphics::DXGI::CreateFactory&lt;Graphics::DXGI::Factory4&gt;( false );
 </code></pre>
-<p>Use the optional template parameter tp <code class="language-plaintext highlighter-rouge">DXGI::CreateFactory</code> to specify the 
-wrapper you need for your app. If your app needs the functionality of the 
-<code class="language-plaintext highlighter-rouge">IDXGIFactory4</code> interface, just specify the <code class="language-plaintext highlighter-rouge">DXGI::Factory4</code> class. By convention
-the wrapper classes are named after the interface they wrap. Remove the <code class="language-plaintext highlighter-rouge">IDXGI</code>
-from the name of the interface, and then you have the name of the wrapper
-class living inside the <code class="language-plaintext highlighter-rouge">DXGI</code> namespace.</p>
-<pre><code class="language-C++">    hardwareAdapter_ = dxgiFactory_.FindAdapter( D3D_FEATURE_LEVEL_12_1 );
+
+<p><code class="language-plaintext highlighter-rouge">QueryInterface</code> failed, perform error handling. Do not call <code class="language-plaintext highlighter-rouge">node-&gt;Release( )</code>, or any other
+function of the <code class="language-plaintext highlighter-rouge">IXMLDOMNode</code> interface since <code class="language-plaintext highlighter-rouge">node</code> is not a valid interface pointer.</p>
+
+<pre><code class="language-C++">}
+else
+{
+    // QueryInterface succeeded, and node points to an IXMLDOMNode interface  
+    BSTR prefix = nullptr;
+    hr = node-&gt;get_prefix( &amp;prefix );
+    if ( SUCCEEDED( hr ) )
+    {
+        wprintf( L"Prefix:%s\n", prefix );
 </code></pre>
-<p>The wrappers usually requires the same steps as regular Direct3D code, but 
-finding an adapter matching the requested feature level is one those minor
-things mentioned above.</p>
-
-<pre><code class="language-C++">    device_ = Graphics::D3D12::CreateDevice( hardwareAdapter_, D3D_FEATURE_LEVEL_12_1 );
-        
-    renderTargetViewDescHeap_ = this-&gt;CreateRenderTargetViewDescriptorHeap( );
-    SetupRenderTargetDescriptors( );
-
-    shaderResourceViewDescHeap_ = this-&gt;CreateShaderResourceViewDescriptorHeap( );
-
-    commandQueue_ = this-&gt;CreateCommandQueue( );
-    SetupFrameContexts( );
-        
-    commandList_ = device_.CreateCommandList( 0, D3D12::CommandListType::Direct, frameContexts_[ 0 ].commandAllocator_ );
-    commandList_.Close( );
-
-    commandList_ = this-&gt;CreateCommandList( frameContexts_[ 0 ].commandAllocator_ );
-
-    fence_ = device_.CreateFence( );
-
-    swapChain_ = this-&gt;CreateSwapChain( hWnd );
-
-    swapChainWaitableObject_ = swapChain_.GetFrameLatencyWaitableObject( );
-
-    CreateRenderTargetViews( );
-    return true;
+<p>Caller is responsible for freeing <code class="language-plaintext highlighter-rouge">prefix</code> using <code class="language-plaintext highlighter-rouge">SysFreeString</code>:</p>
+<pre><code class="language-C++">        SysFreeString( prefix );
+    }
+    node-&gt;Release( );
 }
-
+ptr-&gt;Release( );
 </code></pre>
-
 
   </div>
 

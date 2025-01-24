@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Core interface wrappers and smart pointers | Harlinn</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Core interface wrappers and smart pointers" />
+<meta name="author" content="Espen Harlinn" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is my personal Github site," />
+<meta property="og:description" content="This is my personal Github site," />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/COM/COMCoreWrappers.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/COM/COMCoreWrappers.html" />
+<meta property="og:site_name" content="Harlinn" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Core interface wrappers and smart pointers" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal Github site,","headline":"Core interface wrappers and smart pointers","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/COM/COMCoreWrappers.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="importmap">
+        {
+            "imports":
+            {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.171.0/build/three.module.min.js" ,
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.171.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body><header class="site-header" role="banner">
+    <div id="animatedHeader" height="120px" width="100%">
+        <script type="x-shader/x-vertex" id="vertexshader">
+            attribute float scale;
+            void main() {
+                vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+                gl_PointSize = scale * ( 100.0 / - mvPosition.z );
+                gl_Position = projectionMatrix * mvPosition;
+            }
+
+        </script>
+
+        <script type="x-shader/x-fragment" id="fragmentshader">
+            uniform vec3 color;
+            void main() {
+                if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 )  discard;
+                gl_FragColor = vec4( color, 0.8 );
+            }
+        </script>
+
+        <script type="module">
+
+			import * as THREE from 'three';
+
+			const SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
+
+			let container; 
+			let camera, scene, renderer;
+
+			let particles, count = 0;
+
+			let mouseX = 0, mouseY = 0;
+
+			let animatedHeaderHeight = 120;
+
+            let windowHalfX = window.innerWidth / 2;
+            let windowHalfY = animatedHeaderHeight/2.0;
+
+			init();
+
+			function init() {
+
+                container = document.querySelector('#animatedHeader');
+
+                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.z = 1000;
+
+				scene = new THREE.Scene();
+
+				//
+
+				const numParticles = AMOUNTX * AMOUNTY;
+
+				const positions = new Float32Array( numParticles * 3 );
+				const scales = new Float32Array( numParticles );
+
+				let i = 0, j = 0;
+
+				for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
+
+					for ( let iy = 0; iy < AMOUNTY; iy ++ ) {
+
+						positions[ i ] = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 ); // x
+						positions[ i + 1 ] = 0; // y
+						positions[ i + 2 ] = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 ); // z
+
+						scales[ j ] = 1;
+
+						i += 3;
+						j ++;
+
+					}
+
+				}
+
+				const geometry = new THREE.BufferGeometry();
+				geometry.setAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
+				geometry.setAttribute( 'scale', new THREE.BufferAttribute( scales, 1 ) );
+
+				const material = new THREE.ShaderMaterial( {
+
+					uniforms: {
+						color: { value: new THREE.Color( 0xffffff ) },
+					},
+					vertexShader: document.getElementById( 'vertexshader' ).textContent,
+					fragmentShader: document.getElementById( 'fragmentshader' ).textContent
+
+				} );
+
+				//
+
+				particles = new THREE.Points( geometry, material );
+				scene.add( particles );
+
+				//
+
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+                renderer.setSize(window.innerWidth, animatedHeaderHeight );
+				renderer.setAnimationLoop( animate );
+				container.appendChild( renderer.domElement );
+
+				container.style.touchAction = 'none';
+				container.addEventListener( 'pointermove', onPointerMove );
+
+				//
+
+                window.addEventListener( 'resize', onWindowResize );
+
+			}
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+
+				camera.aspect = window.innerWidth / animatedHeaderHeight; 
+				camera.updateProjectionMatrix();
+
+				renderer.setSize(window.innerWidth, animatedHeaderHeight);
+
+			}
+
+			//
+
+			function onPointerMove( event ) {
+
+				if ( event.isPrimary === false ) return;
+
+				mouseX = event.clientX - windowHalfX;
+				mouseY = event.clientY - windowHalfY;
+
+			}
+
+			//
+
+			function animate() {
+				render();
+
+			}
+
+			function render() {
+
+				camera.position.x += ( mouseX - camera.position.x ) * .05;
+				camera.position.y += ( - mouseY - camera.position.y ) * .05;
+				camera.lookAt( scene.position );
+
+				const positions = particles.geometry.attributes.position.array;
+				const scales = particles.geometry.attributes.scale.array;
+
+				let i = 0, j = 0;
+
+				for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
+
+					for ( let iy = 0; iy < AMOUNTY; iy ++ ) {
+
+						positions[ i + 1 ] = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) +
+										( Math.sin( ( iy + count ) * 0.5 ) * 50 );
+
+						scales[ j ] = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 20 +
+										( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 20;
+
+						i += 3;
+						j ++;
+
+					}
+
+				}
+
+				particles.geometry.attributes.position.needsUpdate = true;
+				particles.geometry.attributes.scale.needsUpdate = true;
+
+				renderer.render( scene, camera );
+
+				count += 0.1;
+
+			}
+
+        </script>
+
+    </div>
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Harlinn</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Cpp/Cpp.html">C++</a><a class="page-link" href="/Databases/Databases.html">Databases</a><a class="page-link" href="/DotNet/DotNet.html">.Net</a><a class="page-link" href="/Java/Java.html">Java</a><a class="page-link" href="/Julia/Julia.html">Julia</a><a class="page-link" href="/Python/Python.html">Python</a><a class="page-link" href="/R/R.html">R</a><a class="page-link" href="/Rust/Rust.html">Rust</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Core interface wrappers and smart pointers</h1>
+  </header>
+
+  <div class="post-content">
+    <p>The <code class="language-plaintext highlighter-rouge">Unknown</code> class wraps the <code class="language-plaintext highlighter-rouge">IUnknown</code> interface, and it’s the base class for all
+the COM interface wrapper classes implemented by the Harlinn.Common.Core and Harlinn.Windows
+libraries. The <code class="language-plaintext highlighter-rouge">Unknown</code> class is also the base class for the generic <code class="language-plaintext highlighter-rouge">ComPtr</code> smart pointer 
+template class.</p>
+
+<p>The <a href="#unknown-implementation-details"><code class="language-plaintext highlighter-rouge">Unknown</code> implementation details</a>, below, provides a detailed description
+of the <code class="language-plaintext highlighter-rouge">Unknown</code> class, but first two example apps. The first implemented using an interface wrapper, the second
+working directly with the interfaces. and both apps implementing the same functionality.</p>
+
+<p>The COM wrapper classes was created to make it simpler to write apps consuming COM interfaces.</p>
+
+<p>The following app uses the <code class="language-plaintext highlighter-rouge">Dom::Document</code> class, which wraps the <code class="language-plaintext highlighter-rouge">IXMLDOMDocument</code> interface from 
+<a href="https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms763742(v=vs.85)">MSXML</a>, 
+to load an xml document into a DOM document:</p>
+<pre><code class="language-C++">#include &lt;HCCXML.h&gt;
+using namespace Harlinn::Common::Core;
+using namespace Harlinn::Common::Core::Xml;
+
+void loadDOM( )
+{
+    auto document = Dom::Document::Create( );
+    
+    document.SetAsync( false );
+    document.SetValidateOnParse( false );
+    document.SetResolveExternals( false );
+
+    auto success = document.Load( L"stocks.xml" );
+    if ( success )
+    {
+        auto xml = document.Xml( );
+        wprintf( L"XML DOM loaded from stocks.xml:\n%S\n", xml.c_str() );
+    }
+    else
+    {
+        auto parserError = document.ParseError( );
+        auto reason = parserError.Reason( );
+        wprintf( L"Failed to load DOM from stocks.xml. %S\n", reason.c_str() );
+    }
+}
+
+int main()
+{
+    try
+    {
+        ComInitialize init;
+        loadDOM( );
+    }
+    catch ( const std::exception&amp; exc )
+    {
+        printf( "Exception: %s", exc.what( ) );
+    }
+}
+</code></pre>
+<p>That was pretty simple, and the only thing that’s COM specific, is the single statement <code class="language-plaintext highlighter-rouge">ComInitialize init;</code>, which ensures that 
+COM is initialized for the process.</p>
+
+<p>The code below is an example from Microsoft, <a href="https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms765465(v=vs.85)">loadDom.cpp</a>,
+doing the same thing as the above app:</p>
+<pre><code class="language-C++">#include &lt;stdio.h&gt;
+#include &lt;tchar.h&gt;
+#import &lt;msxml6.dll&gt; raw_interfaces_only
+
+// Macro that calls a COM method returning HRESULT value.
+#define CHK_HR(stmt)        do { hr=(stmt); if (FAILED(hr)) goto CleanUp; } while(0)
+
+// Macro to verify memory allcation.
+#define CHK_ALLOC(p)        do { if (!(p)) { hr = E_OUTOFMEMORY; goto CleanUp; } } while(0)
+
+// Macro that releases a COM object if not NULL.
+#define SAFE_RELEASE(p)     do { if ((p)) { (p)-&gt;Release(); (p) = NULL; } } while(0)
+
+// Helper function to create a VT_BSTR variant from a null terminated string. 
+HRESULT VariantFromString(PCWSTR wszValue, VARIANT &amp;Variant)
+{
+    HRESULT hr = S_OK;
+    BSTR bstr = SysAllocString(wszValue);
+    CHK_ALLOC(bstr);
+    
+    V_VT(&amp;Variant)   = VT_BSTR;
+    V_BSTR(&amp;Variant) = bstr;
+
+CleanUp:
+    return hr;
+}
+
+// Helper function to create a DOM instance. 
+HRESULT CreateAndInitDOM(IXMLDOMDocument **ppDoc)
+{
+    HRESULT hr = CoCreateInstance(__uuidof(MSXML2::DOMDocument60), NULL, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(ppDoc));
+    if (SUCCEEDED(hr))
+    {
+        // these methods should not fail so don't inspect result
+        (*ppDoc)-&gt;put_async(VARIANT_FALSE);  
+        (*ppDoc)-&gt;put_validateOnParse(VARIANT_FALSE);
+        (*ppDoc)-&gt;put_resolveExternals(VARIANT_FALSE);
+    }
+    return hr;
+}
+
+void loadDOM()
+{
+    HRESULT hr = S_OK;
+    IXMLDOMDocument *pXMLDom=NULL;
+    IXMLDOMParseError *pXMLErr = NULL;
+
+    BSTR bstrXML = NULL;
+    BSTR bstrErr = NULL;
+    VARIANT_BOOL varStatus;
+    VARIANT varFileName;
+    VariantInit(&amp;varFileName);
+    
+    CHK_HR(CreateAndInitDOM(&amp;pXMLDom));    
+    
+    // XML file name to load
+    CHK_HR(VariantFromString(L"stocks.xml", varFileName));
+    CHK_HR(pXMLDom-&gt;load(varFileName, &amp;varStatus));
+    if (varStatus == VARIANT_TRUE)
+    {
+        CHK_HR(pXMLDom-&gt;get_xml(&amp;bstrXML));
+        printf("XML DOM loaded from stocks.xml:\n%S\n", bstrXML);
+    }
+    else
+    {
+        // Failed to load xml, get last parsing error
+        CHK_HR(pXMLDom-&gt;get_parseError(&amp;pXMLErr));
+        CHK_HR(pXMLErr-&gt;get_reason(&amp;bstrErr));
+        printf("Failed to load DOM from stocks.xml. %S\n", bstrErr);
+    }
+
+CleanUp:
+    SAFE_RELEASE(pXMLDom);
+    SAFE_RELEASE(pXMLErr);
+    SysFreeString(bstrXML);
+    SysFreeString(bstrErr);
+    VariantClear(&amp;varFileName);
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+    HRESULT hr = CoInitialize(NULL);
+    if(SUCCEEDED(hr))
+    {
+        loadDOM();
+        CoUninitialize();
+    }
+
+    return 0;
+
+}
+</code></pre>
+<p>That’s a lot of code, mostly dealing with error handling and resource lifetime management.</p>
+
+<p>As demonstrated by the first example, the C++ wrapper classes, and supporting code, removes 
+most the burden imposed on programmers by COM.</p>
+
+<h3 id="unknown-implementation-details">Unknown implementation details</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/// &lt;summary&gt;
+/// Base class for COM interface wrappers
+/// &lt;/summary&gt;
+class Unknown 
+{
+protected:
+    IUnknown* unknown_;
+public:
+    /// &lt;summary&gt;
+    /// Every derived class, except for the ComPtr template,
+    /// defines InterfaceType as the type of the interface
+    /// wrapped by the derived class.
+    /// &lt;/summary&gt;
+    using InterfaceType = IUnknown;
+    /// &lt;summary&gt;
+    /// The default constructor ensures that 
+    /// the internal pointer to IUnknown
+    /// is set to &lt;c&gt;nullptr&lt;/c&gt;.
+    /// &lt;/summary&gt;
+    constexpr Unknown( ) noexcept
+        : unknown_( nullptr )
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// Constructs a new &lt;c&gt;Unknown&lt;/c&gt;, taking
+    /// ownership of the interface pointer held
+    /// by &lt;c&gt;unknown&lt;/c&gt;.
+    /// &lt;/summary&gt;
+    /// &lt;param name="unknown"&gt;
+    /// A pointer to an &lt;c&gt;IUnknown&lt;/c&gt; interface,
+    /// or an interface derived from &lt;c&gt;IUnknown&lt;/c&gt;.
+    /// &lt;/param&gt;
+    /// &lt;param name="addref"&gt;
+    /// If &lt;c&gt;true&lt;/c&gt;, the constructor
+    /// calls &lt;c&gt;AddRef&lt;/c&gt; on the interface pointer held
+    /// by &lt;c&gt;unknown&lt;/c&gt;.
+    /// &lt;/param&gt;
+    explicit Unknown( IUnknown* unknown, bool addref = false ) noexcept
+        : unknown_( unknown )
+    {
+        if ( addref &amp;&amp; ( unknown_ != nullptr ) )
+        {
+            unknown_-&gt;AddRef( );
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// Initializes the new object to the interface identified
+    /// by the &lt;c&gt;iid&lt;/c&gt; parameter by querying the interface
+    /// held by &lt;c&gt;unknown&lt;/c&gt; for the requested interface.
+    /// &lt;/summary&gt;
+    /// &lt;param name="iid"&gt;
+    /// The identifier of the requested interface.
+    /// &lt;/param&gt;
+    /// &lt;param name="unknown"&gt;
+    /// The interface wrapper object that will be queried
+    /// for the requested interface.
+    /// &lt;/param&gt;
+    /// &lt;param name="throwIfNoInterface"&gt;
+    /// Set to &lt;c&gt;false&lt;/c&gt; to prevent the constructor
+    /// from throwing and exception if the requested interface
+    /// is not supported. 
+    /// &lt;/param&gt;
+    Unknown( REFIID iid, const Unknown&amp; unknown, bool throwIfNoInterface = true )
+        : unknown_( nullptr )
+    {
+        if ( unknown )
+        {
+            IUnknown* pInterface = nullptr;
+            auto hr = unknown.unknown_-&gt;QueryInterface( iid, (void**)&amp;pInterface );
+            if ( FAILED( hr ) )
+            {
+                if ( throwIfNoInterface == false &amp;&amp; hr == E_NOINTERFACE )
+                {
+                    return;
+                }
+                CheckHRESULT( hr );
+            }
+            unknown_ = pInterface;
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// Copy constructor, calls &lt;c&gt;AddRef&lt;/c&gt; on the interface pointer held
+    /// by &lt;c&gt;other&lt;/c&gt;.
+    /// &lt;/summary&gt;
+    /// &lt;param name="other"&gt;
+    /// Const reference to the &lt;c&gt;Unknown&lt;/c&gt; object that will be copied.
+    /// &lt;/param&gt;
+    Unknown( const Unknown&amp; other ) noexcept
+        : unknown_( other.unknown_ )
+    {
+        if ( unknown_ )
+        {
+            unknown_-&gt;AddRef( );
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// Move constructor takes ownership of
+    /// the interface pointer held by &lt;c&gt;other&lt;/c&gt;.
+    /// &lt;/summary&gt;
+    /// &lt;param name="other"&gt;
+    /// The object to transfer the ownership of
+    /// the interface pointer from.
+    /// &lt;/param&gt;
+    Unknown( Unknown&amp;&amp; other ) noexcept
+        : unknown_( other.unknown_ )
+    {
+        if ( unknown_ )
+        {
+            other.unknown_ = nullptr;
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// Destructor, calling &lt;c&gt;Release&lt;/c&gt; on the wrapped interface.
+    /// &lt;/summary&gt;
+    ~Unknown( ) noexcept
+    {
+        IUnknown* tmp = unknown_;
+        unknown_ = nullptr;
+        if ( tmp )
+        {
+            tmp-&gt;Release( );
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// Returns &lt;c&gt;true&lt;/c&gt; if this object references an interface.
+    /// &lt;/summary&gt;
+    constexpr operator bool( ) const noexcept
+    {
+        return unknown_ != nullptr;
+    }
+
+    /// &lt;summary&gt;
+    /// Copy assignment, which does nothing if &lt;c&gt;other&lt;/c&gt;
+    /// holds the same interface pointer as this object; and 
+    /// if not, calls &lt;c&gt;Release&lt;/c&gt; on the currently 
+    /// held interface pointer, then copying the
+    /// interface pointer from &lt;c&gt;other&lt;/c&gt;, calling
+    /// &lt;c&gt;AddRef&lt;/c&gt; on the newly assigned interface pointer.
+    /// &lt;/summary&gt;
+    /// &lt;param name="other"&gt;
+    /// The source of the copy assignment.
+    /// &lt;/param&gt;
+    /// &lt;returns&gt;
+    /// A reference to the object.
+    /// &lt;/returns&gt;
+    Unknown&amp; operator = ( const Unknown&amp; other ) noexcept
+    {
+        if ( unknown_ != other.unknown_ )
+        {
+            if ( unknown_ )
+            {
+                unknown_-&gt;Release( );
+            }
+            unknown_ = other.unknown_;
+            if ( unknown_ )
+            {
+                unknown_-&gt;AddRef( );
+            }
+        }
+        return *this;
+    }
+
+    /// &lt;summary&gt;
+    /// Move assignment exchanges the current interface pointer,
+    /// with the interface pointer held by &lt;c&gt;other&lt;/c&gt;.
+    /// &lt;/summary&gt;
+    /// &lt;param name="other"&gt;
+    /// The source of the move assignment.
+    /// &lt;/param&gt;
+    /// &lt;returns&gt;
+    /// A reference to the object.
+    /// &lt;/returns&gt;
+    Unknown&amp; operator = ( Unknown&amp;&amp; other ) noexcept
+    {
+        std::swap( unknown_, other.unknown_ );
+        return *this;
+    }
+
+    /// &lt;summary&gt;
+    /// Exchanges the current interface pointer,
+    /// with the interface pointer held by &lt;c&gt;other&lt;/c&gt;.
+    /// &lt;/summary&gt;
+    /// &lt;param name="other"&gt;
+    /// The object to exchange interface pointer with.
+    /// &lt;/param&gt;
+    void swap( Unknown&amp; other ) noexcept
+    {
+        std::swap( unknown_, other.unknown_ );
+    }
+
+    /// &lt;summary&gt;
+    /// Exchanges the current interface pointers between two
+    /// &lt;c&gt;Unknown&lt;/c&gt; objects.
+    /// &lt;/summary&gt;
+    /// &lt;param name="first"&gt;
+    /// The first &lt;c&gt;Unknown&lt;/c&gt; object.
+    /// &lt;/param&gt;
+    /// &lt;param name="second"&gt;
+    /// The second &lt;c&gt;Unknown&lt;/c&gt; object.
+    /// &lt;/param&gt;
+    friend void swap( Unknown&amp; first, Unknown&amp; second ) noexcept
+    {
+        first.swap( second );
+    }
+
+    /// &lt;summary&gt;
+    /// Calls &lt;c&gt;Release&lt;/c&gt; on the currently held interface pointer
+    /// if the interface pointer held by &lt;c&gt;other&lt;/c&gt; points
+    /// to a different interface.
+    /// &lt;/summary&gt;
+    /// &lt;param name="other"&gt;
+    /// An optional interface pointer to assign to the current
+    /// object.
+    /// &lt;/param&gt;
+    /// &lt;param name="addRef"&gt;
+    /// if &lt;c&gt;true&lt;/c&gt;, and &lt;c&gt;other&lt;/c&gt; is not &lt;c&gt;nullptr&lt;/c&gt;,
+    /// &lt;c&gt;ResetPtr&lt;/c&gt; will call &lt;c&gt;AddRef&lt;/c&gt; on the newly
+    /// assigned interface pointer.
+    /// &lt;/param&gt;
+    void ResetPtr( IUnknown* other = nullptr, bool addRef = false ) noexcept
+    {
+        if ( unknown_ != other )
+        {
+            if ( unknown_ )
+            {
+                unknown_-&gt;Release( );
+            }
+            unknown_ = other;
+            if ( addRef &amp;&amp; ( unknown_ != nullptr ) )
+            {
+                unknown_-&gt;AddRef( );
+            }
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// Assigning &lt;c&gt;nullptr&lt;/c&gt; to the object, releases the
+    /// currently held interface pointer, and sets the
+    /// interface pointer to &lt;c&gt;nullptr&lt;/c&gt;.
+    /// &lt;/summary&gt;
+    /// &lt;param name=""&gt;
+    /// &lt;c&gt;nullptr&lt;/c&gt;
+    /// &lt;/param&gt;
+    /// &lt;returns&gt;
+    /// A reference to the object.
+    /// &lt;/returns&gt;
+    Unknown&amp; operator = ( nullptr_t )
+    {
+        if ( unknown_ )
+        {
+            auto tmp = unknown_;
+            unknown_ = nullptr;
+            tmp-&gt;Release( );
+        }
+        return *this;
+    }
+
+
+    /// &lt;summary&gt;
+    /// Returns the currently held interface pointer,
+    /// setting the interface pointer of the object to
+    /// &lt;c&gt;nullptr&lt;/c&gt;.
+    /// &lt;/summary&gt;
+    /// &lt;returns&gt;&lt;/returns&gt;
+    IUnknown* Detach( )
+    {
+        auto tmp = unknown_;
+        unknown_ = nullptr;
+        return tmp;
+    }
+
+    /// &lt;summary&gt;
+    /// Creates an instance of the interface 
+    /// wrapper class T, by querying the interface
+    /// pointer for the interface type wrapped by
+    /// T
+    /// &lt;/summary&gt;
+    /// &lt;typeparam name="T"&gt;
+    /// An interface wrapper class derived from Unknown.
+    /// &lt;/typeparam&gt;
+    /// &lt;returns&gt;
+    /// Returns an instance of T, initialized to the interface
+    /// wrapped by T, or &lt;c&gt;nullptr&lt;/c&gt; if the interface is
+    /// not supported.
+    /// &lt;/returns&gt;
+    template&lt;typename T&gt;
+        requires std::is_base_of_v&lt;Unknown, T &gt; 
+    T As( ) const
+    {
+        const Unknown&amp; self = *this;
+        T result( __uuidof(T::InterfaceType), self, false );
+        return result;
+    }
+
+    /// &lt;summary&gt;
+    /// Returns &lt;c&gt;true&lt;/c&gt; if the interface
+    /// can successfully be queried for the interface
+    /// wrapped by T
+    /// &lt;/summary&gt;
+    /// &lt;typeparam name="T"&gt;
+    /// An interface wrapper class derived from Unknown.
+    /// &lt;/typeparam&gt;
+    /// &lt;returns&gt;
+    /// &lt;c&gt;true&lt;/c&gt; if the interface is supported, otherwise &lt;c&gt;false&lt;/c&gt;.
+    /// &lt;/returns&gt;
+    template&lt;typename T&gt;
+        requires std::is_base_of_v&lt;Unknown, T&gt;
+    bool Is( ) const noexcept
+    {
+        if ( unknown_ )
+        {
+            typename T::InterfaceType* pInterface = nullptr;
+            auto hr = unknown_-&gt;QueryInterface( __uuidof( typename T::InterfaceType ), (void**)&amp;pInterface );
+            if ( hr == S_OK )
+            {
+                pInterface-&gt;Release( );
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    /// &lt;summary&gt;
+    /// Creates an instance of the interface 
+    /// smart pointer ComPtr&amp;lt;T&amp;gt; for the interface T, by querying the interface
+    /// pointer for the interface type T
+    /// &lt;/summary&gt;
+    /// &lt;typeparam name="T"&gt;
+    /// An interface type derived from &lt;c&gt;IUnknown&lt;/c&gt;.
+    /// &lt;/typeparam&gt;
+    /// &lt;returns&gt;
+    /// Returns an instance of the interface smart pointer 
+    /// ComPtr&amp;lt;T&amp;gt; for the interface T, or &lt;c&gt;nullptr&lt;/c&gt; if the interface is
+    /// not supported.
+    /// &lt;/returns&gt;
+    template&lt;typename T&gt;
+        requires std::is_base_of_v&lt;IUnknown, T&gt;
+    ComPtr&lt;T&gt; As( ) const
+    {
+        ComPtr&lt;T&gt; result;
+
+        if ( unknown_ )
+        {
+            T* pInterface = nullptr;
+            auto hr = unknown_-&gt;QueryInterface( __uuidof( T ), (void**)&amp;pInterface );
+            if ( hr == S_OK )
+            {
+                result.ResetPtr( pInterface );
+            }
+        }
+        return result;
+    }
+
+    /// &lt;summary&gt;
+    /// This function can be used to detect if
+    /// an object supports a particular COM interface
+    /// derived from IUnknown.
+    /// &lt;/summary&gt;
+    /// &lt;typeparam name="T"&gt;
+    /// The type of the interface you want to retrieve.
+    /// &lt;/typeparam&gt;
+    /// &lt;returns&gt;
+    /// &lt;p&gt;
+    /// returns true if the interface is supported, otherwise false.
+    /// &lt;/p&gt;
+    /// &lt;p&gt;
+    /// If the object does not hold a pointer to a COM
+    /// interface, then this function will always return false.
+    /// &lt;/p&gt;
+    /// &lt;/returns&gt;
+    template&lt;typename T&gt;
+        requires std::is_base_of_v&lt;IUnknown, T&gt;
+    bool Is( ) const noexcept
+    {
+        if ( unknown_ )
+        {
+            T* pInterface = nullptr;
+            auto hr = unknown_-&gt;QueryInterface( __uuidof( T ), (void**)&amp;pInterface );
+            if ( hr == S_OK )
+            {
+                pInterface-&gt;Release( );
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /// &lt;summary&gt;
+    /// Retrieves a pointer to the interface wrapped by
+    /// this object.
+    /// &lt;/summary&gt;
+    /// &lt;typeparam name="T"&gt;&lt;/typeparam&gt;
+    /// &lt;returns&gt;&lt;/returns&gt;
+    template&lt;typename T = IUnknown&gt;
+    T* GetInterfacePointer( ) const noexcept
+    {
+        return reinterpret_cast&lt;T*&gt;( unknown_ );
+    }
+
+    /// &lt;summary&gt;
+    /// Queries a COM object for a pointer to one of its interface; 
+    /// identifying the interface by a reference to its interface identifier (IID). 
+    /// If the COM object implements the interface, then it returns a pointer to 
+    /// that interface after calling IUnknown::AddRef on it.
+    /// &lt;/summary&gt;
+    /// &lt;param name="riid"&gt;IID identifying the requested interface.&lt;/param&gt;
+    /// &lt;param name="itf"&gt;
+    /// The address of a pointer to an interface with 
+    /// the IID specified in the riid parameter. Because you 
+    /// pass the address of an interface pointer, the method 
+    /// can overwrite that address with the pointer to the 
+    /// interface being queried for. Upon successful return, *itf (the 
+    /// dereferenced address) contains a pointer to the requested 
+    /// interface. If the object doesn't support the interface, the 
+    /// function sets *itf (the dereferenced address) to nullptr.
+    /// &lt;/param&gt;
+    /// &lt;returns&gt;
+    /// true if the funtion was able to retrive the requested interface, otherwise false.
+    /// &lt;/returns&gt;
+    bool QueryInterface( REFIID riid, void** itf ) const
+    {
+        auto hr = unknown_-&gt;QueryInterface( riid, itf );
+        if ( hr == S_OK )
+        {
+            return true;
+        }
+        else
+        {
+            if ( hr != E_NOINTERFACE )
+            {
+                CheckHRESULT( hr, unknown_ );
+            }
+            return false;
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// Queries the interface for an interface pointer of type T
+    /// &lt;/summary&gt;
+    /// &lt;typeparam name="T"&gt;
+    /// An interface type derived from &lt;c&gt;IUnknown&lt;/c&gt;.
+    /// &lt;/typeparam&gt;
+    /// &lt;param name="itf"&gt;
+    /// A pointer to an interface pointer that will
+    /// be assigned the requested interface pointer if
+    /// supported by the object.
+    /// &lt;/param&gt;
+    /// &lt;returns&gt;
+    /// &lt;c&gt;true&lt;/c&gt; if the query succeeded, otherwise &lt;c&gt;false&lt;/c&gt;.
+    /// &lt;/returns&gt;
+    template&lt;typename T&gt;
+        requires std::is_base_of_v&lt;IUnknown, T&gt;
+    bool QueryInterface( T** itf ) const
+    {
+        return QueryInterface( __uuidof( T ), reinterpret_cast&lt; void** &gt;( itf ) );
+    }
+
+
+        
+    /// &lt;summary&gt;
+    /// Returns &lt;c&gt;true&lt;/c&gt; if the interface pointer held by this
+    /// object is the same as the interface pointer held by the &lt;c&gt;other&lt;/c&gt;
+    /// object.
+    /// &lt;/summary&gt;
+    /// &lt;param name="other"&gt;
+    /// the &lt;c&gt;other&lt;/c&gt; object.
+    /// &lt;/param&gt;
+    /// &lt;returns&gt;
+    /// &lt;c&gt;true&lt;/c&gt; if equal, otherwise &lt;c&gt;false&lt;/c&gt;.
+    /// &lt;/returns&gt;
+    constexpr bool operator == ( const Unknown&amp; other ) const noexcept
+    {
+        return unknown_ == other.unknown_;
+    }
+    /// &lt;summary&gt;
+    /// Returns &lt;c&gt;true&lt;/c&gt; if the interface pointer held by this
+    /// object is not the same as the interface pointer held by the &lt;c&gt;other&lt;/c&gt;
+    /// object.
+    /// &lt;/summary&gt;
+    /// &lt;param name="other"&gt;
+    /// the &lt;c&gt;other&lt;/c&gt; object.
+    /// &lt;/param&gt;
+    /// &lt;returns&gt;
+    /// &lt;c&gt;true&lt;/c&gt; if not equal, otherwise &lt;c&gt;false&lt;/c&gt;.
+    /// &lt;/returns&gt;
+    constexpr bool operator != ( const Unknown&amp; other ) const noexcept
+    {
+        return unknown_ != other.unknown_;
+    }
+
+    /// &lt;summary&gt;
+    /// Returns &lt;c&gt;true&lt;/c&gt; if the interface pointer held by this
+    /// object is the same as the interface pointer held by &lt;c&gt;other&lt;/c&gt;.
+    /// &lt;/summary&gt;
+    /// &lt;param name="other"&gt;
+    /// the &lt;c&gt;other&lt;/c&gt; interface pointer.
+    /// &lt;/param&gt;
+    /// &lt;returns&gt;
+    /// &lt;c&gt;true&lt;/c&gt; if equal, otherwise &lt;c&gt;false&lt;/c&gt;.
+    /// &lt;/returns&gt;
+    constexpr bool operator == ( const IUnknown* other ) const noexcept
+    {
+        return unknown_ == other;
+    }
+
+    /// &lt;summary&gt;
+    /// Returns &lt;c&gt;true&lt;/c&gt; if the interface pointer held by this
+    /// object is not the same as the interface pointer held by &lt;c&gt;other&lt;/c&gt;.
+    /// &lt;/summary&gt;
+    /// &lt;param name="other"&gt;
+    /// the &lt;c&gt;other&lt;/c&gt; interface pointer.
+    /// &lt;/param&gt;
+    /// &lt;returns&gt;
+    /// &lt;c&gt;true&lt;/c&gt; if not equal, otherwise &lt;c&gt;false&lt;/c&gt;.
+    /// &lt;/returns&gt;
+    constexpr bool operator != ( const IUnknown* other ) const noexcept
+    {
+        return unknown_ != other;
+    }
+
+    /// &lt;summary&gt;
+    /// Creates and default-initializes a single object of the class associated with a specified CLSID.
+    /// &lt;/summary&gt;
+    /// &lt;typeparam name="T"&gt;
+    /// The type of the wrapper class derived from Unknown.
+    /// &lt;/typeparam&gt;
+    /// &lt;param name="clsid"&gt;
+    /// The CLSID associated with the data and code that will be used to create the object.
+    /// &lt;/param&gt;
+    /// &lt;param name="classContext"&gt;
+    /// Context in which the code that manages the newly created object will run. 
+    /// &lt;/param&gt;
+    /// &lt;returns&gt;
+    /// An initialized instance of T
+    /// &lt;/returns&gt;
+    template&lt;typename T&gt;
+        requires std::is_base_of_v&lt;Unknown, T&gt;
+    static T CoCreateInstanceFromClassId( const CLSID&amp; clsid, DWORD classContext = CLSCTX_INPROC_SERVER )
+    {
+        typename T::InterfaceType* result = nullptr;
+        auto hr = CoCreateInstance( clsid, NULL, classContext, __uuidof( typename T::InterfaceType ), (void**)&amp;result );
+        CheckHRESULT( hr );
+        return T( result );
+    }
+
+    template&lt;typename T&gt;
+        requires std::is_base_of_v&lt;Unknown, T&gt;
+    static T CoCreateInstanceFromClassId( const wchar_t* clsid, DWORD classContext = CLSCTX_INPROC_SERVER )
+    {
+        CLSID CLSID_ = { 0, };
+        auto hr = CLSIDFromString( clsid, &amp;CLSID_ );
+        CheckHRESULT( hr );
+        typename T::InterfaceType* result = nullptr;
+        hr = CoCreateInstance( CLSID_, NULL, classContext, __uuidof( typename T::InterfaceType ), (void**)&amp;result );
+        CheckHRESULT( hr );
+        return T( result );
+    }
+    template&lt;typename T&gt;
+        requires std::is_base_of_v&lt;Unknown, T&gt;
+    static T CoCreateInstanceFromClassId( const WideString&amp; clsid, DWORD classContext = CLSCTX_INPROC_SERVER )
+    {
+        return CoCreateInstanceFromClassId( clsid.c_str( ), classContext );
+    }
+
+    template&lt;typename T&gt;
+        requires std::is_base_of_v&lt;Unknown, T&gt;
+    static T CoCreateInstanceFromProgId( const wchar_t* progId, DWORD classContext = CLSCTX_INPROC_SERVER )
+    {
+        CLSID CLSID_ = { 0, };
+        auto hr = CLSIDFromProgIDEx( progId, &amp;CLSID_ );
+        CheckHRESULT( hr );
+        typename T::InterfaceType* result = nullptr;
+        hr = CoCreateInstance( CLSID_, NULL, classContext, __uuidof( typename T::InterfaceType ), (void**)&amp;result );
+        CheckHRESULT( hr );
+        return T( result );
+    }
+    template&lt;typename T&gt;
+        requires std::is_base_of_v&lt;Unknown, T&gt;
+    static T CoCreateInstanceFromProgId( const WideString&amp; progId, DWORD classContext = CLSCTX_INPROC_SERVER )
+    {
+        return CoCreateInstanceFromProgId( progId, classContext );
+    }
+
+    template&lt;typename T&gt;
+        requires std::is_base_of_v&lt;Unknown, T&gt;
+    static T CoCreateInstanceFromDll( const ModuleHandle&amp; dll, const CLSID&amp; clsid );
+
+
+};
+</code></pre></div></div>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Harlinn</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Harlinn</li><li><a class="u-email" href="mailto:espen@harlinn.no">espen@harlinn.no</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Harlinn"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Harlinn</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is my personal Github site, </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
