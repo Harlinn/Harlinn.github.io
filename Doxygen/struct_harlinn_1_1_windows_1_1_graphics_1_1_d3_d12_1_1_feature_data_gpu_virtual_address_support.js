@@ -1,5 +1,6 @@
 var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_gpu_virtual_address_support =
 [
-    [ "MaxGPUVirtualAddressBitsPerProcess", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_gpu_virtual_address_support.html#a2303dda0743f41f236c0d38f1197ece3", null ],
-    [ "MaxGPUVirtualAddressBitsPerResource", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_gpu_virtual_address_support.html#a950d2796cbc35cb3957ca722cf30137f", null ]
+    [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_gpu_virtual_address_support.html#ad161fb08e437fa75576a5b65413446e3", null ],
+    [ "MaxGPUVirtualAddressBitsPerProcess", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_gpu_virtual_address_support.html#a2486f889c913fa428ab7b1c35567728d", null ],
+    [ "MaxGPUVirtualAddressBitsPerResource", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_gpu_virtual_address_support.html#ac01214e925f51a17dbb71b1212b28467", null ]
 ];

@@ -1,6 +1,7 @@
 var class_harlinn_1_1_windows_1_1_media_1_1_m_f_d_x_g_i_device_manager =
 [
     [ "CloseDeviceHandle", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_d_x_g_i_device_manager.html#ac61dbdad3db326780131b09480ca4770", null ],
+    [ "Create", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_d_x_g_i_device_manager.html#ac264048df053b3674360ea07f748a635", null ],
     [ "GetVideoService", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_d_x_g_i_device_manager.html#a1032c210d05fd2cea4530e74ddec4aaf", null ],
     [ "LockDevice", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_d_x_g_i_device_manager.html#a85a20b3892bae05f44bfb8537713ce50", null ],
     [ "OpenDeviceHandle", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_d_x_g_i_device_manager.html#a911941df87f7e96553a191ad91334ed5", null ],

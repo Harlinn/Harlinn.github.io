@@ -1,6 +1,7 @@
 var namespace_harlinn_1_1_windows =
 [
     [ "DirectShow", "namespace_harlinn_1_1_windows_1_1_direct_show.html", "namespace_harlinn_1_1_windows_1_1_direct_show" ],
+    [ "DML", "namespace_harlinn_1_1_windows_1_1_d_m_l.html", "namespace_harlinn_1_1_windows_1_1_d_m_l" ],
     [ "DocumentTarget", "namespace_harlinn_1_1_windows_1_1_document_target.html", "namespace_harlinn_1_1_windows_1_1_document_target" ],
     [ "Environment", "namespace_harlinn_1_1_windows_1_1_environment.html", "namespace_harlinn_1_1_windows_1_1_environment" ],
     [ "Fonts", "namespace_harlinn_1_1_windows_1_1_fonts.html", "namespace_harlinn_1_1_windows_1_1_fonts" ],
@@ -45,9 +46,6 @@ var namespace_harlinn_1_1_windows =
     [ "DXContext", "class_harlinn_1_1_windows_1_1_d_x_context.html", "class_harlinn_1_1_windows_1_1_d_x_context" ],
     [ "DXForm", "class_harlinn_1_1_windows_1_1_d_x_form.html", "class_harlinn_1_1_windows_1_1_d_x_form" ],
     [ "DXMessageLoop", "class_harlinn_1_1_windows_1_1_d_x_message_loop.html", "class_harlinn_1_1_windows_1_1_d_x_message_loop" ],
-    [ "DXPipelineState", "class_harlinn_1_1_windows_1_1_d_x_pipeline_state.html", "class_harlinn_1_1_windows_1_1_d_x_pipeline_state" ],
-    [ "DXRootParameter", "class_harlinn_1_1_windows_1_1_d_x_root_parameter.html", null ],
-    [ "DXRootSignature", "class_harlinn_1_1_windows_1_1_d_x_root_signature.html", null ],
     [ "EditBase", "class_harlinn_1_1_windows_1_1_edit_base.html", "class_harlinn_1_1_windows_1_1_edit_base" ],
     [ "FileDialog", "class_harlinn_1_1_windows_1_1_file_dialog.html", "class_harlinn_1_1_windows_1_1_file_dialog" ],
     [ "FileDialogEvents", "class_harlinn_1_1_windows_1_1_file_dialog_events.html", "class_harlinn_1_1_windows_1_1_file_dialog_events" ],

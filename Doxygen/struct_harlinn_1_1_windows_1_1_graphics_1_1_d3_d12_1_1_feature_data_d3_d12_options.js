@@ -1,10 +1,11 @@
 var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options =
 [
+    [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a289a087776732dc23e8ba87770efc523", null ],
     [ "ConservativeRasterizationTier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a8a551ff9a4122c58773c18a0710c8344", null ],
     [ "CrossAdapterRowMajorTextureSupported", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a17b45c8f132b27e809a29aa0a13c7358", null ],
     [ "CrossNodeSharingTier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#afac66a6f146494442a0621f374338722", null ],
     [ "DoublePrecisionFloatShaderOps", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a9a266703085a7c4df9a2874cd6346ff7", null ],
-    [ "MaxGPUVirtualAddressBitsPerResource", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a47dc953787d0177b14ba23ddc1834771", null ],
+    [ "MaxGPUVirtualAddressBitsPerResource", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a4e1cc523d46af38da501e01542ae04c8", null ],
     [ "MinPrecisionSupport", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a0087d8b0d2bd896e6f78bd902392deb1", null ],
     [ "OutputMergerLogicOp", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#a8f043e48e9da1e61f5d69f1b92d1196b", null ],
     [ "PSSpecifiedStencilRefSupported", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_d3_d12_options.html#ae1e3c85446a6d6c4361aeacffef7c1fe", null ],

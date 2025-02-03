@@ -1,7 +1,8 @@
 var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_desc =
 [
-    [ "_Field_size_full_", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_desc.html#a0f88984e3d0e9c3f7d2c5b9b49ec133c", null ],
-    [ "NumEntries", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_desc.html#a07f73431d765de81762dde2103a0c523", null ],
-    [ "NumStrides", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_desc.html#ab00474899525475d87645c226a85f988", null ],
-    [ "RasterizedStream", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_desc.html#a4b1db8157f451668bbf8d1543e9d3abc", null ]
+    [ "_Field_size_full_", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_desc.html#a5608cf62b293b769a1624ad5143cd60d", null ],
+    [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_desc.html#a5e441adc74415d55837c1e37c15072aa", null ],
+    [ "NumEntries", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_desc.html#a01af0e3053c0c2e021e597817c844140", null ],
+    [ "NumStrides", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_desc.html#a2075e653fb604a170ff4ec50fff8639e", null ],
+    [ "RasterizedStream", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_desc.html#abb335bd1ae3b763b7a2e79db2f32389a", null ]
 ];

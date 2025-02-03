@@ -98,7 +98,8 @@ $(function(){initNavTree('namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11.
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Harlinn::Windows::Graphics::D3D11 Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -312,7 +313,74 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_view.html">View</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A view object specifies the parts of a resource the pipeline can access during rendering.  <a href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_view.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a85d0a50ebdd61b763cb1f4def15f396d" id="r_a85d0a50ebdd61b763cb1f4def15f396d"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>  = Device&gt; <br />
+requires std::is_base_of_v&lt;<a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_device.html">Device</a>,<a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&gt;</td></tr>
+<tr class="memitem:a85d0a50ebdd61b763cb1f4def15f396d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a85d0a50ebdd61b763cb1f4def15f396d">CreateDevice</a> (_In_opt_ IDXGIAdapter *adapter, D3D_DRIVER_TYPE driverType, UINT flags, _In_reads_opt_(numberOfFeatureLevels) CONST D3D_FEATURE_LEVEL *featureLevels, UINT numberOfFeatureLevels, _COM_Outptr_opt_ ID3D11DeviceContext **immediateContext=nullptr, _Out_opt_ D3D_FEATURE_LEVEL *selectedFeatureLevel=nullptr, HMODULE software=nullptr, UINT sdkVersion=D3D11_SDK_VERSION)</td></tr>
+<tr class="separator:a85d0a50ebdd61b763cb1f4def15f396d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a85d0a50ebdd61b763cb1f4def15f396d" name="a85d0a50ebdd61b763cb1f4def15f396d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85d0a50ebdd61b763cb1f4def15f396d">&#9670;&#160;</a></span>CreateDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>  = Device&gt; <br />
+requires std::is_base_of_v&lt;<a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_device.html">Device</a>,<a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&gt;</div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> Harlinn::Windows::Graphics::D3D11::CreateDevice </td>
+          <td>(</td>
+          <td class="paramtype">_In_opt_ IDXGIAdapter *</td>          <td class="paramname"><span class="paramname"><em>adapter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D3D_DRIVER_TYPE</td>          <td class="paramname"><span class="paramname"><em>driverType</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_reads_opt_(numberOfFeatureLevels) CONST D3D_FEATURE_LEVEL *</td>          <td class="paramname"><span class="paramname"><em>featureLevels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT</td>          <td class="paramname"><span class="paramname"><em>numberOfFeatureLevels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_COM_Outptr_opt_ ID3D11DeviceContext **</td>          <td class="paramname"><span class="paramname"><em>immediateContext</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Out_opt_ D3D_FEATURE_LEVEL *</td>          <td class="paramname"><span class="paramname"><em>selectedFeatureLevel</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HMODULE</td>          <td class="paramname"><span class="paramname"><em>software</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT</td>          <td class="paramname"><span class="paramname"><em>sdkVersion</em></span><span class="paramdefsep"> = </span><span class="paramdefval">D3D11_SDK_VERSION</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

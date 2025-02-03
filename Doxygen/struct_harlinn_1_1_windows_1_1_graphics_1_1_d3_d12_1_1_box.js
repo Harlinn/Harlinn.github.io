@@ -1,5 +1,6 @@
 var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_box =
 [
+    [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_box.html#afa1479d7cdc818e7dfec184316d92da5", null ],
     [ "Back", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_box.html#a5e1cb21b4e8237f81488a92345f6fafb", null ],
     [ "Bottom", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_box.html#a2538a91aa460fb20f4e088d0a91975a9", null ],
     [ "Front", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_box.html#a07923ff9ce0b2618820d5a47cdac1681", null ],

@@ -1,0 +1,5 @@
+var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_postbuild_info_compacted_size_desc =
+[
+    [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_postbuild_info_compacted_size_desc.html#ac91842c76741759e6926fed269c47d72", null ],
+    [ "CompactedSizeInBytes", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_postbuild_info_compacted_size_desc.html#afc7348e00c727e3b766d645a3a5ba7ab", null ]
+];

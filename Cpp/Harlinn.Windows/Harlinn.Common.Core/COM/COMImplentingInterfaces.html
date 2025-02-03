@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Implementing COM objects and interfaces in C++ | Harlinn</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Implementing COM objects and interfaces in C++" />
+<meta name="author" content="Espen Harlinn" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is my personal site." />
+<meta property="og:description" content="This is my personal site." />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/COM/COMImplentingInterfaces.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/COM/COMImplentingInterfaces.html" />
+<meta property="og:site_name" content="Harlinn" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Implementing COM objects and interfaces in C++" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal site.","headline":"Implementing COM objects and interfaces in C++","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.Common.Core/COM/COMImplentingInterfaces.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="importmap">
+        {
+            "imports":
+            {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.171.0/build/three.module.min.js" ,
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.171.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body><header class="site-header" role="banner">
+    <div id="animatedHeader" height="120px" width="100%">
+        <script type="x-shader/x-vertex" id="vertexshader">
+            attribute float scale;
+            void main() {
+                vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+                gl_PointSize = scale * ( 100.0 / - mvPosition.z );
+                gl_Position = projectionMatrix * mvPosition;
+            }
+
+        </script>
+
+        <script type="x-shader/x-fragment" id="fragmentshader">
+            uniform vec3 color;
+            void main() {
+                if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 )  discard;
+                gl_FragColor = vec4( color, 0.8 );
+            }
+        </script>
+
+        <script type="module">
+
+			import * as THREE from 'three';
+
+			const SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
+
+			let container; 
+			let camera, scene, renderer;
+
+			let particles, count = 0;
+
+			let mouseX = 0, mouseY = 0;
+
+			let animatedHeaderHeight = 120;
+
+            let windowHalfX = window.innerWidth / 2;
+            let windowHalfY = animatedHeaderHeight/2.0;
+
+			init();
+
+			function init() {
+
+                container = document.querySelector('#animatedHeader');
+
+                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.z = 1000;
+
+				scene = new THREE.Scene();
+
+				//
+
+				const numParticles = AMOUNTX * AMOUNTY;
+
+				const positions = new Float32Array( numParticles * 3 );
+				const scales = new Float32Array( numParticles );
+
+				let i = 0, j = 0;
+
+				for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
+
+					for ( let iy = 0; iy < AMOUNTY; iy ++ ) {
+
+						positions[ i ] = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 ); // x
+						positions[ i + 1 ] = 0; // y
+						positions[ i + 2 ] = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 ); // z
+
+						scales[ j ] = 1;
+
+						i += 3;
+						j ++;
+
+					}
+
+				}
+
+				const geometry = new THREE.BufferGeometry();
+				geometry.setAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
+				geometry.setAttribute( 'scale', new THREE.BufferAttribute( scales, 1 ) );
+
+				const material = new THREE.ShaderMaterial( {
+
+					uniforms: {
+						color: { value: new THREE.Color( 0xffffff ) },
+					},
+					vertexShader: document.getElementById( 'vertexshader' ).textContent,
+					fragmentShader: document.getElementById( 'fragmentshader' ).textContent
+
+				} );
+
+				//
+
+				particles = new THREE.Points( geometry, material );
+				scene.add( particles );
+
+				//
+
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+                renderer.setSize(window.innerWidth, animatedHeaderHeight );
+				renderer.setAnimationLoop( animate );
+				container.appendChild( renderer.domElement );
+
+				container.style.touchAction = 'none';
+				container.addEventListener( 'pointermove', onPointerMove );
+
+				//
+
+                window.addEventListener( 'resize', onWindowResize );
+
+			}
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+
+				camera.aspect = window.innerWidth / animatedHeaderHeight; 
+				camera.updateProjectionMatrix();
+
+				renderer.setSize(window.innerWidth, animatedHeaderHeight);
+
+			}
+
+			//
+
+			function onPointerMove( event ) {
+
+				if ( event.isPrimary === false ) return;
+
+				mouseX = event.clientX - windowHalfX;
+				mouseY = event.clientY - windowHalfY;
+
+			}
+
+			//
+
+			function animate() {
+				render();
+
+			}
+
+			function render() {
+
+				camera.position.x += ( mouseX - camera.position.x ) * .05;
+				camera.position.y += ( - mouseY - camera.position.y ) * .05;
+				camera.lookAt( scene.position );
+
+				const positions = particles.geometry.attributes.position.array;
+				const scales = particles.geometry.attributes.scale.array;
+
+				let i = 0, j = 0;
+
+				for ( let ix = 0; ix < AMOUNTX; ix ++ ) {
+
+					for ( let iy = 0; iy < AMOUNTY; iy ++ ) {
+
+						positions[ i + 1 ] = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) +
+										( Math.sin( ( iy + count ) * 0.5 ) * 50 );
+
+						scales[ j ] = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 20 +
+										( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 20;
+
+						i += 3;
+						j ++;
+
+					}
+
+				}
+
+				particles.geometry.attributes.position.needsUpdate = true;
+				particles.geometry.attributes.scale.needsUpdate = true;
+
+				renderer.render( scene, camera );
+
+				count += 0.1;
+
+			}
+
+        </script>
+
+    </div>
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Harlinn</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Cpp/Cpp.html">C++</a><a class="page-link" href="/Databases/Databases.html">Databases</a><a class="page-link" href="/DotNet/DotNet.html">.Net</a><a class="page-link" href="/Java/Java.html">Java</a><a class="page-link" href="/Julia/Julia.html">Julia</a><a class="page-link" href="/Python/Python.html">Python</a><a class="page-link" href="/R/R.html">R</a><a class="page-link" href="/Rust/Rust.html">Rust</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Implementing COM objects and interfaces in C++</h1>
+  </header>
+
+  <div class="post-content">
+    <p>Implementing COM interfaces is an essential skill. This article shows how 
+to implement the <a href="https://learn.microsoft.com/en-us/windows/win32/api/mfmediaengine/nn-mfmediaengine-imfmediaenginenotify"><code class="language-plaintext highlighter-rouge">IMFMediaEngineNotify</code></a> interface, 
+the callback interface for the <a href="https://learn.microsoft.com/en-us/windows/win32/api/mfmediaengine/nn-mfmediaengine-imfmediaengine"><code class="language-plaintext highlighter-rouge">IMFMediaEngine</code></a> interface.</p>
+
+<p>Implementing an interface is, fortunately, quite easy, and the <code class="language-plaintext highlighter-rouge">IMFMediaEngineNotify</code> 
+interface have just a single function, <code class="language-plaintext highlighter-rouge">EventNotify</code>:</p>
+<pre><code class="language-C++">struct IMFMediaEngineNotify : public IUnknown
+{
+public:
+    virtual HRESULT __stdcall EventNotify(  _In_  DWORD event, 
+                                            _In_  DWORD_PTR param1, 
+                                            _In_  DWORD param2) = 0;
+};
+</code></pre>
+<p>The library requires a specialization of the <code class="language-plaintext highlighter-rouge">Interface</code> struct
+inside the <code class="language-plaintext highlighter-rouge">Harlinn::Common::Core::Com::Interfaces</code> namespace.</p>
+
+<p>The <a href="/Cpp/Harlinn.Windows/Harlinn.Common.Core/Harlinn.Common.Core.html"><code class="language-plaintext highlighter-rouge">Harlinn.Common.Core</code></a> library provides specializations for 
+each interface with an entry in <a href="https://github.com/Harlinn/Harlinn.Windows/blob/master/Harlinn.Common.Core/HCCComInterfaces.xm">HCCComInterfaces.xm</a>,
+and if it is, then it will be an error to create an additional specialization.</p>
+
+<p>This <code class="language-plaintext highlighter-rouge">Interface</code> specialization is used to implement <a href="https://learn.microsoft.com/en-us/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)"><code class="language-plaintext highlighter-rouge">IUnknown::QueryInterface</code></a>
+for the instantiated COM object.</p>
+
+<p>Interfaces without a specialization matches:</p>
+
+<pre><code class="language-C++">template&lt;typename ...InterfaceTypes&gt;
+struct Interface : std::false_type
+{ };
+</code></pre>
+<p>The library already provides a specialization of <code class="language-plaintext highlighter-rouge">Interface</code> for <code class="language-plaintext highlighter-rouge">IMFMediaEngineNotify</code>, but
+if it did not, we would use the <code class="language-plaintext highlighter-rouge">HCC_COM_IMPLEMENT_INTERFACE_SPECIALIZATION( Itf, BaseItf )</code> macro to 
+implement the specialization. <code class="language-plaintext highlighter-rouge">Itf</code> is the interface we are specializing for,
+and <code class="language-plaintext highlighter-rouge">BaseItf</code> is the immediate base interface of the interface assigned to the <code class="language-plaintext highlighter-rouge">Itf</code> argument, in this case <code class="language-plaintext highlighter-rouge">IUnknown</code>:</p>
+
+<pre><code class="language-C++">#include &lt;HCCComImpl.h&gt;
+
+namespace Harlinn::Common::Core::Com::Interfaces
+{
+    HCC_COM_IMPLEMENT_INTERFACE_SPECIALIZATION(IMFMediaEngineNotify,IUnknown)
+}
+</code></pre>
+<p>To implement the <code class="language-plaintext highlighter-rouge">IMFMediaEngineNotify</code>, we start out by deriving our
+implementation from the <code class="language-plaintext highlighter-rouge">Harlinn::Common::Core::Com::ObjectBase</code> template
+class:</p>
+
+<pre><code class="language-C++">template&lt;typename DerivedT&gt;
+class MediaEngineNotifyImpl 
+    : public Com::ObjectBase&lt;DerivedT,IMFMediaEngineNotify&gt;
+{
+    IMFNotify* callback_ = nullptr;
+public:
+    MediaEngineNotifyImpl( IMFNotify* callback ) noexcept
+        : callback_( callback )
+    { }
+
+    HRESULT __stdcall EventNotify( DWORD meEvent, 
+                                    DWORD_PTR param1, 
+                                    DWORD param2)
+    {
+        HRESULT result = S_OK;
+        try
+        {
+            callback_-&gt;OnMediaEngineEvent( meEvent, param1, param2 );
+        }
+        catch ( ... )
+        {
+            result = E_UNEXPECTED;
+        }
+        if ( meEvent == MF_MEDIA_ENGINE_EVENT_NOTIFYSTABLESTATE )
+        {
+            SetEvent( reinterpret_cast&lt; HANDLE &gt;( param1 ) );
+        }
+        return result;
+    }
+};
+</code></pre>
+
+<p>This creates a new template class, with an implementation of <code class="language-plaintext highlighter-rouge">EventNotify</code>, and nothing else.</p>
+
+<p>The library provides two templates, implementing the functions inherited from the
+<code class="language-plaintext highlighter-rouge">IUnknown</code> interface:</p>
+
+<ol>
+  <li>Com::HeapObject - used to create COM objects allocated on the heap, with lifetime managed by their reference count.</li>
+  <li>Com::StackObject - used to create COM objects allocated on the stack, with lifetime limited by their scope.</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">Com::StackObject</code> avoids dynamic allocation, but can only be used when we are sure the COM object is not expected
+to exist beyond the scope of the object.</p>
+
+<p><code class="language-plaintext highlighter-rouge">ObjectBase</code> uses the <a href="https://en.cppreference.com/w/cpp/language/crtp">Curiously Recurring Template Pattern</a> where 
+the type of the instantiated class implementing <code class="language-plaintext highlighter-rouge">IUnknown</code> is provided as the first
+template parameter, forming a complete COM object implementation:</p>
+
+<pre><code class="language-C++">class MediaEngineNotify 
+    : public Com::HeapObject&lt;MediaEngineNotifyImpl&lt;MediaEngineNotify&gt;&gt;
+{
+public:
+    using Base = Com::HeapObject&lt;MediaEngineNotifyImpl&lt;MediaEngineNotify&gt;&gt;;
+    MediaEngineNotify( IMFNotify* callback ) noexcept
+        : Base( callback )
+    { }
+};
+</code></pre>
+<p>Note that <code class="language-plaintext highlighter-rouge">Com::HeapObject</code> forwards the parameters passed to the constructor to
+the constructor for the <code class="language-plaintext highlighter-rouge">MediaEngineNotifyImpl</code> template, which is great for
+initialization, perhaps obvious, but still missing from other COM
+implementation libraries.</p>
+
+<p>The above provides a complete COM object implementation in C++, 
+used to implement callbacks from the Microsoft Media Foundation
+MediaEngine to the app hosting the MediaEngine:</p>
+
+<pre><code class="language-C++">Media::MFMediaEngineNotify mediaEngineNotify( new MediaEngineNotify( this ) );
+
+auto attributes = Media::MFAttributes::Create( 3 );
+attributes.SetUnknown( MF_MEDIA_ENGINE_DXGI_MANAGER, dxgiManager );
+attributes.SetUnknown( MF_MEDIA_ENGINE_CALLBACK, mediaEngineNotify );
+</code></pre>
+<p>Many of the Windows COM, or nano-COM, based APIs expects you to implement interfaces
+to facilitate notifications from the API to your app, and the Harlinn.Common.Core and
+Harlinn.Windows libraries provides one of the easiest ways to implement COM, or nano-COM,
+interfaces for your app.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Harlinn</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Harlinn</li><li><a class="u-email" href="mailto:espen@harlinn.no">espen@harlinn.no</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Harlinn"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Harlinn</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is my personal site. </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

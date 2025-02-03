@@ -11,7 +11,9 @@ var searchData=
   ['heapserializationtier_8',['HeapSerializationTier',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a6d34fb05a5a5572aeaada30feb085b83',1,'Harlinn::Windows::Graphics::D3D12']]],
   ['heaptype_9',['HeapType',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fa9e14b9c82f3bd18e9739f20aa0ee5',1,'Harlinn::Windows::Graphics::D3D12']]],
   ['highcontrastflags_10',['HighContrastFlags',['../namespace_harlinn_1_1_windows.html#a10e58f007f4ac0e209c1cf737c38f9b0',1,'Harlinn::Windows']]],
-  ['horizontalalignment_11',['HorizontalAlignment',['../namespace_harlinn_1_1_windows.html#a8c545689ca48ce212416ea5694857af8',1,'Harlinn::Windows']]],
-  ['httpconnectionstate_12',['HttpConnectionState',['../namespace_harlinn_1_1_common_1_1_core_1_1_http_1_1_server.html#a212307b9a5639bf848ca357798591f1e',1,'Harlinn::Common::Core::Http::Server']]],
-  ['httprequeststate_13',['HttpRequestState',['../namespace_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal.html#ab723cb1211b268cddecffae8b69b576f',1,'Harlinn::Common::Core::Http::Server::Internal']]]
+  ['hitgrouptype_11',['HitGroupType',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#aa702ba4c581c655cadf7411b20d43e87',1,'Harlinn::Windows::Graphics::D3D12']]],
+  ['hitjind_12',['HitJind',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a5c40b71b4bb792b8e705b6e9a2065993',1,'Harlinn::Windows::Graphics::D3D12']]],
+  ['horizontalalignment_13',['HorizontalAlignment',['../namespace_harlinn_1_1_windows.html#a8c545689ca48ce212416ea5694857af8',1,'Harlinn::Windows']]],
+  ['httpconnectionstate_14',['HttpConnectionState',['../namespace_harlinn_1_1_common_1_1_core_1_1_http_1_1_server.html#a212307b9a5639bf848ca357798591f1e',1,'Harlinn::Common::Core::Http::Server']]],
+  ['httprequeststate_15',['HttpRequestState',['../namespace_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal.html#ab723cb1211b268cddecffae8b69b576f',1,'Harlinn::Common::Core::Http::Server::Internal']]]
 ];

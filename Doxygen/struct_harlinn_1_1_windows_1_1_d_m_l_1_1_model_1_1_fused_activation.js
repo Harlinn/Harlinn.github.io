@@ -1,0 +1,25 @@
+var struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation =
+[
+    [ "FusedActivation", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#aa1774ef1dae797629f9a93448ba16915", null ],
+    [ "FusedActivation", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#adb8a0fed789036763d76898fade0e795", null ],
+    [ "CeLU", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#a154f7079b88c08275a4866223be9267f", null ],
+    [ "ELU", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#a07e4a5c6ece8bca0f7ef0812cee783f8", null ],
+    [ "HardSigmoid", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#aca889b5ccd6427f74c30ce58f5cc58aa", null ],
+    [ "Identity", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#a5735132664fca3e6c1166c3d338a8d30", null ],
+    [ "LeakyReLU", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#adf4c920e74c95b99be0e1e19cc0571f9", null ],
+    [ "Linear", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#a156bf450414e6fa9b1d6d45e93f5adb7", null ],
+    [ "None", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#af0b1b802bd359b470d9bf5fd877c805b", null ],
+    [ "ParametricSoftPlus", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#a2e124360c8d630cb90925c77b3bf613e", null ],
+    [ "ReLU", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#a6093e27cb93e2aad169d9bde4e7a27ff", null ],
+    [ "ScaledELU", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#ada9bc25bf7f6e23c44652e08b90ed420", null ],
+    [ "ScaledTanH", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#a51f8a9388372ebbfcdd3c15b5678d49e", null ],
+    [ "Shrink", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#aee5b7874c571217855fd1499d46e01e6", null ],
+    [ "Sigmoid", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#aa43720f8aa183bd6e713c76f5bb60a9e", null ],
+    [ "SoftPlus", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#a4dd1344ec33ba1988e81b65f81810ac7", null ],
+    [ "SoftSign", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#a860538e653f7a5a2fca2042b4d3bc28b", null ],
+    [ "TanH", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#a52238f914cf2e8338ed11447514e7040", null ],
+    [ "ThresholdedReLU", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#af8cb84790b0f3c4ecdd29cb24ec6caa0", null ],
+    [ "activation", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#aab76f29bedf540e33f6f8048b62317ab", null ],
+    [ "param1", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#a7c6020678e7850a844094eb269915c01", null ],
+    [ "param2", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html#ab36580394ae0d3572066a42f50557188", null ]
+];

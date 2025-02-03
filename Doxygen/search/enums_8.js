@@ -8,12 +8,14 @@ var searchData=
   ['indexbufferstripcutvalue_5',['IndexBufferStripCutValue',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a80d470c0e004aedb6f8bdca7fbddb625',1,'Harlinn::Windows::Graphics::D3D12']]],
   ['indexflags_6',['IndexFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a1e19cf95aa68737df6f277b761b64a2f',1,'Harlinn::Common::Core::Ese']]],
   ['indexrangeflags_7',['IndexRangeFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a3f86d87dc2cb4b9b66b091483777de12',1,'Harlinn::Common::Core::Ese']]],
-  ['initflags_8',['InitFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a754da1620e6f94aa852e6ae047db7e59',1,'Harlinn::Common::Core::Ese']]],
-  ['initializeflags_9',['InitializeFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_http.html#a556958436712aec99c602dd2d386b1b8',1,'Harlinn::Common::Core::Http']]],
-  ['initializesecuritycontextflags_10',['InitializeSecurityContextFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_security.html#a3609bcca569e22bd81495156b0e88201',1,'Harlinn::Common::Core::Security']]],
-  ['initializesecuritycontextrequestedflags_11',['InitializeSecurityContextRequestedFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_security.html#ab295ec841a5111437cb461ed3060cde1',1,'Harlinn::Common::Core::Security']]],
-  ['innerqueuecontext_12',['InnerQueueContext',['../class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#af755981fa3774dcd5e0c41e354150ec0',1,'Harlinn::Common::Core::ConcurrentQueue']]],
-  ['inputclassification_13',['InputClassification',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a0f180e5120c3f6086b5da419b7704418',1,'Harlinn::Windows::Graphics::D3D12']]],
-  ['intervalerrorflag_14',['IntervalErrorFlag',['../namespace_harlinn_1_1_o_c_i.html#ac301484b4a6831b827b8074b2368fcc9',1,'Harlinn::OCI']]],
-  ['intervaltype_15',['IntervalType',['../namespace_harlinn_1_1_o_d_b_c.html#a34d7660a69994f06fdacd275c7936893',1,'Harlinn::ODBC']]]
+  ['indirectargumenttype_8',['IndirectArgumentType',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a34499595cca05ceb1cb47c60a408d7ef',1,'Harlinn::Windows::Graphics::D3D12']]],
+  ['initflags_9',['InitFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a754da1620e6f94aa852e6ae047db7e59',1,'Harlinn::Common::Core::Ese']]],
+  ['initializeflags_10',['InitializeFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_http.html#a556958436712aec99c602dd2d386b1b8',1,'Harlinn::Common::Core::Http']]],
+  ['initializesecuritycontextflags_11',['InitializeSecurityContextFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_security.html#a3609bcca569e22bd81495156b0e88201',1,'Harlinn::Common::Core::Security']]],
+  ['initializesecuritycontextrequestedflags_12',['InitializeSecurityContextRequestedFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_security.html#ab295ec841a5111437cb461ed3060cde1',1,'Harlinn::Common::Core::Security']]],
+  ['innerqueuecontext_13',['InnerQueueContext',['../class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#af755981fa3774dcd5e0c41e354150ec0',1,'Harlinn::Common::Core::ConcurrentQueue']]],
+  ['inputclassification_14',['InputClassification',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a0f180e5120c3f6086b5da419b7704418',1,'Harlinn::Windows::Graphics::D3D12']]],
+  ['interpolationmode_15',['InterpolationMode',['../namespace_harlinn_1_1_windows_1_1_d_m_l.html#af9b832416dcc0fae300d7311104ad8c2',1,'Harlinn::Windows::DML']]],
+  ['intervalerrorflag_16',['IntervalErrorFlag',['../namespace_harlinn_1_1_o_c_i.html#ac301484b4a6831b827b8074b2368fcc9',1,'Harlinn::OCI']]],
+  ['intervaltype_17',['IntervalType',['../namespace_harlinn_1_1_o_d_b_c.html#a34d7660a69994f06fdacd275c7936893',1,'Harlinn::ODBC']]]
 ];

@@ -1,0 +1,8 @@
+var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_serialized_raytracing_acceleration_structure_header =
+[
+    [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_serialized_raytracing_acceleration_structure_header.html#ab78e5065a698e97778abffa45e5b7374", null ],
+    [ "DeserializedSizeInBytes", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_serialized_raytracing_acceleration_structure_header.html#a83ec5f31b1663bbc1f11cb5d9b287df2", null ],
+    [ "DriverMatchingIdentifier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_serialized_raytracing_acceleration_structure_header.html#a815b9eddc2abf80edd8965a4b3bd3299", null ],
+    [ "NumBottomLevelAccelerationStructurePointersAfterHeader", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_serialized_raytracing_acceleration_structure_header.html#a701e89c2928c0d76dc62770833d2a924", null ],
+    [ "SerializedSizeInBytesIncludingHeader", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_serialized_raytracing_acceleration_structure_header.html#acfd52e66e68ee5601cc842f3bdbd6762", null ]
+];

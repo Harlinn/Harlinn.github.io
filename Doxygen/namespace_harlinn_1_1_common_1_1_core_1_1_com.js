@@ -95,6 +95,7 @@ var namespace_harlinn_1_1_common_1_1_core_1_1_com =
     [ "Initialize", "namespace_harlinn_1_1_common_1_1_core_1_1_com.html#a7e84394bed12d0a859456fb69182ebee", null ],
     [ "InitializeClientSecurity", "namespace_harlinn_1_1_common_1_1_core_1_1_com.html#a90d524a6b566fa0122caea5dd33e4b74", null ],
     [ "InitializeSecurity", "namespace_harlinn_1_1_common_1_1_core_1_1_com.html#a5f6b99ddf059b7077adb17de7ee633ac", null ],
+    [ "PrintSupportedKnownInterfaces", "namespace_harlinn_1_1_common_1_1_core_1_1_com.html#a51f301b9dfa788e50bd4f6ba1412b2aa", null ],
     [ "PrintSupportedKnownInterfaces", "namespace_harlinn_1_1_common_1_1_core_1_1_com.html#ad37e5e5cb812cc614a06f9b5d2b07ae7", null ],
     [ "SetClientProxyBlanket", "namespace_harlinn_1_1_common_1_1_core_1_1_com.html#a9d62690e8cf027b1e437ed48a7123cc8", null ],
     [ "SetClientProxyBlanket", "namespace_harlinn_1_1_common_1_1_core_1_1_com.html#ad754b1fac9b3bd71afab6f5552b84a0d", null ],

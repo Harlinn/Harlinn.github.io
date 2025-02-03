@@ -1,7 +1,8 @@
 var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tiled_resource_coordinate =
 [
-    [ "Subresource", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tiled_resource_coordinate.html#aab322c4d7211d221235deebbdc146f95", null ],
-    [ "X", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tiled_resource_coordinate.html#aa06a0bda568e24047c4c206137c65d70", null ],
-    [ "Y", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tiled_resource_coordinate.html#a10673a0d0d2c201d20093a652419a607", null ],
-    [ "Z", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tiled_resource_coordinate.html#abd4acb6bb6a20955dbfe1f3021d95c51", null ]
+    [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tiled_resource_coordinate.html#a54dbc18f892de28bd2017340588461d3", null ],
+    [ "Subresource", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tiled_resource_coordinate.html#ae468e698fb44507f9ac3eb92be9aa427", null ],
+    [ "X", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tiled_resource_coordinate.html#ac8d9e28387e8032658c7fd26ac0c3a48", null ],
+    [ "Y", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tiled_resource_coordinate.html#a15dc2a5abab16401d5267e0a79d9d035", null ],
+    [ "Z", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tiled_resource_coordinate.html#a006a777873267fee4d7c4c55a279a6e6", null ]
 ];

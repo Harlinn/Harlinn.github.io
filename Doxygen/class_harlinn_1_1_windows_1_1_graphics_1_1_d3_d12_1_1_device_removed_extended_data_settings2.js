@@ -1,0 +1,4 @@
+var class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_removed_extended_data_settings2 =
+[
+    [ "UseMarkersOnlyAutoBreadcrumbs", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_removed_extended_data_settings2.html#aacf585f73fe0721e73dc76da5b9bdbfe", null ]
+];

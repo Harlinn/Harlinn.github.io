@@ -185,9 +185,34 @@ var hierarchy =
     [ "Harlinn::Common::Core::Http::AuthenticationBasicParams", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_authentication_basic_params.html", null ],
     [ "Harlinn::Common::Core::Http::AuthenticationDigestParams", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_authentication_digest_params.html", null ],
     [ "Harlinn::Common::Core::Http::AuthenticationInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_authentication_info.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::AutoBreadcrumbNode", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_auto_breadcrumb_node.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::AutoBreadcrumbNode1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_auto_breadcrumb_node1.html", null ],
     [ "Harlinn::Common::Core::Math::Quaternion< T >::AxisAngle", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_1_1_axis_angle.html", null ],
     [ "Harlinn::Common::Core::Http::BandwidthLimitInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_bandwidth_limit_info.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::BarrierGroup", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_barrier_group.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::BarrierSubresourceRange", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_barrier_subresource_range.html", null ],
     [ "Harlinn.Common.Core.Net.Data.BaseDataGuid< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_base_data_guid.html", null ],
+    [ "BaseOperatorDesc", null, [
+      [ "Harlinn::Windows::DML::ActivationParameterizedReLUOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_parameterized_re_l_u_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::BatchNormalizationOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_batch_normalization_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ConvolutionOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_convolution_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseDequantizeLinearOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_dequantize_linear_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWisePowOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_pow_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseQuantizeLinearOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_quantize_linear_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::GEMMOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_g_e_m_m_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::GRUOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_g_r_u_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::GatherOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_gather_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::JoinOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_join_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::LSTMOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_l_s_t_m_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::MeanVarianceNormalizationOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_mean_variance_normalization_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::RNNOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_r_n_n_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ROIPoolingOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_r_o_i_pooling_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ReduceOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_reduce_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::SplitOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_split_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::TopKOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_top_k_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::abstract", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1abstract.html", null ],
+      [ "Harlinn::Windows::DML::abstract", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1abstract.html", null ]
+    ] ],
     [ "BaseT", null, [
       [ "Harlinn::Common::Core::Doxygen::Structure::Internal::Base< BaseT, memberType >", "class_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_structure_1_1_internal_1_1_base.html", [
         [ "Harlinn::Common::Core::Doxygen::Structure::Class", "class_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_structure_1_1_class.html", null ],
@@ -224,6 +249,22 @@ var hierarchy =
     [ "Harlinn::Common::Core::BasicString< wchar_t >", "class_harlinn_1_1_common_1_1_core_1_1_basic_string.html", null ],
     [ "Harlinn::Common::Core::Types::Internal::BasicTypeTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_basic_type_traits.html", null ],
     [ "Harlinn::Common::Core::Binary", "class_harlinn_1_1_common_1_1_core_1_1_binary.html", null ],
+    [ "BinaryOperatorDesc", null, [
+      [ "Harlinn::Windows::DML::ElementWiseAdd1OperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_add1_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseAddOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_add_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseDivideOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_divide_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseLogicalAndOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_logical_and_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseLogicalEqualsOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_logical_equals_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseLogicalGreaterThanOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_logical_greater_than_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseLogicalLessThanOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_logical_less_than_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseLogicalOrOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_logical_or_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseLogicalXorOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_logical_xor_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseMaxOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_max_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseMeanOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_mean_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseMinOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_min_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseMultiplyOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_multiply_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseSubtractOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_subtract_operator_desc.html", null ]
+    ] ],
     [ "Harlinn::Common::Core::IO::BinaryReaderBase< Derived, networkByteOrder, use7BitEncodedSize >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html", null ],
     [ "Harlinn::Common::Core::IO::BinaryReaderBase< BinaryReader< StreamT, false, false >, false, false >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html", [
       [ "Harlinn::Common::Core::IO::Serialization::Internal::SerializationReader< StreamT, networkByteOrder, use7BitEncodedSize >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_serialization_reader.html", null ]
@@ -248,7 +289,10 @@ var hierarchy =
       [ "Harlinn::Common::Core::IO::BufferedBinaryWriter< StreamWriterT, BufferSizeValue, networkByteOrder, use7BitEncodedSize >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_buffered_binary_writer.html", null ]
     ] ],
     [ "Harlinn.Common.Core.Net.IO.BinaryWriterExtensions", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_i_o_1_1_binary_writer_extensions.html", null ],
+    [ "Harlinn::Windows::DML::BindingDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_binding_desc.html", null ],
     [ "Harlinn::Common::Core::Http::BindingInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_binding_info.html", null ],
+    [ "Harlinn::Windows::DML::BindingProperties", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_binding_properties.html", null ],
+    [ "Harlinn::Windows::DML::BindingTableDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_binding_table_desc.html", null ],
     [ "Harlinn::Windows::Graphics::Imaging::BitmapPattern", "struct_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_pattern.html", null ],
     [ "Harlinn::Windows::BitmapSelection", "class_harlinn_1_1_windows_1_1_bitmap_selection.html", null ],
     [ "Harlinn::Common::Core::BitMask< N >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_mask.html", null ],
@@ -279,9 +323,13 @@ var hierarchy =
     [ "Harlinn::Common::Core::IO::Blocks::BlockIterator< BlockManagerType, BlockType >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_blocks_1_1_block_iterator.html", null ],
     [ "Harlinn::Common::Core::IO::Blocks::BlockManager", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_blocks_1_1_block_manager.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::Box", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_box.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::BroadcastingLaunchOverrides", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_broadcasting_launch_overrides.html", null ],
     [ "Harlinn::Windows::BrushSelection", "class_harlinn_1_1_windows_1_1_brush_selection.html", null ],
     [ "Harlinn::Common::Core::IO::Sockets::Server::Buffer", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_buffer.html", null ],
     [ "Harlinn::Common::Core::Logging::Internal::Buffer", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer.html", null ],
+    [ "Harlinn::Windows::DML::BufferArrayBinding", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_buffer_array_binding.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::BufferBarrier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_buffer_barrier.html", null ],
+    [ "Harlinn::Windows::DML::BufferBinding", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_buffer_binding.html", null ],
     [ "Harlinn::Common::Core::IO::Sockets::Server::BufferedSocketStream< ConnectionHandlerT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_buffered_socket_stream.html", null ],
     [ "Harlinn::Common::Core::IO::Sockets::Server::BufferedSocketStream< TcpConnectionHandler >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_buffered_socket_stream.html", null ],
     [ "Harlinn::Common::Core::Logging::Internal::BufferKey", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer_key.html", null ],
@@ -290,8 +338,15 @@ var hierarchy =
     [ "Harlinn::Common::Core::IO::Sockets::Server::BufferPool< MaxReceiveBuffers >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_buffer_pool.html", null ],
     [ "Harlinn::Common::Core::IO::Sockets::Server::BufferPool< MaxSendBuffers >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_buffer_pool.html", null ],
     [ "Harlinn::Common::Core::IO::Sockets::Server::Internal::BufferQueue", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_internal_1_1_buffer_queue.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::BufferRTV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_buffer_r_t_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::BufferSRV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_buffer_s_r_v.html", null ],
     [ "Harlinn::Common::Core::IO::BufferStream", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_buffer_stream.html", null ],
+    [ "Harlinn::Windows::DML::BufferTensorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_buffer_tensor_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::BufferUAV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_buffer_u_a_v.html", null ],
     [ "Harlinn::Common::Core::Logging::BuildOptions< enabledLevels >", "struct_harlinn_1_1_common_1_1_core_1_1_logging_1_1_build_options.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::BuildRaytracingAccelerationStructureDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_build_raytracing_acceleration_structure_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::BuildRaytracingAccelerationStructureInputs", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_build_raytracing_acceleration_structure_inputs.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::BuildRaytracingAccelerationStructureToolsVisualizationHeader", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_build_raytracing_acceleration_structure_tools_visualization_header.html", null ],
     [ "Harlinn::Common::Core::Internal::ByteOffsetOf< index, Arg, Args >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_byte_offset_of.html", null ],
     [ "Harlinn::Common::Core::Internal::ByteOffsetOf< 0, Arg, Args... >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_byte_offset_of_3_010_00_01_arg_00_01_args_8_8_8_01_4.html", null ],
     [ "Harlinn::Common::Core::Http::ByteRange", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_byte_range.html", null ],
@@ -311,13 +366,16 @@ var hierarchy =
     [ "Harlinn::Common::Core::Security::ClaimSecurityAttributesInformation", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_claim_security_attributes_information.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::ClearValue", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_clear_value.html", null ],
     [ "Harlinn::Common::Core::CurrentThread::Internal::ClientId", "struct_harlinn_1_1_common_1_1_core_1_1_current_thread_1_1_internal_1_1_client_id.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::CoalescingLaunchOverrides", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_coalescing_launch_overrides.html", null ],
     [ "Harlinn::Windows::Graphics::Color", "class_harlinn_1_1_windows_1_1_graphics_1_1_color.html", null ],
     [ "Harlinn::Windows::ColorRef", "class_harlinn_1_1_windows_1_1_color_ref.html", null ],
     [ "Harlinn::Common::Core::ComAllocator< T >", "class_harlinn_1_1_common_1_1_core_1_1_com_allocator.html", null ],
     [ "Harlinn::Common::Core::ComBuffer", "class_harlinn_1_1_common_1_1_core_1_1_com_buffer.html", null ],
     [ "Harlinn::Common::Core::ComInitialize", "class_harlinn_1_1_common_1_1_core_1_1_com_initialize.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::CommandQueueDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_command_queue_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::CommandSignatureDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_command_signature_desc.html", null ],
     [ "Harlinn::Common::Core::IO::CommConfig", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_comm_config.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::CommonComputeNodeOverrides", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_common_compute_node_overrides.html", null ],
     [ "Harlinn::Common::Core::Math::CompensatedFloat< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_compensated_float.html", null ],
     [ "Harlinn::Common::Core::Math::CompensatedSum< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_compensated_sum.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::ComputePipelineStateDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_compute_pipeline_state_desc.html", null ],
@@ -358,6 +416,9 @@ var hierarchy =
     [ "Harlinn::Common::Core::Logging::Writers::ConsoleWriter", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_writers_1_1_console_writer.html", null ],
     [ "Harlinn::Common::Core::details::const_numeric_max< T >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1const__numeric__max.html", null ],
     [ "Harlinn::Common::Core::Persistent::Constant< T >", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_constant.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::ConstantBufferViewDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_constant_buffer_view_desc.html", null ],
+    [ "Harlinn::Windows::DML::ConstantDataGraphNodeDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_constant_data_graph_node_desc.html", null ],
+    [ "Harlinn::Windows::DML::Model::Internal::ConstantNode", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_internal_1_1_constant_node.html", null ],
     [ "Harlinn::Common::Core::SIMD::Internal::Constants", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html", [
       [ "Harlinn::Common::Core::SIMD::Internal::m128Constants", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1m128_constants.html", null ],
       [ "Harlinn::Common::Core::SIMD::Internal::m256Constants", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1m256_constants.html", null ]
@@ -473,8 +534,10 @@ var hierarchy =
     ] ],
     [ "Harlinn::Windows::Controls", "class_harlinn_1_1_windows_1_1_controls.html", null ],
     [ "Harlinn::Common::Core::Demangle::detail::Converter", "class_harlinn_1_1_common_1_1_core_1_1_demangle_1_1detail_1_1_converter.html", null ],
+    [ "Harlinn::Windows::DML::Model::ConvolutionBuilder", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_convolution_builder.html", null ],
     [ "Harlinn::Common::Core::Demangle::detail::Converter::ConvStream", "struct_harlinn_1_1_common_1_1_core_1_1_demangle_1_1detail_1_1_converter_1_1_conv_stream.html", null ],
     [ "Harlinn::Common::Core::Http::CookedUrl", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_cooked_url.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::CPUDescriptorHandle", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html", null ],
     [ "Harlinn::Common::Core::Security::CredentialsHandle", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_credentials_handle.html", null ],
     [ "Harlinn::Common::Core::CriticalSection", "class_harlinn_1_1_common_1_1_core_1_1_critical_section.html", null ],
     [ "Harlinn::Common::Core::Currency", "class_harlinn_1_1_common_1_1_core_1_1_currency.html", null ],
@@ -551,13 +614,28 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::DepthStencilDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_depth_stencil_desc.html", [
       [ "Harlinn::Windows::Graphics::D3D12::DepthStencilDesc1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_depth_stencil_desc1.html", null ]
     ] ],
+    [ "Harlinn::Windows::Graphics::D3D12::DepthStencilFormat", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_depth_stencil_format.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::DepthStencilValue", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_depth_stencil_value.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DepthStencilViewDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_depth_stencil_view_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DescriptorHeapDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_descriptor_heap_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DescriptorRange", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_descriptor_range.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DescriptorRange1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_descriptor_range1.html", null ],
     [ "Harlinn::Common::Core::Persistent::DescriptorType< Types >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_descriptor_type.html", null ],
     [ "Harlinn::Common::Core::Persistent::DescriptorType<>", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_descriptor_type_3_4.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DeviceConfigurationDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_configuration_desc.html", null ],
     [ "Harlinn::Common::Core::IO::DeviceControlBlock", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_device_control_block.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DeviceRemovedExtendedData1_", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_removed_extended_data1__.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DeviceRemovedExtendedData2_", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_removed_extended_data2__.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DeviceRemovedExtendedData3_", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_removed_extended_data3__.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DeviceRemovedExtendedData_", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_removed_extended_data__.html", null ],
     [ "Harlinn::Windows::Media::DeviceSources", "class_harlinn_1_1_windows_1_1_media_1_1_device_sources.html", null ],
     [ "Harlinn::ODBC::DiagnosticRecord", "struct_harlinn_1_1_o_d_b_c_1_1_diagnostic_record.html", null ],
     [ "Harlinn::Common::Core::IO::Directory", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_directory.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DiscardRegion", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_discard_region.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DispatchArguments", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_dispatch_arguments.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DispatchGraphDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_dispatch_graph_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DispatchMeshArguments", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_dispatch_mesh_arguments.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DispatchRaysDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_dispatch_rays_desc.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::DistanceType< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_distance_type.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::DistanceType< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_distance_type_3_01double_01_4.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::DistanceType< Int64 >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_distance_type_3_01_int64_01_4.html", null ],
@@ -568,11 +646,20 @@ var hierarchy =
       [ "Harlinn::Common::Core::Environment::Group", "class_harlinn_1_1_common_1_1_core_1_1_environment_1_1_group.html", null ],
       [ "Harlinn::Common::Core::Environment::User", "class_harlinn_1_1_common_1_1_core_1_1_environment_1_1_user.html", null ]
     ] ],
+    [ "Harlinn::Windows::Graphics::D3D12::DrawArguments", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_draw_arguments.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DrawIndexedArguments", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_draw_indexed_arguments.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DREDAllocationNode", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d_r_e_d_allocation_node.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DREDAllocationNode1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d_r_e_d_allocation_node1.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DREDAutoBreadcrumbsOutput", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d_r_e_d_auto_breadcrumbs_output.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DREDAutoBreadcrumbsOutput1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d_r_e_d_auto_breadcrumbs_output1.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DREDBreadcrumbContext", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d_r_e_d_breadcrumb_context.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DREDPageFaultOutput", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d_r_e_d_page_fault_output.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DREDPageFaultOutput1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d_r_e_d_page_fault_output1.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DREDPageFaultOutput2", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d_r_e_d_page_fault_output2.html", null ],
     [ "Harlinn::ODBC::Driver", "struct_harlinn_1_1_o_d_b_c_1_1_driver.html", null ],
     [ "Harlinn::Windows::DXContext", "class_harlinn_1_1_windows_1_1_d_x_context.html", null ],
-    [ "Harlinn::Windows::DXPipelineState", "class_harlinn_1_1_windows_1_1_d_x_pipeline_state.html", null ],
-    [ "Harlinn::Windows::DXRootParameter", "class_harlinn_1_1_windows_1_1_d_x_root_parameter.html", null ],
-    [ "Harlinn::Windows::DXRootSignature", "class_harlinn_1_1_windows_1_1_d_x_root_signature.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DXILLibraryDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d_x_i_l_library_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::DXILSubobjectToExportsAssociation", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d_x_i_l_subobject_to_exports_association.html", null ],
     [ "std::enable_shared_from_this", null, [
       [ "Harlinn::Common::Core::Concurrency::ActiveObject< std::shared_ptr< ApplicationMessage > >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html", null ],
       [ "Harlinn::Common::Core::Concurrency::ActiveObject< std::shared_ptr< LogManagerMessage > >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html", null ],
@@ -1123,6 +1210,7 @@ var hierarchy =
     [ "Harlinn::Common::Core::ExceptionData", "class_harlinn_1_1_common_1_1_core_1_1_exception_data.html", null ],
     [ "Harlinn::Common::Core::ExceptionLocation", "class_harlinn_1_1_common_1_1_core_1_1_exception_location.html", null ],
     [ "Harlinn::Common::Core::ExceptionLocationData", "class_harlinn_1_1_common_1_1_core_1_1_exception_location_data.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::ExistingCollectionDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_existing_collection_desc.html", null ],
     [ "EXPLICIT_ACCESS", null, [
       [ "Harlinn::Common::Core::Security::ExplicitAccess", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_explicit_access.html", null ]
     ] ],
@@ -1132,7 +1220,9 @@ var hierarchy =
     [ "Harlinn::Common::Core::Math::Internal::ExponentWidth< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_exponent_width.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::ExponentWidth< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_exponent_width_3_01double_01_4.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::ExponentWidth< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_exponent_width_3_01float_01_4.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::ExportDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_export_desc.html", null ],
     [ "Harlinn::Windows::DirectShow::AMCameraControl::Exposure", "struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_exposure.html", null ],
+    [ "Harlinn::Windows::DML::Model::Expression", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_expression.html", null ],
     [ "Harlinn::OCI::FailoverCallback", "struct_harlinn_1_1_o_c_i_1_1_failover_callback.html", null ],
     [ "std::false_type", null, [
       [ "Harlinn::Common::Core::AlwaysFalse<... >", "struct_harlinn_1_1_common_1_1_core_1_1_always_false.html", null ],
@@ -1148,7 +1238,8 @@ var hierarchy =
       [ "Harlinn::Common::Core::SIMD::TraitLimits< T >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_trait_limits.html", null ],
       [ "Harlinn::Common::Core::SIMD::Traits< T, N >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html", null ],
       [ "Harlinn::Common::Core::Types::Adapters::TypeAdapter< T >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_adapters_1_1_type_adapter.html", null ],
-      [ "Harlinn::Common::Core::VariantTypeTraits< T >", "struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html", null ]
+      [ "Harlinn::Common::Core::VariantTypeTraits< T >", "struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html", null ],
+      [ "Harlinn::Windows::DML::Internal::TensorTraits< T >", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_internal_1_1_tensor_traits.html", null ]
     ] ],
     [ "Harlinn::Common::Core::Math::Internal::FastPowImpl< FloatT >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_fast_pow_impl.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::FeatureDataArchitecture", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_architecture.html", [
@@ -1176,10 +1267,15 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::FeatureDataFormatSupport", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_format_support.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::FeatureDataGpuVirtualAddressSupport", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_gpu_virtual_address_support.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::FeatureDataMultiSampleQualityLevels", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_multi_sample_quality_levels.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::FeatureDataProtectedResourceSessionSupport", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_protected_resource_session_support.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::FeatureDataProtectedResourceSessionTypeCount", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_protected_resource_session_type_count.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::FeatureDataProtectedResourceSessionTypes", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_protected_resource_session_types.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::FeatureDataQueryMetaCommand", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_query_meta_command.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::FeatureDataRootSignature", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_root_signature.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::FeatureDataSerialization", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_serialization.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::FeatureDataShaderCache", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_shader_cache.html", null ],
+    [ "Harlinn::Windows::DML::FeatureDataTensorDataTypeSupport", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_feature_data_tensor_data_type_support.html", null ],
+    [ "Harlinn::Windows::DML::FeatureQueryTensorDataTypeSupport", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_feature_query_tensor_data_type_support.html", null ],
     [ "Harlinn::Common::Core::IO::File", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_file.html", null ],
     [ "Harlinn::Common::Core::FileMapping", "class_harlinn_1_1_common_1_1_core_1_1_file_mapping.html", null ],
     [ "Harlinn::Common::Core::IO::FileSystemEntries< StringT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_file_system_entries.html", null ],
@@ -1268,11 +1364,28 @@ var hierarchy =
     [ "Harlinn::Common::Core::ConcurrentQueue< T, Traits >::FreeList< N >", "struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_free_list.html", null ],
     [ "Harlinn::Common::Core::ConcurrentQueue< T, Traits >::FreeList< Harlinn::Common::Core::ConcurrentQueue::Block >", "struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_free_list.html", null ],
     [ "Harlinn::Common::Core::ConcurrentQueue< T, Traits >::FreeListNode< N >", "struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_free_list_node.html", null ],
+    [ "Harlinn::Windows::DML::Model::FusedActivation", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_fused_activation.html", null ],
+    [ "Harlinn::Windows::DML::Model::Internal::FusedActivationStorage", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_internal_1_1_fused_activation_storage.html", null ],
+    [ "Harlinn::Windows::DML::Model::GemmBuilder", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_gemm_builder.html", null ],
     [ "Harlinn.Common.Core.Net.Generators.Generator", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_generators_1_1_generator.html", [
       [ "Harlinn.Common.Core.Net.Generators.SineGenerator", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_generators_1_1_sine_generator.html", null ]
     ] ],
     [ "Harlinn::Common::Core::Security::GenericMapping", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_generic_mapping.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::GenericProgramDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_generic_program_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::GlobalBarrier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_global_barrier.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::GlobalRootSignature", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_global_root_signature.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::GPUDescriptorHandle", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_g_p_u_descriptor_handle.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::GPUVirtualAddressAndStride", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_g_p_u_virtual_address_and_stride.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::GPUVirtualAddressRange", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_g_p_u_virtual_address_range.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::GPUVirtualAddressRangeAndStride", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_g_p_u_virtual_address_range_and_stride.html", null ],
+    [ "Harlinn::Windows::DML::Model::Graph", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_graph.html", null ],
+    [ "Harlinn::Windows::DML::Model::Internal::GraphBuilder", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_internal_1_1_graph_builder.html", null ],
+    [ "Harlinn::Windows::DML::GraphDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_graph_desc.html", null ],
+    [ "Harlinn::Windows::DML::Model::Internal::GraphDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_internal_1_1_graph_desc.html", null ],
+    [ "Harlinn::Windows::DML::GraphEdgeDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_graph_edge_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::GraphicsPipelineStateDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_pipeline_state_desc.html", null ],
+    [ "Harlinn::Windows::DML::GraphNodeDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_graph_node_desc.html", null ],
+    [ "Harlinn::Windows::DML::Model::GRUOutputs", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_g_r_u_outputs.html", null ],
     [ "GUID", null, [
       [ "Harlinn::Common::Core::Guid::DataT", "struct_harlinn_1_1_common_1_1_core_1_1_guid_1_1_data_t.html", null ]
     ] ],
@@ -1506,6 +1619,7 @@ var hierarchy =
     ] ],
     [ "Harlinn::Windows::Graphics::D3D12::HeapProperties", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_heap_properties.html", null ],
     [ "Harlinn::Windows::HighContrast", "struct_harlinn_1_1_windows_1_1_high_contrast.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::HitGroupDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_hit_group_desc.html", null ],
     [ "Harlinn::Common::Core::Http::Http2SettingsLimitsParam", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_http2_settings_limits_param.html", null ],
     [ "Harlinn::Common::Core::Http::Http2WindowSizeParam", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_http2_window_size_param.html", null ],
     [ "Harlinn::Common::Core::Http::Server::HttpConnection", "class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_http_connection.html", null ],
@@ -1519,6 +1633,7 @@ var hierarchy =
     [ "Harlinn.Common.Core.Net.Data.IBaseDataFactory< TEnum >", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_i_base_data_factory.html", null ],
     [ "Harlinn.Common.Core.Net.Data.IBaseDataFactory< TKind >", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_i_base_data_factory.html", null ],
     [ "Harlinn.Common.Core.Net.Entities.IBaseEntityFactory< TKind >", "interface_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_i_base_entity_factory.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::IBStripCutValue", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_i_b_strip_cut_value.html", null ],
     [ "IChangeTracking", null, [
       [ "Harlinn.Common.Core.Net.Entities.BaseEntity< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_base_entity.html", null ]
     ] ],
@@ -1613,7 +1728,9 @@ var hierarchy =
     ] ],
     [ "Harlinn::Common::Core::ConcurrentQueue< T, Traits >::ImplicitProducerHash", "struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_implicit_producer_hash.html", null ],
     [ "Harlinn::Common::Core::ConcurrentQueue< T, Traits >::ImplicitProducerKVP", "struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_implicit_producer_k_v_p.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::IndexBufferView", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_index_buffer_view.html", null ],
     [ "Harlinn::Common::Core::Internal::IndexIterator< CollectionT, ValueT, ReferenceT >", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_index_iterator.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::IndirectArgumentDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_indirect_argument_desc.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::InfinityUnsignedValue< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_infinity_unsigned_value.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::InfinityUnsignedValue< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_infinity_unsigned_value_3_01double_01_4.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::InfinityUnsignedValue< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_infinity_unsigned_value_3_01float_01_4.html", null ],
@@ -1625,7 +1742,9 @@ var hierarchy =
       [ "Harlinn.Common.Core.Net.Entities.BaseEntity< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_base_entity.html", null ]
     ] ],
     [ "Harlinn::Windows::Graphics::D3D12::InputElementDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_input_element_desc.html", null ],
+    [ "Harlinn::Windows::DML::InputGraphEdgeDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_input_graph_edge_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::InputLayoutDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_input_layout_desc.html", null ],
+    [ "Harlinn::Windows::DML::Model::Internal::InputNode", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_internal_1_1_input_node.html", null ],
     [ "Harlinn::Common::Core::Ese::Instance", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_instance.html", null ],
     [ "Harlinn::Common::Core::Integer< T >", "class_harlinn_1_1_common_1_1_core_1_1_integer.html", null ],
     [ "Harlinn::Common::Core::Integer< Int32 >", "class_harlinn_1_1_common_1_1_core_1_1_integer.html", [
@@ -1643,6 +1762,7 @@ var hierarchy =
     ] ],
     [ "Harlinn::Common::Core::Network::InterfaceTable", "class_harlinn_1_1_common_1_1_core_1_1_network_1_1_interface_table.html", null ],
     [ "Harlinn::Common::Core::InterlockedLinkedList", "class_harlinn_1_1_common_1_1_core_1_1_interlocked_linked_list.html", null ],
+    [ "Harlinn::Windows::DML::IntermediateGraphEdgeDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_intermediate_graph_edge_desc.html", null ],
     [ "Harlinn::Common::Core::Math::Interval< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_interval.html", null ],
     [ "boost::icl::interval_bound_type< Harlinn::Common::Core::Interval >", "structboost_1_1icl_1_1interval__bound__type_3_01_harlinn_1_1_common_1_1_core_1_1_interval_01_4.html", null ],
     [ "boost::icl::interval_traits< Harlinn::Common::Core::Interval >", "structboost_1_1icl_1_1interval__traits_3_01_harlinn_1_1_common_1_1_core_1_1_interval_01_4.html", null ],
@@ -1720,6 +1840,7 @@ var hierarchy =
     ] ],
     [ "Harlinn::Common::Core::Http::ListenEndpointInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_listen_endpoint_info.html", null ],
     [ "Harlinn::OCI::LobStream", "class_harlinn_1_1_o_c_i_1_1_lob_stream.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::LocalRootSignature", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_local_root_signature.html", null ],
     [ "Harlinn::Common::Core::Security::LocalUniqueId", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_local_unique_id.html", null ],
     [ "Harlinn::Common::Core::Http::LogData", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_log_data.html", [
       [ "Harlinn::Common::Core::Http::LogFieldsData", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_log_fields_data.html", null ]
@@ -1781,6 +1902,8 @@ var hierarchy =
       [ "Harlinn::Common::Core::Math::SquareMatrixSimd< MatrixT, 4 >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_014_01_4.html", null ]
     ] ],
     [ "Harlinn::Common::Core::details::max_align_t", "union_harlinn_1_1_common_1_1_core_1_1details_1_1max__align__t.html", null ],
+    [ "Harlinn::Windows::DML::Model::MaxPoolingBuilder", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_max_pooling_builder.html", null ],
+    [ "Harlinn::Windows::DML::Model::MaxPoolingOutputs", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_max_pooling_outputs.html", null ],
     [ "MDB_val", null, [
       [ "Harlinn::Common::Core::LMDB::Value", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_1_1_value.html", null ]
     ] ],
@@ -1792,6 +1915,7 @@ var hierarchy =
       ] ],
       [ "Harlinn::Common::Core::Doxygen::Structure::MemberDef", "class_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_structure_1_1_member_def.html", null ]
     ] ],
+    [ "Harlinn::Windows::Graphics::D3D12::MemCopyDest", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_mem_copy_dest.html", null ],
     [ "Harlinn::Common::Core::IO::MemoryStream", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_memory_stream.html", [
       [ "Harlinn::Common::Core::ZeroMq::ZMQNotificationMemoryStream", "class_harlinn_1_1_common_1_1_core_1_1_zero_mq_1_1_z_m_q_notification_memory_stream.html", null ]
     ] ],
@@ -1818,6 +1942,8 @@ var hierarchy =
     [ "Harlinn::Windows::MessageLoop", "class_harlinn_1_1_windows_1_1_message_loop.html", [
       [ "Harlinn::Windows::DXMessageLoop", "class_harlinn_1_1_windows_1_1_d_x_message_loop.html", null ]
     ] ],
+    [ "Harlinn::Windows::Graphics::D3D12::MetaCommandDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_meta_command_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::MetaCommandParameterDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_meta_command_parameter_desc.html", null ],
     [ "Harlinn::OCI::Metadata::MetadataObject", "class_harlinn_1_1_o_c_i_1_1_metadata_1_1_metadata_object.html", [
       [ "Harlinn::OCI::Metadata::ArgumentOrResult", "class_harlinn_1_1_o_c_i_1_1_metadata_1_1_argument_or_result.html", [
         [ "Harlinn::OCI::Metadata::Argument", "class_harlinn_1_1_o_c_i_1_1_metadata_1_1_argument.html", null ],
@@ -1857,20 +1983,32 @@ var hierarchy =
     [ "Harlinn::Common::Core::Environment::ModuleEntry", "class_harlinn_1_1_common_1_1_core_1_1_environment_1_1_module_entry.html", null ],
     [ "Harlinn::ODBC::Money", "struct_harlinn_1_1_o_d_b_c_1_1_money.html", null ],
     [ "Harlinn::Windows::MouseKeys", "struct_harlinn_1_1_windows_1_1_mouse_keys.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::MultiNodeCPUInput", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_multi_node_c_p_u_input.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::MultiNodeGPUInput", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_multi_node_g_p_u_input.html", null ],
     [ "Harlinn::Common::Core::Http::MultipleKnownHeaders", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_multiple_known_headers.html", null ],
     [ "Harlinn::Common::Core::Html::NamedChar", "struct_harlinn_1_1_common_1_1_core_1_1_html_1_1_named_char.html", null ],
+    [ "Harlinn::Windows::DML::Model::NameScope", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_name_scope.html", null ],
     [ "Harlinn.Common.Core.Net.NativeFunctions", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_native_functions.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::NegativeInfinityUnsignedValue< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_negative_infinity_unsigned_value.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::NegativeInfinityUnsignedValue< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_negative_infinity_unsigned_value_3_01double_01_4.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::NegativeInfinityUnsignedValue< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_negative_infinity_unsigned_value_3_01float_01_4.html", null ],
     [ "Harlinn::Common::Core::Environment::Internal::NetApiBuffer", "class_harlinn_1_1_common_1_1_core_1_1_environment_1_1_internal_1_1_net_api_buffer.html", null ],
     [ "Harlinn::Common::Core::List< T, nodeSize >::Node", "struct_harlinn_1_1_common_1_1_core_1_1_list_1_1_node.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Node", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_node.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::NodeCPUInput", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_node_c_p_u_input.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::NodeGPUInput", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_node_g_p_u_input.html", null ],
+    [ "Harlinn::Windows::DML::Model::Internal::NodeID", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_internal_1_1_node_i_d.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::NodeId", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_node_id.html", null ],
     [ "Harlinn::Common::Core::Xml::Dom::NodeIterator< NCT, NodeT >", "class_harlinn_1_1_common_1_1_core_1_1_xml_1_1_dom_1_1_node_iterator.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::NodeMask", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_node_mask.html", null ],
+    [ "Harlinn::Windows::DML::Model::Internal::NodeOutput", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_internal_1_1_node_output.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::NodeOutputOverrides", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_node_output_overrides.html", null ],
     [ "Harlinn::Common::Core::details::nomove_if< Enable >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1nomove__if.html", null ],
     [ "Harlinn::Common::Core::details::nomove_if< false >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1nomove__if_3_01false_01_4.html", null ],
     [ "NONCLIENTMETRICS", null, [
       [ "Harlinn::Windows::NonClientMetrics", "class_harlinn_1_1_windows_1_1_non_client_metrics.html", null ]
     ] ],
+    [ "Harlinn::Windows::DML::Model::NonZeroCoordinatesOutputs", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_non_zero_coordinates_outputs.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::NormalBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_normal_base.html", [
       [ "Harlinn::Common::Core::Math::Normal3f", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_normal3f.html", null ]
     ] ],
@@ -1929,9 +2067,13 @@ var hierarchy =
     [ "OnDemandServerMediaSubsession", null, [
       [ "Harlinn::Windows::Media::LiveMedia::MediaFoundationMediaSubsession", "class_harlinn_1_1_windows_1_1_media_1_1_live_media_1_1_media_foundation_media_subsession.html", null ]
     ] ],
+    [ "Harlinn::Windows::DML::OperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_operator_desc.html", null ],
+    [ "Harlinn::Windows::DML::OperatorGraphNodeDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_operator_graph_node_desc.html", null ],
+    [ "Harlinn::Windows::DML::Model::Internal::OperatorNode", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_internal_1_1_operator_node.html", null ],
     [ "Harlinn::Common::Core::Types::Internal::OptionalTypeTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_optional_type_traits.html", null ],
     [ "Harlinn::Common::Core::Ese::Options", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_options.html", null ],
     [ "Harlinn::Common::Core::Services::ServiceRunner< DerivedT, ServiceT, ApplicationOptionsT >::Options", "class_harlinn_1_1_common_1_1_core_1_1_services_1_1_service_runner_1_1_options.html", null ],
+    [ "Harlinn::Windows::DML::OutputGraphEdgeDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_output_graph_edge_desc.html", null ],
     [ "OVERLAPPED", null, [
       [ "Harlinn::Common::Core::IO::Overlapped", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_overlapped.html", null ],
       [ "Harlinn::Common::Core::IO::Request", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request.html", [
@@ -2014,15 +2156,19 @@ var hierarchy =
     [ "std::pointer_traits< Harlinn::Common::Core::Internal::PointerIterator< ContainerT > >", "structstd_1_1pointer__traits_3_01_harlinn_1_1_common_1_1_core_1_1_internal_1_1_pointer_iterator_3_01_container_t_01_4_01_4.html", null ],
     [ "Harlinn::Windows::PointT< PT >", "class_harlinn_1_1_windows_1_1_point_t.html", null ],
     [ "Harlinn::Windows::PointT< POINT >", "class_harlinn_1_1_windows_1_1_point_t.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::PrimitiveTopologyDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_primitive_topology_desc.html", null ],
     [ "Harlinn::Common::Core::Persistent::Printer< CharT, ArgumentsStreamT, DestinationStreamT >", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_printer.html", null ],
     [ "Harlinn::Windows::DirectShow::AMCameraControl::Privacy", "struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_privacy.html", null ],
     [ "Harlinn::Common::Core::Security::PrivilegeSet", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_privilege_set.html", null ],
     [ "Harlinn::Common::Core::Environment::ProcessEntry", "class_harlinn_1_1_common_1_1_core_1_1_environment_1_1_process_entry.html", null ],
     [ "Harlinn::Common::Core::ProcessOptions", "class_harlinn_1_1_common_1_1_core_1_1_process_options.html", null ],
     [ "Harlinn::Common::Core::ProducerToken", "struct_harlinn_1_1_common_1_1_core_1_1_producer_token.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::ProgramIdentifier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_program_identifier.html", null ],
     [ "PROPVARIANT", null, [
       [ "Harlinn::Common::Core::PropertyVariant", "class_harlinn_1_1_common_1_1_core_1_1_property_variant.html", null ]
     ] ],
+    [ "Harlinn::Windows::Graphics::D3D12::ProtectedResourceSessionDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_protected_resource_session_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::ProtectedResourceSessionDesc1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_protected_resource_session_desc1.html", null ],
     [ "Harlinn::Common::Core::Http::ProtectionLevelInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_protection_level_info.html", null ],
     [ "Harlinn::Common::Core::IO::Sockets::ProtocolInfo", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_protocol_info.html", null ],
     [ "QOS", null, [
@@ -2035,6 +2181,11 @@ var hierarchy =
     [ "Harlinn::Common::Core::Math::Internal::QuaternionSimdBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quaternion_simd_base.html", [
       [ "Harlinn::Common::Core::Math::QuaternionSimd< QuaternionT >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd.html", null ]
     ] ],
+    [ "Harlinn::Windows::Graphics::D3D12::QueryDataPipelineStatistics", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_query_data_pipeline_statistics.html", [
+      [ "Harlinn::Windows::Graphics::D3D12::QueryDataPipelineStatistics1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_query_data_pipeline_statistics1.html", null ]
+    ] ],
+    [ "Harlinn::Windows::Graphics::D3D12::QueryDataStreamOutputStatistics", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_query_data_stream_output_statistics.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::QueryHeapDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_query_heap_desc.html", null ],
     [ "Harlinn::Common::Core::Http::QueryRequestQualifierQuic", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_query_request_qualifier_quic.html", null ],
     [ "Harlinn::Common::Core::Http::QueryRequestQualifierTcp", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_query_request_qualifier_tcp.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::QuietNaNUnsignedValue< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quiet_na_n_unsigned_value.html", null ],
@@ -2043,6 +2194,7 @@ var hierarchy =
     [ "Harlinn::Common::Core::Test::Generators::RandomGeneratorBase", "class_harlinn_1_1_common_1_1_core_1_1_test_1_1_generators_1_1_random_generator_base.html", [
       [ "Harlinn::Common::Core::Test::Generators::RandomGenerator< ValueT, N >", "struct_harlinn_1_1_common_1_1_core_1_1_test_1_1_generators_1_1_random_generator.html", null ]
     ] ],
+    [ "Harlinn::Windows::DML::Model::RandomGeneratorOutputs", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_random_generator_outputs.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::Range", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_range.html", null ],
     [ "Harlinn::Windows::Range", "class_harlinn_1_1_windows_1_1_range.html", null ],
     [ "Harlinn::Common::Core::Test::Generators::RangeGeneratorBase", "class_harlinn_1_1_common_1_1_core_1_1_test_1_1_generators_1_1_range_generator_base.html", [
@@ -2054,6 +2206,21 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::RangeUInt64", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_range_u_int64.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::RasterizerDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_rasterizer_desc.html", null ],
     [ "Harlinn::Common::Core::Demangle::detail::Converter::Raw< T >", "struct_harlinn_1_1_common_1_1_core_1_1_demangle_1_1detail_1_1_converter_1_1_raw.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingAABB", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_a_a_b_b.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingAccelerationStructurePostbuildInfoCompactedSizeDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_postbuild_info_compacted_size_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingAccelerationStructurePostbuildInfoCurrentSizeDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_postbuild_info_current_size_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingAccelerationStructurePostbuildInfoDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_postbuild_info_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingAccelerationStructurePostbuildInfoSerializationDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_postbuild_info_serialization_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingAccelerationStructurePostbuildInfoToolsVisualizationDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_postbui1e6b543b8eabbc4cf1af6ee7fce15334.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingAccelerationStructurePrebuildInfo", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_prebuild_info.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingAccelerationStructureSRV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_s_r_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingGeometryAABBsDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_geometry_a_a_b_bs_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingGeometryDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_geometry_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingGeometryTrianglesDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_geometry_triangles_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingInstanceDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_instance_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingPipelineConfig", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_pipeline_config.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingPipelineConfig1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_pipeline_config1.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RaytracingShaderConfig", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_shader_config.html", null ],
     [ "Harlinn::Common::Core::RdtscConverter", "class_harlinn_1_1_common_1_1_core_1_1_rdtsc_converter.html", null ],
     [ "Harlinn::Common::Core::Logging::Internal::RecordHeader", "struct_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_record_header.html", null ],
     [ "Harlinn::Common::Core::Logging::Internal::RecordStream", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_record_stream.html", null ],
@@ -2076,8 +2243,19 @@ var hierarchy =
       [ "Harlinn::Common::Core::IO::MemoryStream::Data", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_memory_stream_1_1_data.html", null ],
       [ "Harlinn::Common::Core::ReferenceCountedData< T >", "class_harlinn_1_1_common_1_1_core_1_1_reference_counted_data.html", null ]
     ] ],
+    [ "Harlinn::Windows::DML::Model::Internal::ReinterpretNode", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_internal_1_1_reinterpret_node.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RenderPassBeginningAccess", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_beginning_access.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RenderPassBeginningAccessClearParameters", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_beginning_access_clear_parameters.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RenderPassBeginningAccessPreserveLocalParameters", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_beginning_access_preserve_local_parameters.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RenderPassDepthStencilDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_depth_stencil_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RenderPassEndingAccess", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_ending_access.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RenderPassEndingAccessPreserveLocalParameters", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_ending_access_preserve_local_parameters.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RenderPassEndingAccessResolveParameters", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_ending_access_resolve_parameters.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RenderPassEndingAccessResolveSubresourceParameters", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_ending_access_resolve_subresource_parameters.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RenderPassRenderTargetDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_render_target_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::RenderTargetBlendDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_target_blend_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::RenderTargetFormatArray", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_target_format_array.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RenderTargetViewDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_target_view_desc.html", null ],
     [ "Harlinn::Common::Core::Http::RequestAuthInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_auth_info.html", null ],
     [ "Harlinn::Common::Core::Http::RequestChannelBindStatus", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_channel_bind_status.html", null ],
     [ "Harlinn::Common::Core::Http::RequestHeaders", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_headers.html", null ],
@@ -2109,7 +2287,7 @@ var hierarchy =
       [ "Harlinn::Windows::Graphics::D3D12::ResourceDesc1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_desc1.html", null ]
     ] ],
     [ "Harlinn::Windows::Graphics::D3D12::ResourceTransitionBarrier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_transition_barrier.html", null ],
-    [ "Harlinn::Windows::Graphics::D3D12::ResourceUavBarrier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_uav_barrier.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::ResourceUAVBarrier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_u_a_v_barrier.html", null ],
     [ "Harlinn::Common::Core::Http::ResponseHeaders", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_response_headers.html", null ],
     [ "Harlinn::Common::Core::Http::ResponseInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_response_info.html", null ],
     [ "Harlinn::Common::Core::Http::ResponseV1", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_response_v1.html", [
@@ -2122,6 +2300,16 @@ var hierarchy =
       [ "Harlinn::Common::Core::Interval", "class_harlinn_1_1_common_1_1_core_1_1_interval.html", null ]
     ] ],
     [ "Harlinn::Windows::DirectShow::AMCameraControl::Roll", "struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_roll.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RootConstants", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_constants.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RootDescriptor", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_descriptor.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RootDescriptor1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_descriptor1.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RootDescriptorTable", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_descriptor_table.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RootDescriptorTable1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_descriptor_table1.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RootParameter", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RootParameter1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter1.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RootSignatureDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_signature_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RootSignatureDesc1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_signature_desc1.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::RootSignatureDesc2", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_signature_desc2.html", null ],
     [ "Harlinn::ODBC::RowVersion", "struct_harlinn_1_1_o_d_b_c_1_1_row_version.html", null ],
     [ "RTSPServer", null, [
       [ "Harlinn::Windows::Media::LiveMedia::MediaFoundationRTSPServer", "class_harlinn_1_1_windows_1_1_media_1_1_live_media_1_1_media_foundation_r_t_s_p_server.html", null ]
@@ -2136,7 +2324,10 @@ var hierarchy =
     ] ],
     [ "Harlinn::Common::Core::SafeArray::SafeArrayLock", "class_harlinn_1_1_common_1_1_core_1_1_safe_array_1_1_safe_array_lock.html", null ],
     [ "Harlinn::Windows::Graphics::DXGI::SampleDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_sample_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::SampleMask", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_sample_mask.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::SamplePosition", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_sample_position.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::SamplerDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_sampler_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::SamplerDesc2", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_sampler_desc2.html", null ],
     [ "Harlinn::Common::Core::Demangle::detail::save_stack", "struct_harlinn_1_1_common_1_1_core_1_1_demangle_1_1detail_1_1save__stack.html", null ],
     [ "Harlinn::Common::Core::Math::Scalar< T, N >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::ScalarBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_scalar_base.html", [
@@ -2147,6 +2338,7 @@ var hierarchy =
       [ "Harlinn::Common::Core::Math::Scalar< float, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01float_00_013_01_4.html", null ],
       [ "Harlinn::Common::Core::Math::Scalar< float, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01float_00_014_01_4.html", null ]
     ] ],
+    [ "Harlinn::Windows::DML::ScaleBias", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_scale_bias.html", null ],
     [ "Harlinn::Windows::Media::MF2DBuffer::Scanline0AndPitch", "struct_harlinn_1_1_windows_1_1_media_1_1_m_f2_d_buffer_1_1_scanline0_and_pitch.html", null ],
     [ "Harlinn::Windows::DirectShow::AMCameraControl::ScanMode", "struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_scan_mode.html", null ],
     [ "SEC_WINNT_AUTH_IDENTITY_W", null, [
@@ -2199,6 +2391,8 @@ var hierarchy =
     [ "Harlinn::Common::Core::Security::SecurityIdsAndFlagsWithHash", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_ids_and_flags_with_hash.html", null ],
     [ "Harlinn::Common::Core::Security::SecurityPackage", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_package.html", null ],
     [ "Harlinn::Common::Core::SemaphoreEx", "class_harlinn_1_1_common_1_1_core_1_1_semaphore_ex.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::SerializedDataDriverMatchingIdentifier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_serialized_data_driver_matching_identifier.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::SerializedRaytracingAccelerationStructureHeader", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_serialized_raytracing_acceleration_structure_header.html", null ],
     [ "Harlinn::Common::Core::IO::SerialPort", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serial_port.html", null ],
     [ "Harlinn::Common::Core::Crypto::ServerOcspResponse", "class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_server_ocsp_response.html", null ],
     [ "Harlinn::Common::Core::Crypto::ServerOcspResponseContext", "class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_server_ocsp_response_context.html", null ],
@@ -2281,10 +2475,17 @@ var hierarchy =
     ] ],
     [ "Harlinn::Common::Core::LMDBEx::SessionReference< DatabaseT, SessionT >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_session_reference.html", null ],
     [ "Harlinn::Common::Core::Ese::SetColumn", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_set_column.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::SetGenericPipelineDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_set_generic_pipeline_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::SetProgramDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_set_program_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::SetRaytracingPipelineDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_set_raytracing_pipeline_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::SetWorkGraphDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_set_work_graph_desc.html", null ],
     [ "Harlinn::Common::Core::SevenBitDecode< T >", "struct_harlinn_1_1_common_1_1_core_1_1_seven_bit_decode.html", null ],
     [ "Harlinn::Common::Core::SevenBitEncode< N >", "struct_harlinn_1_1_common_1_1_core_1_1_seven_bit_encode.html", null ],
     [ "Harlinn::Common::Core::Persistent::Internal::SevenBitEncodedValue< uint64Value >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_seven_bit_encoded_value.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::ShaderBytecode", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_shader_bytecode.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::ShaderCacheSessionDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_shader_cache_session_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::ShaderNode", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_shader_node.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::ShaderResourceViewDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_shader_resource_view_desc.html", null ],
     [ "std::shared_ptr< T >", null, [
       [ "Harlinn::Common::Core::Logging::RecordHandler", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_record_handler.html", [
         [ "Harlinn::Common::Core::Logging::Formatters::TextFormatter< OutputStreamT >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_formatters_1_1_text_formatter.html", null ],
@@ -2304,6 +2505,7 @@ var hierarchy =
     [ "Harlinn::Common::Core::SimpleConcurrentQueue< std::shared_ptr< LMDBSinkMessage >, maxQueueSize >", "class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html", null ],
     [ "Harlinn::Common::Core::SimpleConcurrentQueue< std::shared_ptr< LogManagerMessage >, maxQueueSize >", "class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html", null ],
     [ "Harlinn::Windows::Graphics::Imaging::Size", "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_size.html", null ],
+    [ "Harlinn::Windows::DML::Size2D", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_size2_d.html", null ],
     [ "Harlinn::Windows::SizeT< ST >", "class_harlinn_1_1_windows_1_1_size_t.html", null ],
     [ "Harlinn::Windows::SizeT< SIZE >", "class_harlinn_1_1_windows_1_1_size_t.html", null ],
     [ "Harlinn::Windows::SkiaContext< ControlT, numFrames >", "class_harlinn_1_1_windows_1_1_skia_context.html", null ],
@@ -2374,6 +2576,9 @@ var hierarchy =
       [ "Harlinn::Common::Core::StartupInfo", "class_harlinn_1_1_common_1_1_core_1_1_startup_info.html", null ]
     ] ],
     [ "Harlinn::Common::Core::Http::StateInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_state_info.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::StateObjectConfig", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_state_object_config.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::StateObjectDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_state_object_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::StateSubobject", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_state_subobject.html", null ],
     [ "Harlinn::Common::Core::details::static_is_lock_free< bool >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1static__is__lock__free_3_01bool_01_4.html", null ],
     [ "Harlinn::Common::Core::details::static_is_lock_free< U * >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1static__is__lock__free_3_01_u_01_5_01_4.html", null ],
     [ "Harlinn::Common::Core::details::static_is_lock_free_num< T >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1static__is__lock__free__num.html", null ],
@@ -2384,6 +2589,9 @@ var hierarchy =
     [ "Harlinn::Common::Core::details::static_is_lock_free_num< signed char >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1static__is__lock__free__num_3_01signed_01char_01_4.html", null ],
     [ "Harlinn::Common::Core::details::static_is_lock_free_num< std::make_signed< T >::type >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1static__is__lock__free__num.html", [
       [ "Harlinn::Common::Core::details::static_is_lock_free< T >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1static__is__lock__free.html", null ]
+    ] ],
+    [ "Harlinn::Windows::Graphics::D3D12::StaticSamplerDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_static_sampler_desc.html", [
+      [ "Harlinn::Windows::Graphics::D3D12::StaticSamplerDesc1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_static_sampler_desc1.html", null ]
     ] ],
     [ "Harlinn::Windows::Graphics::D3D12::StencilOperationsDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stencil_operations_desc.html", null ],
     [ "Harlinn::Common::Core::StgMedium", "class_harlinn_1_1_common_1_1_core_1_1_stg_medium.html", null ],
@@ -2398,9 +2606,12 @@ var hierarchy =
     [ "Harlinn::Windows::Media::MFTransform::StreamCount", "struct_harlinn_1_1_windows_1_1_media_1_1_m_f_transform_1_1_stream_count.html", null ],
     [ "Harlinn::Windows::Media::StreamingStreamSinkData", "class_harlinn_1_1_windows_1_1_media_1_1_streaming_stream_sink_data.html", null ],
     [ "Harlinn::Windows::Media::MFTransform::StreamLimits", "struct_harlinn_1_1_windows_1_1_media_1_1_m_f_transform_1_1_stream_limits.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::StreamOutputBufferView", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_buffer_view.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::StreamOutputDeclarationEntry", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_declaration_entry.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::StreamOutputDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_desc.html", null ],
     [ "Harlinn::Common::Core::StringBuilder< T >", "class_harlinn_1_1_common_1_1_core_1_1_string_builder.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::SubobjectToExportsAssociation", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subobject_to_exports_association.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::SubResourceData", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_sub_resource_data.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::SubresourceFootprint", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_footprint.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::SubresourceInfo", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_info.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::SubresourceRangeUInt64", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_subresource_range_u_int64.html", null ],
@@ -2484,8 +2695,42 @@ var hierarchy =
     [ "Harlinn::ODBC::MsSql::tagSS_TIME2_STRUCT", "struct_harlinn_1_1_o_d_b_c_1_1_ms_sql_1_1tag_s_s___t_i_m_e2___s_t_r_u_c_t.html", null ],
     [ "Harlinn::ODBC::MsSql::tagSS_TIMESTAMPOFFSET_STRUCT", "struct_harlinn_1_1_o_d_b_c_1_1_ms_sql_1_1tag_s_s___t_i_m_e_s_t_a_m_p_o_f_f_s_e_t___s_t_r_u_c_t.html", null ],
     [ "Harlinn::Common::Core::IO::Sockets::TcpInfo", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_info.html", null ],
+    [ "Harlinn::Windows::DML::Model::TensorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_tensor_desc.html", null ],
+    [ "Harlinn::Windows::DML::TensorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_tensor_desc.html", null ],
+    [ "Harlinn::Windows::DML::Model::TensorPolicy", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_tensor_policy.html", null ],
+    [ "Harlinn::Windows::DML::Model::TensorProperties", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_tensor_properties.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex1DArrayDSV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex1_d_array_d_s_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex1DArrayRTV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex1_d_array_r_t_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex1DArraySRV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex1_d_array_s_r_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex1DArrayUAV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex1_d_array_u_a_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex1DDSV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex1_d_d_s_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex1DRTV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex1_d_r_t_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex1DSRV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex1_d_s_r_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex1DUAV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex1_d_u_a_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DArrayDSV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_array_d_s_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DArrayRTV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_array_r_t_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DArraySRV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_array_s_r_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DArrayUAV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_array_u_a_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DDSV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_d_s_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DMSArrayDSV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_m_s_array_d_s_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DMSArrayRTV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_m_s_array_r_t_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DMSArraySRV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_m_s_array_s_r_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DMSArrayUAV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_m_s_array_u_a_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DMSDSV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_m_s_d_s_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DMSRTV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_m_s_r_t_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DMSSRV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_m_s_s_r_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DMSUAV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_m_s_u_a_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DRTV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_r_t_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DSRV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_s_r_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex2DUAV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex2_d_u_a_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex3DRTV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex3_d_r_t_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex3DSRV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex3_d_s_r_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::Tex3DUAV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex3_d_u_a_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::TexCubeArraySRV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex_cube_array_s_r_v.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::TexCubeSRV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex_cube_s_r_v.html", null ],
     [ "Harlinn::Common::Core::Demangle::TextAttributes", "class_harlinn_1_1_common_1_1_core_1_1_demangle_1_1_text_attributes.html", null ],
     [ "Harlinn::Common::Core::Demangle::TextOutput", "class_harlinn_1_1_common_1_1_core_1_1_demangle_1_1_text_output.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::TextureBarrier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_texture_barrier.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::TextureCopyLocation", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_texture_copy_location.html", null ],
     [ "Harlinn::Common::Core::details::thread_id_converter< thread_id_t >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1thread__id__converter.html", null ],
     [ "Harlinn::Common::Core::ThreadAbortException", "class_harlinn_1_1_common_1_1_core_1_1_thread_abort_exception.html", null ],
@@ -2496,6 +2741,7 @@ var hierarchy =
     [ "Harlinn::Common::Core::details::ThreadExitNotifier", "class_harlinn_1_1_common_1_1_core_1_1details_1_1_thread_exit_notifier.html", null ],
     [ "Harlinn::Common::Core::ThreadGroup", "class_harlinn_1_1_common_1_1_core_1_1_thread_group.html", null ],
     [ "Harlinn::Common::Core::Logging::Internal::ThreadKeyData", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_thread_key_data.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::ThreadLaunchOverrides", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_thread_launch_overrides.html", null ],
     [ "Harlinn::Common::Core::Logging::Writers::ThreadWriter", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_writers_1_1_thread_writer.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::TiledResourceCoordinate", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tiled_resource_coordinate.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::TileRegionSize", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tile_region_size.html", null ],
@@ -2524,6 +2770,7 @@ var hierarchy =
     [ "Harlinn::Common::Core::Security::TokenPrivileges", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_privileges.html", null ],
     [ "Harlinn::Common::Core::Security::TokenSource", "struct_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_source.html", null ],
     [ "Harlinn::Common::Core::Security::TokenStatistics", "struct_harlinn_1_1_common_1_1_core_1_1_security_1_1_token_statistics.html", null ],
+    [ "Harlinn::Windows::DML::Model::TopKOutputs", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_model_1_1_top_k_outputs.html", null ],
     [ "Harlinn::Common::Core::Internal::ToReferenceIfReferenceWrapper< T >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_to_reference_if_reference_wrapper.html", null ],
     [ "Harlinn::Common::Core::Internal::ToReferenceIfReferenceWrapper< std::reference_wrapper< T > >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_to_reference_if_reference_wrapper_3_01std_1_a3285cc83fd6cb27e7aa673bd72e6665.html", null ],
     [ "Harlinn::Common::Core::Logging::Trace", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_trace.html", null ],
@@ -2832,6 +3079,19 @@ var hierarchy =
         [ "Harlinn::Common::Core::SIMD::Traits8Bit< T, N >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits8_bit.html", null ],
         [ "Harlinn::Common::Core::SIMD::Traits< double, N >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01double_00_01_n_01_4.html", null ],
         [ "Harlinn::Common::Core::SIMD::Traits< float, N >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html", null ]
+      ] ],
+      [ "Harlinn::Windows::DML::Internal::TensorTraitsBase", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_internal_1_1_tensor_traits_base.html", [
+        [ "Harlinn::Windows::DML::Internal::TensorTraits< Int16 >", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01_int16_01_4.html", null ],
+        [ "Harlinn::Windows::DML::Internal::TensorTraits< Int32 >", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01_int32_01_4.html", null ],
+        [ "Harlinn::Windows::DML::Internal::TensorTraits< Int64 >", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01_int64_01_4.html", null ],
+        [ "Harlinn::Windows::DML::Internal::TensorTraits< UInt16 >", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01_u_int16_01_4.html", null ],
+        [ "Harlinn::Windows::DML::Internal::TensorTraits< UInt32 >", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01_u_int32_01_4.html", null ],
+        [ "Harlinn::Windows::DML::Internal::TensorTraits< UInt64 >", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01_u_int64_01_4.html", null ],
+        [ "Harlinn::Windows::DML::Internal::TensorTraits< char >", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01char_01_4.html", null ],
+        [ "Harlinn::Windows::DML::Internal::TensorTraits< double >", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01double_01_4.html", null ],
+        [ "Harlinn::Windows::DML::Internal::TensorTraits< float >", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01float_01_4.html", null ],
+        [ "Harlinn::Windows::DML::Internal::TensorTraits< signed char >", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01signed_01char_01_4.html", null ],
+        [ "Harlinn::Windows::DML::Internal::TensorTraits< unsigned char >", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01unsigned_01char_01_4.html", null ]
       ] ]
     ] ],
     [ "Harlinn::Common::Core::Security::Trustee", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_trustee.html", null ],
@@ -3185,6 +3445,59 @@ var hierarchy =
         [ "Harlinn::Common::Core::Types::Internal::BasicTypeTraits< wchar_t, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_basic_type_traits_3_01wchar__t_00_01_r_t_01_4.html", null ]
       ] ]
     ] ],
+    [ "UnaryOperatorDesc", null, [
+      [ "Harlinn::Windows::DML::ActivationELUOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_e_l_u_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationHardMaxOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_hard_max_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationHardSigmoidOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_hard_sigmoid_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationIdentityOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_identity_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationLeakyReLUOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_leaky_re_l_u_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationLinearOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_linear_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationLogSoftMaxOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_log_soft_max_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationParametricSoftPlusOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_parametric_soft_plus_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationReLUOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_re_l_u_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationScaledELUOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_scaled_e_l_u_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationScaledTanHOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_scaled_tan_h_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationSigmoidOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_sigmoid_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationSoftMaxOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_soft_max_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationSoftPlusOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_soft_plus_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationSoftSignOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_soft_sign_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationTanHOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_tan_h_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ActivationThresholdedReLUOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_activation_thresholded_re_l_u_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::AveragePoolingOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_average_pooling_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::CastOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_cast_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::DepthToSpaceOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_depth_to_space_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseLogicalNotOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_logical_not_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::LPNormalizationOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_l_p_normalization_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::LPPoolingOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_l_p_pooling_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::LocalResponseNormalizationOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_local_response_normalization_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::MaxPoolingOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_max_pooling_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::PaddingOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_padding_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::SliceOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_slice_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::SpaceToDepthOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_space_to_depth_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::TileOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_tile_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::UpSample2DOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_up_sample2_d_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ValueScale2DOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_value_scale2_d_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::abstract", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1abstract.html", null ]
+    ] ],
+    [ "UnaryOperatorWithScaleBiasDesc", null, [
+      [ "Harlinn::Windows::DML::ElementWiseACosOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_a_cos_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseASinOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_a_sin_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseATanOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_a_tan_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseAbsOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_abs_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseCeilOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_ceil_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseClipOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_clip_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseConstantPowOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_constant_pow_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseCosOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_cos_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseExpOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_exp_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseFloorOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_floor_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseIdentityOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_identity_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseLogOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_log_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseReciprocalOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_reciprocal_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseSinOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_sin_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseSqrtOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_sqrt_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseTanOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_tan_operator_desc.html", null ],
+      [ "Harlinn::Windows::DML::ElementWiseThresholdOperatorDesc", "struct_harlinn_1_1_windows_1_1_d_m_l_1_1_element_wise_threshold_operator_desc.html", null ]
+    ] ],
     [ "Harlinn::Common::Core::Types::Internal::UniquePtrTypeTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_unique_ptr_type_traits.html", null ],
     [ "Harlinn::Common::Core::Unknown", "class_harlinn_1_1_common_1_1_core_1_1_unknown.html", [
       [ "Harlinn::Common::Core::AdviseSink", "class_harlinn_1_1_common_1_1_core_1_1_advise_sink.html", [
@@ -3477,6 +3790,23 @@ var hierarchy =
       [ "Harlinn::Common::Core::WbemTransport", "class_harlinn_1_1_common_1_1_core_1_1_wbem_transport.html", null ],
       [ "Harlinn::Common::Core::WbemUnboundObjectSink", "class_harlinn_1_1_common_1_1_core_1_1_wbem_unbound_object_sink.html", null ],
       [ "Harlinn::Common::Core::WpdSerializer", "class_harlinn_1_1_common_1_1_core_1_1_wpd_serializer.html", null ],
+      [ "Harlinn::Windows::DML::DebugDevice", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_debug_device.html", null ],
+      [ "Harlinn::Windows::DML::Object", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_object.html", [
+        [ "Harlinn::Windows::DML::Device", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_device.html", [
+          [ "Harlinn::Windows::DML::Device1", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_device1.html", null ]
+        ] ],
+        [ "Harlinn::Windows::DML::DeviceChild", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_device_child.html", [
+          [ "Harlinn::Windows::DML::BindingTable", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_binding_table.html", null ],
+          [ "Harlinn::Windows::DML::CommandRecorder", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_command_recorder.html", null ],
+          [ "Harlinn::Windows::DML::Operator", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_operator.html", null ],
+          [ "Harlinn::Windows::DML::Pageable", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_pageable.html", [
+            [ "Harlinn::Windows::DML::Dispatchable", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_dispatchable.html", [
+              [ "Harlinn::Windows::DML::CompiledOperator", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_compiled_operator.html", null ],
+              [ "Harlinn::Windows::DML::OperatorInitializer", "class_harlinn_1_1_windows_1_1_d_m_l_1_1_operator_initializer.html", null ]
+            ] ]
+          ] ]
+        ] ]
+      ] ],
       [ "Harlinn::Windows::Direct3DDeviceManager9", "class_harlinn_1_1_windows_1_1_direct3_d_device_manager9.html", null ],
       [ "Harlinn::Windows::DirectShow::AMAnalogVideoDecoder", "class_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_analog_video_decoder.html", null ],
       [ "Harlinn::Windows::DirectShow::AMAudioInputMixer", "class_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_audio_input_mixer.html", null ],
@@ -3572,6 +3902,7 @@ var hierarchy =
           ] ]
         ] ]
       ] ],
+      [ "Harlinn::Windows::Graphics::D3D10::Multithread", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d10_1_1_multithread.html", null ],
       [ "Harlinn::Windows::Graphics::D3D10Blob", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d10_blob.html", null ],
       [ "Harlinn::Windows::Graphics::D3D11::Device", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_device.html", [
         [ "Harlinn::Windows::Graphics::D3D11::Device1", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_device1.html", [
@@ -3699,11 +4030,19 @@ var hierarchy =
         [ "Harlinn::Windows::Graphics::D3D12::D3D12InfoQueue1", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d3_d12_info_queue1.html", null ]
       ] ],
       [ "Harlinn::Windows::Graphics::D3D12::D3D12SharingContract", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d3_d12_sharing_contract.html", null ],
+      [ "Harlinn::Windows::Graphics::D3D12::DeviceConfiguration", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_configuration.html", [
+        [ "Harlinn::Windows::Graphics::D3D12::DeviceConfiguration1", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_configuration1.html", null ]
+      ] ],
+      [ "Harlinn::Windows::Graphics::D3D12::DeviceFactory", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_factory.html", null ],
       [ "Harlinn::Windows::Graphics::D3D12::DeviceRemovedExtendedData", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_removed_extended_data.html", [
-        [ "Harlinn::Windows::Graphics::D3D12::DeviceRemovedExtendedData1", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_removed_extended_data1.html", null ]
+        [ "Harlinn::Windows::Graphics::D3D12::DeviceRemovedExtendedData1", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_removed_extended_data1.html", [
+          [ "Harlinn::Windows::Graphics::D3D12::DeviceRemovedExtendedData2", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_removed_extended_data2.html", null ]
+        ] ]
       ] ],
       [ "Harlinn::Windows::Graphics::D3D12::DeviceRemovedExtendedDataSettings", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_removed_extended_data_settings.html", [
-        [ "Harlinn::Windows::Graphics::D3D12::DeviceRemovedExtendedDataSettings1", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_removed_extended_data_settings1.html", null ]
+        [ "Harlinn::Windows::Graphics::D3D12::DeviceRemovedExtendedDataSettings1", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_removed_extended_data_settings1.html", [
+          [ "Harlinn::Windows::Graphics::D3D12::DeviceRemovedExtendedDataSettings2", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_removed_extended_data_settings2.html", null ]
+        ] ]
       ] ],
       [ "Harlinn::Windows::Graphics::D3D12::LifetimeOwner", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_lifetime_owner.html", null ],
       [ "Harlinn::Windows::Graphics::D3D12::Object", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_object.html", [
@@ -3715,7 +4054,19 @@ var hierarchy =
                   [ "Harlinn::Windows::Graphics::D3D12::Device5", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device5.html", [
                     [ "Harlinn::Windows::Graphics::D3D12::Device6", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device6.html", [
                       [ "Harlinn::Windows::Graphics::D3D12::Device7", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device7.html", [
-                        [ "Harlinn::Windows::Graphics::D3D12::Device8", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device8.html", null ]
+                        [ "Harlinn::Windows::Graphics::D3D12::Device8", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device8.html", [
+                          [ "Harlinn::Windows::Graphics::D3D12::Device9", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device9.html", [
+                            [ "Harlinn::Windows::Graphics::D3D12::Device10", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device10.html", [
+                              [ "Harlinn::Windows::Graphics::D3D12::Device11", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device11.html", [
+                                [ "Harlinn::Windows::Graphics::D3D12::Device12", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device12.html", [
+                                  [ "Harlinn::Windows::Graphics::D3D12::Device13", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device13.html", [
+                                    [ "Harlinn::Windows::Graphics::D3D12::Device14", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device14.html", null ]
+                                  ] ]
+                                ] ]
+                              ] ]
+                            ] ]
+                          ] ]
+                        ] ]
                       ] ]
                     ] ]
                   ] ]
@@ -3732,7 +4083,15 @@ var hierarchy =
                   [ "Harlinn::Windows::Graphics::D3D12::GraphicsCommandList3", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_command_list3.html", [
                     [ "Harlinn::Windows::Graphics::D3D12::GraphicsCommandList4", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_command_list4.html", [
                       [ "Harlinn::Windows::Graphics::D3D12::GraphicsCommandList5", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_command_list5.html", [
-                        [ "Harlinn::Windows::Graphics::D3D12::GraphicsCommandList6", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_command_list6.html", null ]
+                        [ "Harlinn::Windows::Graphics::D3D12::GraphicsCommandList6", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_command_list6.html", [
+                          [ "Harlinn::Windows::Graphics::D3D12::GraphicsCommandList7", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_command_list7.html", [
+                            [ "Harlinn::Windows::Graphics::D3D12::GraphicsCommandList8", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_command_list8.html", [
+                              [ "Harlinn::Windows::Graphics::D3D12::GraphicsCommandList9", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_command_list9.html", [
+                                [ "Harlinn::Windows::Graphics::D3D12::GraphicsCommandList10", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_command_list10.html", null ]
+                              ] ]
+                            ] ]
+                          ] ]
+                        ] ]
                       ] ]
                     ] ]
                   ] ]
@@ -3799,11 +4158,17 @@ var hierarchy =
               [ "Harlinn::Windows::Graphics::D3D12::ProtectedResourceSession1", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_protected_resource_session1.html", null ]
             ] ]
           ] ],
-          [ "Harlinn::Windows::Graphics::D3D12::RootSignature", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_signature.html", null ]
+          [ "Harlinn::Windows::Graphics::D3D12::RootSignature", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_signature.html", null ],
+          [ "Harlinn::Windows::Graphics::D3D12::ShaderCacheSession", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_shader_cache_session.html", null ]
         ] ]
       ] ],
       [ "Harlinn::Windows::Graphics::D3D12::RootSignatureDeserializer", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_signature_deserializer.html", null ],
-      [ "Harlinn::Windows::Graphics::D3D12::StateObjectProperties", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_state_object_properties.html", null ],
+      [ "Harlinn::Windows::Graphics::D3D12::SDKConfiguration", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_s_d_k_configuration.html", [
+        [ "Harlinn::Windows::Graphics::D3D12::SDKConfiguration1", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_s_d_k_configuration1.html", null ]
+      ] ],
+      [ "Harlinn::Windows::Graphics::D3D12::StateObjectProperties", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_state_object_properties.html", [
+        [ "Harlinn::Windows::Graphics::D3D12::StateObjectProperties1", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_state_object_properties1.html", null ]
+      ] ],
       [ "Harlinn::Windows::Graphics::D3D12::SwapChainAssistant", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_swap_chain_assistant.html", null ],
       [ "Harlinn::Windows::Graphics::D3D12::Tools", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tools.html", null ],
       [ "Harlinn::Windows::Graphics::D3D12::VersionedRootSignatureDeserializer", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_versioned_root_signature_deserializer.html", null ],
@@ -3814,6 +4179,8 @@ var hierarchy =
           ] ]
         ] ]
       ] ],
+      [ "Harlinn::Windows::Graphics::D3D12::VirtualizationGuestDevice", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_virtualization_guest_device.html", null ],
+      [ "Harlinn::Windows::Graphics::D3D12::WorkGraphProperties", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_work_graph_properties.html", null ],
       [ "Harlinn::Windows::Graphics::DXGI::DecodeSwapChain", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_decode_swap_chain.html", null ],
       [ "Harlinn::Windows::Graphics::DXGI::DisplayControl", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_display_control.html", null ],
       [ "Harlinn::Windows::Graphics::DXGI::FactoryMedia", "class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_factory_media.html", null ],
@@ -4168,7 +4535,9 @@ var hierarchy =
         [ "Harlinn::Windows::Media::MFTopologyNode", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_topology_node.html", null ]
       ] ],
       [ "Harlinn::Windows::Media::MFAudioPolicy", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_audio_policy.html", null ],
+      [ "Harlinn::Windows::Media::MFAudioSourceProvider", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_audio_source_provider.html", null ],
       [ "Harlinn::Windows::Media::MFAudioStreamVolume", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_audio_stream_volume.html", null ],
+      [ "Harlinn::Windows::Media::MFBufferListNotify", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_buffer_list_notify.html", null ],
       [ "Harlinn::Windows::Media::MFByteStream", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_byte_stream.html", null ],
       [ "Harlinn::Windows::Media::MFByteStreamBuffering", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_byte_stream_buffering.html", null ],
       [ "Harlinn::Windows::Media::MFByteStreamCacheControl", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_byte_stream_cache_control.html", [
@@ -4181,6 +4550,7 @@ var hierarchy =
       [ "Harlinn::Windows::Media::MFCameraOcclusionStateReport", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_camera_occlusion_state_report.html", null ],
       [ "Harlinn::Windows::Media::MFCameraOcclusionStateReportCallback", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_camera_occlusion_state_report_callback.html", null ],
       [ "Harlinn::Windows::Media::MFCapturePhotoConfirmation", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_capture_photo_confirmation.html", null ],
+      [ "Harlinn::Windows::Media::MFCdmSuspendNotify", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_cdm_suspend_notify.html", null ],
       [ "Harlinn::Windows::Media::MFClock", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_clock.html", [
         [ "Harlinn::Windows::Media::MFPresentationClock", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_presentation_clock.html", null ],
         [ "Harlinn::Windows::Media::MFPresentationTimeSource", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_presentation_time_source.html", null ]
@@ -4211,14 +4581,40 @@ var hierarchy =
       [ "Harlinn::Windows::Media::MFExtendedCameraIntrinsics", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_extended_camera_intrinsics.html", null ],
       [ "Harlinn::Windows::Media::MFExtendedCameraIntrinsicsDistortionModel6KT", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_extended_camera_intrinsics_distortion_model6_k_t.html", null ],
       [ "Harlinn::Windows::Media::MFExtendedCameraIntrinsicsDistortionModelArcTan", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_extended_camera_intrinsics_distortion_model_arc_tan.html", null ],
+      [ "Harlinn::Windows::Media::MFExtendedDRMTypeSupport", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_extended_d_r_m_type_support.html", null ],
       [ "Harlinn::Windows::Media::MFFieldOfUseMFTUnlock", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_field_of_use_m_f_t_unlock.html", null ],
       [ "Harlinn::Windows::Media::MFGetService", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_get_service.html", null ],
+      [ "Harlinn::Windows::Media::MFHDCPStatus", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_h_d_c_p_status.html", null ],
       [ "Harlinn::Windows::Media::MFHttpDownloadRequest", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_http_download_request.html", null ],
       [ "Harlinn::Windows::Media::MFHttpDownloadSession", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_http_download_session.html", null ],
       [ "Harlinn::Windows::Media::MFHttpDownloadSessionProvider", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_http_download_session_provider.html", null ],
       [ "Harlinn::Windows::Media::MFInputTrustAuthority", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_input_trust_authority.html", null ],
       [ "Harlinn::Windows::Media::MFLocalMFTRegistration", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_local_m_f_t_registration.html", null ],
       [ "Harlinn::Windows::Media::MFMediaBuffer", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_buffer.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaEngine", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine.html", [
+        [ "Harlinn::Windows::Media::MFMediaEngineEx", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_ex.html", null ]
+      ] ],
+      [ "Harlinn::Windows::Media::MFMediaEngineAudioEndpointId", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_audio_endpoint_id.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaEngineClassFactory", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_class_factory.html", [
+        [ "Harlinn::Windows::Media::MFMediaEngineClassFactoryEx", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_class_factory_ex.html", null ]
+      ] ],
+      [ "Harlinn::Windows::Media::MFMediaEngineClassFactory2", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_class_factory2.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaEngineClassFactory3", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_class_factory3.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaEngineClassFactory4", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_class_factory4.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaEngineEME", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_e_m_e.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaEngineEMENotify", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_e_m_e_notify.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaEngineExtension", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_extension.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaEngineNeedKeyNotify", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_need_key_notify.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaEngineNotify", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_notify.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaEngineOPMInfo", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_o_p_m_info.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaEngineProtectedContent", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_protected_content.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaEngineSrcElements", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_src_elements.html", [
+        [ "Harlinn::Windows::Media::MFMediaEngineSrcElementsEx", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_src_elements_ex.html", null ]
+      ] ],
+      [ "Harlinn::Windows::Media::MFMediaEngineSupportsSourceTransfer", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_supports_source_transfer.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaEngineTransferSource", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_transfer_source.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaEngineWebSupport", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_engine_web_support.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaError", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_error.html", null ],
       [ "Harlinn::Windows::Media::MFMediaEventGenerator", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_event_generator.html", [
         [ "Harlinn::Windows::Media::MFMediaSession", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_session.html", null ],
         [ "Harlinn::Windows::Media::MFMediaSource", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_source.html", [
@@ -4232,13 +4628,26 @@ var hierarchy =
         [ "Harlinn::Windows::Media::MFStreamSink", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_stream_sink.html", null ]
       ] ],
       [ "Harlinn::Windows::Media::MFMediaEventQueue", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_event_queue.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaKeySession", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_key_session.html", [
+        [ "Harlinn::Windows::Media::MFMediaKeySession2", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_key_session2.html", null ]
+      ] ],
+      [ "Harlinn::Windows::Media::MFMediaKeySessionNotify", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_key_session_notify.html", [
+        [ "Harlinn::Windows::Media::MFMediaKeySessionNotify2", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_key_session_notify2.html", null ]
+      ] ],
+      [ "Harlinn::Windows::Media::MFMediaKeySystemAccess", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_key_system_access.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaKeys", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_keys.html", [
+        [ "Harlinn::Windows::Media::MFMediaKeys2", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_keys2.html", null ]
+      ] ],
       [ "Harlinn::Windows::Media::MFMediaSink", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_sink.html", [
         [ "Harlinn::Windows::Media::MFFinalizableMediaSink", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_finalizable_media_sink.html", null ]
       ] ],
       [ "Harlinn::Windows::Media::MFMediaSinkPreroll", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_sink_preroll.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaSourceExtensionLiveSeekableRange", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_source_extension_live_seekable_range.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaSourceExtensionNotify", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_source_extension_notify.html", null ],
       [ "Harlinn::Windows::Media::MFMediaSourcePresentationProvider", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_source_presentation_provider.html", null ],
       [ "Harlinn::Windows::Media::MFMediaSourceTopologyProvider", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_source_topology_provider.html", null ],
       [ "Harlinn::Windows::Media::MFMediaStreamSourceSampleRequest", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_stream_source_sample_request.html", null ],
+      [ "Harlinn::Windows::Media::MFMediaTimeRange", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_time_range.html", null ],
       [ "Harlinn::Windows::Media::MFMediaTypeHandler", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_media_type_handler.html", null ],
       [ "Harlinn::Windows::Media::MFMetadata", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_metadata.html", null ],
       [ "Harlinn::Windows::Media::MFMetadataProvider", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_metadata_provider.html", null ],
@@ -4311,6 +4720,10 @@ var hierarchy =
         [ "Harlinn::Windows::Media::MFSinkWriterCallback2", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_sink_writer_callback2.html", null ]
       ] ],
       [ "Harlinn::Windows::Media::MFSinkWriterEncoderConfig", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_sink_writer_encoder_config.html", null ],
+      [ "Harlinn::Windows::Media::MFSourceBuffer", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_source_buffer.html", null ],
+      [ "Harlinn::Windows::Media::MFSourceBufferAppendMode", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_source_buffer_append_mode.html", null ],
+      [ "Harlinn::Windows::Media::MFSourceBufferList", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_source_buffer_list.html", null ],
+      [ "Harlinn::Windows::Media::MFSourceBufferNotify", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_source_buffer_notify.html", null ],
       [ "Harlinn::Windows::Media::MFSourceOpenMonitor", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_source_open_monitor.html", null ],
       [ "Harlinn::Windows::Media::MFSourceReader", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_source_reader.html", [
         [ "Harlinn::Windows::Media::MFSourceReaderEx", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_source_reader_ex.html", null ]
@@ -4322,6 +4735,19 @@ var hierarchy =
       [ "Harlinn::Windows::Media::MFStreamingSinkConfig", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_streaming_sink_config.html", null ],
       [ "Harlinn::Windows::Media::MFSystemId", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_system_id.html", null ],
       [ "Harlinn::Windows::Media::MFTimecodeTranslate", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timecode_translate.html", null ],
+      [ "Harlinn::Windows::Media::MFTimedText", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timed_text.html", null ],
+      [ "Harlinn::Windows::Media::MFTimedTextBinary", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timed_text_binary.html", null ],
+      [ "Harlinn::Windows::Media::MFTimedTextBouten", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timed_text_bouten.html", null ],
+      [ "Harlinn::Windows::Media::MFTimedTextCue", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timed_text_cue.html", null ],
+      [ "Harlinn::Windows::Media::MFTimedTextCueList", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timed_text_cue_list.html", null ],
+      [ "Harlinn::Windows::Media::MFTimedTextFormattedText", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timed_text_formatted_text.html", null ],
+      [ "Harlinn::Windows::Media::MFTimedTextNotify", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timed_text_notify.html", null ],
+      [ "Harlinn::Windows::Media::MFTimedTextRegion", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timed_text_region.html", null ],
+      [ "Harlinn::Windows::Media::MFTimedTextRuby", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timed_text_ruby.html", null ],
+      [ "Harlinn::Windows::Media::MFTimedTextStyle", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timed_text_style.html", null ],
+      [ "Harlinn::Windows::Media::MFTimedTextStyle2", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timed_text_style2.html", null ],
+      [ "Harlinn::Windows::Media::MFTimedTextTrack", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timed_text_track.html", null ],
+      [ "Harlinn::Windows::Media::MFTimedTextTrackList", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timed_text_track_list.html", null ],
       [ "Harlinn::Windows::Media::MFTimer", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_timer.html", null ],
       [ "Harlinn::Windows::Media::MFTopoLoader", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_topo_loader.html", null ],
       [ "Harlinn::Windows::Media::MFTopologyNodeAttributeEditor", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_topology_node_attribute_editor.html", null ],
@@ -4366,6 +4792,7 @@ var hierarchy =
       [ "Harlinn::Windows::Media::MediaBuffer", "class_harlinn_1_1_windows_1_1_media_1_1_media_buffer.html", null ],
       [ "Harlinn::Windows::Media::MediaObject", "class_harlinn_1_1_windows_1_1_media_1_1_media_object.html", null ],
       [ "Harlinn::Windows::Media::MediaObjectInPlace", "class_harlinn_1_1_windows_1_1_media_1_1_media_object_in_place.html", null ],
+      [ "Harlinn::Windows::Media::MediaSourceExtension", "class_harlinn_1_1_windows_1_1_media_1_1_media_source_extension.html", null ],
       [ "Harlinn::Windows::ModalWindow", "class_harlinn_1_1_windows_1_1_modal_window.html", [
         [ "Harlinn::Windows::FileDialog", "class_harlinn_1_1_windows_1_1_file_dialog.html", [
           [ "Harlinn::Windows::FileOpenDialog", "class_harlinn_1_1_windows_1_1_file_open_dialog.html", null ],
@@ -4379,6 +4806,7 @@ var hierarchy =
       [ "Harlinn::Common::Core::Environment::ProcessEntries", "class_harlinn_1_1_common_1_1_core_1_1_environment_1_1_process_entries.html", null ],
       [ "Harlinn::Common::Core::Security::SecurityPackages", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_packages.html", null ]
     ] ],
+    [ "Harlinn::Windows::Graphics::D3D12::UnorderedAccessViewDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_unordered_access_view_desc.html", null ],
     [ "Harlinn.Common.Core.Net.Data.UpdateData< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_update_data.html", null ],
     [ "Harlinn::Common::Core::Http::UrlGroup", "class_harlinn_1_1_common_1_1_core_1_1_http_1_1_url_group.html", null ],
     [ "Harlinn::Common::Core::Utf::Internal::Utf16Traits< T >", "class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html", null ],
@@ -4478,6 +4906,9 @@ var hierarchy =
       [ "Harlinn::Common::Core::VectorIterator< VectorT >", "class_harlinn_1_1_common_1_1_core_1_1_vector_iterator.html", null ]
     ] ],
     [ "Harlinn::Common::Core::Http::Version", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_version.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::VersionedDeviceRemovedExtendedData", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_versioned_device_removed_extended_data.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::VersionedRootSignatureDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_versioned_root_signature_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::VertexBufferView", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_vertex_buffer_view.html", null ],
     [ "Harlinn::Common::Core::FileMapping::View", "class_harlinn_1_1_common_1_1_core_1_1_file_mapping_1_1_view.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::ViewInstanceLocation", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_view_instance_location.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::ViewInstancingDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_view_instancing_desc.html", null ],
@@ -4520,8 +4951,11 @@ var hierarchy =
     ] ],
     [ "Harlinn::Windows::WindowClasses", "class_harlinn_1_1_windows_1_1_window_classes.html", null ],
     [ "Harlinn::Common::Core::Logging::Types::WindowsVersionInfoKey", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_windows_version_info_key.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::WorkGraphDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_work_graph_desc.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::WorkGraphMemoryRequirements", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_work_graph_memory_requirements.html", null ],
     [ "Harlinn::Common::Core::RtWorkQ::WorkQueue", "class_harlinn_1_1_common_1_1_core_1_1_rt_work_q_1_1_work_queue.html", null ],
     [ "Harlinn::Common::Core::IO::WriteBuffer< StreamT, bufferSize >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_write_buffer.html", null ],
+    [ "Harlinn::Windows::Graphics::D3D12::WriteBufferImmediateParameter", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_write_buffer_immediate_parameter.html", null ],
     [ "Harlinn::Common::Core::IO::Sockets::WSAInitTerm", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_w_s_a_init_term.html", null ],
     [ "WSANETWORKEVENTS", null, [
       [ "Harlinn::Common::Core::IO::Sockets::NetworkEvents", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_network_events.html", null ]

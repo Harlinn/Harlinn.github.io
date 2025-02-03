@@ -1,6 +1,7 @@
 var class_harlinn_1_1_common_1_1_core_1_1_com_ptr =
 [
     [ "Base", "class_harlinn_1_1_common_1_1_core_1_1_com_ptr.html#a1afd545f2266cf1c475e0465a5ef7088", null ],
+    [ "InterfaceType", "class_harlinn_1_1_common_1_1_core_1_1_com_ptr.html#a55fa3ad5b30e355850b5d625f29d7460", null ],
     [ "ComPtr", "class_harlinn_1_1_common_1_1_core_1_1_com_ptr.html#ae2a0c5ea7183d9ea35a5fa15f3736d8a", null ],
     [ "ComPtr", "class_harlinn_1_1_common_1_1_core_1_1_com_ptr.html#a507d404f1e84105348cc5d06cc764761", null ],
     [ "ComPtr", "class_harlinn_1_1_common_1_1_core_1_1_com_ptr.html#a9d8c8bdf32e690bd960b03f28d76c571", null ],

@@ -58,6 +58,7 @@ var class_harlinn_1_1_windows_1_1_media_1_1_m_f_attributes =
     [ "SetString", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_attributes.html#a303d65d588330695b5f5be01480ea8b7", null ],
     [ "SetUINT32", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_attributes.html#a03986b71c589fad100af6e4a7847ffd7", null ],
     [ "SetUINT64", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_attributes.html#ac07fb38452f1907f8e5a5edcd27d968b", null ],
+    [ "SetUnknown", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_attributes.html#a3404df55eaec6782af1338e85fb9c68d", null ],
     [ "SetUnknown", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_attributes.html#a6846d23e9dddec7ee123bf8f38a1500a", null ],
     [ "unlock", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_attributes.html#a2f027972f1ad525eac08a8644c96802d", null ],
     [ "UnlockStore", "class_harlinn_1_1_windows_1_1_media_1_1_m_f_attributes.html#a3be66bb56f04e8d841b9b7c082b19071", null ],

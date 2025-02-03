@@ -98,6 +98,7 @@ $(function(){initNavTree('struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_input_element_desc-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Harlinn::Windows::Graphics::D3D12::InputElementDesc Struct Reference</div></div>
@@ -109,6 +110,15 @@ $(function(){initNavTree('struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1
 
 <p><code>#include &lt;HWGraphicsD3D12Ex.h&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a313581dd68f294a08e3c4c0bbf6b5b8a" id="r_a313581dd68f294a08e3c4c0bbf6b5b8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a313581dd68f294a08e3c4c0bbf6b5b8a">InputElementDesc</a> ()=default</td></tr>
+<tr class="separator:a313581dd68f294a08e3c4c0bbf6b5b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca838407723208b58f8ffab0e2291d0" id="r_a6ca838407723208b58f8ffab0e2291d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ca838407723208b58f8ffab0e2291d0">InputElementDesc</a> (const char *semanticName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> semanticIndex, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i.html#a44af51316c575dcac6b4f3fd7fe8233f">DXGI::Format</a> format, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> inputSlot, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> alignedByteOffset, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a0f180e5120c3f6086b5da419b7704418">InputClassification</a> inputSlotClass, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> instanceDataStepRate)</td></tr>
+<tr class="separator:a6ca838407723208b58f8ffab0e2291d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f6475810130b418915c5b026cf7433" id="r_ac2f6475810130b418915c5b026cf7433"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2f6475810130b418915c5b026cf7433">HWD3D12_IMPLEMENT_CONVERSIONS_TO</a> (D3D12_INPUT_ELEMENT_DESC)</td></tr>
+<tr class="separator:ac2f6475810130b418915c5b026cf7433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a219c406147b088b6a1f8e6a44ee0ee4c" id="r_a219c406147b088b6a1f8e6a44ee0ee4c"><td class="memItemLeft" align="right" valign="top">LPCSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a219c406147b088b6a1f8e6a44ee0ee4c">SemanticName</a> = nullptr</td></tr>
@@ -129,13 +139,111 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a235cf0152948ad9a6da36425592a301b" id="r_a235cf0152948ad9a6da36425592a301b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a0f180e5120c3f6086b5da419b7704418">InputClassification</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a235cf0152948ad9a6da36425592a301b">InputSlotClass</a> = <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a0f180e5120c3f6086b5da419b7704418ae074130e1d007803d906cb2c3a3a19bf">InputClassification::PerVertexData</a></td></tr>
 <tr class="memdesc:a235cf0152948ad9a6da36425592a301b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A value that identifies the input data class for a single input slot.  <br /></td></tr>
 <tr class="separator:a235cf0152948ad9a6da36425592a301b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afba82ccbd9106dcefcbe905aa0250830" id="r_afba82ccbd9106dcefcbe905aa0250830"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afba82ccbd9106dcefcbe905aa0250830">InstanceDataStepRate</a> = 0</td></tr>
-<tr class="memdesc:afba82ccbd9106dcefcbe905aa0250830"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of instances to draw using the same per-instance data before advancing in the buffer by one element. This value must be 0 for an element that contains per-vertex data (the slot class is set to the PerVertexData member of InputClassification).  <br /></td></tr>
-<tr class="separator:afba82ccbd9106dcefcbe905aa0250830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d6a854203dec4f9c5463df540c70889" id="r_a0d6a854203dec4f9c5463df540c70889"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d6a854203dec4f9c5463df540c70889">InstanceDataStepRate</a> = 0</td></tr>
+<tr class="memdesc:a0d6a854203dec4f9c5463df540c70889"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of instances to draw using the same per-instance data before advancing in the buffer by one element. This value must be 0 for an element that contains per-vertex data (the slot class is set to the PerVertexData member of InputClassification).  <br /></td></tr>
+<tr class="separator:a0d6a854203dec4f9c5463df540c70889"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Describes a single element for the input-assembler stage of the graphics pipeline. </p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a313581dd68f294a08e3c4c0bbf6b5b8a" name="a313581dd68f294a08e3c4c0bbf6b5b8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a313581dd68f294a08e3c4c0bbf6b5b8a">&#9670;&#160;</a></span>InputElementDesc() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Harlinn::Windows::Graphics::D3D12::InputElementDesc::InputElementDesc </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ca838407723208b58f8ffab0e2291d0" name="a6ca838407723208b58f8ffab0e2291d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca838407723208b58f8ffab0e2291d0">&#9670;&#160;</a></span>InputElementDesc() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Harlinn::Windows::Graphics::D3D12::InputElementDesc::InputElementDesc </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>semanticName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>semanticIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i.html#a44af51316c575dcac6b4f3fd7fe8233f">DXGI::Format</a></td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>inputSlot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>alignedByteOffset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a0f180e5120c3f6086b5da419b7704418">InputClassification</a></td>          <td class="paramname"><span class="paramname"><em>inputSlotClass</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>instanceDataStepRate</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac2f6475810130b418915c5b026cf7433" name="ac2f6475810130b418915c5b026cf7433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2f6475810130b418915c5b026cf7433">&#9670;&#160;</a></span>HWD3D12_IMPLEMENT_CONVERSIONS_TO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Harlinn::Windows::Graphics::D3D12::InputElementDesc::HWD3D12_IMPLEMENT_CONVERSIONS_TO </td>
+          <td>(</td>
+          <td class="paramtype">D3D12_INPUT_ELEMENT_DESC</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="ab39b56bd565272ac8d60017f2fdb0179" name="ab39b56bd565272ac8d60017f2fdb0179"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab39b56bd565272ac8d60017f2fdb0179">&#9670;&#160;</a></span>AlignedByteOffset</h2>
 
@@ -200,14 +308,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afba82ccbd9106dcefcbe905aa0250830" name="afba82ccbd9106dcefcbe905aa0250830"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afba82ccbd9106dcefcbe905aa0250830">&#9670;&#160;</a></span>InstanceDataStepRate</h2>
+<a id="a0d6a854203dec4f9c5463df540c70889" name="a0d6a854203dec4f9c5463df540c70889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d6a854203dec4f9c5463df540c70889">&#9670;&#160;</a></span>InstanceDataStepRate</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">UINT Harlinn::Windows::Graphics::D3D12::InputElementDesc::InstanceDataStepRate = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::D3D12::InputElementDesc::InstanceDataStepRate = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

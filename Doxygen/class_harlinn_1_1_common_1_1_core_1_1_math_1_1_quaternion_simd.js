@@ -19,6 +19,7 @@ var class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd =
     [ "QuaternionSimd", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd.html#aa1395c9b7433131862b7b1e4264bf1ed", null ],
     [ "QuaternionSimd", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd.html#a214c48305596e78adfcf235459b9f7bf", null ],
     [ "QuaternionSimd", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd.html#aceb95857b0a77589b0e026ee95616bf2", null ],
+    [ "QuaternionSimd", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd.html#ab98543165de223827a5dbb82785aee5c", null ],
     [ "FromAxisAndAngle", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd.html#a8fe9f03d43bbb2b1de72376e02fd48a2", null ],
     [ "FromAxisAndAngle", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd.html#a4f5325a9c2734b134625ef1d7d50d401", null ],
     [ "FromMatrix", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd.html#ad1a3b51f1161684e70f324c1edca575a", null ],

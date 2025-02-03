@@ -1,5 +1,6 @@
 var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d3_d12___f_e_a_t_u_r_e___d_a_t_a___d3_d12___o_p_t_i_o_n_s4 =
 [
+    [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d3_d12___f_e_a_t_u_r_e___d_a_t_a___d3_d12___o_p_t_i_o_n_s4.html#a3bdfd5676bf0e51838af8cd0b2d89df6", null ],
     [ "MSAA64KBAlignedTextureSupported", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d3_d12___f_e_a_t_u_r_e___d_a_t_a___d3_d12___o_p_t_i_o_n_s4.html#ada80a3a76c24ef40375e27f2a5e0fc43", null ],
     [ "Native16BitShaderOpsSupported", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d3_d12___f_e_a_t_u_r_e___d_a_t_a___d3_d12___o_p_t_i_o_n_s4.html#a3fbdf892418f7e200b29286aa1945ff0", null ],
     [ "SharedResourceCompatibilityTier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d3_d12___f_e_a_t_u_r_e___d_a_t_a___d3_d12___o_p_t_i_o_n_s4.html#a673f8af2f4317000fc01d330768dd07b", null ]

@@ -1,0 +1,5 @@
+var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_beginning_access_clear_parameters =
+[
+    [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_beginning_access_clear_parameters.html#afa16352d957d4408038156c66fbd7498", null ],
+    [ "ClearValue", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_beginning_access_clear_parameters.html#a55c441fdbdc7b5e31fbcfba6cf038c2a", null ]
+];

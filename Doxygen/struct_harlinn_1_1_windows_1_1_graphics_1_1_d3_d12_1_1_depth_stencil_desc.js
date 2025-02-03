@@ -1,5 +1,6 @@
 var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_depth_stencil_desc =
 [
+    [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_depth_stencil_desc.html#a6f1c05fde1dd3447312f9d74f963ea9b", null ],
     [ "BackFace", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_depth_stencil_desc.html#affcd6bf8a32b3f9b6e33473ca26dd52e", null ],
     [ "DepthEnable", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_depth_stencil_desc.html#abadbe1130111cd21f11508b1310ca719", null ],
     [ "DepthFunc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_depth_stencil_desc.html#a7a984f9d41d14afbaab5a09169ac4cb0", null ],

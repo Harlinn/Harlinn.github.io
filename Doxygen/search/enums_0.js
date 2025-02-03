@@ -24,5 +24,7 @@ var searchData=
   ['authenticationschemes_21',['AuthenticationSchemes',['../namespace_harlinn_1_1_common_1_1_core_1_1_http.html#a7256923cd564a1e2936a362a75124900',1,'Harlinn::Common::Core::Http']]],
   ['authenticationservice_22',['AuthenticationService',['../namespace_harlinn_1_1_common_1_1_core_1_1_com.html#a64f0a74e13740b33f098a4fc9a265efc',1,'Harlinn::Common::Core::Com']]],
   ['authorization_23',['Authorization',['../namespace_harlinn_1_1_common_1_1_core_1_1_com.html#ab4349f64acc41b443bcfeaf62a72e3b4',1,'Harlinn::Common::Core::Com']]],
-  ['authstatus_24',['AuthStatus',['../namespace_harlinn_1_1_common_1_1_core_1_1_http.html#ab7051d9f691b422e8b69587b4160a770',1,'Harlinn::Common::Core::Http']]]
+  ['authstatus_24',['AuthStatus',['../namespace_harlinn_1_1_common_1_1_core_1_1_http.html#ab7051d9f691b422e8b69587b4160a770',1,'Harlinn::Common::Core::Http']]],
+  ['autobreadcrumboperation_25',['AutoBreadcrumbOperation',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8e8726840f9176a347048edea205b763',1,'Harlinn::Windows::Graphics::D3D12']]],
+  ['axisshadingrate_26',['AxisShadingRate',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a701d69380821c46c6897cc8f5d0e99aa',1,'Harlinn::Windows::Graphics::D3D12']]]
 ];

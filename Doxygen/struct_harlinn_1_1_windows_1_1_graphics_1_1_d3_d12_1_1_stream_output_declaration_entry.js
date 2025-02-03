@@ -1,5 +1,6 @@
 var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_declaration_entry =
 [
+    [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_declaration_entry.html#a225ff72f4bd4e252eaa20d74bf61b80e", null ],
     [ "ComponentCount", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_declaration_entry.html#a6cc5b5d14ea6979d3dc23d36875c2b85", null ],
     [ "OutputSlot", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_declaration_entry.html#a00bdc7a3037d345d1732f55d6dfc72ce", null ],
     [ "SemanticIndex", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_stream_output_declaration_entry.html#a933ae0632c01272095968238d424f1c5", null ],

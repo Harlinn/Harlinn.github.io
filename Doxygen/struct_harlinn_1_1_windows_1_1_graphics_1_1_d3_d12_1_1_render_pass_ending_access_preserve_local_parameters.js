@@ -1,0 +1,6 @@
+var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_ending_access_preserve_local_parameters =
+[
+    [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_ending_access_preserve_local_parameters.html#a9b9f9d76f2da6709ad60109fd14079eb", null ],
+    [ "AdditionalHeight", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_ending_access_preserve_local_parameters.html#a4bddcd2ddb74fe3fabeb96cc02ab8e7c", null ],
+    [ "AdditionalWidth", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_render_pass_ending_access_preserve_local_parameters.html#a27fe7e177e235145ace5a0c287856ec5", null ]
+];

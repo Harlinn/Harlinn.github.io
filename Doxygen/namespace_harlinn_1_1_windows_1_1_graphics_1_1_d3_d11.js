@@ -68,5 +68,6 @@ var namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11 =
     [ "VideoProcessorEnumerator1", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_video_processor_enumerator1.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_video_processor_enumerator1" ],
     [ "VideoProcessorInputView", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_video_processor_input_view.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_video_processor_input_view" ],
     [ "VideoProcessorOutputView", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_video_processor_output_view.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_video_processor_output_view" ],
-    [ "View", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_view.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_view" ]
+    [ "View", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_view.html", "class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11_1_1_view" ],
+    [ "CreateDevice", "namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d11.html#a85d0a50ebdd61b763cb1f4def15f396d", null ]
 ];

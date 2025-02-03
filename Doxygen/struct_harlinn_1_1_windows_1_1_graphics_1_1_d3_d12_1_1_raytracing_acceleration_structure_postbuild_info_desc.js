@@ -1,0 +1,6 @@
+var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_postbuild_info_desc =
+[
+    [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_postbuild_info_desc.html#a28f2c80a6302f5a7168cc996e96c02dc", null ],
+    [ "DestBuffer", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_postbuild_info_desc.html#aee4450ac75a2ba248736429e20e700d6", null ],
+    [ "InfoType", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_postbuild_info_desc.html#afc9be89bff21e591daba8bf0477d0274", null ]
+];
