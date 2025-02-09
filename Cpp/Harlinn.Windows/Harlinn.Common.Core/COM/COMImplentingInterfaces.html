@@ -233,12 +233,11 @@
   </header>
 
   <div class="post-content">
-    <p>Implementing COM interfaces is an essential skill. This article shows how 
-to implement the <a href="https://learn.microsoft.com/en-us/windows/win32/api/mfmediaengine/nn-mfmediaengine-imfmediaenginenotify"><code class="language-plaintext highlighter-rouge">IMFMediaEngineNotify</code></a> interface, 
+    <p>Implementing COM interfaces is an essential skill required for working with many of the Windows APIs. This article shows how 
+easy it is to implement the <a href="https://learn.microsoft.com/en-us/windows/win32/api/mfmediaengine/nn-mfmediaengine-imfmediaenginenotify"><code class="language-plaintext highlighter-rouge">IMFMediaEngineNotify</code></a> interface, 
 the callback interface for the <a href="https://learn.microsoft.com/en-us/windows/win32/api/mfmediaengine/nn-mfmediaengine-imfmediaengine"><code class="language-plaintext highlighter-rouge">IMFMediaEngine</code></a> interface.</p>
 
-<p>Implementing an interface is, fortunately, quite easy, and the <code class="language-plaintext highlighter-rouge">IMFMediaEngineNotify</code> 
-interface have just a single function, <code class="language-plaintext highlighter-rouge">EventNotify</code>:</p>
+<p>The <code class="language-plaintext highlighter-rouge">IMFMediaEngineNotify</code> interface have just a single function, <code class="language-plaintext highlighter-rouge">EventNotify</code>:</p>
 <pre><code class="language-C++">struct IMFMediaEngineNotify : public IUnknown
 {
 public:
@@ -247,15 +246,20 @@ public:
                                             _In_  DWORD param2) = 0;
 };
 </code></pre>
+<p>There are 3 steps to implementing a COM object that implements a COM interface, and the 
+first is quite possibly already provided by the library.</p>
+
+<h4 id="step-1">Step 1</h4>
+
 <p>The library requires a specialization of the <code class="language-plaintext highlighter-rouge">Interface</code> struct
 inside the <code class="language-plaintext highlighter-rouge">Harlinn::Common::Core::Com::Interfaces</code> namespace.</p>
 
-<p>The <a href="/Cpp/Harlinn.Windows/Harlinn.Common.Core/Harlinn.Common.Core.html"><code class="language-plaintext highlighter-rouge">Harlinn.Common.Core</code></a> library provides specializations for 
-each interface with an entry in <a href="https://github.com/Harlinn/Harlinn.Windows/blob/master/Harlinn.Common.Core/HCCComInterfaces.xm">HCCComInterfaces.xm</a>,
-and if it is, then it will be an error to create an additional specialization.</p>
-
 <p>This <code class="language-plaintext highlighter-rouge">Interface</code> specialization is used to implement <a href="https://learn.microsoft.com/en-us/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)"><code class="language-plaintext highlighter-rouge">IUnknown::QueryInterface</code></a>
 for the instantiated COM object.</p>
+
+<p>The <a href="/Cpp/Harlinn.Windows/Harlinn.Common.Core/Harlinn.Common.Core.html"><code class="language-plaintext highlighter-rouge">Harlinn.Common.Core</code></a> library provides specializations for 
+each interface with an entry in <a href="https://github.com/Harlinn/Harlinn.Windows/blob/master/Harlinn.Common.Core/HCCComInterfaces.xm">HCCComInterfaces.xm</a>,
+and if it is, then it will be an error to create an additional specialization, <b>and this step must be skipped</b>.</p>
 
 <p>Interfaces without a specialization matches:</p>
 
@@ -263,6 +267,7 @@ for the instantiated COM object.</p>
 struct Interface : std::false_type
 { };
 </code></pre>
+
 <p>The library already provides a specialization of <code class="language-plaintext highlighter-rouge">Interface</code> for <code class="language-plaintext highlighter-rouge">IMFMediaEngineNotify</code>, but
 if it did not, we would use the <code class="language-plaintext highlighter-rouge">HCC_COM_IMPLEMENT_INTERFACE_SPECIALIZATION( Itf, BaseItf )</code> macro to 
 implement the specialization. <code class="language-plaintext highlighter-rouge">Itf</code> is the interface we are specializing for,
@@ -275,6 +280,8 @@ namespace Harlinn::Common::Core::Com::Interfaces
     HCC_COM_IMPLEMENT_INTERFACE_SPECIALIZATION(IMFMediaEngineNotify,IUnknown)
 }
 </code></pre>
+<h4 id="step-2">Step 2</h4>
+
 <p>To implement the <code class="language-plaintext highlighter-rouge">IMFMediaEngineNotify</code>, we start out by deriving our
 implementation from the <code class="language-plaintext highlighter-rouge">Harlinn::Common::Core::Com::ObjectBase</code> template
 class:</p>
@@ -313,6 +320,8 @@ public:
 
 <p>This creates a new template class, with an implementation of <code class="language-plaintext highlighter-rouge">EventNotify</code>, and nothing else.</p>
 
+<h4 id="step-3">Step 3</h4>
+
 <p>The library provides two templates, implementing the functions inherited from the
 <code class="language-plaintext highlighter-rouge">IUnknown</code> interface:</p>
 
@@ -343,8 +352,10 @@ the constructor for the <code class="language-plaintext highlighter-rouge">Media
 initialization, perhaps obvious, but still missing from other COM
 implementation libraries.</p>
 
+<h4 id="done">Done</h4>
+
 <p>The above provides a complete COM object implementation in C++, 
-used to implement callbacks from the Microsoft Media Foundation
+used to handle callbacks from the Microsoft Media Foundation
 MediaEngine to the app hosting the MediaEngine:</p>
 
 <pre><code class="language-C++">Media::MFMediaEngineNotify mediaEngineNotify( new MediaEngineNotify( this ) );
