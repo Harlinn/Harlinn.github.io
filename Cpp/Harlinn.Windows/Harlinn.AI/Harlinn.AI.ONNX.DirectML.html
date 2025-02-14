@@ -3,21 +3,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Harlinn.AI | Harlinn</title>
+<title>Harlinn.AI.ONNX.DirectML | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Harlinn.AI" />
+<meta property="og:title" content="Harlinn.AI.ONNX.DirectML" />
 <meta name="author" content="Espen Harlinn" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is my personal site." />
 <meta property="og:description" content="This is my personal site." />
-<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.AI/Harlinn.AI.html" />
-<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.AI/Harlinn.AI.html" />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.AI/Harlinn.AI.ONNX.DirectML.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.AI/Harlinn.AI.ONNX.DirectML.html" />
 <meta property="og:site_name" content="Harlinn" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Harlinn.AI" />
+<meta property="twitter:title" content="Harlinn.AI.ONNX.DirectML" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal site.","headline":"Harlinn.AI","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.AI/Harlinn.AI.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal site.","headline":"Harlinn.AI.ONNX.DirectML","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.AI/Harlinn.AI.ONNX.DirectML.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -229,35 +229,31 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Harlinn.AI</h1>
+    <h1 class="post-title">Harlinn.AI.ONNX.DirectML</h1>
   </header>
 
   <div class="post-content">
-    <p>The Harlinn.AI library delivers a high performance API for implementing 
-AI workloads on the Windows platform on top of <a href="https://learn.microsoft.com/en-us/windows/ai/directml/dml">DirectML</a>.</p>
-
-<p><img src="/Cpp/Harlinn.Windows/Examples/AI\DirectML/Yolo9/ObjectDetection2.png" alt="Yolo v9" /></p>
-
-<p>Yolo 9 Object Detection app based on Harlinn.AI.</p>
-
-<h3 id="harlinnai-directml-dml">Harlinn.AI DirectML (DML)</h3>
-
-<p>The DirectML wrappers are a key component of Harlinn.AI, providing an API on top 
-of the DirectML API, facilitating faster, cleaner, and safer, C++ DirectML development. <a href="Harlinn.AI.DML.html">more…</a></p>
-
-<h3 id="harlinnai-directml-extensions-dmlx">Harlinn.AI DirectML eXtensions (DML.X)</h3>
-
-<p>Harlinn.AI DirectML eXtensions (DML.X) is a C++ header-only helper library for the <a href="Harlinn.AI.DML.html">DirectML wrappers</a>, 
-intended to make it easier to compose DirectML operators into graphs that can be compiled into a <code class="language-plaintext highlighter-rouge">CompiledOperator</code> using 
-the <code class="language-plaintext highlighter-rouge">Device1::CompileGraph</code> function. <a href="Harlinn.AI.DML.X.html">more…</a></p>
-
-<h3 id="harlinnaionnxdirectml">Harlinn.AI.ONNX.DirectML</h3>
-
-<p>Harlinn.AI.ONNX.DirectML executes an AI workload asynchronously using DirectML. 
+    <p>Harlinn.AI.ONNX.DirectML executes an AI workload asynchronously using DirectML. 
 Currently a successful experiment, demonstrating how the ONNX runtime, with the 
 DirectML Execution Provider, can be used to to run inference on the GPU while, at 
-the same time, rendering a video smoothly on the same GPU. <a href="Harlinn.AI.ONNX.DirectML.html">more…</a></p>
+the same time, rendering a video smoothly on the same GPU.</p>
 
+<p>This is demonstrated by the <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Examples/AI/DirectML/Yolo9">Yolo9</a> example app,
+which is a modified version of <a href="https://github.com/fobrs/yolov9_npu">yolov9_npu</a>.</p>
+
+<p>The <a href="https://github.com/fobrs/yolov9_npu">yolov9_npu</a> app didn’t perform as well as expected, 
+since the inference load interferes with the rendering of the video in a timely fashion.</p>
+
+<p>This experiment demonstrates that Direct X workloads can execute concurrently 
+with good performance. It also demonstrates an execution model that should
+enable concurrent execution of different inference workloads using an
+<a href="/Cpp/Cpp/Patterns/ActiveObject.html">active object design pattern</a> based approach.</p>
+
+<p>This provides an elegant solution enabling execution of multiple ONNX sessions,
+each with their own dedicated thread of execution.</p>
+
+<p>The <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Examples/AI/DirectML/Yolo9">Yolo9</a> displays
+available metadata and type information about the inputs and outputs of the model.</p>
 
   </div>
 

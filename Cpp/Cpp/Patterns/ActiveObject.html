@@ -3,21 +3,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Harlinn.AI | Harlinn</title>
+<title>Active Object | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Harlinn.AI" />
+<meta property="og:title" content="Active Object" />
 <meta name="author" content="Espen Harlinn" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is my personal site." />
 <meta property="og:description" content="This is my personal site." />
-<link rel="canonical" href="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.AI/Harlinn.AI.html" />
-<meta property="og:url" content="https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.AI/Harlinn.AI.html" />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Cpp/Patterns/ActiveObject.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Cpp/Patterns/ActiveObject.html" />
 <meta property="og:site_name" content="Harlinn" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Harlinn.AI" />
+<meta property="twitter:title" content="Active Object" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal site.","headline":"Harlinn.AI","url":"https://harlinn.github.io/Cpp/Harlinn.Windows/Harlinn.AI/Harlinn.AI.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Espen Harlinn"},"description":"This is my personal site.","headline":"Active Object","url":"https://harlinn.github.io/Cpp/Cpp/Patterns/ActiveObject.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -229,35 +229,48 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Harlinn.AI</h1>
+    <h1 class="post-title">Active Object</h1>
   </header>
 
   <div class="post-content">
-    <p>The Harlinn.AI library delivers a high performance API for implementing 
-AI workloads on the Windows platform on top of <a href="https://learn.microsoft.com/en-us/windows/ai/directml/dml">DirectML</a>.</p>
+    <p>Active Objects, sometimes called Actors, are event-driven objects running in their 
+own threads of control that communicate with the other components of a solution
+using a message queue.</p>
 
-<p><img src="/Cpp/Harlinn.Windows/Examples/AI\DirectML/Yolo9/ObjectDetection2.png" alt="Yolo v9" /></p>
+<p>The only thread allowed to read, or modify, the data that belongs to an
+active object, is the execution thread of the active object.</p>
 
-<p>Yolo 9 Object Detection app based on Harlinn.AI.</p>
+<p>The communication between an active object and the rest of an app
+is typically implemented using a message queue.</p>
 
-<h3 id="harlinnai-directml-dml">Harlinn.AI DirectML (DML)</h3>
+<p>The message queue of an active object us typically a multi producer,
+single consumer (MPSC) blocking queue. A blocking queue stops the 
+execution of the consumer thread when the queue is empty, preventing
+the consumer thread from consuming CPU time when there is no work to 
+be done.</p>
 
-<p>The DirectML wrappers are a key component of Harlinn.AI, providing an API on top 
-of the DirectML API, facilitating faster, cleaner, and safer, C++ DirectML development. <a href="Harlinn.AI.DML.html">more…</a></p>
+<p>An unbounded MPSC blocking queue will accept an unlimited amount of 
+in-flight messages, which may be beneficial if the active object receives 
+burst of input messages, scaling back the memory requirements for the
+queue when the consumer catches up with its workload. On the other hand, 
+if the producers posts more messages to the message queue than the 
+consumer is able to process, the queue will grow until the system runs 
+out of memory. This can be prevented by using a bounded MPSC blocking queue. A 
+bounded blocking queue has a hard limit on the number of in-flight messages 
+it can handle, and blocks the execution of the producer threads when the 
+queue is full.</p>
 
-<h3 id="harlinnai-directml-extensions-dmlx">Harlinn.AI DirectML eXtensions (DML.X)</h3>
+<p>In C++ an active object will typically provide a public API that
+composes messages from the function arguments that are posted on the
+message queue, hiding this piece of complexity from the rest of the
+application. If the call is a request for information from the
+active object, the api will typically return a <a href="https://en.cppreference.com/w/cpp/thread/future"><code class="language-plaintext highlighter-rouge">std::future</code></a>
+object, or some other object that can be waited on until the active object
+has processed the request.</p>
 
-<p>Harlinn.AI DirectML eXtensions (DML.X) is a C++ header-only helper library for the <a href="Harlinn.AI.DML.html">DirectML wrappers</a>, 
-intended to make it easier to compose DirectML operators into graphs that can be compiled into a <code class="language-plaintext highlighter-rouge">CompiledOperator</code> using 
-the <code class="language-plaintext highlighter-rouge">Device1::CompileGraph</code> function. <a href="Harlinn.AI.DML.X.html">more…</a></p>
-
-<h3 id="harlinnaionnxdirectml">Harlinn.AI.ONNX.DirectML</h3>
-
-<p>Harlinn.AI.ONNX.DirectML executes an AI workload asynchronously using DirectML. 
-Currently a successful experiment, demonstrating how the ONNX runtime, with the 
-DirectML Execution Provider, can be used to to run inference on the GPU while, at 
-the same time, rendering a video smoothly on the same GPU. <a href="Harlinn.AI.ONNX.DirectML.html">more…</a></p>
-
+<p>While processing a request, an active object can be designed to avoid
+synchronization with the other threads of the process, maximizing
+CPU utilization.</p>
 
   </div>
 
