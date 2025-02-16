@@ -234,14 +234,12 @@
 
   <div class="post-content">
     <p>Active Objects, sometimes called Actors, are event-driven objects running in their 
-own threads of control that communicate with the other components of a solution
+own threads of control that handles requests from the other components of the solution
 using a message queue.</p>
 
-<p>The only thread allowed to read, or modify, the data that belongs to an
-active object, is the execution thread of the active object.</p>
-
-<p>The communication between an active object and the rest of an app
-is typically implemented using a message queue.</p>
+<p>Ideally, the only thread allowed to read, or modify, the data that belongs to an
+active object, is the execution thread of the active object, maximizing
+CPU utilization.</p>
 
 <p>The message queue of an active object us typically a multi producer,
 single consumer (MPSC) blocking queue. A blocking queue stops the 
@@ -267,10 +265,6 @@ application. If the call is a request for information from the
 active object, the api will typically return a <a href="https://en.cppreference.com/w/cpp/thread/future"><code class="language-plaintext highlighter-rouge">std::future</code></a>
 object, or some other object that can be waited on until the active object
 has processed the request.</p>
-
-<p>While processing a request, an active object can be designed to avoid
-synchronization with the other threads of the process, maximizing
-CPU utilization.</p>
 
   </div>
 

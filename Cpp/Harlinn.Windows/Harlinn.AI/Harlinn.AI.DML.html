@@ -290,6 +290,853 @@ which is a cross-platform library that supports the open standard ONNX format
 for machine learning models. The ONNX Runtime can use DirectML as one of its 
 execution providers, along with other backends such as CPU, CUDA, or TensorRT.</p>
 
+<h3 id="operator-descriptors">Operator Descriptors</h3>
+
+<p>Operator descriptors are used to define the datatype and shape of input and output
+tensors. In many cases the operator descriptors also hold additional parameters 
+for the operation they describe.</p>
+
+<h4 id="baseoperatordesc">BaseOperatorDesc</h4>
+
+<p>All operator descriptors are derived from <code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code>, an empty struct
+adding zero bytes to the derived operator descriptors due to <a href="https://en.cppreference.com/w/cpp/language/ebo">Empty base optimization</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct BaseOperatorDesc abstract
+{
+};
+</code></pre></div></div>
+
+<h4 id="unaryoperatordesc">UnaryOperatorDesc</h4>
+
+<p>Nearly all unary DirectML operators have <code class="language-plaintext highlighter-rouge">const TensorDesc* InputTensor</code> and <code class="language-plaintext highlighter-rouge">const TensorDesc* OutputTensor</code> as
+the first two member fields of their descriptor type. When this is the case, Harlinn.AI DirectML
+derives the operator descriptor from <code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code>.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#baseoperatordesc"><code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code></a>.</p>
+
+<h4 id="unaryoperatorwithscalebiasdesc">UnaryOperatorWithScaleBiasDesc</h4>
+
+<p>Many unary DirectML operators have an optional <code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code> as the third member
+field of their descriptor type. When this is the case, Harlinn.AI DirectML
+derives the operator descriptor from <code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code>.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<h4 id="binaryoperatordesc">BinaryOperatorDesc</h4>
+
+<p>Many binary DirectML operators have <code class="language-plaintext highlighter-rouge">const TensorDesc* ATensor</code>, <code class="language-plaintext highlighter-rouge">const TensorDesc* BTensor</code> and <code class="language-plaintext highlighter-rouge">const TensorDesc* OutputTensor</code> as
+the first three member fields of their descriptor type. When this is the case, Harlinn.AI DirectML
+derives the operator descriptor from <code class="language-plaintext highlighter-rouge">BinaryOperatorDesc</code>.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensorA</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the first input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensorB</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the second input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#baseoperatordesc"><code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code></a>.</p>
+
+<h4 id="elementwiseidentityoperatordesc">ElementWiseIdentityOperatorDesc</h4>
+
+<p>Computes the identity for each element of <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing 
+the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x)=x\]
+
+<p>or</p>
+
+\[f(x)=x \times scale + bias\]
+
+<p>when <code class="language-plaintext highlighter-rouge">scaleBias</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwiseabsoperatordesc">ElementWiseAbsOperatorDesc</h4>
+
+<p>Computes the absolute value for each element of <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing 
+the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x)=|x|\]
+
+<p>or</p>
+
+\[f(x)=|x \times scale + bias|\]
+
+<p>when <code class="language-plaintext highlighter-rouge">scaleBias</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwiseacosoperatordesc">ElementWiseACosOperatorDesc</h4>
+
+<p>Computes the inverse cosine of each element of InputTensor, placing 
+the result into the corresponding element of OutputTensor.</p>
+
+\[f(x)=cos^{-1}(x)\]
+
+<p>or</p>
+
+\[f(x)=cos^{-1}(x \times scale + bias)\]
+
+<p>when <code class="language-plaintext highlighter-rouge">scaleBias</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwiseaddoperatordesc">ElementWiseAddOperatorDesc</h4>
+
+<p>Adds every element in <code class="language-plaintext highlighter-rouge">ATensor</code> to its corresponding element in <code class="language-plaintext highlighter-rouge">BTensor</code>, placing the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(a,b)=a+b\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensorA</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the first input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensorB</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the second input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#binaryoperatordesc"><code class="language-plaintext highlighter-rouge">BinaryOperatorDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to 
+the same tensor as <code class="language-plaintext highlighter-rouge">ATensor</code>, or <code class="language-plaintext highlighter-rouge">BTensor</code>, or both, during binding.</p>
+
+<h4 id="elementwiseadd1operatordesc">ElementWiseAdd1OperatorDesc</h4>
+
+<p>Adds every element in ATensor to its corresponding element in BTensor and places the result 
+into the corresponding element of OutputTensor, with the option for fused activation.</p>
+
+\[f(a,b)=a+b\]
+
+<p>or</p>
+
+\[f(a,b)=FusedActivation(a+b)\]
+
+<p>when <code class="language-plaintext highlighter-rouge">fusedActivation</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensorA</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the first input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensorB</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the second input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">fusedActivation</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const OperatorDesc*</code></td>
+      <td>An optional operator descriptor for a fused activation operator to be applied to the output.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#binaryoperatordesc"><code class="language-plaintext highlighter-rouge">BinaryOperatorDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to 
+the same tensor as <code class="language-plaintext highlighter-rouge">ATensor</code>, or <code class="language-plaintext highlighter-rouge">BTensor</code>, or both, during binding.</p>
+
+<h4 id="elementwiseasinoperatordesc">ElementWiseASinOperatorDesc</h4>
+
+<p>Computes the arcsine for each element of InputTensor, placing the result 
+into the corresponding element of OutputTensor.</p>
+
+\[f(x)=sin^{-1}(x)\]
+
+<p>or</p>
+
+\[f(x)=sin^{-1}(x \times scale + bias)\]
+
+<p>when <code class="language-plaintext highlighter-rouge">scaleBias</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwiseatanoperatordesc">ElementWiseATanOperatorDesc</h4>
+
+<p>Computes the arctangent for each element of InputTensor, 
+placing the result into the corresponding element of OutputTensor.</p>
+
+\[f(x)=tan^{-1}(x)\]
+
+<p>or</p>
+
+\[f(x)=tan^{-1}(x \times scale + bias)\]
+
+<p>when <code class="language-plaintext highlighter-rouge">scaleBias</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwiseceiloperatordesc">ElementWiseCeilOperatorDesc</h4>
+
+<p>Computes the ceiling for each element of <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing 
+the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>. 
+The ceiling of \(x\) is the smallest integer that is greater than or equal to \(x\).</p>
+
+\[f(x)=ceil(x)\]
+
+<p>or</p>
+
+\[f(x)=ceil(x \times scale + bias)\]
+
+<p>when <code class="language-plaintext highlighter-rouge">scaleBias</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwiseclipoperatordesc">ElementWiseClipOperatorDesc</h4>
+
+<p>Performs the following operation for each element of <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing 
+the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>. This operator 
+clamps (or limits) every element in the input within the closed interval \([Min, Max]\).</p>
+
+\[f(x)=max(Min,min(x,Max))\]
+
+<p>Where \(max(a,b)\) returns the larger of the two values, and \(min(a,b)\) returns the smaller of the two values \(a,b\), or</p>
+
+\[f(x)=max(Min,min(x \times scale + bias,Max))\]
+
+<p>when <code class="language-plaintext highlighter-rouge">scaleBias</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwisecosoperatordesc">ElementWiseCosOperatorDesc</h4>
+
+<p>Computes the trigonometric cosine of each element of <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing 
+the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x)=cos(x)\]
+
+<p>or</p>
+
+\[f(x)=cos(x \times scale + bias)\]
+
+<p>when <code class="language-plaintext highlighter-rouge">scaleBias</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwisedivideoperatordesc">ElementWiseDivideOperatorDesc</h4>
+
+<p>Computes the quotient of each element of <code class="language-plaintext highlighter-rouge">ATensor</code> over the corresponding element 
+of <code class="language-plaintext highlighter-rouge">BTensor</code>, placing the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(a,b)=\frac{a}{b}\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensorA</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the first input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensorB</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the second input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#binaryoperatordesc"><code class="language-plaintext highlighter-rouge">BinaryOperatorDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to 
+the same tensor as <code class="language-plaintext highlighter-rouge">ATensor</code>, or <code class="language-plaintext highlighter-rouge">BTensor</code>, during binding.</p>
+
+<h4 id="elementwiseexpoperatordesc">ElementWiseExpOperatorDesc</h4>
+
+<p>Applies the natural exponentiation function to each element of InputTensor, placing the result into the corresponding element of OutputTensor.</p>
+
+\[f(x)=e^x\]
+
+<p>or</p>
+
+\[f(x)=e^{x \times scale + bias}\]
+
+<p>when <code class="language-plaintext highlighter-rouge">scaleBias</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwiseflooroperatordesc">ElementWiseFloorOperatorDesc</h4>
+
+<p>Computes the floor for each element of <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+<p>The floor of \(x\) is the largest integer that is less than or equal to \(x\).</p>
+
+\[f(x)=floor(x)\]
+
+<p>or</p>
+
+\[f(x)=floor(x \times scale + bias)\]
+
+<p>when <code class="language-plaintext highlighter-rouge">scaleBias</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwiselogoperatordesc">ElementWiseLogOperatorDesc</h4>
+
+<p>Computes the base-e (natural) logarithm of each element of <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+<p>If \(x\) is negative, then this function returns <code class="language-plaintext highlighter-rouge">NaN</code>. If \(x\) is 0, then this function returns \(-\infty\).</p>
+
+\[f(x)=\ln x\]
+
+<p>or</p>
+
+\[f(x)=\ln{(x \times scale + bias)}\]
+
+<p>when <code class="language-plaintext highlighter-rouge">scaleBias</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwiselogicalandoperatordesc">ElementWiseLogicalAndOperatorDesc</h4>
+
+<p>Performs a <em>logical and</em> on each pair of corresponding elements of 
+the input tensors, placing the result (<code class="language-plaintext highlighter-rouge">1</code> for <code class="language-plaintext highlighter-rouge">true</code>, <code class="language-plaintext highlighter-rouge">0</code> for <code class="language-plaintext highlighter-rouge">false</code>) 
+into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(a,b)= a \land b\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensorA</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the first input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensorB</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the second input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#binaryoperatordesc"><code class="language-plaintext highlighter-rouge">BinaryOperatorDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to 
+the same tensor as <code class="language-plaintext highlighter-rouge">ATensor</code>, or <code class="language-plaintext highlighter-rouge">BTensor</code>, during binding.</p>
+
+<h4 id="elementwiselogicalequalsoperatordesc">ElementWiseLogicalEqualsOperatorDesc</h4>
+
+<p>Performs a <em>logical equals</em> on each pair of corresponding elements of 
+the input tensors, placing the result (<code class="language-plaintext highlighter-rouge">1</code> for <code class="language-plaintext highlighter-rouge">true</code>, <code class="language-plaintext highlighter-rouge">0</code> for <code class="language-plaintext highlighter-rouge">false</code>) 
+into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(a,b)= a \Leftrightarrow b\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensorA</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the first input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensorB</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the second input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#binaryoperatordesc"><code class="language-plaintext highlighter-rouge">BinaryOperatorDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to 
+the same tensor as <code class="language-plaintext highlighter-rouge">ATensor</code>, or <code class="language-plaintext highlighter-rouge">BTensor</code>, during binding.</p>
 
   </div>
 
