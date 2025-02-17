@@ -137,13 +137,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a851a01228e9ef780f61e77e496b12ecd" id="r_a851a01228e9ef780f61e77e496b12ecd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a851a01228e9ef780f61e77e496b12ecd">AssertResourceState</a> (const <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics.html#ad906f67c8545e192d58070b690d5a4ad">D3D12Resource</a> &amp;resource, UINT subresource, UINT state) const</td></tr>
 <tr class="memdesc:a851a01228e9ef780f61e77e496b12ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates that the given state matches the state of the subresource, assuming the state of the given subresource is known during recording of a command list (e.g. the resource was transitioned earlier in the same command list recording). If the state is not yet known this method sets the known state for further validation later in the same command list recording.  <br /></td></tr>
 <tr class="separator:a851a01228e9ef780f61e77e496b12ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc7242e3bbafcb454bb0c3f1a93ff67c" id="r_afc7242e3bbafcb454bb0c3f1a93ff67c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc7242e3bbafcb454bb0c3f1a93ff67c">SetDebugParameter</a> (D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE <a class="el" href="s__llrint_8inl.html#a53155e22eaa05190346890241be3367c">type</a>, _In_reads_bytes_(dataSize) const void *data, UINT dataSize) const</td></tr>
-<tr class="memdesc:afc7242e3bbafcb454bb0c3f1a93ff67c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies optional Debug <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_layer.html" title="Represents the backing store required to render a layer.">Layer</a> settings of a command list.  <br /></td></tr>
+<tr class="memitem:afc7242e3bbafcb454bb0c3f1a93ff67c" id="r_afc7242e3bbafcb454bb0c3f1a93ff67c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc7242e3bbafcb454bb0c3f1a93ff67c">SetDebugParameter</a> (D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE <a class="el" href="s__llrint_8inl.html#a53155e22eaa05190346890241be3367c">type</a>, _In_reads_bytes_(dataSize) const void *<a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a13924c1d5f2db40d873e0a808bb89b68">data</a>, UINT dataSize) const</td></tr>
+<tr class="memdesc:afc7242e3bbafcb454bb0c3f1a93ff67c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies optional Debug Layer settings of a command list.  <br /></td></tr>
 <tr class="separator:afc7242e3bbafcb454bb0c3f1a93ff67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad72648370e1b9e7681f152bfd02053a" id="r_aad72648370e1b9e7681f152bfd02053a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad72648370e1b9e7681f152bfd02053a">SetDebugParameter</a> (const D3D12_DEBUG_COMMAND_LIST_GPU_BASED_VALIDATION_SETTINGS &amp;gpuBasedValidationSettings) const</td></tr>
 <tr class="separator:aad72648370e1b9e7681f152bfd02053a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14904fd7a4ba344325962079fc3e651a" id="r_a14904fd7a4ba344325962079fc3e651a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14904fd7a4ba344325962079fc3e651a">GetDebugParameter</a> (D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE <a class="el" href="s__llrint_8inl.html#a53155e22eaa05190346890241be3367c">type</a>, _Out_writes_bytes_(dataSize) void *data, UINT dataSize) const</td></tr>
-<tr class="memdesc:a14904fd7a4ba344325962079fc3e651a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets optional Command List Debug <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_layer.html" title="Represents the backing store required to render a layer.">Layer</a> settings.  <br /></td></tr>
+<tr class="memitem:a14904fd7a4ba344325962079fc3e651a" id="r_a14904fd7a4ba344325962079fc3e651a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14904fd7a4ba344325962079fc3e651a">GetDebugParameter</a> (D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE <a class="el" href="s__llrint_8inl.html#a53155e22eaa05190346890241be3367c">type</a>, _Out_writes_bytes_(dataSize) void *<a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a13924c1d5f2db40d873e0a808bb89b68">data</a>, UINT dataSize) const</td></tr>
+<tr class="memdesc:a14904fd7a4ba344325962079fc3e651a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets optional Command List Debug Layer settings.  <br /></td></tr>
 <tr class="separator:a14904fd7a4ba344325962079fc3e651a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab6eea4252eab11030a6281e4ed1dbb8" id="r_aab6eea4252eab11030a6281e4ed1dbb8"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &gt; </td></tr>
 <tr class="memitem:aab6eea4252eab11030a6281e4ed1dbb8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aab6eea4252eab11030a6281e4ed1dbb8">GetDebugParameter</a> () const</td></tr>
@@ -468,7 +468,7 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Gets optional Command List Debug <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_layer.html" title="Represents the backing store required to render a layer.">Layer</a> settings. </p>
+<p>Gets optional Command List Debug Layer settings. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>Specifies a D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE value that determines which debug parameter data to copy to the memory pointed to by data. </td></tr>
@@ -537,7 +537,7 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Modifies optional Debug <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_layer.html" title="Represents the backing store required to render a layer.">Layer</a> settings of a command list. </p>
+<p>Modifies optional Debug Layer settings of a command list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>Specifies a D3D12_DEBUG_COMMAND_LIST_PARAMETER_TYPE value that indicates which debug parameter data to set. </td></tr>

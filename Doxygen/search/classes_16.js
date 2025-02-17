@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['value_0',['Value',['../class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_1_1_value.html',1,'Harlinn::Common::Core::LMDB']]],
+  ['value_0',['Value',['../class_harlinn_1_1_a_i_1_1_tensors_1_1_value.html',1,'Harlinn::AI::Tensors::Value'],['../class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_1_1_value.html',1,'Harlinn::Common::Core::LMDB::Value']]],
   ['valuelist_1',['ValueList',['../class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_list_ex_1_1_value_list.html',1,'Harlinn::Common::Core::Net::Collections::Generic::SortedListEx']]],
-  ['valuescale2doperatordesc_2',['ValueScale2DOperatorDesc',['../struct_harlinn_1_1_windows_1_1_d_m_l_1_1_value_scale2_d_operator_desc.html',1,'Harlinn::Windows::DML']]],
+  ['valuescale2doperatordesc_2',['ValueScale2DOperatorDesc',['../struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_value_scale2_d_operator_desc.html',1,'Harlinn::AI::DML']]],
   ['varbinaryarraydefine_3',['VarBinaryArrayDefine',['../class_harlinn_1_1_o_c_i_1_1_var_binary_array_define.html',1,'Harlinn::OCI']]],
   ['varbinarydatatype_4',['VarBinaryDataType',['../struct_harlinn_1_1_o_c_i_1_1_internal_1_1_var_binary_data_type.html',1,'Harlinn::OCI::Internal']]],
   ['varbinarydefine_5',['VarBinaryDefine',['../class_harlinn_1_1_o_c_i_1_1_var_binary_define.html',1,'Harlinn::OCI']]],

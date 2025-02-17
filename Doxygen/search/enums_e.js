@@ -9,6 +9,6 @@ var searchData=
   ['opendatabaseflags_6',['OpenDatabaseFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a2fbef2ea1649942f21e33bbec748e70e',1,'Harlinn::Common::Core::Ese']]],
   ['opentableflags_7',['OpenTableFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a72d8cf5aafab7e26c653ef805403fef3',1,'Harlinn::Common::Core::Ese']]],
   ['operationcode_8',['OperationCode',['../namespace_harlinn_1_1_o_c_i.html#a62b407dad112ccd920b469e925009ef1',1,'Harlinn::OCI']]],
-  ['operatortype_9',['OperatorType',['../namespace_harlinn_1_1_windows_1_1_d_m_l.html#a50e93c2414390ad83925b212bfec778b',1,'Harlinn::Windows::DML']]],
+  ['operatortype_9',['OperatorType',['../namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a83438ddc5b4102147bae32d595455cd5',1,'Harlinn::AI::DML']]],
   ['oratype_10',['OraType',['../namespace_harlinn_1_1_o_c_i.html#a67533cebb8e647326ae8288f9f105308',1,'Harlinn::OCI']]]
 ];

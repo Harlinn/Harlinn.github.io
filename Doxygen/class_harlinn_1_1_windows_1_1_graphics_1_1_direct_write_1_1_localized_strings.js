@@ -1,15 +1,15 @@
 var class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings =
 [
     [ "Base", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#a0270d77e6a42fb4f8f16b8de17c760ff", null ],
-    [ "FindLocaleName", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#ac821c26c2181007d1dfdfb1d371cd1ff", null ],
-    [ "FindLocaleName", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#ad03d731147f8b995c5d846e59b09a6e2", null ],
-    [ "GetCount", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#ac9390c8882f4974801455abba7c6ce8f", null ],
-    [ "GetLocaleName", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#ab40e04a865f1abd7f6789b18e24d8cc4", null ],
-    [ "GetLocaleName", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#a0c98f78e7bfa61d57f265fc0127fc181", null ],
-    [ "GetLocaleNameLength", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#a9be01bc2b523cd43d8a83806d5608bb0", null ],
-    [ "GetLocaleNameLength", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#ab768526872482cd1213bdb3e1f300e47", null ],
-    [ "GetString", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#a660bc66aff677e44838a2a0ab43a2f8e", null ],
-    [ "GetString", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#ae90c528188e03d5280e2bc4f4d9cacf2", null ],
-    [ "GetStringLength", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#ab588e1e500e5ddae96ad3b08bba46034", null ],
-    [ "GetStringLength", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#a2ab50c0c491ddc609c779f4169d1b504", null ]
+    [ "FindLocaleName", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#a1ff43cd31003434c7c455f056bd6e344", null ],
+    [ "FindLocaleName", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#a7c4919b750108816369ce3bd56d95dd2", null ],
+    [ "GetCount", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#a6163f3800f002d445d8f8882b1a26e96", null ],
+    [ "GetLocaleName", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#ab456635571467b5b04d5aa4da35b83bc", null ],
+    [ "GetLocaleName", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#aecb9be7fbe216d9c2687e2300f62041c", null ],
+    [ "GetLocaleNameLength", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#ab07fcaee8dbf79e56f109bd1e252dfdd", null ],
+    [ "GetLocaleNameLength", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#aa257c6f17e22cdf39d9236e4d5b4de7a", null ],
+    [ "GetString", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#a511b8a35d3f5302512f5fc5ab3931307", null ],
+    [ "GetString", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#ac6cc1687f0f7798455fd2e757515a1c1", null ],
+    [ "GetStringLength", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#a9ef6cf8452653b40154b0810493df31b", null ],
+    [ "GetStringLength", "class_harlinn_1_1_windows_1_1_graphics_1_1_direct_write_1_1_localized_strings.html#a535fec7d67ff84f89ae0b1ce1718e4e6", null ]
 ];

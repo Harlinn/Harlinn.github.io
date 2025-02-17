@@ -1,5 +1,7 @@
 var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_command_queue_desc =
 [
+    [ "CommandQueueDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_command_queue_desc.html#ae609178cc985f1327e3a232f07ec37ec", null ],
+    [ "CommandQueueDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_command_queue_desc.html#aa057d9246a8771e985529ec9026fc07e", null ],
     [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_command_queue_desc.html#ac1a8966143b785b2071a6b58439571fc", null ],
     [ "Flags", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_command_queue_desc.html#a8ced01351c7f52c6e00e6513fd5a1d4f", null ],
     [ "NodeMask", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_command_queue_desc.html#a1b298019aa497c08c19572434e4d3b60", null ],

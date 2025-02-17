@@ -16,6 +16,7 @@ var namespace_harlinn_1_1_common_1_1_core_1_1_internal =
     [ "ConstPointerIterator", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_const_pointer_iterator.html", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_const_pointer_iterator" ],
     [ "Data", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_data.html", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_data" ],
     [ "EseFormatterImpl", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_ese_formatter_impl.html", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_ese_formatter_impl" ],
+    [ "FinallyImpl", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_finally_impl.html", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_finally_impl" ],
     [ "IndexIterator", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_index_iterator.html", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_index_iterator" ],
     [ "LightweightSemaphoreImpl", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl" ],
     [ "MakeUnsignedHelper", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_make_unsigned_helper.html", null ],

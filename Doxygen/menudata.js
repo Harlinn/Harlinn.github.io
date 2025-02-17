@@ -353,7 +353,10 @@ var menudata={children:[
 {text:"s",url:"globals_s.html#index_s"},
 {text:"t",url:"globals_t.html#index_t"},
 {text:"u",url:"globals_u.html#index_u"},
-{text:"x",url:"globals_x.html#index_x"}]},
+{text:"w",url:"globals_w.html#index_w"},
+{text:"x",url:"globals_x.html#index_x"},
+{text:"y",url:"globals_y.html#index_y"},
+{text:"z",url:"globals_z.html#index_z"}]},
 {text:"Functions",url:"globals_func.html",children:[
 {text:"_",url:"globals_func.html#index__5F"},
 {text:"b",url:"globals_func_b.html#index_b"},

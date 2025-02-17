@@ -1,7 +1,6 @@
 var namespace_harlinn_1_1_windows =
 [
     [ "DirectShow", "namespace_harlinn_1_1_windows_1_1_direct_show.html", "namespace_harlinn_1_1_windows_1_1_direct_show" ],
-    [ "DML", "namespace_harlinn_1_1_windows_1_1_d_m_l.html", "namespace_harlinn_1_1_windows_1_1_d_m_l" ],
     [ "DocumentTarget", "namespace_harlinn_1_1_windows_1_1_document_target.html", "namespace_harlinn_1_1_windows_1_1_document_target" ],
     [ "Environment", "namespace_harlinn_1_1_windows_1_1_environment.html", "namespace_harlinn_1_1_windows_1_1_environment" ],
     [ "Fonts", "namespace_harlinn_1_1_windows_1_1_fonts.html", "namespace_harlinn_1_1_windows_1_1_fonts" ],
@@ -96,6 +95,7 @@ var namespace_harlinn_1_1_windows =
     [ "NonClientMetrics", "class_harlinn_1_1_windows_1_1_non_client_metrics.html", null ],
     [ "PaintDeviceContextHandle", "class_harlinn_1_1_windows_1_1_paint_device_context_handle.html", "class_harlinn_1_1_windows_1_1_paint_device_context_handle" ],
     [ "PaletteHandle", "class_harlinn_1_1_windows_1_1_palette_handle.html", "class_harlinn_1_1_windows_1_1_palette_handle" ],
+    [ "PeekMessageLoop", "class_harlinn_1_1_windows_1_1_peek_message_loop.html", "class_harlinn_1_1_windows_1_1_peek_message_loop" ],
     [ "PenHandle", "class_harlinn_1_1_windows_1_1_pen_handle.html", "class_harlinn_1_1_windows_1_1_pen_handle" ],
     [ "PenSelection", "class_harlinn_1_1_windows_1_1_pen_selection.html", "class_harlinn_1_1_windows_1_1_pen_selection" ],
     [ "PointT", "class_harlinn_1_1_windows_1_1_point_t.html", "class_harlinn_1_1_windows_1_1_point_t" ],

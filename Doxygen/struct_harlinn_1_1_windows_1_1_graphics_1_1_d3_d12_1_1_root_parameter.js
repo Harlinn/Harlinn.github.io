@@ -9,6 +9,7 @@ var struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter =
     [ "RootParameter", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html#ab9b17783272c47c342d1707fd87a3826", null ],
     [ "RootParameter", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html#a881728e5a095518935ab924c2da0dcc1", null ],
     [ "AsConstantBufferView", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html#a5c22465c3d47a7d20f678a0dc66762d6", null ],
+    [ "AsDescriptorTable", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html#aac365bdb85b64ed80fc5e14a13403790", null ],
     [ "AsShaderResourceView", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html#a8ffc8fddbd5aea7d480ceda4341ededc", null ],
     [ "AsUnorderedAccessView", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html#a564c4a912d6e1295ff8f6fc5959adb2a", null ],
     [ "HWD3D12_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html#aeef360e651641171a291f7255e8cd61d", null ],

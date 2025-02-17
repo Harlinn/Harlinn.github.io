@@ -10,7 +10,7 @@ var searchData=
   ['barriertype_7',['BarrierType',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a6f936f64fa661f6cfbf7a8de4f6b852a',1,'Harlinn::Windows::Graphics::D3D12']]],
   ['basetype_8',['BaseType',['../namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a958e291eca28acf43356c82691ac12a1',1,'Harlinn::Common::Core::SIMD']]],
   ['basictypeid_9',['BasicTypeId',['../namespace_harlinn_1_1_common_1_1_core_1_1_types.html#ad7050d48722d01c073c0b3fcdd66613d',1,'Harlinn::Common::Core::Types']]],
-  ['bindingtype_10',['BindingType',['../namespace_harlinn_1_1_windows_1_1_d_m_l.html#a0f90467df081e1bfd04860db0b62e603',1,'Harlinn::Windows::DML']]],
+  ['bindingtype_10',['BindingType',['../namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a58d56eac4a9bf725b2af0071d5aa9515',1,'Harlinn::AI::DML']]],
   ['bitmapalphachanneloption_11',['BitmapAlphaChannelOption',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.html#a32b39deb4fba15c8a943e459a31f884b',1,'Harlinn::Windows::Graphics::Imaging']]],
   ['bitmapcreatecacheoption_12',['BitmapCreateCacheOption',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.html#ab31c841d99a52da495c31be67acc04e7',1,'Harlinn::Windows::Graphics::Imaging']]],
   ['bitmapdecodercapabilities_13',['BitmapDecoderCapabilities',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.html#a6f8fa205a76c1df65a9a9c26211c87e8',1,'Harlinn::Windows::Graphics::Imaging']]],

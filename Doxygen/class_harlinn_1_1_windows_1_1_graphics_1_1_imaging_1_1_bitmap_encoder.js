@@ -4,6 +4,7 @@ var class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_encoder =
     [ "Commit", "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_encoder.html#a054a4911ffecf15907b4c402f2c02b79", null ],
     [ "CreateNewFrame", "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_encoder.html#a6bcf090114903bdd9c9fa548df0e04a0", null ],
     [ "CreateNewFrame", "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_encoder.html#a6805ca8126468082f54ba4f6997802af", null ],
+    [ "CreateNewFrame", "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_encoder.html#a3cb45f52a69a508653e2854a059c448c", null ],
     [ "GetContainerFormat", "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_encoder.html#aab1f679e7a88b8c4fe7b07ea9331871b", null ],
     [ "GetContainerFormat", "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_encoder.html#a77f200720fe53ff80f38678a1de7924d", null ],
     [ "GetEncoderInfo", "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_encoder.html#a85b80d9886dbf216873133462da21403", null ],

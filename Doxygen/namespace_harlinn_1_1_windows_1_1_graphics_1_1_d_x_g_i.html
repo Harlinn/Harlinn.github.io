@@ -441,6 +441,8 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="#a44af51316c575dcac6b4f3fd7fe8233fa3b56d7da7ecfdc7c5d88100bef721e48">RUInt16</a> = DXGI_FORMAT_R16_UINT
 , <br />
+&#160;&#160;<a class="el" href="#a44af51316c575dcac6b4f3fd7fe8233fa851fb72bb611390ce0052686c8f3a261">R16_UINT</a> = DXGI_FORMAT_R16_UINT
+, <br />
 &#160;&#160;<a class="el" href="#a44af51316c575dcac6b4f3fd7fe8233fae5d6b062dbac04d09d5bf46afed1faa0">RNInt16</a> = DXGI_FORMAT_R16_SNORM
 , <br />
 &#160;&#160;<a class="el" href="#a44af51316c575dcac6b4f3fd7fe8233fa72789cd053c7cf5ebbb245794cdbbc40">RInt16</a> = DXGI_FORMAT_R16_SINT
@@ -501,7 +503,11 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="#a44af51316c575dcac6b4f3fd7fe8233fa985ad6f587cbef33dabaf3fed521981b">BNUInt8GNUInt8RNUInt8ANUInt8</a> = DXGI_FORMAT_B8G8R8A8_UNORM
 , <br />
+&#160;&#160;<a class="el" href="#a44af51316c575dcac6b4f3fd7fe8233fafde02e03e1f115dbb8d44e51fd6e9370">B8G8R8A8_UNORM</a> = DXGI_FORMAT_B8G8R8A8_UNORM
+, <br />
 &#160;&#160;<a class="el" href="#a44af51316c575dcac6b4f3fd7fe8233fa827dbfbd7fb554620ef37a140cd82976">BNUInt8GNUInt8RNUInt8X8_unorm</a> = DXGI_FORMAT_B8G8R8X8_UNORM
+, <br />
+&#160;&#160;<a class="el" href="#a44af51316c575dcac6b4f3fd7fe8233fa258984f85b6b82049273bdf81bf47ede">B8G8R8X8_UNORM</a> = DXGI_FORMAT_B8G8R8X8_UNORM
 , <br />
 &#160;&#160;<a class="el" href="#a44af51316c575dcac6b4f3fd7fe8233fa75c3e21bccf3feda19354356b96d795d">RFixed10GFixed10BFixed10ANUInt2</a> = DXGI_FORMAT_R10G10B10_XR_BIAS_A2_UNORM
 , <br />
@@ -754,6 +760,7 @@ requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_windows_1_1
 </td></tr>
 <tr><td class="fieldname"><a id="a44af51316c575dcac6b4f3fd7fe8233fa3b56d7da7ecfdc7c5d88100bef721e48" name="a44af51316c575dcac6b4f3fd7fe8233fa3b56d7da7ecfdc7c5d88100bef721e48"></a>RUInt16&#160;</td><td class="fielddoc"><p>A single-component, 16-bit unsigned-integer format that supports 16 bits for the red channel. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a44af51316c575dcac6b4f3fd7fe8233fa851fb72bb611390ce0052686c8f3a261" name="a44af51316c575dcac6b4f3fd7fe8233fa851fb72bb611390ce0052686c8f3a261"></a>R16_UINT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a44af51316c575dcac6b4f3fd7fe8233fae5d6b062dbac04d09d5bf46afed1faa0" name="a44af51316c575dcac6b4f3fd7fe8233fae5d6b062dbac04d09d5bf46afed1faa0"></a>RNInt16&#160;</td><td class="fielddoc"><p>A single-component, 16-bit signed-normalized-integer format that supports 16 bits for the red channel. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a44af51316c575dcac6b4f3fd7fe8233fa72789cd053c7cf5ebbb245794cdbbc40" name="a44af51316c575dcac6b4f3fd7fe8233fa72789cd053c7cf5ebbb245794cdbbc40"></a>RInt16&#160;</td><td class="fielddoc"><p>A single-component, 16-bit signed-integer format that supports 16 bits for the red channel. </p>
@@ -830,8 +837,10 @@ requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_windows_1_1
 </td></tr>
 <tr><td class="fieldname"><a id="a44af51316c575dcac6b4f3fd7fe8233fa985ad6f587cbef33dabaf3fed521981b" name="a44af51316c575dcac6b4f3fd7fe8233fa985ad6f587cbef33dabaf3fed521981b"></a>BNUInt8GNUInt8RNUInt8ANUInt8&#160;</td><td class="fielddoc"><p>A four-component, 32-bit unsigned-normalized-integer format that supports 8 bits for each color channel and 8-bit alpha. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a44af51316c575dcac6b4f3fd7fe8233fafde02e03e1f115dbb8d44e51fd6e9370" name="a44af51316c575dcac6b4f3fd7fe8233fafde02e03e1f115dbb8d44e51fd6e9370"></a>B8G8R8A8_UNORM&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a44af51316c575dcac6b4f3fd7fe8233fa827dbfbd7fb554620ef37a140cd82976" name="a44af51316c575dcac6b4f3fd7fe8233fa827dbfbd7fb554620ef37a140cd82976"></a>BNUInt8GNUInt8RNUInt8X8_unorm&#160;</td><td class="fielddoc"><p>A four-component, 32-bit unsigned-normalized-integer format that supports 8 bits for each color channel and 8 bits unused. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a44af51316c575dcac6b4f3fd7fe8233fa258984f85b6b82049273bdf81bf47ede" name="a44af51316c575dcac6b4f3fd7fe8233fa258984f85b6b82049273bdf81bf47ede"></a>B8G8R8X8_UNORM&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a44af51316c575dcac6b4f3fd7fe8233fa75c3e21bccf3feda19354356b96d795d" name="a44af51316c575dcac6b4f3fd7fe8233fa75c3e21bccf3feda19354356b96d795d"></a>RFixed10GFixed10BFixed10ANUInt2&#160;</td><td class="fielddoc"><p>A four-component, 32-bit 2.8-biased fixed-point format that supports 10 bits for each color channel and 2-bit alpha. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a44af51316c575dcac6b4f3fd7fe8233fa210f622e5199a86147c4828cf558cb54" name="a44af51316c575dcac6b4f3fd7fe8233fa210f622e5199a86147c4828cf558cb54"></a>B8G8R8A8&#160;</td><td class="fielddoc"><p>A four-component, 32-bit typeless format that supports 8 bits for each channel including alpha. </p>

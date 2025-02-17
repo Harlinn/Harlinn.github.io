@@ -15,7 +15,7 @@ var searchData=
   ['initializesecuritycontextrequestedflags_12',['InitializeSecurityContextRequestedFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_security.html#ab295ec841a5111437cb461ed3060cde1',1,'Harlinn::Common::Core::Security']]],
   ['innerqueuecontext_13',['InnerQueueContext',['../class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#af755981fa3774dcd5e0c41e354150ec0',1,'Harlinn::Common::Core::ConcurrentQueue']]],
   ['inputclassification_14',['InputClassification',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a0f180e5120c3f6086b5da419b7704418',1,'Harlinn::Windows::Graphics::D3D12']]],
-  ['interpolationmode_15',['InterpolationMode',['../namespace_harlinn_1_1_windows_1_1_d_m_l.html#af9b832416dcc0fae300d7311104ad8c2',1,'Harlinn::Windows::DML']]],
+  ['interpolationmode_15',['InterpolationMode',['../namespace_harlinn_1_1_a_i_1_1_d_m_l.html#af67bb4e093677bee0117e217f074e7ad',1,'Harlinn::AI::DML']]],
   ['intervalerrorflag_16',['IntervalErrorFlag',['../namespace_harlinn_1_1_o_c_i.html#ac301484b4a6831b827b8074b2368fcc9',1,'Harlinn::OCI']]],
   ['intervaltype_17',['IntervalType',['../namespace_harlinn_1_1_o_d_b_c.html#a34d7660a69994f06fdacd275c7936893',1,'Harlinn::ODBC']]]
 ];

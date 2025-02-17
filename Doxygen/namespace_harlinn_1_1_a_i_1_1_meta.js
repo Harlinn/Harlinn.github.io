@@ -1,0 +1,45 @@
+var namespace_harlinn_1_1_a_i_1_1_meta =
+[
+    [ "MapTypeInfo", "class_harlinn_1_1_a_i_1_1_meta_1_1_map_type_info.html", "class_harlinn_1_1_a_i_1_1_meta_1_1_map_type_info" ],
+    [ "Metadata", "class_harlinn_1_1_a_i_1_1_meta_1_1_metadata.html", "class_harlinn_1_1_a_i_1_1_meta_1_1_metadata" ],
+    [ "OpaqueTypeInfo", "class_harlinn_1_1_a_i_1_1_meta_1_1_opaque_type_info.html", "class_harlinn_1_1_a_i_1_1_meta_1_1_opaque_type_info" ],
+    [ "OptionalTypeInfo", "class_harlinn_1_1_a_i_1_1_meta_1_1_optional_type_info.html", "class_harlinn_1_1_a_i_1_1_meta_1_1_optional_type_info" ],
+    [ "SequenceTypeInfo", "class_harlinn_1_1_a_i_1_1_meta_1_1_sequence_type_info.html", "class_harlinn_1_1_a_i_1_1_meta_1_1_sequence_type_info" ],
+    [ "TensorTypeAndShapeInfo", "class_harlinn_1_1_a_i_1_1_meta_1_1_tensor_type_and_shape_info.html", "class_harlinn_1_1_a_i_1_1_meta_1_1_tensor_type_and_shape_info" ],
+    [ "TypeInfoBase", "class_harlinn_1_1_a_i_1_1_meta_1_1_type_info_base.html", "class_harlinn_1_1_a_i_1_1_meta_1_1_type_info_base" ],
+    [ "UnknownTypeInfo", "class_harlinn_1_1_a_i_1_1_meta_1_1_unknown_type_info.html", "class_harlinn_1_1_a_i_1_1_meta_1_1_unknown_type_info" ],
+    [ "TensorElementType", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123", [
+      [ "Undefined", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123aec0fc0100c4fc1ce4eea230c3dc10360", null ],
+      [ "Float", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123a22ae0e2b89e5e3d477f988cc36d3272b", null ],
+      [ "UInt8", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123ab31df9c476d20e85ff898121efe11b5a", null ],
+      [ "Int8", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123a7d839b2c12bfd40ac121b4cc9e81c539", null ],
+      [ "UInt16", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123a8bd950a9d7779b83f5c30046c9aaf1cf", null ],
+      [ "Int16", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123a39bc2ae44b184207f560ff8619823208", null ],
+      [ "Int32", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123ac06129f6e6e15c09328365e553f1dc31", null ],
+      [ "Int64", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123afbde23b11d7e59af7828e81144c8b487", null ],
+      [ "String", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123a27118326006d3829667a400ad23d5d98", null ],
+      [ "Bool", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123ac26f15e86e3de4c398a8273272aba034", null ],
+      [ "Float16", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123a26e6ed77470c6f2f830ecf874e6c0d55", null ],
+      [ "Double", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123ad909d38d705ce75386dd86e611a82f5b", null ],
+      [ "UInt32", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123ae7956ed7be1c5025a27ed3cb42a396bd", null ],
+      [ "UInt64", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123aaf71234725f0470ccf993e263a8b820a", null ],
+      [ "Complex64", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123ad966dd0f6dc22b834b636fb9df4b756a", null ],
+      [ "Complex128", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123aee63a91375f038924d9671f9fec7059b", null ],
+      [ "BFloat16", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123acdb56b2d2f73c26480207524f2dbe0af", null ],
+      [ "Float8E4M3FN", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123af75e9deb7f506b9e702baa997a2b3ccb", null ],
+      [ "Float8E4M3FNUZ", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123ad6e37346d9d54767807ef78d9b478ef4", null ],
+      [ "Float8E5M2", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123af5d2b5c6d7afa95ddc356892171545bc", null ],
+      [ "Float8E5M2FNUZ", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123a6e25c6d49b232f2ab61849d6ad16270b", null ],
+      [ "UInt4", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123a146988b242dbb9ed1e323e309789115a", null ],
+      [ "Int4", "namespace_harlinn_1_1_a_i_1_1_meta.html#a79874ea6c998cb732644b805dfeff123a1a44f12c3427b3e11c171d09632bad8d", null ]
+    ] ],
+    [ "TypeInfoType", "namespace_harlinn_1_1_a_i_1_1_meta.html#a99ef9c204cb8c3e6d7c49ed788a4428a", [
+      [ "Unknown", "namespace_harlinn_1_1_a_i_1_1_meta.html#a99ef9c204cb8c3e6d7c49ed788a4428aa88183b946cc5f0e8c96b2e66e1c74a7e", null ],
+      [ "Tensor", "namespace_harlinn_1_1_a_i_1_1_meta.html#a99ef9c204cb8c3e6d7c49ed788a4428aaf20fc369b14cb5d40e695dab98bcb742", null ],
+      [ "Sequence", "namespace_harlinn_1_1_a_i_1_1_meta.html#a99ef9c204cb8c3e6d7c49ed788a4428aa3ff39d3acb327553070a64ef0cb321d5", null ],
+      [ "Map", "namespace_harlinn_1_1_a_i_1_1_meta.html#a99ef9c204cb8c3e6d7c49ed788a4428aa46f3ea056caa3126b91f3f70beea068c", null ],
+      [ "Opaque", "namespace_harlinn_1_1_a_i_1_1_meta.html#a99ef9c204cb8c3e6d7c49ed788a4428aafaa90538de35640e4b1e31ccf35b6eb5", null ],
+      [ "Sparsetensor", "namespace_harlinn_1_1_a_i_1_1_meta.html#a99ef9c204cb8c3e6d7c49ed788a4428aa1836d2f6d097cffc9306f796f93a0360", null ],
+      [ "Optional", "namespace_harlinn_1_1_a_i_1_1_meta.html#a99ef9c204cb8c3e6d7c49ed788a4428aaebb061953c0454b2c8ee7b0ac615ebcd", null ]
+    ] ]
+];

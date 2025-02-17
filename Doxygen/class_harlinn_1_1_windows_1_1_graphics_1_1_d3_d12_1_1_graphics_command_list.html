@@ -206,15 +206,25 @@ Public Member Functions</h2></td></tr>
 requires std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_VIEWPORT&gt;</td></tr>
 <tr class="memitem:a9dc8ec12382802829c0d26bf50292c9a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9dc8ec12382802829c0d26bf50292c9a">RSSetViewports</a> (const SpanT &amp;viewports) const</td></tr>
 <tr class="separator:a9dc8ec12382802829c0d26bf50292c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad555f9f895aba5cd6c68663683e6adae" id="r_ad555f9f895aba5cd6c68663683e6adae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad555f9f895aba5cd6c68663683e6adae">RSSetViewports</a> (const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_viewport.html">Viewport</a> &amp;viewport) const</td></tr>
+<tr class="separator:ad555f9f895aba5cd6c68663683e6adae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ba9bd646e0b984fe673f9884ed210fd" id="r_a7ba9bd646e0b984fe673f9884ed210fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ba9bd646e0b984fe673f9884ed210fd">RSSetScissorRects</a> (_In_range_(0, D3D12_VIEWPORT_AND_SCISSORRECT_OBJECT_COUNT_PER_PIPELINE) UINT numberOfScissorRectangles, _In_reads_(numberOfScissorRectangles) const D3D12_RECT *scissorRectangles) const</td></tr>
 <tr class="memdesc:a7ba9bd646e0b984fe673f9884ed210fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds an array of scissor rectangles to the rasterizer stage.  <br /></td></tr>
 <tr class="separator:a7ba9bd646e0b984fe673f9884ed210fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a4d139622ef0fcdcae3b01e88e1f355" id="r_a2a4d139622ef0fcdcae3b01e88e1f355"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a4d139622ef0fcdcae3b01e88e1f355">RSSetScissorRects</a> (_In_range_(0, D3D12_VIEWPORT_AND_SCISSORRECT_OBJECT_COUNT_PER_PIPELINE) UINT numberOfScissorRectangles, _In_reads_(numberOfScissorRectangles) const <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a5cc2520ce26e8d4bc1ddbc81f22303b0">Rectangle</a> *scissorRectangles) const</td></tr>
 <tr class="separator:a2a4d139622ef0fcdcae3b01e88e1f355"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae280f344f5cae0068e6d50189dc1ecbc" id="r_ae280f344f5cae0068e6d50189dc1ecbc"><td class="memTemplParams" colspan="2">template&lt;SimpleSpanLike SpanT&gt; <br />
+<tr class="memitem:a8b9bc7e6e96b42b5850fdd87f6414d54" id="r_a8b9bc7e6e96b42b5850fdd87f6414d54"><td class="memTemplParams" colspan="2">template&lt;SimpleSpanLike SpanT&gt; <br />
 requires std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RECT&gt;</td></tr>
-<tr class="memitem:ae280f344f5cae0068e6d50189dc1ecbc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae280f344f5cae0068e6d50189dc1ecbc">RSSetViewports</a> (const SpanT &amp;scissorRectangles) const</td></tr>
-<tr class="separator:ae280f344f5cae0068e6d50189dc1ecbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b9bc7e6e96b42b5850fdd87f6414d54"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8b9bc7e6e96b42b5850fdd87f6414d54">RSSetScissorRects</a> (const SpanT &amp;scissorRectangles) const</td></tr>
+<tr class="separator:a8b9bc7e6e96b42b5850fdd87f6414d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6e33931f723438b743af0168bf2e544" id="r_ad6e33931f723438b743af0168bf2e544"><td class="memTemplParams" colspan="2">template&lt;SimpleSpanLike SpanT&gt; <br />
+requires std::is_convertible_v&lt;typename SpanT::value_type, const <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a5cc2520ce26e8d4bc1ddbc81f22303b0">D3D12::Rectangle</a> &gt;</td></tr>
+<tr class="memitem:ad6e33931f723438b743af0168bf2e544"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad6e33931f723438b743af0168bf2e544">RSSetScissorRects</a> (const SpanT &amp;scissorRectangles) const</td></tr>
+<tr class="separator:ad6e33931f723438b743af0168bf2e544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbd07f1a4cbc1a9d15bd1ef45818dc7f" id="r_afbd07f1a4cbc1a9d15bd1ef45818dc7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbd07f1a4cbc1a9d15bd1ef45818dc7f">RSSetScissorRects</a> (const D3D12_RECT &amp;scissorRectangle) const</td></tr>
+<tr class="separator:afbd07f1a4cbc1a9d15bd1ef45818dc7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a592db433cf8cd2ee56369303bc88f16b" id="r_a592db433cf8cd2ee56369303bc88f16b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a592db433cf8cd2ee56369303bc88f16b">RSSetScissorRects</a> (const <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a5cc2520ce26e8d4bc1ddbc81f22303b0">Rectangle</a> &amp;scissorRectangle) const</td></tr>
+<tr class="separator:a592db433cf8cd2ee56369303bc88f16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae33cdd387627da5e2b8e5432c344375b" id="r_ae33cdd387627da5e2b8e5432c344375b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae33cdd387627da5e2b8e5432c344375b">OMSetBlendFactor</a> (_In_reads_opt_(4) const FLOAT blendFactors[4]) const</td></tr>
 <tr class="memdesc:ae33cdd387627da5e2b8e5432c344375b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the blend factors that modulate values for a pixel shader, render target, or both.  <br /></td></tr>
 <tr class="separator:ae33cdd387627da5e2b8e5432c344375b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,30 +245,32 @@ requires std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RECT&g
 requires ( std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RESOURCE_BARRIER&gt; || std::is_convertible_v&lt;typename SpanT::value_type, const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">D3D12::ResourceBarrier</a>&gt; )</td></tr>
 <tr class="memitem:ae82d42c296673aae1ced37be2c5345c5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae82d42c296673aae1ced37be2c5345c5">ResourceBarrier</a> (const SpanT &amp;barriers) const</td></tr>
 <tr class="separator:ae82d42c296673aae1ced37be2c5345c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23852c21db0e60df0847c9d1730761fe" id="r_a23852c21db0e60df0847c9d1730761fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23852c21db0e60df0847c9d1730761fe">ResourceBarrier</a> (ID3D12Resource *resource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateBefore, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateAfter, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> subresource=D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES) noexcept</td></tr>
-<tr class="memdesc:a23852c21db0e60df0847c9d1730761fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">ResourceBarrier</a> that describes the transition of subresources between different usages.  <br /></td></tr>
-<tr class="separator:a23852c21db0e60df0847c9d1730761fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af73421268346987312d9d12d7cc1f6a7" id="r_af73421268346987312d9d12d7cc1f6a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af73421268346987312d9d12d7cc1f6a7">ResourceBarrier</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource.html">Resource</a> &amp;resource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateBefore, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateAfter, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> subresource=D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES) noexcept</td></tr>
-<tr class="memdesc:af73421268346987312d9d12d7cc1f6a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">ResourceBarrier</a> that describes the transition of subresources between different usages.  <br /></td></tr>
-<tr class="separator:af73421268346987312d9d12d7cc1f6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ed4dd5f0690aeb32bf1ff517e9ff5b0" id="r_a6ed4dd5f0690aeb32bf1ff517e9ff5b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ed4dd5f0690aeb32bf1ff517e9ff5b0">ResourceBarrier</a> (ID3D12Resource *resourceBefore, ID3D12Resource *resourceAfter, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>) noexcept</td></tr>
-<tr class="memdesc:a6ed4dd5f0690aeb32bf1ff517e9ff5b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">ResourceBarrier</a> that describes the transition between usages of two different resources that have mappings into the same heap.  <br /></td></tr>
-<tr class="separator:a6ed4dd5f0690aeb32bf1ff517e9ff5b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60430ba0b237c6ede727e4289094dc77" id="r_a60430ba0b237c6ede727e4289094dc77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60430ba0b237c6ede727e4289094dc77">ResourceBarrier</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource.html">Resource</a> &amp;resourceBefore, const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource.html">Resource</a> &amp;resourceAfter, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>) noexcept</td></tr>
-<tr class="memdesc:a60430ba0b237c6ede727e4289094dc77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">ResourceBarrier</a> that describes the transition between usages of two different resources that have mappings into the same heap.  <br /></td></tr>
-<tr class="separator:a60430ba0b237c6ede727e4289094dc77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a524607967b112eca945c075a450552f4" id="r_a524607967b112eca945c075a450552f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a524607967b112eca945c075a450552f4">ResourceBarrier</a> (ID3D12Resource *resource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>) noexcept</td></tr>
-<tr class="memdesc:a524607967b112eca945c075a450552f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">ResourceBarrier</a> representing a resource for which all UAV accesses must complete before any future UAV accesses can begin.  <br /></td></tr>
-<tr class="separator:a524607967b112eca945c075a450552f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c85a003711e26a4a4564217a6a326ab" id="r_a9c85a003711e26a4a4564217a6a326ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c85a003711e26a4a4564217a6a326ab">ResourceBarrier</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource.html">Resource</a> &amp;resource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>) noexcept</td></tr>
-<tr class="memdesc:a9c85a003711e26a4a4564217a6a326ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">ResourceBarrier</a> representing a resource for which all UAV accesses must complete before any future UAV accesses can begin.  <br /></td></tr>
-<tr class="separator:a9c85a003711e26a4a4564217a6a326ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77d8293372cab7e36e5695fc6d57befc" id="r_a77d8293372cab7e36e5695fc6d57befc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77d8293372cab7e36e5695fc6d57befc">ResourceBarrier</a> (ID3D12Resource *resource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateBefore, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateAfter, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> subresource=D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES) const noexcept</td></tr>
+<tr class="memdesc:a77d8293372cab7e36e5695fc6d57befc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">ResourceBarrier</a> that describes the transition of subresources between different usages.  <br /></td></tr>
+<tr class="separator:a77d8293372cab7e36e5695fc6d57befc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ab68a4f404f24f8c61d3523e6894aa9" id="r_a5ab68a4f404f24f8c61d3523e6894aa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ab68a4f404f24f8c61d3523e6894aa9">ResourceBarrier</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource.html">Resource</a> &amp;resource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateBefore, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateAfter, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> subresource=D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES) const noexcept</td></tr>
+<tr class="memdesc:a5ab68a4f404f24f8c61d3523e6894aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">ResourceBarrier</a> that describes the transition of subresources between different usages.  <br /></td></tr>
+<tr class="separator:a5ab68a4f404f24f8c61d3523e6894aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76202738941165fa765ea034b93d8ef" id="r_ae76202738941165fa765ea034b93d8ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae76202738941165fa765ea034b93d8ef">ResourceBarrier</a> (ID3D12Resource *resourceBefore, ID3D12Resource *resourceAfter, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>) const noexcept</td></tr>
+<tr class="memdesc:ae76202738941165fa765ea034b93d8ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">ResourceBarrier</a> that describes the transition between usages of two different resources that have mappings into the same heap.  <br /></td></tr>
+<tr class="separator:ae76202738941165fa765ea034b93d8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0371b9b2914d9989c91c474d96435912" id="r_a0371b9b2914d9989c91c474d96435912"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0371b9b2914d9989c91c474d96435912">ResourceBarrier</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource.html">Resource</a> &amp;resourceBefore, const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource.html">Resource</a> &amp;resourceAfter, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>) const noexcept</td></tr>
+<tr class="memdesc:a0371b9b2914d9989c91c474d96435912"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">ResourceBarrier</a> that describes the transition between usages of two different resources that have mappings into the same heap.  <br /></td></tr>
+<tr class="separator:a0371b9b2914d9989c91c474d96435912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e863348183d6682c46935dc0393a0c0" id="r_a2e863348183d6682c46935dc0393a0c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e863348183d6682c46935dc0393a0c0">ResourceBarrier</a> (ID3D12Resource *resource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>) const noexcept</td></tr>
+<tr class="memdesc:a2e863348183d6682c46935dc0393a0c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">ResourceBarrier</a> representing a resource for which all UAV accesses must complete before any future UAV accesses can begin.  <br /></td></tr>
+<tr class="separator:a2e863348183d6682c46935dc0393a0c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a178e5db8f45c1a05f8e691f4ebf59061" id="r_a178e5db8f45c1a05f8e691f4ebf59061"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a178e5db8f45c1a05f8e691f4ebf59061">ResourceBarrier</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource.html">Resource</a> &amp;resource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>) const noexcept</td></tr>
+<tr class="memdesc:a178e5db8f45c1a05f8e691f4ebf59061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">ResourceBarrier</a> representing a resource for which all UAV accesses must complete before any future UAV accesses can begin.  <br /></td></tr>
+<tr class="separator:a178e5db8f45c1a05f8e691f4ebf59061"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ed8be31f9d7717132f1c8994dd83122" id="r_a2ed8be31f9d7717132f1c8994dd83122"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ed8be31f9d7717132f1c8994dd83122">ExecuteBundle</a> (_In_ ID3D12GraphicsCommandList *commandList) const</td></tr>
 <tr class="separator:a2ed8be31f9d7717132f1c8994dd83122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6554babe152687a0024c9945143d10ac" id="r_a6554babe152687a0024c9945143d10ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6554babe152687a0024c9945143d10ac">ExecuteBundle</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_command_list.html">GraphicsCommandList</a> &amp;commandList) const</td></tr>
 <tr class="separator:a6554babe152687a0024c9945143d10ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb3c0e4710ca3cb2fcaa78d1c7c1e77d" id="r_abb3c0e4710ca3cb2fcaa78d1c7c1e77d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb3c0e4710ca3cb2fcaa78d1c7c1e77d">SetDescriptorHeaps</a> (_In_ UINT numDescriptorHeaps, _In_reads_(numDescriptorHeaps) ID3D12DescriptorHeap *const *descriptorHeapsPtr) const</td></tr>
 <tr class="separator:abb3c0e4710ca3cb2fcaa78d1c7c1e77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab38d782445cedcef5ad26c5933d6149a" id="r_ab38d782445cedcef5ad26c5933d6149a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab38d782445cedcef5ad26c5933d6149a">SetDescriptorHeaps</a> (ID3D12DescriptorHeap *descriptorHeap) const</td></tr>
+<tr class="separator:ab38d782445cedcef5ad26c5933d6149a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4debea33b729e7a7df77cecba14c06e5" id="r_a4debea33b729e7a7df77cecba14c06e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4debea33b729e7a7df77cecba14c06e5">SetDescriptorHeaps</a> (_In_ UINT numDescriptorHeaps, _In_reads_(numDescriptorHeaps) const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_descriptor_heap.html">DescriptorHeap</a> *descriptorHeapsPtr) const</td></tr>
 <tr class="separator:a4debea33b729e7a7df77cecba14c06e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf0345cc2de4bbf06b09310398b4b5ea" id="r_adf0345cc2de4bbf06b09310398b4b5ea"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
@@ -309,6 +321,8 @@ requires ( std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RESO
 <tr class="separator:aeb1ac7a5b0014f717adf1ca453541026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2a3849459aa872e2f08a29aecab23b1" id="r_ab2a3849459aa872e2f08a29aecab23b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2a3849459aa872e2f08a29aecab23b1">OMSetRenderTargets</a> (_In_ UINT numRenderTargetDescriptors, _In_opt_ const D3D12_CPU_DESCRIPTOR_HANDLE *pRenderTargetDescriptors, _In_ bool rtsSingleHandleToDescriptorRange=false, _In_opt_ const D3D12_CPU_DESCRIPTOR_HANDLE *pDepthStencilDescriptor=nullptr) const</td></tr>
 <tr class="separator:ab2a3849459aa872e2f08a29aecab23b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a910f123bbf3b0c8c41346bdad360ce77" id="r_a910f123bbf3b0c8c41346bdad360ce77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a910f123bbf3b0c8c41346bdad360ce77">OMSetRenderTargets</a> (_In_ UINT numRenderTargetDescriptors, _In_opt_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> *pRenderTargetDescriptors, _In_ bool rtsSingleHandleToDescriptorRange=false, _In_opt_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> *pDepthStencilDescriptor=nullptr) const</td></tr>
+<tr class="separator:a910f123bbf3b0c8c41346bdad360ce77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f0b5a06992aaecc8c974e503710d266" id="r_a4f0b5a06992aaecc8c974e503710d266"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f0b5a06992aaecc8c974e503710d266">ClearDepthStencilView</a> (_In_ D3D12_CPU_DESCRIPTOR_HANDLE depthStencilView, _In_ D3D12_CLEAR_FLAGS clearFlags, _In_ FLOAT depth, _In_ UINT8 stencil, _In_ UINT numRects, _In_reads_(numRects) const D3D12_RECT *pRects) const</td></tr>
 <tr class="separator:a4f0b5a06992aaecc8c974e503710d266"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7453bde3a9837eb62bc7dc656c0f8fc5" id="r_a7453bde3a9837eb62bc7dc656c0f8fc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7453bde3a9837eb62bc7dc656c0f8fc5">ClearRenderTargetView</a> (_In_ D3D12_CPU_DESCRIPTOR_HANDLE renderTargetView, _In_ const FLOAT colorRGBA[4], _In_ UINT numRects=0, _In_reads_(numRects) const D3D12_RECT *pRects=nullptr) const</td></tr>
@@ -2096,8 +2110,47 @@ Must have compatible DXGI_FORMATs (identical or from the same type group). For e
 
 </div>
 </div>
+<a id="a910f123bbf3b0c8c41346bdad360ce77" name="a910f123bbf3b0c8c41346bdad360ce77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a910f123bbf3b0c8c41346bdad360ce77">&#9670;&#160;</a></span>OMSetRenderTargets() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Harlinn::Windows::Graphics::D3D12::GraphicsCommandList::OMSetRenderTargets </td>
+          <td>(</td>
+          <td class="paramtype">_In_ UINT</td>          <td class="paramname"><span class="paramname"><em>numRenderTargetDescriptors</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_opt_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> *</td>          <td class="paramname"><span class="paramname"><em>pRenderTargetDescriptors</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_ bool</td>          <td class="paramname"><span class="paramname"><em>rtsSingleHandleToDescriptorRange</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_opt_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> *</td>          <td class="paramname"><span class="paramname"><em>pDepthStencilDescriptor</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab2a3849459aa872e2f08a29aecab23b1" name="ab2a3849459aa872e2f08a29aecab23b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2a3849459aa872e2f08a29aecab23b1">&#9670;&#160;</a></span>OMSetRenderTargets()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a3849459aa872e2f08a29aecab23b1">&#9670;&#160;</a></span>OMSetRenderTargets() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2531,8 +2584,8 @@ Must have compatible DXGI_FORMATs (identical or from the same type group). For e
 
 </div>
 </div>
-<a id="a9c85a003711e26a4a4564217a6a326ab" name="a9c85a003711e26a4a4564217a6a326ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c85a003711e26a4a4564217a6a326ab">&#9670;&#160;</a></span>ResourceBarrier() <span class="overload">[3/9]</span></h2>
+<a id="a178e5db8f45c1a05f8e691f4ebf59061" name="a178e5db8f45c1a05f8e691f4ebf59061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a178e5db8f45c1a05f8e691f4ebf59061">&#9670;&#160;</a></span>ResourceBarrier() <span class="overload">[3/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2548,7 +2601,7 @@ Must have compatible DXGI_FORMATs (identical or from the same type group). For e
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a></td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a></td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -2569,8 +2622,8 @@ Must have compatible DXGI_FORMATs (identical or from the same type group). For e
 
 </div>
 </div>
-<a id="af73421268346987312d9d12d7cc1f6a7" name="af73421268346987312d9d12d7cc1f6a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af73421268346987312d9d12d7cc1f6a7">&#9670;&#160;</a></span>ResourceBarrier() <span class="overload">[4/9]</span></h2>
+<a id="a5ab68a4f404f24f8c61d3523e6894aa9" name="a5ab68a4f404f24f8c61d3523e6894aa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ab68a4f404f24f8c61d3523e6894aa9">&#9670;&#160;</a></span>ResourceBarrier() <span class="overload">[4/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2601,7 +2654,7 @@ Must have compatible DXGI_FORMATs (identical or from the same type group). For e
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>subresource</em></span><span class="paramdefsep"> = </span><span class="paramdefval">D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>subresource</em></span><span class="paramdefsep"> = </span><span class="paramdefval">D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -2625,8 +2678,8 @@ Must have compatible DXGI_FORMATs (identical or from the same type group). For e
 
 </div>
 </div>
-<a id="a60430ba0b237c6ede727e4289094dc77" name="a60430ba0b237c6ede727e4289094dc77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60430ba0b237c6ede727e4289094dc77">&#9670;&#160;</a></span>ResourceBarrier() <span class="overload">[5/9]</span></h2>
+<a id="a0371b9b2914d9989c91c474d96435912" name="a0371b9b2914d9989c91c474d96435912"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0371b9b2914d9989c91c474d96435912">&#9670;&#160;</a></span>ResourceBarrier() <span class="overload">[5/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2647,7 +2700,7 @@ Must have compatible DXGI_FORMATs (identical or from the same type group). For e
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a></td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a></td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -2698,8 +2751,8 @@ requires ( std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RESO
 
 </div>
 </div>
-<a id="a524607967b112eca945c075a450552f4" name="a524607967b112eca945c075a450552f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a524607967b112eca945c075a450552f4">&#9670;&#160;</a></span>ResourceBarrier() <span class="overload">[7/9]</span></h2>
+<a id="a2e863348183d6682c46935dc0393a0c0" name="a2e863348183d6682c46935dc0393a0c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e863348183d6682c46935dc0393a0c0">&#9670;&#160;</a></span>ResourceBarrier() <span class="overload">[7/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2715,7 +2768,7 @@ requires ( std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RESO
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a></td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a></td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -2736,8 +2789,8 @@ requires ( std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RESO
 
 </div>
 </div>
-<a id="a23852c21db0e60df0847c9d1730761fe" name="a23852c21db0e60df0847c9d1730761fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23852c21db0e60df0847c9d1730761fe">&#9670;&#160;</a></span>ResourceBarrier() <span class="overload">[8/9]</span></h2>
+<a id="a77d8293372cab7e36e5695fc6d57befc" name="a77d8293372cab7e36e5695fc6d57befc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77d8293372cab7e36e5695fc6d57befc">&#9670;&#160;</a></span>ResourceBarrier() <span class="overload">[8/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2768,7 +2821,7 @@ requires ( std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RESO
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>subresource</em></span><span class="paramdefsep"> = </span><span class="paramdefval">D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>subresource</em></span><span class="paramdefsep"> = </span><span class="paramdefval">D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES</span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -2792,8 +2845,8 @@ requires ( std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RESO
 
 </div>
 </div>
-<a id="a6ed4dd5f0690aeb32bf1ff517e9ff5b0" name="a6ed4dd5f0690aeb32bf1ff517e9ff5b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ed4dd5f0690aeb32bf1ff517e9ff5b0">&#9670;&#160;</a></span>ResourceBarrier() <span class="overload">[9/9]</span></h2>
+<a id="ae76202738941165fa765ea034b93d8ef" name="ae76202738941165fa765ea034b93d8ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae76202738941165fa765ea034b93d8ef">&#9670;&#160;</a></span>ResourceBarrier() <span class="overload">[9/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2814,7 +2867,7 @@ requires ( std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RESO
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a></td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a></td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -2838,7 +2891,7 @@ requires ( std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RESO
 </div>
 </div>
 <a id="a7ba9bd646e0b984fe673f9884ed210fd" name="a7ba9bd646e0b984fe673f9884ed210fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ba9bd646e0b984fe673f9884ed210fd">&#9670;&#160;</a></span>RSSetScissorRects() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ba9bd646e0b984fe673f9884ed210fd">&#9670;&#160;</a></span>RSSetScissorRects() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2879,7 +2932,7 @@ requires ( std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RESO
 </div>
 </div>
 <a id="a2a4d139622ef0fcdcae3b01e88e1f355" name="a2a4d139622ef0fcdcae3b01e88e1f355"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a4d139622ef0fcdcae3b01e88e1f355">&#9670;&#160;</a></span>RSSetScissorRects() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a4d139622ef0fcdcae3b01e88e1f355">&#9670;&#160;</a></span>RSSetScissorRects() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2896,6 +2949,112 @@ requires ( std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RESO
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">_In_reads_(numberOfScissorRectangles) const <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a5cc2520ce26e8d4bc1ddbc81f22303b0">Rectangle</a> *</td>          <td class="paramname"><span class="paramname"><em>scissorRectangles</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afbd07f1a4cbc1a9d15bd1ef45818dc7f" name="afbd07f1a4cbc1a9d15bd1ef45818dc7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbd07f1a4cbc1a9d15bd1ef45818dc7f">&#9670;&#160;</a></span>RSSetScissorRects() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Harlinn::Windows::Graphics::D3D12::GraphicsCommandList::RSSetScissorRects </td>
+          <td>(</td>
+          <td class="paramtype">const D3D12_RECT &amp;</td>          <td class="paramname"><span class="paramname"><em>scissorRectangle</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a592db433cf8cd2ee56369303bc88f16b" name="a592db433cf8cd2ee56369303bc88f16b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a592db433cf8cd2ee56369303bc88f16b">&#9670;&#160;</a></span>RSSetScissorRects() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Harlinn::Windows::Graphics::D3D12::GraphicsCommandList::RSSetScissorRects </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a5cc2520ce26e8d4bc1ddbc81f22303b0">Rectangle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>scissorRectangle</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b9bc7e6e96b42b5850fdd87f6414d54" name="a8b9bc7e6e96b42b5850fdd87f6414d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b9bc7e6e96b42b5850fdd87f6414d54">&#9670;&#160;</a></span>RSSetScissorRects() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;SimpleSpanLike SpanT&gt; <br />
+requires std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RECT&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Harlinn::Windows::Graphics::D3D12::GraphicsCommandList::RSSetScissorRects </td>
+          <td>(</td>
+          <td class="paramtype">const SpanT &amp;</td>          <td class="paramname"><span class="paramname"><em>scissorRectangles</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6e33931f723438b743af0168bf2e544" name="ad6e33931f723438b743af0168bf2e544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6e33931f723438b743af0168bf2e544">&#9670;&#160;</a></span>RSSetScissorRects() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;SimpleSpanLike SpanT&gt; <br />
+requires std::is_convertible_v&lt;typename SpanT::value_type, const <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a5cc2520ce26e8d4bc1ddbc81f22303b0">D3D12::Rectangle</a> &gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Harlinn::Windows::Graphics::D3D12::GraphicsCommandList::RSSetScissorRects </td>
+          <td>(</td>
+          <td class="paramtype">const SpanT &amp;</td>          <td class="paramname"><span class="paramname"><em>scissorRectangles</em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -2948,36 +3107,8 @@ requires ( std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RESO
 
 </div>
 </div>
-<a id="ae280f344f5cae0068e6d50189dc1ecbc" name="ae280f344f5cae0068e6d50189dc1ecbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae280f344f5cae0068e6d50189dc1ecbc">&#9670;&#160;</a></span>RSSetViewports() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;SimpleSpanLike SpanT&gt; <br />
-requires std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_RECT&gt;</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Harlinn::Windows::Graphics::D3D12::GraphicsCommandList::RSSetViewports </td>
-          <td>(</td>
-          <td class="paramtype">const SpanT &amp;</td>          <td class="paramname"><span class="paramname"><em>scissorRectangles</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a9dc8ec12382802829c0d26bf50292c9a" name="a9dc8ec12382802829c0d26bf50292c9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dc8ec12382802829c0d26bf50292c9a">&#9670;&#160;</a></span>RSSetViewports() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc8ec12382802829c0d26bf50292c9a">&#9670;&#160;</a></span>RSSetViewports() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2992,6 +3123,31 @@ requires std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_VIEWPO
           <td class="memname">void Harlinn::Windows::Graphics::D3D12::GraphicsCommandList::RSSetViewports </td>
           <td>(</td>
           <td class="paramtype">const SpanT &amp;</td>          <td class="paramname"><span class="paramname"><em>viewports</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad555f9f895aba5cd6c68663683e6adae" name="ad555f9f895aba5cd6c68663683e6adae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad555f9f895aba5cd6c68663683e6adae">&#9670;&#160;</a></span>RSSetViewports() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Harlinn::Windows::Graphics::D3D12::GraphicsCommandList::RSSetViewports </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_viewport.html">Viewport</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>viewport</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -3244,7 +3400,7 @@ requires std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_VIEWPO
 </div>
 </div>
 <a id="a4debea33b729e7a7df77cecba14c06e5" name="a4debea33b729e7a7df77cecba14c06e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4debea33b729e7a7df77cecba14c06e5">&#9670;&#160;</a></span>SetDescriptorHeaps() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4debea33b729e7a7df77cecba14c06e5">&#9670;&#160;</a></span>SetDescriptorHeaps() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3273,7 +3429,7 @@ requires std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_VIEWPO
 </div>
 </div>
 <a id="abb3c0e4710ca3cb2fcaa78d1c7c1e77d" name="abb3c0e4710ca3cb2fcaa78d1c7c1e77d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb3c0e4710ca3cb2fcaa78d1c7c1e77d">&#9670;&#160;</a></span>SetDescriptorHeaps() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3c0e4710ca3cb2fcaa78d1c7c1e77d">&#9670;&#160;</a></span>SetDescriptorHeaps() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3302,7 +3458,7 @@ requires std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_VIEWPO
 </div>
 </div>
 <a id="a10131b1508abd8e3ba6ec2c7b4bc8050" name="a10131b1508abd8e3ba6ec2c7b4bc8050"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10131b1508abd8e3ba6ec2c7b4bc8050">&#9670;&#160;</a></span>SetDescriptorHeaps() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a10131b1508abd8e3ba6ec2c7b4bc8050">&#9670;&#160;</a></span>SetDescriptorHeaps() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3327,7 +3483,7 @@ requires std::is_convertible_v&lt;typename SpanT::value_type, const D3D12_VIEWPO
 </div>
 </div>
 <a id="adf0345cc2de4bbf06b09310398b4b5ea" name="adf0345cc2de4bbf06b09310398b4b5ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf0345cc2de4bbf06b09310398b4b5ea">&#9670;&#160;</a></span>SetDescriptorHeaps() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adf0345cc2de4bbf06b09310398b4b5ea">&#9670;&#160;</a></span>SetDescriptorHeaps() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3354,7 +3510,7 @@ template&lt;size_t N&gt; </div>
 </div>
 </div>
 <a id="a9fc936ae221512a2e48cc8df88fab4cd" name="a9fc936ae221512a2e48cc8df88fab4cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fc936ae221512a2e48cc8df88fab4cd">&#9670;&#160;</a></span>SetDescriptorHeaps() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc936ae221512a2e48cc8df88fab4cd">&#9670;&#160;</a></span>SetDescriptorHeaps() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3368,6 +3524,31 @@ template&lt;size_t N&gt; </div>
           <td class="memname">void Harlinn::Windows::Graphics::D3D12::GraphicsCommandList::SetDescriptorHeaps </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_descriptor_heap.html">DescriptorHeap</a>(&amp;)</td>          <td class="paramname"><span class="paramname"><em>descriptorHeaps</em></span>[N]</td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab38d782445cedcef5ad26c5933d6149a" name="ab38d782445cedcef5ad26c5933d6149a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab38d782445cedcef5ad26c5933d6149a">&#9670;&#160;</a></span>SetDescriptorHeaps() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Harlinn::Windows::Graphics::D3D12::GraphicsCommandList::SetDescriptorHeaps </td>
+          <td>(</td>
+          <td class="paramtype">ID3D12DescriptorHeap *</td>          <td class="paramname"><span class="paramname"><em>descriptorHeap</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>

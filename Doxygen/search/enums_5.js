@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['feature_0',['Feature',['../namespace_harlinn_1_1_windows_1_1_d_m_l.html#af3489ccbac49b5ce055301b17465ddda',1,'Harlinn::Windows::DML::Feature'],['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a06bc0591557cfea9b248741dc13c8a99',1,'Harlinn::Windows::Graphics::D3D12::Feature']]],
+  ['feature_0',['Feature',['../namespace_harlinn_1_1_a_i_1_1_d_m_l.html#ab43d56af3b862d41d109fd6c3eca6c89',1,'Harlinn::AI::DML::Feature'],['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a06bc0591557cfea9b248741dc13c8a99',1,'Harlinn::Windows::Graphics::D3D12::Feature']]],
   ['fenceflags_1',['FenceFlags',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#ad177a92c12b057f88ee4951b382a0eca',1,'Harlinn::Windows::Graphics::D3D12']]],
   ['fetchorientation_2',['FetchOrientation',['../namespace_harlinn_1_1_o_c_i.html#a2e92066d1bf5227565db87214945228d',1,'Harlinn::OCI::FetchOrientation'],['../namespace_harlinn_1_1_o_d_b_c.html#a1d8f65edfea51e0828e8f3760424eb1d',1,'Harlinn::ODBC::FetchOrientation']]],
   ['fileaccess_3',['FileAccess',['../namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a119922fe47306af0809ad307f644e239',1,'Harlinn::Common::Core::IO']]],

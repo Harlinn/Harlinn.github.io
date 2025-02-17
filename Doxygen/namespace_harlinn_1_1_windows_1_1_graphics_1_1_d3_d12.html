@@ -3334,6 +3334,11 @@ requires std::is_base_of_v&lt;<a class="el" href="class_harlinn_1_1_windows_1_1_
 requires std::is_base_of_v&lt;<a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device.html">Device</a>, <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&gt;</td></tr>
 <tr class="memitem:a535fe660010337857f34e0353879641d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a535fe660010337857f34e0353879641d">CreateDevice</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_unknown.html">Unknown</a> adapter, D3D_FEATURE_LEVEL minimumFeatureLevel=D3D_FEATURE_LEVEL::D3D_FEATURE_LEVEL_11_1)</td></tr>
 <tr class="separator:a535fe660010337857f34e0353879641d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d189bf7bf4c67244285f18a1502939" id="r_af2d189bf7bf4c67244285f18a1502939"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &gt; </td></tr>
+<tr class="memitem:af2d189bf7bf4c67244285f18a1502939"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af2d189bf7bf4c67244285f18a1502939">GetDebugInterface</a> ()</td></tr>
+<tr class="separator:af2d189bf7bf4c67244285f18a1502939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b51cc5d668cb19f245cf39c467bceb" id="r_a92b51cc5d668cb19f245cf39c467bceb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92b51cc5d668cb19f245cf39c467bceb">EnableExperimentalFeatures</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> numFeatures, _In_count_(numFeatures) const IID *pIIDs, _In_opt_count_(numFeatures) void *configurationStructs, _In_opt_count_(numFeatures) <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *configurationStructSizes)</td></tr>
+<tr class="separator:a92b51cc5d668cb19f245cf39c467bceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a8205e3460ab64fdbbed635df883f12" id="r_a5a8205e3460ab64fdbbed635df883f12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics.html#a5f96a1bb417a3602c1d91e5fef357a4f">D3DBlob</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a8205e3460ab64fdbbed635df883f12">CompileFromFile</a> (_In_ LPCWSTR fileName, _In_reads_opt_(_Inexpressible_(pDefines-&gt;Name !=NULL)) CONST D3D_SHADER_MACRO *defines, _In_opt_ ID3DInclude *include, _In_ LPCSTR entrypoint, _In_ LPCSTR target, _In_ UINT flags1, _In_ UINT flags2=0, _Always_(_Outptr_opt_result_maybenull_) ID3DBlob **errorMessages=nullptr)</td></tr>
 <tr class="separator:a5a8205e3460ab64fdbbed635df883f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78c121b9482c5ea4309c6eb0074e9996" id="r_a78c121b9482c5ea4309c6eb0074e9996"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics.html#a5f96a1bb417a3602c1d91e5fef357a4f">D3DBlob</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78c121b9482c5ea4309c6eb0074e9996">CompileFromFile</a> (_In_ LPCWSTR fileName, _In_ LPCSTR entrypoint, _In_ LPCSTR target, _In_ UINT flags1, _In_ UINT flags2=0, _Always_(_Outptr_opt_result_maybenull_) ID3DBlob **errorMessages=nullptr)</td></tr>
@@ -3353,6 +3358,13 @@ requires std::is_base_of_v&lt;<a class="el" href="class_harlinn_1_1_windows_1_1_
 <tr class="memitem:afd981e9ce8bb8119d2545f541b2a77ba" id="r_afd981e9ce8bb8119d2545f541b2a77ba"><td class="memTemplParams" colspan="2">template&lt;UINT MaxSubresources&gt; </td></tr>
 <tr class="memitem:afd981e9ce8bb8119d2545f541b2a77ba"><td class="memTemplItemLeft" align="right" valign="top">UINT64&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afd981e9ce8bb8119d2545f541b2a77ba">UpdateSubResources</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_graphics_command_list.html">GraphicsCommandList</a> &amp;cmdList, const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource.html">Resource</a> &amp;destinationResource, const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource.html">Resource</a> &amp;intermediate, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> intermediateOffset, _In_range_(0, MaxSubresources) UINT firstSubResource, _In_range_(1, MaxSubresources - firstSubResource) <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> numSubResources, _In_reads_(numSubResources) <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_sub_resource_data.html">SubResourceData</a> *srcData)</td></tr>
 <tr class="separator:afd981e9ce8bb8119d2545f541b2a77ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad53b8a6069939518f39a6ad73d1e0207" id="r_ad53b8a6069939518f39a6ad73d1e0207"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a4a41459b75658c44aa1fa1db6ca4e55b">UInt8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad53b8a6069939518f39a6ad73d1e0207">GetFormatPlaneCount</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device.html">Device</a> &amp;device, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i.html#a44af51316c575dcac6b4f3fd7fe8233f">DXGI::Format</a> format)</td></tr>
+<tr class="separator:ad53b8a6069939518f39a6ad73d1e0207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac5d16e92a33f62f78bd3a0de2bf1985" id="r_aac5d16e92a33f62f78bd3a0de2bf1985"><td class="memItemLeft" align="right" valign="top">UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac5d16e92a33f62f78bd3a0de2bf1985">CalcSubResource</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> mipSlice, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> arraySlice, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> planeSlice, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> mipLevels, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> arraySize)</td></tr>
+<tr class="separator:aac5d16e92a33f62f78bd3a0de2bf1985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add7df6a5bd2ee912e1c7cd13764e6eb7" id="r_add7df6a5bd2ee912e1c7cd13764e6eb7"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> , typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda4c614360da93c0a041b22e537de151eb">U</a> , typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda5206560a306a2e085a437fd258eb57ce">V</a> &gt; </td></tr>
+<tr class="memitem:add7df6a5bd2ee912e1c7cd13764e6eb7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#add7df6a5bd2ee912e1c7cd13764e6eb7">DecomposeSubresource</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> subResource, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> mipLevels, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> arraySize, _Out_ <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;mipSlice, _Out_ <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda4c614360da93c0a041b22e537de151eb">U</a> &amp;arraySlice, _Out_ <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda5206560a306a2e085a437fd258eb57ce">V</a> &amp;planeSlice)</td></tr>
+<tr class="separator:add7df6a5bd2ee912e1c7cd13764e6eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32945c104c0a3d14f5892f47857dd91b" id="r_a32945c104c0a3d14f5892f47857dd91b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32945c104c0a3d14f5892f47857dd91b">HCC_DEFINE_ENUM_FLAG_OPERATORS</a> (<a class="el" href="#ae4e0035256d31592c9d25417eb8abd9c">CommandQueueFlags</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>)</td></tr>
 <tr class="separator:a32945c104c0a3d14f5892f47857dd91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad96a78432e090c658bcbc8fde47295c7" id="r_ad96a78432e090c658bcbc8fde47295c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad96a78432e090c658bcbc8fde47295c7">HCC_DEFINE_ENUM_FLAG_OPERATORS</a> (<a class="el" href="#af2d864bc2cfd72a629584575d77b9541">ColorWriteEnable</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a4a41459b75658c44aa1fa1db6ca4e55b">UInt8</a>)</td></tr>
@@ -3495,17 +3507,17 @@ requires std::is_base_of_v&lt;<a class="el" href="class_harlinn_1_1_windows_1_1_
 <tr class="separator:a0dce494a5c5864bca251fc0f3717ed04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f892ee5d09cefe3aeb3f3feb838e880" id="r_a0f892ee5d09cefe3aeb3f3feb838e880"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f892ee5d09cefe3aeb3f3feb838e880">HCC_DEFINE_ENUM_FLAG_OPERATORS</a> (<a class="el" href="#a8f48196e30f81047ef27b25e9ba14604">DeviceFlags</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>)</td></tr>
 <tr class="separator:a0f892ee5d09cefe3aeb3f3feb838e880"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae38399ea973a6cbc81e347051833c444" id="r_ae38399ea973a6cbc81e347051833c444"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae38399ea973a6cbc81e347051833c444">MakeCoarseShadingRate</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> x, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> y)</td></tr>
+<tr class="memitem:ae38399ea973a6cbc81e347051833c444" id="r_ae38399ea973a6cbc81e347051833c444"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae38399ea973a6cbc81e347051833c444">MakeCoarseShadingRate</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a44596b79a5e28408065d1565fa209510">y</a>)</td></tr>
 <tr class="separator:ae38399ea973a6cbc81e347051833c444"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82b59c4663f494457d100a5044a5dd45" id="r_a82b59c4663f494457d100a5044a5dd45"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#aff9b16827ac551f531a198ef92812fbe">ShadingRate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82b59c4663f494457d100a5044a5dd45">MakeCoarseShadingRate</a> (<a class="el" href="#a701d69380821c46c6897cc8f5d0e99aa">AxisShadingRate</a> x, <a class="el" href="#a701d69380821c46c6897cc8f5d0e99aa">AxisShadingRate</a> y)</td></tr>
+<tr class="memitem:a82b59c4663f494457d100a5044a5dd45" id="r_a82b59c4663f494457d100a5044a5dd45"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#aff9b16827ac551f531a198ef92812fbe">ShadingRate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82b59c4663f494457d100a5044a5dd45">MakeCoarseShadingRate</a> (<a class="el" href="#a701d69380821c46c6897cc8f5d0e99aa">AxisShadingRate</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>, <a class="el" href="#a701d69380821c46c6897cc8f5d0e99aa">AxisShadingRate</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a44596b79a5e28408065d1565fa209510">y</a>)</td></tr>
 <tr class="separator:a82b59c4663f494457d100a5044a5dd45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a855a26c3d6ebc9fd97bec7bdb4a74052" id="r_a855a26c3d6ebc9fd97bec7bdb4a74052"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a855a26c3d6ebc9fd97bec7bdb4a74052">GetCoarseShadingRateXAxis</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> x)</td></tr>
+<tr class="memitem:a855a26c3d6ebc9fd97bec7bdb4a74052" id="r_a855a26c3d6ebc9fd97bec7bdb4a74052"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a855a26c3d6ebc9fd97bec7bdb4a74052">GetCoarseShadingRateXAxis</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>)</td></tr>
 <tr class="separator:a855a26c3d6ebc9fd97bec7bdb4a74052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a097dfffb92edd0e1cadd54763afb5e53" id="r_a097dfffb92edd0e1cadd54763afb5e53"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a701d69380821c46c6897cc8f5d0e99aa">AxisShadingRate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a097dfffb92edd0e1cadd54763afb5e53">GetCoarseShadingRateXAxis</a> (<a class="el" href="#aff9b16827ac551f531a198ef92812fbe">ShadingRate</a> x)</td></tr>
+<tr class="memitem:a097dfffb92edd0e1cadd54763afb5e53" id="r_a097dfffb92edd0e1cadd54763afb5e53"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a701d69380821c46c6897cc8f5d0e99aa">AxisShadingRate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a097dfffb92edd0e1cadd54763afb5e53">GetCoarseShadingRateXAxis</a> (<a class="el" href="#aff9b16827ac551f531a198ef92812fbe">ShadingRate</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>)</td></tr>
 <tr class="separator:a097dfffb92edd0e1cadd54763afb5e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad55a50047c9c932923d99467395bb3f4" id="r_ad55a50047c9c932923d99467395bb3f4"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad55a50047c9c932923d99467395bb3f4">GetCoarseShadingRateYAxis</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> y)</td></tr>
+<tr class="memitem:ad55a50047c9c932923d99467395bb3f4" id="r_ad55a50047c9c932923d99467395bb3f4"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad55a50047c9c932923d99467395bb3f4">GetCoarseShadingRateYAxis</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a44596b79a5e28408065d1565fa209510">y</a>)</td></tr>
 <tr class="separator:ad55a50047c9c932923d99467395bb3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a867dd0f79d2029bd69abd467ff0e36d4" id="r_a867dd0f79d2029bd69abd467ff0e36d4"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a701d69380821c46c6897cc8f5d0e99aa">AxisShadingRate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a867dd0f79d2029bd69abd467ff0e36d4">GetCoarseShadingRateYAxis</a> (<a class="el" href="#aff9b16827ac551f531a198ef92812fbe">ShadingRate</a> y)</td></tr>
+<tr class="memitem:a867dd0f79d2029bd69abd467ff0e36d4" id="r_a867dd0f79d2029bd69abd467ff0e36d4"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a701d69380821c46c6897cc8f5d0e99aa">AxisShadingRate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a867dd0f79d2029bd69abd467ff0e36d4">GetCoarseShadingRateYAxis</a> (<a class="el" href="#aff9b16827ac551f531a198ef92812fbe">ShadingRate</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a44596b79a5e28408065d1565fa209510">y</a>)</td></tr>
 <tr class="separator:a867dd0f79d2029bd69abd467ff0e36d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -8659,6 +8671,50 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aac5d16e92a33f62f78bd3a0de2bf1985" name="aac5d16e92a33f62f78bd3a0de2bf1985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac5d16e92a33f62f78bd3a0de2bf1985">&#9670;&#160;</a></span>CalcSubResource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT Harlinn::Windows::Graphics::D3D12::CalcSubResource </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>mipSlice</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>arraySlice</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>planeSlice</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>mipLevels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>arraySize</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a78c121b9482c5ea4309c6eb0074e9996" name="a78c121b9482c5ea4309c6eb0074e9996"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a78c121b9482c5ea4309c6eb0074e9996">&#9670;&#160;</a></span>CompileFromFile() <span class="overload">[1/4]</span></h2>
 
@@ -9189,6 +9245,57 @@ requires std::is_base_of_v&lt;<a class="el" href="class_harlinn_1_1_windows_1_1_
 
 </div>
 </div>
+<a id="add7df6a5bd2ee912e1c7cd13764e6eb7" name="add7df6a5bd2ee912e1c7cd13764e6eb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add7df6a5bd2ee912e1c7cd13764e6eb7">&#9670;&#160;</a></span>DecomposeSubresource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> , typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda4c614360da93c0a041b22e537de151eb">U</a> , typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda5206560a306a2e085a437fd258eb57ce">V</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Harlinn::Windows::Graphics::D3D12::DecomposeSubresource </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>subResource</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>mipLevels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>arraySize</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Out_ <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>mipSlice</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Out_ <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda4c614360da93c0a041b22e537de151eb">U</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>arraySlice</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Out_ <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda5206560a306a2e085a437fd258eb57ce">V</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>planeSlice</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0e474e2c95647a09b150ac0a034df678" name="a0e474e2c95647a09b150ac0a034df678"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e474e2c95647a09b150ac0a034df678">&#9670;&#160;</a></span>DEFINE_ENUM_FLAG_OPERATORS()</h2>
 
@@ -9202,6 +9309,45 @@ requires std::is_base_of_v&lt;<a class="el" href="class_harlinn_1_1_windows_1_1_
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92b51cc5d668cb19f245cf39c467bceb" name="a92b51cc5d668cb19f245cf39c467bceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92b51cc5d668cb19f245cf39c467bceb">&#9670;&#160;</a></span>EnableExperimentalFeatures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Harlinn::Windows::Graphics::D3D12::EnableExperimentalFeatures </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numFeatures</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_count_(numFeatures) const IID *</td>          <td class="paramname"><span class="paramname"><em>pIIDs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_opt_count_(numFeatures) void *</td>          <td class="paramname"><span class="paramname"><em>configurationStructs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_In_opt_count_(numFeatures) <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>configurationStructSizes</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -9467,6 +9613,62 @@ requires std::is_base_of_v&lt;<a class="el" href="class_harlinn_1_1_windows_1_1_
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2d189bf7bf4c67244285f18a1502939" name="af2d189bf7bf4c67244285f18a1502939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2d189bf7bf4c67244285f18a1502939">&#9670;&#160;</a></span>GetDebugInterface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> Harlinn::Windows::Graphics::D3D12::GetDebugInterface </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad53b8a6069939518f39a6ad73d1e0207" name="ad53b8a6069939518f39a6ad73d1e0207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad53b8a6069939518f39a6ad73d1e0207">&#9670;&#160;</a></span>GetFormatPlaneCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a4a41459b75658c44aa1fa1db6ca4e55b">UInt8</a> Harlinn::Windows::Graphics::D3D12::GetFormatPlaneCount </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device.html">Device</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i.html#a44af51316c575dcac6b4f3fd7fe8233f">DXGI::Format</a></td>          <td class="paramname"><span class="paramname"><em>format</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

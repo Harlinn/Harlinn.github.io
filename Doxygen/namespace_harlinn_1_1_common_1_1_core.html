@@ -3213,6 +3213,8 @@ requires std::is_enum_v&lt;EnumT&gt;&amp;&amp; std::conjunction_v&lt;std::is_sam
 <tr class="separator:abb667d4197313d405c04b44235ad8fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a467c99c769ad08134353729c3b2ee9" id="r_a2a467c99c769ad08134353729c3b2ee9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_c_c_def_8h.html#afb06ae686742fde98e6427c4a1e2206c">HCC_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a467c99c769ad08134353729c3b2ee9">CheckHRESULT</a> (HRESULT hresult)</td></tr>
 <tr class="separator:a2a467c99c769ad08134353729c3b2ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa57b0025c12b745e901fa661c803d5a8" id="r_aa57b0025c12b745e901fa661c803d5a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_c_c_def_8h.html#afb06ae686742fde98e6427c4a1e2206c">HCC_EXPORT</a> <a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa57b0025c12b745e901fa661c803d5a8">FormatHRESULT</a> (HRESULT hresult)</td></tr>
+<tr class="separator:aa57b0025c12b745e901fa661c803d5a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cfd053855ea111674453acb8bd4a96c" id="r_a6cfd053855ea111674453acb8bd4a96c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_c_c_def_8h.html#afb06ae686742fde98e6427c4a1e2206c">HCC_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cfd053855ea111674453acb8bd4a96c">ThrowHRESULT</a> (HRESULT hresult)</td></tr>
 <tr class="separator:a6cfd053855ea111674453acb8bd4a96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7755df2ee9f4ecdc9b645de19f39fe8c" id="r_a7755df2ee9f4ecdc9b645de19f39fe8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_c_c_def_8h.html#afb06ae686742fde98e6427c4a1e2206c">HCC_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7755df2ee9f4ecdc9b645de19f39fe8c">CheckHRESULT</a> (HRESULT hresult, IUnknown *itf)</td></tr>
@@ -4404,7 +4406,7 @@ requires ( sizeof( T2 ) == 8 ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href
 <tr class="separator:a7f0a31200eb4fb19f3ddbb1d8c8de93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bf135c8bb57e3ed4ae00f8933f583fc" id="r_a9bf135c8bb57e3ed4ae00f8933f583fc"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; <br />
 requires ( sizeof( T2 ) == 8 ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href="#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>, T1&gt; || std::is_same_v&lt;<a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, T1&gt; ) &amp;&amp; requires( T2 t2 ) { { std::bit_cast&lt;<a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;( t2 ) }-&gt;std::convertible_to&lt;<a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;; }</td></tr>
-<tr class="memitem:a9bf135c8bb57e3ed4ae00f8933f583fc"><td class="memTemplItemLeft" align="right" valign="top">constexpr T2&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9bf135c8bb57e3ed4ae00f8933f583fc">SetHigh32Bits</a> (T2 x, T1 value) noexcept</td></tr>
+<tr class="memitem:a9bf135c8bb57e3ed4ae00f8933f583fc"><td class="memTemplItemLeft" align="right" valign="top">constexpr T2&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9bf135c8bb57e3ed4ae00f8933f583fc">SetHigh32Bits</a> (T2 <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>, T1 value) noexcept</td></tr>
 <tr class="separator:a9bf135c8bb57e3ed4ae00f8933f583fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c745ee1108df67e9bc86699daf754ba" id="r_a9c745ee1108df67e9bc86699daf754ba"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; <br />
 requires ( sizeof( T2 ) == 8 ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href="#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>, T1&gt; || std::is_same_v&lt;<a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, T1&gt; ) &amp;&amp; requires( T2 t2 ) { { std::bit_cast&lt;<a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;( t2 ) }-&gt;std::convertible_to&lt;<a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;; }</td></tr>
@@ -4412,7 +4414,7 @@ requires ( sizeof( T2 ) == 8 ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href
 <tr class="separator:a9c745ee1108df67e9bc86699daf754ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aded53d798ddeeba2240cf838c14eee93" id="r_aded53d798ddeeba2240cf838c14eee93"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; <br />
 requires ( sizeof( T2 ) == 8 ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href="#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>, T1&gt; || std::is_same_v&lt;<a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, T1&gt; ) &amp;&amp; requires( T2 t2 ) { { std::bit_cast&lt;<a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;( t2 ) }-&gt;std::convertible_to&lt;<a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;; }</td></tr>
-<tr class="memitem:aded53d798ddeeba2240cf838c14eee93"><td class="memTemplItemLeft" align="right" valign="top">constexpr T2&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aded53d798ddeeba2240cf838c14eee93">SetLow32Bits</a> (T2 x, T1 value) noexcept</td></tr>
+<tr class="memitem:aded53d798ddeeba2240cf838c14eee93"><td class="memTemplItemLeft" align="right" valign="top">constexpr T2&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aded53d798ddeeba2240cf838c14eee93">SetLow32Bits</a> (T2 <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>, T1 value) noexcept</td></tr>
 <tr class="separator:aded53d798ddeeba2240cf838c14eee93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6abfbc60f12da148c1c56a4657cb5c89" id="r_a6abfbc60f12da148c1c56a4657cb5c89"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename T3 &gt; <br />
 requires ( sizeof( T1 ) == 8 ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href="#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>, T2&gt; || std::is_same_v&lt;<a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, T2&gt; ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href="#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>, T3&gt; || std::is_same_v&lt;<a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, T3&gt; ) &amp;&amp; requires( <a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a> v1 ) { { std::bit_cast&lt;T1&gt;( v1 ) }-&gt;std::same_as&lt;T1&gt;; }</td></tr>
@@ -4618,6 +4620,9 @@ requires std::is_enum_v&lt;std::remove_cvref_t&lt;<a class="el" href="k__tan_8in
 <tr class="memitem:aa7e6520a1fd9ca8f3b590e7f6fefe902" id="r_aa7e6520a1fd9ca8f3b590e7f6fefe902"><td class="memTemplParams" colspan="2">template&lt;SimpleComLike T&gt; </td></tr>
 <tr class="memitem:aa7e6520a1fd9ca8f3b590e7f6fefe902"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_reference_counted_ptr.html">ReferenceCountedPtr</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa7e6520a1fd9ca8f3b590e7f6fefe902">WrapReferenceCounted</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr, bool addRef=false)</td></tr>
 <tr class="separator:aa7e6520a1fd9ca8f3b590e7f6fefe902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a898a26585cdb367d0b3755336587f251" id="r_a898a26585cdb367d0b3755336587f251"><td class="memTemplParams" colspan="2">template&lt;typename Fn &gt; </td></tr>
+<tr class="memitem:a898a26585cdb367d0b3755336587f251"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_finally_impl.html">Internal::FinallyImpl</a>&lt; Fn &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a898a26585cdb367d0b3755336587f251">Finally</a> (Fn &amp;&amp;Func)</td></tr>
+<tr class="separator:a898a26585cdb367d0b3755336587f251"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6e4222db7546070e8d26eed3156b39d" id="r_ac6e4222db7546070e8d26eed3156b39d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a502c362b31f007a16f17828d1a4090f9">PageFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6e4222db7546070e8d26eed3156b39d">GetPageFlags</a> (<a class="el" href="#a0244cd4d5515b0c83b60d6f69a552769">MemoryMappedFileAccess</a> access)</td></tr>
 <tr class="separator:ac6e4222db7546070e8d26eed3156b39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82100c012baff96c73cf8d3f80311b23" id="r_a82100c012baff96c73cf8d3f80311b23"><td class="memItemLeft" align="right" valign="top">DWORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82100c012baff96c73cf8d3f80311b23">GetFileMapAccess</a> (<a class="el" href="#a0244cd4d5515b0c83b60d6f69a552769">MemoryMappedFileAccess</a> access)</td></tr>
@@ -12021,6 +12026,33 @@ template&lt;SimpleCharSpanLike SpanT&gt; </div>
 
 </div>
 </div>
+<a id="a898a26585cdb367d0b3755336587f251" name="a898a26585cdb367d0b3755336587f251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a898a26585cdb367d0b3755336587f251">&#9670;&#160;</a></span>Finally()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Fn &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_finally_impl.html">Internal::FinallyImpl</a>&lt; Fn &gt; Harlinn::Common::Core::Finally </td>
+          <td>(</td>
+          <td class="paramtype">Fn &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>Func</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7392fd4b54d784ba9172c11807b772fe" name="a7392fd4b54d784ba9172c11807b772fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7392fd4b54d784ba9172c11807b772fe">&#9670;&#160;</a></span>FlipSign() <span class="overload">[1/2]</span></h2>
 
@@ -12240,6 +12272,23 @@ template&lt;class... Types&gt; </div>
           <td class="memname"><a class="el" href="#aedb2935f481d7ca3cd3db3cd88dc1b40">AnsiString</a> Harlinn::Common::Core::FormatErrorA </td>
           <td>(</td>
           <td class="paramtype">DWORD</td>          <td class="paramname"><span class="paramname"><em>errorId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa57b0025c12b745e901fa661c803d5a8" name="aa57b0025c12b745e901fa661c803d5a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa57b0025c12b745e901fa661c803d5a8">&#9670;&#160;</a></span>FormatHRESULT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7b2b8eb82c826297870ffb50d3739060">WideString</a> Harlinn::Common::Core::FormatHRESULT </td>
+          <td>(</td>
+          <td class="paramtype">HRESULT</td>          <td class="paramname"><span class="paramname"><em>hresult</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

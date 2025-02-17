@@ -203,6 +203,7 @@ var class_harlinn_1_1_common_1_1_core_1_1_binary =
     [ "StartsWith", "class_harlinn_1_1_common_1_1_core_1_1_binary.html#a32742c41d63dc0e238994bc8bc778cb5", null ],
     [ "SubString", "class_harlinn_1_1_common_1_1_core_1_1_binary.html#a774090a8371604481ecb71ee174897b1", null ],
     [ "ToIndex", "class_harlinn_1_1_common_1_1_core_1_1_binary.html#a1c5e63cf2e8e02ae2ea4c7775dc0962b", null ],
+    [ "ToSpan", "class_harlinn_1_1_common_1_1_core_1_1_binary.html#a4704bf7de0b2dc9e6c79d14c18aa136c", null ],
     [ "operator!=", "class_harlinn_1_1_common_1_1_core_1_1_binary.html#a6e25960cdc8081b120be1805efbd1044", null ],
     [ "operator+", "class_harlinn_1_1_common_1_1_core_1_1_binary.html#aa75dfb3f3a1990d5dc2b578b6e865270", null ],
     [ "operator+", "class_harlinn_1_1_common_1_1_core_1_1_binary.html#a9b7e92f1e4c6082aeef68935a83df2da", null ],
