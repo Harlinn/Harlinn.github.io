@@ -2051,7 +2051,7 @@ The output tensor has the same shape and contains the hardmax values of the corr
     <tr>
       <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
       <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
-      <td>Describes the input tensor to read from. This tensor must have an effective rank no greater than 2. The effective rank of a tensor is the DimensionCount of the tensor, excluding leftmost dimensions of size 1. For example a tensor size of [ 1, 1, BatchCount, Width ] is valid, and is equivalent to a tensor of sizes [ BatchCount, Width ].</td>
+      <td>Describes the input tensor to read from.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
@@ -2096,7 +2096,7 @@ element of <code class="language-plaintext highlighter-rouge">InputTensor</code>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
       <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
-      <td>Describes the input tensor to read from. This tensor must have an effective rank no greater than 2. The effective rank of a tensor is the DimensionCount of the tensor, excluding leftmost dimensions of size 1. For example a tensor size of [ 1, 1, BatchCount, Width ] is valid, and is equivalent to a tensor of sizes [ BatchCount, Width ].</td>
+      <td>Describes the input tensor to read from.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
@@ -2185,7 +2185,7 @@ placing the result into the corresponding element of <code class="language-plain
     <tr>
       <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
       <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
-      <td>Describes the input tensor to read from. This tensor must have an effective rank no greater than 2. The effective rank of a tensor is the DimensionCount of the tensor, excluding leftmost dimensions of size 1. For example a tensor size of [ 1, 1, BatchCount, Width ] is valid, and is equivalent to a tensor of sizes [ BatchCount, Width ].</td>
+      <td>Describes the input tensor to read from.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
@@ -2208,6 +2208,586 @@ placing the result into the corresponding element of <code class="language-plain
 <p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
 
 <p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="activationlogsoftmaxoperatordesc">ActivationLogSoftMaxOperatorDesc</h4>
+
+<p>Performs a natural log-of-softmax activation function on 
+each element of <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing the result into the corresponding 
+element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x_{i}) = \log\left(\frac{\exp(x_i) }{ \sum_j \exp(x_j)} \right)\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from. This tensor must have an effective rank no greater than 2. The effective rank of a tensor is the DimensionCount of the tensor, excluding leftmost dimensions of size 1. For example a tensor size of [ 1, 1, BatchCount, Width ] is valid, and is equivalent to a tensor of sizes [ BatchCount, Width ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<h4 id="activationparameterizedreluoperatordesc">ActivationParameterizedReLUOperatorDesc</h4>
+
+<p>Performs a parameterized rectified linear unit (ReLU) activation 
+function on every element in <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing the result into 
+the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x, slope) = \begin{cases}
+        x, &amp; \text{ if } x \geq 0\\
+        slope \times x, &amp; \text{ if } x &lt; 0
+        \end{cases}\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">slopeTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the slope for each corresponding value of the input.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#baseoperatordesc"><code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code></a>.</p>
+
+<h4 id="activationparametricsoftplusoperatordesc">ActivationParametricSoftPlusOperatorDesc</h4>
+
+<p>Performs a parametric softplus activation function on every element 
+in <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing the result into the corresponding element 
+of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x) =  Alpha \times \log(1 + e^{Beta * x})\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">alpha</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float*</code></td>
+      <td>The alpha coefficient.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">beta</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float*</code></td>
+      <td>The beta coefficient.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="activationreluoperatordesc">ActivationReLUOperatorDesc</h4>
+
+<p>Performs a rectified linear unit (ReLU) activation function on every 
+element in <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing the result into the corresponding 
+element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x) =  max(0,x)\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="activationscaledeluoperatordesc">ActivationScaledELUOperatorDesc</h4>
+
+<p>Performs a scaled exponential linear unit (ELU) activation function on 
+every element in <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing the result into the corresponding 
+element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x) = \begin{cases}
+        Gamma \times x, &amp; \text{ if } x &gt; 0\\
+        Gamma \times (Alpha \times e^x - Alpha), &amp; \text{ if } x \leq 0
+        \end{cases}\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">alpha</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float*</code></td>
+      <td>The alpha coefficient. The default value is 1.67326319217681884765625.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gamma</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float*</code></td>
+      <td>The beta coefficient. The default value is 1.05070102214813232421875.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="activationscaledtanhoperatordesc">ActivationScaledTanHOperatorDesc</h4>
+
+<p>Performs a scaled hyperbolic tangent activation function on every 
+element in InputTensor, placing the result into the corresponding 
+element of OutputTensor.</p>
+
+\[f(x) = Alpha \times tanh(Beta \times x)\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">alpha</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float*</code></td>
+      <td>The alpha coefficient. The default value is 1.0</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">beta</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float*</code></td>
+      <td>The beta coefficient. The default value is 0.5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="activationsigmoidoperatordesc">ActivationSigmoidOperatorDesc</h4>
+
+<p>Performs the sigmoid function on every element in <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing 
+the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x) = \frac{1}{1 + e^{-x}}\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="activationsoftmaxoperatordesc">ActivationSoftMaxOperatorDesc</h4>
+
+<p>Performs a softmax activation function on InputTensor, placing the 
+result into the corresponding element of OutputTensor.</p>
+
+\[f(x_{i}) = \frac{e^{x_i}}{\sum_j e^{x_j}}\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from. This tensor must have an effective rank no greater than 2. The effective rank of a tensor is the DimensionCount of the tensor, excluding leftmost dimensions of size 1. For example a tensor size of [ 1, 1, BatchCount, Width ] is valid, and is equivalent to a tensor of sizes [ BatchCount, Width ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<h4 id="activationsoftplusoperatordesc">ActivationSoftPlusOperatorDesc</h4>
+
+<p>Performs a parametric softplus activation function on every 
+element in <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing the result into the corresponding 
+element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x) = \frac{\log(1 + e^{Steepness \times x})}{ Steepness}\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">steepness</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float*</code></td>
+      <td>The Steepness coefficient. The default value is 1.0. This value cannot be less than 1.0.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="activationsoftsignoperatordesc">ActivationSoftSignOperatorDesc</h4>
+
+<p>Performs the softsign function on every element in 
+<code class="language-plaintext highlighter-rouge">InputTensor</code>, placing the result into the corresponding 
+element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x) = \frac{x}{1+|x|}\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="activationtanhoperatordesc">ActivationTanHOperatorDesc</h4>
+
+<p>Performs a hyperbolic tangent activation function on 
+every element in <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing the result into 
+the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x) = \frac{1 - e^{-2 \times x}}{1 + e^{-2 \times x}}\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="activationthresholdedreluoperatordesc">ActivationThresholdedReLUOperatorDesc</h4>
+
+<p>Performs a thresholded rectified linear unit (ReLU) activation 
+function on every element in <code class="language-plaintext highlighter-rouge">InputTensor</code>, placing the result into 
+the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x) = \begin{cases}
+        x, &amp; \text{ if } x &gt; \alpha\\
+        0, &amp; \text{ if } x \leq \alpha
+        \end{cases}\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">alpha</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float*</code></td>
+      <td>The alpha coefficient. The default value is 1.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="convolutionoperatordesc">ConvolutionOperatorDesc</h4>
+
+<p>Performs a convolution of the FilterTensor with the InputTensor. This 
+operator supports a number of standard convolution configurations. 
+These standard configurations include forward and backward (transposed) 
+convolution by setting the Direction and Mode fields, as well as 
+depth-wise convolution by setting the GroupCount field.</p>
+
+<p>A summary of the steps involved:</p>
+
+<ol>
+  <li>Perform the convolution into the output tensor.</li>
+  <li>Reshape the bias to the same dimension sizes as the output tensor.</li>
+  <li>Add the reshaped bias tensor to the output tensor.</li>
+</ol>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">filterTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the filter data.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">biasTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing the bias data. The bias tensor is a tensor containing data which is broadcasted across the output tensor at the end of the convolution which is added to the result.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mode</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ConvolutionMode</code></td>
+      <td>The mode to use for the convolution operation. The default value is <code class="language-plaintext highlighter-rouge">ConvolutionMode::CrossCorrelation</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">direction</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ConvolutionDirection</code></td>
+      <td>The direction of the convolution operation. The default value is <code class="language-plaintext highlighter-rouge">ConvolutionDirection::Forward</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dimensionCount</code></td>
+      <td><code class="language-plaintext highlighter-rouge">UInt32</code></td>
+      <td>The number of spatial dimensions for the convolution operation. Spatial dimensions are the lower dimensions of the convolution <code class="language-plaintext highlighter-rouge">FilterTensor</code>. For example, the width and height dimension are spatial dimensions of a 4D convolution filter tensor. This value also determines the size of the <code class="language-plaintext highlighter-rouge">Strides</code>, <code class="language-plaintext highlighter-rouge">Dilations</code>, <code class="language-plaintext highlighter-rouge">StartPadding</code>, <code class="language-plaintext highlighter-rouge">EndPadding</code>, and <code class="language-plaintext highlighter-rouge">OutputPadding</code> arrays. It should be set to 2 when <code class="language-plaintext highlighter-rouge">InputTensor.DimensionCount</code> is 4, and 3 when <code class="language-plaintext highlighter-rouge">InputTensor.DimensionCount</code> is 5.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">strides</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const UInt32*</code></td>
+      <td>An array containing the strides of the convolution operation. These strides are applied to the convolution filter.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dilations</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const UInt32*</code></td>
+      <td>An array containing the dilations of the convolution operation. Dilations are strides applied to the elements of the filter kernel. This has the effect of simulating a larger filter kernel by padding the internal filter kernel elements with zeros.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">startPadding</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const UInt32*</code></td>
+      <td>An array containing the padding values to be applied to the beginning of each spatial dimension of the filter and input tensor of the convolution operation. The start padding values are interpreted according to the <code class="language-plaintext highlighter-rouge">Direction</code> field.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">endPadding</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const UInt32*</code></td>
+      <td>An array containing the padding values to be applied to the end of each spatial dimension of the filter and input tensor of the convolution operation. The end padding values are interpreted according to the Direction field.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputPadding</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const UInt32*</code></td>
+      <td>An array containing the output padding of the convolution operation. OutputPadding applies a zero padding to the result of the convolution. This padding is applied to the end of each spatial dimension of the output tensor.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">groupCount</code></td>
+      <td><code class="language-plaintext highlighter-rouge">UInt32</code></td>
+      <td>The number of groups which to divide the convolution operation up into. This can be used to achieve depth-wise convolution by setting GroupCount equal to the input channel count, and <code class="language-plaintext highlighter-rouge">Direction</code> equal to <code class="language-plaintext highlighter-rouge">ConvolutionDirection::Forward</code>. This divides the convolution up into a separate convolution per input channel.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">fusedActivation</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const OperatorDesc*</code></td>
+      <td>An optional fused activation layer to apply after the convolution.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#baseoperatordesc"><code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code></a>.</p>
 
 
   </div>
