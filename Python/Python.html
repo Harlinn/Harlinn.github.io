@@ -232,17 +232,39 @@
   </header>
 
   <div class="post-content">
-    <p>Python has taken the world by storm, and it’s now perhaps the worlds 
-most poplar programming language. Python and its runtime CPython is not
-the most efficient platform for performing computations, and it doesn’t 
-need to. Efficient Python programs use native Python extension modules to do
-the number crunching and other tasks that requires high performance.</p>
+    <p>Python can be viewed as an interpreted programming language, 
+with a standard runtime and libraries, or as a programmable 
+integration platform powering science, machine learning, and generative AI.</p>
+
+<p>For many, machine learning and generative AI development, is synonymous with Python development. <br />
+Most development environments for machine learning and generative AI development includes
+Python, even when targeting other platforms such as .Net or native code.</p>
+
+<p>Since <a href="https://www.python.org/">standard Python</a> is, for now, an interpreted language,
+it doesn’t perform as well as compiled languages. This is a well known
+problem, and multiple projects have developed high performance
+solutions targeting native code generation, and/or compute kernels
+running on GPUs or NPUs.</p>
+
+<p>Python code can be compiled into native code, which may increase
+runtime performance significantly, using <a href="https://cython.org/">Cython</a>, a
+a static optimizing compiler for the Python language. With a little 
+effort, programs compiled with Cython may perform as well as software
+developed in other languages targeting native compilation.</p>
+
+<p>CPython added <a href="https://docs.python.org/3/whatsnew/3.13.html#whatsnew313-jit-compiler">experimental JIT compilation in version 3.13</a>, 
+generating machine code from tier 2 internal intermediate representation (IR). This
+is off by default, and must be enabled when building CPython.</p>
+
+<p>There are also production ready JIT compilers like <a href="https://github.com/numba/numba">Numba</a>,
+<a href="https://github.com/pytorch/pytorch/blob/main/torch/csrc/jit/OVERVIEW.md">PyTorch JIT</a>,
+<a href="https://github.com/triton-lang/triton">Triton</a> supporting native machine code generation or 
+enabling direct execution of AI, and other, workloads on the GPU.</p>
 
 <p>Creating the glue between Python and natively compiled code <a href="https://docs.python.org/3/extending/extending.html">can be tedious</a>,
-but fortunately the are tools like <a href="https://cython.org/">Cython</a> that greatly 
-simplifies the process and makes it less error prone.</p>
+but fortunately <a href="https://cython.org/">Cython</a> can also be used to simplify this process, and make it less error prone.</p>
 
-<p>Another option is to use the <a href="https://www.boost.org/doc/libs/1_86_0/libs/python/doc/html/index.html">boost.python</a> C++ library.</p>
+<p>Another, popular, option is to use the <a href="https://www.boost.org/doc/libs/1_87_0/libs/python/doc/html/index.html">boost.python</a> C++ library.</p>
 
 <p>For rust interoperability there are <a href="https://github.com/PyO3/pyo3">PyO3</a>, which can be used to write a 
 native Python extension module in Rust, or to embed Python in a Rust binary.</p>
