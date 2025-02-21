@@ -3567,6 +3567,1310 @@ dimensions are moved to the depth dimension.</p>
 
 <p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
 
+<h4 id="depthtospaceoperatordesc">DepthToSpaceOperatorDesc</h4>
+
+<p>Rearranges (permutes) data from depth into blocks of spatial data. 
+The operator outputs a copy of the input tensor where values from 
+the depth dimension are moved in spatial blocks to the height and 
+width dimensions.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from. The input tensor’s dimensions are [ BatchCount, InputChannelCount, InputHeight, InputWidth ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to. The tensor to write the results to. The output tensor’s dimensions are [ BatchCount, OutputChannelCount, OutputHeight, OutputWidth ], where: OutputChannelCount is computed as \(\frac{InputChannelCount}{BlockSize \times BlockSize}. OutputHeight is computed as\)InputHeight \times BlockSize\(. OutputWidth is computed as\)InputWidth \times BlockSize.$$</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">blockSize</code></td>
+      <td><code class="language-plaintext highlighter-rouge">UInt32</code></td>
+      <td>The width and height of the Blocks that are moved.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<h4 id="tileoperatordesc">TileOperatorDesc</h4>
+
+<p>Constructs an output tensor by tiling the input tensor. The 
+elements in each dimension of the input tensor are repeated 
+by a multiple in the Repeats array.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to. The tensor to write to, which will hold the tiled output. For each dimension <code class="language-plaintext highlighter-rouge">i</code> in <code class="language-plaintext highlighter-rouge">[0, InputTensor.DimensionCount-1]</code>, the output size is calculated as <code class="language-plaintext highlighter-rouge">OutputTensor.Sizes[i] = InputTensor.Sizes[i] * Repeats[i]</code>. This tensor must have the same DimensionCount as the input tensor.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">repeatsCount</code></td>
+      <td><code class="language-plaintext highlighter-rouge">UInt32</code></td>
+      <td>This parameter determines the size of the <code class="language-plaintext highlighter-rouge">Repeats</code> array. This value must be the same as the <code class="language-plaintext highlighter-rouge">InputTensor.DimensionCount</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">repeats</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const UInt32*</code></td>
+      <td>Each value in this array corresponds to one of the input tensor’s dimensions (in order). Each value is the number of tiled copies to make of that dimension. Values must be larger than 0.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<h4 id="topkoperatordesc">TopKOperatorDesc</h4>
+
+<p>Selects the largest K elements from each sequence along an axis of 
+the InputTensor, and returns the values and indices of those elements 
+in the OutputValueTensor and OutputIndexTensor, respectively. A 
+sequence refers to one of the sets of elements that exist along 
+the Axis dimension of the InputTensor.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputValueTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>The output tensor to write the values of the top <code class="language-plaintext highlighter-rouge">K</code> elements to. This tensor must have sizes equal to the <code class="language-plaintext highlighter-rouge">InputTensor</code>, except for the dimension specified by the <code class="language-plaintext highlighter-rouge">axis</code> parameter, which must have a size equal to <code class="language-plaintext highlighter-rouge">k</code>. The <code class="language-plaintext highlighter-rouge">k</code> values selected from each input sequence are guaranteed to be sorted descending (largest to smallest).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputIndexTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>The output tensor to write the indices of the top K elements to. This tensor must have sizes equal to the InputTensor, except for the dimension specified by the <code class="language-plaintext highlighter-rouge">axis</code> parameter, which must have a size equal to <code class="language-plaintext highlighter-rouge">k</code>. The indices returned in this tensor are measured relative to the beginning of their sequence (as opposed to the beginning of the tensor). For example, an index of 0 always refers to the first element for all sequences in an axis. In cases where two or more elements in the top-K have the same value (that is, when there is a tie), the indices of both elements are included, and are guaranteed to be ordered by ascending element index.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axis</code></td>
+      <td><code class="language-plaintext highlighter-rouge">UInt32</code></td>
+      <td>The index of the dimension to select elements across. This value must be less than the <code class="language-plaintext highlighter-rouge">DimensionCount</code> of the <code class="language-plaintext highlighter-rouge">InputTensor</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">k</code></td>
+      <td><code class="language-plaintext highlighter-rouge">UInt32</code></td>
+      <td>The number of elements to select. <code class="language-plaintext highlighter-rouge">k</code> must be greater than 0, but less than the number of elements in the <code class="language-plaintext highlighter-rouge">inputTensor</code> along the dimension specified by <code class="language-plaintext highlighter-rouge">axis</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#baseoperatordesc"><code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code></a>.</p>
+
+<h4 id="batchnormalizationoperatordesc">BatchNormalizationOperatorDesc</h4>
+
+<p>Performs a batch normalization on the input. This operator performs the following computation:</p>
+
+\[Output = Scale \times \frac{Input - Mean}{ \sqrt{Variance + Epsilon} } + Bias\]
+
+<p>or</p>
+
+\[Output = FusedActivation(Scale \times \frac{Input - Mean}{ \sqrt{Variance + Epsilon} } + Bias)\]
+
+<p>when <code class="language-plaintext highlighter-rouge">FusedActivation</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">meanTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the Mean data.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">varianceTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the Variance data.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the Scale data.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">biasTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the Bias data.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">epsilon</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td>The epsilon value to use to avoid division by zero.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">fusedActivation</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const OperatorDesc*</code></td>
+      <td>An optional fused activation layer to apply after the normalization.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#baseoperatordesc"><code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code></a>.</p>
+
+<h4 id="meanvariancenormalizationoperatordesc">MeanVarianceNormalizationOperatorDesc</h4>
+
+<p>Performs a mean variance normalization function on the input tensor. 
+This operator will calculate the mean and variance of the input tensor 
+to perform normalization. This operator performs the following computation:</p>
+
+\[Output = Scale \times \frac{Input - Mean}{ \sqrt{Variance + Epsilon} } + Bias\]
+
+<p>or</p>
+
+\[Output = FusedActivation(Scale \times \frac{Input - Mean}{ \sqrt{Variance + Epsilon} } + Bias)\]
+
+<p>when <code class="language-plaintext highlighter-rouge">FusedActivation</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from. This tensor’s dimensions should be [ BatchCount, ChannelCount, Height, Width ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to. This tensor’s dimensions are [ BatchCount, ChannelCount, Height, Width ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing the Scale data. This tensor’s dimensions should be [ BatchCount, ChannelCount, Height, Width ]. Any dimension can be replaced with 1 to broadcast in that dimension.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">biasTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing the bias data. This tensor’s dimensions should be [ BatchCount, ChannelCount, Height, Width ]. Any dimension can be replaced with 1 to broadcast in that dimension.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">crossChannel</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td>When <code class="language-plaintext highlighter-rouge">true</code>, the MeanVariance layer includes channels in the Mean and Variance calculations, meaning they are normalized across axes [ChannelCount, Height, Width]. When <code class="language-plaintext highlighter-rouge">false</code>, Mean and Variance calculations are normalized across axes [Height, Width] with each channel being independent.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">normalizeVariance</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">true</code> if the Normalization layer includes Variance in the normalization calculation. Otherwise, <code class="language-plaintext highlighter-rouge">false</code>. If <code class="language-plaintext highlighter-rouge">false</code>, then normalization equation is \(Output = FusedActivation(Scale \times (Input - Mean) + Bias)\).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">epsilon</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td>The epsilon value to use to avoid division by zero. A value of 0.00001 is recommended as default.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">fusedActivation</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const OperatorDesc*</code></td>
+      <td>An optional fused activation layer to apply after the normalization.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#baseoperatordesc"><code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code></a>.</p>
+
+<h4 id="localresponsenormalizationoperatordesc">LocalResponseNormalizationOperatorDesc</h4>
+
+<p>Performs a local response normalization (LRN) function on the input. 
+This operator performs the following computation:</p>
+
+\[b_{c} = a_{c}\left(k + \frac{\alpha}{n}\sum_{c'=\max(0, c-n/2)}^{\min(N-1,c+n/2)}a_{c'}^2\right)^{-\beta}\]
+
+<p>Where the size is the number of neighbouring channels used for normalization, 
+\(\alpha\) is multiplicative factor, \(\beta\) an exponent and \(k\) an additive factor.</p>
+
+<p>Local Response Normalization is a normalization layer that implements 
+the idea of lateral inhibition. Lateral inhibition is a concept in 
+neurobiology that refers to the phenomenon of an excited neuron inhibiting 
+its neighbors: this leads to a peak in the form of a local maximum, 
+creating contrast in that area and increasing sensory perception. 
+In practice, we can either normalize within the same channel or 
+normalize across channels when we apply LRN to convolutional neural networks.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from. This tensor’s Sizes should be [ BatchCount, ChannelCount, Height, Width ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to. This tensor’s <code class="language-plaintext highlighter-rouge">Sizes</code> should match the <code class="language-plaintext highlighter-rouge">InputTensor</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">crossChannel</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">true</code> if the LRN layer sums across channels; otherwise, <code class="language-plaintext highlighter-rouge">false</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">localSize</code></td>
+      <td><code class="language-plaintext highlighter-rouge">UInt32</code></td>
+      <td>The number of elements to sum over per dimension: Width, Height, and optionally Channel (if CrossChannel is set). This value must be at least 1.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">alpha</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td>The value of the scaling parameter. A value of 0.0001 is recommended as default.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">beta</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td>The value of the exponent. A value of 0.75 is recommended as default.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td>The value of bias. A value of 1 is recommended as default.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<h4 id="lpnormalizationoperatordesc">LPNormalizationOperatorDesc</h4>
+
+<p>Performs an Lp-normalization function along the specified axis of the input tensor.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to. This tensor’s Sizes should match the InputTensor.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axis</code></td>
+      <td><code class="language-plaintext highlighter-rouge">UInt32</code></td>
+      <td>The axis on which to apply normalization.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">epsilon</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td>The epsilon value to use to avoid division by zero. A value of 0.00001 is recommended as default.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">p</code></td>
+      <td><code class="language-plaintext highlighter-rouge">UInt32</code></td>
+      <td>The order of the normalization (either 1 or 2).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<h4 id="rnnoperatordesc">RNNOperatorDesc</h4>
+
+<p>Performs a one-layer simple recurrent neural network (RNN) function on 
+the input. This function is often referred to as the Input Gate. This operator 
+performs this function multiple times in a loop, dictated by the sequence 
+length dimension and the SequenceLengthsTensor.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the input data, X. Packed (and potentially padded) into one 4-D tensor with the sizes of [ 1, seq_length, batch_size, input_size ]. seq_length is the dimension that is mapped to the index, t.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">weightTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the weight data, W. Concatenation of W_i and W_Bi (if bidirectional). The tensor has sizes [ 1, num_directions, hidden_size, input_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">recurrenceTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing the recurrence weight data, R. Concatenation of R_i and R_Bi (if bidirectional). This tensor has sizes [ 1, num_directions, hidden_size, hidden_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">biasTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing the bias data for the input gate, B. Concatenation of { W_bi, R_bi }, and { W_Bbi, R_Bbi } (if bidirectional). This tensor has sizes [ 1, 1, num_directions, 2 * hidden_size ]. If not specified, then defaults to 0.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hiddenInitTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing the hidden node initializer tensor, H_[t-1] for the first loop index t. If not specified, then defaults to 0. This tensor has sizes [ 1, num_directions, batch_size, hidden_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">sequenceLengthsTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing an independent seq_length for each element in the batch. If not specified, then all sequences in the batch have length seq_length. This tensor has sizes [ 1, 1, 1, batch_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputSequenceTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor with which to write the concatenation of all the intermediate layer output values of the hidden nodes, H_t. This tensor has sizes [ seq_length, num_directions, batch_size, hidden_size ]. seq_length is mapped to the loop index t.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputSingleTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor with which to write the final output value of the hidden nodes, H_t. This tensor has sizes [ 1, num_directions, batch_size, hidden_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">activationDescCount</code></td>
+      <td><code class="language-plaintext highlighter-rouge">UInt32</code></td>
+      <td>This parameter determines the size of the ActivationDescs array.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">activationDescs</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const OperatorDesc*</code></td>
+      <td>An array of <code class="language-plaintext highlighter-rouge">DML::OperatorDesc</code> containing the descriptions of the activation operators. The number of activation functions is equal to the number of directions. For forwards and backwards directions there is expected to be 1 activation function. For Bidirectional there are expected to be 2.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">direction</code></td>
+      <td><code class="language-plaintext highlighter-rouge">RecurrentNetworkDirection</code></td>
+      <td>The direction of the operator: forward, backward, or bidirectional.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#baseoperatordesc"><code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code></a>.</p>
+
+<h4 id="lstmoperatordesc">LSTMOperatorDesc</h4>
+
+<p>Performs a one-layer long short term memory (LSTM) function on 
+the input. This operator uses multiple gates to perform this layer. 
+These gates are performed multiple times in a loop, dictated by the 
+sequence length dimension and the SequenceLengthsTensor.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the input data, X. Packed (and potentially padded) into one 4-D tensor with the sizes of [ 1, seq_length, batch_size, input_size ]. seq_length is the dimension that is mapped to the index, t.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">weightTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the weight data, W. Concatenation of W_[iofc] and W_B[iofc] (if bidirectional). The tensor has sizes [ 1, num_directions, 4 * hidden_size, input_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">recurrenceTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the recurrence data, R. Concatenation of R_[iofc] and R_B[iofc] (if bidirectional). This tensor has sizes [ 1, num_directions, 4 * hidden_size, hidden_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">biasTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing the bias data, B. Concatenation of { W_b[iofc], R_b[iofc] }, and { W_Bb[iofc], R_Bb[iofc] } (if bidirectional). This tensor has sizes [ 1, 1, num_directions, 8 * hidden_size ]. If not specified, then defaults to 0 bias.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hiddenInitTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing the hidden node initializer data, H_(t-1). Contents of this tensor are only used on the first loop index t. If not specified, then defaults to 0. This tensor has sizes [ 1, num_directions, batch_size, hidden_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cellMemInitTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing the cell initializer data, C_(t-1). Contents of this tensor are only used on the first loop index t. If not specified, then defaults to 0. This tensor has sizes [ 1, num_directions, batch_size, hidden_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">sequenceLengthsTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing an independent seq_length for each element in the batch. If not specified, then all sequences in the batch have length seq_length. This tensor has sizes [ 1, 1, 1, batch_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">peepholeTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing the weight data for peepholes, P. If not specified, then defaults to 0. Concatenation of P_[iof] and P_B[iof] (if bidirectional). This tensor has sizes [ 1, 1, num_directions, 3 * hidden_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputSequenceTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor with which to write the concatenation of all the intermediate output values of the hidden nodes, H_t. This tensor has sizes [ seq_length, num_directions, batch_size, hidden_size ]. seq_length is mapped to the loop index t.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputSingleTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor with which to write the last output value of the hidden nodes, H_t. This tensor has sizes [ 1, num_directions, batch_size, hidden_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputCellSingleTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor with which to write the last output value of the cell, C_t. This tensor has sizes [ 1, num_directions, batch_size, hidden_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">activationDescCount</code></td>
+      <td><code class="language-plaintext highlighter-rouge">UInt32</code></td>
+      <td>The size of the activationDescs array.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">activationDescs</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const OperatorDesc*</code></td>
+      <td>An array of DML::OperatorDesc containing the descriptions of the activation operators f(), g(), and h(). f(), g(), and h() are defined independently of direction, meaning that if <code class="language-plaintext highlighter-rouge">RecurrentNetworkDirection::Forward</code> or <code class="language-plaintext highlighter-rouge">RecurrentNetworkDirection::Backward</code> are supplied in Direction, then three activations must be provided. If <code class="language-plaintext highlighter-rouge">RecurrentNetworkDirection::Bidirectional</code> is defined, then six activations must be provided. For bidirectional, activations must be provided f(), g(), and h() for forward followed by f(), g(), and h() for backwards.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">direction</code></td>
+      <td><code class="language-plaintext highlighter-rouge">RecurrentNetworkDirection</code></td>
+      <td>The direction of the operator: forward, backward, or bidirectional.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">clipThreshold</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td>The cell clip threshold. Clipping bounds the elements of a tensor in the range of [-ClipThreshold, +ClipThreshold], and is applied to the input of activations.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">useClipThreshold</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">true</code> if clipThreshold should be used. Otherwise, <code class="language-plaintext highlighter-rouge">false</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">coupleInputForget</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">true</code> if the input and forget gates should be coupled. Otherwise, <code class="language-plaintext highlighter-rouge">false</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#baseoperatordesc"><code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code></a>.</p>
+
+<h4 id="gruoperatordesc">GRUOperatorDesc</h4>
+
+<p>Performs a (standard layers) one-layer gated recurrent 
+unit (GRU) function on the input. This operator uses multiple 
+gates to perform this layer. These gates are performed multiple 
+times in a loop dictated by the sequence length dimension and 
+the SequenceLengthsTensor.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the input data, X. Packed (and potentially padded) into one 4D tensor with the Sizes of [ 1, seq_length, batch_size, input_size ]. seq_length is the dimension that is mapped to the index, t.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">weightTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the weight data, W. Concatenation of W_[zrh] and W_B[zrh] (if bidirectional). The tensor has Sizes [ 1, num_directions, 3 * hidden_size, input_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">recurrenceTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the recurrence data, R. Concatenation of R_[zrh] and R_B[zrh] (if bidirectional). The tensor has Sizes [ 1, num_directions, 3 * hidden_size, hidden_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">biasTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing the bias data, B. Concatenation of (W_b[zrh], R_b[zrh]) and (W_Bb[zrh], R_Bb[zrh]) (if bidirectional). The tensor has Sizes [ 1, 1, num_directions, 6 * hidden_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hiddenInitTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing the hidden node initializer tensor, H_t-1 for the first loop index t. If not specified, then defaults to 0. This tensor has Sizes [ 1, num_directions, batch_size, hidden_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">sequenceLengthsTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor containing an independent seq_length for each element in the batch. If not specified, then all sequences in the batch have length seq_length. This tensor has Sizes [ 1, 1, 1, batch_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputSequenceTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor with which to write the concatenation of all the intermediate output values of the hidden nodes, H_t. This tensor has Sizes [ seq_length, num_directions, batch_size, hidden_size ]. seq_length is mapped to the loop index t.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputSingleTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional tensor with which to write the last output value of the hidden nodes, H_t. This tensor has Sizes [ 1, num_directions, batch_size, hidden_size ].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">activationDescCount</code></td>
+      <td><code class="language-plaintext highlighter-rouge">UInt32</code></td>
+      <td>This size of the activationDescs array.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">activationDescs</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const OperatorDesc*</code></td>
+      <td>An array of DML_OPERATOR_DESC containing the descriptions of the activation operators, f() and g(). Both f() and g() are defined independently of direction, meaning that if <code class="language-plaintext highlighter-rouge">RecurrentNetworkDirection::Forward</code> or <code class="language-plaintext highlighter-rouge">RecurrentNetworkDirection::Backward</code> are supplied in Direction, then two activations must be provided. If <code class="language-plaintext highlighter-rouge">RecurrentNetworkDirection::Bidirectional</code> is supplied, then four activations must be provided. For bidirectional, activations must be provided f() and g() for forward followed by f() and g() for backwards.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">direction</code></td>
+      <td><code class="language-plaintext highlighter-rouge">RecurrentNetworkDirection</code></td>
+      <td>The direction of the operator: forward, backward, or bidirectional.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">linearBeforeReset</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">true</code> to specify that, when computing the output of the hidden gate, the linear transformation should be applied before multiplying by the output of the reset gate. Otherwise, <code class="language-plaintext highlighter-rouge">false</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#baseoperatordesc"><code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code></a>.</p>
+
+<h4 id="elementwisesignoperatordesc">ElementWiseSignOperatorDesc</h4>
+
+<p>Returns a value representing the sign of each element of 
+<code class="language-plaintext highlighter-rouge">InputTensor</code>, placing the result into the corresponding 
+element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x) = \begin{cases}
+        -1, &amp; \text{ if } x &lt; 0\\
+        0, &amp; \text{ if } x = 0\\
+        1, &amp; \text{ if } x &gt; 0
+        \end{cases}\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<h4 id="elementwiseisnanoperatordesc">ElementWiseIsNaNOperatorDesc</h4>
+
+<p>For each element of the input tensor, returns 1 if the 
+input is NaN (as defined by IEEE-754), and 0 otherwise. 
+The result is placed into the corresponding element of 
+the output tensor.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<h4 id="elementwiseerfoperatordesc">ElementWiseErfOperatorDesc</h4>
+
+<p>Performs the Gaussian error function (erf) on each element 
+of InputTensor, placing the result into the corresponding 
+element of OutputTensor.</p>
+
+\[erf(x)=\frac{2}{\sqrt{\pi}}\int_{0}^{x}e^{-t^{2}}\, dt\]
+
+<p>or</p>
+
+\[erf(x)=\frac{2}{\sqrt{\pi}}\int_{0}^{x \times scale + bias}e^{-t^{2}}\, dt\]
+
+<p>when <code class="language-plaintext highlighter-rouge">scaleBias</code> is specified.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwisesinhoperatordesc">ElementWiseSinHOperatorDesc</h4>
+
+<p>Computes the hyperbolic sine of each element of <code class="language-plaintext highlighter-rouge">InputTensor</code>, 
+placing the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwisecoshoperatordesc">ElementWiseCosHOperatorDesc</h4>
+
+<p>Computes the hyperbolic cosine of each element of <code class="language-plaintext highlighter-rouge">InputTensor</code>, 
+placing the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwisetanhoperatordesc">ElementWiseTanHOperatorDesc</h4>
+
+<p>Computes the hyperbolic tangent of element of <code class="language-plaintext highlighter-rouge">InputTensor</code>, 
+placing the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwiseasinhoperatordesc">ElementWiseASinHOperatorDesc</h4>
+
+<p>Computes the hyperbolic arcsine for each element of <code class="language-plaintext highlighter-rouge">InputTensor</code>, 
+placing the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x) = log_e(x + \sqrt{x^2 + 1})\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwiseacoshoperatordesc">ElementWiseACosHOperatorDesc</h4>
+
+<p>Computes the hyperbolic arccosine for each element of <code class="language-plaintext highlighter-rouge">InputTensor</code>, 
+placing the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x) = log_e(x + \sqrt{x^2 - 1})\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwiseatanhoperatordesc">ElementWiseATanHOperatorDesc</h4>
+
+<p>Computes the hyperbolic arctangent for each element of <code class="language-plaintext highlighter-rouge">InputTensor</code>, 
+placing the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scaleBias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const DML::ScaleBias*</code></td>
+      <td>An optional scale and bias to apply to the input. If present, this has the effect of applying the function \(g(x) = x \times scale + bias\) to each input element prior to computing this operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<p>This operator supports in-place execution, meaning that <code class="language-plaintext highlighter-rouge">OutputTensor</code> can be bound to the same tensor as <code class="language-plaintext highlighter-rouge">InputTensor</code> during binding.</p>
+
+<h4 id="elementwiseifoperatordesc">ElementWiseIfOperatorDesc</h4>
+
+<p>Selects elements either from ATensor or BTensor, depending 
+on the value of the corresponding element in ConditionTensor. 
+Non-zero elements of ConditionTensor select from ATensor, 
+while zero-valued elements select from BTensor.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">conditionTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the condition tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensorA</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the first input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensorB</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the second input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#baseoperatordesc"><code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code></a>.</p>
+
+<h4 id="activationshrinkoperatordesc">ActivationShrinkOperatorDesc</h4>
+
+<p>Performs the shrink activation function on every element in <code class="language-plaintext highlighter-rouge">InputTensor</code>, 
+placing the result into the corresponding element of <code class="language-plaintext highlighter-rouge">OutputTensor</code>.</p>
+
+\[f(x) = \begin{cases}
+        x - Bias, &amp; \text{ if } x &gt; Threshold\\
+        x + Bias, &amp; \text{ if } if x &lt; -Threshold\\
+        0, &amp; \text{ otherwise }
+        \end{cases}\]
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">bias</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td>The value of the bias. The default for this parameter is 0.0.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">threshold</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td>The value of the threshold. The default for this parameter is 0.5.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#unaryoperatorwithscalebiasdesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorWithScaleBiasDesc</code></a>.</p>
+
+<h4 id="maxpooling1operatordesc">MaxPooling1OperatorDesc</h4>
+
+<p>Computes the maximum value across the elements within the sliding window over 
+the input tensor, and optionally returns the indices of the maximum values 
+selected.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from, with Sizes [ BatchCount, ChannelCount, Height, Width ] if <code class="language-plaintext highlighter-rouge">InputTensor.DimensionCount</code> is 4, and [ BatchCount, ChannelCount, Depth, Height, Weight ] if <code class="language-plaintext highlighter-rouge">InputTensor.DimensionCount</code> is 5.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputIndicesTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>An optional output tensor of indices to the input tensor <code class="language-plaintext highlighter-rouge">InputTensor</code> of the maximum values produced and stored in the <code class="language-plaintext highlighter-rouge">OutputTensor</code>. These index values are zero-based and treat the input tensor as a contiguous one-dimensional array. When multiple elements within the sliding window have the same value, the later equal values are ignored and the index points to the first value encountered. Both the <code class="language-plaintext highlighter-rouge">OutputTensor</code> and <code class="language-plaintext highlighter-rouge">OutputIndicesTensor</code> have the same tensor sizes.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dimensionCount</code></td>
+      <td><code class="language-plaintext highlighter-rouge">UInt32</code></td>
+      <td>The number of spatial dimensions of the input tensor <code class="language-plaintext highlighter-rouge">inputTensor</code>, which also corresponds to the number of dimensions of the sliding window <code class="language-plaintext highlighter-rouge">windowSize</code>. This parameter is also the size of the <code class="language-plaintext highlighter-rouge">strides</code>, <code class="language-plaintext highlighter-rouge">startPadding</code>, and <code class="language-plaintext highlighter-rouge">endPadding</code> arrays. It should be set to 2 when <code class="language-plaintext highlighter-rouge">inputTensor</code> is 4D, and 3 when it’s a 5D tensor.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">strides</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const UInt32*</code></td>
+      <td>The strides for the sliding window dimensions of sizes [ Height, Width ] when the <code class="language-plaintext highlighter-rouge">dimensionCount</code> is set to 2, or [ Depth, Height, Width ] when set to 3.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">windowSize</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const UInt32*</code></td>
+      <td>The dimensions of the sliding window in [ Height, Width ] when <code class="language-plaintext highlighter-rouge">dimensionCount</code> is set to 2, or [ Depth, Height, Width ] when set to 3.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">startPadding</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const UInt32*</code></td>
+      <td>The number of padding elements to be applied to the beginning of each spatial dimension of the input tensor <code class="language-plaintext highlighter-rouge">InputTensor</code>. The values are in [ Height, Width ] when <code class="language-plaintext highlighter-rouge">dimensionCount</code> is set to 2, or [ Depth, Height, Width ] when set to 3.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">endPadding</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const UInt32*</code></td>
+      <td>The number of padding elements to be applied to the end of each spatial dimension of the input tensor <code class="language-plaintext highlighter-rouge">InputTensor</code>. The values are in [ Height, Width ] when <code class="language-plaintext highlighter-rouge">dimensionCount</code> is set to 2, or [ Depth, Height, Width ] when set to 3.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The sizes of the output tensor can be calculated like this:</p>
+<pre><code class="language-C++">OutputTensor.Sizes[0] = InputTensor.Sizes[0];
+OutputTensor.Sizes[1] = InputTensor.Sizes[1];
+
+for (UInt32 i = 0; i &lt; DimensionCount; ++i) 
+{
+  UInt32 PaddedSize = InputTensor.Sizes[i + 2] + StartPadding[i] + EndPadding[i];
+  OutputTensor.Sizes[i + 2] = (PaddedSize - WindowSizes[i]) / Strides[i] + 1;
+}
+</code></pre>
+<p>Derived from <a href="#unaryoperatordesc"><code class="language-plaintext highlighter-rouge">UnaryOperatorDesc</code></a>.</p>
+
+<h4 id="maxunpoolingoperatordesc">MaxUnpoolingOperatorDesc</h4>
+
+<p>Inverts a max-pooling operation (see MaxPooling1OperatorDesc 
+for details) by filling the output tensor OutputTensor with 
+the values in the input tensor InputTensor, as obtained from 
+a max-pooling operation, according to the index values provided 
+in the IndicesTensor. The elements in the output tensor untouched 
+by this process are left with zero values.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the input tensor to read from, with <code class="language-plaintext highlighter-rouge">Sizes</code> [ Batch, Channel, Height, Width ]. The tensor values are obtained from the values in the <code class="language-plaintext highlighter-rouge">OutputTensor</code> of a max-pooling operation.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">indicesTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor of indices to the output tensor <code class="language-plaintext highlighter-rouge">OutputTensor</code> for the values given in the input tensor <code class="language-plaintext highlighter-rouge">InputTensor</code>. These index values are zero-based, and treat the output tensor as a contiguous one-dimensional array. Both the <code class="language-plaintext highlighter-rouge">InputTensor</code> and <code class="language-plaintext highlighter-rouge">IndicesTensor</code> have the same tensor sizes. The tensor values are obtained from the <code class="language-plaintext highlighter-rouge">OutputIndicesTensor</code> of a max-pooling operation.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to with the same number of dimensions as the input tensor.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#baseoperatordesc"><code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code></a>.</p>
+
+<h4 id="diagonalmatrixoperatordesc">DiagonalMatrixOperatorDesc</h4>
+
+<p>Generates an identity-like matrix with ones (or other 
+explicit value) on the major diagonal, and zeros 
+everywhere else. The diagonal ones may be shifted (via <code class="language-plaintext highlighter-rouge">Offset</code>) 
+where <code class="language-plaintext highlighter-rouge">OutputTensor[i, i + Offset] = Value</code>, meaning that 
+an argument of <code class="language-plaintext highlighter-rouge">Offset</code> greater than zero shifts all values 
+to the right, and less than zero shifts them to the left. 
+This generator operator is useful for models to avoid 
+storing a large constant tensor. Any leading dimensions 
+before the last two are treated as a batch count, meaning 
+that the tensor is treated as stack of 2D matrices.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>Describes the output tensor to write the results to. The dimensions are [ Batch1, Batch2, OutputHeight, OutputWidth ]. The height and width don’t need to be square.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">offset</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Int32</code></td>
+      <td>An offset to shift the diagonal lines of Value, with positive offsets shifting the written value to the right/up (viewing the output as a matrix with the top left as 0,0), and negative offsets to the left/down.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">value</code></td>
+      <td><code class="language-plaintext highlighter-rouge">float</code></td>
+      <td>A value to fill along the 2D diagonal. The default value is 1.0. Note that if the DataType of the tensors is not <code class="language-plaintext highlighter-rouge">DML::TensorDataType::Float16</code> or <code class="language-plaintext highlighter-rouge">DML::TensorDataType::Float32</code>, then the value might be truncated (for example, 10.6 will become 10).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Derived from <a href="#baseoperatordesc"><code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code></a>.</p>
+
+<h4 id="scatterelementsoperatordesc">ScatterElementsOperatorDesc</h4>
+
+<p>Copies the whole input tensor to the output, then overwrites selected indices with corresponding values from the updates tensor.</p>
+
+<p><b>Constructor parameters:</b></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>The tensor to read from.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">indicesTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the indices into the output tensor. The <code class="language-plaintext highlighter-rouge">Sizes</code> must match <code class="language-plaintext highlighter-rouge">inputTensor.Sizes</code> for every dimension except <code class="language-plaintext highlighter-rouge">axis</code>. Negative indices are interpreted as being relative to the end of the axis dimension. For example, an index of -1 refers to the last element along that dimension.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">updatesTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>A tensor containing the new values to replace the existing input values at the corresponding indices. The <code class="language-plaintext highlighter-rouge">Sizes</code> of this tensor must match <code class="language-plaintext highlighter-rouge">indicesTensor.Sizes</code>. The <code class="language-plaintext highlighter-rouge">DataType</code> must match <code class="language-plaintext highlighter-rouge">InputTensor.DataType</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outputTensor</code></td>
+      <td><code class="language-plaintext highlighter-rouge">const TensorDesc*</code></td>
+      <td>The tensor to write the results to. The <code class="language-plaintext highlighter-rouge">Sizes</code> and <code class="language-plaintext highlighter-rouge">DataType</code> of this tensor must match <code class="language-plaintext highlighter-rouge">InputTensor</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">axis</code></td>
+      <td><code class="language-plaintext highlighter-rouge">UInt32</code></td>
+      <td>The axis dimension to use for indexing in <code class="language-plaintext highlighter-rouge">OutputTensor</code>, ranging <code class="language-plaintext highlighter-rouge">[0, OutputTensor.DimensionCount)</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This operator performs the following pseudocode:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>output = input
+output[index[i, j, k, ...], j, k, ...] = updates[i, j, k, ...] // if axis == 0
+output[i, index[i, j, k, ...], k, ...] = updates[i, j, k, ...] // if axis == 1
+output[i, j, index[i, j, k, ...], ...] = updates[i, j, k, ...] // if axis == 2
+...
+</code></pre></div></div>
+
+<p>If two output element indices overlap (which is invalid), then there’s no guarantee of which last write wins.</p>
+
+<p><code class="language-plaintext highlighter-rouge">ScatterOperatorDesc</code> is the inverse of <code class="language-plaintext highlighter-rouge">GatherOperatorDesc</code>.</p>
+
+<p>Derived from <a href="#baseoperatordesc"><code class="language-plaintext highlighter-rouge">BaseOperatorDesc</code></a>.</p>
 
   </div>
 
