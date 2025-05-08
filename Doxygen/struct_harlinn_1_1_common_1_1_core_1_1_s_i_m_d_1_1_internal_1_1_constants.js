@@ -12,6 +12,7 @@ var struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants =
     [ "InvPi", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html#aafcfff4e1b7852e3b5383f97a1bb92ce", null ],
     [ "MinusOne", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html#ac7a66e609398bb7bd8865280fd3c84a1", null ],
     [ "MinusZero", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html#a0de74960a28f74c010d6e140a519acda", null ],
+    [ "NegativeInfinityValue", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html#a4857efd54ffe5123287bf8da6b0031b3", null ],
     [ "NegativePi", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html#a7430d4254bc9565b451326b69d437317", null ],
     [ "NegOneMaskValue", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html#a60dc18d14ebc78a99f04c7f6aa028515", null ],
     [ "One", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html#a455c50c0141c8900a0174943d063cfcf", null ],

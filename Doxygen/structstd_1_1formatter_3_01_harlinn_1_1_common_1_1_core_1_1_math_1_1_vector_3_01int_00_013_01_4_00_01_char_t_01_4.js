@@ -1,0 +1,5 @@
+var structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01int_00_013_01_4_00_01_char_t_01_4 =
+[
+    [ "format", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01int_00_013_01_4_00_01_char_t_01_4.html#a6547101bf723da0b5a1247e2153a494f", null ],
+    [ "parse", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01int_00_013_01_4_00_01_char_t_01_4.html#ad2caf3ae5d921219ee0e9997f5aaf4e3", null ]
+];

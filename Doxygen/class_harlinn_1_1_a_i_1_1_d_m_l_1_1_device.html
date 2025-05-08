@@ -118,8 +118,14 @@ Collaboration diagram for Harlinn::AI::DML::Device:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ad57ef6408b0fcf5e5c0324c4643a61b1" id="r_ad57ef6408b0fcf5e5c0324c4643a61b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_a_i_def_8h.html#aeca94810350fda6ebc8b90ce791b92be">HAI_EXPORT</a> <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a1fc2aeec89c4ad20a60962d0115ede2e">OperatorTypeInfoMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad57ef6408b0fcf5e5c0324c4643a61b1">GetOperatorTypeInfo</a> () const</td></tr>
+<tr class="separator:ad57ef6408b0fcf5e5c0324c4643a61b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3703e3996141104a6034c33d4b9f07a5" id="r_a3703e3996141104a6034c33d4b9f07a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3703e3996141104a6034c33d4b9f07a5">CheckFeatureSupport</a> (DML_FEATURE feature, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> featureQueryDataSize, _In_reads_bytes_opt_(featureQueryDataSize) const void *featureQueryData, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> featureSupportDataSize, _Out_writes_bytes_(featureSupportDataSize) void *featureSupportData) const</td></tr>
 <tr class="separator:a3703e3996141104a6034c33d4b9f07a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a7c30846c84b789cea0d584775d3a68" id="r_a7a7c30846c84b789cea0d584775d3a68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#afb61e4c9ac50faf0cd72be455c7c03cf">TensorDataTypeMask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a7c30846c84b789cea0d584775d3a68">SupportedTensorDataTypes</a> () const</td></tr>
+<tr class="separator:a7a7c30846c84b789cea0d584775d3a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe2a81f2ecc77b35e3b383087eb13144" id="r_afe2a81f2ecc77b35e3b383087eb13144"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a2ae43c596afb8ad0c25a8895a71a04eba23cc008e901e715870367ba20da6a9b4">FeatureLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe2a81f2ecc77b35e3b383087eb13144">SupportedFeatureLevel</a> () const</td></tr>
+<tr class="separator:afe2a81f2ecc77b35e3b383087eb13144"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54db27138d5041b202861ae6b5e31215" id="r_a54db27138d5041b202861ae6b5e31215"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54db27138d5041b202861ae6b5e31215">CreateOperator</a> (const DML_OPERATOR_DESC *desc, REFIID riid, _COM_Outptr_opt_ void **ppv) const</td></tr>
 <tr class="separator:a54db27138d5041b202861ae6b5e31215"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ac38fcb014c61d5cbb86398762834c2" id="r_a8ac38fcb014c61d5cbb86398762834c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_a_i_1_1_d_m_l_1_1_operator.html">Operator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ac38fcb014c61d5cbb86398762834c2">CreateOperator</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_operator_desc.html">OperatorDesc</a> *desc) const</td></tr>
@@ -752,6 +758,23 @@ requires std::is_base_of_v&lt;<a class="el" href="class_harlinn_1_1_a_i_1_1_d_m_
 
 </div>
 </div>
+<a id="ad57ef6408b0fcf5e5c0324c4643a61b1" name="ad57ef6408b0fcf5e5c0324c4643a61b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad57ef6408b0fcf5e5c0324c4643a61b1">&#9670;&#160;</a></span>GetOperatorTypeInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h_a_i_def_8h.html#aeca94810350fda6ebc8b90ce791b92be">HAI_EXPORT</a> <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a1fc2aeec89c4ad20a60962d0115ede2e">OperatorTypeInfoMap</a> Harlinn::AI::DML::Device::GetOperatorTypeInfo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2f9a58e134ee7366d1fbf4b119f15a58" name="a2f9a58e134ee7366d1fbf4b119f15a58"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f9a58e134ee7366d1fbf4b119f15a58">&#9670;&#160;</a></span>GetParentDevice()</h2>
 
@@ -810,8 +833,59 @@ requires std::is_base_of_v&lt;<a class="el" href="class_harlinn_1_1_a_i_1_1_d_m_
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a id="afe2a81f2ecc77b35e3b383087eb13144" name="afe2a81f2ecc77b35e3b383087eb13144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe2a81f2ecc77b35e3b383087eb13144">&#9670;&#160;</a></span>SupportedFeatureLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a2ae43c596afb8ad0c25a8895a71a04eba23cc008e901e715870367ba20da6a9b4">FeatureLevel</a> Harlinn::AI::DML::Device::SupportedFeatureLevel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a7c30846c84b789cea0d584775d3a68" name="a7a7c30846c84b789cea0d584775d3a68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a7c30846c84b789cea0d584775d3a68">&#9670;&#160;</a></span>SupportedTensorDataTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#afb61e4c9ac50faf0cd72be455c7c03cf">TensorDataTypeMask</a> Harlinn::AI::DML::Device::SupportedTensorDataTypes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_h_a_i_direct_m_l_8h.html">HAIDirectML.h</a></li>
+<li><a class="el" href="_h_a_i_direct_m_l_8cpp.html">HAIDirectML.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -2,7 +2,7 @@ var struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_g_e_m_m_operator_desc =
 [
     [ "Base", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_g_e_m_m_operator_desc.html#afc316f717068344caa5fa936282a52a2", null ],
     [ "GEMMOperatorDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_g_e_m_m_operator_desc.html#a9e625f3c6db44cc7b46070962f69b316", null ],
-    [ "GEMMOperatorDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_g_e_m_m_operator_desc.html#a75a8282fdc8f6776e7487f87062d2859", null ],
+    [ "GEMMOperatorDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_g_e_m_m_operator_desc.html#a1ac14d004bf88e90fc17af3e47cfeeb6", null ],
     [ "DML_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_g_e_m_m_operator_desc.html#acbbf6d4ead3733cc407ba77df7eaacfe", null ],
     [ "Alpha", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_g_e_m_m_operator_desc.html#a08c17bec3ed4d6028ffbd0fd5f435b6e", null ],
     [ "ATensor", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_g_e_m_m_operator_desc.html#a1bdb40c003764634792585cbd0f81cf0", null ],

@@ -264,7 +264,7 @@ classes holding <code class="language-plaintext highlighter-rouge">2</code>, <co
   </li>
   <li><a href="#squarematrix"><code class="language-plaintext highlighter-rouge">SquareMatrix</code></a></li>
   <li><a href="#quaternion"><code class="language-plaintext highlighter-rouge">Quaternion</code></a></li>
-  <li><a href="#transform"><code class="language-plaintext highlighter-rouge">Transform</code></a></li>
+  <li><a href="#transforms"><code class="language-plaintext highlighter-rouge">Transforms</code></a></li>
   <li><a href="#benchmarks">Benchmarks</a></li>
 </ul>
 
@@ -3867,13 +3867,38 @@ QuaternionSimd&lt;Quaternion&lt;T&gt;&gt; Slerp( const Quaternion&lt;T&gt;&amp; 
 
 </code></pre>
 
-<h2 id="transform-4">Transform</h2>
+<h2 id="transforms">Transforms</h2>
 
 <p>A transform is a mapping from vectors to vectors or points to points.</p>
 
 <p>Taking a point, vector, or normal defined with respect to one coordinate frame and 
 finding its coordinate values with respect to another coordinate frame is a useful 
 capability.</p>
+
+<h3 id="affinetransformation">AffineTransformation</h3>
+
+<p>Affine transformations are transformations that preserves collinearity; where all 
+points lying on a line initially, still lie on a line after transformation; and 
+ratios of distances, like the midpoint of a line segment, which remains the 
+midpoint after transformation. In this sense, affine indicates a special class 
+of projective transformations that do not move any objects from the affine space 
+\(R^3\) to the plane at infinity or conversely.</p>
+
+<p>Geometric contraction, expansion, dilation, reflection, rotation, shear, similarity 
+transformations, spiral similarities, and translation are all affine transformations, 
+as are their combinations. In general, an affine transformation is a composition of 
+rotations, translations, dilations, and shears.</p>
+
+<p>While an affine transformation preserves proportions on lines, it does not 
+necessarily preserve angles or lengths. Any triangle can be transformed 
+into any other by an affine transformation, so all triangles are affine and, 
+in this sense, affine is a generalization of congruent and similar.</p>
+
+<p>Use the <code class="language-plaintext highlighter-rouge">AffineTransformation</code> class to efficiently transform <code class="language-plaintext highlighter-rouge">Vector3f</code>, <code class="language-plaintext highlighter-rouge">Point3f</code>,
+<code class="language-plaintext highlighter-rouge">Normal3f</code>, and <code class="language-plaintext highlighter-rouge">AffineTransformation</code> objects from one coordinate space to another.</p>
+
+<p>The transformation of a <code class="language-plaintext highlighter-rouge">AffineTransformation</code> object, results in an <code class="language-plaintext highlighter-rouge">AffineTransformation</code>
+object combining the transformations of both into a single transformation.</p>
 
 <h2 id="benchmarks">Benchmarks</h2>
 

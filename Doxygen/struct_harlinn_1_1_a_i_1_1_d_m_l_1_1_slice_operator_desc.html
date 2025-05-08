@@ -150,7 +150,19 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a759ee50b6527675a8c20f550e63e3b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Alias for DML_SLICE_OPERATOR_DESC </p>
+<div class="textblock"><p>Extracts a single subregion (a "slice") of an input tensor. </p>
+<p>The elements copied in the slice are determined using three values for each dimension. </p>
+<ul>
+<li>
+The offset marks the first element to copy in a dimension.  </li>
+<li>
+The size marks the number of elements to copy in a dimension.  </li>
+<li>
+The stride indicates the element increment or step in a dimension.  </li>
+</ul>
+<p>The provided Offsets, Sizes, and Strides must only copy elements that are within the bounds of the input tensor (out-of-bounds reads are not permitted). The Sizes of the slice must exactly match the output tensor sizes. In general, the elements copied are calculated as follows. </p>
+<p>$$OutputTensor[OutputCoordinates] = InputTensor[Offsets + Strides \times OutputCoordinates]$$ </p>
+<p>Alias for DML_SLICE_OPERATOR_DESC </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a5a6c0c4207df997fd101da25bfa6de50" name="a5a6c0c4207df997fd101da25bfa6de50"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a6c0c4207df997fd101da25bfa6de50">&#9670;&#160;</a></span>Base</h2>

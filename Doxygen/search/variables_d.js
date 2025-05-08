@@ -33,7 +33,7 @@ var searchData=
   ['maskxy_30',['MaskXY',['../struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1m128_constants.html#ad3c332dfa71cbe53ee3391dfeb33d235',1,'Harlinn::Common::Core::SIMD::Internal::m128Constants']]],
   ['masky_31',['MaskY',['../struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1m128_constants.html#a1da60b9082dd56f2acd43540936804a2',1,'Harlinn::Common::Core::SIMD::Internal::m128Constants']]],
   ['maskz_32',['MaskZ',['../struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1m128_constants.html#ad1ebf7b105547f0aa022ff204da41829',1,'Harlinn::Common::Core::SIMD::Internal::m128Constants']]],
-  ['matrix_5f_33',['matrix_',['../class_harlinn_1_1_common_1_1_core_1_1_math_1_1_transformation.html#af39d8e8bd594d79ef29b856d74c5eb30',1,'Harlinn::Common::Core::Math::Transformation']]],
+  ['matrix_5f_33',['matrix_',['../class_harlinn_1_1_common_1_1_core_1_1_math_1_1_affine_transformation.html#a3165cc483e1aa05392454201692223c4',1,'Harlinn::Common::Core::Math::AffineTransformation']]],
   ['max_34',['Max',['../struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_element_wise_clip_operator_desc.html#a337048671ca018334319d4f5f1042e91',1,'Harlinn::AI::DML::ElementWiseClipOperatorDesc']]],
   ['max_5fdigits10_35',['max_digits10',['../classstd_1_1numeric__limits_3_01half__float_1_1half_01_4.html#a07d190feb781f88a0d6190afd1d5279a',1,'std::numeric_limits&lt; half_float::half &gt;']]],
   ['max_5fexponent_36',['max_exponent',['../classstd_1_1numeric__limits_3_01half__float_1_1half_01_4.html#a41f49d6fa628325afbe7870b0ce945c2',1,'std::numeric_limits&lt; half_float::half &gt;']]],

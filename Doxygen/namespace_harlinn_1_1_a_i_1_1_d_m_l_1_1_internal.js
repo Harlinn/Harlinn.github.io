@@ -1,5 +1,6 @@
 var namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_internal =
 [
+    [ "SimpleFieldInfo", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_internal_1_1_simple_field_info.html", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_internal_1_1_simple_field_info" ],
     [ "TensorTraits", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_internal_1_1_tensor_traits.html", null ],
     [ "TensorTraits< char >", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01char_01_4.html", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01char_01_4" ],
     [ "TensorTraits< double >", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01double_01_4.html", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01double_01_4" ],

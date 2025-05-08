@@ -1,6 +1,8 @@
 var struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_l_s_t_m_operator_desc =
 [
     [ "Base", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_l_s_t_m_operator_desc.html#abd1f42d9a412add2910bb867ae14cd61", null ],
+    [ "LSTMOperatorDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_l_s_t_m_operator_desc.html#a3ac6c2f4d5fae96b271176de4142bdbd", null ],
+    [ "LSTMOperatorDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_l_s_t_m_operator_desc.html#aeac804e3b831cf2b98fc4084431ffa8d", null ],
     [ "_Field_size_", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_l_s_t_m_operator_desc.html#ab6120652ac69f22ffbde53b9ab7d985e", null ],
     [ "DML_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_l_s_t_m_operator_desc.html#ab5cf2ebc2cd75b76ddcb4fd5dfc3676d", null ],
     [ "ActivationDescCount", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_l_s_t_m_operator_desc.html#a8cb12a556aee233934ce860d0925a796", null ],

@@ -1,6 +1,8 @@
 var struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_local_response_normalization_operator_desc =
 [
     [ "Base", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_local_response_normalization_operator_desc.html#ad5d4b86056148bf6af26a07ab52aeee7", null ],
+    [ "LocalResponseNormalizationOperatorDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_local_response_normalization_operator_desc.html#a5f52b3154569d8ed2baca0ca396e6062", null ],
+    [ "LocalResponseNormalizationOperatorDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_local_response_normalization_operator_desc.html#a61f3817369e51396702006e321e729ad", null ],
     [ "DML_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_local_response_normalization_operator_desc.html#adfad8605c12966e36a9802ec0dead043", null ],
     [ "Alpha", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_local_response_normalization_operator_desc.html#a580e4075643be727fc60f74d2dcc0e15", null ],
     [ "Beta", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_local_response_normalization_operator_desc.html#ae45890763e0e11ec200f0c5cfa0b8f52", null ],

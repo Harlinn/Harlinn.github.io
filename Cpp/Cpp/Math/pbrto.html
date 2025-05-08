@@ -232,27 +232,21 @@
   </header>
 
   <div class="post-content">
-    <p>PBRTO is a micro optimized version of <a href="https://github.com/mmp/pbrt-v4">PBRT-v4</a>, under development 
-as an example of how the functionality in <code class="language-plaintext highlighter-rouge">HCCMath.h</code>, <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> and <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code> can be used to 
-optimize the performance of real, computationally intensive, apps. It’s now about <code class="language-plaintext highlighter-rouge">35</code> % 
+    <p>PBRTO is a micro optimized version of <a href="https://github.com/mmp/pbrt-v4">PBRT-v4</a>, created as a testbed and 
+comprehensive example of how the functionality in <code class="language-plaintext highlighter-rouge">HCCMath.h</code>, <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> and <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code> can be used to 
+optimize the performance of real, computationally intensive, apps. It’s about <code class="language-plaintext highlighter-rouge">65</code> % 
 faster than the release build of the original PBRT.</p>
 
-<p>PBRT is a well written piece of software, with a code base that is, 
-for such a complex undertaking, easy to understand and modify. Analyzing the 
-performance of the original code is both instructive and interesting, as 
-many of pbrts’ mathematical functions perform very well.</p>
+<p><img src="./assets/Kroken1.png" width="1024" /></p>
+
+<p>PBRT is a well written piece of software, with a code base that is nicely structured, 
+and <em>relatively</em> easy to understand and modify.</p>
 
 <p>Most of the solution is contained within the <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Examples/Core/Math/Harlinn.pbrto">Harlinn.pbrto</a>
-project. This project builds PBRT at a dynamic link library, which makes it easy to create benchmarks
-for the original PBRT code,</p>
+project. This project contains both the original <a href="https://github.com/mmp/pbrt-v4">PBRT-v4</a> and 
+my modified version of the raytracer.</p>
 
-<p>Harlinn.pbrto can be built with, or without, the functionality from <code class="language-plaintext highlighter-rouge">HCCMath.h</code>, <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> and <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code>. 
-To build without, make sure <code class="language-plaintext highlighter-rouge">PBRT_USES_HCCMATH</code> is <b>not</b> defined in <code class="language-plaintext highlighter-rouge">pbrtodef.h</code>. At this stage
-it may not always build with the functionality from <code class="language-plaintext highlighter-rouge">HCCMath.h</code>, <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> and <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code>.</p>
-
-<p>PBRT has its own set of optimized mathematical functions, and it’s only when we 
-start comparing the vector and matrix operations, that it becomes clear that
-some significant performance improvements are possible.</p>
+<p>PBRT has its own set of optimized mathematical functions, but in some areas there are room for improvement.</p>
 
 <p>Operations on \(4 \times 4\) matrices:</p>
 
@@ -406,6 +400,121 @@ some significant performance improvements are possible.</p>
     </tr>
   </tbody>
 </table>
+
+<p>The new rendering machinery uses my <a href="https://harlinn.github.io/Cpp/Cpp/Math/FastLinearAlgebra.html">Fast Linear Algebra Classes for Games and Graphics</a>, 
+showcasing their use, and benefits, when integrated with an existing, high performance, solution.</p>
+
+<p>The new machinery is definitely still <a href="https://github.com/mmp/pbrt-v4">pbrt</a>, my changes are small, and incremental - only a
+few classes have been fully reimplemented, while maintaining a high degree of compatibility with their original interface.</p>
+
+<p>The machinery reimplements the <code class="language-plaintext highlighter-rouge">Transform</code> class, using a transpose of the 4x4 matrix used by the original <code class="language-plaintext highlighter-rouge">Transform</code> 
+implementation, placing translation fully in the 4<sup>th</sup> row of the matrix, instead of spreading it over 3 rows.</p>
+
+<p>The transposed form is generally easier to work with, enabling efficient SIMD based implementations of 
+most of the transformations performed by this class using functions implemented in <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code>.</p>
+
+<p>The pbrto implementation of <code class="language-plaintext highlighter-rouge">Vector2&lt;Float&gt;</code>. <code class="language-plaintext highlighter-rouge">Vector3&lt;Float&gt;</code>, <code class="language-plaintext highlighter-rouge">Vector2&lt;Int32&gt;</code>, <code class="language-plaintext highlighter-rouge">Vector3&lt;Int32&gt;</code>,
+<code class="language-plaintext highlighter-rouge">Point2&lt;Float&gt;</code>, <code class="language-plaintext highlighter-rouge">Point2&lt;Int32&gt;</code>, <code class="language-plaintext highlighter-rouge">Point3&lt;Float&gt;</code>, <code class="language-plaintext highlighter-rouge">Point3&lt;Int32&gt;</code>, <code class="language-plaintext highlighter-rouge">Normal3&lt;Float&gt;</code>, <code class="language-plaintext highlighter-rouge">Interval</code>,
+<code class="language-plaintext highlighter-rouge">Quaternion</code>, <code class="language-plaintext highlighter-rouge">SquareMatrix&lt;N&gt;</code> comes from <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code>, with minor adaptations to their use 
+inside pbrto.</p>
+
+<p>Most of <code class="language-plaintext highlighter-rouge">SampledSpectrum</code> and related functions was reimplemented using SIMD::Traits&lt;float,N&gt;, so
+<code class="language-plaintext highlighter-rouge">NSpectrumSamples</code> must be a multiple of 4. Setting <code class="language-plaintext highlighter-rouge">NSpectrumSamples</code> to 16 or 32 generates error messages 
+during rendering, but still improves the quality of the images.</p>
+
+<p>Calls to most math functions from the standard library have been replaced by calls to their <code class="language-plaintext highlighter-rouge">Harlinn::Common::Core::Math</code> 
+counterparts from <code class="language-plaintext highlighter-rouge">HCCMath.h</code>. <code class="language-plaintext highlighter-rouge">Math::SinCos</code> and <code class="language-plaintext highlighter-rouge">Math::Hypot</code> is used where applicable.</p>
+
+<h2 id="rotatefromto">RotateFromTo</h2>
+
+<p><code class="language-plaintext highlighter-rouge">RotateFromTo</code> is a good example of how the new machinery improves performance while retaining
+a fair level of API compatibility. Benchmarking the new implementation:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkPbrtoRotateFromToVector3f              20.3 ns         20.5 ns     37333333
+</code></pre></div></div>
+
+<p>and the original pbrt implementation:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkPbrtRotateFromToVector3f               71.3 ns         71.1 ns     11200000
+</code></pre></div></div>
+
+<p>The original implementation of <code class="language-plaintext highlighter-rouge">RotateFromTo</code> from pbrt:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PBRT_CPU_GPU inline Transform RotateFromTo(Vector3f from, Vector3f to) {
+    // Compute intermediate vector for vector reflection
+    Vector3f refl;
+    if (std::abs(from.x) &lt; 0.72f &amp;&amp; std::abs(to.x) &lt; 0.72f)
+        refl = Vector3f(1, 0, 0);
+    else if (std::abs(from.y) &lt; 0.72f &amp;&amp; std::abs(to.y) &lt; 0.72f)
+        refl = Vector3f(0, 1, 0);
+    else
+        refl = Vector3f(0, 0, 1);
+
+    // Initialize matrix _r_ for rotation
+    Vector3f u = refl - from, v = refl - to;
+    SquareMatrix&lt;4&gt; r;
+    for (int i = 0; i &lt; 3; ++i)
+        for (int j = 0; j &lt; 3; ++j)
+            // Initialize matrix element _r[i][j]_
+            r[i][j] = ((i == j) ? 1 : 0) - 2 / Dot(u, u) * u[i] * u[j] -
+                      2 / Dot(v, v) * v[i] * v[j] +
+                      4 * Dot(u, v) / (Dot(u, u) * Dot(v, v)) * v[i] * u[j];
+
+    return Transform(r, Transpose(r));
+}
+</code></pre></div></div>
+
+<p>The new implementation of <code class="language-plaintext highlighter-rouge">RotateFromTo</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>inline Transform RotateFromTo( const Vector3f::Simd&amp; from, const Vector3f::Simd&amp; to )
+{
+    // Compute intermediate vector for vector reflection
+    Vector3f::Simd refl;
+
+    Vector3f absFrom = FastAbs( from );
+    Vector3f absTo = FastAbs( to );
+        
+    if ( absFrom.x &lt; 0.72f &amp;&amp; absTo.x &lt; 0.72f )
+        refl = Vector3f::Simd( 1, 0, 0 );
+    else if ( absFrom.y &lt; 0.72f &amp;&amp; absTo.y &lt; 0.72f )
+        refl = Vector3f::Simd( 0, 1, 0 );
+    else
+        refl = Vector3f::Simd( 0, 0, 1 );
+
+    // Initialize matrix _r_ for rotation
+    Vector3f::Simd u = refl - from;
+    Vector3f::Simd v = refl - to;
+
+    auto uDotU = Dot( u, u );
+    auto vDotV = Dot( v, v );
+    auto uDotV = Dot( u, v );
+
+    Vector3f::Simd f1 = 2.f / uDotU * u;
+    Vector3f::Simd f2 = 2.f / vDotV * v;
+    Vector3f::Simd f3 = 4.f * uDotV / ( uDotU * vDotV ) * u;
+        
+    Vector3f::Simd vn = v.X( );
+    Vector3f::Simd un = u.X( );
+
+    auto r1 = Vector3f::Simd( 1.f, 0.f, 0.f ) - f1 * un - f2 * vn + f3 * vn;
+
+    vn = v.Y( );
+    un = u.Y( );
+
+    auto r2 = Vector3f::Simd( 0.f, 1.f, 0.f ) - f1 * un - f2 * vn + f3 * vn;
+
+    vn = v.Z( );
+    un = u.Z( );
+
+    auto r3 = Vector3f::Simd( 0.f, 0.f, 1.f ) - f1 * un - f2 * vn + f3 * vn;
+
+    Transform::MatrixSimdType r( r1.simd, r2.simd, r3.simd );
+
+    return Transform( Transpose( r ), r, true  );
+}
+</code></pre></div></div>
+
+<p>The inner for loop is completely eliminated, and the outer for loop is unrolled.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-----------------------------------------------------------------------------------------
 Benchmark                                               Time             CPU   Iterations

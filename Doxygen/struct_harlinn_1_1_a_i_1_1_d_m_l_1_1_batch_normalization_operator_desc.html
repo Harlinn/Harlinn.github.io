@@ -128,8 +128,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a14f4d00f6f6b4d3a3a23cebc1b506fb8" id="r_a14f4d00f6f6b4d3a3a23cebc1b506fb8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14f4d00f6f6b4d3a3a23cebc1b506fb8">BatchNormalizationOperatorDesc</a> () noexcept=default</td></tr>
 <tr class="separator:a14f4d00f6f6b4d3a3a23cebc1b506fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a649bae946ac405aa8c9f8bc8171c6586" id="r_a649bae946ac405aa8c9f8bc8171c6586"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a649bae946ac405aa8c9f8bc8171c6586">BatchNormalizationOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *meanTensor=nullptr, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *varianceTensor=nullptr, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *scaleTensor=nullptr, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *biasTensor=nullptr, bool spatial=false, float epsilon=0.f, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_operator_desc.html">OperatorDesc</a> *fusedActivation=nullptr) noexcept</td></tr>
-<tr class="separator:a649bae946ac405aa8c9f8bc8171c6586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c3fe79eb9dcf101db908d46f89faaa" id="r_a33c3fe79eb9dcf101db908d46f89faaa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33c3fe79eb9dcf101db908d46f89faaa">BatchNormalizationOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *meanTensor=nullptr, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *varianceTensor=nullptr, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *scaleTensor=nullptr, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *biasTensor=nullptr, float epsilon=0.f, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_operator_desc.html">OperatorDesc</a> *fusedActivation=nullptr) noexcept</td></tr>
+<tr class="separator:a33c3fe79eb9dcf101db908d46f89faaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36733e92d3a309a21129160c03fc2ea1" id="r_a36733e92d3a309a21129160c03fc2ea1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36733e92d3a309a21129160c03fc2ea1">DML_IMPLEMENT_CONVERSIONS_TO</a> (DML_BATCH_NORMALIZATION_OPERATOR_DESC)</td></tr>
 <tr class="separator:a36733e92d3a309a21129160c03fc2ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -160,7 +160,9 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a94626b74c64472441030590ee521767d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Alias for DML_BATCH_NORMALIZATION_OPERATOR_DESC </p>
+<div class="textblock"><p>Performs a batch normalization on the input. This operator performs the following computation: </p>
+<p>$$Output = FusedActivation(Scale \times \frac{Input - Mean}{ \sqrt{Variance + Epsilon} } + Bias)$$ </p>
+<p>Alias for DML_BATCH_NORMALIZATION_OPERATOR_DESC </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a580eb6098bae5245009ab45f07869dc1" name="a580eb6098bae5245009ab45f07869dc1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a580eb6098bae5245009ab45f07869dc1">&#9670;&#160;</a></span>Base</h2>
@@ -202,8 +204,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a649bae946ac405aa8c9f8bc8171c6586" name="a649bae946ac405aa8c9f8bc8171c6586"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a649bae946ac405aa8c9f8bc8171c6586">&#9670;&#160;</a></span>BatchNormalizationOperatorDesc() <span class="overload">[2/2]</span></h2>
+<a id="a33c3fe79eb9dcf101db908d46f89faaa" name="a33c3fe79eb9dcf101db908d46f89faaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33c3fe79eb9dcf101db908d46f89faaa">&#9670;&#160;</a></span>BatchNormalizationOperatorDesc() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,11 +242,6 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *</td>          <td class="paramname"><span class="paramname"><em>biasTensor</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>spatial</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

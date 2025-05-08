@@ -128,6 +128,10 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a02888dfb4762f33204923f5cb6063067" id="r_a02888dfb4762f33204923f5cb6063067"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02888dfb4762f33204923f5cb6063067">_Field_size_</a> (<a class="el" href="#a964d5eb84052b5cf26bd501ccf0bc982">ActivationDescCount</a>) const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_operator_desc.html">OperatorDesc</a> *ActivationDescs</td></tr>
 <tr class="separator:a02888dfb4762f33204923f5cb6063067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f019df7078d16a4593ef13203bf3589" id="r_a2f019df7078d16a4593ef13203bf3589"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f019df7078d16a4593ef13203bf3589">RNNOperatorDesc</a> () noexcept=default</td></tr>
+<tr class="separator:a2f019df7078d16a4593ef13203bf3589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa180555c2109aacbb00d1d8e9aa76d32" id="r_aa180555c2109aacbb00d1d8e9aa76d32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa180555c2109aacbb00d1d8e9aa76d32">RNNOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *weightTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *recurrenceTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *biasTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *hiddenInitTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *sequenceLengthsTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputSequenceTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputSingleTensor, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> activationDescCount, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_operator_desc.html">OperatorDesc</a> *activationDescs, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7e13a53fde9868a7b64c4fe6edda1ead">RecurrentNetworkDirection</a> direction) noexcept</td></tr>
+<tr class="separator:aa180555c2109aacbb00d1d8e9aa76d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34e98b2135ff37a8f8ccb96beff4c276" id="r_a34e98b2135ff37a8f8ccb96beff4c276"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34e98b2135ff37a8f8ccb96beff4c276">DML_IMPLEMENT_CONVERSIONS_TO</a> (DML_RNN_OPERATOR_DESC)</td></tr>
 <tr class="separator:a34e98b2135ff37a8f8ccb96beff4c276"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -160,7 +164,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a520f6e29848588d24fee9e7e7eced331"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Alias for DML_RNN_OPERATOR_DESC </p>
+<div class="textblock"><p>Performs a one-layer simple recurrent neural network (RNN) function on the input. This function is often referred to as the Input Gate. This operator performs this function multiple times in a loop, dictated by the sequence length dimension and the SequenceLengthsTensor. </p>
+<p>Alias for DML_RNN_OPERATOR_DESC </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a372d971b891be682461681f914b58813" name="a372d971b891be682461681f914b58813"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a372d971b891be682461681f914b58813">&#9670;&#160;</a></span>Base</h2>
@@ -172,6 +177,106 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">using <a class="el" href="#a372d971b891be682461681f914b58813">Harlinn::AI::DML::RNNOperatorDesc::Base</a> = BaseOperatorDesc</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2f019df7078d16a4593ef13203bf3589" name="a2f019df7078d16a4593ef13203bf3589"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f019df7078d16a4593ef13203bf3589">&#9670;&#160;</a></span>RNNOperatorDesc() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Harlinn::AI::DML::RNNOperatorDesc::RNNOperatorDesc </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa180555c2109aacbb00d1d8e9aa76d32" name="aa180555c2109aacbb00d1d8e9aa76d32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa180555c2109aacbb00d1d8e9aa76d32">&#9670;&#160;</a></span>RNNOperatorDesc() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Harlinn::AI::DML::RNNOperatorDesc::RNNOperatorDesc </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *</td>          <td class="paramname"><span class="paramname"><em>inputTensor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *</td>          <td class="paramname"><span class="paramname"><em>weightTensor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *</td>          <td class="paramname"><span class="paramname"><em>recurrenceTensor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *</td>          <td class="paramname"><span class="paramname"><em>biasTensor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *</td>          <td class="paramname"><span class="paramname"><em>hiddenInitTensor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *</td>          <td class="paramname"><span class="paramname"><em>sequenceLengthsTensor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *</td>          <td class="paramname"><span class="paramname"><em>outputSequenceTensor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *</td>          <td class="paramname"><span class="paramname"><em>outputSingleTensor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>activationDescCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_operator_desc.html">OperatorDesc</a> *</td>          <td class="paramname"><span class="paramname"><em>activationDescs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7e13a53fde9868a7b64c4fe6edda1ead">RecurrentNetworkDirection</a></td>          <td class="paramname"><span class="paramname"><em>direction</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

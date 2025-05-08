@@ -2,7 +2,7 @@ var struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_batch_normalization_operator_desc =
 [
     [ "Base", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_batch_normalization_operator_desc.html#a580eb6098bae5245009ab45f07869dc1", null ],
     [ "BatchNormalizationOperatorDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_batch_normalization_operator_desc.html#a14f4d00f6f6b4d3a3a23cebc1b506fb8", null ],
-    [ "BatchNormalizationOperatorDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_batch_normalization_operator_desc.html#a649bae946ac405aa8c9f8bc8171c6586", null ],
+    [ "BatchNormalizationOperatorDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_batch_normalization_operator_desc.html#a33c3fe79eb9dcf101db908d46f89faaa", null ],
     [ "DML_IMPLEMENT_CONVERSIONS_TO", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_batch_normalization_operator_desc.html#a36733e92d3a309a21129160c03fc2ea1", null ],
     [ "BiasTensor", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_batch_normalization_operator_desc.html#af6ff764ace437c44beaba814cfda0bf2", null ],
     [ "Epsilon", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_batch_normalization_operator_desc.html#ab16115319996b6cc095e7fbb94725f02", null ],

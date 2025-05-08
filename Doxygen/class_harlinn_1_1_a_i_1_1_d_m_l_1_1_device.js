@@ -15,6 +15,9 @@ var class_harlinn_1_1_a_i_1_1_d_m_l_1_1_device =
     [ "CreateOperatorInitializer", "class_harlinn_1_1_a_i_1_1_d_m_l_1_1_device.html#ad0ddc1deb0c236509593788e228b985b", null ],
     [ "Evict", "class_harlinn_1_1_a_i_1_1_d_m_l_1_1_device.html#ad337f2815fb88692fe05074b86cb0081", null ],
     [ "GetDeviceRemovedReason", "class_harlinn_1_1_a_i_1_1_d_m_l_1_1_device.html#a2c940ea471e4e8cc8afd3f46b19dec6e", null ],
+    [ "GetOperatorTypeInfo", "class_harlinn_1_1_a_i_1_1_d_m_l_1_1_device.html#ad57ef6408b0fcf5e5c0324c4643a61b1", null ],
     [ "GetParentDevice", "class_harlinn_1_1_a_i_1_1_d_m_l_1_1_device.html#a2f9a58e134ee7366d1fbf4b119f15a58", null ],
-    [ "MakeResident", "class_harlinn_1_1_a_i_1_1_d_m_l_1_1_device.html#ac326cc5bb393c7284a89c8d0e0af02bf", null ]
+    [ "MakeResident", "class_harlinn_1_1_a_i_1_1_d_m_l_1_1_device.html#ac326cc5bb393c7284a89c8d0e0af02bf", null ],
+    [ "SupportedFeatureLevel", "class_harlinn_1_1_a_i_1_1_d_m_l_1_1_device.html#afe2a81f2ecc77b35e3b383087eb13144", null ],
+    [ "SupportedTensorDataTypes", "class_harlinn_1_1_a_i_1_1_d_m_l_1_1_device.html#a7a7c30846c84b789cea0d584775d3a68", null ]
 ];

@@ -130,8 +130,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7b08f04b88edb833d3a1fd5bafa724f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5e19bc06badadaf289cee41ad9abceb" id="r_ae5e19bc06badadaf289cee41ad9abceb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5e19bc06badadaf289cee41ad9abceb">JoinOperatorDesc</a> () noexcept=default</td></tr>
 <tr class="separator:ae5e19bc06badadaf289cee41ad9abceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c02cf5ec3a999538dfe7d9c4219ea9d" id="r_a4c02cf5ec3a999538dfe7d9c4219ea9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c02cf5ec3a999538dfe7d9c4219ea9d">JoinOperatorDesc</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> inputCount, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensors, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> axis=0) noexcept</td></tr>
-<tr class="separator:a4c02cf5ec3a999538dfe7d9c4219ea9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea6d089071cbc018201fa16455cdc654" id="r_aea6d089071cbc018201fa16455cdc654"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea6d089071cbc018201fa16455cdc654">JoinOperatorDesc</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> inputTensorCount, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensors, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> axis=0) noexcept</td></tr>
+<tr class="separator:aea6d089071cbc018201fa16455cdc654"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54de99e532b1efc8f6e2f77c93eb8897" id="r_a54de99e532b1efc8f6e2f77c93eb8897"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54de99e532b1efc8f6e2f77c93eb8897">DML_IMPLEMENT_CONVERSIONS_TO</a> (DML_JOIN_OPERATOR_DESC)</td></tr>
 <tr class="separator:a54de99e532b1efc8f6e2f77c93eb8897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -150,7 +150,9 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a20e384b5e7e52afea02c6a487ea9cdc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Alias for DML_JOIN_OPERATOR_DESC </p>
+<div class="textblock"><p>Concatenates an array of input tensors along a specified axis. </p>
+<p>Input tensors may only be joined if their sizes are identical in all dimensions except for the join axis, which may contain any non-zero size. The output sizes are equal to the input sizes except for the join axis, which is the sum of all inputs' join axis size. </p>
+<p>Alias for DML_JOIN_OPERATOR_DESC </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a5813c8e901138c64372eb8005091ee7c" name="a5813c8e901138c64372eb8005091ee7c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5813c8e901138c64372eb8005091ee7c">&#9670;&#160;</a></span>Base</h2>
@@ -192,8 +194,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a4c02cf5ec3a999538dfe7d9c4219ea9d" name="a4c02cf5ec3a999538dfe7d9c4219ea9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c02cf5ec3a999538dfe7d9c4219ea9d">&#9670;&#160;</a></span>JoinOperatorDesc() <span class="overload">[2/2]</span></h2>
+<a id="aea6d089071cbc018201fa16455cdc654" name="aea6d089071cbc018201fa16455cdc654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea6d089071cbc018201fa16455cdc654">&#9670;&#160;</a></span>JoinOperatorDesc() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,7 +206,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::AI::DML::JoinOperatorDesc::JoinOperatorDesc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>inputCount</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>inputTensorCount</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
