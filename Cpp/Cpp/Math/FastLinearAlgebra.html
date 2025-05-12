@@ -259,8 +259,8 @@ header file:</p>
 </code></pre>
 <p>and you are ready to code.</p>
 
-<p>To calculate the shortest arc quaternion, as described by Sam Melax in Game Programming Gems,
-you can implement it like this:</p>
+<p>As described by Sam Melax, in Game Programming Gems, a function for calculating the shortest arc 
+quaternion between to vectors can be implemented like this:</p>
 
 <pre><code class="language-C++">
 using namespace Harlinn::Common::Core;
@@ -270,7 +270,8 @@ namespace Basics
 {
     using Quaternion = Math::Quaternion&lt;float&gt;;
 
-    Quaternion ShortestArc1( const Vector3f&amp; fromDir, const Vector3f&amp; toDir ) noexcept
+    Quaternion ShortestArc1( const Vector3f&amp; fromDir, 
+                                    const Vector3f&amp; toDir ) noexcept
     {
         using Constants = Vector3f::Traits::Constants::Base;
 
@@ -285,7 +286,8 @@ namespace Basics
         else if ( dot &lt;= -1.f )
         {
             Vector3f axis = Cross( fromDirNormalized, Vector3f::Right( ) );
-            if ( AreNearlyEqual( ScalarLengthSquared( axis ), 0.f, Constants::EpsilonValue ) )
+            if ( AreNearlyEqual( ScalarLengthSquared( axis ), 0.f, 
+                                                Constants::EpsilonValue ) )
             {
                 axis = Cross( fromDirNormalized, Vector3f::Up() );
             }
@@ -304,12 +306,61 @@ namespace Basics
 
 </code></pre>
 
-<p>No surprises here, the above looks like something you could easily do with most
+<p>No surprises here, the above looks like something that could easily be done using most
 3D math libraries.</p>
 
-<p>A better version would look like:</p>
+<p>A better performing version would look like:</p>
 
-<pre><code class="language-C++">    Quaternion ShortestArc2( const Vector3f::Simd&amp; fromDir, const Vector3f::Simd&amp; toDir ) noexcept
+<pre><code class="language-C++">    Quaternion ShortestArc2( const Vector3f::Simd&amp; fromDir, 
+                                    const Vector3f::Simd&amp; toDir ) noexcept
+    {
+        using Constants = Vector3f::Traits::Constants::Base;
+
+        auto fromDirNormalized = Normalize( fromDir );
+        auto toDirNormalized = Normalize( toDir );
+
+        const auto dot = Dot( fromDirNormalized, toDirNormalized );
+        const auto dotf = dot[ 0 ];
+        if ( dotf &gt;= 1.f )
+        {
+            return Quaternion::Identity( );
+        }
+        else if ( dotf &lt;= -1.f )
+        {
+            auto axis = Cross( fromDirNormalized, Vector3f::Right( ) );
+            if ( AreNearlyEqual( ScalarLengthSquared( axis ), 0.f, 
+                                                Constants::EpsilonValue ) )
+            {
+                axis = Cross( fromDirNormalized, Vector3f::Up( ) );
+            }
+
+            return Quaternion::FromAxisAndAngle( axis, Constants::Pi );
+        }
+        else
+        {
+            const auto s = Sqrt( ( 1.f + dot ) * 2.f );
+            auto cp = Cross( fromDirNormalized, toDirNormalized ) / s;
+            Quaternion result( cp, s[0] * 0.5f );
+            return result;
+        }
+    }
+</code></pre>
+
+<p>which looks almost identical to <code class="language-plaintext highlighter-rouge">ShortestArc1</code>, but the benchmarks:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkShortestArc1       38.6 ns         38.1 ns     16000000
+BenchmarkShortestArc2       15.0 ns         15.1 ns     49777778
+</code></pre></div></div>
+
+<p>shows that <code class="language-plaintext highlighter-rouge">ShortestArc2</code> is more than twice as fast as <code class="language-plaintext highlighter-rouge">ShortestArc1</code>. Like <code class="language-plaintext highlighter-rouge">ShortestArc2</code>, 
+<code class="language-plaintext highlighter-rouge">ShortestArc1</code> also does most of its calculations using functions that are implemented 
+using SIMD, but <code class="language-plaintext highlighter-rouge">ShortestArc2</code> is smarter about how it does that.</p>
+
+<p>The short explanation is that <code class="language-plaintext highlighter-rouge">ShortestArc2</code> avoids a bunch of calls to <code class="language-plaintext highlighter-rouge">_mm_load_ps</code> and <code class="language-plaintext highlighter-rouge">_mm_store_ps</code>,
+and their sibling intrinsic functions, and here is why:</p>
+
+<pre><code class="language-C++">    Quaternion ShortestArc2( const Vector3f::Simd&amp; fromDir, 
+                                    const Vector3f::Simd&amp; toDir ) noexcept
     {
         using Constants = Vector3f::Traits::Constants::Base;
 
@@ -350,7 +401,8 @@ handle possible singularities.</p>
         else if ( dotf &lt;= -1.f )
         {
             auto axis = Cross( fromDirNormalized, Vector3f::Right( ) );
-            if ( AreNearlyEqual( ScalarLengthSquared( axis ), 0.f, Constants::EpsilonValue ) )
+            if ( AreNearlyEqual( ScalarLengthSquared( axis ), 0.f, 
+                                                Constants::EpsilonValue ) )
             {
                 axis = Cross( fromDirNormalized, Vector3f::Up( ) );
             }
@@ -389,19 +441,17 @@ again returning a <code class="language-plaintext highlighter-rouge">Vector3f::S
 </code></pre>
 
 <p>The implementation of <code class="language-plaintext highlighter-rouge">ShortestArc1</code> and <code class="language-plaintext highlighter-rouge">ShortestArc2</code> are deceptively similar to
-each other, but the benchmarks:</p>
+each other.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkShortestArc1       38.6 ns         38.1 ns     16000000
-BenchmarkShortestArc2       15.0 ns         15.1 ns     49777778
-BenchmarkShortestArc        11.2 ns         11.2 ns     64000000
+<p>Could it be even faster? Sure:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkShortestArc        11.2 ns         11.2 ns     64000000
 </code></pre></div></div>
-<p>shows that <code class="language-plaintext highlighter-rouge">ShortestArc2</code> is significantly faster than <code class="language-plaintext highlighter-rouge">ShortestArc1</code>, so with very few
-changes to the code, we got more than twice the performance.</p>
 
 <p>The last benchmark, <code class="language-plaintext highlighter-rouge">BenchmarkShortestArc</code>, is for the <code class="language-plaintext highlighter-rouge">ShortestArc</code> implementation found 
 in <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code>.</p>
 
-<p># Implementation Details</p>
+<h1 id="implementation-details">Implementation Details</h1>
 
 <ul>
   <li><a href="#vector"><code class="language-plaintext highlighter-rouge">Vector</code></a> is template for fixed size vectors of integer or floating point values.</li>

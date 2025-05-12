@@ -170,8 +170,8 @@ Public Types</h2></td></tr>
 <tr class="separator:ac5cac39257bc6e2db0a878c182cbf6c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65d3bf6d6b9053f88c02c41f4e189c87" id="r_a65d3bf6d6b9053f88c02c41f4e189c87"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65d3bf6d6b9053f88c02c41f4e189c87">Matrix</a> = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt;<a class="el" href="#a89ae96dbfa55af0f9f232c62ee3bc115">ValueType</a>, 4&gt;</td></tr>
 <tr class="separator:a65d3bf6d6b9053f88c02c41f4e189c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48244019c2817d4bf155bceb27d4ce56" id="r_a48244019c2817d4bf155bceb27d4ce56"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48244019c2817d4bf155bceb27d4ce56">MatrixSimd</a> = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html#ab6ec31b79ad751d1b3a49b3d8ff45d3a">Matrix::Simd</a></td></tr>
-<tr class="separator:a48244019c2817d4bf155bceb27d4ce56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52985c7ba6ec43947700e965a4b2f711" id="r_a52985c7ba6ec43947700e965a4b2f711"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52985c7ba6ec43947700e965a4b2f711">MatrixSimd</a> = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd.html">SquareMatrixSimd</a>&lt;<a class="el" href="#a65d3bf6d6b9053f88c02c41f4e189c87">Matrix</a>, 4&gt;</td></tr>
+<tr class="separator:a52985c7ba6ec43947700e965a4b2f711"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -181,8 +181,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae84a47dee141c342020aa3d3c2b85c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add26e8a82c2351de1e4971e605d3763b" id="r_add26e8a82c2351de1e4971e605d3763b"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add26e8a82c2351de1e4971e605d3763b">Quaternion</a> (const <a class="el" href="#ae8d869cc015fd33f404dcec510c3d355">ArrayType</a> &amp;a) noexcept</td></tr>
 <tr class="separator:add26e8a82c2351de1e4971e605d3763b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2d0fa2da80d0a5978c7e3342b83c0c1" id="r_ae2d0fa2da80d0a5978c7e3342b83c0c1"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2d0fa2da80d0a5978c7e3342b83c0c1">Quaternion</a> (const <a class="el" href="#ac516099d2b0f06b54ae377854d313ccf">Vector</a> &amp;vv, <a class="el" href="#a89ae96dbfa55af0f9f232c62ee3bc115">ValueType</a> wv) noexcept</td></tr>
-<tr class="separator:ae2d0fa2da80d0a5978c7e3342b83c0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e47840a18a4c09a5bdd919f37263a72" id="r_a7e47840a18a4c09a5bdd919f37263a72"><td class="memTemplParams" colspan="2">template&lt;Internal::TupleType T&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#ac516099d2b0f06b54ae377854d313ccf">Vector</a>&gt;</td></tr>
+<tr class="memitem:a7e47840a18a4c09a5bdd919f37263a72"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7e47840a18a4c09a5bdd919f37263a72">Quaternion</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;xyz, <a class="el" href="#a89ae96dbfa55af0f9f232c62ee3bc115">ValueType</a> wv) noexcept</td></tr>
+<tr class="separator:a7e47840a18a4c09a5bdd919f37263a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e47840a18a4c09a5bdd919f37263a72" id="r_a7e47840a18a4c09a5bdd919f37263a72"><td class="memTemplParams" colspan="2">template&lt;Internal::SimdType T&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#ac516099d2b0f06b54ae377854d313ccf">Vector</a>&gt;</td></tr>
+<tr class="memitem:a7e47840a18a4c09a5bdd919f37263a72"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7e47840a18a4c09a5bdd919f37263a72">Quaternion</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;xyz, <a class="el" href="#a89ae96dbfa55af0f9f232c62ee3bc115">ValueType</a> wv) noexcept</td></tr>
+<tr class="separator:a7e47840a18a4c09a5bdd919f37263a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e69c1360e545e6fb4dd4c7431c9d0cf" id="r_a8e69c1360e545e6fb4dd4c7431c9d0cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e69c1360e545e6fb4dd4c7431c9d0cf">Quaternion</a> (const <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a> &amp;qsimd) noexcept</td></tr>
 <tr class="separator:a8e69c1360e545e6fb4dd4c7431c9d0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2c9ab3688dfb9f04a039595b9194ed3" id="r_af2c9ab3688dfb9f04a039595b9194ed3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2c9ab3688dfb9f04a039595b9194ed3">Quaternion</a> (<a class="el" href="#a89ae96dbfa55af0f9f232c62ee3bc115">ValueType</a> pitch, <a class="el" href="#a89ae96dbfa55af0f9f232c62ee3bc115">ValueType</a> yaw, <a class="el" href="#a89ae96dbfa55af0f9f232c62ee3bc115">ValueType</a> roll) noexcept</td></tr>
@@ -193,6 +199,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af61cf48ea9548e0b2c0ab8360f093d24" id="r_af61cf48ea9548e0b2c0ab8360f093d24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_1_1_axis_angle.html">AxisAngle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af61cf48ea9548e0b2c0ab8360f093d24">ToAxisAngle</a> () const noexcept</td></tr>
 <tr class="memdesc:af61cf48ea9548e0b2c0ab8360f093d24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the axis and angle of rotation about that axis for the quaternion.  <br /></td></tr>
 <tr class="separator:af61cf48ea9548e0b2c0ab8360f093d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8e85cb8bf8be294071684e621b1769" id="r_a4b8e85cb8bf8be294071684e621b1769"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b8e85cb8bf8be294071684e621b1769">ToEuler</a> () const noexcept</td></tr>
+<tr class="memdesc:a4b8e85cb8bf8be294071684e621b1769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes rotation about y-axis (y), then x-axis (x), then z-axis (z)  <br /></td></tr>
+<tr class="separator:a4b8e85cb8bf8be294071684e621b1769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af35ec1b5ea1784ead6101d3b4ca49261" id="r_af35ec1b5ea1784ead6101d3b4ca49261"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af35ec1b5ea1784ead6101d3b4ca49261">operator=</a> (const <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a> &amp;qsimd) noexcept</td></tr>
 <tr class="separator:af35ec1b5ea1784ead6101d3b4ca49261"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89bc953379a394c2ae020bfe436882ae" id="r_a89bc953379a394c2ae020bfe436882ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89bc953379a394c2ae020bfe436882ae">operator=</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Quaternion</a> &amp;other) noexcept</td></tr>
@@ -252,24 +261,52 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:abd89215a79d9ff5a07081b0766bcbdcd" id="r_abd89215a79d9ff5a07081b0766bcbdcd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd89215a79d9ff5a07081b0766bcbdcd">FromNormalizedAxisAndAngle</a> (const <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a> &amp;normalizedAxis, float angle) noexcept</td></tr>
-<tr class="memdesc:abd89215a79d9ff5a07081b0766bcbdcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation quaternion around a normalized axis.  <br /></td></tr>
-<tr class="separator:abd89215a79d9ff5a07081b0766bcbdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10a722ec56a6f8667b6ed88810d85cb3" id="r_a10a722ec56a6f8667b6ed88810d85cb3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10a722ec56a6f8667b6ed88810d85cb3">FromNormalizedAxisAndAngle</a> (const <a class="el" href="#ac516099d2b0f06b54ae377854d313ccf">Vector</a> &amp;normalizedAxis, float angle) noexcept</td></tr>
-<tr class="memdesc:a10a722ec56a6f8667b6ed88810d85cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation quaternion around a normalized axis.  <br /></td></tr>
-<tr class="separator:a10a722ec56a6f8667b6ed88810d85cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9553945ffd2de83dfa4afc0b3e706a40" id="r_a9553945ffd2de83dfa4afc0b3e706a40"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9553945ffd2de83dfa4afc0b3e706a40">FromAxisAndAngle</a> (const <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a> &amp;axis, float angle) noexcept</td></tr>
-<tr class="memdesc:a9553945ffd2de83dfa4afc0b3e706a40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation quaternion around an axis.  <br /></td></tr>
-<tr class="separator:a9553945ffd2de83dfa4afc0b3e706a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe2a0dc602ea74df3a8c038cfea0a911" id="r_abe2a0dc602ea74df3a8c038cfea0a911"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe2a0dc602ea74df3a8c038cfea0a911">FromAxisAndAngle</a> (const <a class="el" href="#ac516099d2b0f06b54ae377854d313ccf">Vector</a> &amp;axis, float angle) noexcept</td></tr>
-<tr class="memdesc:abe2a0dc602ea74df3a8c038cfea0a911"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation quaternion around an axis.  <br /></td></tr>
-<tr class="separator:abe2a0dc602ea74df3a8c038cfea0a911"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a550c301cd12ec8bf7279d1f77ce598b0" id="r_a550c301cd12ec8bf7279d1f77ce598b0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a550c301cd12ec8bf7279d1f77ce598b0">FromMatrix</a> (const <a class="el" href="#a48244019c2817d4bf155bceb27d4ce56">MatrixSimd</a> &amp;matrix) noexcept</td></tr>
+<tr class="memitem:afc07324514fa7ede45ec9f201a242461" id="r_afc07324514fa7ede45ec9f201a242461"><td class="memTemplParams" colspan="2">template&lt;Internal::SimdType T&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a>&gt;</td></tr>
+<tr class="memitem:afc07324514fa7ede45ec9f201a242461"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afc07324514fa7ede45ec9f201a242461">FromNormalizedAxisAndAngle</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;normalizedAxis, float angle) noexcept</td></tr>
+<tr class="memdesc:afc07324514fa7ede45ec9f201a242461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation quaternion around a normalized axis.  <br /></td></tr>
+<tr class="separator:afc07324514fa7ede45ec9f201a242461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae617be395a684568e6e9e985ef813122" id="r_ae617be395a684568e6e9e985ef813122"><td class="memTemplParams" colspan="2">template&lt;Internal::TupleType T&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#ac516099d2b0f06b54ae377854d313ccf">Vector</a>&gt;</td></tr>
+<tr class="memitem:ae617be395a684568e6e9e985ef813122"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae617be395a684568e6e9e985ef813122">FromNormalizedAxisAndAngle</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;normalizedAxis, float angle) noexcept</td></tr>
+<tr class="memdesc:ae617be395a684568e6e9e985ef813122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation quaternion around a normalized axis.  <br /></td></tr>
+<tr class="separator:ae617be395a684568e6e9e985ef813122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a624796ef7c94f96b5ad90e0e909b4aff" id="r_a624796ef7c94f96b5ad90e0e909b4aff"><td class="memTemplParams" colspan="2">template&lt;Internal::SimdType T&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a>&gt;</td></tr>
+<tr class="memitem:a624796ef7c94f96b5ad90e0e909b4aff"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a624796ef7c94f96b5ad90e0e909b4aff">FromAxisAndAngle</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;axis, float angle) noexcept</td></tr>
+<tr class="memdesc:a624796ef7c94f96b5ad90e0e909b4aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation quaternion around an axis.  <br /></td></tr>
+<tr class="separator:a624796ef7c94f96b5ad90e0e909b4aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac45ae5cf674e2fdeafca48306a583ea2" id="r_ac45ae5cf674e2fdeafca48306a583ea2"><td class="memTemplParams" colspan="2">template&lt;Internal::TupleType T&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#ac516099d2b0f06b54ae377854d313ccf">Vector</a>&gt;</td></tr>
+<tr class="memitem:ac45ae5cf674e2fdeafca48306a583ea2"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac45ae5cf674e2fdeafca48306a583ea2">FromAxisAndAngle</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;axis, float angle) noexcept</td></tr>
+<tr class="memdesc:ac45ae5cf674e2fdeafca48306a583ea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation quaternion around an axis.  <br /></td></tr>
+<tr class="separator:ac45ae5cf674e2fdeafca48306a583ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a550c301cd12ec8bf7279d1f77ce598b0" id="r_a550c301cd12ec8bf7279d1f77ce598b0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a550c301cd12ec8bf7279d1f77ce598b0">FromMatrix</a> (const <a class="el" href="#a52985c7ba6ec43947700e965a4b2f711">MatrixSimd</a> &amp;matrix) noexcept</td></tr>
 <tr class="memdesc:a550c301cd12ec8bf7279d1f77ce598b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation quaternion from a rotation matrix.  <br /></td></tr>
 <tr class="separator:a550c301cd12ec8bf7279d1f77ce598b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acde12aca96b1951aedb041e4293c5925" id="r_acde12aca96b1951aedb041e4293c5925"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acde12aca96b1951aedb041e4293c5925">FromMatrix</a> (const <a class="el" href="#a65d3bf6d6b9053f88c02c41f4e189c87">Matrix</a> &amp;matrix) noexcept</td></tr>
 <tr class="memdesc:acde12aca96b1951aedb041e4293c5925"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation quaternion from a rotation matrix.  <br /></td></tr>
 <tr class="separator:acde12aca96b1951aedb041e4293c5925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad065910a3aa61c8cbfd4981007ac14c6" id="r_ad065910a3aa61c8cbfd4981007ac14c6"><td class="memTemplParams" colspan="2">template&lt;Internal::SimdType T, Internal::SimdType U&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a>&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
+<tr class="memitem:ad065910a3aa61c8cbfd4981007ac14c6"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad065910a3aa61c8cbfd4981007ac14c6">ShortestArc</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;fromDir, const U &amp;toDir) noexcept</td></tr>
+<tr class="memdesc:ad065910a3aa61c8cbfd4981007ac14c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the shortest-arc rotation between two directions.  <br /></td></tr>
+<tr class="separator:ad065910a3aa61c8cbfd4981007ac14c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad962d984fd864ad1827c62439e3af603" id="r_ad962d984fd864ad1827c62439e3af603"><td class="memTemplParams" colspan="2">template&lt;Internal::SimdType T, Internal::TupleType U&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a>&gt;&amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
+<tr class="memitem:ad962d984fd864ad1827c62439e3af603"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad962d984fd864ad1827c62439e3af603">ShortestArc</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;fromDir, const U &amp;toDir) noexcept</td></tr>
+<tr class="memdesc:ad962d984fd864ad1827c62439e3af603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the shortest-arc rotation between two directions.  <br /></td></tr>
+<tr class="separator:ad962d984fd864ad1827c62439e3af603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad962d984fd864ad1827c62439e3af603" id="r_ad962d984fd864ad1827c62439e3af603"><td class="memTemplParams" colspan="2">template&lt;Internal::TupleType T, Internal::SimdType U&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a>&gt;&amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
+<tr class="memitem:ad962d984fd864ad1827c62439e3af603"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad962d984fd864ad1827c62439e3af603">ShortestArc</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;fromDir, const U &amp;toDir) noexcept</td></tr>
+<tr class="memdesc:ad962d984fd864ad1827c62439e3af603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the shortest-arc rotation between two directions.  <br /></td></tr>
+<tr class="separator:ad962d984fd864ad1827c62439e3af603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad065910a3aa61c8cbfd4981007ac14c6" id="r_ad065910a3aa61c8cbfd4981007ac14c6"><td class="memTemplParams" colspan="2">template&lt;Internal::TupleType T, Internal::TupleType U&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a>&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
+<tr class="memitem:ad065910a3aa61c8cbfd4981007ac14c6"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad065910a3aa61c8cbfd4981007ac14c6">ShortestArc</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;fromDir, const U &amp;toDir) noexcept</td></tr>
+<tr class="memdesc:ad065910a3aa61c8cbfd4981007ac14c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the shortest-arc rotation between two directions.  <br /></td></tr>
+<tr class="separator:ad065910a3aa61c8cbfd4981007ac14c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd0dba1e2ce234995bf52f7d26708f7a" id="r_abd0dba1e2ce234995bf52f7d26708f7a"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd0dba1e2ce234995bf52f7d26708f7a">Identity</a> () noexcept</td></tr>
 <tr class="memdesc:abd0dba1e2ce234995bf52f7d26708f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the identity quaternion.  <br /></td></tr>
 <tr class="separator:abd0dba1e2ce234995bf52f7d26708f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -424,8 +461,8 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 
 </div>
 </div>
-<a id="a48244019c2817d4bf155bceb27d4ce56" name="a48244019c2817d4bf155bceb27d4ce56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48244019c2817d4bf155bceb27d4ce56">&#9670;&#160;</a></span>MatrixSimd</h2>
+<a id="a52985c7ba6ec43947700e965a4b2f711" name="a52985c7ba6ec43947700e965a4b2f711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52985c7ba6ec43947700e965a4b2f711">&#9670;&#160;</a></span>MatrixSimd</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -433,7 +470,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Harlinn::Common::Core::Math::Quaternion</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::MatrixSimd = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html#ab6ec31b79ad751d1b3a49b3d8ff45d3a">Matrix::Simd</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Harlinn::Common::Core::Math::Quaternion</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::MatrixSimd = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd.html">SquareMatrixSimd</a>&lt;<a class="el" href="#a65d3bf6d6b9053f88c02c41f4e189c87">Matrix</a>, 4&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -666,7 +703,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac0d0d3366c5e48d1f6e2c27e747f668b" name="ac0d0d3366c5e48d1f6e2c27e747f668b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0d0d3366c5e48d1f6e2c27e747f668b">&#9670;&#160;</a></span>Quaternion() <span class="overload">[1/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0d0d3366c5e48d1f6e2c27e747f668b">&#9670;&#160;</a></span>Quaternion() <span class="overload">[1/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -693,7 +730,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 </div>
 </div>
 <a id="ae84a47dee141c342020aa3d3c2b85c41" name="ae84a47dee141c342020aa3d3c2b85c41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae84a47dee141c342020aa3d3c2b85c41">&#9670;&#160;</a></span>Quaternion() <span class="overload">[2/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae84a47dee141c342020aa3d3c2b85c41">&#9670;&#160;</a></span>Quaternion() <span class="overload">[2/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -734,7 +771,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 </div>
 </div>
 <a id="add26e8a82c2351de1e4971e605d3763b" name="add26e8a82c2351de1e4971e605d3763b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add26e8a82c2351de1e4971e605d3763b">&#9670;&#160;</a></span>Quaternion() <span class="overload">[3/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#add26e8a82c2351de1e4971e605d3763b">&#9670;&#160;</a></span>Quaternion() <span class="overload">[3/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -760,13 +797,16 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 
 </div>
 </div>
-<a id="ae2d0fa2da80d0a5978c7e3342b83c0c1" name="ae2d0fa2da80d0a5978c7e3342b83c0c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2d0fa2da80d0a5978c7e3342b83c0c1">&#9670;&#160;</a></span>Quaternion() <span class="overload">[4/7]</span></h2>
+<a id="a7e47840a18a4c09a5bdd919f37263a72" name="a7e47840a18a4c09a5bdd919f37263a72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e47840a18a4c09a5bdd919f37263a72">&#9670;&#160;</a></span>Quaternion() <span class="overload">[4/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+<div class="memtemplate">
+template&lt;Internal::TupleType T&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#ac516099d2b0f06b54ae377854d313ccf">Vector</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -774,7 +814,41 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Harlinn::Common::Core::Math::Quaternion</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Quaternion </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#ac516099d2b0f06b54ae377854d313ccf">Vector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>vv</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>xyz</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a89ae96dbfa55af0f9f232c62ee3bc115">ValueType</a></td>          <td class="paramname"><span class="paramname"><em>wv</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e47840a18a4c09a5bdd919f37263a72" name="a7e47840a18a4c09a5bdd919f37263a72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e47840a18a4c09a5bdd919f37263a72">&#9670;&#160;</a></span>Quaternion() <span class="overload">[5/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+<div class="memtemplate">
+template&lt;Internal::SimdType T&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#ac516099d2b0f06b54ae377854d313ccf">Vector</a>&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Harlinn::Common::Core::Math::Quaternion</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Quaternion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>xyz</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -792,7 +866,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 </div>
 </div>
 <a id="a8e69c1360e545e6fb4dd4c7431c9d0cf" name="a8e69c1360e545e6fb4dd4c7431c9d0cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e69c1360e545e6fb4dd4c7431c9d0cf">&#9670;&#160;</a></span>Quaternion() <span class="overload">[5/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e69c1360e545e6fb4dd4c7431c9d0cf">&#9670;&#160;</a></span>Quaternion() <span class="overload">[6/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -819,7 +893,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 </div>
 </div>
 <a id="af2c9ab3688dfb9f04a039595b9194ed3" name="af2c9ab3688dfb9f04a039595b9194ed3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2c9ab3688dfb9f04a039595b9194ed3">&#9670;&#160;</a></span>Quaternion() <span class="overload">[6/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af2c9ab3688dfb9f04a039595b9194ed3">&#9670;&#160;</a></span>Quaternion() <span class="overload">[7/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -865,7 +939,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 </div>
 </div>
 <a id="af8e0be0375d9ca7ec3b16e3d52aebc9f" name="af8e0be0375d9ca7ec3b16e3d52aebc9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8e0be0375d9ca7ec3b16e3d52aebc9f">&#9670;&#160;</a></span>Quaternion() <span class="overload">[7/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af8e0be0375d9ca7ec3b16e3d52aebc9f">&#9670;&#160;</a></span>Quaternion() <span class="overload">[8/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1162,13 +1236,16 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 
 </div>
 </div>
-<a id="abe2a0dc602ea74df3a8c038cfea0a911" name="abe2a0dc602ea74df3a8c038cfea0a911"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe2a0dc602ea74df3a8c038cfea0a911">&#9670;&#160;</a></span>FromAxisAndAngle() <span class="overload">[1/2]</span></h2>
+<a id="a624796ef7c94f96b5ad90e0e909b4aff" name="a624796ef7c94f96b5ad90e0e909b4aff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a624796ef7c94f96b5ad90e0e909b4aff">&#9670;&#160;</a></span>FromAxisAndAngle() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+<div class="memtemplate">
+template&lt;Internal::SimdType T&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1176,7 +1253,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
         <tr>
           <td class="memname">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Harlinn::Common::Core::Math::Quaternion</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::FromAxisAndAngle </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#ac516099d2b0f06b54ae377854d313ccf">Vector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>axis</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>axis</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1203,13 +1280,16 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 
 </div>
 </div>
-<a id="a9553945ffd2de83dfa4afc0b3e706a40" name="a9553945ffd2de83dfa4afc0b3e706a40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9553945ffd2de83dfa4afc0b3e706a40">&#9670;&#160;</a></span>FromAxisAndAngle() <span class="overload">[2/2]</span></h2>
+<a id="ac45ae5cf674e2fdeafca48306a583ea2" name="ac45ae5cf674e2fdeafca48306a583ea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac45ae5cf674e2fdeafca48306a583ea2">&#9670;&#160;</a></span>FromAxisAndAngle() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+<div class="memtemplate">
+template&lt;Internal::TupleType T&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#ac516099d2b0f06b54ae377854d313ccf">Vector</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1217,7 +1297,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
         <tr>
           <td class="memname">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Harlinn::Common::Core::Math::Quaternion</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::FromAxisAndAngle </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>axis</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>axis</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1294,7 +1374,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
         <tr>
           <td class="memname">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Harlinn::Common::Core::Math::Quaternion</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::FromMatrix </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#a48244019c2817d4bf155bceb27d4ce56">MatrixSimd</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="#a52985c7ba6ec43947700e965a4b2f711">MatrixSimd</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>matrix</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1316,13 +1396,16 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 
 </div>
 </div>
-<a id="a10a722ec56a6f8667b6ed88810d85cb3" name="a10a722ec56a6f8667b6ed88810d85cb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10a722ec56a6f8667b6ed88810d85cb3">&#9670;&#160;</a></span>FromNormalizedAxisAndAngle() <span class="overload">[1/2]</span></h2>
+<a id="afc07324514fa7ede45ec9f201a242461" name="afc07324514fa7ede45ec9f201a242461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc07324514fa7ede45ec9f201a242461">&#9670;&#160;</a></span>FromNormalizedAxisAndAngle() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+<div class="memtemplate">
+template&lt;Internal::SimdType T&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1330,7 +1413,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
         <tr>
           <td class="memname">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Harlinn::Common::Core::Math::Quaternion</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::FromNormalizedAxisAndAngle </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#ac516099d2b0f06b54ae377854d313ccf">Vector</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>normalizedAxis</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>normalizedAxis</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1357,13 +1440,16 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 
 </div>
 </div>
-<a id="abd89215a79d9ff5a07081b0766bcbdcd" name="abd89215a79d9ff5a07081b0766bcbdcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd89215a79d9ff5a07081b0766bcbdcd">&#9670;&#160;</a></span>FromNormalizedAxisAndAngle() <span class="overload">[2/2]</span></h2>
+<a id="ae617be395a684568e6e9e985ef813122" name="ae617be395a684568e6e9e985ef813122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae617be395a684568e6e9e985ef813122">&#9670;&#160;</a></span>FromNormalizedAxisAndAngle() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+<div class="memtemplate">
+template&lt;Internal::TupleType T&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#ac516099d2b0f06b54ae377854d313ccf">Vector</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1371,7 +1457,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
         <tr>
           <td class="memname">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Harlinn::Common::Core::Math::Quaternion</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::FromNormalizedAxisAndAngle </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>normalizedAxis</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>normalizedAxis</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1860,6 +1946,202 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 
 </div>
 </div>
+<a id="ad065910a3aa61c8cbfd4981007ac14c6" name="ad065910a3aa61c8cbfd4981007ac14c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad065910a3aa61c8cbfd4981007ac14c6">&#9670;&#160;</a></span>ShortestArc() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+<div class="memtemplate">
+template&lt;Internal::SimdType T, Internal::SimdType U&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a>&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Harlinn::Common::Core::Math::Quaternion</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ShortestArc </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fromDir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const U &amp;</td>          <td class="paramname"><span class="paramname"><em>toDir</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the shortest-arc rotation between two directions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fromDir</td><td>The from direction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>/// </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">toDir</td><td>The to direction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The rotation quaternion. </dd></dl>
+
+</div>
+</div>
+<a id="ad962d984fd864ad1827c62439e3af603" name="ad962d984fd864ad1827c62439e3af603"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad962d984fd864ad1827c62439e3af603">&#9670;&#160;</a></span>ShortestArc() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+<div class="memtemplate">
+template&lt;Internal::SimdType T, Internal::TupleType U&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a>&gt;&amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Harlinn::Common::Core::Math::Quaternion</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ShortestArc </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fromDir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const U &amp;</td>          <td class="paramname"><span class="paramname"><em>toDir</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the shortest-arc rotation between two directions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fromDir</td><td>The from direction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>/// </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">toDir</td><td>The to direction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The rotation quaternion. </dd></dl>
+
+</div>
+</div>
+<a id="ad962d984fd864ad1827c62439e3af603" name="ad962d984fd864ad1827c62439e3af603"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad962d984fd864ad1827c62439e3af603">&#9670;&#160;</a></span>ShortestArc() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+<div class="memtemplate">
+template&lt;Internal::TupleType T, Internal::SimdType U&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a>&gt;&amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Harlinn::Common::Core::Math::Quaternion</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ShortestArc </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fromDir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const U &amp;</td>          <td class="paramname"><span class="paramname"><em>toDir</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the shortest-arc rotation between two directions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fromDir</td><td>The from direction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>/// </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">toDir</td><td>The to direction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The rotation quaternion. </dd></dl>
+
+</div>
+</div>
+<a id="ad065910a3aa61c8cbfd4981007ac14c6" name="ad065910a3aa61c8cbfd4981007ac14c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad065910a3aa61c8cbfd4981007ac14c6">&#9670;&#160;</a></span>ShortestArc() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+<div class="memtemplate">
+template&lt;Internal::TupleType T, Internal::TupleType U&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a>&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a7a092883531fcba9e69c83af23b7f6ed">Internal::IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#a1382cbb9522fb97f29db541a0667b172">Simd</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Harlinn::Common::Core::Math::Quaternion</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ShortestArc </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>fromDir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const U &amp;</td>          <td class="paramname"><span class="paramname"><em>toDir</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the shortest-arc rotation between two directions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fromDir</td><td>The from direction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>/// </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">toDir</td><td>The to direction. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The rotation quaternion. </dd></dl>
+
+</div>
+</div>
 <a id="a7bdd89f1a5a149df8b9382cefc05a45c" name="a7bdd89f1a5a149df8b9382cefc05a45c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7bdd89f1a5a149df8b9382cefc05a45c">&#9670;&#160;</a></span>size()</h2>
 
@@ -1914,6 +2196,37 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 
 <p>Returns the axis and angle of rotation about that axis for the quaternion. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a4b8e85cb8bf8be294071684e621b1769" name="a4b8e85cb8bf8be294071684e621b1769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b8e85cb8bf8be294071684e621b1769">&#9670;&#160;</a></span>ToEuler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#abbd8a2fc0ad4533c4442f94d419d3dc9">VectorSimd</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Harlinn::Common::Core::Math::Quaternion</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ToEuler </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes rotation about y-axis (y), then x-axis (x), then z-axis (z) </p>
+<dl class="section return"><dt>Returns</dt><dd>The rotation about y-axis (y), then x-axis (x), then z-axis (z) </dd></dl>
+<p>Adopted from <a href="https://github.com/microsoft/DirectXTK12">https://github.com/microsoft/DirectXTK12</a> </p>
 
 </div>
 </div>

@@ -553,7 +553,7 @@ var searchData=
   ['revokeobjectbound_550',['RevokeObjectBound',['../class_harlinn_1_1_common_1_1_core_1_1_bind_ctx.html#a585e38fac10ace592129763411a0777e',1,'Harlinn::Common::Core::BindCtx']]],
   ['revokeobjectparam_551',['RevokeObjectParam',['../class_harlinn_1_1_common_1_1_core_1_1_bind_ctx.html#a8d666862250d62aa4a14723d6264dffd',1,'Harlinn::Common::Core::BindCtx']]],
   ['rewind_5fblock_5findex_5ftail_552',['rewind_block_index_tail',['../struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_implicit_producer.html#a873eac81ad2dc11e5a0b326251cb1c46',1,'Harlinn::Common::Core::ConcurrentQueue::ImplicitProducer']]],
-  ['right_553',['Right',['../class_harlinn_1_1_windows_1_1_rectangle_t.html#a31b45978501f27238c51ce2a403baa4f',1,'Harlinn::Windows::RectangleT']]],
+  ['right_553',['Right',['../class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple_simd.html#ac39b738c07d922ba32df767d3c3bd9ca',1,'Harlinn::Common::Core::Math::TupleSimd::Right()'],['../class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3.html#aa3fded2702823a5e9c65458ee578d71c',1,'Harlinn::Common::Core::Math::Tuple3::Right()'],['../class_harlinn_1_1_windows_1_1_rectangle_t.html#a31b45978501f27238c51ce2a403baa4f',1,'Harlinn::Windows::RectangleT::Right() const noexcept']]],
   ['rightbottom_554',['RightBottom',['../class_harlinn_1_1_windows_1_1_rectangle_t.html#a7e01c10beafcb1bcfb37bc64716ab312',1,'Harlinn::Windows::RectangleT']]],
   ['rightcenter_555',['RightCenter',['../class_harlinn_1_1_windows_1_1_rectangle_t.html#a613263b4be67923b25203b5e1c807410',1,'Harlinn::Windows::RectangleT']]],
   ['righttop_556',['RightTop',['../class_harlinn_1_1_windows_1_1_rectangle_t.html#a6fe56d4c4e847b7ba609b0a7ef8fc22a',1,'Harlinn::Windows::RectangleT']]],
