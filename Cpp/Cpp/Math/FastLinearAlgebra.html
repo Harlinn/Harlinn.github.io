@@ -335,12 +335,13 @@ occupies the first, second and third position of the <code class="language-plain
 the first, second and third position of the <code class="language-plaintext highlighter-rouge">__m128</code> to the value of the dot product
 between the argument vectors. <code class="language-plaintext highlighter-rouge">Vector3f::Simd</code> provides access to the individual
 values through its <code class="language-plaintext highlighter-rouge">float x( ) const noexcept</code>, <code class="language-plaintext highlighter-rouge">float y( ) const noexcept</code> and 
-<code class="language-plaintext highlighter-rouge">float z( ) const noexcept</code> member functions.</p>
+<code class="language-plaintext highlighter-rouge">float z( ) const noexcept</code> member functions, and we need this value to be able to
+handle possible singularities.</p>
 
 <pre><code class="language-C++">        const auto dotf = dot.x( );
 </code></pre>
 
-<p>Replacing the remaining <code class="language-plaintext highlighter-rouge">Vector3f</code> declarations with <code class="language-plaintext highlighter-rouge">auto</code>:</p>
+<p>With that out of the way, we replace the remaining <code class="language-plaintext highlighter-rouge">Vector3f</code> declarations with <code class="language-plaintext highlighter-rouge">auto</code>:</p>
 
 <pre><code class="language-C++">        if ( dotf &gt;= 1.f )
         {
@@ -360,6 +361,9 @@ values through its <code class="language-plaintext highlighter-rouge">float x( )
         {
 </code></pre>
 
+<p>The next line of code is interesting, as diving into the details about what’s
+happening explains a lot about how the library works.</p>
+
 <p>The expression <code class="language-plaintext highlighter-rouge">1.f + dot</code> is handled by an <code class="language-plaintext highlighter-rouge">operator +</code> overload that widens <code class="language-plaintext highlighter-rouge">1.f</code> to a 
 <code class="language-plaintext highlighter-rouge">__m128</code> value with <code class="language-plaintext highlighter-rouge">1.f</code> in the three first positions before doing vector addition with
 the <code class="language-plaintext highlighter-rouge">simd</code> variable of <code class="language-plaintext highlighter-rouge">dot</code>, returning the result as a <code class="language-plaintext highlighter-rouge">Vector3f::Simd</code> object. The result
@@ -372,8 +376,8 @@ result of <code class="language-plaintext highlighter-rouge">( 1.f + dot ) * 2.f
 <pre><code class="language-C++">            const auto s = Sqrt( ( 1.f + dot ) * 2.f );
 </code></pre>
 <p>So <code class="language-plaintext highlighter-rouge">s</code> is now a <code class="language-plaintext highlighter-rouge">Vector3f::Simd</code> object, with relevant values in its
-first three positions, and naturally <code class="language-plaintext highlighter-rouge">Cross</code> also returns a <code class="language-plaintext highlighter-rouge">Vector3f::Simd</code> object,
-and the result of the <code class="language-plaintext highlighter-rouge">Cross</code> and <code class="language-plaintext highlighter-rouge">s</code> gets handled by an <code class="language-plaintext highlighter-rouge">operator /</code> overload
+first three positions, and naturally <code class="language-plaintext highlighter-rouge">Cross</code> also returns a <code class="language-plaintext highlighter-rouge">Vector3f::Simd</code> object.
+The result of the call to <code class="language-plaintext highlighter-rouge">Cross</code> and <code class="language-plaintext highlighter-rouge">s</code> gets handled by an <code class="language-plaintext highlighter-rouge">operator /</code> overload
 dividing each of the elements of the first by its corresponding element in <code class="language-plaintext highlighter-rouge">s</code>,
 again returning a <code class="language-plaintext highlighter-rouge">Vector3f::Simd</code> object which is assigned to <code class="language-plaintext highlighter-rouge">cp</code>.</p>
 
@@ -394,7 +398,8 @@ BenchmarkShortestArc        11.2 ns         11.2 ns     64000000
 <p>shows that <code class="language-plaintext highlighter-rouge">ShortestArc2</code> is significantly faster than <code class="language-plaintext highlighter-rouge">ShortestArc1</code>, so with very few
 changes to the code, we got more than twice the performance.</p>
 
-<p><code class="language-plaintext highlighter-rouge">BenchmarkShortestArc</code> is for the <code class="language-plaintext highlighter-rouge">ShortestArc</code> implementation found in <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code>.</p>
+<p>The last benchmark, <code class="language-plaintext highlighter-rouge">BenchmarkShortestArc</code>, is for the <code class="language-plaintext highlighter-rouge">ShortestArc</code> implementation found 
+in <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code>.</p>
 
 <p># Implementation Details</p>
 
