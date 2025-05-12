@@ -246,7 +246,7 @@ library.</p>
 to improve the performance of a complex app.</p>
 
 <p>The classes and functions are designed to make it easier to implement, understand and 
-maintain efficient solutions, and the <a href="#benchmarks">Benchmarks</a> shows that this can be done
+maintain efficient solutions, and the <a href="Benchmarks.html">Benchmarks</a> shows that this can be done
 without loss of performance.</p>
 
 <h1 id="introduction">Introduction</h1>
@@ -309,6 +309,13 @@ namespace Basics
 <p>No surprises here, the above looks like something that could easily be done using most
 3D math libraries.</p>
 
+<p>It’s not quite as fast as <code class="language-plaintext highlighter-rouge">Quaternion::FromToRotation</code> from <a href="https://github.com/microsoft/DirectXTK12">DirectXTK12</a>,
+but it’s not bad either.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkShortestArc1                               39.1 ns         39.9 ns     17230769
+BenchmarkDirectXTK12QuaternionFromToRotation        32.2 ns         32.2 ns     20363636
+</code></pre></div></div>
+
 <p>A better performing version would look like:</p>
 
 <pre><code class="language-C++">    Quaternion ShortestArc2( const Vector3f::Simd&amp; fromDir, 
@@ -346,10 +353,9 @@ namespace Basics
     }
 </code></pre>
 
-<p>which looks almost identical to <code class="language-plaintext highlighter-rouge">ShortestArc1</code>, but the benchmarks:</p>
+<p>which looks almost identical to <code class="language-plaintext highlighter-rouge">ShortestArc1</code>, but the benchmark:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkShortestArc1       38.6 ns         38.1 ns     16000000
-BenchmarkShortestArc2       15.0 ns         15.1 ns     49777778
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkShortestArc2                               15.0 ns         15.0 ns     44800000
 </code></pre></div></div>
 
 <p>shows that <code class="language-plaintext highlighter-rouge">ShortestArc2</code> is more than twice as fast as <code class="language-plaintext highlighter-rouge">ShortestArc1</code>. Like <code class="language-plaintext highlighter-rouge">ShortestArc2</code>, 
@@ -421,7 +427,7 @@ happening explains a lot about how the library works.</p>
 the <code class="language-plaintext highlighter-rouge">simd</code> variable of <code class="language-plaintext highlighter-rouge">dot</code>, returning the result as a <code class="language-plaintext highlighter-rouge">Vector3f::Simd</code> object. The result
 then gets passed to an <code class="language-plaintext highlighter-rouge">operator +</code> overload that widens <code class="language-plaintext highlighter-rouge">2.f</code> into <code class="language-plaintext highlighter-rouge">__m128</code> value with 
 <code class="language-plaintext highlighter-rouge">2.f</code> in the three first positions before doing vector multiplication with the result
-of <code class="language-plaintext highlighter-rouge">1.f + dot</code>, returning the result as <code class="language-plaintext highlighter-rouge">Vector3f::Simd</code> object. This is than passed to
+of <code class="language-plaintext highlighter-rouge">1.f + dot</code>, returning the result as <code class="language-plaintext highlighter-rouge">Vector3f::Simd</code> object. This is then passed to
 an overload of <code class="language-plaintext highlighter-rouge">Sqrt</code> that calculates the square root for each of the elements in the 
 result of <code class="language-plaintext highlighter-rouge">( 1.f + dot ) * 2.f</code>, returning a <code class="language-plaintext highlighter-rouge">Vector3f::Simd</code> object which is stored in <code class="language-plaintext highlighter-rouge">s</code>.</p>
 
@@ -440,15 +446,15 @@ again returning a <code class="language-plaintext highlighter-rouge">Vector3f::S
     }
 </code></pre>
 
-<p>The implementation of <code class="language-plaintext highlighter-rouge">ShortestArc1</code> and <code class="language-plaintext highlighter-rouge">ShortestArc2</code> are deceptively similar to
-each other.</p>
+<p><code class="language-plaintext highlighter-rouge">ShortestArc2</code> is as readable as <code class="language-plaintext highlighter-rouge">ShortestArc1</code>, and most of the increased performance 
+was achieved by replacing <code class="language-plaintext highlighter-rouge">Vector3f</code> with <code class="language-plaintext highlighter-rouge">auto</code>, which is good C++ practice, anyway.</p>
 
 <p>Could it be even faster? Sure:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkShortestArc        11.2 ns         11.2 ns     64000000
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkShortestArc                                11.6 ns         11.4 ns     56000000
 </code></pre></div></div>
 
-<p>The last benchmark, <code class="language-plaintext highlighter-rouge">BenchmarkShortestArc</code>, is for the <code class="language-plaintext highlighter-rouge">ShortestArc</code> implementation found 
+<p>This benchmark, <code class="language-plaintext highlighter-rouge">BenchmarkShortestArc</code>, is for the <code class="language-plaintext highlighter-rouge">ShortestArc</code> implementation found 
 in <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code>.</p>
 
 <h1 id="implementation-details">Implementation Details</h1>
@@ -471,7 +477,7 @@ classes holding <code class="language-plaintext highlighter-rouge">2</code>, <co
   <li><a href="#squarematrix"><code class="language-plaintext highlighter-rouge">SquareMatrix</code></a></li>
   <li><a href="#quaternion"><code class="language-plaintext highlighter-rouge">Quaternion</code></a></li>
   <li><a href="#transforms"><code class="language-plaintext highlighter-rouge">Transforms</code></a></li>
-  <li><a href="#benchmarks">Benchmarks</a></li>
+  <li><a href="Benchmarks.html">Benchmarks</a></li>
 </ul>
 
 <p>The purpose of specializations of <a href="SimdOperations.html"><code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T, N&gt;</code></a> is to have a mechanism for
@@ -4105,70 +4111,6 @@ in this sense, affine is a generalization of congruent and similar.</p>
 
 <p>The transformation of a <code class="language-plaintext highlighter-rouge">AffineTransformation</code> object, results in an <code class="language-plaintext highlighter-rouge">AffineTransformation</code>
 object combining the transformations of both into a single transformation.</p>
-
-<h2 id="benchmarks">Benchmarks</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--------------------------------------------------------------------------------------
-Benchmark                                            Time             CPU   Iterations
---------------------------------------------------------------------------------------
-BenchmarkPointRotationAxis                        13.4 ns         10.5 ns     64000000
-BenchmarkPointXMMatrixRotationAxis                20.2 ns         16.5 ns     56000000
-BenchmarkVectorRotationAxis                       13.5 ns         10.5 ns     64000000
-BenchmarkVectorXMMatrixRotationAxis               19.3 ns         16.1 ns     40727273
-BenchmarkNormalRotationAxis                       13.2 ns         10.9 ns     74334815
-BenchmarkNormalXMMatrixRotationAxis               19.8 ns         17.1 ns     44800000
-BenchmarkPointTranslation                         3.53 ns         2.85 ns    263529412
-BenchmarkPointXMMatrixTranslation                 3.85 ns         2.98 ns    235789474
-BenchmarkVectorTranslation                        2.89 ns         2.51 ns    298666667
-BenchmarkVectorXMMatrixTranslation                3.93 ns         3.31 ns    235789474
-BenchmarkNormalTranslation                        2.21 ns         1.83 ns    298666667
-BenchmarkNormalXMMatrixTranslation                2.78 ns         2.02 ns    263529412
-BenchmarkPointScaling                             3.48 ns         2.90 ns    280000000
-BenchmarkPointXMMatrixScaling                     3.76 ns         3.28 ns    224000000
-BenchmarkVectorScaling                            3.59 ns         3.20 ns    248888889
-BenchmarkVectorXMMatrixScaling                    4.51 ns         3.85 ns    194782609
-BenchmarkNormalScaling                            3.58 ns         2.92 ns    203636364
-BenchmarkNormalXMMatrixScaling                    3.80 ns         2.76 ns    248888889
-BenchmarkPointTransformationMatrix                3.28 ns         2.58 ns    344615385
-BenchmarkPointXMMatrixTransformation              3.25 ns         2.68 ns    280000000
-BenchmarkVectorTransformationMatrix               3.20 ns         2.61 ns    263529412
-BenchmarkVectorXMMatrixTransformation             3.35 ns         2.92 ns    235789474
-BenchmarkNormalTransformationMatrix               3.33 ns         2.55 ns    263529412
-BenchmarkNormalXMMatrixTransformation             3.04 ns         2.73 ns    320000000
-BenchmarkPointAffineTransformationMatrix          34.0 ns         24.6 ns     40727273
-BenchmarkPointXMMatrixAffineTransformation        30.7 ns         27.3 ns     32000000
-BenchmarkVectorAffineTransformationMatrix         33.6 ns         28.5 ns     26352941
-BenchmarkVectorXMMatrixAffineTransformation       31.6 ns         24.5 ns     24888889
-BenchmarkNormalAffineTransformationMatrix         32.9 ns         26.4 ns     24888889
-BenchmarkNormalXMMatrixAffineTransformation       30.7 ns         25.6 ns     29866667
-BenchmarkPointLookTo                              17.9 ns         15.4 ns     64000000
-BenchmarkPointXMMatrixLookToLH                    24.2 ns         17.6 ns     32000000
-BenchmarkVectorLookTo                             17.5 ns         13.7 ns     56000000
-BenchmarkVectorXMMatrixLookToLH                   23.5 ns         20.3 ns     40727273
-BenchmarkNormalLookTo                             17.6 ns         14.4 ns     64000000
-BenchmarkNormalXMMatrixLookToLH                   23.1 ns         20.5 ns     32000000
-BenchmarkPointLookAt                              19.5 ns         16.2 ns     56000000
-BenchmarkPointXMMatrixLookAtLH                    28.8 ns         26.2 ns     29866667
-BenchmarkVectorLookAt                             19.3 ns         15.7 ns     74666667
-BenchmarkVectorXMMatrixLookAtLH                   26.8 ns         20.5 ns     32000000
-BenchmarkNormalLookAt                             18.5 ns         15.1 ns     49777778
-BenchmarkNormalXMMatrixLookAtLH                   27.9 ns         23.1 ns     34461538
-BenchmarkPointPerspectiveProjection               3.11 ns         2.57 ns    248888889
-BenchmarkPointXMMatrixPerspectiveLH               4.58 ns         2.68 ns    186666667
-BenchmarkVectorPerspectiveProjection              3.31 ns         2.79 ns    280000000
-BenchmarkVectorXMMatrixPerspectiveLH              4.14 ns         3.93 ns    194782609
-BenchmarkVectorPerspectiveProjection              3.30 ns         2.76 ns    248888889
-BenchmarkNormalXMMatrixPerspectiveLH              3.42 ns         3.08 ns    213333333
-BenchmarkPointPerspectiveFovProjection            11.9 ns         8.54 ns     64000000
-BenchmarkPointXMMatrixPerspectiveFovLH            16.6 ns         12.8 ns     56000000
-BenchmarkVectorPerspectiveFovProjection           11.3 ns         8.28 ns    100000000
-BenchmarkVectorXMMatrixPerspectiveFovLH           15.6 ns         14.2 ns     56000000
-BenchmarkNormalPerspectiveFovProjection           10.5 ns         8.59 ns    100000000
-BenchmarkNormalXMMatrixPerspectiveFovLH           15.6 ns         11.5 ns     64000000
-BenchmarkPointProject                             43.9 ns         36.8 ns     20363636
-BenchmarkPointXMVector3Project                    57.6 ns         47.4 ns     11200000
-
-</code></pre></div></div>
 
   </div>
 

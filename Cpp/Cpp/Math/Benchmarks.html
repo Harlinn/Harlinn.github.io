@@ -232,7 +232,13 @@
   </header>
 
   <div class="post-content">
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-----------------------------------------------------------------------------------------
+    <p>Below are the results of running the benchmarks implemented in <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Benchmarks/Math/BasicMathBenchmarks">BasicMathBenchmarks</a>.</p>
+
+<p>They not only include benchmarks for functions declared in <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code>, <code class="language-plaintext highlighter-rouge">HCCMath.h</code> and <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code>, but also 
+benchmarks for code from the standard C++ library, <a href="https://github.com/mmp/pbrt-v4">pbrt-v4</a>, <a href="https://github.com/microsoft/DirectXMath">DirectXMath</a> and <a href="https://github.com/microsoft/DirectXTK12">DirectXTK12</a>,
+which is useful for determining how performant my code really is.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-----------------------------------------------------------------------------------------
 Benchmark                                               Time             CPU   Iterations
 -----------------------------------------------------------------------------------------
 BenchmarkDoubleGenerator                             1.49 ns         1.50 ns    448000000
