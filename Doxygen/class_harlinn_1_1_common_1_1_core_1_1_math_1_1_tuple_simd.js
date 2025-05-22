@@ -1,6 +1,7 @@
 var class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple_simd =
 [
     [ "DerivedType", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple_simd.html#a21b0ec0f616617d8684c4fc4ef10a245", null ],
+    [ "Simd", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple_simd.html#a05f3993fc5b2df98e61bd0c6cee15136", null ],
     [ "SIMDType", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple_simd.html#a85c91681454146f20508b64c22092eb6", null ],
     [ "size_type", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple_simd.html#aa4c8f2df30d6fb4fd770308dce49dccf", null ],
     [ "Traits", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple_simd.html#a5a446aa7318e165b70aa714dd8f326cc", null ],

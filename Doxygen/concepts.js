@@ -39,23 +39,29 @@ var concepts =
             [ "ValueType", "concept_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_1_1_value_type.html", null ]
           ] ],
           [ "Math", "namespace_harlinn_1_1_common_1_1_core_1_1_math.html", [
-            [ "Internal", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html", [
-              [ "SimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_simd_type.html", null ],
-              [ "TupleType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_tuple_type.html", null ],
-              [ "QuaternionSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quaternion_simd_type.html", null ],
-              [ "QuaternionType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quaternion_type.html", null ],
-              [ "SquareMatrixSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_square_matrix_simd_type.html", null ],
-              [ "SquareMatrixType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_square_matrix_type.html", null ]
-            ] ],
             [ "FloatingPointType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point_type.html", null ],
             [ "VectorType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_type.html", null ],
             [ "VectorSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_simd_type.html", null ],
+            [ "VectorOrVectorSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_or_vector_simd_type.html", null ],
             [ "ScalarType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_type.html", null ],
             [ "ScalarSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_simd_type.html", null ],
+            [ "ScalarOrScalarSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_or_scalar_simd_type.html", null ],
+            [ "SimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_simd_type.html", null ],
+            [ "TupleType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple_type.html", null ],
+            [ "SimdOrTupleType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_simd_or_tuple_type.html", null ],
+            [ "SimdTupleOrArithmeticType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_simd_tuple_or_arithmetic_type.html", null ],
             [ "PointType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_point_type.html", null ],
             [ "PointSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_point_simd_type.html", null ],
+            [ "PointOrPointSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_point_or_point_simd_type.html", null ],
             [ "NormalType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_normal_type.html", null ],
-            [ "NormalSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_normal_simd_type.html", null ]
+            [ "NormalSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_normal_simd_type.html", null ],
+            [ "NormalOrNormalSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_normal_or_normal_simd_type.html", null ],
+            [ "QuaternionSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd_type.html", null ],
+            [ "QuaternionType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_type.html", null ],
+            [ "QuaternionOrQuaternionSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_or_quaternion_simd_type.html", null ],
+            [ "SquareMatrixSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_type.html", null ],
+            [ "SquareMatrixType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_type.html", null ],
+            [ "SquareMatrixOrSquareMatrixSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_or_square_matrix_simd_type.html", null ]
           ] ],
           [ "Persistent", "namespace_harlinn_1_1_common_1_1_core_1_1_persistent.html", [
             [ "Internal", "namespace_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal.html", [
@@ -107,6 +113,12 @@ var concepts =
           [ "AnsiStringLike", "concept_harlinn_1_1_common_1_1_core_1_1_ansi_string_like.html", null ],
           [ "SimpleComLike", "concept_harlinn_1_1_common_1_1_core_1_1_simple_com_like.html", null ],
           [ "BinaryLike", "concept_harlinn_1_1_common_1_1_core_1_1_binary_like.html", null ],
+          [ "BooleanType", "concept_harlinn_1_1_common_1_1_core_1_1_boolean_type.html", null ],
+          [ "FloatingPointType", "concept_harlinn_1_1_common_1_1_core_1_1_floating_point_type.html", null ],
+          [ "IntegerType", "concept_harlinn_1_1_common_1_1_core_1_1_integer_type.html", null ],
+          [ "SignedIntegerType", "concept_harlinn_1_1_common_1_1_core_1_1_signed_integer_type.html", null ],
+          [ "UnsignedIntegerType", "concept_harlinn_1_1_common_1_1_core_1_1_unsigned_integer_type.html", null ],
+          [ "ArithmeticType", "concept_harlinn_1_1_common_1_1_core_1_1_arithmetic_type.html", null ],
           [ "GuidType", "concept_harlinn_1_1_common_1_1_core_1_1_guid_type.html", null ],
           [ "WideStringType", "concept_harlinn_1_1_common_1_1_core_1_1_wide_string_type.html", null ]
         ] ]

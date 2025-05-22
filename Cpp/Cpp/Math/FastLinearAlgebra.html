@@ -232,7 +232,7 @@
   </header>
 
   <div class="post-content">
-    <p>The library contains a set of linear algebra classes and function that are optimized
+    <p>The library contains a set of optimized linear algebra classes and functions
 for games and other graphic intensive apps. The operations are 
 implemented using a blend of SIMD and regular C/C++, performing as well as, and sometimes 
 outperforming, the <a href="https://github.com/microsoft/DirectXMath">DirectXMath</a>
@@ -243,11 +243,13 @@ library.</p>
 <p><img src="./assets/Kroken1.png" alt="kroken" /></p>
 
 <p><a href="pbrto.html">pbrto</a> is the main example/demonstration of how to use the library
-to improve the performance of a complex app.</p>
+to improve the performance of a complex, computationally intensive, app.</p>
 
 <p>The classes and functions are designed to make it easier to implement, understand and 
 maintain efficient solutions, and the <a href="Benchmarks.html">Benchmarks</a> shows that this can be done
 without loss of performance.</p>
+
+<p><code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code> is header only, and does not require linking with <code class="language-plaintext highlighter-rouge">Harlinn.Common.Core.lib</code>.</p>
 
 <h1 id="introduction">Introduction</h1>
 
@@ -259,8 +261,8 @@ header file:</p>
 </code></pre>
 <p>and you are ready to code.</p>
 
-<p>As described by Sam Melax, in Game Programming Gems, a function for calculating the shortest arc 
-quaternion between to vectors can be implemented like this:</p>
+<p>In Game Programming Gems, Sam Melax describes a function for calculating the shortest arc 
+quaternion between to vectors that can be implemented like this:</p>
 
 <pre><code class="language-C++">
 using namespace Harlinn::Common::Core;
@@ -309,11 +311,11 @@ namespace Basics
 <p>No surprises here, the above looks like something that could easily be done using most
 3D math libraries.</p>
 
-<p>It’s not quite as fast as <code class="language-plaintext highlighter-rouge">Quaternion::FromToRotation</code> from <a href="https://github.com/microsoft/DirectXTK12">DirectXTK12</a>,
-but it’s not bad either.</p>
+<p>Currently, this implementation is as fast as <code class="language-plaintext highlighter-rouge">Quaternion::FromToRotation</code> from <a href="https://github.com/microsoft/DirectXTK12">DirectXTK12</a>,
+which is cool:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkShortestArc1                               39.1 ns         39.9 ns     17230769
-BenchmarkDirectXTK12QuaternionFromToRotation        32.2 ns         32.2 ns     20363636
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkShortestArc1                                29.8 ns         29.3 ns     22400000
+BenchmarkDirectXTK12QuaternionFromToRotation         30.5 ns         30.0 ns     21333333
 </code></pre></div></div>
 
 <p>A better performing version would look like:</p>
@@ -355,7 +357,7 @@ BenchmarkDirectXTK12QuaternionFromToRotation        32.2 ns         32.2 ns     
 
 <p>which looks almost identical to <code class="language-plaintext highlighter-rouge">ShortestArc1</code>, but the benchmark:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkShortestArc2                               15.0 ns         15.0 ns     44800000
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkShortestArc2                                14.6 ns         14.6 ns     44800000
 </code></pre></div></div>
 
 <p>shows that <code class="language-plaintext highlighter-rouge">ShortestArc2</code> is more than twice as fast as <code class="language-plaintext highlighter-rouge">ShortestArc1</code>. Like <code class="language-plaintext highlighter-rouge">ShortestArc2</code>, 
@@ -451,7 +453,7 @@ was achieved by replacing <code class="language-plaintext highlighter-rouge">Vec
 
 <p>Could it be even faster? Sure:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkShortestArc                                11.6 ns         11.4 ns     56000000
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>BenchmarkShortestArc                                 11.1 ns         11.2 ns     56000000
 </code></pre></div></div>
 
 <p>This benchmark, <code class="language-plaintext highlighter-rouge">BenchmarkShortestArc</code>, is for the <code class="language-plaintext highlighter-rouge">ShortestArc</code> implementation found 
@@ -501,15 +503,21 @@ Vector v3 = v1 + v2 + v1 + v2 + v1 + v2;
 </code></pre>
 <p>where the <code class="language-plaintext highlighter-rouge">+</code> operator is implemented as:</p>
 
-<pre><code class="language-C++">template&lt;Internal::TupleType T, 
-        Internal::TupleType U, 
-        typename ResultT = typename T::Simd&gt;
-    requires Internal::IsCompatible&lt;T, U&gt;
-inline ResultT operator + ( const T&amp; lhs, const U&amp; rhs ) noexcept
+<pre><code class="language-C++">template&lt;SimdOrTupleType T, SimdOrTupleType U&gt;
+    requires IsCompatible&lt;T, U&gt; &amp;&amp; Internal::HasTupleType&lt;T, U&gt;
+inline auto operator + ( const T&amp; lhs, const U&amp; rhs ) noexcept
 {
     using Traits = typename T::Traits;
-    return Traits::Add( Traits::Load( lhs.values.data( ) ), 
-                            Traits::Load( rhs.values.data( ) ) );
+    if constexpr ( Internal::HasSimdType&lt;T, U&gt; == false &amp;&amp; T::Size &lt; 3 )
+    {
+        return T( lhs.x + rhs.x, lhs.y + rhs.y );
+    }
+    else
+    {
+        using ResultType = Internal::MakeResultType&lt;T&gt;;
+        return ResultType( Traits::Add( Internal::ToSimd( lhs ), 
+                                        Internal::ToSimd( rhs ) ) );
+    }
 }
 </code></pre>
 
@@ -570,6 +578,7 @@ auto v3Loaded = XMVectorAdd(
             v2Loaded ) );
 
 </code></pre>
+<p>Which is harder to write, and if you didn’t write it, harder to understand.</p>
 
 <p>Benchmarking the above <a href="https://github.com/microsoft/DirectXMath">DirectXMath</a> 
 code against</p>

@@ -13,6 +13,7 @@ var struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_3_01_matr
     [ "SquareMatrixSimd", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_013_01_4.html#a979f62764a043dd16263b75c74333269", null ],
     [ "SquareMatrixSimd", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_013_01_4.html#a38887d4bfb10ee1d582b20841ce34c96", null ],
     [ "SquareMatrixSimd", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_013_01_4.html#acbd7ab3843a969981e0cf6dfd265e454", null ],
+    [ "SquareMatrixSimd", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_013_01_4.html#a2b98f91c128f8667a7d5b4e31ee10ccd", null ],
     [ "Identity", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_013_01_4.html#adc0b78fd65bc2999f113faceaf39e947", null ],
     [ "IsIdentity", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_013_01_4.html#a3aba1be2f16650179cb20e24771fdaba", null ],
     [ "operator!=", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_013_01_4.html#afead158b916ffe63c6049c0c7f30e327", null ],

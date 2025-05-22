@@ -1443,6 +1443,7 @@ var hierarchy =
     [ "std::formatter< Harlinn::Common::Core::Math::Vector< int, 4 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01int_00_014_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
     [ "std::formatter< Harlinn::Common::Core::SysString, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_sys_string_00_01_char_t_01_4.html", null ],
     [ "std::formatter< Harlinn::Common::Core::TimeSpan, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_time_span_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< typename Harlinn::Common::Core::Math::Quaternion< float >::Simd, CharT >", "structstd_1_1formatter_3_01typename_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_3_01f5c5439c298d348f49a3116d89c817ec1.html", null ],
     [ "Harlinn::Common::Core::Persistent::Internal::FormatTraitsBase< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_traits_base.html", [
       [ "Harlinn::Common::Core::Persistent::Internal::AdaptedFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_adapted_format_traits.html", null ],
       [ "Harlinn::Common::Core::Persistent::Internal::BasicArrayFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_basic_array_format_traits.html", [
