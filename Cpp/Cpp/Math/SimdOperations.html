@@ -249,8 +249,8 @@ Vector v2( 5.0f, 3.0f, 3.f, 2.0f );
 Vector v3 = (v2 + Dot(v1,v2)) / Sin(v1);
 
 </code></pre>
-<p>The above example uses the <a href="FastLinearAlgebra.html">Fast Linear Algebra Classes for Games and Graphics</a>, that 
-were created using the <code class="language-plaintext highlighter-rouge">Traits&lt;T,N&gt;</code> specializations discussed below.</p>
+<p>The above example uses the <a href="FastLinearAlgebra.html">Fast Linear Algebra Classes for Games and Graphics</a>, which 
+leverages the <code class="language-plaintext highlighter-rouge">Traits&lt;T,N&gt;</code> specializations discussed below.</p>
 
 <p><code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> is header only, and does not require linking with <code class="language-plaintext highlighter-rouge">Harlinn.Common.Core.lib</code>.</p>
 
@@ -262,8 +262,7 @@ of the template:</p>
 
 <pre><code class="language-C++">template&lt;typename T, size_t N&gt;
 struct Traits : public std::false_type
-{
-};
+{ };
 </code></pre>
 
 <p>The motivation for creating the <code class="language-plaintext highlighter-rouge">Traits&lt;T,N&gt;</code> specializations is that they can be used to implement C++ templates

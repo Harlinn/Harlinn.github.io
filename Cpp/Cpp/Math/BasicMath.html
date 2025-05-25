@@ -257,7 +257,7 @@ strives to demonstrate the accuracy of the computations.</p>
 and can be verified by building and executing <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Benchmarks/Math/BasicMathBenchmarks">BasicMathBenchmarks</a> 
 included in the <a href="/Cpp/Harlinn.Windows/Harlinn.Windows.html">Harlinn.Windows solution</a>.</p>
 
-<p>Benchmarks for a single inline function cannot be relied upon to accurately determine how well the 
+<p><a href="Benchmarks.html">Benchmarks</a> for a single inline function cannot be relied upon to accurately determine how well the 
 function will perform perform in a real application. For release builds, the compiler and linker,
 employs global optimization strategies, attempting to optimize the operations across all
 the compilation units. The global optimization strategies will often find optimization
@@ -277,7 +277,7 @@ faster than the release build of the original PBRT. <a href="pbrto.html">more…
 
 <h2 id="background">Background</h2>
 
-<p>The functions was created to enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of mathematical expressions, since nothing
+<p>The functions was created to explore <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of mathematical expressions, since nothing
 improves runtime performance as much as making the compiler calculate the results at compile time.</p>
 
 <p>Much of the code is based on version <code class="language-plaintext highlighter-rouge">0.8.5</code> of the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> 
