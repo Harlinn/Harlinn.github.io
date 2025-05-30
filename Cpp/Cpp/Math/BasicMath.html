@@ -316,7 +316,7 @@ better. When this is the case, the library selects the implementation with the b
 identical results when executed at runtime. The difference is small; and can, in most cases, be ignored,
 as in these cases both implementations are based on approximations.</p>
 
-<h3 id="testing-the-runtime-function-evaluation">Testing the runtime function evaluation</h3>
+<h3 id="testing-the-runtime-functions">Testing the runtime functions</h3>
 
 <p>Changes to the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> code was required to
 enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation since constructs like <code class="language-plaintext highlighter-rouge">(x - x)/(x - x)</code> makes Visual C++ unhappy. So
