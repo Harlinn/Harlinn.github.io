@@ -248,8 +248,13 @@ runtime performance benefits as well.</p>
 
 <h3 id="unit-tests">Unit Tests</h3>
 
-<p>Extensive unit tests, available <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Tests/Harlinn.Common.Core.Math.Tests">here</a>, 
-strives to demonstrate the accuracy of the computations.</p>
+<p>Unit tests for <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of the core functions from <code class="language-plaintext highlighter-rouge">HCCMath.h</code> are provided in 
+<a href="https://github.com/Harlinn/Harlinn.Windows/blob/master/Tests/Harlinn.Common.Core.Math.Tests/ConstexprMathTests.cpp">ConstexprMathTests.cpp</a>.</p>
+
+<p><a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Tests/Harlinn.Common.Core.Math.Tests">Harlinn.Common.Core.Math.Tests</a> contains 663 test cases, 
+striving to demonstrate the accuracy of the computations. Be aware that running the release build of the full test suite takes nearly an hour,
+as several of the tests seeks to determine the result for every possible input, or very large subsets of the possible inputs - comparing
+the results with those produced by the standard implementation.</p>
 
 <h3 id="benchmarks">Benchmarks</h3>
 
@@ -272,13 +277,17 @@ set of benchmarks, can outperform the other in a real application.</p>
 
 <p>PBRTO is a micro optimized version of <a href="https://github.com/mmp/pbrt-v4">PBRT-v4</a>, under development 
 as an example of how the functionality in <code class="language-plaintext highlighter-rouge">HCCMath.h</code>, <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> and <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code> can be used to 
-optimize the performance of real, computationally intensive, apps. It’s now about <code class="language-plaintext highlighter-rouge">35</code> % 
+optimize the performance of real, computationally intensive, apps. It’s now about <code class="language-plaintext highlighter-rouge">91</code> % 
 faster than the release build of the original PBRT. <a href="pbrto.html">more…</a></p>
 
 <h2 id="background">Background</h2>
 
-<p>The functions was created to explore <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of mathematical expressions, since nothing
+<p>The functions were created to explore <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of mathematical expressions, since nothing
 improves runtime performance as much as making the compiler calculate the results at compile time.</p>
+
+<p>Since <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation doesn’t allow undefined behavior, this can also be used to eliminate 
+a wide range of subtle, and hard to find, errors in code using <code class="language-plaintext highlighter-rouge">HCCMath.h</code> that currently 
+cannot be <code class="language-plaintext highlighter-rouge">constexpr</code> evaluated using the standard libraries.</p>
 
 <p>Much of the code is based on version <code class="language-plaintext highlighter-rouge">0.8.5</code> of the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> 
 mathematical C library used by the <a href="https://julialang.org/">Julia</a> programming language.</p>
@@ -291,18 +300,27 @@ Visual C++ runtime.</p>
 possible arguments. <code class="language-plaintext highlighter-rouge">Sin</code> has no problems with <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation for \(\pm 20000^\circ\),
 but fails to <code class="language-plaintext highlighter-rouge">constexpr</code> evaluate <code class="language-plaintext highlighter-rouge">Sin(1.7976931348623158e+308)</code>.</p>
 
+<p>The API is template based, which may seem odd, but this helps to reduce the number of
+unintended conversions between numeric types. Most functions designed to work with 
+floating point values do not accept integer values without an explicit cast to
+<code class="language-plaintext highlighter-rouge">float</code> or <code class="language-plaintext highlighter-rouge">double</code>.</p>
+
 <h3 id="implementation-quality">Implementation quality</h3>
 
 <p>The quality of the implementation is, since it is based on <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a>,
-very high. <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> does many things very well, but sometimes
-the Visual C++ runtime, an intrinsic function, or other alternative implemented by the library, performs 
+high. <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> does many things very well, but sometimes
+the Visual C++ runtime, an intrinsic function, or another alternative implemented by the library, perform 
 better. When this is the case, the library selects the implementation with the best runtime performance.</p>
 
-<h3 id="testing">Testing</h3>
+<p>Since some functions are implemented differently for <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation, they will not return
+identical results when executed at runtime. The difference is small; and can, in most cases, be ignored,
+as in these cases both implementations are based on approximations.</p>
 
-<p>Rather extensive changes to the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> code was required to
-enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation, and there are currently 535 unit tests helping to ensure the quality
-of the mathematical parts of the library.</p>
+<h3 id="testing-the-runtime-function-evaluation">Testing the runtime function evaluation</h3>
+
+<p>Changes to the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> code was required to
+enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation since constructs like <code class="language-plaintext highlighter-rouge">(x - x)/(x - x)</code> makes Visual C++ unhappy. So
+does <code class="language-plaintext highlighter-rouge">goto</code>s, <code class="language-plaintext highlighter-rouge">x/0.</code>, unions, <code class="language-plaintext highlighter-rouge">const</code>, <code class="language-plaintext highlighter-rouge">static</code> and <code class="language-plaintext highlighter-rouge">volatile</code> declarations; necessitating quite a few changes.</p>
 
 <p>Several of the tests execute the function under test 20 000 times using random generated values, while
 others try every possible value over the range of values most often used with the function.</p>

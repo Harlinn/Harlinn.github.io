@@ -1,7 +1,7 @@
 var union_i_e_e_el2bits =
 [
-    [ "bits", "union_i_e_e_el2bits.html#aee50db04803a50a7ad9b9e966ce31888", null ],
     [ "bits", "union_i_e_e_el2bits.html#ac5953545f9ceaaa1e29c209f4cdd72b5", null ],
+    [ "bits", "union_i_e_e_el2bits.html#aee50db04803a50a7ad9b9e966ce31888", null ],
     [ "e", "union_i_e_e_el2bits.html#adb932579cbb1f00d419a6e805afd66dc", null ],
     [ "exp", "union_i_e_e_el2bits.html#abe599f3db1286d0a76d88be45fd962d5", null ],
     [ "expsign", "union_i_e_e_el2bits.html#a63dc055ac080ed5225878f385231ced8", null ],
@@ -14,6 +14,6 @@ var union_i_e_e_el2bits =
     [ "manl", "union_i_e_e_el2bits.html#acdf738833c10680a33f9af9b3017acc4", null ],
     [ "manl", "union_i_e_e_el2bits.html#acd376fab883480ab8e72c34eab477d20", null ],
     [ "sign", "union_i_e_e_el2bits.html#a2d7a9b61d685c176aa2111712f59ed6b", null ],
-    [ "xbits", "union_i_e_e_el2bits.html#ac5d7caa2b3ec1b36eeaa514f5c74bb5d", null ],
-    [ "xbits", "union_i_e_e_el2bits.html#af7695664bc830442843e47d2a4be6687", null ]
+    [ "xbits", "union_i_e_e_el2bits.html#af7695664bc830442843e47d2a4be6687", null ],
+    [ "xbits", "union_i_e_e_el2bits.html#ac5d7caa2b3ec1b36eeaa514f5c74bb5d", null ]
 ];

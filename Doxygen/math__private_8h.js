@@ -84,7 +84,7 @@ var math__private_8h =
     [ "INSERT_WORD64", "math__private_8h.html#ac5dae89c9434af80d4bef5c3e2449468", null ],
     [ "INSERT_WORD64", "math__private_8h.html#a21644b48d1e26dc3a1386dc7bdced620", null ],
     [ "INSERT_WORDS", "math__private_8h.html#ac8034efc35f65f687998583f295cbc60", null ],
-    [ "nan_mix", "math__private_8h.html#ab36c1994ffff015dbfba6cbebca589f3", null ],
+    [ "nan_mix", "math__private_8h.html#a5968f04735b824c3a0511818ab690453", null ],
     [ "Negate", "math__private_8h.html#a28b84a5376b72cb37591448cddbc3bd9", null ],
     [ "SET_FLOAT_WORD", "math__private_8h.html#ae53d44b09a43f95ac2134b9e1d89091b", null ],
     [ "SET_FLOAT_WORD", "math__private_8h.html#a3fe85e04cdf5ae955b92d3818f2b975d", null ],

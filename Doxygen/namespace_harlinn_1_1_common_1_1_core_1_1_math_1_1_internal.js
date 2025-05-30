@@ -53,6 +53,8 @@ var namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal =
     [ "ClampLengthImpl", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a0004be7db8bed0f033af62159ecabfe1", null ],
     [ "CopySignImpl", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#ac94ebd5e059d45dce350f5706a635468", null ],
     [ "DivImpl", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a3c953a4965dba0fe20163b3b807a530b", null ],
+    [ "Exp10Impl", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a99cbe9a7ad84f20411ed16ad7efcd977", null ],
+    [ "Exp10Impl", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#abb297904d10c0517e5376913b03d3386", null ],
     [ "FloatToHalf", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a699ecd82754853abea61a62443353a3b", null ],
     [ "HalfToFloat", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#ac1520c21cb0f46da771415822d1fd9b2", null ],
     [ "HermiteImpl", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#aa16e59ea2ce5be162c71999fd2f8a410", null ],
@@ -95,10 +97,14 @@ var namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal =
     [ "ToSimdType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#adf1e2ead3674b958043ca6add1b0d197", null ],
     [ "ToSimdType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#aa6bcac763d3b8739af57e51488a500bf", null ],
     [ "ToSimdType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a243f3517ab631781783475e0d2e3f1d4", null ],
+    [ "AllAreSimdOrTupleType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#ac7b95bc3247187ab8cb2c38c1d639ccf", null ],
+    [ "AllAreSimdType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a0a22a90f9e0aae3968c0b96774e8b06f", null ],
+    [ "AllAreTupleType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#af29a5e229a9e7f0bd2057cef84518c5b", null ],
     [ "HasQuaternionSimdType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#ac5b6cf61ddbb62b8cac5ea5a4f298315", null ],
     [ "HasQuaternionType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a77b0e05804da43fa2ac3e18131924cc5", null ],
-    [ "HasSimdType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#ad98b5608cf90460c03b12df9e34b40d2", null ],
+    [ "HasSimdOrTupleType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#adfe8d0d0bb0e2240e28e0f1141baf6a4", null ],
+    [ "HasSimdType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a0e271180bc6d7763645b3b9046ffd573", null ],
     [ "HasSquareMatrixSimdType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a63080fdfc75d276993654c9da23f6c58", null ],
     [ "HasSquareMatrixType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a50f0ab48084dd2bb0fe656dcd3e72e82", null ],
-    [ "HasTupleType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c", null ]
+    [ "HasTupleType", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3", null ]
 ];

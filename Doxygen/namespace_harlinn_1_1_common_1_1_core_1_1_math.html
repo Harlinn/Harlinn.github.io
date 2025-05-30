@@ -411,15 +411,33 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ade7fcd1
 <tr class="memitem:af4ce869bdd4b4da88ada97983992e73c" id="r_af4ce869bdd4b4da88ada97983992e73c"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:af4ce869bdd4b4da88ada97983992e73c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af4ce869bdd4b4da88ada97983992e73c">IsFinite</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> val) noexcept</td></tr>
+<tr class="memdesc:af4ce869bdd4b4da88ada97983992e73c"><td class="mdescLeft">&#160;</td><td class="mdescRight">All integers have finite values.  <br /></td></tr>
 <tr class="separator:af4ce869bdd4b4da88ada97983992e73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88eb4faf3711d6c80729a124203b9585" id="r_a88eb4faf3711d6c80729a124203b9585"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a88eb4faf3711d6c80729a124203b9585"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a88eb4faf3711d6c80729a124203b9585">IsFinite</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> val) noexcept</td></tr>
+<tr class="memdesc:a88eb4faf3711d6c80729a124203b9585"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if the given floating point number val has finite value i.e. it is normal, subnormal or zero, but not infinite or NaN.  <br /></td></tr>
 <tr class="separator:a88eb4faf3711d6c80729a124203b9585"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11c286e299b982d11641a448b69934d1" id="r_a11c286e299b982d11641a448b69934d1"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename ... Args&gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ade7fcd15acd5a7593328118bdce12fdf">IsArithmetic</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ade7fcd15acd5a7593328118bdce12fdf">IsArithmetic</a>&lt;Args&gt; &amp;&amp; ... )</td></tr>
 <tr class="memitem:a11c286e299b982d11641a448b69934d1"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a11c286e299b982d11641a448b69934d1">IsFinite</a> (Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:a11c286e299b982d11641a448b69934d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if all the arguments are finite.  <br /></td></tr>
 <tr class="separator:a11c286e299b982d11641a448b69934d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf33b8fc878d8de646146185791af614" id="r_aaf33b8fc878d8de646146185791af614"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:aaf33b8fc878d8de646146185791af614"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aaf33b8fc878d8de646146185791af614">IsNormal</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> val) noexcept</td></tr>
+<tr class="memdesc:aaf33b8fc878d8de646146185791af614"><td class="mdescLeft">&#160;</td><td class="mdescRight">All integers are &lt;q&gt;normal&lt;/q&gt;.  <br /></td></tr>
+<tr class="separator:aaf33b8fc878d8de646146185791af614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19669fc871cfc4cee3da0c9645982722" id="r_a19669fc871cfc4cee3da0c9645982722"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a19669fc871cfc4cee3da0c9645982722"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a19669fc871cfc4cee3da0c9645982722">IsNormal</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> val) noexcept</td></tr>
+<tr class="memdesc:a19669fc871cfc4cee3da0c9645982722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if the given floating point number val is normal, i.e. is neither zero, subnormal, infinite, nor NaN.  <br /></td></tr>
+<tr class="separator:a19669fc871cfc4cee3da0c9645982722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80f9e28fe811f64ccc9cf38d6289528e" id="r_a80f9e28fe811f64ccc9cf38d6289528e"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename ... Args&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ade7fcd15acd5a7593328118bdce12fdf">IsArithmetic</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ade7fcd15acd5a7593328118bdce12fdf">IsArithmetic</a>&lt;Args&gt; &amp;&amp; ... )</td></tr>
+<tr class="memitem:a80f9e28fe811f64ccc9cf38d6289528e"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a80f9e28fe811f64ccc9cf38d6289528e">IsNormal</a> (Args &amp;&amp;... args) noexcept</td></tr>
+<tr class="memdesc:a80f9e28fe811f64ccc9cf38d6289528e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if all the arguments are normal.  <br /></td></tr>
+<tr class="separator:a80f9e28fe811f64ccc9cf38d6289528e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae388a941b7bb71145cc8fd82ff3173d" id="r_aae388a941b7bb71145cc8fd82ff3173d"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ae26d63e9ad6bffcbd200435668e434cc">IsSignedInteger</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:aae388a941b7bb71145cc8fd82ff3173d"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aae388a941b7bb71145cc8fd82ff3173d">Abs</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> val) noexcept</td></tr>
@@ -471,18 +489,18 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a4248aaa1e2d1922cbe52136834739962"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4248aaa1e2d1922cbe52136834739962">FRExp</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> val, int &amp;exp) noexcept</td></tr>
 <tr class="separator:a4248aaa1e2d1922cbe52136834739962"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3da8da717eba4d66b54a0c2fdbd04491" id="r_a3da8da717eba4d66b54a0c2fdbd04491"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;std::remove_cvref_t&lt;ValueT&gt;&gt;</td></tr>
-<tr class="memitem:a3da8da717eba4d66b54a0c2fdbd04491"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::pair&lt; std::remove_cvref_t&lt; ValueT &gt;, std::remove_cvref_t&lt; ValueT &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3da8da717eba4d66b54a0c2fdbd04491">ModF</a> (ValueT val) noexcept</td></tr>
-<tr class="separator:a3da8da717eba4d66b54a0c2fdbd04491"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94042096eea04f344d1ae456d639393b" id="r_a94042096eea04f344d1ae456d639393b"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;std::remove_cvref_t&lt;ValueT&gt;&gt;</td></tr>
-<tr class="memitem:a94042096eea04f344d1ae456d639393b"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; ValueT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a94042096eea04f344d1ae456d639393b">ModF</a> (ValueT val, ValueT *integerPart) noexcept</td></tr>
-<tr class="separator:a94042096eea04f344d1ae456d639393b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5068980d77361621a16d1444a515031" id="r_ac5068980d77361621a16d1444a515031"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;std::remove_cvref_t&lt;ValueT&gt;&gt;</td></tr>
-<tr class="memitem:ac5068980d77361621a16d1444a515031"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; ValueT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac5068980d77361621a16d1444a515031">ModF</a> (ValueT val, ValueT &amp;integerPart) noexcept</td></tr>
-<tr class="separator:ac5068980d77361621a16d1444a515031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06726c455dda38c90ed0b059c9f01269" id="r_a06726c455dda38c90ed0b059c9f01269"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;ValueT&gt;</td></tr>
+<tr class="memitem:a06726c455dda38c90ed0b059c9f01269"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::pair&lt; std::remove_cvref_t&lt; ValueT &gt;, std::remove_cvref_t&lt; ValueT &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a06726c455dda38c90ed0b059c9f01269">ModF</a> (ValueT val) noexcept</td></tr>
+<tr class="separator:a06726c455dda38c90ed0b059c9f01269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05eb83a7368fae356a03e54872ac3487" id="r_a05eb83a7368fae356a03e54872ac3487"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;ValueT&gt;</td></tr>
+<tr class="memitem:a05eb83a7368fae356a03e54872ac3487"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; ValueT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a05eb83a7368fae356a03e54872ac3487">ModF</a> (ValueT val, ValueT *integerPart) noexcept</td></tr>
+<tr class="separator:a05eb83a7368fae356a03e54872ac3487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a849f05a1c3217efbe2f0c2a5f98cd2c4" id="r_a849f05a1c3217efbe2f0c2a5f98cd2c4"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;ValueT&gt;</td></tr>
+<tr class="memitem:a849f05a1c3217efbe2f0c2a5f98cd2c4"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; ValueT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a849f05a1c3217efbe2f0c2a5f98cd2c4">ModF</a> (ValueT val, ValueT &amp;integerPart) noexcept</td></tr>
+<tr class="separator:a849f05a1c3217efbe2f0c2a5f98cd2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a5bd12fff9d644b67a2db2475cbb12c" id="r_a1a5bd12fff9d644b67a2db2475cbb12c"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a1a5bd12fff9d644b67a2db2475cbb12c"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1a5bd12fff9d644b67a2db2475cbb12c">Min</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> first, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> second) noexcept</td></tr>
@@ -583,6 +601,14 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a34f4a09d7a6bbab3652508c1fa98d5c1"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a34f4a09d7a6bbab3652508c1fa98d5c1">ExpM1</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
 <tr class="separator:a34f4a09d7a6bbab3652508c1fa98d5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5077183fc793af98dd3d747dec2ad697" id="r_a5077183fc793af98dd3d747dec2ad697"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a5077183fc793af98dd3d747dec2ad697"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5077183fc793af98dd3d747dec2ad697">Exp2</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="separator:a5077183fc793af98dd3d747dec2ad697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa78621936156b813b35bd79d091c619" id="r_aaa78621936156b813b35bd79d091c619"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:aaa78621936156b813b35bd79d091c619"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aaa78621936156b813b35bd79d091c619">Exp10</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="separator:aaa78621936156b813b35bd79d091c619"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a801f12ebec0539e02e5c0f9f518dba71" id="r_a801f12ebec0539e02e5c0f9f518dba71"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a801f12ebec0539e02e5c0f9f518dba71"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a801f12ebec0539e02e5c0f9f518dba71">Hypot</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a44596b79a5e28408065d1565fa209510">y</a>) noexcept</td></tr>
@@ -657,58 +683,107 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 <tr class="memitem:a948fa2544b7431f0be19f3ac35bbc761" id="r_a948fa2544b7431f0be19f3ac35bbc761"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a948fa2544b7431f0be19f3ac35bbc761"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a948fa2544b7431f0be19f3ac35bbc761">SinH</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:a948fa2544b7431f0be19f3ac35bbc761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the hyperbolic sine of x.  <br /></td></tr>
 <tr class="separator:a948fa2544b7431f0be19f3ac35bbc761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb0f8fe3da1c5db5af51e7aaa4b9f64a" id="r_aeb0f8fe3da1c5db5af51e7aaa4b9f64a"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:aeb0f8fe3da1c5db5af51e7aaa4b9f64a"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aeb0f8fe3da1c5db5af51e7aaa4b9f64a">ASinH</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:aeb0f8fe3da1c5db5af51e7aaa4b9f64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the inverse hyperbolic sine of x.  <br /></td></tr>
 <tr class="separator:aeb0f8fe3da1c5db5af51e7aaa4b9f64a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30938c54c3606b022ff441df1e7fc26e" id="r_a30938c54c3606b022ff441df1e7fc26e"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a30938c54c3606b022ff441df1e7fc26e"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a30938c54c3606b022ff441df1e7fc26e">CosH</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:a30938c54c3606b022ff441df1e7fc26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the hyperbolic cosine of x.  <br /></td></tr>
 <tr class="separator:a30938c54c3606b022ff441df1e7fc26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53b60c05407e65bc20bf6cf2e0ce7104" id="r_a53b60c05407e65bc20bf6cf2e0ce7104"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a53b60c05407e65bc20bf6cf2e0ce7104"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a53b60c05407e65bc20bf6cf2e0ce7104">ACosH</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:a53b60c05407e65bc20bf6cf2e0ce7104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the inverse hyperbolic cosine of x.  <br /></td></tr>
 <tr class="separator:a53b60c05407e65bc20bf6cf2e0ce7104"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f4090642c3ac8d6d6cc859feda71d3f" id="r_a9f4090642c3ac8d6d6cc859feda71d3f"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a9f4090642c3ac8d6d6cc859feda71d3f"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9f4090642c3ac8d6d6cc859feda71d3f">TanH</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:a9f4090642c3ac8d6d6cc859feda71d3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the hyperbolic tangent of x.  <br /></td></tr>
 <tr class="separator:a9f4090642c3ac8d6d6cc859feda71d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a550cceff9efd4642301a94429de8933c" id="r_a550cceff9efd4642301a94429de8933c"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a550cceff9efd4642301a94429de8933c"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a550cceff9efd4642301a94429de8933c">ATanH</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:a550cceff9efd4642301a94429de8933c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the inverse hyperbolic tangent of x.  <br /></td></tr>
 <tr class="separator:a550cceff9efd4642301a94429de8933c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4a5481c0b4e78616bfea0d3f89989b2" id="r_ac4a5481c0b4e78616bfea0d3f89989b2"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:ac4a5481c0b4e78616bfea0d3f89989b2"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac4a5481c0b4e78616bfea0d3f89989b2">J0</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:ac4a5481c0b4e78616bfea0d3f89989b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the Bessel function of the first kind of order 0 for x.  <br /></td></tr>
 <tr class="separator:ac4a5481c0b4e78616bfea0d3f89989b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1050b37507c82ef98750c237b6d62ca" id="r_ae1050b37507c82ef98750c237b6d62ca"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:ae1050b37507c82ef98750c237b6d62ca"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae1050b37507c82ef98750c237b6d62ca">J1</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:ae1050b37507c82ef98750c237b6d62ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the Bessel function of the first kind of order 1 for x.  <br /></td></tr>
 <tr class="separator:ae1050b37507c82ef98750c237b6d62ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6222e8334d93ed3c875fc648c35980f2" id="r_a6222e8334d93ed3c875fc648c35980f2"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a6222e8334d93ed3c875fc648c35980f2"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6222e8334d93ed3c875fc648c35980f2">JN</a> (int n, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:a6222e8334d93ed3c875fc648c35980f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the Bessel function of the first kind of order n for x.  <br /></td></tr>
 <tr class="separator:a6222e8334d93ed3c875fc648c35980f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a796da924cd099af85f5e499eb3c58b62" id="r_a796da924cd099af85f5e499eb3c58b62"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a796da924cd099af85f5e499eb3c58b62"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a796da924cd099af85f5e499eb3c58b62">Y0</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:a796da924cd099af85f5e499eb3c58b62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the Bessel function of the second kind of order 0 for x.  <br /></td></tr>
 <tr class="separator:a796da924cd099af85f5e499eb3c58b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dba00e4939905368624ae76105979da" id="r_a8dba00e4939905368624ae76105979da"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a8dba00e4939905368624ae76105979da"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8dba00e4939905368624ae76105979da">Y1</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:a8dba00e4939905368624ae76105979da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the Bessel function of the second kind of order 1 for x.  <br /></td></tr>
 <tr class="separator:a8dba00e4939905368624ae76105979da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cef39d224d2faa9e76a9d67e336f0ef" id="r_a9cef39d224d2faa9e76a9d67e336f0ef"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a9cef39d224d2faa9e76a9d67e336f0ef"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9cef39d224d2faa9e76a9d67e336f0ef">YN</a> (int n, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:a9cef39d224d2faa9e76a9d67e336f0ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the Bessel function of the second kind of order n for x.  <br /></td></tr>
 <tr class="separator:a9cef39d224d2faa9e76a9d67e336f0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb25ce69da9b516c16049954af05eebc" id="r_adb25ce69da9b516c16049954af05eebc"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:adb25ce69da9b516c16049954af05eebc"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adb25ce69da9b516c16049954af05eebc">Erf</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:adb25ce69da9b516c16049954af05eebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the error function of x.  <br /></td></tr>
+<tr class="separator:adb25ce69da9b516c16049954af05eebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd350ccdf1a68a1a841e70bcba7f772c" id="r_afd350ccdf1a68a1a841e70bcba7f772c"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:afd350ccdf1a68a1a841e70bcba7f772c"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afd350ccdf1a68a1a841e70bcba7f772c">ErfC</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:afd350ccdf1a68a1a841e70bcba7f772c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the complementary error function of x,.  <br /></td></tr>
+<tr class="separator:afd350ccdf1a68a1a841e70bcba7f772c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e11ddf495fdf181c8bb3891ecc3ecc" id="r_a64e11ddf495fdf181c8bb3891ecc3ecc"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a64e11ddf495fdf181c8bb3891ecc3ecc"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a64e11ddf495fdf181c8bb3891ecc3ecc">TGamma</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:a64e11ddf495fdf181c8bb3891ecc3ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the gamma function of x.  <br /></td></tr>
+<tr class="separator:a64e11ddf495fdf181c8bb3891ecc3ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aaead450a25e55e4e952e9e045d858a" id="r_a5aaead450a25e55e4e952e9e045d858a"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a5aaead450a25e55e4e952e9e045d858a"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5aaead450a25e55e4e952e9e045d858a">LGamma</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="memdesc:a5aaead450a25e55e4e952e9e045d858a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the natural logarithm of the absolute value of the gamma function of x.  <br /></td></tr>
+<tr class="separator:a5aaead450a25e55e4e952e9e045d858a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab428ae8ffba42d8bd86c6d4e3dde0aa8" id="r_ab428ae8ffba42d8bd86c6d4e3dde0aa8"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:ab428ae8ffba42d8bd86c6d4e3dde0aa8"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab428ae8ffba42d8bd86c6d4e3dde0aa8">Remainder</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a44596b79a5e28408065d1565fa209510">y</a>) noexcept</td></tr>
+<tr class="memdesc:ab428ae8ffba42d8bd86c6d4e3dde0aa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the IEEE remainder of the floating point division operation x / y.  <br /></td></tr>
+<tr class="separator:ab428ae8ffba42d8bd86c6d4e3dde0aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20899423920cd61d652c750d0cf70c33" id="r_a20899423920cd61d652c750d0cf70c33"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a20899423920cd61d652c750d0cf70c33"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a20899423920cd61d652c750d0cf70c33">RemQuo</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a44596b79a5e28408065d1565fa209510">y</a>, int *quo) noexcept</td></tr>
+<tr class="memdesc:a20899423920cd61d652c750d0cf70c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the floating-point remainder of the division operation x / y like Remainder. Additionally, the sign and at least the three of the last bits of x / y will be stored in quo, sufficient to determine the octant of the result within a period.  <br /></td></tr>
+<tr class="separator:a20899423920cd61d652c750d0cf70c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c92dd34ee376161b25336a30925a627" id="r_a1c92dd34ee376161b25336a30925a627"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a1c92dd34ee376161b25336a30925a627"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1c92dd34ee376161b25336a30925a627">FDim</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a44596b79a5e28408065d1565fa209510">y</a>) noexcept</td></tr>
+<tr class="memdesc:a1c92dd34ee376161b25336a30925a627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the positive difference between x and y, that is, if x &gt; y, returns x - y, otherwise (i.e. if x &lt;= y) returns +0.  <br /></td></tr>
+<tr class="separator:a1c92dd34ee376161b25336a30925a627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8b425ce7bc96f90027507aec3f15912" id="r_ae8b425ce7bc96f90027507aec3f15912"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:ae8b425ce7bc96f90027507aec3f15912"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae8b425ce7bc96f90027507aec3f15912">FMA</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> a, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> b, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> c) noexcept</td></tr>
+<tr class="memdesc:ae8b425ce7bc96f90027507aec3f15912"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes x * y + z as if to infinite precision and rounded only once to fit the result type.  <br /></td></tr>
 <tr class="separator:ae8b425ce7bc96f90027507aec3f15912"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4762f886cfb77d80cdf1f29cca896d9b" id="r_a4762f886cfb77d80cdf1f29cca896d9b"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a4762f886cfb77d80cdf1f29cca896d9b"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4762f886cfb77d80cdf1f29cca896d9b">FMA</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> a, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> b, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> c) noexcept</td></tr>
+<tr class="memdesc:a4762f886cfb77d80cdf1f29cca896d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes x * y + z as if to infinite precision and rounded only once to fit the result type.  <br /></td></tr>
 <tr class="separator:a4762f886cfb77d80cdf1f29cca896d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a006ac2c6aaf44027a2eef5774c008aa5" id="r_a006ac2c6aaf44027a2eef5774c008aa5"><td class="memTemplParams" colspan="2">template&lt;typename FloatT &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;FloatT&gt;</td></tr>
@@ -1064,10 +1139,6 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;FloatT&gt;</td></tr>
 <tr class="memitem:a7d1a315f777d1c4c0d23f409a33835d9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_interval.html">Interval</a>&lt; FloatT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7d1a315f777d1c4c0d23f409a33835d9">SumSquares</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_interval.html">Interval</a>&lt; FloatT &gt; &amp;i, Args... args)</td></tr>
 <tr class="separator:a7d1a315f777d1c4c0d23f409a33835d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5a9b47b2d5a3f1295d69d63abfbb038" id="r_ab5a9b47b2d5a3f1295d69d63abfbb038"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:ab5a9b47b2d5a3f1295d69d63abfbb038"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::pair&lt; double, int &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab5a9b47b2d5a3f1295d69d63abfbb038">FRExp</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> val) noexcept</td></tr>
-<tr class="separator:ab5a9b47b2d5a3f1295d69d63abfbb038"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35cc95668727f20007c9c6b5738fe948" id="r_a35cc95668727f20007c9c6b5738fe948"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename T3 &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ade7fcd15acd5a7593328118bdce12fdf">IsArithmetic</a>&lt;T1&gt;&amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ade7fcd15acd5a7593328118bdce12fdf">IsArithmetic</a>&lt;T2&gt;&amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ade7fcd15acd5a7593328118bdce12fdf">IsArithmetic</a>&lt;T3&gt;</td></tr>
 <tr class="memitem:a35cc95668727f20007c9c6b5738fe948"><td class="memTemplItemLeft" align="right" valign="top">constexpr T1&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a35cc95668727f20007c9c6b5738fe948">Clamp</a> (T1 value, T2 minimumValue, T3 maximumValue)</td></tr>
@@ -1077,7 +1148,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memitem:ad968575481e805d58b7a8405b9bcec8e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad968575481e805d58b7a8405b9bcec8e">operator+</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;lhs, const U &amp;rhs) noexcept</td></tr>
 <tr class="separator:ad968575481e805d58b7a8405b9bcec8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8574c2020cc693f0dc5ff5b68cd42ca8" id="r_a8574c2020cc693f0dc5ff5b68cd42ca8"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
 <tr class="memitem:a8574c2020cc693f0dc5ff5b68cd42ca8"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8574c2020cc693f0dc5ff5b68cd42ca8">operator+</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;lhs, const U &amp;rhs) noexcept</td></tr>
 <tr class="separator:a8574c2020cc693f0dc5ff5b68cd42ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa08f7a18183b90d9b158625068ce885" id="r_aaa08f7a18183b90d9b158625068ce885"><td class="memTemplParams" colspan="2">template&lt;ArithmeticType T, SimdType U&gt; </td></tr>
@@ -1091,7 +1162,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memitem:a3e58d23cdc9fd92b0b673e405c6b2a53"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3e58d23cdc9fd92b0b673e405c6b2a53">operator-</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;lhs, const U &amp;rhs) noexcept</td></tr>
 <tr class="separator:a3e58d23cdc9fd92b0b673e405c6b2a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4c74bb3f6b597750956dac3fe39c713" id="r_af4c74bb3f6b597750956dac3fe39c713"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
 <tr class="memitem:af4c74bb3f6b597750956dac3fe39c713"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af4c74bb3f6b597750956dac3fe39c713">operator-</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;lhs, const U &amp;rhs) noexcept</td></tr>
 <tr class="separator:af4c74bb3f6b597750956dac3fe39c713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af53d15b593b745de9d5040a6d8cf7d96" id="r_af53d15b593b745de9d5040a6d8cf7d96"><td class="memTemplParams" colspan="2">template&lt;ArithmeticType T, SimdType U&gt; </td></tr>
@@ -1105,7 +1176,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memitem:a558286e078d899ed1e2a474cf8d4b265"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a558286e078d899ed1e2a474cf8d4b265">operator*</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;lhs, const U &amp;rhs) noexcept</td></tr>
 <tr class="separator:a558286e078d899ed1e2a474cf8d4b265"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74ee3285970c1e8e7f9268e98589b5ec" id="r_a74ee3285970c1e8e7f9268e98589b5ec"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
 <tr class="memitem:a74ee3285970c1e8e7f9268e98589b5ec"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a74ee3285970c1e8e7f9268e98589b5ec">operator*</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;lhs, const U &amp;rhs) noexcept</td></tr>
 <tr class="separator:a74ee3285970c1e8e7f9268e98589b5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac71f84c1eff941c90c9fdf1e6f80a861" id="r_ac71f84c1eff941c90c9fdf1e6f80a861"><td class="memTemplParams" colspan="2">template&lt;ArithmeticType T, SimdType U&gt; </td></tr>
@@ -1119,7 +1190,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memitem:a16501e70fa92ee933dad976958605604"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a16501e70fa92ee933dad976958605604">operator/</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;lhs, const U &amp;rhs) noexcept</td></tr>
 <tr class="separator:a16501e70fa92ee933dad976958605604"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e2a196dfaaa0500bfadc8f48df2ccbb" id="r_a0e2a196dfaaa0500bfadc8f48df2ccbb"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
 <tr class="memitem:a0e2a196dfaaa0500bfadc8f48df2ccbb"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0e2a196dfaaa0500bfadc8f48df2ccbb">operator/</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;lhs, const U &amp;rhs) noexcept</td></tr>
 <tr class="separator:a0e2a196dfaaa0500bfadc8f48df2ccbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6a707c6bdc60e12cf0d40d890ddbed5" id="r_ae6a707c6bdc60e12cf0d40d890ddbed5"><td class="memTemplParams" colspan="2">template&lt;ArithmeticType T, SimdType U&gt; </td></tr>
@@ -1495,7 +1566,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memdesc:aeaf723e37b323308a4935bef9d0e0537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the linear interpolation between the the elements of a and the elements of b, for elements of t is inside [0,1), or the linear extrapolation for elements in t outside [0,1).  <br /></td></tr>
 <tr class="separator:aeaf723e37b323308a4935bef9d0e0537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af923a70b1f5e32358d91eb4ef2e42bd4" id="r_af923a70b1f5e32358d91eb4ef2e42bd4"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType T, SimdOrTupleType U, ArithmeticType NumberT&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
 <tr class="memitem:af923a70b1f5e32358d91eb4ef2e42bd4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af923a70b1f5e32358d91eb4ef2e42bd4">Lerp</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;a, const U &amp;b, NumberT t) noexcept</td></tr>
 <tr class="memdesc:af923a70b1f5e32358d91eb4ef2e42bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the linear interpolation between the the elements of a and the elements of b, for elements of t is inside [0,1), or the linear extrapolation for elements in t outside [0,1).  <br /></td></tr>
 <tr class="separator:af923a70b1f5e32358d91eb4ef2e42bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1505,7 +1576,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memdesc:a1a42e89a0c0c5e07ed65f0c383ad0cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the linear interpolation between the the elements of a and the elements of b, for elements of t is inside [0,1), or the linear extrapolation for elements in t outside [0,1).  <br /></td></tr>
 <tr class="separator:a1a42e89a0c0c5e07ed65f0c383ad0cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58520d45dd26135c32c0c148f07e57f4" id="r_a58520d45dd26135c32c0c148f07e57f4"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType S, SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;)</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;)</td></tr>
 <tr class="memitem:a58520d45dd26135c32c0c148f07e57f4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a58520d45dd26135c32c0c148f07e57f4">Lerp</a> (const S &amp;a, const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;b, const U &amp;t) noexcept</td></tr>
 <tr class="memdesc:a58520d45dd26135c32c0c148f07e57f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the linear interpolation between the the elements of a and the elements of b, for elements of t is inside [0,1), or the linear extrapolation for elements in t outside [0,1).  <br /></td></tr>
 <tr class="separator:a58520d45dd26135c32c0c148f07e57f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1519,7 +1590,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memdesc:ae1195bb779b9c7c6a8cc59a96c8e40dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the linear interpolation between the the elements of a and the elements of b, for elements of t is inside [0,1), or the linear extrapolation for elements in t outside [0,1).  <br /></td></tr>
 <tr class="separator:ae1195bb779b9c7c6a8cc59a96c8e40dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ca04beb3283249eb60d5f0f38d3e736" id="r_a2ca04beb3283249eb60d5f0f38d3e736"><td class="memTemplParams" colspan="2">template&lt;ArithmeticType S, SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
 <tr class="memitem:a2ca04beb3283249eb60d5f0f38d3e736"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2ca04beb3283249eb60d5f0f38d3e736">Lerp2</a> (const S t, const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;a, const U &amp;b) noexcept</td></tr>
 <tr class="memdesc:a2ca04beb3283249eb60d5f0f38d3e736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the linear interpolation between the the elements of a and the elements of b, for elements of t is inside [0,1), or the linear extrapolation for elements in t outside [0,1).  <br /></td></tr>
 <tr class="separator:a2ca04beb3283249eb60d5f0f38d3e736"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1529,7 +1600,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memdesc:a4f30f08dce33550cf0340cc3b00b2eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the linear interpolation between the the elements of a and the elements of b, for elements of t is inside [0,1), or the linear extrapolation for elements in t outside [0,1).  <br /></td></tr>
 <tr class="separator:a4f30f08dce33550cf0340cc3b00b2eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fe1068f010e79e59bb7fab249aaee8d" id="r_a0fe1068f010e79e59bb7fab249aaee8d"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType S, SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; )</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; )</td></tr>
 <tr class="memitem:a0fe1068f010e79e59bb7fab249aaee8d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0fe1068f010e79e59bb7fab249aaee8d">Lerp2</a> (const S &amp;t, const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;a, const U &amp;b) noexcept</td></tr>
 <tr class="memdesc:a0fe1068f010e79e59bb7fab249aaee8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the linear interpolation between the the elements of a and the elements of b, for elements of t is inside [0,1), or the linear extrapolation for elements in t outside [0,1).  <br /></td></tr>
 <tr class="separator:a0fe1068f010e79e59bb7fab249aaee8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1546,7 +1617,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memdesc:a0d3d7b55aa6bc0a28acbdcf90d87fb75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the elements of v, if the elements are between their respective boundaries specified by the elements of lowerBounds and the elements of upperBounds, otherwise the value of nearest boundary is returned.  <br /></td></tr>
 <tr class="separator:a0d3d7b55aa6bc0a28acbdcf90d87fb75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af80087198c5304c6ab05b9e4da4daae5" id="r_af80087198c5304c6ab05b9e4da4daae5"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType S, SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; )</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; )</td></tr>
 <tr class="memitem:af80087198c5304c6ab05b9e4da4daae5"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af80087198c5304c6ab05b9e4da4daae5">Clamp</a> (const S &amp;v, const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;lowerBounds, const U &amp;upperBounds) noexcept</td></tr>
 <tr class="memdesc:af80087198c5304c6ab05b9e4da4daae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the elements of v, if the elements are between their respective boundaries specified by the elements of lowerBounds and the elements of upperBounds, otherwise the value of nearest boundary is returned.  <br /></td></tr>
 <tr class="separator:af80087198c5304c6ab05b9e4da4daae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1603,6 +1674,10 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memitem:aa87d70a4385287a0a52b97efe5ffd817"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa87d70a4385287a0a52b97efe5ffd817">Sqrt</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v) noexcept</td></tr>
 <tr class="memdesc:aa87d70a4385287a0a52b97efe5ffd817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the square root of each element in the argument.  <br /></td></tr>
 <tr class="separator:aa87d70a4385287a0a52b97efe5ffd817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80106c92cf3c972040853ed5f004af16" id="r_a80106c92cf3c972040853ed5f004af16"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType T&gt; </td></tr>
+<tr class="memitem:a80106c92cf3c972040853ed5f004af16"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a80106c92cf3c972040853ed5f004af16">Cbrt</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v) noexcept</td></tr>
+<tr class="memdesc:a80106c92cf3c972040853ed5f004af16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the cube root of each element in the argument.  <br /></td></tr>
+<tr class="separator:a80106c92cf3c972040853ed5f004af16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dc1cab7a7705bef8c96b505e3c6f09d" id="r_a8dc1cab7a7705bef8c96b505e3c6f09d"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType T&gt; </td></tr>
 <tr class="memitem:a8dc1cab7a7705bef8c96b505e3c6f09d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8dc1cab7a7705bef8c96b505e3c6f09d">SafeSqrt</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v) noexcept</td></tr>
 <tr class="memdesc:a8dc1cab7a7705bef8c96b505e3c6f09d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the square root of each element greater or equal to 0.f in the argument. For elements less than 0.f, the result is 0.f.  <br /></td></tr>
@@ -1621,7 +1696,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memdesc:aba944e343117cfab608a36f0fc937974"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the corresponding elements of a and b, adding the result to the corresponding element of c.  <br /></td></tr>
 <tr class="separator:aba944e343117cfab608a36f0fc937974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada557d1dbad29d2d47969d6621053f6e" id="r_ada557d1dbad29d2d47969d6621053f6e"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType S, SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, U&gt; &amp;&amp; (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;S, U&gt; )</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, U&gt; &amp;&amp; (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;S, U&gt; )</td></tr>
 <tr class="memitem:ada557d1dbad29d2d47969d6621053f6e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ada557d1dbad29d2d47969d6621053f6e">FMA</a> (const S &amp;a, const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;b, const U &amp;c) noexcept</td></tr>
 <tr class="memdesc:ada557d1dbad29d2d47969d6621053f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the corresponding elements of a and b, adding the result to the corresponding element of c.  <br /></td></tr>
 <tr class="separator:ada557d1dbad29d2d47969d6621053f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1941,11 +2016,11 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memitem:a7c59e84f33b96572a9aab2ed5b99e68b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7c59e84f33b96572a9aab2ed5b99e68b">ATanH</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v) noexcept</td></tr>
 <tr class="memdesc:a7c59e84f33b96572a9aab2ed5b99e68b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the inverse hyperbolic tangent of each element in the argument, in radians.  <br /></td></tr>
 <tr class="separator:a7c59e84f33b96572a9aab2ed5b99e68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a66f30f71291503194641d9708de21c" id="r_a9a66f30f71291503194641d9708de21c"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType T&gt; </td></tr>
+<tr class="memitem:a9a66f30f71291503194641d9708de21c" id="r_a9a66f30f71291503194641d9708de21c"><td class="memTemplParams" colspan="2">template&lt;SimdType T&gt; </td></tr>
 <tr class="memitem:a9a66f30f71291503194641d9708de21c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9a66f30f71291503194641d9708de21c">Log</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v) noexcept</td></tr>
 <tr class="memdesc:a9a66f30f71291503194641d9708de21c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the natural logarithm of each element in the argument.  <br /></td></tr>
 <tr class="separator:a9a66f30f71291503194641d9708de21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26decd4a7ef45bca3e04072436359dbc" id="r_a26decd4a7ef45bca3e04072436359dbc"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType T&gt; </td></tr>
+<tr class="memitem:a26decd4a7ef45bca3e04072436359dbc" id="r_a26decd4a7ef45bca3e04072436359dbc"><td class="memTemplParams" colspan="2">template&lt;SimdType T&gt; </td></tr>
 <tr class="memitem:a26decd4a7ef45bca3e04072436359dbc"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a26decd4a7ef45bca3e04072436359dbc">Log1P</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v) noexcept</td></tr>
 <tr class="memdesc:a26decd4a7ef45bca3e04072436359dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the natural logarithm of 1 + each element in the argument.  <br /></td></tr>
 <tr class="separator:a26decd4a7ef45bca3e04072436359dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1957,7 +2032,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memitem:ab30d097f2dad01727afbeb7d6dff16ee"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab30d097f2dad01727afbeb7d6dff16ee">Log2</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v) noexcept</td></tr>
 <tr class="memdesc:ab30d097f2dad01727afbeb7d6dff16ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the base-2 logarithm, $$log_{2}_$$, of each element in the argument.  <br /></td></tr>
 <tr class="separator:ab30d097f2dad01727afbeb7d6dff16ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03cc539f777026e1e4794a6e22c48682" id="r_a03cc539f777026e1e4794a6e22c48682"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType T&gt; </td></tr>
+<tr class="memitem:a03cc539f777026e1e4794a6e22c48682" id="r_a03cc539f777026e1e4794a6e22c48682"><td class="memTemplParams" colspan="2">template&lt;SimdType T&gt; </td></tr>
 <tr class="memitem:a03cc539f777026e1e4794a6e22c48682"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a03cc539f777026e1e4794a6e22c48682">Exp</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v) noexcept</td></tr>
 <tr class="memdesc:a03cc539f777026e1e4794a6e22c48682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates $$e$$ (Euler's number, 2.7182818...), raised to the power of each element in the argument.  <br /></td></tr>
 <tr class="separator:a03cc539f777026e1e4794a6e22c48682"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2029,7 +2104,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memdesc:a0921c2104cb5da7cd0873a51f1d9009a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the dot product between v1 and v2.  <br /></td></tr>
 <tr class="separator:a0921c2104cb5da7cd0873a51f1d9009a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a482d209de3e080e8069e5f834ba2f677" id="r_a482d209de3e080e8069e5f834ba2f677"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#ad98b5608cf90460c03b12df9e34b40d2">Internal::HasSimdType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a0e271180bc6d7763645b3b9046ffd573">Internal::HasSimdType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
 <tr class="memitem:a482d209de3e080e8069e5f834ba2f677"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a482d209de3e080e8069e5f834ba2f677">Dot</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v1, const U &amp;v2) noexcept</td></tr>
 <tr class="memdesc:a482d209de3e080e8069e5f834ba2f677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the dot product between v1 and v2.  <br /></td></tr>
 <tr class="separator:a482d209de3e080e8069e5f834ba2f677"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2051,7 +2126,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memdesc:a40b6c13b1812f779422dda96a13a0ad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the dot product between v1 and v2.  <br /></td></tr>
 <tr class="separator:a40b6c13b1812f779422dda96a13a0ad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3fb58b22b256333fa036413190456cc" id="r_ab3fb58b22b256333fa036413190456cc"><td class="memTemplParams" colspan="2">template&lt;int mask, SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#ad98b5608cf90460c03b12df9e34b40d2">Internal::HasSimdType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;&amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a0e271180bc6d7763645b3b9046ffd573">Internal::HasSimdType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;&amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
 <tr class="memitem:ab3fb58b22b256333fa036413190456cc"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab3fb58b22b256333fa036413190456cc">Dot</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v1, const U &amp;v2) noexcept</td></tr>
 <tr class="memdesc:ab3fb58b22b256333fa036413190456cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the dot product between v1 and v2.  <br /></td></tr>
 <tr class="separator:ab3fb58b22b256333fa036413190456cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2083,7 +2158,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memdesc:a0c5bf81ab01890ace9615f934892f200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the cross product between v1 and v2.  <br /></td></tr>
 <tr class="separator:a0c5bf81ab01890ace9615f934892f200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab33379c08cd0b4ab9b08d2c9fdecdfc" id="r_aab33379c08cd0b4ab9b08d2c9fdecdfc"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>,U&gt;</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>,U&gt;</td></tr>
 <tr class="memitem:aab33379c08cd0b4ab9b08d2c9fdecdfc"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aab33379c08cd0b4ab9b08d2c9fdecdfc">Cross</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v1, const U &amp;v2) noexcept</td></tr>
 <tr class="memdesc:aab33379c08cd0b4ab9b08d2c9fdecdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the cross product between v1 and v2.  <br /></td></tr>
 <tr class="separator:aab33379c08cd0b4ab9b08d2c9fdecdfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2121,12 +2196,12 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <tr class="memdesc:a97a6b450c9072c98cad56692b9391798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the squared distance between p1 and p2.  <br /></td></tr>
 <tr class="separator:a97a6b450c9072c98cad56692b9391798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a419fdf611a8ac10f0f7a64d482b212a6" id="r_a419fdf611a8ac10f0f7a64d482b212a6"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
 <tr class="memitem:a419fdf611a8ac10f0f7a64d482b212a6"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a419fdf611a8ac10f0f7a64d482b212a6">DistanceSquared</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;p1, const U &amp;p2) noexcept</td></tr>
 <tr class="memdesc:a419fdf611a8ac10f0f7a64d482b212a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the squared distance between p1 and p2.  <br /></td></tr>
 <tr class="separator:a419fdf611a8ac10f0f7a64d482b212a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bd542b8a1e2c1deac1d98f2c186fb4e" id="r_a4bd542b8a1e2c1deac1d98f2c186fb4e"><td class="memTemplParams" colspan="2">template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#ad98b5608cf90460c03b12df9e34b40d2">Internal::HasSimdType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a0e271180bc6d7763645b3b9046ffd573">Internal::HasSimdType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</td></tr>
 <tr class="memitem:a4bd542b8a1e2c1deac1d98f2c186fb4e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4bd542b8a1e2c1deac1d98f2c186fb4e">ScalarDistanceSquared</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;p1, const U &amp;p2) noexcept</td></tr>
 <tr class="memdesc:a4bd542b8a1e2c1deac1d98f2c186fb4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the squared distance between p1 and p2.  <br /></td></tr>
 <tr class="separator:a4bd542b8a1e2c1deac1d98f2c186fb4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2647,15 +2722,15 @@ requires ( S::Size &gt; 2 )</td></tr>
 <tr class="memitem:a2844b0c0bcafd540e21de621a77973b5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; float, 4 &gt;::Simd&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2844b0c0bcafd540e21de621a77973b5">RotationAxis</a> (const S &amp;axis, float angle) noexcept</td></tr>
 <tr class="memdesc:a2844b0c0bcafd540e21de621a77973b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a matrix that rotates around an arbitrary axis.  <br /></td></tr>
 <tr class="separator:a2844b0c0bcafd540e21de621a77973b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f0dcdfd97c19258cbf37199aa1bc110" id="r_a3f0dcdfd97c19258cbf37199aa1bc110"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; float, 4 &gt;::Simd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f0dcdfd97c19258cbf37199aa1bc110">Rotation</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd.html">QuaternionSimd</a>&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Quaternion</a>&lt; float &gt; &gt; &amp;q) noexcept</td></tr>
-<tr class="memdesc:a3f0dcdfd97c19258cbf37199aa1bc110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation matrix from a quaternion.  <br /></td></tr>
-<tr class="separator:a3f0dcdfd97c19258cbf37199aa1bc110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac08c769bef1417b89948c9114a8c3f09" id="r_ac08c769bef1417b89948c9114a8c3f09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; float, 4 &gt;::Simd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac08c769bef1417b89948c9114a8c3f09">Rotation</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Quaternion</a>&lt; float &gt;::Simd &amp;q) noexcept</td></tr>
+<tr class="memdesc:ac08c769bef1417b89948c9114a8c3f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation matrix from a quaternion.  <br /></td></tr>
+<tr class="separator:ac08c769bef1417b89948c9114a8c3f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92c913286a72d710ab7548cbd9834430" id="r_a92c913286a72d710ab7548cbd9834430"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; float, 4 &gt;::Simd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92c913286a72d710ab7548cbd9834430">Rotation</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Quaternion</a>&lt; float &gt; &amp;q) noexcept</td></tr>
 <tr class="memdesc:a92c913286a72d710ab7548cbd9834430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation matrix from a quaternion.  <br /></td></tr>
 <tr class="separator:a92c913286a72d710ab7548cbd9834430"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3b445b75c36e4fd630e773483913512" id="r_ae3b445b75c36e4fd630e773483913512"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; float, 4 &gt;::Simd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3b445b75c36e4fd630e773483913512">RotationQuaternion</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd.html">QuaternionSimd</a>&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Quaternion</a>&lt; float &gt; &gt; &amp;q) noexcept</td></tr>
-<tr class="memdesc:ae3b445b75c36e4fd630e773483913512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation matrix from a quaternion.  <br /></td></tr>
-<tr class="separator:ae3b445b75c36e4fd630e773483913512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bc008fb3720d53f2477994cc9b519ed" id="r_a9bc008fb3720d53f2477994cc9b519ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; float, 4 &gt;::Simd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bc008fb3720d53f2477994cc9b519ed">RotationQuaternion</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Quaternion</a>&lt; float &gt;::Simd &amp;q) noexcept</td></tr>
+<tr class="memdesc:a9bc008fb3720d53f2477994cc9b519ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation matrix from a quaternion.  <br /></td></tr>
+<tr class="separator:a9bc008fb3720d53f2477994cc9b519ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82a89b07f29d31c14b84ebe04c17de2b" id="r_a82a89b07f29d31c14b84ebe04c17de2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; float, 4 &gt;::Simd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82a89b07f29d31c14b84ebe04c17de2b">RotationQuaternion</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Quaternion</a>&lt; float &gt; &amp;q) noexcept</td></tr>
 <tr class="memdesc:a82a89b07f29d31c14b84ebe04c17de2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a rotation matrix from a quaternion.  <br /></td></tr>
 <tr class="separator:a82a89b07f29d31c14b84ebe04c17de2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3004,12 +3079,6 @@ requires <a class="el" href="namespace_harlinn_1_1_windows_1_1_internal.html#aab
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aacae6d938221aabfe440e9fb1171ff24" id="r_aacae6d938221aabfe440e9fb1171ff24"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
-<tr class="memitem:aacae6d938221aabfe440e9fb1171ff24"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aacae6d938221aabfe440e9fb1171ff24">IsLoadedType</a> = T::Loaded</td></tr>
-<tr class="separator:aacae6d938221aabfe440e9fb1171ff24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a623acabd7db2ead5ec50387c611f218b" id="r_a623acabd7db2ead5ec50387c611f218b"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
-<tr class="memitem:a623acabd7db2ead5ec50387c611f218b"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a623acabd7db2ead5ec50387c611f218b">IsUnloadedType</a> = T::Unloaded</td></tr>
-<tr class="separator:a623acabd7db2ead5ec50387c611f218b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bc336c831d562f8b2cae417fca87f3c" id="r_a6bc336c831d562f8b2cae417fca87f3c"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
 <tr class="memitem:a6bc336c831d562f8b2cae417fca87f3c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a> = std::is_same_v&lt;typename T1::Traits, typename T2::Traits&gt;</td></tr>
 <tr class="separator:a6bc336c831d562f8b2cae417fca87f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3575,6 +3644,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculates the inverse hyperbolic cosine of x. </p>
 
 </div>
 </div>
@@ -5787,6 +5858,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 
+<p>Calculates the inverse hyperbolic sine of x. </p>
+
 </div>
 </div>
 <a id="a742c86e83161129ae627fa5bd9d6a5ee" name="a742c86e83161129ae627fa5bd9d6a5ee"></a>
@@ -6042,6 +6115,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculates the inverse hyperbolic tangent of x. </p>
 
 </div>
 </div>
@@ -6308,8 +6383,37 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 
 </div>
 </div>
+<a id="a80106c92cf3c972040853ed5f004af16" name="a80106c92cf3c972040853ed5f004af16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80106c92cf3c972040853ed5f004af16">&#9670;&#160;</a></span>Cbrt() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;SimdOrTupleType T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto Harlinn::Common::Core::Math::Cbrt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the cube root of each element in the argument. </p>
+
+</div>
+</div>
 <a id="a99e8c4cba7671a8fa11891d5d2174ac5" name="a99e8c4cba7671a8fa11891d5d2174ac5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99e8c4cba7671a8fa11891d5d2174ac5">&#9670;&#160;</a></span>Cbrt()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a99e8c4cba7671a8fa11891d5d2174ac5">&#9670;&#160;</a></span>Cbrt() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6608,7 +6712,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimdOrTupleType S, SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; )</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -7256,6 +7360,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 
+<p>Calculates the hyperbolic cosine of x. </p>
+
 </div>
 </div>
 <a id="a0c5bf81ab01890ace9615f934892f200" name="a0c5bf81ab01890ace9615f934892f200"></a>
@@ -7299,7 +7405,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>,U&gt;</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>,U&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -7767,7 +7873,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -8133,7 +8239,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#ad98b5608cf90460c03b12df9e34b40d2">Internal::HasSimdType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a0e271180bc6d7763645b3b9046ffd573">Internal::HasSimdType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -8233,7 +8339,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;int mask, SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#ad98b5608cf90460c03b12df9e34b40d2">Internal::HasSimdType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;&amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a0e271180bc6d7763645b3b9046ffd573">Internal::HasSimdType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;&amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -8598,6 +8704,66 @@ template&lt;ArithmeticType T, SimdOrTupleType U&gt; </div>
 
 </div>
 </div>
+<a id="adb25ce69da9b516c16049954af05eebc" name="adb25ce69da9b516c16049954af05eebc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb25ce69da9b516c16049954af05eebc">&#9670;&#160;</a></span>Erf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; Harlinn::Common::Core::Math::Erf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the error function of x. </p>
+
+</div>
+</div>
+<a id="afd350ccdf1a68a1a841e70bcba7f772c" name="afd350ccdf1a68a1a841e70bcba7f772c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd350ccdf1a68a1a841e70bcba7f772c">&#9670;&#160;</a></span>ErfC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; Harlinn::Common::Core::Math::ErfC </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the complementary error function of x,. </p>
+
+</div>
+</div>
 <a id="a181b4a2787a3d3d5a343a11444def4c7" name="a181b4a2787a3d3d5a343a11444def4c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a181b4a2787a3d3d5a343a11444def4c7">&#9670;&#160;</a></span>ErfInv()</h2>
 
@@ -8915,7 +9081,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ade7fcd1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;SimdOrTupleType T&gt; </div>
+template&lt;SimdType T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -8981,7 +9147,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </div>
 </div>
 <a id="a3ba69f005a09381629cc234254a48008" name="a3ba69f005a09381629cc234254a48008"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ba69f005a09381629cc234254a48008">&#9670;&#160;</a></span>Exp10()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ba69f005a09381629cc234254a48008">&#9670;&#160;</a></span>Exp10() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9009,8 +9175,36 @@ template&lt;SimdOrTupleType T&gt; </div>
 
 </div>
 </div>
+<a id="aaa78621936156b813b35bd79d091c619" name="aaa78621936156b813b35bd79d091c619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa78621936156b813b35bd79d091c619">&#9670;&#160;</a></span>Exp10() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; Harlinn::Common::Core::Math::Exp10 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae38b50095e2b793e7191f2a7dcdb376e" name="ae38b50095e2b793e7191f2a7dcdb376e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae38b50095e2b793e7191f2a7dcdb376e">&#9670;&#160;</a></span>Exp2()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae38b50095e2b793e7191f2a7dcdb376e">&#9670;&#160;</a></span>Exp2() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9035,6 +9229,34 @@ template&lt;SimdOrTupleType T&gt; </div>
 </div><div class="memdoc">
 
 <p>Calculates the base-2 exponential of each element in the argument. </p>
+
+</div>
+</div>
+<a id="a5077183fc793af98dd3d747dec2ad697" name="a5077183fc793af98dd3d747dec2ad697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5077183fc793af98dd3d747dec2ad697">&#9670;&#160;</a></span>Exp2() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; Harlinn::Common::Core::Math::Exp2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -9559,6 +9781,40 @@ template&lt;SimdOrTupleType T&gt; </div>
 
 </div>
 </div>
+<a id="a1c92dd34ee376161b25336a30925a627" name="a1c92dd34ee376161b25336a30925a627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c92dd34ee376161b25336a30925a627">&#9670;&#160;</a></span>FDim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; Harlinn::Common::Core::Math::FDim </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the positive difference between x and y, that is, if x &gt; y, returns x - y, otherwise (i.e. if x &lt;= y) returns +0. </p>
+
+</div>
+</div>
 <a id="a2a44cfc099027229c5b5215761e5a1e9" name="a2a44cfc099027229c5b5215761e5a1e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a44cfc099027229c5b5215761e5a1e9">&#9670;&#160;</a></span>FindInterval()</h2>
 
@@ -9928,7 +10184,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimdOrTupleType S, SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, U&gt; &amp;&amp; (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;S, U&gt; )</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, U&gt; &amp;&amp; (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;S, U&gt; )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -10226,6 +10482,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa4443a5
 </table>
 </div><div class="memdoc">
 
+<p>Computes x * y + z as if to infinite precision and rounded only once to fit the result type. </p>
+
 </div>
 </div>
 <a id="a4762f886cfb77d80cdf1f29cca896d9b" name="a4762f886cfb77d80cdf1f29cca896d9b"></a>
@@ -10262,6 +10520,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Computes x * y + z as if to infinite precision and rounded only once to fit the result type. </p>
 
 </div>
 </div>
@@ -12617,7 +12877,7 @@ template&lt;ArithmeticType S, ArithmeticType T, SimdOrTupleType U&gt; </div>
 </div>
 </div>
 <a id="a538dc07d5c937e569b0bf1e1a923e5e0" name="a538dc07d5c937e569b0bf1e1a923e5e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a538dc07d5c937e569b0bf1e1a923e5e0">&#9670;&#160;</a></span>FRExp() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a538dc07d5c937e569b0bf1e1a923e5e0">&#9670;&#160;</a></span>FRExp() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -12661,53 +12921,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 
 </div>
 </div>
-<a id="ab5a9b47b2d5a3f1295d69d63abfbb038" name="ab5a9b47b2d5a3f1295d69d63abfbb038"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5a9b47b2d5a3f1295d69d63abfbb038">&#9670;&#160;</a></span>FRExp() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::pair&lt; double, int &gt; Harlinn::Common::Core::Math::FRExp </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Decomposes the given floating point value val into a normalized fraction and an integral power of two. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>A floating point type. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">val</td><td>A floating point value. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A std::pair&lt;&gt;&gt; with the normalized fraction stored in first and the exponent stored in second. </dd></dl>
-<p>If val is zero, both first and second are set to zero. </p>
-<p>If val is not zero, and no errors occur, the function returns a value, x, in the range( -1; -0.5], [ 0.5; 1 ) in first and stores an integer value in second such that result.first*2^( result.second ) = val. </p>
-<p>If the value to be stored in result.second is outside the range of int, the behavior is unspecified. </p>
-
-</div>
-</div>
 <a id="a4248aaa1e2d1922cbe52136834739962" name="a4248aaa1e2d1922cbe52136834739962"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4248aaa1e2d1922cbe52136834739962">&#9670;&#160;</a></span>FRExp() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4248aaa1e2d1922cbe52136834739962">&#9670;&#160;</a></span>FRExp() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -12756,7 +12971,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </div>
 </div>
 <a id="a7a4250a23c8af4a691889616b1ff0859" name="a7a4250a23c8af4a691889616b1ff0859"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a4250a23c8af4a691889616b1ff0859">&#9670;&#160;</a></span>FRExp() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a4250a23c8af4a691889616b1ff0859">&#9670;&#160;</a></span>FRExp() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -13961,6 +14176,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ade7fcd1
 </table>
 </div><div class="memdoc">
 
+<p>Determines if all the arguments are finite. </p>
+
 </div>
 </div>
 <a id="af4ce869bdd4b4da88ada97983992e73c" name="af4ce869bdd4b4da88ada97983992e73c"></a>
@@ -13989,6 +14206,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa4443a5
 </table>
 </div><div class="memdoc">
 
+<p>All integers have finite values. </p>
+
 </div>
 </div>
 <a id="a88eb4faf3711d6c80729a124203b9585" name="a88eb4faf3711d6c80729a124203b9585"></a>
@@ -14016,6 +14235,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Determines if the given floating point number val has finite value i.e. it is normal, subnormal or zero, but not infinite or NaN. </p>
 
 </div>
 </div>
@@ -14356,6 +14577,96 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ade7fcd1
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if any of the given integral or floating point values is a not-a-number (NaN) value, otherwise <code>false</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a80f9e28fe811f64ccc9cf38d6289528e" name="a80f9e28fe811f64ccc9cf38d6289528e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f9e28fe811f64ccc9cf38d6289528e">&#9670;&#160;</a></span>IsNormal() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename ... Args&gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ade7fcd15acd5a7593328118bdce12fdf">IsArithmetic</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ade7fcd15acd5a7593328118bdce12fdf">IsArithmetic</a>&lt;Args&gt; &amp;&amp; ... )</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Harlinn::Common::Core::Math::IsNormal </td>
+          <td>(</td>
+          <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determines if all the arguments are normal. </p>
+
+</div>
+</div>
+<a id="aaf33b8fc878d8de646146185791af614" name="aaf33b8fc878d8de646146185791af614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf33b8fc878d8de646146185791af614">&#9670;&#160;</a></span>IsNormal() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Harlinn::Common::Core::Math::IsNormal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>All integers are &lt;q&gt;normal&lt;/q&gt;. </p>
+
+</div>
+</div>
+<a id="a19669fc871cfc4cee3da0c9645982722" name="a19669fc871cfc4cee3da0c9645982722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19669fc871cfc4cee3da0c9645982722">&#9670;&#160;</a></span>IsNormal() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Harlinn::Common::Core::Math::IsNormal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determines if the given floating point number val is normal, i.e. is neither zero, subnormal, infinite, nor NaN. </p>
 
 </div>
 </div>
@@ -14774,6 +15085,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 
+<p>Calculates the Bessel function of the first kind of order 0 for x. </p>
+
 </div>
 </div>
 <a id="ae1050b37507c82ef98750c237b6d62ca" name="ae1050b37507c82ef98750c237b6d62ca"></a>
@@ -14801,6 +15114,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculates the Bessel function of the first kind of order 1 for x. </p>
 
 </div>
 </div>
@@ -14833,6 +15148,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculates the Bessel function of the first kind of order n for x. </p>
 
 </div>
 </div>
@@ -14994,7 +15311,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimdOrTupleType S, SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;)</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;)</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -15072,7 +15389,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimdOrTupleType T, SimdOrTupleType U, ArithmeticType NumberT&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -15315,7 +15632,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimdOrTupleType S, SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; )</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; ( <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;S, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; || <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -15431,7 +15748,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;ArithmeticType S, SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -15720,6 +16037,36 @@ template&lt;ArithmeticType T, SimdOrTupleType U&gt; </div>
 
 </div>
 </div>
+<a id="a5aaead450a25e55e4e952e9e045d858a" name="a5aaead450a25e55e4e952e9e045d858a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aaead450a25e55e4e952e9e045d858a">&#9670;&#160;</a></span>LGamma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; Harlinn::Common::Core::Math::LGamma </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the natural logarithm of the absolute value of the gamma function of x. </p>
+
+</div>
+</div>
 <a id="a5280c7e95821b013eb64abc8fa4feba2" name="a5280c7e95821b013eb64abc8fa4feba2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5280c7e95821b013eb64abc8fa4feba2">&#9670;&#160;</a></span>LinePointDistance()</h2>
 
@@ -15774,7 +16121,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;SimdOrTupleType T&gt; </div>
+template&lt;SimdType T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -15924,7 +16271,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;SimdOrTupleType T&gt; </div>
+template&lt;SimdType T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -17512,14 +17859,14 @@ template&lt;SimdOrTupleType T&gt; </div>
 
 </div>
 </div>
-<a id="a3da8da717eba4d66b54a0c2fdbd04491" name="a3da8da717eba4d66b54a0c2fdbd04491"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3da8da717eba4d66b54a0c2fdbd04491">&#9670;&#160;</a></span>ModF() <span class="overload">[1/3]</span></h2>
+<a id="a06726c455dda38c90ed0b059c9f01269" name="a06726c455dda38c90ed0b059c9f01269"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06726c455dda38c90ed0b059c9f01269">&#9670;&#160;</a></span>ModF() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename ValueT &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;std::remove_cvref_t&lt;ValueT&gt;&gt;</div>
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;ValueT&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -17555,14 +17902,14 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 
 </div>
 </div>
-<a id="ac5068980d77361621a16d1444a515031" name="ac5068980d77361621a16d1444a515031"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5068980d77361621a16d1444a515031">&#9670;&#160;</a></span>ModF() <span class="overload">[2/3]</span></h2>
+<a id="a849f05a1c3217efbe2f0c2a5f98cd2c4" name="a849f05a1c3217efbe2f0c2a5f98cd2c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a849f05a1c3217efbe2f0c2a5f98cd2c4">&#9670;&#160;</a></span>ModF() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename ValueT &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;std::remove_cvref_t&lt;ValueT&gt;&gt;</div>
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;ValueT&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -17603,14 +17950,14 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 
 </div>
 </div>
-<a id="a94042096eea04f344d1ae456d639393b" name="a94042096eea04f344d1ae456d639393b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94042096eea04f344d1ae456d639393b">&#9670;&#160;</a></span>ModF() <span class="overload">[3/3]</span></h2>
+<a id="a05eb83a7368fae356a03e54872ac3487" name="a05eb83a7368fae356a03e54872ac3487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05eb83a7368fae356a03e54872ac3487">&#9670;&#160;</a></span>ModF() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename ValueT &gt; <br />
-requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;std::remove_cvref_t&lt;ValueT&gt;&gt;</div>
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;ValueT&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -18620,7 +18967,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -18968,7 +19315,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -19254,7 +19601,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -19540,7 +19887,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a29288ad8ad225b93a58c31725a739c0c">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a617e01732b2d6f4c6a09c870deb184b3">Internal::HasTupleType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -20555,6 +20902,79 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 
 </div>
 </div>
+<a id="ab428ae8ffba42d8bd86c6d4e3dde0aa8" name="ab428ae8ffba42d8bd86c6d4e3dde0aa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab428ae8ffba42d8bd86c6d4e3dde0aa8">&#9670;&#160;</a></span>Remainder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; Harlinn::Common::Core::Math::Remainder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the IEEE remainder of the floating point division operation x / y. </p>
+
+</div>
+</div>
+<a id="a20899423920cd61d652c750d0cf70c33" name="a20899423920cd61d652c750d0cf70c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20899423920cd61d652c750d0cf70c33">&#9670;&#160;</a></span>RemQuo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; Harlinn::Common::Core::Math::RemQuo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>quo</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the floating-point remainder of the division operation x / y like Remainder. Additionally, the sign and at least the three of the last bits of x / y will be stored in quo, sufficient to determine the octant of the result within a period. </p>
+
+</div>
+</div>
 <a id="a0d86cf7b4ed64b8090352ff6617283b6" name="a0d86cf7b4ed64b8090352ff6617283b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d86cf7b4ed64b8090352ff6617283b6">&#9670;&#160;</a></span>Rotate()</h2>
 
@@ -20623,8 +21043,8 @@ requires ( S::Size == 3 )</div>
 
 </div>
 </div>
-<a id="a3f0dcdfd97c19258cbf37199aa1bc110" name="a3f0dcdfd97c19258cbf37199aa1bc110"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f0dcdfd97c19258cbf37199aa1bc110">&#9670;&#160;</a></span>Rotation() <span class="overload">[2/5]</span></h2>
+<a id="ac08c769bef1417b89948c9114a8c3f09" name="ac08c769bef1417b89948c9114a8c3f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac08c769bef1417b89948c9114a8c3f09">&#9670;&#160;</a></span>Rotation() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -20635,7 +21055,7 @@ requires ( S::Size == 3 )</div>
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; float, 4 &gt;::Simd Harlinn::Common::Core::Math::Rotation </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd.html">QuaternionSimd</a>&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Quaternion</a>&lt; float &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Quaternion</a>&lt; float &gt;::Simd &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -20902,8 +21322,8 @@ requires ( S::Size &gt; 2 )</div>
 
 </div>
 </div>
-<a id="ae3b445b75c36e4fd630e773483913512" name="ae3b445b75c36e4fd630e773483913512"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3b445b75c36e4fd630e773483913512">&#9670;&#160;</a></span>RotationQuaternion() <span class="overload">[2/2]</span></h2>
+<a id="a9bc008fb3720d53f2477994cc9b519ed" name="a9bc008fb3720d53f2477994cc9b519ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bc008fb3720d53f2477994cc9b519ed">&#9670;&#160;</a></span>RotationQuaternion() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -20914,7 +21334,7 @@ requires ( S::Size &gt; 2 )</div>
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html">SquareMatrix</a>&lt; float, 4 &gt;::Simd Harlinn::Common::Core::Math::RotationQuaternion </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd.html">QuaternionSimd</a>&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Quaternion</a>&lt; float &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html">Quaternion</a>&lt; float &gt;::Simd &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -21654,7 +22074,7 @@ requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimdOrTupleType T, SimdOrTupleType U&gt; <br />
-requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#ad98b5608cf90460c03b12df9e34b40d2">Internal::HasSimdType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
+requires <a class="el" href="#a6bc336c831d562f8b2cae417fca87f3c">IsCompatible</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt; &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a0e271180bc6d7763645b3b9046ffd573">Internal::HasSimdType</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -22967,6 +23387,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 
+<p>Calculates the hyperbolic sine of x. </p>
+
 </div>
 </div>
 <a id="a006ac2c6aaf44027a2eef5774c008aa5" name="a006ac2c6aaf44027a2eef5774c008aa5"></a>
@@ -24112,6 +24534,38 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculates the hyperbolic tangent of x. </p>
+
+</div>
+</div>
+<a id="a64e11ddf495fdf181c8bb3891ecc3ecc" name="a64e11ddf495fdf181c8bb3891ecc3ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64e11ddf495fdf181c8bb3891ecc3ecc">&#9670;&#160;</a></span>TGamma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
+requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::remove_cvref_t&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; Harlinn::Common::Core::Math::TGamma </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the gamma function of x. </p>
 
 </div>
 </div>
@@ -29477,6 +29931,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 </table>
 </div><div class="memdoc">
 
+<p>Calculates the Bessel function of the second kind of order 0 for x. </p>
+
 </div>
 </div>
 <a id="a8dba00e4939905368624ae76105979da" name="a8dba00e4939905368624ae76105979da"></a>
@@ -29504,6 +29960,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculates the Bessel function of the second kind of order 1 for x. </p>
 
 </div>
 </div>
@@ -29536,6 +29994,8 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculates the Bessel function of the second kind of order n for x. </p>
 
 </div>
 </div>
@@ -29601,54 +30061,6 @@ template&lt;typename T1 , typename T2 &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool Harlinn::Common::Core::Math::IsCompatibleQuaternion = std::is_same_v&lt;typename T1::Traits, typename T2::Traits&gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aacae6d938221aabfe440e9fb1171ff24" name="aacae6d938221aabfe440e9fb1171ff24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aacae6d938221aabfe440e9fb1171ff24">&#9670;&#160;</a></span>IsLoadedType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Harlinn::Common::Core::Math::IsLoadedType = T::Loaded</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a623acabd7db2ead5ec50387c611f218b" name="a623acabd7db2ead5ec50387c611f218b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a623acabd7db2ead5ec50387c611f218b">&#9670;&#160;</a></span>IsUnloadedType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Harlinn::Common::Core::Math::IsUnloadedType = T::Unloaded</td>
         </tr>
       </table>
   </td>

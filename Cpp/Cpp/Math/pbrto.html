@@ -303,62 +303,50 @@ my modified version of the raytracer.</p>
 <p>Operations on \(3 \times 3\) matrices:</p>
 
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: right">PBRT</th>
+      <th style="text-align: right">Math</th>
+      <th style="text-align: right">Improvement</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td> </td>
-      <td>PBRT</td>
-      <td>Math</td>
-      <td>Improvement</td>
-      <td> </td>
+      <td style="text-align: left">Addition</td>
+      <td style="text-align: right">8.54 ns</td>
+      <td style="text-align: right">2.92 ns</td>
+      <td style="text-align: right">192.5 %</td>
     </tr>
     <tr>
-      <td>:—</td>
-      <td>—-:</td>
-      <td>—-:</td>
-      <td>—-:</td>
-      <td>u</td>
+      <td style="text-align: left">Transpose</td>
+      <td style="text-align: right">6.10 ns</td>
+      <td style="text-align: right">2.83 ns</td>
+      <td style="text-align: right">115.5 %</td>
     </tr>
     <tr>
-      <td>Addition</td>
-      <td>8.54 ns</td>
-      <td>2.92 ns</td>
-      <td>192.5 %</td>
-      <td> </td>
+      <td style="text-align: left">Scalar multiplication</td>
+      <td style="text-align: right">5.44 ns</td>
+      <td style="text-align: right">2.18 ns</td>
+      <td style="text-align: right">149.5 %</td>
     </tr>
     <tr>
-      <td>Transpose</td>
-      <td>6.10 ns</td>
-      <td>2.83 ns</td>
-      <td>115.5 %</td>
-      <td> </td>
+      <td style="text-align: left">Matrix multiplication</td>
+      <td style="text-align: right">15.5 ns</td>
+      <td style="text-align: right">5.16 ns</td>
+      <td style="text-align: right">200.4 %</td>
     </tr>
     <tr>
-      <td>Scalar multiplication</td>
-      <td>5.44 ns</td>
-      <td>2.18 ns</td>
-      <td>149.5 %</td>
-      <td> </td>
+      <td style="text-align: left">Determinant</td>
+      <td style="text-align: right">5.27 ns</td>
+      <td style="text-align: right">3.08 ns</td>
+      <td style="text-align: right">71.1 %</td>
     </tr>
     <tr>
-      <td>Matrix multiplication</td>
-      <td>15.5 ns</td>
-      <td>5.16 ns</td>
-      <td>200.4 %</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Determinant</td>
-      <td>5.27 ns</td>
-      <td>3.08 ns</td>
-      <td>71.1 %</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>Inverse</td>
-      <td>18.6 ns</td>
-      <td>4.43 ns</td>
-      <td>319.9 %</td>
-      <td> </td>
+      <td style="text-align: left">Inverse</td>
+      <td style="text-align: right">18.6 ns</td>
+      <td style="text-align: right">4.43 ns</td>
+      <td style="text-align: right">319.9 %</td>
     </tr>
   </tbody>
 </table>

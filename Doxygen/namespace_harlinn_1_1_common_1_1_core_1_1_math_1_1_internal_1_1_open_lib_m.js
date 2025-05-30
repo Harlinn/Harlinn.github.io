@@ -331,13 +331,13 @@ var namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m =
       [ "twom1000", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2__internal.html#a75ea227ab6f8167bc2ff1a1c91aebf0a", null ]
     ] ],
     [ "exp2f_internal", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html", [
-      [ "exp2ft", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#afc4dc09b330d29784aafab035385d055", null ],
-      [ "huge", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#ac4036831fc805d98de1c1fd805e44e6d", null ],
-      [ "P1", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#a99e37ceea4a3a514c3c37287e164e6b0", null ],
-      [ "P2", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#adcf8612ec2c65f179f81d674a3eabfb8", null ],
-      [ "P3", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#a355cc95313812b40941b76da1a667390", null ],
-      [ "P4", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#a2a9f748806b75c6c416b0a137aad30de", null ],
-      [ "redux", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#a219ce03daf1b246ff66638451240d471", null ],
+      [ "exp2ft", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#a60f412c830dc198bc204d54737f52634", null ],
+      [ "huge", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#a2abe6381f1dda3c325f875aae1521ba5", null ],
+      [ "P1", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#aa88220641d1d3e71ce16694ca509d9d5", null ],
+      [ "P2", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#a5bc6425f7e6e95e50fb9249e2ea073e7", null ],
+      [ "P3", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#ae4059246742f57ee69250d5fb647ed3a", null ],
+      [ "P4", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#a9d0486ce1bf98f9b92d54177b0de25ac", null ],
+      [ "redux", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#a6f40fb185a5d25024c7d3fe6b09993b5", null ],
       [ "twom100", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp2f__internal.html#ac43807563848b246b2c639a7c0c62560", null ]
     ] ],
     [ "exp_internal", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1exp__internal.html", [
@@ -1343,7 +1343,7 @@ var namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m =
     [ "modff", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a4ba1cc9465aa647be6a2fc7e42e605e0", null ],
     [ "modfl", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a0390f70207ef64741d08ed4931fc3a1e", null ],
     [ "nan", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#ae867daf03c4207cb93011aa40a67f229", null ],
-    [ "nan_mix", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#ab36c1994ffff015dbfba6cbebca589f3", null ],
+    [ "nan_mix", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a5968f04735b824c3a0511818ab690453", null ],
     [ "nanf", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#ae88f9a8831b0ddc97c099025b059119a", null ],
     [ "nanl", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#ad1e7427e1797633f87bc6b05a655cc07", null ],
     [ "nearbyint", "namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#aa0f5142520e36c6d77a8397577d5fd30", null ],

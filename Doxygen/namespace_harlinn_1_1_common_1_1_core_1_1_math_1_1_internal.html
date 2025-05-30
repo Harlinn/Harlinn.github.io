@@ -252,6 +252,10 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
 <tr class="memitem:a9c1db57b4c09cf645bf12d40aa6239e6"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9c1db57b4c09cf645bf12d40aa6239e6">LerpImpl</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> a, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> b, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> t) noexcept</td></tr>
 <tr class="separator:a9c1db57b4c09cf645bf12d40aa6239e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99cbe9a7ad84f20411ed16ad7efcd977" id="r_a99cbe9a7ad84f20411ed16ad7efcd977"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99cbe9a7ad84f20411ed16ad7efcd977">Exp10Impl</a> (double <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="separator:a99cbe9a7ad84f20411ed16ad7efcd977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb297904d10c0517e5376913b03d3386" id="r_abb297904d10c0517e5376913b03d3386"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb297904d10c0517e5376913b03d3386">Exp10Impl</a> (float <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a9abf21c7b37d6b658358f167db7e49a7">x</a>) noexcept</td></tr>
+<tr class="separator:abb297904d10c0517e5376913b03d3386"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bec7d2c8cdbde9652e34c95ffe96876" id="r_a4bec7d2c8cdbde9652e34c95ffe96876"><td class="memTemplParams" colspan="2">template&lt;typename FloatT &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a010963e2394ec4cc18eafa00cbb60b1f">IsFloatingPoint</a>&lt;FloatT&gt;</td></tr>
 <tr class="memitem:a4bec7d2c8cdbde9652e34c95ffe96876"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_compensated_float.html">CompensatedFloat</a>&lt; FloatT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4bec7d2c8cdbde9652e34c95ffe96876">InnerProduct</a> (FloatT a, FloatT b)</td></tr>
@@ -408,12 +412,24 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ad98b5608cf90460c03b12df9e34b40d2" id="r_ad98b5608cf90460c03b12df9e34b40d2"><td class="memTemplParams" colspan="2">template&lt;SimdTupleOrArithmeticType T1, SimdTupleOrArithmeticType T2&gt; </td></tr>
-<tr class="memitem:ad98b5608cf90460c03b12df9e34b40d2"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad98b5608cf90460c03b12df9e34b40d2">HasSimdType</a> = SimdType&lt;T1&gt; || SimdType&lt;T2&gt;</td></tr>
-<tr class="separator:ad98b5608cf90460c03b12df9e34b40d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29288ad8ad225b93a58c31725a739c0c" id="r_a29288ad8ad225b93a58c31725a739c0c"><td class="memTemplParams" colspan="2">template&lt;SimdTupleOrArithmeticType T1, SimdTupleOrArithmeticType T2&gt; </td></tr>
-<tr class="memitem:a29288ad8ad225b93a58c31725a739c0c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a29288ad8ad225b93a58c31725a739c0c">HasTupleType</a> = TupleType&lt;T1&gt; || TupleType&lt;T2&gt;</td></tr>
-<tr class="separator:a29288ad8ad225b93a58c31725a739c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e271180bc6d7763645b3b9046ffd573" id="r_a0e271180bc6d7763645b3b9046ffd573"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
+<tr class="memitem:a0e271180bc6d7763645b3b9046ffd573"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0e271180bc6d7763645b3b9046ffd573">HasSimdType</a> = (SimdType&lt;Args&gt; || ...)</td></tr>
+<tr class="separator:a0e271180bc6d7763645b3b9046ffd573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a22a90f9e0aae3968c0b96774e8b06f" id="r_a0a22a90f9e0aae3968c0b96774e8b06f"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
+<tr class="memitem:a0a22a90f9e0aae3968c0b96774e8b06f"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0a22a90f9e0aae3968c0b96774e8b06f">AllAreSimdType</a> = ( SimdType&lt;Args&gt; &amp;&amp; ... )</td></tr>
+<tr class="separator:a0a22a90f9e0aae3968c0b96774e8b06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a617e01732b2d6f4c6a09c870deb184b3" id="r_a617e01732b2d6f4c6a09c870deb184b3"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
+<tr class="memitem:a617e01732b2d6f4c6a09c870deb184b3"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a617e01732b2d6f4c6a09c870deb184b3">HasTupleType</a> = ( TupleType&lt;Args&gt; || ... )</td></tr>
+<tr class="separator:a617e01732b2d6f4c6a09c870deb184b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af29a5e229a9e7f0bd2057cef84518c5b" id="r_af29a5e229a9e7f0bd2057cef84518c5b"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
+<tr class="memitem:af29a5e229a9e7f0bd2057cef84518c5b"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af29a5e229a9e7f0bd2057cef84518c5b">AllAreTupleType</a> = ( TupleType&lt;Args&gt; &amp;&amp; ... )</td></tr>
+<tr class="separator:af29a5e229a9e7f0bd2057cef84518c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfe8d0d0bb0e2240e28e0f1141baf6a4" id="r_adfe8d0d0bb0e2240e28e0f1141baf6a4"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
+<tr class="memitem:adfe8d0d0bb0e2240e28e0f1141baf6a4"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adfe8d0d0bb0e2240e28e0f1141baf6a4">HasSimdOrTupleType</a> = ( SimdOrTupleType&lt;Args&gt; || ... )</td></tr>
+<tr class="separator:adfe8d0d0bb0e2240e28e0f1141baf6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7b95bc3247187ab8cb2c38c1d639ccf" id="r_ac7b95bc3247187ab8cb2c38c1d639ccf"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
+<tr class="memitem:ac7b95bc3247187ab8cb2c38c1d639ccf"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac7b95bc3247187ab8cb2c38c1d639ccf">AllAreSimdOrTupleType</a> = ( SimdOrTupleType&lt;Args&gt; &amp;&amp; ... )</td></tr>
+<tr class="separator:ac7b95bc3247187ab8cb2c38c1d639ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5b6cf61ddbb62b8cac5ea5a4f298315" id="r_ac5b6cf61ddbb62b8cac5ea5a4f298315"><td class="memTemplParams" colspan="2">template&lt;QuaternionOrQuaternionSimdType T1, QuaternionOrQuaternionSimdType T2&gt; </td></tr>
 <tr class="memitem:ac5b6cf61ddbb62b8cac5ea5a4f298315"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac5b6cf61ddbb62b8cac5ea5a4f298315">HasQuaternionSimdType</a> = QuaternionSimdType&lt;T1&gt; || QuaternionSimdType&lt;T2&gt;</td></tr>
 <tr class="separator:ac5b6cf61ddbb62b8cac5ea5a4f298315"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -910,6 +926,56 @@ template&lt;SquareMatrixSimdType T1, ArithmeticType T2&gt; </div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99cbe9a7ad84f20411ed16ad7efcd977" name="a99cbe9a7ad84f20411ed16ad7efcd977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99cbe9a7ad84f20411ed16ad7efcd977">&#9670;&#160;</a></span>Exp10Impl() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Harlinn::Common::Core::Math::Internal::Exp10Impl </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb297904d10c0517e5376913b03d3386" name="abb297904d10c0517e5376913b03d3386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb297904d10c0517e5376913b03d3386">&#9670;&#160;</a></span>Exp10Impl() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Harlinn::Common::Core::Math::Internal::Exp10Impl </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -2267,6 +2333,78 @@ template&lt;TupleType T&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="ac7b95bc3247187ab8cb2c38c1d639ccf" name="ac7b95bc3247187ab8cb2c38c1d639ccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7b95bc3247187ab8cb2c38c1d639ccf">&#9670;&#160;</a></span>AllAreSimdOrTupleType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Harlinn::Common::Core::Math::Internal::AllAreSimdOrTupleType = ( SimdOrTupleType&lt;Args&gt; &amp;&amp; ... )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a22a90f9e0aae3968c0b96774e8b06f" name="a0a22a90f9e0aae3968c0b96774e8b06f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a22a90f9e0aae3968c0b96774e8b06f">&#9670;&#160;</a></span>AllAreSimdType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Harlinn::Common::Core::Math::Internal::AllAreSimdType = ( SimdType&lt;Args&gt; &amp;&amp; ... )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af29a5e229a9e7f0bd2057cef84518c5b" name="af29a5e229a9e7f0bd2057cef84518c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af29a5e229a9e7f0bd2057cef84518c5b">&#9670;&#160;</a></span>AllAreTupleType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Harlinn::Common::Core::Math::Internal::AllAreTupleType = ( TupleType&lt;Args&gt; &amp;&amp; ... )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac5b6cf61ddbb62b8cac5ea5a4f298315" name="ac5b6cf61ddbb62b8cac5ea5a4f298315"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac5b6cf61ddbb62b8cac5ea5a4f298315">&#9670;&#160;</a></span>HasQuaternionSimdType</h2>
 
@@ -2315,19 +2453,43 @@ template&lt;QuaternionOrQuaternionSimdType T1, QuaternionOrQuaternionSimdType T2
 
 </div>
 </div>
-<a id="ad98b5608cf90460c03b12df9e34b40d2" name="ad98b5608cf90460c03b12df9e34b40d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad98b5608cf90460c03b12df9e34b40d2">&#9670;&#160;</a></span>HasSimdType</h2>
+<a id="adfe8d0d0bb0e2240e28e0f1141baf6a4" name="adfe8d0d0bb0e2240e28e0f1141baf6a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfe8d0d0bb0e2240e28e0f1141baf6a4">&#9670;&#160;</a></span>HasSimdOrTupleType</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;SimdTupleOrArithmeticType T1, SimdTupleOrArithmeticType T2&gt; </div>
+template&lt;typename ... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Harlinn::Common::Core::Math::Internal::HasSimdType = SimdType&lt;T1&gt; || SimdType&lt;T2&gt;</td>
+          <td class="memname">bool Harlinn::Common::Core::Math::Internal::HasSimdOrTupleType = ( SimdOrTupleType&lt;Args&gt; || ... )</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e271180bc6d7763645b3b9046ffd573" name="a0e271180bc6d7763645b3b9046ffd573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e271180bc6d7763645b3b9046ffd573">&#9670;&#160;</a></span>HasSimdType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Harlinn::Common::Core::Math::Internal::HasSimdType = (SimdType&lt;Args&gt; || ...)</td>
         </tr>
       </table>
   </td>
@@ -2387,19 +2549,19 @@ template&lt;SquareMatrixOrSquareMatrixSimdType T1, SquareMatrixOrSquareMatrixSim
 
 </div>
 </div>
-<a id="a29288ad8ad225b93a58c31725a739c0c" name="a29288ad8ad225b93a58c31725a739c0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29288ad8ad225b93a58c31725a739c0c">&#9670;&#160;</a></span>HasTupleType</h2>
+<a id="a617e01732b2d6f4c6a09c870deb184b3" name="a617e01732b2d6f4c6a09c870deb184b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a617e01732b2d6f4c6a09c870deb184b3">&#9670;&#160;</a></span>HasTupleType</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;SimdTupleOrArithmeticType T1, SimdTupleOrArithmeticType T2&gt; </div>
+template&lt;typename ... Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Harlinn::Common::Core::Math::Internal::HasTupleType = TupleType&lt;T1&gt; || TupleType&lt;T2&gt;</td>
+          <td class="memname">bool Harlinn::Common::Core::Math::Internal::HasTupleType = ( TupleType&lt;Args&gt; || ... )</td>
         </tr>
       </table>
   </td>

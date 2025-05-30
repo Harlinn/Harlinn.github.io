@@ -19,6 +19,7 @@ var struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01double_00_01_n
     [ "ATan", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01double_00_01_n_01_4.html#a10a0cd2569862d8f56aff5e49613d7ae", null ],
     [ "ATan2", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01double_00_01_n_01_4.html#a157aad5f95adcd8018297f6325f03f1b", null ],
     [ "ATanH", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01double_00_01_n_01_4.html#a1c3c747c7653e0547b7a314a9f79c854", null ],
+    [ "Cbrt", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01double_00_01_n_01_4.html#a2270c9e42e2c450cc3d9e1d6109cf54a", null ],
     [ "Ceil", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01double_00_01_n_01_4.html#a41ff576db784eb959434e40dc1245f8c", null ],
     [ "Clamp", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01double_00_01_n_01_4.html#a6a79a21644e627ead79460dedfe940dd", null ],
     [ "Cos", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01double_00_01_n_01_4.html#ae7efd9de3c9c2092803810a72cbed975", null ],
