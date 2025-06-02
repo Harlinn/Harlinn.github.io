@@ -3,20 +3,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Floating point manipulation functions | Harlinn</title>
+<title>Log2 | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Floating point manipulation functions" />
+<meta property="og:title" content="Log2" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is my personal site." />
 <meta property="og:description" content="This is my personal site." />
-<link rel="canonical" href="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/FloatingPointManipulationFunctions.html" />
-<meta property="og:url" content="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/FloatingPointManipulationFunctions.html" />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/ExponentialFunctions/Log2.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/ExponentialFunctions/Log2.html" />
 <meta property="og:site_name" content="Harlinn" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Floating point manipulation functions" />
+<meta property="twitter:title" content="Log2" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal site.","headline":"Floating point manipulation functions","url":"https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/FloatingPointManipulationFunctions.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal site.","headline":"Log2","url":"https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/ExponentialFunctions/Log2.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -228,21 +228,55 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Floating point manipulation functions</h1>
+    <h1 class="post-title">Log2</h1>
   </header>
 
   <div class="post-content">
-    <p><a href="../BasicMath.html">Optimized basic math functions</a></p>
+    <p><a href="../ExponentialFunctions.html">Exponential functions</a></p>
 
-<ul>
-  <li><a href="FloatingPointManipulationFunctions/FRExp.html">FRExp</a> Retrieves the mantissa and exponent of a floating-point number.</li>
-  <li><a href="FloatingPointManipulationFunctions/ModF.html">ModF</a> Splits the floating-point argument into fractional and integer parts.</li>
-  <li><a href="FloatingPointManipulationFunctions/NextAfter.html">NextAfter</a> Calculates next representable double-precision floating-point number.</li>
-  <li><a href="FloatingPointManipulationFunctions/NextDown.html">NextDown</a> Return the largest floating point number y of the same type as x such that \(y &lt; x\).</li>
-  <li><a href="FloatingPointManipulationFunctions/NextUp.html">NextUp</a> Return the smallest floating point number y of the same type as x such that \(y &gt; x\).</li>
-  <li><a href="FloatingPointManipulationFunctions/SignBit.html">SignBit</a> Determines if the floating point argument is negative.</li>
-  <li><a href="FloatingPointManipulationFunctions/signum.html">signum</a> Returns the sign of the argument.</li>
-</ul>
+<p>Calculates the base-2 logarithm of the argument.</p>
+
+<pre><code class="language-C++">template&lt;FloatingPointType T&gt;
+constexpr inline T Log2( T x ) noexcept;
+</code></pre>
+
+<h3 id="exampletest-code">Example/Test code</h3>
+
+<pre><code class="language-C++">using C = Constants&lt;float&gt;;
+
+constexpr auto result1 = Log2( C::Infinity );
+BOOST_CHECK( IsInf( result1 ) );
+
+constexpr auto result2 = Log2( C::NegativeInfinity );
+BOOST_CHECK( IsNaN( result2 ) );
+
+constexpr auto result3 = Log2( C::Zero );
+BOOST_CHECK( IsInf( result3 ) );
+
+constexpr auto result4 = Log2( -C::Zero );
+BOOST_CHECK( IsInf( result4 ) );
+
+constexpr auto result5 = Log2( C::NaN );
+BOOST_CHECK( IsNaN( result5 ) );
+
+constexpr auto result6 = Log2( C::One );
+BOOST_CHECK( result6 == C::Zero );
+
+constexpr auto result7 = Log2( -C::One );
+BOOST_CHECK( IsNaN( result7 ) );
+
+constexpr auto result8 = Log2( C::Two );
+BOOST_CHECK( result8 == C::One );
+
+constexpr auto result9 = Log2( C::Two* C::Two );
+BOOST_CHECK( result9 == C::Two );
+
+constexpr auto result10 = Log2( C::Two * C::Two * C::Two );
+BOOST_CHECK( result10 == C::Three );
+
+constexpr auto result11 = Log2( .7f );
+BOOST_CHECK( result11 == -0.514573216f );
+</code></pre>
 
   </div>
 

@@ -3,20 +3,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Floating point manipulation functions | Harlinn</title>
+<title>Pow | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Floating point manipulation functions" />
+<meta property="og:title" content="Pow" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is my personal site." />
 <meta property="og:description" content="This is my personal site." />
-<link rel="canonical" href="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/FloatingPointManipulationFunctions.html" />
-<meta property="og:url" content="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/FloatingPointManipulationFunctions.html" />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/PowerFunctions/Pow.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/PowerFunctions/Pow.html" />
 <meta property="og:site_name" content="Harlinn" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Floating point manipulation functions" />
+<meta property="twitter:title" content="Pow" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal site.","headline":"Floating point manipulation functions","url":"https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/FloatingPointManipulationFunctions.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal site.","headline":"Pow","url":"https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/PowerFunctions/Pow.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -228,21 +228,220 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Floating point manipulation functions</h1>
+    <h1 class="post-title">Pow</h1>
   </header>
 
   <div class="post-content">
-    <p><a href="../BasicMath.html">Optimized basic math functions</a></p>
+    <p><a href="../PowerFunctions.html">Power functions</a></p>
 
-<ul>
-  <li><a href="FloatingPointManipulationFunctions/FRExp.html">FRExp</a> Retrieves the mantissa and exponent of a floating-point number.</li>
-  <li><a href="FloatingPointManipulationFunctions/ModF.html">ModF</a> Splits the floating-point argument into fractional and integer parts.</li>
-  <li><a href="FloatingPointManipulationFunctions/NextAfter.html">NextAfter</a> Calculates next representable double-precision floating-point number.</li>
-  <li><a href="FloatingPointManipulationFunctions/NextDown.html">NextDown</a> Return the largest floating point number y of the same type as x such that \(y &lt; x\).</li>
-  <li><a href="FloatingPointManipulationFunctions/NextUp.html">NextUp</a> Return the smallest floating point number y of the same type as x such that \(y &gt; x\).</li>
-  <li><a href="FloatingPointManipulationFunctions/SignBit.html">SignBit</a> Determines if the floating point argument is negative.</li>
-  <li><a href="FloatingPointManipulationFunctions/signum.html">signum</a> Returns the sign of the argument.</li>
-</ul>
+<p>Calculates x raised to the power of y.</p>
+
+<pre><code class="language-C++">template&lt;FloatingPointType T&gt;
+constexpr inline T Pow( T x, T y ) noexcept;
+</code></pre>
+
+<h3 id="exampletest-code">Example/Test code</h3>
+
+<pre><code class="language-C++">using C = Constants&lt;float&gt;;
+constexpr auto Check = []( C::ValueType x, C::ValueType y, C::ValueType expected ) -&gt; bool
+    {
+        auto r = Pow( x, y );
+        return IsSameValue( r, expected );
+    };
+constexpr auto CheckIsNaN = []( C::ValueType x, C::ValueType y ) -&gt; bool
+    {
+        auto r = Pow( x, y );
+        return IsNaN( r );
+    };
+
+constexpr auto CheckIsInf = []( C::ValueType x, C::ValueType y ) -&gt; bool
+    {
+        auto r = Pow( x, y );
+        return IsInf( r );
+    };
+
+constexpr auto CheckIsPosInf = []( C::ValueType x, C::ValueType y ) -&gt; bool
+    {
+        auto r = Pow( x, y );
+        return IsSameValue( r, C::Infinity );
+    };
+
+constexpr auto CheckIsNegInf = []( C::ValueType x, C::ValueType y ) -&gt; bool
+    {
+        auto r = Pow( x, y );
+        return IsSameValue( r, C::NegativeInfinity );
+    };
+
+
+constexpr auto check1 = Check( 0., 0., 1 ) &amp;&amp; Check( -0., 0., 1 ) &amp;&amp; Check( 0., -0., 1 ) &amp;&amp; Check( -0., -0., 1 );
+BOOST_CHECK( check1 );
+constexpr auto check2 = Check( 10., 0., 1 ) &amp;&amp; Check( -10., 0., 1 ) &amp;&amp; Check( 10., -0., 1 ) &amp;&amp; Check( -10., -0., 1 );
+BOOST_CHECK( check2 );
+constexpr auto check3 = Check( C::NaN, 0., 1 ) &amp;&amp; Check( C::NaN, -0., 1 );
+BOOST_CHECK( check3 );
+
+constexpr auto check4 = CheckIsInf( 1.1f, C::Infinity ) &amp;&amp; 
+    CheckIsInf( C::Infinity, C::Infinity ) &amp;&amp; 
+    CheckIsInf( -1.1f, C::Infinity ) &amp;&amp;
+    CheckIsInf( -C::Infinity, C::Infinity );
+BOOST_CHECK( check4 );
+
+constexpr auto check5 = Check( 0.9f, C::Infinity, 0.f ) &amp;&amp; 
+    Check( 1e-7, C::Infinity, 0 ) &amp;&amp; 
+    Check( -0.9, C::Infinity, 0 ) &amp;&amp; 
+    Check( -1e-7, C::Infinity, 0 );
+BOOST_CHECK( check5 );
+
+constexpr auto check6 = 
+    Check( 1.1, -C::Infinity, 0 ) &amp;&amp; 
+    Check( C::Infinity, -C::Infinity, 0 ) &amp;&amp; 
+    Check( -1.1, -C::Infinity, 0 ) &amp;&amp; 
+    Check( -C::Infinity, -C::Infinity, 0 );
+BOOST_CHECK( check6 );
+
+constexpr auto check7 = 
+    CheckIsInf( 0.9, -C::Infinity ) &amp;&amp; 
+    CheckIsInf( 1e-7, -C::Infinity ) &amp;&amp; 
+    CheckIsInf( -0.9, -C::Infinity ) &amp;&amp; 
+    CheckIsInf( -1e-7, -C::Infinity );
+BOOST_CHECK( check7 );
+
+constexpr auto check8 = 
+    CheckIsInf( C::Infinity, 1e-7 ) &amp;&amp; 
+    CheckIsInf( C::Infinity, 1 ) &amp;&amp; 
+    CheckIsInf( C::Infinity, 1e7 );
+BOOST_CHECK( check8 );
+
+constexpr auto check9 = 
+    Check( C::Infinity, -1e-7, 0 ) &amp;&amp; 
+    Check( C::Infinity, -1, 0 ) &amp;&amp; 
+    Check( C::Infinity, -1e7, 0 );
+BOOST_CHECK( check9 );
+
+constexpr auto check10 = 
+    CheckIsNegInf( -C::Infinity, 1 ) &amp;&amp; 
+    CheckIsNegInf( -C::Infinity, 11 ) &amp;&amp; 
+    CheckIsNegInf( -C::Infinity, 1001 );
+BOOST_CHECK( check10 );
+
+constexpr auto check11 = CheckIsPosInf( -C::Infinity, 2 ) &amp;&amp;
+    CheckIsPosInf( -C::Infinity, 12 ) &amp;&amp;
+    CheckIsPosInf( -C::Infinity, 1002 ) &amp;&amp;
+    CheckIsPosInf( -C::Infinity, 0.1 ) &amp;&amp;
+    CheckIsPosInf( -C::Infinity, 1.1 ) &amp;&amp;
+    CheckIsPosInf( -C::Infinity, 11.1 ) &amp;&amp;
+    CheckIsPosInf( -C::Infinity, 1001.1 );
+BOOST_CHECK( check11 );
+
+constexpr auto check12 = 
+    Check( -C::Infinity, -1, -0.f ) &amp;&amp; 
+    Check( -C::Infinity, -11, -0.f ) &amp;&amp; 
+    Check( -C::Infinity, -1001, -0.f );
+BOOST_CHECK( check12 );
+
+constexpr auto check13 = Check( -C::Infinity, -2, 0. ) &amp;&amp;
+    Check( -C::Infinity, -12, 0. ) &amp;&amp;
+    Check( -C::Infinity, -1002, 0. ) &amp;&amp;
+    Check( -C::Infinity, -0.1, 0. ) &amp;&amp;
+    Check( -C::Infinity, -1.1, 0. ) &amp;&amp;
+    Check( -C::Infinity, -11.1, 0. ) &amp;&amp;
+    Check( -C::Infinity, -1001.1, 0. );
+BOOST_CHECK( check13 );
+
+constexpr auto check14 = CheckIsNaN( C::NaN, C::NaN ) &amp;&amp;
+    CheckIsNaN( 0.f, C::NaN ) &amp;&amp;
+    Check( 1.f, C::NaN, 1.f ) &amp;&amp;
+    CheckIsNaN( -1.f, C::NaN ) &amp;&amp;
+    CheckIsNaN( C::NaN, 1.f ) &amp;&amp;
+    CheckIsNaN( C::NaN, -1.f ) &amp;&amp;
+    CheckIsNaN( 3.f, C::NaN );
+BOOST_CHECK( check14 );
+
+constexpr auto check15 = Check( 1.f, C::Infinity, 1.f ) &amp;&amp;
+    Check( -1.f, C::Infinity, 1.f ) &amp;&amp;
+    Check( 1.f, -C::Infinity, 1.f ) &amp;&amp;
+    Check( -1.f, -C::Infinity, 1.f );
+BOOST_CHECK( check15 );
+
+constexpr auto check16 = CheckIsNaN( -0.1f, 1.1f ) &amp;&amp;
+    CheckIsNaN( -0.1f, -1.1f ) &amp;&amp;
+    CheckIsNaN( -10.1f, 1.1f ) &amp;&amp;
+    CheckIsNaN( -10.1f, -1.1f );
+BOOST_CHECK( check16 );
+
+
+constexpr auto check17 = CheckIsPosInf( 0.f, -1.f ) &amp;&amp;
+    CheckIsPosInf( 0.f, -11.f ) &amp;&amp;
+    CheckIsNegInf( -0.f, -1.f )&amp;&amp;
+    CheckIsNegInf( -0.f, -11.f );
+BOOST_CHECK( check17 );
+
+constexpr auto check18 = CheckIsPosInf( 0., -2. ) &amp;&amp;
+    CheckIsPosInf( 0, -11.1 ) &amp;&amp;
+    CheckIsPosInf( -0.f, -2 ) &amp;&amp;
+    CheckIsPosInf( -0.f, -11.1 );
+BOOST_CHECK( check18 );
+
+constexpr auto check19 = Check( 0.f, 1.f, 0.f ) &amp;&amp;
+    Check( 0.f, 11.f, 0.f ) &amp;&amp;
+    Check( -0.f, 1.f, -0.f ) &amp;&amp;
+    Check( -0.f, 11.f, -0.f ) &amp;&amp;
+    Check( 0.f, 2.f, 0.f )&amp;&amp;
+    Check( 0.f, 11.1f, 0.f ) &amp;&amp;
+    Check( -0.f, 2.f, 0.f ) &amp;&amp;
+    Check( -0.f, 11.1f, 0.f );
+BOOST_CHECK( check19 );
+
+constexpr auto check20 = CheckIsPosInf( 1.5, C::Infinity ) &amp;&amp;
+    Check( 0.5, C::Infinity, 0. ) &amp;&amp;
+    Check( 1.5, -C::Infinity, 0. ) &amp;&amp;
+    CheckIsPosInf( 0.5, -C::Infinity );
+BOOST_CHECK( check20 );
+
+// pow (inf, 2) == inf
+constexpr auto check21 = CheckIsPosInf( C::Infinity, 2.f );
+BOOST_CHECK( check21 );
+
+// pow (inf, -1) == 0.0
+constexpr auto check22 = Check( C::Infinity, -1.f, 0.f );
+BOOST_CHECK( check22 );
+
+// pow (-inf, 27) == -inf
+constexpr auto check23 = CheckIsNegInf( -C::Infinity, 27.f );
+BOOST_CHECK( check23 );
+
+// pow (-inf, 28) == inf
+constexpr auto check24 = CheckIsPosInf( -C::Infinity, 28.f );
+BOOST_CHECK( check24 );
+
+// pow (-inf, -3) == -0
+constexpr auto check25 = Check( -C::Infinity, -3.f, -0.f );
+BOOST_CHECK( check25 );
+
+// pow (-inf, -2.0) == 0.0
+constexpr auto check26 = Check( -C::Infinity, -2.f, 0.f );
+BOOST_CHECK( check26 );
+
+// pow (0.0, 27) == 0.0
+constexpr auto check27 = Check( 0., 27.f, 0.f );
+BOOST_CHECK( check27 );
+
+// pow (-0, 27) == -0
+constexpr auto check28 = Check( -0., 27.f, -0.f );
+BOOST_CHECK( check28 );
+
+// pow (0.0, 4) == 0.0
+constexpr auto check29 = Check( 0., 4.f, 0.f );
+BOOST_CHECK( check29 );
+
+// pow (-0, 4) == 0.0
+constexpr auto check30 = Check( -0., 4.f, 0.f );
+BOOST_CHECK( check30 );
+
+// pow (0.7, 1.2) == 0.65180494056638638188
+constexpr auto check31 = Check( 0.7f, 1.2f, 0.65180494056638638188f );
+BOOST_CHECK( check31 );
+</code></pre>
 
   </div>
 

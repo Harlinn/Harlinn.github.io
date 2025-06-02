@@ -3,20 +3,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Floating point manipulation functions | Harlinn</title>
+<title>TGamma | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Floating point manipulation functions" />
+<meta property="og:title" content="TGamma" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is my personal site." />
 <meta property="og:description" content="This is my personal site." />
-<link rel="canonical" href="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/FloatingPointManipulationFunctions.html" />
-<meta property="og:url" content="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/FloatingPointManipulationFunctions.html" />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/ErrorAndGammaFunctions/TGamma.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/ErrorAndGammaFunctions/TGamma.html" />
 <meta property="og:site_name" content="Harlinn" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Floating point manipulation functions" />
+<meta property="twitter:title" content="TGamma" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal site.","headline":"Floating point manipulation functions","url":"https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/FloatingPointManipulationFunctions.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal site.","headline":"TGamma","url":"https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/ErrorAndGammaFunctions/TGamma.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -228,21 +228,80 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Floating point manipulation functions</h1>
+    <h1 class="post-title">TGamma</h1>
   </header>
 
   <div class="post-content">
-    <p><a href="../BasicMath.html">Optimized basic math functions</a></p>
+    <p><a href="../ErrorAndGammaFunctions.html">Error and gamma functions</a></p>
 
-<ul>
-  <li><a href="FloatingPointManipulationFunctions/FRExp.html">FRExp</a> Retrieves the mantissa and exponent of a floating-point number.</li>
-  <li><a href="FloatingPointManipulationFunctions/ModF.html">ModF</a> Splits the floating-point argument into fractional and integer parts.</li>
-  <li><a href="FloatingPointManipulationFunctions/NextAfter.html">NextAfter</a> Calculates next representable double-precision floating-point number.</li>
-  <li><a href="FloatingPointManipulationFunctions/NextDown.html">NextDown</a> Return the largest floating point number y of the same type as x such that \(y &lt; x\).</li>
-  <li><a href="FloatingPointManipulationFunctions/NextUp.html">NextUp</a> Return the smallest floating point number y of the same type as x such that \(y &gt; x\).</li>
-  <li><a href="FloatingPointManipulationFunctions/SignBit.html">SignBit</a> Determines if the floating point argument is negative.</li>
-  <li><a href="FloatingPointManipulationFunctions/signum.html">signum</a> Returns the sign of the argument.</li>
-</ul>
+<p>Calculates the true gamma function.</p>
+
+<pre><code class="language-C++">template&lt;FloatingPointType T&gt;
+constexpr inline T TGamma( T x ) noexcept;
+</code></pre>
+
+<h3 id="exampletest-code">Example/Test code</h3>
+
+<pre><code class="language-C++">using C = Constants&lt;double&gt;;
+
+constexpr auto Check = []( C::ValueType x, C::ValueType expected ) -&gt; bool
+    {
+        auto r = TGamma( x );
+        return IsSameValue( r, expected );
+    };
+
+constexpr auto CheckIsNaN = []( C::ValueType x ) -&gt; bool
+    {
+        auto r = TGamma( x );
+        return IsNaN( r );
+    };
+
+// tgamma (inf) == inf
+constexpr auto check1 = Check( C::Infinity, C::Infinity );
+BOOST_CHECK( check1 );
+
+// tgamma (0) == inf
+constexpr auto check2 = Check( C::Zero, C::Infinity );
+BOOST_CHECK( check2 );
+    
+// tgamma (-0) == inf
+constexpr auto check3 = Check( -C::Zero, C::Infinity );
+BOOST_CHECK( check3 );
+
+// tgamma (-2) == NaN
+constexpr auto check4 = CheckIsNaN( -C::Two );
+BOOST_CHECK( check4 );
+// tgamma (-inf) == NaN
+constexpr auto check5 = CheckIsNaN( -C::Infinity );
+BOOST_CHECK( check5 );
+// tgamma (NaN) == NaN
+constexpr auto check6 = CheckIsNaN( C::NaN );
+BOOST_CHECK( check6 );
+
+// tgamma (0.5) == sqrt (pi)
+constexpr auto check7 = Check( .5, Sqrt( C::Pi ) );
+BOOST_CHECK( check7 );
+// tgamma (-0.5) == -2 sqrt (pi)
+constexpr auto check8 = Check( -.5, -2. * Sqrt( C::Pi ) );
+BOOST_CHECK( check8 );
+
+// tgamma (1) == 1
+constexpr auto check9 = Check( 1., 1. );
+BOOST_CHECK( check9 );
+// tgamma (4) == 6
+constexpr auto check10 = Check( 4., 6. );
+BOOST_CHECK( check10 );
+
+// tgamma (0.7) == 1.29805533264755778568
+constexpr auto check11 = Check( 0.7, 1.29805533264755778568 );
+BOOST_CHECK( check11 );
+                       
+// tgamma (1.2) == 0.91816874239976054
+constexpr auto check12 = Check( 1.2, 0.91816874239976054 );
+auto res = TGamma( 1.2 );
+BOOST_CHECK( check12 );
+</code></pre>
+
 
   </div>
 

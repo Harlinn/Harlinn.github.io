@@ -3,20 +3,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Floating point manipulation functions | Harlinn</title>
+<title>Erf | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Floating point manipulation functions" />
+<meta property="og:title" content="Erf" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is my personal site." />
 <meta property="og:description" content="This is my personal site." />
-<link rel="canonical" href="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/FloatingPointManipulationFunctions.html" />
-<meta property="og:url" content="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/FloatingPointManipulationFunctions.html" />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/ErrorAndGammaFunctions/Erf.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/ErrorAndGammaFunctions/Erf.html" />
 <meta property="og:site_name" content="Harlinn" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Floating point manipulation functions" />
+<meta property="twitter:title" content="Erf" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal site.","headline":"Floating point manipulation functions","url":"https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/FloatingPointManipulationFunctions.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal site.","headline":"Erf","url":"https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/ErrorAndGammaFunctions/Erf.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -228,21 +228,73 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Floating point manipulation functions</h1>
+    <h1 class="post-title">Erf</h1>
   </header>
 
   <div class="post-content">
-    <p><a href="../BasicMath.html">Optimized basic math functions</a></p>
+    <p><a href="../ErrorAndGammaFunctions.html">Error and gamma functions</a></p>
 
-<ul>
-  <li><a href="FloatingPointManipulationFunctions/FRExp.html">FRExp</a> Retrieves the mantissa and exponent of a floating-point number.</li>
-  <li><a href="FloatingPointManipulationFunctions/ModF.html">ModF</a> Splits the floating-point argument into fractional and integer parts.</li>
-  <li><a href="FloatingPointManipulationFunctions/NextAfter.html">NextAfter</a> Calculates next representable double-precision floating-point number.</li>
-  <li><a href="FloatingPointManipulationFunctions/NextDown.html">NextDown</a> Return the largest floating point number y of the same type as x such that \(y &lt; x\).</li>
-  <li><a href="FloatingPointManipulationFunctions/NextUp.html">NextUp</a> Return the smallest floating point number y of the same type as x such that \(y &gt; x\).</li>
-  <li><a href="FloatingPointManipulationFunctions/SignBit.html">SignBit</a> Determines if the floating point argument is negative.</li>
-  <li><a href="FloatingPointManipulationFunctions/signum.html">signum</a> Returns the sign of the argument.</li>
-</ul>
+<p>Calculates the error function.</p>
+
+<pre><code class="language-C++">template&lt;FloatingPointType T&gt;
+constexpr inline T Erf( T x ) noexcept
+</code></pre>
+<h3 id="exampletest-code">Example/Test code</h3>
+
+<pre><code class="language-C++">using C = Constants&lt;float&gt;;
+
+constexpr auto Check = []( C::ValueType x, C::ValueType expected ) -&gt; bool
+    {
+        auto r = Erf( x );
+        return IsSameValue( r, expected );
+    };
+
+constexpr auto CheckIsNaN = []( C::ValueType x ) -&gt; bool
+    {
+        auto r = Erf( x );
+        return IsNaN( r );
+    };
+
+// erf (0) == 0
+constexpr auto check1 = Check( C::Zero, C::Zero );
+BOOST_CHECK( check1 );
+
+// erf (-0) == -0
+constexpr auto check2 = Check( -C::Zero, -C::Zero );
+BOOST_CHECK( check2 );
+
+// erf (inf) == 1
+constexpr auto check3 = Check( C::Infinity, C::One );
+BOOST_CHECK( check3 );
+
+// erf (-inf) == -1
+constexpr auto check4 = Check( C::NegativeInfinity, -C::One );
+BOOST_CHECK( check4 );
+
+// erf (NaN) == NaN
+constexpr auto check5 = CheckIsNaN( C::NaN );
+BOOST_CHECK( check5 );
+
+// erf (0.7) == 0.67780119383741847297
+constexpr auto check6 = Check( 0.7, 0.67780119383741847297 );
+BOOST_CHECK( check6 );
+
+// erf (1.2) == 0.91031397822963538024
+constexpr auto check7 = Check( 1.2, 0.91031397822963538024 );
+BOOST_CHECK( check7 );
+
+// erf (2.0) == 0.99532226501895273416
+constexpr auto check8 = Check( 2.0, 0.99532226501895273416 );
+BOOST_CHECK( check8 );
+
+// erf (4.1) == 0.99999999329997234592
+constexpr auto check9 = Check( 4.1, 0.99999999329997234592 );
+BOOST_CHECK( check9 );
+
+// erf (27) == 1.0
+constexpr auto check10 = Check( 27, 1.0 );
+BOOST_CHECK( check10 );
+</code></pre>
 
   </div>
 
