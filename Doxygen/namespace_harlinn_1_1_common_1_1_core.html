@@ -1286,6 +1286,8 @@ Concepts</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_unsigned_integer_type.html">UnsignedIntegerType</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_unsigned_integer_or_boolean_type.html">UnsignedIntegerOrBooleanType</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_arithmetic_type.html">ArithmeticType</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_guid_type.html">GuidType</a></td></tr>
@@ -4445,16 +4447,12 @@ requires ( sizeof( T1 ) == 8 ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href
 <tr class="separator:a5f84845dba38911d9dbd7182ff338d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac576da397823a2ff8a85a76cea069751" id="r_ac576da397823a2ff8a85a76cea069751"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac576da397823a2ff8a85a76cea069751">Significand</a> (double value) noexcept</td></tr>
 <tr class="separator:ac576da397823a2ff8a85a76cea069751"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2231abaaa9fb0b4999e6ea1ffdd436b8" id="r_a2231abaaa9fb0b4999e6ea1ffdd436b8"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2231abaaa9fb0b4999e6ea1ffdd436b8">Significand</a> (float v) noexcept</td></tr>
-<tr class="separator:a2231abaaa9fb0b4999e6ea1ffdd436b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1e512ed5cb2646a1a89bd25aed3522d" id="r_ae1e512ed5cb2646a1a89bd25aed3522d"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1e512ed5cb2646a1a89bd25aed3522d">SignBit</a> (double value)</td></tr>
-<tr class="separator:ae1e512ed5cb2646a1a89bd25aed3522d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa27414454de523af8aa513d8e8c537c5" id="r_aa27414454de523af8aa513d8e8c537c5"><td class="memItemLeft" align="right" valign="top">constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa27414454de523af8aa513d8e8c537c5">SignBit</a> (float v)</td></tr>
-<tr class="separator:aa27414454de523af8aa513d8e8c537c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7392fd4b54d784ba9172c11807b772fe" id="r_a7392fd4b54d784ba9172c11807b772fe"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7392fd4b54d784ba9172c11807b772fe">FlipSign</a> (double a, double b)</td></tr>
-<tr class="separator:a7392fd4b54d784ba9172c11807b772fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a0b3360987842959945c225bc3739e5" id="r_a9a0b3360987842959945c225bc3739e5"><td class="memItemLeft" align="right" valign="top">constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a0b3360987842959945c225bc3739e5">FlipSign</a> (float a, float b)</td></tr>
-<tr class="separator:a9a0b3360987842959945c225bc3739e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac5895533242f9db8b830cbae1fd9c43" id="r_aac5895533242f9db8b830cbae1fd9c43"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac5895533242f9db8b830cbae1fd9c43">Significand</a> (float v) noexcept</td></tr>
+<tr class="separator:aac5895533242f9db8b830cbae1fd9c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a498907284f7d1d6d2706afb94fefc7" id="r_a5a498907284f7d1d6d2706afb94fefc7"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a498907284f7d1d6d2706afb94fefc7">FastSignBit</a> (double value)</td></tr>
+<tr class="separator:a5a498907284f7d1d6d2706afb94fefc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17d95b8664f1c1776e96b57fbfc1f76" id="r_aa17d95b8664f1c1776e96b57fbfc1f76"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa17d95b8664f1c1776e96b57fbfc1f76">FastSignBit</a> (float v)</td></tr>
+<tr class="separator:aa17d95b8664f1c1776e96b57fbfc1f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c6d63288a5ed5a3ef131157529f1d8" id="r_a33c6d63288a5ed5a3ef131157529f1d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33c6d63288a5ed5a3ef131157529f1d8">MemCopy</a> (char *dest, const char *source, size_t length) noexcept</td></tr>
 <tr class="separator:a33c6d63288a5ed5a3ef131157529f1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f64b8420d0752fe9941d32799b40037" id="r_a2f64b8420d0752fe9941d32799b40037"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f64b8420d0752fe9941d32799b40037">MemCopy</a> (wchar_t *dest, const wchar_t *source, size_t length) noexcept</td></tr>
@@ -12067,6 +12065,56 @@ template&lt;SimpleCharSpanLike SpanT&gt; </div>
 
 </div>
 </div>
+<a id="a5a498907284f7d1d6d2706afb94fefc7" name="a5a498907284f7d1d6d2706afb94fefc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a498907284f7d1d6d2706afb94fefc7">&#9670;&#160;</a></span>FastSignBit() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::Common::Core::FastSignBit </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa17d95b8664f1c1776e96b57fbfc1f76" name="aa17d95b8664f1c1776e96b57fbfc1f76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa17d95b8664f1c1776e96b57fbfc1f76">&#9670;&#160;</a></span>FastSignBit() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::FastSignBit </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a898a26585cdb367d0b3755336587f251" name="a898a26585cdb367d0b3755336587f251"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a898a26585cdb367d0b3755336587f251">&#9670;&#160;</a></span>Finally()</h2>
 
@@ -12088,64 +12136,6 @@ template&lt;typename Fn &gt; </div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7392fd4b54d784ba9172c11807b772fe" name="a7392fd4b54d784ba9172c11807b772fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7392fd4b54d784ba9172c11807b772fe">&#9670;&#160;</a></span>FlipSign() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double Harlinn::Common::Core::FlipSign </td>
-          <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9a0b3360987842959945c225bc3739e5" name="a9a0b3360987842959945c225bc3739e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a0b3360987842959945c225bc3739e5">&#9670;&#160;</a></span>FlipSign() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Harlinn::Common::Core::FlipSign </td>
-          <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -22176,56 +22166,6 @@ requires ( sizeof( T2 ) == 8 ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href
 
 </div>
 </div>
-<a id="ae1e512ed5cb2646a1a89bd25aed3522d" name="ae1e512ed5cb2646a1a89bd25aed3522d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1e512ed5cb2646a1a89bd25aed3522d">&#9670;&#160;</a></span>SignBit() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::Common::Core::SignBit </td>
-          <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa27414454de523af8aa513d8e8c537c5" name="aa27414454de523af8aa513d8e8c537c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa27414454de523af8aa513d8e8c537c5">&#9670;&#160;</a></span>SignBit() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t Harlinn::Common::Core::SignBit </td>
-          <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ac576da397823a2ff8a85a76cea069751" name="ac576da397823a2ff8a85a76cea069751"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac576da397823a2ff8a85a76cea069751">&#9670;&#160;</a></span>Significand() <span class="overload">[1/2]</span></h2>
 
@@ -22251,8 +22191,8 @@ requires ( sizeof( T2 ) == 8 ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href
 
 </div>
 </div>
-<a id="a2231abaaa9fb0b4999e6ea1ffdd436b8" name="a2231abaaa9fb0b4999e6ea1ffdd436b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2231abaaa9fb0b4999e6ea1ffdd436b8">&#9670;&#160;</a></span>Significand() <span class="overload">[2/2]</span></h2>
+<a id="aac5895533242f9db8b830cbae1fd9c43" name="aac5895533242f9db8b830cbae1fd9c43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac5895533242f9db8b830cbae1fd9c43">&#9670;&#160;</a></span>Significand() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -22261,7 +22201,7 @@ requires ( sizeof( T2 ) == 8 ) &amp;&amp; ( std::is_same_v&lt;<a class="el" href
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Harlinn::Common::Core::Significand </td>
+          <td class="memname"><a class="el" href="#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::Significand </td>
           <td>(</td>
           <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
           <td></td>

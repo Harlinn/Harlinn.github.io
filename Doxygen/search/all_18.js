@@ -201,7 +201,7 @@ var searchData=
   ['windowdevicecontextflags_198',['WindowDeviceContextFlags',['../namespace_harlinn_1_1_windows.html#ac4fcad5792b0d78035b9a69d8121c765',1,'Harlinn::Windows']]],
   ['windowdevicecontexthandle_199',['WindowDeviceContextHandle',['../class_harlinn_1_1_windows_1_1_window_device_context_handle.html',1,'Harlinn::Windows']]],
   ['windowedge_200',['WindowEdge',['../namespace_harlinn_1_1_windows.html#a3c62a158950cee3bb5e44e77e6d56f80a8c933a23a4192c31e85301b38c53aeb9',1,'Harlinn::Windows']]],
-  ['windowedsinc_201',['WindowedSinc',['../namespace_harlinn_1_1_common_1_1_core_1_1_math.html#ab4acf997284eebd77d7aaacff30c1b70',1,'Harlinn::Common::Core::Math']]],
+  ['windowedsinc_201',['WindowedSinc',['../namespace_harlinn_1_1_common_1_1_core_1_1_math.html#ad99253fa969624c3b7c461ad2e959702',1,'Harlinn::Common::Core::Math']]],
   ['windowextent_202',['WindowExtent',['../class_harlinn_1_1_windows_1_1_device_context_handle.html#a8374dc66cfb3bd64aaedcda44fb7a13c',1,'Harlinn::Windows::DeviceContextHandle']]],
   ['windowextrabytes_203',['WindowExtraBytes',['../class_harlinn_1_1_windows_1_1_window_class.html#a7446669dccbf833a029e12d497487568',1,'Harlinn::Windows::WindowClass']]],
   ['windowextrabytes_5f_204',['windowExtraBytes_',['../class_harlinn_1_1_windows_1_1_window_class.html#a5de893a65319b7248c8771e9a38fde9c',1,'Harlinn::Windows::WindowClass']]],

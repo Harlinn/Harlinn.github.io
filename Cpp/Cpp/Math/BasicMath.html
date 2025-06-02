@@ -232,11 +232,7 @@
   </header>
 
   <div class="post-content">
-    <p>In C++, like any other programming language, computations are performed using the available set
-of operators, the intrinsic functions implemented by the compiler, and the set of core mathematical 
-functions provided by the standard C and C++ libraries, or some alternative implementation.</p>
-
-<p>The header, <code class="language-plaintext highlighter-rouge">HCCMath.h</code> provides alternatives to many of the core mathematical function that is specified in 
+    <p>The header, <code class="language-plaintext highlighter-rouge">HCCMath.h</code>, provides alternatives to many of the core mathematical function that is specified in 
 the C and C++ standards. All of the functions can be <code class="language-plaintext highlighter-rouge">constexpr</code> evaluated, and several offer 
 runtime performance benefits as well.</p>
 
@@ -245,6 +241,57 @@ runtime performance benefits as well.</p>
 <p><img src="assets/BasicMath.svg" alt="" /></p>
 
 <p>The functions are implemented in the <a href="/Doxygen/namespace_harlinn_1_1_common_1_1_core_1_1_math.html"><code class="language-plaintext highlighter-rouge">Harlinn::Common::Core::Math</code> namespace</a>.</p>
+
+<h3 id="concepts">Concepts</h3>
+
+<ul>
+  <li><a href="BasicMath/Concepts.html">Concepts</a></li>
+</ul>
+
+<h3 id="functions">Functions</h3>
+
+<ul>
+  <li><a href="BasicMath/BasicOperations.html">Basic operations</a></li>
+  <li><a href="BasicMath/ExponentialFunctions.html">Exponential functions</a></li>
+  <li><a href="BasicMath/PowerFunctions.html">Power functions</a></li>
+  <li><a href="BasicMath/TrigonometricFunctions.html">Trigonometric functions</a></li>
+  <li><a href="BasicMath/HyperbolicFunctions.html">Hyperbolic functions</a></li>
+  <li><a href="BasicMath/ErrorAndGammaFunctions.html">Error and gamma functions</a></li>
+  <li><a href="BasicMath/NearestIntegerFloatingPointOperations.html">Nearest integer floating point operations</a></li>
+  <li><a href="BasicMath/FloatingPointManipulationFunctions.html">Floating point manipulation functions</a></li>
+  <li><a href="BasicMath/ClassificationAndComparison.html">Classification and comparison</a></li>
+  <li><a href="BasicMath/OtherFunctions.html">Other functions</a></li>
+  <li><a href="BasicMath/SpecialFunctions.html">Special Functions</a></li>
+</ul>
+
+<h2 id="background">Background</h2>
+
+<p>The functions were created to explore <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of mathematical expressions, since nothing
+improves runtime performance as much as making the compiler calculate the results at compile time.</p>
+
+<p>Since <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation doesn’t allow undefined behavior, this can be used to improve the
+safety of C++ code by performing <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of code in unit tests. 
+The <code class="language-plaintext highlighter-rouge">constexpr</code> evaluated code will not compile until all code with undefined behavior is 
+eliminated from the execution path of the <code class="language-plaintext highlighter-rouge">constexpr</code> evaluated code.</p>
+
+<p>While C++ 26 will enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of most functions within <code class="language-plaintext highlighter-rouge">&lt;cmath&gt;</code>, <code class="language-plaintext highlighter-rouge">HCCMath.h</code> makes this possible 
+right now.</p>
+
+<p>Much of the code is based on version <code class="language-plaintext highlighter-rouge">0.8.5</code> of the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> 
+mathematical C library used by the <a href="https://julialang.org/">Julia</a> programming language.</p>
+
+<p>The library does not include the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> floating
+point environment, and relies on the floating point environment provided by the
+Visual C++ runtime.</p>
+
+<p>Some functions, like <code class="language-plaintext highlighter-rouge">Sin</code>, can only perform <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation for a subset of the
+possible arguments. <code class="language-plaintext highlighter-rouge">Sin</code> has no problems with <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation for \(\pm 20000^\circ\),
+but fails to <code class="language-plaintext highlighter-rouge">constexpr</code> evaluate <code class="language-plaintext highlighter-rouge">Sin(1.7976931348623158e+308)</code>.</p>
+
+<p>The API is template based, which may seem odd, but this helps to reduce the number of
+unintended conversions between numeric types. Most functions designed to work with 
+floating point values do not accept integer values without an explicit cast to
+<code class="language-plaintext highlighter-rouge">float</code> or <code class="language-plaintext highlighter-rouge">double</code>.</p>
 
 <h3 id="unit-tests">Unit Tests</h3>
 
@@ -280,31 +327,6 @@ as an example of how the functionality in <code class="language-plaintext highli
 optimize the performance of real, computationally intensive, apps. It’s now about <code class="language-plaintext highlighter-rouge">91</code> % 
 faster than the release build of the original PBRT. <a href="pbrto.html">more…</a></p>
 
-<h2 id="background">Background</h2>
-
-<p>The functions were created to explore <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of mathematical expressions, since nothing
-improves runtime performance as much as making the compiler calculate the results at compile time.</p>
-
-<p>Since <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation doesn’t allow undefined behavior, this can also be used to eliminate 
-a wide range of subtle, and hard to find, errors in code using <code class="language-plaintext highlighter-rouge">HCCMath.h</code> that currently 
-cannot be <code class="language-plaintext highlighter-rouge">constexpr</code> evaluated using the standard libraries.</p>
-
-<p>Much of the code is based on version <code class="language-plaintext highlighter-rouge">0.8.5</code> of the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> 
-mathematical C library used by the <a href="https://julialang.org/">Julia</a> programming language.</p>
-
-<p>The library does not include the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> floating
-point environment, and relies on the floating point environment provided by the
-Visual C++ runtime.</p>
-
-<p>Some functions, like <code class="language-plaintext highlighter-rouge">Sin</code>, can only perform <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation for a subset of the
-possible arguments. <code class="language-plaintext highlighter-rouge">Sin</code> has no problems with <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation for \(\pm 20000^\circ\),
-but fails to <code class="language-plaintext highlighter-rouge">constexpr</code> evaluate <code class="language-plaintext highlighter-rouge">Sin(1.7976931348623158e+308)</code>.</p>
-
-<p>The API is template based, which may seem odd, but this helps to reduce the number of
-unintended conversions between numeric types. Most functions designed to work with 
-floating point values do not accept integer values without an explicit cast to
-<code class="language-plaintext highlighter-rouge">float</code> or <code class="language-plaintext highlighter-rouge">double</code>.</p>
-
 <h3 id="implementation-quality">Implementation quality</h3>
 
 <p>The quality of the implementation is, since it is based on <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a>,
@@ -315,488 +337,6 @@ better. When this is the case, the library selects the implementation with the b
 <p>Since some functions are implemented differently for <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation, they will not return
 identical results when executed at runtime. The difference is small; and can, in most cases, be ignored,
 as in these cases both implementations are based on approximations.</p>
-
-<h3 id="testing-the-runtime-functions">Testing the runtime functions</h3>
-
-<p>Changes to the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> code was required to
-enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation since constructs like <code class="language-plaintext highlighter-rouge">(x - x)/(x - x)</code> makes Visual C++ unhappy. So
-does <code class="language-plaintext highlighter-rouge">goto</code>s, <code class="language-plaintext highlighter-rouge">x/0.</code>, unions, <code class="language-plaintext highlighter-rouge">const</code>, <code class="language-plaintext highlighter-rouge">static</code> and <code class="language-plaintext highlighter-rouge">volatile</code> declarations; necessitating quite a few changes.</p>
-
-<p>Several of the tests execute the function under test 20 000 times using random generated values, while
-others try every possible value over the range of values most often used with the function.</p>
-
-<p>The functions in the <code class="language-plaintext highlighter-rouge">Math</code> namespace that use the <code class="language-plaintext highlighter-rouge">constepr</code> path implementation
-at runtime are thoroughly tested, and the tests tries to determine the maximum 
-deviation between the standard function and the corresponding function in the <code class="language-plaintext highlighter-rouge">Math</code> namespace.</p>
-
-<p>Deviation is calculated by the <code class="language-plaintext highlighter-rouge">Deviation</code> function below.</p>
-
-<p>The value passed for the first argument is the expected result, usually calculated using
-the standard implementation, while the value calculated by the corresponding function
-in the <code class="language-plaintext highlighter-rouge">Math</code> namespace is passed as the second argument.</p>
-
-<pre><code class="language-C++">inline double Deviation( double first, double second )
-{
-    // If both is NaN, the results don't deviate
-    if ( std::isnan( first ) )
-    {
-        if ( std::isnan( second ) )
-        {
-            return 0.0;
-        }
-        return std::numeric_limits&lt;double&gt;::infinity( );
-    }
-    else if ( std::isnan( second ) )
-    {
-        // The second value is NaN, but not the first
-        return std::numeric_limits&lt;double&gt;::infinity( );
-    }
-    if ( std::isinf( first ) )
-    {
-        if ( std::isinf( second ) )
-        {
-            if ( first &gt; 0. &amp;&amp; second &gt; 0. )
-            {
-                // Both values are +infinity
-                return 0;
-            }
-            else if ( first &lt; 0. &amp;&amp; second &lt; 0. )
-            {
-                // Both values are -infinity
-                return 0;
-            }
-            // Opposite signs
-            return std::numeric_limits&lt;double&gt;::infinity( );
-        }
-        // only the first value is infinite
-        return std::numeric_limits&lt;double&gt;::infinity( );
-    }
-    else if ( std::isinf( second ) )
-    {
-        // only the second value is infinite
-        return std::numeric_limits&lt;double&gt;::infinity( );
-    }
-
-    // Avoid division by zero
-    if ( first != 0.0 )
-    {
-        using std::abs;
-        if ( first &lt;= second )
-        {
-            return abs( second - first ) / abs( first );
-        }
-        else
-        {
-            return abs( first - second ) / abs( first );
-        }
-    }
-    else
-    {
-        // When second is very close to zero, the result is zero deviation
-        constexpr double veryCloseToZero = 5e-323;
-        auto absSecond = abs( second );
-        if ( absSecond &lt;= veryCloseToZero )
-        {
-            return 0.0;
-        }
-        // May still be very close to zero, but will cause the test to fail.
-        return 1.0;
-    }
-}
-</code></pre>
-
-<h3 id="exceptional-performance">Exceptional performance</h3>
-
-<p>A few functions outperforms the standard implementation spectacularly, like <code class="language-plaintext highlighter-rouge">Exp</code> 
-which outperforms <code class="language-plaintext highlighter-rouge">std::exp</code> by <code class="language-plaintext highlighter-rouge">1200</code> %.</p>
-
-<p>The two implementations returns the same result for <code class="language-plaintext highlighter-rouge">2261694913</code> out of <code class="language-plaintext highlighter-rouge">2288746510</code> cases, 
-and when tested with double precision floating point argument values, uniformly distributed
-over the interval <code class="language-plaintext highlighter-rouge">[-744.0, 710.0]</code>, the maximum deviation, <code class="language-plaintext highlighter-rouge">1.56426946755e-12</code>
-was obtained when passing <code class="language-plaintext highlighter-rouge">-717.256469727</code> as the argument to the functions.</p>
-
-<h3 id="using-simdtraitstn">Using <code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T.N&gt;</code></h3>
-
-<p>Some functions, like <code class="language-plaintext highlighter-rouge">Hypot</code>, use the <a href="SimdOperations.html"><code class="language-plaintext highlighter-rouge">SIMD::Traits&lt;T.N&gt;</code> specializations</a> to achieve excellent runtime performance.</p>
-
-<pre><code class="language-C++">template&lt;typename T&gt;
-    requires IsFloatingPoint&lt;T&gt;
-constexpr inline std::remove_cvref_t&lt;T&gt; Hypot( T x, T y, T z ) noexcept
-{
-    if ( std::is_constant_evaluated( ) )
-    {
-        return Math::Internal::OpenLibM::FastHypot( x, y );
-    }
-    else
-    {
-        using FloatT = std::remove_cvref_t&lt;T&gt;;
-        using Traits = SIMD::Traits&lt;FloatT, 3&gt;;
-
-        auto v = Traits::Set( z, y, x );
-        v = Traits::Mul( v, v );
-        v = Traits::HSum( v );
-        v = Traits::Sqrt( v );
-        return Traits::First( v );
-    }
-}
-</code></pre>
-
-<h3 id="using-the-standard-and-the-internal-implementation-at-runtime">Using the standard, and the internal, implementation at runtime.</h3>
-
-<p><code class="language-plaintext highlighter-rouge">Math::Internal::TanImpl</code> performs about 40 % worse than <code class="language-plaintext highlighter-rouge">std::tan</code>, for double precision
-floating point values, but <code class="language-plaintext highlighter-rouge">Math::Internal::TanImpl</code> beats <code class="language-plaintext highlighter-rouge">std::tan</code>, for single precision
-floating point values, by more than <code class="language-plaintext highlighter-rouge">60</code> %, and splitting the execution path between 
-<code class="language-plaintext highlighter-rouge">Math::Internal::TanImpl</code> for single precision floating point values, and <code class="language-plaintext highlighter-rouge">std::tan</code>
-provides the best solution:</p>
-
-<pre><code class="language-C++">template&lt;typename T&gt;
-    requires IsFloatingPoint&lt;T&gt;
-constexpr inline std::remove_cvref_t&lt;T&gt; Tan( T x ) noexcept
-{
-    using FloatT = std::remove_cvref_t&lt;T&gt;;
-    if ( std::is_constant_evaluated( ) )
-    {
-        if constexpr ( std::is_same_v&lt;FloatT, float&gt; )
-        {
-            return Math::Internal::OpenLibM::tanf( x );
-        }
-        else
-        {
-            return Math::Internal::OpenLibM::tan( x );
-        }
-    }
-    else
-    {
-        if constexpr ( std::is_same_v&lt;FloatT, float&gt; )
-        {
-            return Math::Internal::OpenLibM::tanf( x );
-        }
-        else
-        {
-            return std::tan( x );
-        }
-    }
-}
-</code></pre>
-
-<p>The runtime execution path for each function is selected based on its performance 
-in the <a href="Benchmarks.html">benchmarks</a>.</p>
-
-<h2 id="basic-operations">Basic operations</h2>
-
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Abs</code> which returns the absolute value \(|x|\) for <code class="language-plaintext highlighter-rouge">x</code>, is implemented for 
-floating point types, signed integers and unsigned integers. Calls <code class="language-plaintext highlighter-rouge">std::abs</code>
-at runtime.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">FMod</code> which calculate the remainder of a floating point division operation, 
-is implemented for floating point types.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">FMod</code> outperforms <code class="language-plaintext highlighter-rouge">std::fmod</code> by approximately <code class="language-plaintext highlighter-rouge">60</code> % for double precision floating
-point values, and by <code class="language-plaintext highlighter-rouge">40</code> % for single precision floating point values.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Max</code> which returns the greater of to values, is implemented for floating point types.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Max</code> calls <code class="language-plaintext highlighter-rouge">std::max</code> at compile time, and at runtime it calls <code class="language-plaintext highlighter-rouge">_mm_max_ss</code> for single 
-precision floating point values, and <code class="language-plaintext highlighter-rouge">std::max</code> for double precision floating
-point values. This improves the performance, on the average, by <code class="language-plaintext highlighter-rouge">10</code> % for single 
-precision floating point values. It varies between <code class="language-plaintext highlighter-rouge">2</code> % and <code class="language-plaintext highlighter-rouge">30</code> % for each run 
-of the benchmarks.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Min</code> which returns the lesser of to values, is implemented for floating point types.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Min</code> calls <code class="language-plaintext highlighter-rouge">std::min</code> at compile time, and at runtime it calls <code class="language-plaintext highlighter-rouge">_mm_min_ss</code> for single 
-precision floating point values, and <code class="language-plaintext highlighter-rouge">std::min</code> for double precision floating
-point values. This improves the performance, on the average, by <code class="language-plaintext highlighter-rouge">7</code> % for single 
-precision floating point values. It varies between <code class="language-plaintext highlighter-rouge">-2</code> % and <code class="language-plaintext highlighter-rouge">20</code> % for each run 
-of the benchmarks.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">IsSameValue</code> checks for binary equality between two floating point values.</p>
-  </li>
-</ul>
-
-<h2 id="exponential-functions">Exponential functions</h2>
-
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Exp</code> returns <strong>e</strong> raised to the given power (<strong>e</strong><sup><code class="language-plaintext highlighter-rouge">x</code></sup>).</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Exp</code> outperforms <code class="language-plaintext highlighter-rouge">std::exp</code> by approximately <code class="language-plaintext highlighter-rouge">1200</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">1000</code> % for single precision floating point values.</p>
-
-    <p>The maximum detected deviation between <code class="language-plaintext highlighter-rouge">std::exp</code> and <code class="language-plaintext highlighter-rouge">Exp</code> is <code class="language-plaintext highlighter-rouge">1.18844e-07</code> for single precision
-floating point values, and <code class="language-plaintext highlighter-rouge">2.18599e-16</code> for double precision floating point values, for argument
-values in the range <code class="language-plaintext highlighter-rouge">-9</code> to <code class="language-plaintext highlighter-rouge">10</code>, tested with a uniform random distribution of <code class="language-plaintext highlighter-rouge">10'000</code> values.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Log</code> computes natural, base <strong>e</strong>, logarithm (ln x)</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Log</code> outperforms <code class="language-plaintext highlighter-rouge">std::log</code> by approximately <code class="language-plaintext highlighter-rouge">260</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">400</code> % for single precision floating point values.</p>
-
-    <p>The maximum detected deviation between <code class="language-plaintext highlighter-rouge">std::log</code> and <code class="language-plaintext highlighter-rouge">Log</code> is <code class="language-plaintext highlighter-rouge">1.18795e-07</code> for single precision
-floating point values, and <code class="language-plaintext highlighter-rouge">2.04848e-16</code> for double precision floating point values, for argument
-values in the range <code class="language-plaintext highlighter-rouge">0</code> to <code class="language-plaintext highlighter-rouge">100000</code>, tested with a uniform random distribution of <code class="language-plaintext highlighter-rouge">10'000</code> values.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Log2</code> base 2 logarithm of the given number (log<sub>2</sub><code class="language-plaintext highlighter-rouge">x</code>).</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Log2</code> outperforms <code class="language-plaintext highlighter-rouge">std::log2</code> by approximately <code class="language-plaintext highlighter-rouge">270</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">250</code> % for single precision floating point values.</p>
-
-    <p>The maximum detected deviation between <code class="language-plaintext highlighter-rouge">std::log2</code> and <code class="language-plaintext highlighter-rouge">Log2</code> is <code class="language-plaintext highlighter-rouge">1.18288e-07</code> for single precision
-floating point values, and <code class="language-plaintext highlighter-rouge">2.1882e-16</code> for double precision floating point values, for argument
-values in the range <code class="language-plaintext highlighter-rouge">0</code> to <code class="language-plaintext highlighter-rouge">100000</code>, tested with a uniform random distribution of <code class="language-plaintext highlighter-rouge">10'000</code> values.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Log10</code> computes common (base 10) logarithm (log<sub>10</sub><code class="language-plaintext highlighter-rouge">x</code> )</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Log10</code> outperforms <code class="language-plaintext highlighter-rouge">std::log10</code> by approximately <code class="language-plaintext highlighter-rouge">360</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">390</code> % for single precision floating point values.</p>
-
-    <p>The maximum detected deviation between <code class="language-plaintext highlighter-rouge">std::log10</code> and <code class="language-plaintext highlighter-rouge">Log10</code> is <code class="language-plaintext highlighter-rouge">1.18216e-07</code> for single precision
-floating point values, and <code class="language-plaintext highlighter-rouge">2.0154e-16</code> for double precision floating point values, for argument
-values in the range <code class="language-plaintext highlighter-rouge">0</code> to <code class="language-plaintext highlighter-rouge">100000</code>, tested with a uniform random distribution of <code class="language-plaintext highlighter-rouge">10'000</code> values.</p>
-  </li>
-</ul>
-
-<h2 id="power-functions">Power functions</h2>
-
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Sqrt</code> computes square root (√<code class="language-plaintext highlighter-rouge">x</code>)</p>
-
-    <p>Calls <code class="language-plaintext highlighter-rouge">_mm_sqrt_pd</code> or <code class="language-plaintext highlighter-rouge">_mm_sqrt_ps</code> at runtime.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Sqrt</code> outperforms <code class="language-plaintext highlighter-rouge">std::sqrt</code> by approximately <code class="language-plaintext highlighter-rouge">1400</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">1300</code> % for single precision floating point values.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Hypot</code> computes square root of the sum of the squares of two or three numbers.</p>
-
-    <p>The two argument version of <code class="language-plaintext highlighter-rouge">Hypot</code> outperforms <code class="language-plaintext highlighter-rouge">std::hypot</code> by approximately <code class="language-plaintext highlighter-rouge">270</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">230</code> % for single precision floating point values.</p>
-
-    <p>The three argument version of <code class="language-plaintext highlighter-rouge">Hypot</code> outperforms <code class="language-plaintext highlighter-rouge">std::hypot</code> by approximately <code class="language-plaintext highlighter-rouge">190</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">320</code> % for single precision floating point values.</p>
-  </li>
-</ul>
-
-<h2 id="trigonometric-functions">Trigonometric functions</h2>
-
-<p>Graphic intensive application are highly sensitive to the performance of 
-the trigonometric functions, especially for single precision floating point values.</p>
-
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Sin</code> computes the sine of its argument given in radians.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Sin</code> calls <code class="language-plaintext highlighter-rouge">std::sin</code> at runtime for both single and double precision values.</p>
-
-    <p>The <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Sin</code> outperforms <code class="language-plaintext highlighter-rouge">std::sin</code> by approximately <code class="language-plaintext highlighter-rouge">100</code> % for single precision 
-floating point values, but performs worse when both the sine and the cosine
-is calculated for the same value.</p>
-
-    <p>The maximum deviation between <code class="language-plaintext highlighter-rouge">std::sin</code> and the <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Sin</code> is <code class="language-plaintext highlighter-rouge">1.19182e-07</code> for single precision
-floating point values, and <code class="language-plaintext highlighter-rouge">2.22045e-16</code> for double precision floating point values, tested for all possible single 
-precision floating point argument values for in the range <code class="language-plaintext highlighter-rouge">-((2*pi)+epsilon)</code> to <code class="language-plaintext highlighter-rouge">((2*pi)+epsilon)</code>.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Cos</code> computes the cosine of its argument given in radians.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Cos</code> calls <code class="language-plaintext highlighter-rouge">std::cos</code> at runtime for both single and double precision values.</p>
-
-    <p>The <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Cos</code> outperforms <code class="language-plaintext highlighter-rouge">std::cos</code> by approximately <code class="language-plaintext highlighter-rouge">110</code> % for single precision 
-floating point values, but performs worse when both the sine and the cosine
-is calculated for the same value.</p>
-
-    <p>The maximum deviation between <code class="language-plaintext highlighter-rouge">std::cos</code> and the <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Cos</code> is <code class="language-plaintext highlighter-rouge">1.19187e-07</code> for single precision
-floating point values, and <code class="language-plaintext highlighter-rouge">2.22044e-16</code> for double precision floating point values, tested for all possible single 
-precision floating point argument values for in the range <code class="language-plaintext highlighter-rouge">-((2*pi)+epsilon)</code> to <code class="language-plaintext highlighter-rouge">((2*pi)+epsilon)</code>.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Tan</code> computes the tangent of its argument given in radians.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Tan</code> outperforms <code class="language-plaintext highlighter-rouge">std::tan</code> by approximately <code class="language-plaintext highlighter-rouge">60</code> % for single precision 
-floating point values,</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Tan</code> calls std::tan at runtime, with a consistent performance penalty of about <code class="language-plaintext highlighter-rouge">20</code> %
-compared to calling <code class="language-plaintext highlighter-rouge">std::tan</code> directly for double precision floating point values.</p>
-
-    <p>The maximum deviation between <code class="language-plaintext highlighter-rouge">std::tan</code> and the <code class="language-plaintext highlighter-rouge">constexpr</code> path for <code class="language-plaintext highlighter-rouge">Tan</code> is <code class="language-plaintext highlighter-rouge">1.19209e-07</code> for single precision
-floating point values, and <code class="language-plaintext highlighter-rouge">2.22045e-16</code> for double precision floating point values, tested for all possible single 
-precision floating point argument values for in the range <code class="language-plaintext highlighter-rouge">-((2*pi)+epsilon)</code> to <code class="language-plaintext highlighter-rouge">((2*pi)+epsilon)</code>.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">ASin</code> computes arc sine of its argument.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">ASin</code> outperforms <code class="language-plaintext highlighter-rouge">std::asin</code> by approximately <code class="language-plaintext highlighter-rouge">20</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">30</code> % for single precision floating point values.</p>
-
-    <p>The maximum deviation between <code class="language-plaintext highlighter-rouge">std::asin</code> and <code class="language-plaintext highlighter-rouge">ASin</code> is <code class="language-plaintext highlighter-rouge">2.27673e-07</code> for single precision
-floating point values, and <code class="language-plaintext highlighter-rouge">2.22044e-16</code> for double precision floating point values, tested for all possible single 
-precision floating point argument values for in the range <code class="language-plaintext highlighter-rouge">-1.0</code> to <code class="language-plaintext highlighter-rouge">1.0</code>.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">ACos</code> computes the arc cosine of its argument.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">ACos</code> outperforms <code class="language-plaintext highlighter-rouge">std::acos</code> by approximately <code class="language-plaintext highlighter-rouge">30</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">50</code> % for single precision floating point values.</p>
-
-    <p>The maximum deviation between <code class="language-plaintext highlighter-rouge">std::acos</code> and <code class="language-plaintext highlighter-rouge">ACos</code> is <code class="language-plaintext highlighter-rouge">1.19209e-07</code> for single precision
-floating point values, and <code class="language-plaintext highlighter-rouge">2.22044e-16</code> for double precision floating point values, tested for all possible single 
-precision floating point argument values for in the range <code class="language-plaintext highlighter-rouge">-1.0</code> to <code class="language-plaintext highlighter-rouge">1.0</code>.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">ATan</code> computes the arc tangent of its argument.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">ATan</code> outperforms <code class="language-plaintext highlighter-rouge">std::atan</code> by approximately <code class="language-plaintext highlighter-rouge">5</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">30</code> % for single precision floating point values.</p>
-
-    <p>The maximum detected deviation between <code class="language-plaintext highlighter-rouge">std::atan</code> and <code class="language-plaintext highlighter-rouge">ATan</code> is <code class="language-plaintext highlighter-rouge">0.0</code> for single precision
-floating point values, and <code class="language-plaintext highlighter-rouge">0.0</code> for double precision floating point values, tested with a 
-uniform random distribution of <code class="language-plaintext highlighter-rouge">10'000</code> values in the range <code class="language-plaintext highlighter-rouge">-10'000</code> to <code class="language-plaintext highlighter-rouge">10'000</code>.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">ATan2</code> computes the arc tangent of <code class="language-plaintext highlighter-rouge">y</code> / <code class="language-plaintext highlighter-rouge">x</code>, its two arguments, using signs 
-to determine quadrants.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">ATan2</code> outperforms <code class="language-plaintext highlighter-rouge">std::atan2</code> by approximately <code class="language-plaintext highlighter-rouge">20</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">40</code> % for single precision floating point values.</p>
-
-    <p>The maximum detected deviation between <code class="language-plaintext highlighter-rouge">std::atan2</code> and <code class="language-plaintext highlighter-rouge">ATan2</code> is <code class="language-plaintext highlighter-rouge">0.0</code> for single precision
-floating point values, and <code class="language-plaintext highlighter-rouge">0.0</code> for double precision floating point values, tested with a 
-uniform random distribution of <code class="language-plaintext highlighter-rouge">10'000</code> values in the range <code class="language-plaintext highlighter-rouge">-10'000</code> to <code class="language-plaintext highlighter-rouge">10'000</code>.</p>
-  </li>
-</ul>
-
-<h2 id="nearest-integral-value-floating-point-operations">Nearest integral value floating point operations</h2>
-
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Ceil</code> computes the nearest integral value not less than the given value.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Ceil</code> calls <code class="language-plaintext highlighter-rouge">__ceil</code> or <code class="language-plaintext highlighter-rouge">__ceilf</code> at runtime.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Floor</code> computes the nearest integral value not greater than the given value.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Floor</code> calls <code class="language-plaintext highlighter-rouge">__floor</code> or <code class="language-plaintext highlighter-rouge">__floorf</code> at runtime.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Trunc</code> computes the nearest integral value not greater in magnitude than the given value.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Trunc</code> calls <code class="language-plaintext highlighter-rouge">__truncf</code> at runtime for single precision floating point numbers,
-and calls <code class="language-plaintext highlighter-rouge">_mm_round_pd</code> double precision floating point numbers, improving performance
-by <code class="language-plaintext highlighter-rouge">320</code> %.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Round</code> computes the nearest integral value, rounding away from zero in halfway cases.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Round</code> calls <code class="language-plaintext highlighter-rouge">__roundf</code> at runtime for single precision floating point numbers,
-and calls <code class="language-plaintext highlighter-rouge">_mm_round_pd</code> double precision floating point numbers, improving performance
-by <code class="language-plaintext highlighter-rouge">500</code> %.</p>
-  </li>
-</ul>
-
-<h2 id="floating-point-manipulation-functions">Floating point manipulation functions</h2>
-
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">FRExp</code> decomposes a number into significand and base-2 exponent.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">FRExp</code> outperforms <code class="language-plaintext highlighter-rouge">std::frexp</code> by approximately <code class="language-plaintext highlighter-rouge">450</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">550</code> % for single precision floating point values.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">ModF</code> decomposes a number into integer and fractional parts.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">ModF</code> outperforms <code class="language-plaintext highlighter-rouge">std::modf</code> by approximately <code class="language-plaintext highlighter-rouge">60</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">50</code> % for single precision floating point values.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">ScaleByN</code> multiplies a number by FLT_RADIX raised to a power.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">ScaleByN</code> outperforms <code class="language-plaintext highlighter-rouge">std::scalbn</code> by approximately <code class="language-plaintext highlighter-rouge">90</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">170</code> % for single precision floating point values.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">NextAfter</code> next representable floating-point value towards the given value.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">NextAfter</code> outperforms <code class="language-plaintext highlighter-rouge">std::nextafter</code> by approximately <code class="language-plaintext highlighter-rouge">40</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">90</code> % for single precision floating point values.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">NextUp</code> Return the smallest floating point number y of the same 
-type as x such that x &lt; y. If no such y exists, e.g. if x is Inf or NaN, then return x.</p>
-
-    <p>The standard C++ implementation is <code class="language-plaintext highlighter-rouge">std::nextafter( x, std::numeric_limits&lt;double&gt;::infinity( ) )</code>.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">NextUp</code> outperforms <code class="language-plaintext highlighter-rouge">std::nextafter</code> by approximately <code class="language-plaintext highlighter-rouge">1400</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">1300</code> % for single precision floating point values.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">NextDown</code> Return the largest floating point number y of the same type 
-as x such that y &lt; x. If no such y exists, e.g. if x is -Inf or NaN, then return x.</p>
-
-    <p>The standard C++ implementation is <code class="language-plaintext highlighter-rouge">std::nextafter( x, -std::numeric_limits&lt;double&gt;::infinity( ) )</code>.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">NextDown</code> outperforms <code class="language-plaintext highlighter-rouge">std::nextafter</code> by approximately <code class="language-plaintext highlighter-rouge">210</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">330</code> % for single precision floating point values.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">CopySign</code> copies the sign of a floating point value.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">NextDown</code> outperforms <code class="language-plaintext highlighter-rouge">std::nextafter</code> by approximately <code class="language-plaintext highlighter-rouge">300</code> % for double precision floating
-point values, and by approximately <code class="language-plaintext highlighter-rouge">10</code> % for single precision floating point values.</p>
-  </li>
-</ul>
-
-<h2 id="classification-and-comparison">Classification and comparison</h2>
-
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">IsNaN</code> checks if the given number is NaN.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">IsNaN</code> calls <code class="language-plaintext highlighter-rouge">std::isnan</code> at runtime.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">IsInf</code> checks if the given number is infinite.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">IsInf</code> calls <code class="language-plaintext highlighter-rouge">std::isinf</code> for double precision floating point values, and
-outperforms <code class="language-plaintext highlighter-rouge">std::isinf</code> for single precision floating point values by <code class="language-plaintext highlighter-rouge">40</code> %.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">SignBit</code> checks if the given number is negative.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">SignBit</code> outperforms <code class="language-plaintext highlighter-rouge">std::signbit</code> by approximately <code class="language-plaintext highlighter-rouge">50</code> % for both double and 
-single precision floating point values.</p>
-  </li>
-</ul>
-
-<h2 id="other-computations">Other computations</h2>
-
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Clamp</code> If the a value is within [minimumValue, maximumValue], the function 
-returns the value, otherwise it returns the nearest boundary.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Clamp</code> calls <code class="language-plaintext highlighter-rouge">std::clamp</code> at runtime.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">Lerp</code> Computes the linear interpolation between a and b, if the 
-parameter t is inside [​0​, 1), the linear extrapolation otherwise, 
-i.e. the result of a + t * ( b - a ) with accounting 
-for floating point calculation imprecision.</p>
-
-    <p><code class="language-plaintext highlighter-rouge">Lerp</code> calls <code class="language-plaintext highlighter-rouge">std::lerp</code> at runtime.</p>
-  </li>
-</ul>
 
 
   </div>

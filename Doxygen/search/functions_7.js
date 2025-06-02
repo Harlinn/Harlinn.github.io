@@ -3,7 +3,7 @@ var searchData=
   ['g_0',['G',['../class_harlinn_1_1_windows_1_1_graphics_1_1_color.html#a0e6404af0cbafb30f8605a517d71813c',1,'Harlinn::Windows::Graphics::Color']]],
   ['games_1',['Games',['../namespace_harlinn_1_1_windows_1_1_environment_1_1_known_folder.html#af5e80c07be804c5db34728ad1e52a4b1',1,'Harlinn::Windows::Environment::KnownFolder']]],
   ['gametasks_2',['GameTasks',['../namespace_harlinn_1_1_windows_1_1_environment_1_1_known_folder.html#ab045b487295838a8d8eae95b62387a53',1,'Harlinn::Windows::Environment::KnownFolder']]],
-  ['gamma_3',['Gamma',['../namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a88edd4d241215d43c5f4c1cf7949d56a',1,'Harlinn::Common::Core::Math']]],
+  ['gamma_3',['Gamma',['../namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a39424ba1cccaa41c9e07ecd20c47328b',1,'Harlinn::Common::Core::Math']]],
   ['gather_4',['Gather',['../namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a92f3350ddfbf91d4f9647f63e89cca0f',1,'Harlinn::AI::DML::X']]],
   ['gatherelements_5',['GatherElements',['../namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a17d2649eb8c8af5a7108de3af0c89407',1,'Harlinn::AI::DML::X']]],
   ['gathernd_6',['GatherND',['../namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#aa6ba98a536465ed10bf8e67a01762e0b',1,'Harlinn::AI::DML::X']]],

@@ -118,6 +118,7 @@ var concepts =
           [ "IntegerType", "concept_harlinn_1_1_common_1_1_core_1_1_integer_type.html", null ],
           [ "SignedIntegerType", "concept_harlinn_1_1_common_1_1_core_1_1_signed_integer_type.html", null ],
           [ "UnsignedIntegerType", "concept_harlinn_1_1_common_1_1_core_1_1_unsigned_integer_type.html", null ],
+          [ "UnsignedIntegerOrBooleanType", "concept_harlinn_1_1_common_1_1_core_1_1_unsigned_integer_or_boolean_type.html", null ],
           [ "ArithmeticType", "concept_harlinn_1_1_common_1_1_core_1_1_arithmetic_type.html", null ],
           [ "GuidType", "concept_harlinn_1_1_common_1_1_core_1_1_guid_type.html", null ],
           [ "WideStringType", "concept_harlinn_1_1_common_1_1_core_1_1_wide_string_type.html", null ]
