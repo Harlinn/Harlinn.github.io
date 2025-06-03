@@ -236,13 +236,85 @@
 
 <p>Returns the tangent of the argument.</p>
 
-<pre><code class="language-C++">
-
+<pre><code class="language-C++">template&lt;FloatingPointType T&gt;
+constexpr inline T Tan( T x ) noexcept;
 </code></pre>
+<p>Computes the tangent of x given in radians.</p>
 
 <h3 id="exampletest-code">Example/Test code</h3>
 
-<pre><code class="language-C++">
+<pre><code class="language-C++">constexpr auto rM20000 = Deg2Rad( -20000.f );
+constexpr auto rM720 = Deg2Rad( -720.f );
+constexpr auto rM360 = Deg2Rad( -360.f );
+constexpr auto rM180 = Deg2Rad( -180.f );
+constexpr auto rM135 = Deg2Rad( 135.f );
+constexpr auto rM90 = Deg2Rad( -90.f );
+constexpr auto rM45 = Deg2Rad( -45.f );
+constexpr auto r0 = Deg2Rad( 0.f );
+constexpr auto r45 = Deg2Rad( 45.f );
+constexpr auto r90 = Deg2Rad( 90.f );
+constexpr auto r135 = Deg2Rad( 135.f );
+constexpr auto r180 = Deg2Rad( 180.f );
+constexpr auto r360 = Deg2Rad( 360.f );
+constexpr auto r720 = Deg2Rad( 720.f );
+constexpr auto r20000 = Deg2Rad( 20000.f );
+
+constexpr auto tanRM20000 = Tan( rM20000 );
+constexpr auto tanRM720 = Tan( rM720 );
+constexpr auto tanRM360 = Tan( rM360 );
+constexpr auto tanRM180 = Tan( rM180 );
+constexpr auto tanRM135 = Tan( rM135 );
+constexpr auto tanRM90 = Tan( rM90 );
+constexpr auto tanRM45 = Tan( rM45 );
+constexpr auto tanR0 = Tan( r0 );
+constexpr auto tanR45 = Tan( r45 );
+constexpr auto tanR90 = Tan( r90 );
+constexpr auto tanR135 = Tan( r135 );
+constexpr auto tanR180 = Tan( r180 );
+constexpr auto tanR360 = Tan( r360 );
+constexpr auto tanR720 = Tan( r720 );
+constexpr auto tanR20000 = Tan( r20000 );
+
+auto expectedTanRM20000 = std::tan( rM20000 );
+auto expectedTanRM720 = std::tan( rM720 );
+auto expectedTanRM360 = std::tan( rM360 );
+auto expectedTanRM180 = std::tan( rM180 );
+auto expectedTanRM135 = std::tan( rM135 );
+auto expectedTanRM90 = std::tan( rM90 );
+auto expectedTanRM45 = std::tan( rM45 );
+auto expectedTanR0 = std::tan( r0 );
+auto expectedTanR45 = std::tan( r45 );
+auto expectedTanR90 = std::tan( r90 );
+auto expectedTanR135 = std::tan( r135 );
+auto expectedTanR180 = std::tan( r180 );
+auto expectedTanR360 = std::tan( r360 );
+auto expectedTanR720 = std::tan( r720 );
+auto expectedTanR20000 = std::tan( r20000 );
+
+BOOST_CHECK( expectedTanRM20000 == tanRM20000 );
+BOOST_CHECK( expectedTanRM720 == tanRM720 );
+BOOST_CHECK_CLOSE( expectedTanRM360, tanRM360, 0.00001f );
+BOOST_CHECK_CLOSE( expectedTanRM180, tanRM180, 0.00001f );
+BOOST_CHECK( expectedTanRM135 == tanRM135 );
+BOOST_CHECK( expectedTanRM90 == tanRM90 );
+BOOST_CHECK( expectedTanRM45 == tanRM45 );
+BOOST_CHECK( expectedTanR0 == tanR0 );
+BOOST_CHECK( expectedTanR45 == tanR45 );
+BOOST_CHECK( expectedTanR90 == tanR90 );
+BOOST_CHECK( expectedTanR135 == tanR135 );
+BOOST_CHECK_CLOSE( expectedTanR180, tanR180, 0.00001f );
+BOOST_CHECK_CLOSE( expectedTanR360, tanR360, 0.00001f );
+BOOST_CHECK( expectedTanR720 == tanR720 );
+BOOST_CHECK( expectedTanR20000 == tanR20000 );
+
+
+constexpr auto radians = Deg2Rad( 0.001f );
+constexpr auto result1a = Tan( radians );
+auto result1b = std::tan( radians );
+auto result1Diff = result1a - result1b;
+BOOST_CHECK( result1a == result1b );
+BOOST_CHECK( result1a == 1.74532925e-05f );
+BOOST_CHECK( result1b == 1.74532925e-05f );
 </code></pre>
 
   </div>

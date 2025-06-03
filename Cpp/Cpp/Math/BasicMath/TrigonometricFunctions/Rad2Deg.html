@@ -236,13 +236,24 @@
 
 <p>Converts the argument from radians to degrees.</p>
 
-<pre><code class="language-C++">
-
+<pre><code class="language-C++">template&lt; FloatingPointType T&gt;
+constexpr inline T Rad2Deg( T angleInRadians ) noexcept;
 </code></pre>
 
 <h3 id="exampletest-code">Example/Test code</h3>
 
-<pre><code class="language-C++">
+<pre><code class="language-C++">using C = Constants&lt;float&gt;;
+
+constexpr auto result1 = Rad2Deg( 0.f );
+BOOST_CHECK( result1 == C::Zero );
+
+constexpr auto result2 = Rad2Deg( C::PiOver4 );
+static_assert( result2 == 45.f );
+BOOST_CHECK( result2 == 45.f );
+
+constexpr auto result3 = Rad2Deg( C::PiOver2 );
+static_assert( result3 == 90.f );
+BOOST_CHECK( result3 == 90.f );
 </code></pre>
 
   </div>

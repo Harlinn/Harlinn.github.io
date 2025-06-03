@@ -236,13 +236,55 @@
 
 <p>Returns the arctangent of the argument.</p>
 
-<pre><code class="language-C++">
-
+<pre><code class="language-C++">template&lt;FloatingPointType T&gt;
+constexpr inline T ATan( T x ) noexcept
 </code></pre>
+<p>Computes the value of the arc tangent of x.</p>
+
+<pre><code class="language-C++">template&lt;FloatingPointType T&gt;
+constexpr inline T ATan( T y, T x ) noexcept
+</code></pre>
+<p>Computes the arc tangent of y / x using the signs of arguments to determine the correct quadrant.</p>
 
 <h3 id="exampletest-code">Example/Test code</h3>
 
-<pre><code class="language-C++">
+<pre><code class="language-C++">using C = Constants&lt;float&gt;;
+
+constexpr auto Check = []( C::ValueType x, C::ValueType expected ) -&gt; bool
+    {
+        auto r = ATan( x );
+        return IsSameValue( r, expected );
+    };
+
+constexpr auto CheckIsNaN = []( C::ValueType x ) -&gt; bool
+    {
+        auto r = ATan( x );
+        return IsNaN( r );
+    };
+
+constexpr auto check1 = Check( 0., 0. );
+BOOST_CHECK( check1 );
+
+constexpr auto check2 = Check( -0., -0. );
+BOOST_CHECK( check2 );
+
+constexpr auto check3 = Check( C::Infinity, C::PiOver2 );
+BOOST_CHECK( check3 );
+
+constexpr auto check4 = Check( -C::Infinity, -C::PiOver2 );
+BOOST_CHECK( check4 );
+
+constexpr auto check5 = CheckIsNaN( C::NaN );
+BOOST_CHECK( check5 );
+
+constexpr auto check6 = Check( C::One, C::PiOver4 );
+BOOST_CHECK( check6 );
+
+constexpr auto check7 = Check( -C::One, -C::PiOver4 );
+BOOST_CHECK( check7 );
+
+constexpr auto check8 = Check( 0.7, 0.610725939f );
+BOOST_CHECK( check8 );
 </code></pre>
 
   </div>

@@ -236,13 +236,85 @@
 
 <p>Returns the cosine of the argument.</p>
 
-<pre><code class="language-C++">
-
+<pre><code class="language-C++">template&lt;FloatingPointType T&gt;
+constexpr inline T Cos( T x ) noexcept;
 </code></pre>
+<p>Computes the cosine of x given in radians.</p>
 
 <h3 id="exampletest-code">Example/Test code</h3>
 
-<pre><code class="language-C++">
+<pre><code class="language-C++">constexpr auto rM20000 = Deg2Rad( -20000.f );
+constexpr auto rM720 = Deg2Rad( -720.f );
+constexpr auto rM360 = Deg2Rad( -360.f );
+constexpr auto rM180 = Deg2Rad( -180.f );
+constexpr auto rM135 = Deg2Rad( 135.f );
+constexpr auto rM90 = Deg2Rad( -90.f );
+constexpr auto rM45 = Deg2Rad( -45.f );
+constexpr auto r0 = Deg2Rad( 0.f );
+constexpr auto r45 = Deg2Rad( 45.f );
+constexpr auto r90 = Deg2Rad( 90.f );
+constexpr auto r135 = Deg2Rad( 135.f );
+constexpr auto r180 = Deg2Rad( 180.f );
+constexpr auto r360 = Deg2Rad( 360.f );
+constexpr auto r720 = Deg2Rad( 720.f );
+constexpr auto r20000 = Deg2Rad( 20000.f );
+
+constexpr auto cosineRM20000 = Cos( rM20000 );
+constexpr auto cosineRM720 = Cos( rM720 );
+constexpr auto cosineRM360 = Cos( rM360 );
+constexpr auto cosineRM180 = Cos( rM180 );
+constexpr auto cosineRM135 = Cos( rM135 );
+constexpr auto cosineRM90 = Cos( rM90 );
+constexpr auto cosineRM45 = Cos( rM45 );
+constexpr auto cosineR0 = Cos( r0 );
+constexpr auto cosineR45 = Cos( r45 );
+constexpr auto cosineR90 = Cos( r90 );
+constexpr auto cosineR135 = Cos( r135 );
+constexpr auto cosineR180 = Cos( r180 );
+constexpr auto cosineR360 = Cos( r360 );
+constexpr auto cosineR720 = Cos( r720 );
+constexpr auto cosineR20000 = Cos( r20000 );
+
+auto expectedCosineRM20000 = std::cos( rM20000 );
+auto expectedCosineRM720 = std::cos( rM720 );
+auto expectedCosineRM360 = std::cos( rM360 );
+auto expectedCosineRM180 = std::cos( rM180 );
+auto expectedCosineRM135 = std::cos( rM135 );
+auto expectedCosineRM90 = std::cos( rM90 );
+auto expectedCosineRM45 = std::cos( rM45 );
+auto expectedCosineR0 = std::cos( r0 );
+auto expectedCosineR45 = std::cos( r45 );
+auto expectedCosineR90 = std::cos( r90 );
+auto expectedCosineR135 = std::cos( r135 );
+auto expectedCosineR180 = std::cos( r180 );
+auto expectedCosineR360 = std::cos( r360 );
+auto expectedCosineR720 = std::cos( r720 );
+auto expectedCosineR20000 = std::cos( r20000 );
+
+BOOST_CHECK( expectedCosineRM20000 == cosineRM20000 );
+BOOST_CHECK( expectedCosineRM720 == cosineRM720 );
+BOOST_CHECK( expectedCosineRM360 == cosineRM360 );
+BOOST_CHECK( expectedCosineRM180 == cosineRM180 );
+BOOST_CHECK( expectedCosineRM135 == cosineRM135 );
+BOOST_CHECK( expectedCosineRM90 == cosineRM90 );
+BOOST_CHECK_CLOSE( expectedCosineRM45, cosineRM45, 0.0000000000001 );
+BOOST_CHECK( expectedCosineR0 == cosineR0 );
+BOOST_CHECK_CLOSE( expectedCosineR45, cosineR45, 0.0000000000001 );
+BOOST_CHECK( expectedCosineR90 == cosineR90 );
+BOOST_CHECK( expectedCosineR135 == cosineR135 );
+BOOST_CHECK( expectedCosineR180 == cosineR180 );
+BOOST_CHECK( expectedCosineR360 == cosineR360 );
+BOOST_CHECK( expectedCosineR720 == cosineR720 );
+BOOST_CHECK( expectedCosineR20000 == cosineR20000 );
+
+
+constexpr auto radians = Deg2Rad( 0.001f );
+constexpr auto result1a = Cos( radians );
+auto result1b = std::cos( radians );
+auto result1Diff = result1a - result1b;
+BOOST_CHECK( result1a == result1b );
+BOOST_CHECK( result1a == 1.f );
+BOOST_CHECK( result1b == 1.f );
 </code></pre>
 
   </div>

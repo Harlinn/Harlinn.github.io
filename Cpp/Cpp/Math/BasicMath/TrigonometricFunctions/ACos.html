@@ -236,13 +236,62 @@
 
 <p>Returns the arccosine of the argument.</p>
 
-<pre><code class="language-C++">
-
+<pre><code class="language-C++">template&lt;FloatingPointType T&gt;
+constexpr inline T ACos( T x ) noexcept;
 </code></pre>
+<p>Computes the value of the arc cosine of x.</p>
 
 <h3 id="exampletest-code">Example/Test code</h3>
 
-<pre><code class="language-C++">
+<pre><code class="language-C++">using C = Constants&lt;float&gt;;
+
+constexpr auto Check = []( C::ValueType x, C::ValueType expected ) -&gt; bool
+    {
+        auto r = ACos( x );
+        return IsSameValue( r, expected );
+    };
+
+constexpr auto CheckIsNaN = []( C::ValueType x ) -&gt; bool
+    {
+        auto r = ACos( x );
+        return IsNaN( r );
+    };
+
+constexpr auto check1 = CheckIsNaN( C::Infinity );
+BOOST_CHECK( check1 );
+
+constexpr auto check2 = CheckIsNaN( C::NegativeInfinity );
+BOOST_CHECK( check2 );
+
+constexpr auto check3 = CheckIsNaN( C::NaN );
+BOOST_CHECK( check3 );
+
+constexpr auto check4 = CheckIsNaN( 1.1f );
+BOOST_CHECK( check4 );
+
+constexpr auto check5 = CheckIsNaN( -1.1f );
+BOOST_CHECK( check5 );
+
+constexpr auto check6 = Check( 0.f, C::PiOver2 );
+BOOST_CHECK( check6 );
+
+constexpr auto check7 = Check( -0.f, C::PiOver2 );
+BOOST_CHECK( check7 );
+
+constexpr auto check8 = Check( 1.f, C::Zero );
+BOOST_CHECK( check8 );
+
+constexpr auto check9 = Check( -1.f, C::Pi );
+BOOST_CHECK( check9 );
+
+constexpr auto check10 = Check( 0.5f, 1.04719758f );
+BOOST_CHECK( check10 );
+
+constexpr auto check11 = Check( -0.5f, 2.09439516f );
+BOOST_CHECK( check11 );
+
+constexpr auto check12 = Check( 0.7f, 0.795398831f );
+BOOST_CHECK( check12 );
 </code></pre>
 
   </div>
