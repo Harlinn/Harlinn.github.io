@@ -3,20 +3,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Other Functions | Harlinn</title>
+<title>Lerp | Harlinn</title>
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Other Functions" />
+<meta property="og:title" content="Lerp" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This is my personal site." />
 <meta property="og:description" content="This is my personal site." />
-<link rel="canonical" href="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/OtherFunctions.html" />
-<meta property="og:url" content="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/OtherFunctions.html" />
+<link rel="canonical" href="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/OtherFunctions/Lerp.html" />
+<meta property="og:url" content="https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/OtherFunctions/Lerp.html" />
 <meta property="og:site_name" content="Harlinn" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Other Functions" />
+<meta property="twitter:title" content="Lerp" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal site.","headline":"Other Functions","url":"https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/OtherFunctions.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"This is my personal site.","headline":"Lerp","url":"https://harlinn.github.io/Cpp/Cpp/Math/BasicMath/OtherFunctions/Lerp.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://harlinn.github.io/feed.xml" title="Harlinn" /><script type="text/javascript" id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -228,17 +228,18 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Other Functions</h1>
+    <h1 class="post-title">Lerp</h1>
   </header>
 
   <div class="post-content">
-    <p><a href="../BasicMath.html">Optimized basic math functions</a></p>
+    <p><a href="../OtherFunctions.html">Other Functions</a></p>
 
-<ul>
-  <li><a href="OtherFunctions/Clamp.html">Clamp</a> Ensures that values are limited to the specified range.</li>
-  <li><a href="OtherFunctions/Lerp.html">Lerp</a> Calculates a value that is linearly interpolated between two given values, <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code>, using the interpolation factor <code class="language-plaintext highlighter-rouge">t</code>.</li>
-</ul>
+<p>Calculates a value that is linearly interpolated between two given values, <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code>, 
+using the interpolation factor <code class="language-plaintext highlighter-rouge">t</code>.</p>
 
+<pre><code class="language-C++">template&lt;ArithmeticType T, ArithmeticType U&gt;
+constexpr inline auto Lerp( T a, T b, U t ) noexcept;
+</code></pre>
 
   </div>
 

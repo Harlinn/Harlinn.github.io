@@ -266,27 +266,24 @@ runtime performance benefits as well.</p>
 
 <h2 id="background">Background</h2>
 
-<p>The functions were created to explore <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of mathematical expressions, since nothing
-improves runtime performance as much as making the compiler calculate the results at compile time.</p>
+<p>The functions were created to explore <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of mathematical expressions with Visual C++.
+Constexpr, introduced in C++11 and further enhanced in subsequent versions, allows developers 
+to perform computations at compile time. This means less runtime overhead, optimized code, 
+and a significant boost in execution speed.</p>
 
 <p>Since <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation doesn’t allow undefined behavior, this can be used to improve the
 safety of C++ code by performing <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of code in unit tests. 
 The <code class="language-plaintext highlighter-rouge">constexpr</code> evaluated code will not compile until all code with undefined behavior is 
 eliminated from the execution path of the <code class="language-plaintext highlighter-rouge">constexpr</code> evaluated code.</p>
 
-<p>While C++ 26 will enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of most functions within <code class="language-plaintext highlighter-rouge">&lt;cmath&gt;</code>, <code class="language-plaintext highlighter-rouge">HCCMath.h</code> makes this possible 
-right now.</p>
+<p>While C++ 26 will enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of many of the functions within <code class="language-plaintext highlighter-rouge">&lt;cmath&gt;</code>, 
+<code class="language-plaintext highlighter-rouge">HCCMath.h</code> makes this possible right now.</p>
 
 <p>Much of the code is based on version <code class="language-plaintext highlighter-rouge">0.8.5</code> of the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> 
 mathematical C library used by the <a href="https://julialang.org/">Julia</a> programming language.</p>
 
-<p>The library does not include the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> floating
-point environment, and relies on the floating point environment provided by the
-Visual C++ runtime.</p>
-
-<p>Some functions, like <code class="language-plaintext highlighter-rouge">Sin</code>, can only perform <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation for a subset of the
-possible arguments. <code class="language-plaintext highlighter-rouge">Sin</code> has no problems with <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation for \(\pm 20000^\circ\),
-but fails to <code class="language-plaintext highlighter-rouge">constexpr</code> evaluate <code class="language-plaintext highlighter-rouge">Sin(1.7976931348623158e+308)</code>.</p>
+<p>The functions return NaN and +/- infinity as expected, but does not always set the exception flags
+in the floating point environment.</p>
 
 <p>The API is template based, which may seem odd, but this helps to reduce the number of
 unintended conversions between numeric types. Most functions designed to work with 
@@ -309,18 +306,15 @@ the results with those produced by the standard implementation.</p>
 and can be verified by building and executing <a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Benchmarks/Math/BasicMathBenchmarks">BasicMathBenchmarks</a> 
 included in the <a href="/Cpp/Harlinn.Windows/Harlinn.Windows.html">Harlinn.Windows solution</a>.</p>
 
-<p><a href="Benchmarks.html">Benchmarks</a> for a single inline function cannot be relied upon to accurately determine how well the 
-function will perform perform in a real application. For release builds, the compiler and linker,
-employs global optimization strategies, attempting to optimize the operations across all
-the compilation units. The global optimization strategies will often find optimization
-opportunities that are very hard to detect and implement manually, and the only way to really determine
-if one set of functions performs better than another, is to try them out in a real, computationally intensive,
-application.</p>
-
-<p>It is, however, unlikely that a set of functions that performs worse than another, in a reasonable
-set of benchmarks, can outperform the other in a real application.</p>
+<p>See <a href="Benchmarks.html">Benchmarks</a> for the benchmark results.</p>
 
 <h3 id="pbrto-a-micro-optimized-raytracing-app">PBRTO a micro optimized raytracing app</h3>
+
+<p>Benchmarks for individual functions cannot be relied upon to accurately determine how well they 
+will perform perform in a real application. Benchmarks provides a good idea about 
+how the functions will perform, but when the compiler, and linker, employs global optimizations across all
+the compilation units, there are often a few surprises. PBRTO was created as a tool to help 
+uncovering these surprises.</p>
 
 <p>PBRTO is a micro optimized version of <a href="https://github.com/mmp/pbrt-v4">PBRT-v4</a>, under development 
 as an example of how the functionality in <code class="language-plaintext highlighter-rouge">HCCMath.h</code>, <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> and <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code> can be used to 
@@ -334,7 +328,7 @@ high. <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> does many thi
 the Visual C++ runtime, an intrinsic function, or another alternative implemented by the library, perform 
 better. When this is the case, the library selects the implementation with the best runtime performance.</p>
 
-<p>Since some functions are implemented differently for <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation, they will not return
+<p>Since some functions are implemented differently for <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation, they will not always return
 identical results when executed at runtime. The difference is small; and can, in most cases, be ignored,
 as in these cases both implementations are based on approximations.</p>
 
