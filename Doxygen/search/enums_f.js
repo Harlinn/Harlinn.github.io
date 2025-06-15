@@ -45,7 +45,5 @@ var searchData=
   ['protectedresourcesessionsupportflags_42',['ProtectedResourceSessionSupportFlags',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8f9b73336b405b88754b93d86b725889',1,'Harlinn::Windows::Graphics::D3D12']]],
   ['protectedsessionstatus_43',['ProtectedSessionStatus',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#af679591f0e8a62540ee5e0797c223c35',1,'Harlinn::Windows::Graphics::D3D12']]],
   ['protectionleveltype_44',['ProtectionLevelType',['../namespace_harlinn_1_1_common_1_1_core_1_1_http.html#aedd8395920139409e9440685fd04024b',1,'Harlinn::Common::Core::Http']]],
-  ['protocoltype_45',['ProtocolType',['../namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets.html#a07f3d621b4627a07bc6a6e36b0d53eb5',1,'Harlinn::Common::Core::IO::Sockets']]],
-  ['providerflags_46',['ProviderFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets.html#abde02eabe1ba7437e30e11da3c03c775',1,'Harlinn::Common::Core::IO::Sockets']]],
-  ['purgeflags_47',['PurgeFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#ae4a11b994dfb0e9555ae11e30a55ed03',1,'Harlinn::Common::Core::IO']]]
+  ['purgeflags_45',['PurgeFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#ae4a11b994dfb0e9555ae11e30a55ed03',1,'Harlinn::Common::Core::IO']]]
 ];

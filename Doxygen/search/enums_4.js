@@ -11,7 +11,7 @@ var searchData=
   ['environmentmode_8',['EnvironmentMode',['../namespace_harlinn_1_1_o_c_i.html#ae8571065bf8f205d9b0ae9c3e2e6ff63',1,'Harlinn::OCI']]],
   ['errorflags_9',['ErrorFlags',['../class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_comm_device_stream.html#a553ad670b6814f3c007ba1a7e59c9fe1',1,'Harlinn::Common::Core::IO::CommDeviceStream']]],
   ['escapefunction_10',['EscapeFunction',['../namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a43b2b6cc23c699d0d11dabf91e452a73',1,'Harlinn::Common::Core::IO']]],
-  ['eventflags_11',['EventFlags',['../class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_comm_device_stream.html#a04b82529468a5c218509a5693fd7a6ae',1,'Harlinn::Common::Core::IO::CommDeviceStream::EventFlags'],['../namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets.html#ab376983270b3970dadc0da1ab35deac8',1,'Harlinn::Common::Core::IO::Sockets::EventFlags']]],
+  ['eventflags_11',['EventFlags',['../class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_comm_device_stream.html#a04b82529468a5c218509a5693fd7a6ae',1,'Harlinn::Common::Core::IO::CommDeviceStream']]],
   ['eventtype_12',['EventType',['../namespace_harlinn_1_1_o_c_i.html#ac26e195a44437b05879c51ce9ec90f16',1,'Harlinn::OCI']]],
   ['eventwaithandlerights_13',['EventWaitHandleRights',['../namespace_harlinn_1_1_common_1_1_core.html#aad4593c7308500bdf969e076a1b773d3',1,'Harlinn::Common::Core']]],
   ['exceptionaction_14',['ExceptionAction',['../namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#add827c178d5bc9090e515b19cab744d4',1,'Harlinn::Common::Core::Ese']]],

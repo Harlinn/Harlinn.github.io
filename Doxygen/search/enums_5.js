@@ -26,9 +26,8 @@ var searchData=
   ['fontsmoothingorientation_23',['FontSmoothingOrientation',['../namespace_harlinn_1_1_windows.html#a65082b86fde121901d3d2a802702bf5a',1,'Harlinn::Windows']]],
   ['foregroundmixmode_24',['ForegroundMixMode',['../namespace_harlinn_1_1_windows.html#af22735cfa7288347e01254bdf5fb9709',1,'Harlinn::Windows']]],
   ['format_25',['Format',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i.html#a44af51316c575dcac6b4f3fd7fe8233f',1,'Harlinn::Windows::Graphics::DXGI']]],
-  ['formatstringsectiontype_26',['FormatStringSectionType',['../namespace_harlinn_1_1_common_1_1_core_1_1_formatting.html#a5dba93c4e396b3410d14a6fe780fe273',1,'Harlinn::Common::Core::Formatting']]],
-  ['formatstringtype_27',['FormatStringType',['../namespace_harlinn_1_1_common_1_1_core_1_1_crypto.html#ad2f32edc3fb2a76ea6b5ec48ddf2eac3',1,'Harlinn::Common::Core::Crypto']]],
-  ['formatsupport1_28',['FormatSupport1',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a6a863372955c054f06f9ae7685bb7110',1,'Harlinn::Windows::Graphics::D3D12']]],
-  ['formatsupport2_29',['FormatSupport2',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#acd412cec95bada53e8190a1b50fd6e99',1,'Harlinn::Windows::Graphics::D3D12']]],
-  ['formattype_30',['FormatType',['../namespace_harlinn_1_1_common_1_1_core_1_1_crypto.html#a18dcfc221cae04b0e86457e4f404ba94',1,'Harlinn::Common::Core::Crypto']]]
+  ['formatstringtype_26',['FormatStringType',['../namespace_harlinn_1_1_common_1_1_core_1_1_crypto.html#ad2f32edc3fb2a76ea6b5ec48ddf2eac3',1,'Harlinn::Common::Core::Crypto']]],
+  ['formatsupport1_27',['FormatSupport1',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a6a863372955c054f06f9ae7685bb7110',1,'Harlinn::Windows::Graphics::D3D12']]],
+  ['formatsupport2_28',['FormatSupport2',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#acd412cec95bada53e8190a1b50fd6e99',1,'Harlinn::Windows::Graphics::D3D12']]],
+  ['formattype_29',['FormatType',['../namespace_harlinn_1_1_common_1_1_core_1_1_crypto.html#a18dcfc221cae04b0e86457e4f404ba94',1,'Harlinn::Common::Core::Crypto']]]
 ];

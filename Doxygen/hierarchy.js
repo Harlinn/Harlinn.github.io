@@ -2,8 +2,6 @@ var hierarchy =
 [
     [ "Harlinn::Common::Core::Math::Internal::OpenLibM::__infinity_un", "union_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1____infinity__un.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::OpenLibM::__nan_un", "union_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1____nan__un.html", null ],
-    [ "Harlinn::Common::Core::Internal::_ByteSizeOf< Arg, Args >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1___byte_size_of.html", null ],
-    [ "Harlinn::Common::Core::Internal::_ByteSizeOf< Arg >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1___byte_size_of_3_01_arg_01_4.html", null ],
     [ "_caldatetime", "struct__caldatetime.html", null ],
     [ "Harlinn::Common::Core::details::_hash_32_or_64< use32 >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1__hash__32__or__64.html", null ],
     [ "Harlinn::Common::Core::details::_hash_32_or_64< 1 >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1__hash__32__or__64_3_011_01_4.html", null ],
@@ -138,22 +136,8 @@ var hierarchy =
         [ "Harlinn::AI::ONNX::DirectML::ComputeNode", "class_harlinn_1_1_a_i_1_1_o_n_n_x_1_1_direct_m_l_1_1_compute_node.html", null ]
       ] ]
     ] ],
-    [ "Harlinn::Common::Core::Concurrency::ActiveObjectBase< std::shared_ptr< LMDBSinkMessage >, maxQueueSize >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object_base.html", [
-      [ "Harlinn::Common::Core::Concurrency::ActiveObject< std::shared_ptr< LMDBSinkMessage > >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html", [
-        [ "Harlinn::Common::Core::Logging::Sinks::LMDBSink", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_l_m_d_b_sink.html", null ]
-      ] ]
-    ] ],
-    [ "Harlinn::Common::Core::Concurrency::ActiveObjectBase< std::shared_ptr< LogManagerMessage >, maxQueueSize >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object_base.html", [
-      [ "Harlinn::Common::Core::Concurrency::ActiveObject< std::shared_ptr< LogManagerMessage > >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html", [
-        [ "Harlinn::Common::Core::Logging::LogManager", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html", null ]
-      ] ]
-    ] ],
     [ "Harlinn::Common::Core::Concurrency::ActiveObjectExceptionEventArgs", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object_exception_event_args.html", null ],
     [ "Harlinn::Common::Core::Concurrency::ActiveObjectMessageEventArgs< MessageT >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object_message_event_args.html", null ],
-    [ "Harlinn::Common::Core::Persistent::AdaptedDecoder< ReaderT >", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_adapted_decoder.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::Address", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_address.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::AddressInfo", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_address_info.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::Inernal::AddressListAdaptor", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_inernal_1_1_address_list_adaptor.html", null ],
     [ "Harlinn::Common::Core::Math::AffineTransformation", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_affine_transformation.html", null ],
     [ "Harlinn::Common::Core::Allocator", "class_harlinn_1_1_common_1_1_core_1_1_allocator.html", [
       [ "Harlinn::Common::Core::MallocAllocator", "class_harlinn_1_1_common_1_1_core_1_1_malloc_allocator.html", null ]
@@ -164,15 +148,7 @@ var hierarchy =
     [ "Harlinn::Common::Core::TimerQueueTimer::Args", "class_harlinn_1_1_common_1_1_core_1_1_timer_queue_timer_1_1_args.html", [
       [ "Harlinn::Common::Core::TimerQueueTimer::ArgsTuple< Types >", "class_harlinn_1_1_common_1_1_core_1_1_timer_queue_timer_1_1_args_tuple.html", null ]
     ] ],
-    [ "std::array< T >", null, [
-      [ "Harlinn::Common::Core::ByteArray< KeyEncodingSize >", "class_harlinn_1_1_common_1_1_core_1_1_byte_array.html", null ],
-      [ "Harlinn::Common::Core::ByteArray< MaxValueSize >", "class_harlinn_1_1_common_1_1_core_1_1_byte_array.html", null ],
-      [ "Harlinn::Common::Core::ByteArray< N >", "class_harlinn_1_1_common_1_1_core_1_1_byte_array.html", null ]
-    ] ],
-    [ "Harlinn::Common::Core::Persistent::ArrayDecoder< ReaderT >", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_array_decoder.html", null ],
     [ "Harlinn.Common.Core.Net.ArrayExtensions", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_array_extensions.html", null ],
-    [ "Harlinn::Common::Core::ArrayReader< N, networkByteOrder, use7BitEncodedSize >", "class_harlinn_1_1_common_1_1_core_1_1_array_reader.html", null ],
-    [ "Harlinn::Common::Core::ArrayWriter< N, networkByteOrder, use7BitEncodedSize >", "class_harlinn_1_1_common_1_1_core_1_1_array_writer.html", null ],
     [ "Harlinn::Common::Core::Internal::AsTuple< Type, Types >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_as_tuple.html", null ],
     [ "Harlinn::Common::Core::Internal::AsTuple< std::array< T, 0 >, Types... >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_as_tuple_3_01std_1_1array_3_01_t_00_010_01_4_00_01_types_8_8_8_01_4.html", null ],
     [ "Harlinn::Common::Core::Internal::AsTuple< std::array< T, N - 1 >, T, Types... >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_as_tuple.html", [
@@ -244,9 +220,6 @@ var hierarchy =
         [ "Harlinn::Common::Core::Doxygen::Structure::Variable", "class_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_structure_1_1_variable.html", null ]
       ] ]
     ] ],
-    [ "std::basic_string< Char >", null, [
-      [ "Harlinn::Common::Core::Formatting::FormatStringSection< CharT >", "class_harlinn_1_1_common_1_1_core_1_1_formatting_1_1_format_string_section.html", null ]
-    ] ],
     [ "std::basic_string_view< Char >", null, [
       [ "Harlinn::Common::Core::BasicStringView< T >", "class_harlinn_1_1_common_1_1_core_1_1_basic_string_view.html", null ]
     ] ],
@@ -279,7 +252,6 @@ var hierarchy =
       [ "Harlinn::Common::Core::IO::Serialization::Internal::SerializationReader< StreamT, networkByteOrder, use7BitEncodedSize >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_serialization_reader.html", null ]
     ] ],
     [ "Harlinn::Common::Core::IO::BinaryReaderBase< BinaryReader< StreamT, false, true >, false, true >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html", [
-      [ "Harlinn::Common::Core::IO::BinaryReader< ArgumentsStreamType >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader.html", null ],
       [ "Harlinn::Common::Core::IO::BinaryReader< StreamT, networkByteOrder, use7BitEncodedSize >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader.html", null ]
     ] ],
     [ "Harlinn::Common::Core::IO::BinaryReaderBase< BufferedBinaryReader< StreamT, BufferSizeValue, false, true >, false, true >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_reader_base.html", [
@@ -291,7 +263,6 @@ var hierarchy =
       [ "Harlinn::Common::Core::IO::Serialization::Internal::SerializationWriter< StreamT, networkByteOrder, use7BitEncodedSize >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_serialization_writer.html", null ]
     ] ],
     [ "Harlinn::Common::Core::IO::BinaryWriterBase< BinaryWriter< StreamT, false, true >, false, true >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_writer_base.html", [
-      [ "Harlinn::Common::Core::IO::BinaryWriter< Internal::RecordStream >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_writer.html", null ],
       [ "Harlinn::Common::Core::IO::BinaryWriter< StreamT, networkByteOrder, use7BitEncodedSize >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_writer.html", null ]
     ] ],
     [ "Harlinn::Common::Core::IO::BinaryWriterBase< BufferedBinaryWriter< StreamWriterT, BufferSizeValue, false, true >, false, true >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_binary_writer_base.html", [
@@ -351,30 +322,17 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::Box", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_box.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::BroadcastingLaunchOverrides", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_broadcasting_launch_overrides.html", null ],
     [ "Harlinn::Windows::BrushSelection", "class_harlinn_1_1_windows_1_1_brush_selection.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::Server::Buffer", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_buffer.html", null ],
-    [ "Harlinn::Common::Core::Logging::Internal::Buffer", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer.html", null ],
     [ "Harlinn::AI::DML::BufferArrayBinding", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_buffer_array_binding.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::BufferBarrier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_buffer_barrier.html", null ],
     [ "Harlinn::AI::DML::BufferBinding", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_buffer_binding.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::Server::BufferedSocketStream< ConnectionHandlerT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_buffered_socket_stream.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::Server::BufferedSocketStream< TcpConnectionHandler >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_buffered_socket_stream.html", null ],
-    [ "Harlinn::Common::Core::Logging::Internal::BufferKey", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer_key.html", null ],
-    [ "Harlinn::Common::Core::Logging::Internal::BufferManager", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_buffer_manager.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::Server::BufferPool< N >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_buffer_pool.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::Server::BufferPool< MaxReceiveBuffers >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_buffer_pool.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::Server::BufferPool< MaxSendBuffers >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_buffer_pool.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::Server::Internal::BufferQueue", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_internal_1_1_buffer_queue.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::BufferRTV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_buffer_r_t_v.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::BufferSRV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_buffer_s_r_v.html", null ],
     [ "Harlinn::Common::Core::IO::BufferStream", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_buffer_stream.html", null ],
     [ "Harlinn::AI::DML::BufferTensorDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_buffer_tensor_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::BufferUAV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_buffer_u_a_v.html", null ],
-    [ "Harlinn::Common::Core::Logging::BuildOptions< enabledLevels >", "struct_harlinn_1_1_common_1_1_core_1_1_logging_1_1_build_options.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::BuildRaytracingAccelerationStructureDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_build_raytracing_acceleration_structure_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::BuildRaytracingAccelerationStructureInputs", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_build_raytracing_acceleration_structure_inputs.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::BuildRaytracingAccelerationStructureToolsVisualizationHeader", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_build_raytracing_acceleration_structure_tools_visualization_header.html", null ],
-    [ "Harlinn::Common::Core::Internal::ByteOffsetOf< index, Arg, Args >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_byte_offset_of.html", null ],
-    [ "Harlinn::Common::Core::Internal::ByteOffsetOf< 0, Arg, Args... >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_byte_offset_of_3_010_00_01_arg_00_01_args_8_8_8_01_4.html", null ],
     [ "Harlinn::Common::Core::Http::ByteRange", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_byte_range.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::CachedPipelineState", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_cached_pipeline_state.html", null ],
     [ "Harlinn::Common::Core::Http::CachePolicy", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_cache_policy.html", null ],
@@ -422,9 +380,6 @@ var hierarchy =
       [ "half_float::detail::bits< float >", "structhalf__float_1_1detail_1_1bits_3_01float_01_4.html", null ]
     ] ],
     [ "std::conditional_t", null, [
-      [ "Harlinn::Common::Core::Persistent::Internal::ContainerFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_container_format_traits.html", null ],
-      [ "Harlinn::Common::Core::Persistent::Internal::FormatTraits< T >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_traits.html", null ],
-      [ "Harlinn::Common::Core::Persistent::Internal::PointerFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_pointer_format_traits.html", null ],
       [ "Harlinn::Common::Core::Types::TypeTraits< T >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html", null ]
     ] ],
     [ "Harlinn::Common::Core::ConditionVariable", "class_harlinn_1_1_common_1_1_core_1_1_condition_variable.html", null ],
@@ -434,20 +389,9 @@ var hierarchy =
       [ "Harlinn::Common::Core::ConnectData::Data", "struct_harlinn_1_1_common_1_1_core_1_1_connect_data_1_1_data.html", null ]
     ] ],
     [ "Harlinn::Common::Core::ConnectData", "class_harlinn_1_1_common_1_1_core_1_1_connect_data.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::Server::TcpListener< DerivedT, ConnectionHandlerT >::ConnectionHandlerFactoryBase", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_listener_1_1_connection_handler_factory_base.html", [
-      [ "Harlinn::Common::Core::IO::Sockets::Server::TcpListener< DerivedT, ConnectionHandlerT >::ConnectionHandlerFactory< Args >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_listener_1_1_connection_handler_factory.html", null ]
-    ] ],
-    [ "Harlinn::Common::Core::IO::Sockets::Tcp::Server::ConnectionHandlerFactoryBase< ConnectionHandlerT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_1_1_server_1_1_connection_handler_factory_base.html", [
-      [ "Harlinn::Common::Core::IO::Sockets::Tcp::Server::ConnectionHandlerFactory< ListenerHandlerT, ConnectionHandlerT, Args >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_1_1_server_1_1_connection_handler_factory.html", null ]
-    ] ],
-    [ "Harlinn::Common::Core::IO::Sockets::Tcp::Server::ConnectionHandlerFactoryBase< ConnectionHandlerType >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_1_1_server_1_1_connection_handler_factory_base.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::Tcp::Server::ConnectionHandlerPool< ListenerHandlerT, ConnectionHandlerT, maxFreeConnectionHandlers >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_1_1_server_1_1_connection_handler_pool.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::Tcp::Server::ConnectionHandlerPool< DerivedT, ConnectionHandlerT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_1_1_server_1_1_connection_handler_pool.html", null ],
     [ "Harlinn::Common::Core::Http::ConnectionLimitInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_connection_limit_info.html", null ],
     [ "Harlinn::Common::Core::Console", "class_harlinn_1_1_common_1_1_core_1_1_console.html", null ],
-    [ "Harlinn::Common::Core::Logging::Writers::ConsoleWriter", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_writers_1_1_console_writer.html", null ],
     [ "Harlinn::Common::Core::details::const_numeric_max< T >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1const__numeric__max.html", null ],
-    [ "Harlinn::Common::Core::Persistent::Constant< T >", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_constant.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::ConstantBufferViewDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_constant_buffer_view_desc.html", null ],
     [ "Harlinn::AI::DML::ConstantDataGraphNodeDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_constant_data_graph_node_desc.html", null ],
     [ "Harlinn::AI::DML::X::Internal::ConstantNode", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_internal_1_1_constant_node.html", null ],
@@ -473,34 +417,9 @@ var hierarchy =
       [ "Harlinn::Common::Core::IO::PipeHandler< PipeDispatcher >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_handler.html", [
         [ "Harlinn::Common::Core::IO::PipeDispatcher", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_dispatcher.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::IO::Sockets::SocketHandler< TcpSimpleConnectionHandler< ListenerT, ProtocolT > >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket_handler.html", [
-        [ "Harlinn::Common::Core::IO::Sockets::Server::TcpConnectionHandlerBase< TcpSimpleConnectionHandler< ListenerT, ProtocolT > >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_connection_handler_base.html", [
-          [ "Harlinn::Common::Core::IO::Sockets::Server::TcpConnectionHandler< TcpSimpleConnectionHandler< ListenerT, ProtocolT >, ListenerT, ProtocolT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_connection_handler.html", [
-            [ "Harlinn::Common::Core::IO::Sockets::Server::TcpSimpleConnectionHandler< ListenerT, ProtocolT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_simple_connection_handler.html", null ]
-          ] ]
-        ] ]
-      ] ],
-      [ "Harlinn::Common::Core::IO::Sockets::SocketHandler< TcpSimpleListener< ProtocolT > >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket_handler.html", [
-        [ "Harlinn::Common::Core::IO::Sockets::Server::TcpListenerBase< TcpSimpleListener< ProtocolT > >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_listener_base.html", [
-          [ "Harlinn::Common::Core::IO::Sockets::Server::TcpListener< TcpSimpleListener< ProtocolT >, TcpSimpleConnectionHandler< TcpSimpleListener< ProtocolT >, ProtocolT > >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_listener.html", [
-            [ "Harlinn::Common::Core::IO::Sockets::Server::TcpSimpleListener< ProtocolT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_simple_listener.html", null ]
-          ] ]
-        ] ]
-      ] ],
       [ "Harlinn::Common::Core::IO::CommDeviceHandler< DerivedT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_comm_device_handler.html", null ],
       [ "Harlinn::Common::Core::IO::FileHandler< DerivedT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_file_handler.html", null ],
-      [ "Harlinn::Common::Core::IO::PipeHandler< DerivedT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_handler.html", null ],
-      [ "Harlinn::Common::Core::IO::Sockets::SocketHandler< DerivedT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket_handler.html", [
-        [ "Harlinn::Common::Core::IO::Sockets::Server::TcpConnectionHandlerBase< DerivedT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_connection_handler_base.html", [
-          [ "Harlinn::Common::Core::IO::Sockets::Server::TcpConnectionHandler< DerivedT, ListenerT, ProtocolT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_connection_handler.html", null ]
-        ] ],
-        [ "Harlinn::Common::Core::IO::Sockets::Server::TcpListenerBase< DerivedT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_listener_base.html", [
-          [ "Harlinn::Common::Core::IO::Sockets::Server::TcpListener< DerivedT, ConnectionHandlerT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_server_1_1_tcp_listener.html", null ]
-        ] ],
-        [ "Harlinn::Common::Core::IO::Sockets::Tcp::Client::ConnectionHandler< DerivedT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_1_1_client_1_1_connection_handler.html", null ],
-        [ "Harlinn::Common::Core::IO::Sockets::Tcp::Server::ConnectionHandler< DerivedT, ListenerHandlerT, RequestsPoolT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_1_1_server_1_1_connection_handler.html", null ],
-        [ "Harlinn::Common::Core::IO::Sockets::Tcp::Server::ListenerHandler< DerivedT, ConnectionHandlerT, ConnectionHandlerPoolT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_1_1_server_1_1_listener_handler.html", null ]
-      ] ]
+      [ "Harlinn::Common::Core::IO::PipeHandler< DerivedT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_handler.html", null ]
     ] ],
     [ "IO::ContextHandler", null, [
       [ "Harlinn::Common::Core::Http::Server::RequestQueueHandler< HttpServerRequestQueue >", "class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_request_queue_handler.html", [
@@ -565,9 +484,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "Harlinn::Windows::Controls", "class_harlinn_1_1_windows_1_1_controls.html", null ],
-    [ "Harlinn::Common::Core::Demangle::detail::Converter", "class_harlinn_1_1_common_1_1_core_1_1_demangle_1_1detail_1_1_converter.html", null ],
     [ "Harlinn::AI::DML::X::ConvolutionBuilder", "class_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_convolution_builder.html", null ],
-    [ "Harlinn::Common::Core::Demangle::detail::Converter::ConvStream", "struct_harlinn_1_1_common_1_1_core_1_1_demangle_1_1detail_1_1_converter_1_1_conv_stream.html", null ],
     [ "Harlinn::Common::Core::Http::CookedUrl", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_cooked_url.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::CPUDescriptorHandle", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html", null ],
     [ "Harlinn::Common::Core::Security::CredentialsHandle", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_credentials_handle.html", null ],
@@ -575,16 +492,6 @@ var hierarchy =
     [ "Harlinn::Common::Core::Currency", "class_harlinn_1_1_common_1_1_core_1_1_currency.html", null ],
     [ "Harlinn::Common::Core::LMDB::Cursor", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_1_1_cursor.html", [
       [ "Harlinn::Common::Core::LMDB::TypedCursor< KT, VT >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_1_1_typed_cursor.html", null ]
-    ] ],
-    [ "Harlinn::Common::Core::Logging::Cursors::Cursor", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_cursors_1_1_cursor.html", [
-      [ "Harlinn::Common::Core::Logging::Cursors::BufferCursor", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_cursors_1_1_buffer_cursor.html", null ],
-      [ "Harlinn::Common::Core::Logging::Cursors::ComputerInfoCursor", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_cursors_1_1_computer_info_cursor.html", null ],
-      [ "Harlinn::Common::Core::Logging::Cursors::ConfigurationFileInfoCursor", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_cursors_1_1_configuration_file_info_cursor.html", null ],
-      [ "Harlinn::Common::Core::Logging::Cursors::ExecutableInfoCursor", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_cursors_1_1_executable_info_cursor.html", null ],
-      [ "Harlinn::Common::Core::Logging::Cursors::LogSiteDataCursor", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_cursors_1_1_log_site_data_cursor.html", null ],
-      [ "Harlinn::Common::Core::Logging::Cursors::ProcessInfoCursor", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_cursors_1_1_process_info_cursor.html", null ],
-      [ "Harlinn::Common::Core::Logging::Cursors::UserInfoCursor", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_cursors_1_1_user_info_cursor.html", null ],
-      [ "Harlinn::Common::Core::Logging::Cursors::WindowsVersionInfoCursor", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_cursors_1_1_windows_version_info_cursor.html", null ]
     ] ],
     [ "Harlinn::Windows::Graphics::D3D12::D3D12_FEATURE_DATA_D3D12_OPTIONS4", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_d3_d12___f_e_a_t_u_r_e___d_a_t_a___d3_d12___o_p_t_i_o_n_s4.html", null ],
     [ "Harlinn::Common::Core::Binary::Data", "struct_harlinn_1_1_common_1_1_core_1_1_binary_1_1_data.html", null ],
@@ -599,14 +506,9 @@ var hierarchy =
     [ "Harlinn::Common::Core::Ese::Database", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_database.html", null ],
     [ "Harlinn::Common::Core::LMDB::Database", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_1_1_database.html", null ],
     [ "Harlinn::Common::Core::LMDBEx::DatabaseBase", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_database_base.html", [
-      [ "Harlinn::Common::Core::LMDBEx::Database< LogSession >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_database.html", [
-        [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogDatabase", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_database.html", null ]
-      ] ],
       [ "Harlinn::Common::Core::LMDBEx::Database< SessionT >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_database.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::LMDBEx::DatabaseOptions", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_database_options.html", [
-      [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogDatabaseOptions", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_database_options.html", null ]
-    ] ],
+    [ "Harlinn::Common::Core::LMDBEx::DatabaseOptions", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_database_options.html", null ],
     [ "Harlinn::Common::Core::Http::DataChunk", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_data_chunk.html", null ],
     [ "Harlinn::Common::Core::SafeArray::DataLock", "class_harlinn_1_1_common_1_1_core_1_1_safe_array_1_1_data_lock.html", null ],
     [ "Harlinn::Common::Core::VectorBase< T, IteratorT, ConstIteratorT >::DataPtr", "class_harlinn_1_1_common_1_1_core_1_1_vector_base_1_1_data_ptr.html", null ],
@@ -629,7 +531,6 @@ var hierarchy =
     [ "Harlinn::ODBC::MsSql::dbmoney", "struct_harlinn_1_1_o_d_b_c_1_1_ms_sql_1_1dbmoney.html", null ],
     [ "Harlinn::ODBC::Internal::DBValue< T >", "class_harlinn_1_1_o_d_b_c_1_1_internal_1_1_d_b_value.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::OpenLibM::fma_internal::dd", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1fma__internal_1_1dd.html", null ],
-    [ "Harlinn::Common::Core::Persistent::Decoder< ReaderT >", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_decoder.html", null ],
     [ "Harlinn::Common::Core::Http::DelegateRequestPropertyInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_delegate_request_property_info.html", null ],
     [ "Harlinn::Common::Core::Data::DeletedData< ObjectT, KeyT >", "class_harlinn_1_1_common_1_1_core_1_1_data_1_1_deleted_data.html", null ],
     [ "Harlinn.Common.Core.Net.Data.DeleteTimeseriesRangeData< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_delete_timeseries_range_data.html", [
@@ -641,8 +542,6 @@ var hierarchy =
     [ "Harlinn::Common::Core::Data::DeleteTimeseriesRangeFactory< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_data_1_1_delete_timeseries_range_factory.html", null ],
     [ "Harlinn.Common.Core.Net.Data.DeleteTimeseriesRangeFactory< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_delete_timeseries_range_factory.html", null ],
     [ "Harlinn::Common::Core::Data::DeleteTimeseriesRangeSerializer< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_data_1_1_delete_timeseries_range_serializer.html", null ],
-    [ "Harlinn::Common::Core::Demangle::DemangledTemplateParameter", "class_harlinn_1_1_common_1_1_core_1_1_demangle_1_1_demangled_template_parameter.html", null ],
-    [ "Harlinn::Common::Core::Demangle::DemangledType", "class_harlinn_1_1_common_1_1_core_1_1_demangle_1_1_demangled_type.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::DepthStencilDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_depth_stencil_desc.html", [
       [ "Harlinn::Windows::Graphics::D3D12::DepthStencilDesc1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_depth_stencil_desc1.html", null ]
     ] ],
@@ -652,8 +551,6 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::DescriptorHeapDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_descriptor_heap_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::DescriptorRange", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_descriptor_range.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::DescriptorRange1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_descriptor_range1.html", null ],
-    [ "Harlinn::Common::Core::Persistent::DescriptorType< Types >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_descriptor_type.html", null ],
-    [ "Harlinn::Common::Core::Persistent::DescriptorType<>", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_descriptor_type_3_4.html", null ],
     [ "Harlinn::AI::ONNX::Detection", "struct_harlinn_1_1_a_i_1_1_o_n_n_x_1_1_detection.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::DeviceConfigurationDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_device_configuration_desc.html", null ],
     [ "Harlinn::Common::Core::IO::DeviceControlBlock", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_device_control_block.html", null ],
@@ -715,8 +612,6 @@ var hierarchy =
     [ "std::enable_shared_from_this", null, [
       [ "Harlinn::Common::Core::Concurrency::ActiveObject< std::shared_ptr< ComputeNodeMessage > >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html", null ],
       [ "Harlinn::Common::Core::Concurrency::ActiveObject< std::shared_ptr< ApplicationMessage > >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html", null ],
-      [ "Harlinn::Common::Core::Concurrency::ActiveObject< std::shared_ptr< LogManagerMessage > >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html", null ],
-      [ "Harlinn::Common::Core::Concurrency::ActiveObject< std::shared_ptr< LMDBSinkMessage > >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html", null ],
       [ "Harlinn::AI::Meta::Metadata", "class_harlinn_1_1_a_i_1_1_meta_1_1_metadata.html", null ],
       [ "Harlinn::AI::Meta::TypeInfoBase", "class_harlinn_1_1_a_i_1_1_meta_1_1_type_info_base.html", [
         [ "Harlinn::AI::Meta::MapTypeInfo", "class_harlinn_1_1_a_i_1_1_meta_1_1_map_type_info.html", null ],
@@ -749,8 +644,7 @@ var hierarchy =
         [ "Harlinn::Common::Core::Concurrency::Messages::SimpleMessage< MessageIdT, messageId >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_messages_1_1_simple_message.html", [
           [ "Harlinn::AI::ONNX::DirectML::Internal::ComputeNodeExecuteMessageBase", "class_harlinn_1_1_a_i_1_1_o_n_n_x_1_1_direct_m_l_1_1_internal_1_1_compute_node_execute_message_base.html", [
             [ "Harlinn::AI::ONNX::DirectML::Internal::ComputeNodeExecuteMessage< FunctionT >", "class_harlinn_1_1_a_i_1_1_o_n_n_x_1_1_direct_m_l_1_1_internal_1_1_compute_node_execute_message.html", null ]
-          ] ],
-          [ "Harlinn::Common::Core::Logging::LogManagerRetrieveStatisticsMessage", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager_retrieve_statistics_message.html", null ]
+          ] ]
         ] ],
         [ "Harlinn::Common::Core::Concurrency::Messages::SimpleRequestMessage< ReplyT, MessageIdT, messageId >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_messages_1_1_simple_request_message.html", [
           [ "Harlinn::Common::Core::Concurrency::Messages::SimpleValueRequestMessage< ValueT, ReplyT, MessageIdT, messageId >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_messages_1_1_simple_value_request_message.html", null ]
@@ -1052,15 +946,6 @@ var hierarchy =
       ] ],
       [ "Harlinn::Common::Core::IO::Context", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_context.html", null ],
       [ "Harlinn::Common::Core::IO::abstract", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1abstract.html", null ],
-      [ "Harlinn::Common::Core::Logging::BufferHandler", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_buffer_handler.html", [
-        [ "Harlinn::Common::Core::Logging::BufferConverter< LogSiteExtractorT, LoggerT >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_buffer_converter.html", null ]
-      ] ],
-      [ "Harlinn::Common::Core::Logging::LogManagerStatistics", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager_statistics.html", null ],
-      [ "Harlinn::Common::Core::Logging::LoggerOptions", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_logger_options.html", null ],
-      [ "Harlinn::Common::Core::Logging::Sinks::LMDBSinkOptions", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_l_m_d_b_sink_options.html", null ],
-      [ "Harlinn::Common::Core::Logging::Sinks::TextSinkOptions", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_text_sink_options.html", null ],
-      [ "Harlinn::Common::Core::Logging::Storage", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_storage.html", null ],
-      [ "Harlinn::Common::Core::Logging::ThreadLogger", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_thread_logger.html", null ],
       [ "Harlinn::Common::Core::Services::ServiceBase", "class_harlinn_1_1_common_1_1_core_1_1_services_1_1_service_base.html", [
         [ "Harlinn::Common::Core::Services::Service< DerivedT >", "class_harlinn_1_1_common_1_1_core_1_1_services_1_1_service.html", null ]
       ] ],
@@ -1076,7 +961,6 @@ var hierarchy =
     ] ],
     [ "Harlinn::Common::Core::Crypto::EncodingType", "class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_encoding_type.html", null ],
     [ "Harlinn::Common::Core::EnumBase< DerivedT, ValueT >::Entry", "struct_harlinn_1_1_common_1_1_core_1_1_enum_base_1_1_entry.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::AddressInfo::Entry", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_address_info_1_1_entry.html", null ],
     [ "Harlinn::Common::Core::EnumBase< DerivedT, ValueT >", "class_harlinn_1_1_common_1_1_core_1_1_enum_base.html", null ],
     [ "Harlinn::Common::Core::EnumBase< Enum< ValueT >, ValueT >", "class_harlinn_1_1_common_1_1_core_1_1_enum_base.html", [
       [ "Harlinn::Common::Core::Enum< ValueT >", "class_harlinn_1_1_common_1_1_core_1_1_enum.html", null ]
@@ -1177,7 +1061,6 @@ var hierarchy =
       [ "Harlinn::Common::Core::Exception", "class_harlinn_1_1_common_1_1_core_1_1_exception.html", [
         [ "Harlinn::Common::Core::AggregateException", "class_harlinn_1_1_common_1_1_core_1_1_aggregate_exception.html", null ],
         [ "Harlinn::Common::Core::ApplicationException", "class_harlinn_1_1_common_1_1_core_1_1_application_exception.html", [
-          [ "Harlinn::Common::Core::Demangle::Error", "class_harlinn_1_1_common_1_1_core_1_1_demangle_1_1_error.html", null ],
           [ "Harlinn::Common::Core::Reflection::InvalidFilterCriteriaException", "class_harlinn_1_1_common_1_1_core_1_1_reflection_1_1_invalid_filter_criteria_exception.html", null ],
           [ "Harlinn::Common::Core::Reflection::TargetException", "class_harlinn_1_1_common_1_1_core_1_1_reflection_1_1_target_exception.html", null ],
           [ "Harlinn::Common::Core::Reflection::TargetInvocationException", "class_harlinn_1_1_common_1_1_core_1_1_reflection_1_1_target_invocation_exception.html", null ],
@@ -1311,7 +1194,6 @@ var hierarchy =
     [ "std::false_type", null, [
       [ "Harlinn::AI::DML::Internal::TensorTraits< T >", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_internal_1_1_tensor_traits.html", null ],
       [ "Harlinn::Common::Core::AlwaysFalse<... >", "struct_harlinn_1_1_common_1_1_core_1_1_always_false.html", null ],
-      [ "Harlinn::Common::Core::BitTraits< T >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits.html", null ],
       [ "Harlinn::Common::Core::Com::Interfaces::Interface< InterfaceTypes >", "struct_harlinn_1_1_common_1_1_core_1_1_com_1_1_interfaces_1_1_interface.html", null ],
       [ "Harlinn::Common::Core::IO::Serialization::Internal::ArrayDataTypeResolver< T >", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver.html", null ],
       [ "Harlinn::Common::Core::IO::Serialization::Internal::FloatDataTypeResolver< T >", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_float_data_type_resolver.html", null ],
@@ -1388,11 +1270,8 @@ var hierarchy =
     [ "Harlinn::Common::Core::FixedBinary< maxSize >", "class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html", [
       [ "Harlinn::ODBC::FixedDBBinary< maxSize >", "class_harlinn_1_1_o_d_b_c_1_1_fixed_d_b_binary.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::Persistent::FixedSizeArrayDecoder< ReaderT >", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_fixed_size_array_decoder.html", null ],
-    [ "Harlinn::Common::Core::Persistent::FixedSizeBasicArrayDecoder< ReaderT >", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_fixed_size_basic_array_decoder.html", null ],
     [ "Harlinn::Common::Core::FixedSizeMemoryManager< blockSize, maxFreeCount >", "class_harlinn_1_1_common_1_1_core_1_1_fixed_size_memory_manager.html", null ],
     [ "Harlinn::Common::Core::FixedSizeMemoryManager< 64 *1024, 1024 >", "class_harlinn_1_1_common_1_1_core_1_1_fixed_size_memory_manager.html", null ],
-    [ "Harlinn::Common::Core::FixedSizeMemoryManager< BlockSize, MaximumFreeBuffers >", "class_harlinn_1_1_common_1_1_core_1_1_fixed_size_memory_manager.html", null ],
     [ "Harlinn::Common::Core::FixedSizeMemoryManagerStatistics", "struct_harlinn_1_1_common_1_1_core_1_1_fixed_size_memory_manager_statistics.html", null ],
     [ "Harlinn::Common::Core::FixedString< CharT, maxSize, internalSizeInBytes >", "class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html", null ],
     [ "Harlinn::Common::Core::FixedString< CharT, maxSize, true >", "class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html", [
@@ -1406,8 +1285,6 @@ var hierarchy =
     [ "Harlinn::Windows::DirectShow::AMCameraControl::Focus", "struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_focus.html", null ],
     [ "Harlinn::Windows::Fonts::Font", "class_harlinn_1_1_windows_1_1_fonts_1_1_font.html", null ],
     [ "Harlinn::Windows::FontSelection", "class_harlinn_1_1_windows_1_1_font_selection.html", null ],
-    [ "Harlinn::Common::Core::Formatting::FormatStringParser< CharT, expectedSectionCount, workBufferSize >", "class_harlinn_1_1_common_1_1_core_1_1_formatting_1_1_format_string_parser.html", null ],
-    [ "Harlinn::Common::Core::Formatting::FormatStringParser< CharType >", "class_harlinn_1_1_common_1_1_core_1_1_formatting_1_1_format_string_parser.html", null ],
     [ "std::formatter< Harlinn::Common::Core::BasicString< CharT >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_basic_string_3_01_char_t_01_4_00_01_char_t_01_4.html", null ],
     [ "std::formatter< Harlinn::Common::Core::BasicStringView< CharT >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_basic_string_view_3_01_char_t_01_4_00_01_char_t_01_4.html", null ],
     [ "std::formatter< Harlinn::Common::Core::DateTime, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_date_time_00_01_char_t_01_4.html", null ],
@@ -1444,44 +1321,6 @@ var hierarchy =
     [ "std::formatter< Harlinn::Common::Core::SysString, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_sys_string_00_01_char_t_01_4.html", null ],
     [ "std::formatter< Harlinn::Common::Core::TimeSpan, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_time_span_00_01_char_t_01_4.html", null ],
     [ "std::formatter< typename Harlinn::Common::Core::Math::Quaternion< float >::Simd, CharT >", "structstd_1_1formatter_3_01typename_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_3_01f5c5439c298d348f49a3116d89c817ec1.html", null ],
-    [ "Harlinn::Common::Core::Persistent::Internal::FormatTraitsBase< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_traits_base.html", [
-      [ "Harlinn::Common::Core::Persistent::Internal::AdaptedFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_adapted_format_traits.html", null ],
-      [ "Harlinn::Common::Core::Persistent::Internal::BasicArrayFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_basic_array_format_traits.html", [
-        [ "Harlinn::Common::Core::Persistent::Internal::ArrayFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_array_format_traits.html", null ]
-      ] ],
-      [ "Harlinn::Common::Core::Persistent::Internal::BasicFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_basic_format_traits.html", null ],
-      [ "Harlinn::Common::Core::Persistent::Internal::ConstantFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_constant_format_traits.html", null ],
-      [ "Harlinn::Common::Core::Persistent::Internal::ContainerFormatTraitsBase< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_container_format_traits_base.html", [
-        [ "Harlinn::Common::Core::Persistent::Internal::ArrayContainerFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_array_container_format_traits.html", null ],
-        [ "Harlinn::Common::Core::Persistent::Internal::StringContainerFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_string_container_format_traits.html", null ],
-        [ "Harlinn::Common::Core::Persistent::Internal::VectorContainerFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_vector_container_format_traits.html", null ]
-      ] ],
-      [ "Harlinn::Common::Core::Persistent::Internal::OptionalFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_optional_format_traits.html", null ],
-      [ "Harlinn::Common::Core::Persistent::Internal::PointerFormatTraitsBase< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_pointer_format_traits_base.html", [
-        [ "Harlinn::Common::Core::Persistent::Internal::StringPointerFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_string_pointer_format_traits.html", null ],
-        [ "Harlinn::Common::Core::Persistent::Internal::UnknownPointerFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_unknown_pointer_format_traits.html", null ]
-      ] ],
-      [ "Harlinn::Common::Core::Persistent::Internal::SharedPtrFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_shared_ptr_format_traits.html", null ],
-      [ "Harlinn::Common::Core::Persistent::Internal::TupleFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_tuple_format_traits.html", null ],
-      [ "Harlinn::Common::Core::Persistent::Internal::TypeListFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_type_list_format_traits.html", null ],
-      [ "Harlinn::Common::Core::Persistent::Internal::UniquePtrFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_unique_ptr_format_traits.html", null ],
-      [ "Harlinn::Common::Core::Persistent::Internal::UnsupportedFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_unsupported_format_traits.html", null ],
-      [ "Harlinn::Common::Core::Persistent::Internal::VariantFormatTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_variant_format_traits.html", null ]
-    ] ],
-    [ "Harlinn::Common::Core::Persistent::Internal::FormatTraitsBase< std::tuple<>, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_traits_base.html", [
-      [ "Harlinn::Common::Core::Persistent::Internal::TupleFormatTraits< std::tuple<>, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_tuple_format_traits_3_01std_1_1tuple_3_4_00_01_r_t_01_4.html", null ]
-    ] ],
-    [ "Harlinn::Common::Core::Persistent::Internal::FormatTraitsBase< Tuple<>, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_traits_base.html", [
-      [ "Harlinn::Common::Core::Persistent::Internal::TupleFormatTraits< Tuple<>, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_tuple_format_traits_3_01_tuple_3_4_00_01_r_t_01_4.html", null ]
-    ] ],
-    [ "Harlinn::Common::Core::Persistent::Internal::FormatTypeImpl< T >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_type_impl.html", null ],
-    [ "Harlinn::Common::Core::Persistent::Internal::FormatTypeImpl< std::pair< Types... > >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_type_impl_3_01std_1_1pair_3_01_types_8_8_8_01_4_01_4.html", null ],
-    [ "Harlinn::Common::Core::Persistent::Internal::FormatTypeImpl< std::tuple< Types... > >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_type_impl_3_01std_1_1tuple_3_01_types_8_8_8_01_4_01_4.html", null ],
-    [ "Harlinn::Common::Core::Persistent::Internal::FormatTypeImpl< Tuple< Types... > >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_type_impl_3_01_tuple_3_01_types_8_8_8_01_4_01_4.html", null ],
-    [ "Harlinn::Common::Core::Persistent::Internal::FormatTypeImpl< TypeList< Types... > >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_type_impl_3_01_type_list_3_01_types_8_8_8_01_4_01_4.html", null ],
-    [ "Harlinn::Common::Core::Persistent::Internal::FormatTypeImplHelper< N, T, Types >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_type_impl_helper.html", null ],
-    [ "Harlinn::Common::Core::Persistent::Internal::FormatTypeImplHelper< 0, T, Types... >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_type_impl_helper_3_010_00_01_t_00_01_types_8_8_8_01_4.html", null ],
-    [ "Harlinn::Common::Core::Persistent::Internal::FormatTypeImplHelper< 1, T, Types... >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_format_type_impl_helper_3_011_00_01_t_00_01_types_8_8_8_01_4.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::FractionWidth< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_fraction_width.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::FractionWidth< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_fraction_width_3_01double_01_4.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::FractionWidth< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_fraction_width_3_01float_01_4.html", null ],
@@ -1745,7 +1584,6 @@ var hierarchy =
     [ "std::hash< Harlinn::Common::Core::DateTime >", "structstd_1_1hash_3_01_harlinn_1_1_common_1_1_core_1_1_date_time_01_4.html", null ],
     [ "std::hash< Harlinn::Common::Core::Guid >", "structstd_1_1hash_3_01_harlinn_1_1_common_1_1_core_1_1_guid_01_4.html", null ],
     [ "std::hash< Harlinn::Common::Core::LMDB::Database >", "structstd_1_1hash_3_01_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_1_1_database_01_4.html", null ],
-    [ "std::hash< Harlinn::Common::Core::Logging::Internal::ThreadKeyData >", "structstd_1_1hash_3_01_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_thread_key_data_01_4.html", null ],
     [ "std::hash< Harlinn::Common::Core::SysString >", "structstd_1_1hash_3_01_harlinn_1_1_common_1_1_core_1_1_sys_string_01_4.html", null ],
     [ "std::hash< Harlinn::Common::Core::TimeSpan >", "structstd_1_1hash_3_01_harlinn_1_1_common_1_1_core_1_1_time_span_01_4.html", null ],
     [ "std::hash< Harlinn::Common::Core::WideString >", "structstd_1_1hash_3_01_harlinn_1_1_common_1_1_core_1_1_wide_string_01_4.html", null ],
@@ -1932,7 +1770,6 @@ var hierarchy =
     [ "Harlinn::Common::Core::IO::IStreamStream", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_i_stream_stream.html", [
       [ "Harlinn::Common::Core::IO::IStreamMemoryStream", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_i_stream_memory_stream.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::IO::Sockets::AddressInfo::Iterator", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_address_info_1_1_iterator.html", null ],
     [ "Harlinn::OCI::Iterator", "class_harlinn_1_1_o_c_i_1_1_iterator.html", null ],
     [ "Harlinn::Common::Core::Com::IUknownImpl", null, [
       [ "Harlinn::Windows::Media::StreamingMediaSink", "class_harlinn_1_1_windows_1_1_media_1_1_streaming_media_sink.html", null ],
@@ -1959,9 +1796,6 @@ var hierarchy =
       [ "Harlinn::Common::Core::LightweightSemaphore", "class_harlinn_1_1_common_1_1_core_1_1_lightweight_semaphore.html", null ]
     ] ],
     [ "Harlinn::Common::Core::Internal::LightweightSemaphoreImpl< Core::SemaphoreEx, ConcurrentQueueDefaultTraits::MAX_SEMA_SPINS >", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html", null ],
-    [ "linger", null, [
-      [ "Harlinn::Common::Core::IO::Sockets::Linger", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_linger.html", null ]
-    ] ],
     [ "Harlinn::Common::Core::Http::Server::Internal::LinkedListBase< DerivedT, T, hasOwnership >", "class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html", null ],
     [ "Harlinn::Common::Core::Http::Server::Internal::LinkedListBase< LinkedList< HttpReceiveRequest, hasOwnership >, HttpReceiveRequest, hasOwnership >", "class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html", [
       [ "Harlinn::Common::Core::Http::Server::Internal::LinkedList< HttpReceiveRequest, true >", "class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html", null ]
@@ -1984,43 +1818,7 @@ var hierarchy =
     [ "Harlinn::Common::Core::Http::LogData", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_log_data.html", [
       [ "Harlinn::Common::Core::Http::LogFieldsData", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_log_fields_data.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogDatabaseStore", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_database_store.html", null ],
-    [ "Harlinn::Common::Core::Logging::Logger< WriterT, BuildOptionsT >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_logger.html", null ],
-    [ "Harlinn::Common::Core::Logging::Logger< Writers::ConsoleWriter >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_logger.html", null ],
-    [ "Harlinn::Common::Core::Logging::Logger< Writers::ThreadWriter, BuildOptions< Level::Default > >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_logger.html", [
-      [ "Harlinn::Common::Core::Logging::ThreadLogger", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_thread_logger.html", null ]
-    ] ],
-    [ "Harlinn::Common::Core::Logging::Types::LoggerObject< DerivedT >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_logger_object.html", [
-      [ "Harlinn::Common::Core::Logging::Types::Identified< DerivedT >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_identified.html", null ]
-    ] ],
-    [ "Harlinn::Common::Core::Logging::Types::LoggerObject< ConfigurationFileInfo >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_logger_object.html", [
-      [ "Harlinn::Common::Core::Logging::Types::Identified< ConfigurationFileInfo >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_identified.html", [
-        [ "Harlinn::Common::Core::Logging::Types::ConfigurationFileInfo", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_configuration_file_info.html", null ]
-      ] ]
-    ] ],
-    [ "Harlinn::Common::Core::Logging::Types::LoggerObject< DomainObject >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_logger_object.html", [
-      [ "Harlinn::Common::Core::Logging::Types::Identified< DomainObject >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_identified.html", [
-        [ "Harlinn::Common::Core::Logging::Types::DomainObject", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_domain_object.html", null ]
-      ] ]
-    ] ],
-    [ "Harlinn::Common::Core::Logging::Types::LoggerObject< ExecutableInfo >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_logger_object.html", [
-      [ "Harlinn::Common::Core::Logging::Types::Identified< ExecutableInfo >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_identified.html", [
-        [ "Harlinn::Common::Core::Logging::Types::ExecutableInfo", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_executable_info.html", null ]
-      ] ]
-    ] ],
-    [ "Harlinn::Common::Core::Logging::Types::LoggerObject< ProcessInfo >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_logger_object.html", [
-      [ "Harlinn::Common::Core::Logging::Types::Identified< ProcessInfo >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_identified.html", [
-        [ "Harlinn::Common::Core::Logging::Types::ProcessInfo", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_process_info.html", null ]
-      ] ]
-    ] ],
-    [ "Harlinn::Common::Core::Logging::Types::LoggerObject< WindowsVersionInfo >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_logger_object.html", [
-      [ "Harlinn::Common::Core::Logging::Types::WindowsVersionInfo", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_windows_version_info.html", null ]
-    ] ],
     [ "Harlinn::Common::Core::Http::LoggingInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_logging_info.html", null ],
-    [ "Harlinn::Common::Core::Logging::LogRecord", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_record.html", null ],
-    [ "Harlinn::Common::Core::Logging::LogSite", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_site.html", null ],
-    [ "Harlinn::Common::Core::Logging::Types::LogSiteData", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_log_site_data.html", null ],
-    [ "Harlinn::Common::Core::Logging::LogSiteExtractor", "struct_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_site_extractor.html", null ],
     [ "Harlinn::OCI::Internal::LongVarBinaryDataType", "struct_harlinn_1_1_o_c_i_1_1_internal_1_1_long_var_binary_data_type.html", null ],
     [ "Harlinn::Common::Core::SIMD::Traits< float, N >::m128Permute", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1m128_permute.html", null ],
     [ "Harlinn::Common::Core::SIMD::Traits< float, N >::m128Select", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1m128_select.html", null ],
@@ -2258,22 +2056,6 @@ var hierarchy =
           [ "Harlinn::Common::Core::IO::ReadPipeRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_read_pipe_request.html", null ],
           [ "Harlinn::Common::Core::IO::TransactPipeRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_transact_pipe_request.html", null ],
           [ "Harlinn::Common::Core::IO::WritePipeRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_write_pipe_request.html", null ]
-        ] ],
-        [ "Harlinn::Common::Core::IO::Sockets::SocketRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket_request.html", [
-          [ "Harlinn::Common::Core::IO::Sockets::AcceptRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_accept_request.html", [
-            [ "Harlinn::Common::Core::IO::Sockets::Tcp::Server::ListenerAcceptRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_1_1_server_1_1_listener_accept_request.html", null ]
-          ] ],
-          [ "Harlinn::Common::Core::IO::Sockets::ConnectRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_connect_request.html", null ],
-          [ "Harlinn::Common::Core::IO::Sockets::DisconnectRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_disconnect_request.html", null ],
-          [ "Harlinn::Common::Core::IO::Sockets::IoctlRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_ioctl_request.html", null ],
-          [ "Harlinn::Common::Core::IO::Sockets::ReceiveFromRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_receive_from_request.html", null ],
-          [ "Harlinn::Common::Core::IO::Sockets::ReceiveMsgRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_receive_msg_request.html", null ],
-          [ "Harlinn::Common::Core::IO::Sockets::ReceiveRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_receive_request.html", null ],
-          [ "Harlinn::Common::Core::IO::Sockets::SendMsgRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_send_msg_request.html", null ],
-          [ "Harlinn::Common::Core::IO::Sockets::SendRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_send_request.html", null ],
-          [ "Harlinn::Common::Core::IO::Sockets::SendToRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_send_to_request.html", null ],
-          [ "Harlinn::Common::Core::IO::Sockets::TransmitFileRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_transmit_file_request.html", null ],
-          [ "Harlinn::Common::Core::IO::Sockets::TransmitPacketsRequest", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_transmit_packets_request.html", null ]
         ] ]
       ] ]
     ] ],
@@ -2292,6 +2074,9 @@ var hierarchy =
     [ "Harlinn::Common::Core::SIMD::Traits< float, N >::PermuteImpl< shuffle, true, true, true, true >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1_permute_impd576081ed0234425c3da4049805e429a.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::PipelineStateStreamDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_pipeline_state_stream_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::PlacedSubresourceFootprint", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_placed_subresource_footprint.html", null ],
+    [ "Harlinn::Common::Core::Math::Plane", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_plane.html", null ],
+    [ "Harlinn::Common::Core::Math::Internal::PlaneBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_plane_base.html", null ],
+    [ "Harlinn::Common::Core::Math::Internal::PlaneSimdBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_plane_simd_base.html", null ],
     [ "Harlinn::Common::Core::RtWorkQ::Platform", "class_harlinn_1_1_common_1_1_core_1_1_rt_work_q_1_1_platform.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::PointBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_point_base.html", [
       [ "Harlinn::Common::Core::Math::Point2f", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_point2f.html", null ],
@@ -2307,7 +2092,6 @@ var hierarchy =
     [ "Harlinn::AI::ONNX::PositionHash", "struct_harlinn_1_1_a_i_1_1_o_n_n_x_1_1_position_hash.html", null ],
     [ "Harlinn::AI::ONNX::Prediction", "struct_harlinn_1_1_a_i_1_1_o_n_n_x_1_1_prediction.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::PrimitiveTopologyDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_primitive_topology_desc.html", null ],
-    [ "Harlinn::Common::Core::Persistent::Printer< CharT, ArgumentsStreamT, DestinationStreamT >", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_printer.html", null ],
     [ "Harlinn::Windows::DirectShow::AMCameraControl::Privacy", "struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_privacy.html", null ],
     [ "Harlinn::Common::Core::Security::PrivilegeSet", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_privilege_set.html", null ],
     [ "Harlinn::Common::Core::Environment::ProcessEntry", "class_harlinn_1_1_common_1_1_core_1_1_environment_1_1_process_entry.html", null ],
@@ -2320,10 +2104,6 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::ProtectedResourceSessionDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_protected_resource_session_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::ProtectedResourceSessionDesc1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_protected_resource_session_desc1.html", null ],
     [ "Harlinn::Common::Core::Http::ProtectionLevelInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_protection_level_info.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::ProtocolInfo", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_protocol_info.html", null ],
-    [ "QOS", null, [
-      [ "Harlinn::Common::Core::IO::Sockets::QualityOfService", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_quality_of_service.html", null ]
-    ] ],
     [ "Harlinn::Common::Core::Http::QosSettingInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_qos_setting_info.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::QuaternionBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quaternion_base.html", [
       [ "Harlinn::Common::Core::Math::Quaternion< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html", null ]
@@ -2355,7 +2135,6 @@ var hierarchy =
     [ "Harlinn::Common::Core::Math::Internal::RangeReduction< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction_3_01float_01_4.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::RangeUInt64", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_range_u_int64.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::RasterizerDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_rasterizer_desc.html", null ],
-    [ "Harlinn::Common::Core::Demangle::detail::Converter::Raw< T >", "struct_harlinn_1_1_common_1_1_core_1_1_demangle_1_1detail_1_1_converter_1_1_raw.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::RaytracingAABB", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_a_a_b_b.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::RaytracingAccelerationStructurePostbuildInfoCompactedSizeDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_postbuild_info_compacted_size_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::RaytracingAccelerationStructurePostbuildInfoCurrentSizeDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_acceleration_structure_postbuild_info_current_size_desc.html", null ],
@@ -2372,8 +2151,6 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::RaytracingPipelineConfig1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_pipeline_config1.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::RaytracingShaderConfig", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_shader_config.html", null ],
     [ "Harlinn::Common::Core::RdtscConverter", "class_harlinn_1_1_common_1_1_core_1_1_rdtsc_converter.html", null ],
-    [ "Harlinn::Common::Core::Logging::Internal::RecordHeader", "struct_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_record_header.html", null ],
-    [ "Harlinn::Common::Core::Logging::Internal::RecordStream", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_record_stream.html", null ],
     [ "Harlinn::Windows::Graphics::Imaging::Rectangle", "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_rectangle.html", null ],
     [ "Harlinn::Windows::RectangleT< RT >", "class_harlinn_1_1_windows_1_1_rectangle_t.html", null ],
     [ "Harlinn::Common::Core::Bits< bitCount >::reference", "class_harlinn_1_1_common_1_1_core_1_1_bits_1_1reference.html", null ],
@@ -2388,7 +2165,6 @@ var hierarchy =
       [ "Harlinn::Common::Core::Observable< DerivedT >", "class_harlinn_1_1_common_1_1_core_1_1_observable.html", null ]
     ] ],
     [ "Harlinn::Common::Core::ReferenceCountedPtr< ValueT >", "class_harlinn_1_1_common_1_1_core_1_1_reference_counted_ptr.html", null ],
-    [ "Harlinn::Common::Core::ReferenceCountedPtr< Buffer >", "class_harlinn_1_1_common_1_1_core_1_1_reference_counted_ptr.html", null ],
     [ "Harlinn::Common::Core::ReferenceCountedThreadSafe", "class_harlinn_1_1_common_1_1_core_1_1_reference_counted_thread_safe.html", [
       [ "Harlinn::Common::Core::IO::MemoryStream::Data", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_memory_stream_1_1_data.html", null ],
       [ "Harlinn::Common::Core::ReferenceCountedData< T >", "class_harlinn_1_1_common_1_1_core_1_1_reference_counted_data.html", null ]
@@ -2410,17 +2186,9 @@ var hierarchy =
     [ "Harlinn::Common::Core::Http::RequestChannelBindStatus", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_channel_bind_status.html", null ],
     [ "Harlinn::Common::Core::Http::RequestHeaders", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_headers.html", null ],
     [ "Harlinn::Common::Core::Http::RequestInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_info.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::RequestPool< RequestT, N, maxFreeRequestCount >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_request_pool.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::RequestPool< Harlinn::Common::Core::IO::Sockets::Tcp::Server::ListenerAcceptRequest, 64 >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_request_pool.html", null ],
     [ "Harlinn::Common::Core::Http::RequestPropertySni", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_property_sni.html", null ],
     [ "Harlinn::Common::Core::Http::RequestQueue", "class_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_queue.html", null ],
     [ "Harlinn::Common::Core::Http::RequestSizingInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_sizing_info.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::RequestsPool< RequestsPoolTypeParamsT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_requests_pool.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::RequestsPool< RequestsPoolTypeParams<> >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_requests_pool.html", [
-      [ "Harlinn::Common::Core::IO::Sockets::Tcp::Server::ConnectionHandlerRequestsPool< DerivedT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_1_1_server_1_1_connection_handler_requests_pool.html", null ],
-      [ "Harlinn::Common::Core::IO::Sockets::Tcp::Server::ConnectionHandlerRequestsPool< ConnectionHandlerT, RequestsPoolTypeParamsT >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_1_1_server_1_1_connection_handler_requests_pool.html", null ]
-    ] ],
-    [ "Harlinn::Common::Core::IO::Sockets::RequestsPoolTypeParams< ConnectRequestPoolT, AcceptRequestPoolT, DisconnectRequestPoolT, IoctlRequestPoolT, ReceiveRequestPoolT, ReceiveFromRequestPoolT, ReceiveMsgRequestPoolT, SendRequestPoolT, SendToRequestPoolT, SendMsgRequestPoolT, TransmitFileRequestPoolT, TransmitPacketsRequestPoolT >", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_requests_pool_type_params.html", null ],
     [ "Harlinn::Common::Core::Http::RequestTimingInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_timing_info.html", null ],
     [ "Harlinn::Common::Core::Http::RequestTokenBindingInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_token_binding_info.html", null ],
     [ "Harlinn::Common::Core::Http::RequestV1", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_request_v1.html", [
@@ -2479,7 +2247,6 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::SamplePosition", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_sample_position.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::SamplerDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_sampler_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::SamplerDesc2", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_sampler_desc2.html", null ],
-    [ "Harlinn::Common::Core::Demangle::detail::save_stack", "struct_harlinn_1_1_common_1_1_core_1_1_demangle_1_1detail_1_1save__stack.html", null ],
     [ "Harlinn::Common::Core::Math::Scalar< T, N >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::ScalarBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_scalar_base.html", [
       [ "Harlinn::Common::Core::Math::Scalar< double, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01double_00_012_01_4.html", null ],
@@ -2621,9 +2388,7 @@ var hierarchy =
     [ "Harlinn::Common::Core::Services::ServiceStatusEntries", "class_harlinn_1_1_common_1_1_core_1_1_services_1_1_service_status_entries.html", null ],
     [ "Harlinn::Common::Core::Services::ServiceStatusEntry", "struct_harlinn_1_1_common_1_1_core_1_1_services_1_1_service_status_entry.html", null ],
     [ "Harlinn::Common::Core::Ese::Session", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_session.html", null ],
-    [ "Harlinn::Common::Core::LMDBEx::Session", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_session.html", [
-      [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogSession", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_session.html", null ]
-    ] ],
+    [ "Harlinn::Common::Core::LMDBEx::Session", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_session.html", null ],
     [ "Harlinn::AI::ONNX::SessionOptions", "class_harlinn_1_1_a_i_1_1_o_n_n_x_1_1_session_options.html", null ],
     [ "Harlinn::Common::Core::LMDBEx::SessionReference< DatabaseT, SessionT >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_session_reference.html", null ],
     [ "Harlinn::Common::Core::Ese::SetColumn", "class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_set_column.html", null ],
@@ -2631,19 +2396,10 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::SetProgramDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_set_program_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::SetRaytracingPipelineDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_set_raytracing_pipeline_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::SetWorkGraphDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_set_work_graph_desc.html", null ],
-    [ "Harlinn::Common::Core::SevenBitDecode< T >", "struct_harlinn_1_1_common_1_1_core_1_1_seven_bit_decode.html", null ],
-    [ "Harlinn::Common::Core::SevenBitEncode< N >", "struct_harlinn_1_1_common_1_1_core_1_1_seven_bit_encode.html", null ],
-    [ "Harlinn::Common::Core::Persistent::Internal::SevenBitEncodedValue< uint64Value >", "struct_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_seven_bit_encoded_value.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::ShaderBytecode", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_shader_bytecode.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::ShaderCacheSessionDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_shader_cache_session_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::ShaderNode", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_shader_node.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::ShaderResourceViewDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_shader_resource_view_desc.html", null ],
-    [ "std::shared_ptr< T >", null, [
-      [ "Harlinn::Common::Core::Logging::RecordHandler", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_record_handler.html", [
-        [ "Harlinn::Common::Core::Logging::Formatters::TextFormatter< OutputStreamT >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_formatters_1_1_text_formatter.html", null ],
-        [ "Harlinn::Common::Core::Logging::Sinks::TextSink", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_text_sink.html", null ]
-      ] ]
-    ] ],
     [ "Harlinn::Common::Core::Types::Internal::SharedPtrTypeTraits< T, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_shared_ptr_type_traits.html", null ],
     [ "SID_IDENTIFIER_AUTHORITY", null, [
       [ "Harlinn::Common::Core::Security::SecurityId::IdentifierAuthority", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_id_1_1_identifier_authority.html", null ]
@@ -2656,8 +2412,6 @@ var hierarchy =
     [ "Harlinn::Common::Core::SimpleConcurrentQueue< NotificationMessage, MaxNotificationQueueSize >", "class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html", null ],
     [ "Harlinn::Common::Core::SimpleConcurrentQueue< std::shared_ptr< ApplicationMessage >, maxQueueSize >", "class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html", null ],
     [ "Harlinn::Common::Core::SimpleConcurrentQueue< std::shared_ptr< ComputeNodeMessage >, maxQueueSize >", "class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html", null ],
-    [ "Harlinn::Common::Core::SimpleConcurrentQueue< std::shared_ptr< LMDBSinkMessage >, maxQueueSize >", "class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html", null ],
-    [ "Harlinn::Common::Core::SimpleConcurrentQueue< std::shared_ptr< LogManagerMessage >, maxQueueSize >", "class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html", null ],
     [ "Harlinn::Windows::Graphics::Imaging::Size", "class_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_size.html", null ],
     [ "Harlinn::AI::DML::Size2D", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_size2_d.html", null ],
     [ "Harlinn::Windows::SizeT< ST >", "class_harlinn_1_1_windows_1_1_size_t.html", null ],
@@ -2670,21 +2424,10 @@ var hierarchy =
       [ "Harlinn::Common::Core::LMDBEx::KeyBuffer< PrimaryKeyType >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html", null ],
       [ "Harlinn::Common::Core::LMDBEx::KeyBuffer< T >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::IO::Sockets::Socket", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket.html", [
-      [ "Harlinn::Common::Core::IO::Sockets::SocketT< protocolType >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket_t.html", null ],
-      [ "Harlinn::Common::Core::IO::Sockets::SocketT< SocketType::Stream, ProtocolType::Tcp >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket_t.html", null ],
-      [ "Harlinn::Common::Core::IO::Sockets::SocketT< socketType, protocolType >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket_t.html", [
-        [ "Harlinn::Common::Core::IO::Sockets::TcpSocket", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_socket.html", null ],
-        [ "Harlinn::Common::Core::IO::Sockets::UdpSocket", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_udp_socket.html", null ]
-      ] ]
-    ] ],
     [ "zmq::socket_t", null, [
       [ "Harlinn::Common::Core::ZeroMq::Socket", "class_harlinn_1_1_common_1_1_core_1_1_zero_mq_1_1_socket.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::IO::Sockets::SocketAddressList< size >", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket_address_list.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::SocketStream< protocolType >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_socket_stream.html", null ],
     [ "Harlinn.Common.Core.Net.Collections.Generic.SortedListEx< TKey, WeakReference< TValue > >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_list_ex.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::Span", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_span.html", null ],
     [ "Harlinn::Common::Core::Spinlock", "class_harlinn_1_1_common_1_1_core_1_1_spinlock.html", null ],
     [ "Harlinn::Common::Core::IO::SplitPath< T >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html", null ],
     [ "SQL_DATE_STRUCT", null, [
@@ -2755,7 +2498,6 @@ var hierarchy =
     [ "Harlinn::Common::Core::Math::Internal::StorageType< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type_3_01float_01_4.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::StorageType< value_type >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_storage_type.html", null ],
     [ "Harlinn::Common::Core::IO::Blocks::Stream", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_blocks_1_1_stream.html", null ],
-    [ "Harlinn::Common::Core::Demangle::TextOutput::StreamApplyObject", "class_harlinn_1_1_common_1_1_core_1_1_demangle_1_1_text_output_1_1_stream_apply_object.html", null ],
     [ "Harlinn::Windows::Media::MediaObject::StreamCount", "struct_harlinn_1_1_windows_1_1_media_1_1_media_object_1_1_stream_count.html", null ],
     [ "Harlinn::Windows::Media::MFTransform::StreamCount", "struct_harlinn_1_1_windows_1_1_media_1_1_m_f_transform_1_1_stream_count.html", null ],
     [ "Harlinn::Windows::Media::StreamingStreamSinkData", "class_harlinn_1_1_windows_1_1_media_1_1_streaming_stream_sink_data.html", null ],
@@ -2798,44 +2540,18 @@ var hierarchy =
     ] ],
     [ "Harlinn::Common::Core::LMDBEx::TableBase", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_table_base.html", [
       [ "Harlinn::Common::Core::LMDBEx::Index", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_index.html", [
-        [ "Harlinn::Common::Core::LMDBEx::HashIndex< UInt64 >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_hash_index.html", [
-          [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogSiteIndex", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_site_index.html", null ]
-        ] ],
-        [ "Harlinn::Common::Core::LMDBEx::HashIndex< PrimaryKeyT >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_hash_index.html", [
-          [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogHashIndexT< TableT, PrimaryKeyT, KeyFormatT, ValueFormatT >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_hash_index_t.html", null ]
-        ] ]
+        [ "Harlinn::Common::Core::LMDBEx::HashIndex< PrimaryKeyT >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_hash_index.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::LMDBEx::Table", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_table.html", [
-        [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogDataTable", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_data_table.html", null ],
-        [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogSiteTable", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_site_table.html", null ],
-        [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogTableT< InfoT >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_table_t.html", null ]
-      ] ]
+      [ "Harlinn::Common::Core::LMDBEx::Table", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_table.html", null ]
     ] ],
     [ "Harlinn::Common::Core::LMDBEx::TableInfoBase", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_table_info_base.html", [
       [ "Harlinn::Common::Core::LMDBEx::IndexInfo", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_index_info.html", [
-        [ "Harlinn::Common::Core::LMDBEx::HashIndexInfo< UInt64 >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_hash_index_info.html", [
-          [ "Harlinn::Common::Core::LMDBEx::HashIndexInfoT< LogSiteIndex, UInt64 >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_hash_index_info_t.html", [
-            [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogSiteIndexInfo", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_site_index_info.html", null ]
-          ] ]
-        ] ],
         [ "Harlinn::Common::Core::LMDBEx::HashIndexInfo< PrimaryKeyT >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_hash_index_info.html", [
-          [ "Harlinn::Common::Core::LMDBEx::HashIndexInfoT< LogIndexT, PrimaryKeyT >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_hash_index_info_t.html", [
-            [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogHashIndexInfoT< LogIndexT, PrimaryKeyT, KeyFormatT, ValueFormatT >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_hash_index_info_t.html", null ]
-          ] ],
           [ "Harlinn::Common::Core::LMDBEx::HashIndexInfoT< HashIndexT, PrimaryKeyT >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_hash_index_info_t.html", null ]
         ] ],
         [ "Harlinn::Common::Core::LMDBEx::IndexInfoT< IndexT >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_index_info_t.html", null ]
       ] ],
       [ "Harlinn::Common::Core::LMDBEx::TableInfo", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_table_info.html", [
-        [ "Harlinn::Common::Core::LMDBEx::TableInfoT< LogDataTable >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_table_info_t.html", [
-          [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogDataTableInfo", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_data_table_info.html", null ]
-        ] ],
-        [ "Harlinn::Common::Core::LMDBEx::TableInfoT< LogSiteTable >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_table_info_t.html", [
-          [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogSiteTableInfo", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_site_table_info.html", null ]
-        ] ],
-        [ "Harlinn::Common::Core::LMDBEx::TableInfoT< LogTableT< LogTableInfoT< DataT, PrimaryKeyT, ValueFormatT, 128, 4096 > > >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_table_info_t.html", [
-          [ "Harlinn::Common::Core::Logging::Sinks::Storage::LogTableInfoT< DataT, PrimaryKeyT, ValueFormatT, maxKeyEncodingSize, maxValueEncodingSize >", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_table_info_t.html", null ]
-        ] ],
         [ "Harlinn::Common::Core::LMDBEx::TableInfoT< TableT >", "class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_table_info_t.html", null ]
       ] ]
     ] ],
@@ -2848,7 +2564,6 @@ var hierarchy =
     ] ],
     [ "Harlinn::ODBC::MsSql::tagSS_TIME2_STRUCT", "struct_harlinn_1_1_o_d_b_c_1_1_ms_sql_1_1tag_s_s___t_i_m_e2___s_t_r_u_c_t.html", null ],
     [ "Harlinn::ODBC::MsSql::tagSS_TIMESTAMPOFFSET_STRUCT", "struct_harlinn_1_1_o_d_b_c_1_1_ms_sql_1_1tag_s_s___t_i_m_e_s_t_a_m_p_o_f_f_s_e_t___s_t_r_u_c_t.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::TcpInfo", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_info.html", null ],
     [ "Harlinn::AI::DML::TensorDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html", null ],
     [ "Harlinn::AI::DML::X::TensorDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_tensor_desc.html", null ],
     [ "Harlinn::AI::DML::X::TensorPolicy", "class_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_tensor_policy.html", null ],
@@ -2882,21 +2597,14 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::Tex3DUAV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex3_d_u_a_v.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::TexCubeArraySRV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex_cube_array_s_r_v.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::TexCubeSRV", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tex_cube_s_r_v.html", null ],
-    [ "Harlinn::Common::Core::Demangle::TextAttributes", "class_harlinn_1_1_common_1_1_core_1_1_demangle_1_1_text_attributes.html", null ],
-    [ "Harlinn::Common::Core::Demangle::TextOutput", "class_harlinn_1_1_common_1_1_core_1_1_demangle_1_1_text_output.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::TextureBarrier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_texture_barrier.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::TextureCopyLocation", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_texture_copy_location.html", null ],
     [ "Harlinn::Common::Core::details::thread_id_converter< thread_id_t >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1thread__id__converter.html", null ],
     [ "Harlinn::Common::Core::ThreadAbortException", "class_harlinn_1_1_common_1_1_core_1_1_thread_abort_exception.html", null ],
-    [ "Harlinn::Common::Core::Logging::BufferConverter< LogSiteExtractorT, LoggerT >::ThreadData", "struct_harlinn_1_1_common_1_1_core_1_1_logging_1_1_buffer_converter_1_1_thread_data.html", null ],
-    [ "Harlinn::Common::Core::Logging::Formatters::TextFormatter< OutputStreamT >::ThreadData", "struct_harlinn_1_1_common_1_1_core_1_1_logging_1_1_formatters_1_1_text_formatter_1_1_thread_data.html", null ],
-    [ "Harlinn::Common::Core::Logging::LogManager::ThreadData", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager_1_1_thread_data.html", null ],
     [ "Harlinn::Common::Core::details::ThreadExitListener", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1_thread_exit_listener.html", null ],
     [ "Harlinn::Common::Core::details::ThreadExitNotifier", "class_harlinn_1_1_common_1_1_core_1_1details_1_1_thread_exit_notifier.html", null ],
     [ "Harlinn::Common::Core::ThreadGroup", "class_harlinn_1_1_common_1_1_core_1_1_thread_group.html", null ],
-    [ "Harlinn::Common::Core::Logging::Internal::ThreadKeyData", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal_1_1_thread_key_data.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::ThreadLaunchOverrides", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_thread_launch_overrides.html", null ],
-    [ "Harlinn::Common::Core::Logging::Writers::ThreadWriter", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_writers_1_1_thread_writer.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::TiledResourceCoordinate", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tiled_resource_coordinate.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::TileRegionSize", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tile_region_size.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::TileShape", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_tile_shape.html", null ],
@@ -2927,7 +2635,6 @@ var hierarchy =
     [ "Harlinn::AI::DML::X::TopKOutputs", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_top_k_outputs.html", null ],
     [ "Harlinn::Common::Core::Internal::ToReferenceIfReferenceWrapper< T >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_to_reference_if_reference_wrapper.html", null ],
     [ "Harlinn::Common::Core::Internal::ToReferenceIfReferenceWrapper< std::reference_wrapper< T > >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_to_reference_if_reference_wrapper_3_01std_1_a3285cc83fd6cb27e7aa673bd72e6665.html", null ],
-    [ "Harlinn::Common::Core::Logging::Trace", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_trace.html", null ],
     [ "Harlinn::Common::Core::Utf::Traits< T >", "class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_traits.html", null ],
     [ "Harlinn::OCI::Internal::Traits< T >", "struct_harlinn_1_1_o_c_i_1_1_internal_1_1_traits.html", null ],
     [ "Harlinn::Windows::Internal::Traits< T >", "struct_harlinn_1_1_windows_1_1_internal_1_1_traits.html", null ],
@@ -2993,70 +2700,9 @@ var hierarchy =
     [ "Harlinn::OCI::Transaction", "class_harlinn_1_1_o_c_i_1_1_transaction.html", null ],
     [ "Harlinn::Windows::Media::TransformOutputDataBuffer", "class_harlinn_1_1_windows_1_1_media_1_1_transform_output_data_buffer.html", null ],
     [ "Harlinn::Windows::Media::Transforms", "class_harlinn_1_1_windows_1_1_media_1_1_transforms.html", null ],
-    [ "TRANSMIT_FILE_BUFFERS", null, [
-      [ "Harlinn::Common::Core::IO::Sockets::TransmitFileBuffers", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_transmit_file_buffers.html", null ]
-    ] ],
-    [ "TRANSMIT_PACKETS_ELEMENT", null, [
-      [ "Harlinn::Common::Core::IO::Sockets::TransmitPacketsElement", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_transmit_packets_element.html", null ]
-    ] ],
     [ "Harlinn::Common::Core::Http::TransportAddress", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_transport_address.html", null ],
     [ "Harlinn::Windows::TreeViewItem", "class_harlinn_1_1_windows_1_1_tree_view_item.html", null ],
     [ "std::true_type", null, [
-      [ "Harlinn::Common::Core::BitTraitsBase< bool >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_base.html", [
-        [ "Harlinn::Common::Core::BooleanBitTraits", "struct_harlinn_1_1_common_1_1_core_1_1_boolean_bit_traits.html", [
-          [ "Harlinn::Common::Core::BitTraits< bool >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_3_01bool_01_4.html", null ]
-        ] ]
-      ] ],
-      [ "Harlinn::Common::Core::BitTraitsBase< Byte >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_base.html", [
-        [ "Harlinn::Common::Core::ByteBitTraits", "struct_harlinn_1_1_common_1_1_core_1_1_byte_bit_traits.html", [
-          [ "Harlinn::Common::Core::BitTraits< Byte >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_3_01_byte_01_4.html", null ]
-        ] ]
-      ] ],
-      [ "Harlinn::Common::Core::BitTraitsBase< char >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_base.html", [
-        [ "Harlinn::Common::Core::CharBitTraits", "struct_harlinn_1_1_common_1_1_core_1_1_char_bit_traits.html", [
-          [ "Harlinn::Common::Core::BitTraits< char >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_3_01char_01_4.html", null ]
-        ] ]
-      ] ],
-      [ "Harlinn::Common::Core::BitTraitsBase< Int16 >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_base.html", [
-        [ "Harlinn::Common::Core::Int16BitTraits", "struct_harlinn_1_1_common_1_1_core_1_1_int16_bit_traits.html", [
-          [ "Harlinn::Common::Core::BitTraits< Int16 >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_3_01_int16_01_4.html", null ]
-        ] ]
-      ] ],
-      [ "Harlinn::Common::Core::BitTraitsBase< Int32 >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_base.html", [
-        [ "Harlinn::Common::Core::Int32BitTraits", "struct_harlinn_1_1_common_1_1_core_1_1_int32_bit_traits.html", [
-          [ "Harlinn::Common::Core::BitTraits< Int32 >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_3_01_int32_01_4.html", null ]
-        ] ]
-      ] ],
-      [ "Harlinn::Common::Core::BitTraitsBase< Int64 >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_base.html", [
-        [ "Harlinn::Common::Core::Int64BitTraits", "struct_harlinn_1_1_common_1_1_core_1_1_int64_bit_traits.html", [
-          [ "Harlinn::Common::Core::BitTraits< Int64 >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_3_01_int64_01_4.html", null ]
-        ] ]
-      ] ],
-      [ "Harlinn::Common::Core::BitTraitsBase< SByte >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_base.html", [
-        [ "Harlinn::Common::Core::SByteBitTraits", "struct_harlinn_1_1_common_1_1_core_1_1_s_byte_bit_traits.html", [
-          [ "Harlinn::Common::Core::BitTraits< SByte >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_3_01_s_byte_01_4.html", null ]
-        ] ]
-      ] ],
-      [ "Harlinn::Common::Core::BitTraitsBase< UInt16 >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_base.html", [
-        [ "Harlinn::Common::Core::UInt16BitTraits", "struct_harlinn_1_1_common_1_1_core_1_1_u_int16_bit_traits.html", [
-          [ "Harlinn::Common::Core::BitTraits< UInt16 >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_3_01_u_int16_01_4.html", null ]
-        ] ]
-      ] ],
-      [ "Harlinn::Common::Core::BitTraitsBase< UInt32 >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_base.html", [
-        [ "Harlinn::Common::Core::UInt32BitTraits", "struct_harlinn_1_1_common_1_1_core_1_1_u_int32_bit_traits.html", [
-          [ "Harlinn::Common::Core::BitTraits< UInt32 >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_3_01_u_int32_01_4.html", null ]
-        ] ]
-      ] ],
-      [ "Harlinn::Common::Core::BitTraitsBase< UInt64 >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_base.html", [
-        [ "Harlinn::Common::Core::UInt64BitTraits", "struct_harlinn_1_1_common_1_1_core_1_1_u_int64_bit_traits.html", [
-          [ "Harlinn::Common::Core::BitTraits< UInt64 >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_3_01_u_int64_01_4.html", null ]
-        ] ]
-      ] ],
-      [ "Harlinn::Common::Core::BitTraitsBase< wchar_t >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_base.html", [
-        [ "Harlinn::Common::Core::WideCharBitTraits", "struct_harlinn_1_1_common_1_1_core_1_1_wide_char_bit_traits.html", [
-          [ "Harlinn::Common::Core::BitTraits< wchar_t >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_3_01wchar__t_01_4.html", null ]
-        ] ]
-      ] ],
       [ "Harlinn::Common::Core::Internal::VariantTypeTraits< Core::VariantType::BStr, WideString, BSTR >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_variant_type_traits.html", [
         [ "Harlinn::Common::Core::VariantTypeTraits< WideString >", "struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits_3_01_wide_string_01_4.html", null ]
       ] ],
@@ -3148,7 +2794,6 @@ var hierarchy =
         [ "Harlinn::AI::DML::Internal::TensorTraits< signed char >", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01signed_01char_01_4.html", null ],
         [ "Harlinn::AI::DML::Internal::TensorTraits< unsigned char >", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01unsigned_01char_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::BitTraitsBase< T >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_traits_base.html", null ],
       [ "Harlinn::Common::Core::Com::Interfaces::Interface< IUnknown >", "struct_harlinn_1_1_common_1_1_core_1_1_com_1_1_interfaces_1_1_interface_3_01_i_unknown_01_4.html", null ],
       [ "Harlinn::Common::Core::IO::Serialization::Internal::ArrayDataTypeResolver< DateTime >", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01_date_time_01_4.html", null ],
       [ "Harlinn::Common::Core::IO::Serialization::Internal::ArrayDataTypeResolver< Guid >", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_array_data_type_resolver_3_01_guid_01_4.html", null ],
@@ -3248,7 +2893,6 @@ var hierarchy =
       ] ]
     ] ],
     [ "Harlinn::Common::Core::Security::Trustee", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_trustee.html", null ],
-    [ "Harlinn::Common::Core::Demangle::detail::Converter::tset_impl< R, T >", "struct_harlinn_1_1_common_1_1_core_1_1_demangle_1_1detail_1_1_converter_1_1tset__impl.html", null ],
     [ "Harlinn::Common::Core::Tuple< Types >", "class_harlinn_1_1_common_1_1_core_1_1_tuple.html", null ],
     [ "std::tuple", null, [
       [ "Harlinn::Common::Core::TimerQueueTimer::ArgsTuple< Types >", "class_harlinn_1_1_common_1_1_core_1_1_timer_queue_timer_1_1_args_tuple.html", null ]
@@ -3342,7 +2986,6 @@ var hierarchy =
     [ "Harlinn::Common::Core::Internal::TupleCat2< Tuple<>, std::index_sequence<>, std::index_sequence<>, 0, AsTuple< std::decay_t< Tuples > >::type... >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_tuple_cat2.html", [
       [ "Harlinn::Common::Core::Internal::TupleCatTraits< Tuples >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_tuple_cat_traits.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::Persistent::TupleDecoder< ReaderT >", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_tuple_decoder.html", null ],
     [ "Harlinn::Common::Core::TupleElement< index, Args >", "struct_harlinn_1_1_common_1_1_core_1_1_tuple_element.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::TupleSimdBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_tuple_simd_base.html", [
       [ "Harlinn::Common::Core::Math::TupleSimd< TraitsT, TupleT >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple_simd.html", null ]
@@ -3353,24 +2996,10 @@ var hierarchy =
     [ "Harlinn::Common::Core::Internal::TupleValue< index, T >", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_tuple_value.html", [
       [ "Harlinn::Common::Core::Internal::TupleBase< index, T, types... >", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_tuple_base_3_01index_00_01_t_00_01types_8_8_8_01_4.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::Persistent::Type", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_type.html", [
-      [ "Harlinn::Common::Core::Persistent::AdaptedType", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_adapted_type.html", null ],
-      [ "Harlinn::Common::Core::Persistent::ArrayType", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_array_type.html", [
-        [ "Harlinn::Common::Core::Persistent::FixedSizeArrayType", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_fixed_size_array_type.html", null ]
-      ] ],
-      [ "Harlinn::Common::Core::Persistent::BasicArrayType", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_basic_array_type.html", [
-        [ "Harlinn::Common::Core::Persistent::FixedSizeBasicArrayType", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_fixed_size_basic_array_type.html", null ]
-      ] ],
-      [ "Harlinn::Common::Core::Persistent::BasicType", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_basic_type.html", null ],
-      [ "Harlinn::Common::Core::Persistent::TupleType", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_tuple_type.html", null ],
-      [ "Harlinn::Common::Core::Persistent::TypeListType", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_type_list_type.html", null ]
-    ] ],
     [ "Harlinn::OCI::TypeAttributeInfo", "class_harlinn_1_1_o_c_i_1_1_type_attribute_info.html", null ],
     [ "Harlinn::Common::Core::TypeAttributes", "class_harlinn_1_1_common_1_1_core_1_1_type_attributes.html", null ],
-    [ "Harlinn::Common::Core::Persistent::TypeDescriptorCursor", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_type_descriptor_cursor.html", null ],
     [ "Harlinn::Common::Core::TypeLibAttributes", "class_harlinn_1_1_common_1_1_core_1_1_type_lib_attributes.html", null ],
     [ "Harlinn::Common::Core::TypeLibEntry", "class_harlinn_1_1_common_1_1_core_1_1_type_lib_entry.html", null ],
-    [ "Harlinn::Common::Core::Persistent::TypeListDecoder< ReaderT >", "class_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_type_list_decoder.html", null ],
     [ "Harlinn::Common::Core::Types::Internal::TypeListOf< T >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_list_of.html", null ],
     [ "Harlinn::Common::Core::Types::Internal::TypeListTypeTraits< RT, T >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_list_type_traits.html", null ],
     [ "Harlinn::Windows::Fonts::TypesFace", "class_harlinn_1_1_windows_1_1_fonts_1_1_types_face.html", null ],
@@ -3476,11 +3105,6 @@ var hierarchy =
     [ "Harlinn::Common::Core::Types::Internal::TypeTraitsBase< Byte, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html", [
       [ "Harlinn::Common::Core::Types::Internal::BasicTypeTraitsBase< Byte, BasicTypeId::Byte, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_basic_type_traits_base.html", [
         [ "Harlinn::Common::Core::Types::Internal::BasicTypeTraits< Byte, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_basic_type_traits_3_01_byte_00_01_r_t_01_4.html", null ]
-      ] ]
-    ] ],
-    [ "Harlinn::Common::Core::Types::Internal::TypeTraitsBase< ByteArray< N >, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html", [
-      [ "Harlinn::Common::Core::Types::Internal::ContainerTypeTraitsBase< ByteArray< N >, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits_base.html", [
-        [ "Harlinn::Common::Core::Types::Internal::ContainerTypeTraits< RT, ByteArray< N > >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits_3_01_r_t_00_01_byte_array_3_01_n_01_4_01_4.html", null ]
       ] ]
     ] ],
     [ "Harlinn::Common::Core::Types::Internal::TypeTraitsBase< char, RT >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html", [
@@ -5087,7 +4711,6 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::ViewInstanceLocation", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_view_instance_location.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::ViewInstancingDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_view_instancing_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::Viewport", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_viewport.html", null ],
-    [ "Harlinn::Common::Core::Demangle::detail::VisualStudioDemangler", "class_harlinn_1_1_common_1_1_core_1_1_demangle_1_1detail_1_1_visual_studio_demangler.html", null ],
     [ "Harlinn::Common::Core::WaitableHandle", "class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html", [
       [ "Harlinn::Common::Core::EventWaitHandle", "class_harlinn_1_1_common_1_1_core_1_1_event_wait_handle.html", null ],
       [ "Harlinn::Common::Core::Mutex", "class_harlinn_1_1_common_1_1_core_1_1_mutex.html", null ],
@@ -5124,19 +4747,11 @@ var hierarchy =
       [ "Harlinn::Windows::TreeViewWindowClass", "class_harlinn_1_1_windows_1_1_tree_view_window_class.html", null ]
     ] ],
     [ "Harlinn::Windows::WindowClasses", "class_harlinn_1_1_windows_1_1_window_classes.html", null ],
-    [ "Harlinn::Common::Core::Logging::Types::WindowsVersionInfoKey", "class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types_1_1_windows_version_info_key.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::WorkGraphDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_work_graph_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::WorkGraphMemoryRequirements", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_work_graph_memory_requirements.html", null ],
     [ "Harlinn::Common::Core::RtWorkQ::WorkQueue", "class_harlinn_1_1_common_1_1_core_1_1_rt_work_q_1_1_work_queue.html", null ],
     [ "Harlinn::Common::Core::IO::WriteBuffer< StreamT, bufferSize >", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_write_buffer.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::WriteBufferImmediateParameter", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_write_buffer_immediate_parameter.html", null ],
-    [ "Harlinn::Common::Core::IO::Sockets::WSAInitTerm", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_w_s_a_init_term.html", null ],
-    [ "WSANETWORKEVENTS", null, [
-      [ "Harlinn::Common::Core::IO::Sockets::NetworkEvents", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_network_events.html", null ]
-    ] ],
-    [ "WSAPROTOCOLCHAIN", null, [
-      [ "Harlinn::Common::Core::IO::Sockets::ProtocolChain", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_protocol_chain.html", null ]
-    ] ],
     [ "Harlinn::Common::Core::RapidXml::XmlBase< Ch >", "class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_base.html", [
       [ "Harlinn::Common::Core::RapidXml::XmlAttribute< Ch >", "class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html", null ],
       [ "Harlinn::Common::Core::RapidXml::XmlNode< Ch >", "class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_node.html", [

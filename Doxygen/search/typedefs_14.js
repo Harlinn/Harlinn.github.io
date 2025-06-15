@@ -32,10 +32,6 @@ var searchData=
   ['urlcontext_29',['UrlContext',['../namespace_harlinn_1_1_common_1_1_core_1_1_http.html#a87eb3af62b540e41672e5411f7955ea1',1,'Harlinn::Common::Core::Http']]],
   ['urlgroupid_30',['UrlGroupId',['../namespace_harlinn_1_1_common_1_1_core_1_1_http.html#a532c447bd5007ec23d877fb23c01f3f7',1,'Harlinn::Common::Core::Http']]],
   ['userflags_31',['UserFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_environment.html#a2c7a4f1f2910713080d49ecf33559435',1,'Harlinn::Common::Core::Environment']]],
-  ['userinfo_32',['UserInfo',['../class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_storage.html#a9f29653a5c318588286cf6eb5a1dc05b',1,'Harlinn::Common::Core::Logging::Storage::UserInfo'],['../namespace_harlinn_1_1_common_1_1_core_1_1_logging_1_1_types.html#a3682e5020232e08e30c1099ebbf222b1',1,'Harlinn::Common::Core::Logging::Types::UserInfo']]],
-  ['userinfocursor_33',['UserInfoCursor',['../class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_storage.html#ac355357f08aab863941b4248d39a3aa4',1,'Harlinn::Common::Core::Logging::Storage']]],
-  ['userinfocursorptr_34',['UserInfoCursorPtr',['../class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_storage.html#a04c61d038dd68c2c056d730db1bfb3e7',1,'Harlinn::Common::Core::Logging::Storage']]],
-  ['userinfoptr_35',['UserInfoPtr',['../class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_storage.html#a518ea4e6cd8869532a34309dac07c859',1,'Harlinn::Common::Core::Logging::Storage']]],
-  ['userprivilege_36',['UserPrivilege',['../namespace_harlinn_1_1_common_1_1_core_1_1_environment.html#a1bae0dbc352125965181b7519ce39ad5',1,'Harlinn::Common::Core::Environment']]],
-  ['ushort_37',['ushort',['../namespace_harlinn_1_1_common_1_1_core.html#a38718ef8fa75ffcf4a11ec774a7ffd4d',1,'Harlinn::Common::Core']]]
+  ['userprivilege_32',['UserPrivilege',['../namespace_harlinn_1_1_common_1_1_core_1_1_environment.html#a1bae0dbc352125965181b7519ce39ad5',1,'Harlinn::Common::Core::Environment']]],
+  ['ushort_33',['ushort',['../namespace_harlinn_1_1_common_1_1_core.html#a38718ef8fa75ffcf4a11ec774a7ffd4d',1,'Harlinn::Common::Core']]]
 ];

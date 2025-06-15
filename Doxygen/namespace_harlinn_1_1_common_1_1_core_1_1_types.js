@@ -70,7 +70,6 @@ var namespace_harlinn_1_1_common_1_1_core_1_1_types =
       [ "StdBasicStringView", "namespace_harlinn_1_1_common_1_1_core_1_1_types.html#abbadc6a649fabd96bdc1f2739149fbc0a08a01f595958ab64f800ee89ca57d16a", null ],
       [ "BasicString", "namespace_harlinn_1_1_common_1_1_core_1_1_types.html#abbadc6a649fabd96bdc1f2739149fbc0ac947b0cd4e8ebb35e4ae65f0ed7bd551", null ],
       [ "BasicStringView", "namespace_harlinn_1_1_common_1_1_core_1_1_types.html#abbadc6a649fabd96bdc1f2739149fbc0abce22d2404cbfd082dd3d3b36d8e5c1a", null ],
-      [ "ByteArray", "namespace_harlinn_1_1_common_1_1_core_1_1_types.html#abbadc6a649fabd96bdc1f2739149fbc0a29d83f0080e24c1f4b3975dc9ff9e868", null ],
       [ "Vector", "namespace_harlinn_1_1_common_1_1_core_1_1_types.html#abbadc6a649fabd96bdc1f2739149fbc0a57dea6f5039281b7fee517fc43bf3110", null ]
     ] ],
     [ "TupleTypeId", "namespace_harlinn_1_1_common_1_1_core_1_1_types.html#ab40c9779dfbd970053302e5dad9ef05c", [

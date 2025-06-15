@@ -283,7 +283,8 @@ eliminated from the execution path of the <code class="language-plaintext highli
 mathematical C library used by the <a href="https://julialang.org/">Julia</a> programming language.</p>
 
 <p>The functions return NaN and +/- infinity as expected, but does not always set the exception flags
-in the floating point environment.</p>
+in the floating point environment. The reason for this is that the code that generated the floating
+point exceptions in <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> prevented full compile time constant evaluation.</p>
 
 <p>The API is template based, which may seem odd, but this helps to reduce the number of
 unintended conversions between numeric types. Most functions designed to work with 
@@ -295,7 +296,7 @@ floating point values do not accept integer values without an explicit cast to
 <p>Unit tests for <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of the core functions from <code class="language-plaintext highlighter-rouge">HCCMath.h</code> are provided in 
 <a href="https://github.com/Harlinn/Harlinn.Windows/blob/master/Tests/Harlinn.Common.Core.Math.Tests/ConstexprMathTests.cpp">ConstexprMathTests.cpp</a>.</p>
 
-<p><a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Tests/Harlinn.Common.Core.Math.Tests">Harlinn.Common.Core.Math.Tests</a> contains 663 test cases, 
+<p><a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Tests/Harlinn.Common.Core.Math.Tests">Harlinn.Common.Core.Math.Tests</a> contains 678 test cases, 
 striving to demonstrate the accuracy of the computations. Be aware that running the release build of the full test suite takes nearly an hour,
 as several of the tests seeks to determine the result for every possible input, or very large subsets of the possible inputs - comparing
 the results with those produced by the standard implementation.</p>
@@ -310,7 +311,7 @@ included in the <a href="/Cpp/Harlinn.Windows/Harlinn.Windows.html">Harlinn.Wind
 
 <h3 id="pbrto-a-micro-optimized-raytracing-app">PBRTO a micro optimized raytracing app</h3>
 
-<p>Benchmarks for individual functions cannot be relied upon to accurately determine how well they 
+<p>Benchmarks for individual functions cannot always be relied upon to accurately determine how well they 
 will perform perform in a real application. Benchmarks provides a good idea about 
 how the functions will perform, but when the compiler, and linker, employs global optimizations across all
 the compilation units, there are often a few surprises. PBRTO was created as a tool to help 

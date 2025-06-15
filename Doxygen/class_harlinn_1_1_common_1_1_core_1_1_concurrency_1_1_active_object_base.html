@@ -116,7 +116,7 @@ $(function(){initNavTree('class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_
 <div class="dynheader">
 Inheritance diagram for Harlinn::Common::Core::Concurrency::ActiveObjectBase&lt; MessageT, maxQueueSize &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object_base__inherit__graph.svg" width="1764" height="360"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object_base__inherit__graph.svg" width="1707" height="232"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for Harlinn::Common::Core::Concurrency::ActiveObjectBase&lt; MessageT, maxQueueSize &gt;:</div>
@@ -346,8 +346,6 @@ template&lt;typename MessageT , size_t maxQueueSize = 10 * 1024&gt; </div>
 
 <p>Provides an opportunity to implement any cleanup that needs to be performed in the context of the worker thread of the active object after the message loop exits. </p>
 
-<p>Reimplemented in <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#ae66ecfac545fb96f0f4c9466668c89ad">Harlinn::Common::Core::Logging::LogManager</a>.</p>
-
 </div>
 </div>
 <a id="a1d8aae29362ea582d9d83576970e4a9b" name="a1d8aae29362ea582d9d83576970e4a9b"></a>
@@ -378,7 +376,7 @@ template&lt;typename MessageT , size_t maxQueueSize = 10 * 1024&gt; </div>
 <p>BeforeProcessMessages is called from Run, and if an exception is thrown it will not be caught unless the thread catches the exception. </p>
 <p>If overridden by a derived class, the implementation must call the implementation provided by the base class. </p>
 
-<p>Reimplemented in <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_application.html#a625bfe43ce24769672e402dda3ad5d89">Harlinn::Common::Core::Application</a>, and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a979da30ec298e7d1a5b62456c961a402">Harlinn::Common::Core::Logging::LogManager</a>.</p>
+<p>Reimplemented in <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_application.html#a625bfe43ce24769672e402dda3ad5d89">Harlinn::Common::Core::Application</a>.</p>
 
 </div>
 </div>
@@ -456,7 +454,7 @@ template&lt;typename MessageT , size_t maxQueueSize = 10 * 1024&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Implemented in <a class="el" href="class_harlinn_1_1_a_i_1_1_o_n_n_x_1_1_direct_m_l_1_1_compute_node.html#a48206419af4a3500445c3374255e4647">Harlinn::AI::ONNX::DirectML::ComputeNode</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_application.html#a95ea0678f5117a697dd2f6e5cb344d61">Harlinn::Common::Core::Application</a>, and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a37619200811f0e55c098c14cabe04cab">Harlinn::Common::Core::Logging::LogManager</a>.</p>
+<p>Implemented in <a class="el" href="class_harlinn_1_1_a_i_1_1_o_n_n_x_1_1_direct_m_l_1_1_compute_node.html#a48206419af4a3500445c3374255e4647">Harlinn::AI::ONNX::DirectML::ComputeNode</a>, and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_application.html#a95ea0678f5117a697dd2f6e5cb344d61">Harlinn::Common::Core::Application</a>.</p>
 
 </div>
 </div>
@@ -619,7 +617,7 @@ template&lt;typename MessageT , size_t maxQueueSize = 10 * 1024&gt; </div>
 
 <p>PostStopMessage must be implemented by derived classes. The implementation must post a message the will cause IsStopMessage to return true. </p>
 
-<p>Implemented in <a class="el" href="class_harlinn_1_1_a_i_1_1_o_n_n_x_1_1_direct_m_l_1_1_compute_node.html#ab0592644510eed73822c4bfc87ba1a02">Harlinn::AI::ONNX::DirectML::ComputeNode</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_application.html#a971d59395f0c3c0cabfafd53296f44b1">Harlinn::Common::Core::Application</a>, and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#af9a2317d64521bf49f0cfe91833a0d47">Harlinn::Common::Core::Logging::LogManager</a>.</p>
+<p>Implemented in <a class="el" href="class_harlinn_1_1_a_i_1_1_o_n_n_x_1_1_direct_m_l_1_1_compute_node.html#ab0592644510eed73822c4bfc87ba1a02">Harlinn::AI::ONNX::DirectML::ComputeNode</a>, and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_application.html#a971d59395f0c3c0cabfafd53296f44b1">Harlinn::Common::Core::Application</a>.</p>
 
 </div>
 </div>
@@ -656,7 +654,7 @@ template&lt;typename MessageT , size_t maxQueueSize = 10 * 1024&gt; </div>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_harlinn_1_1_a_i_1_1_o_n_n_x_1_1_direct_m_l_1_1_compute_node.html#aef4f7ca1b1658cf584001bbcdab6c4fb">Harlinn::AI::ONNX::DirectML::ComputeNode</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_application.html#ae015272f665113f973f6e8be4cfec68a">Harlinn::Common::Core::Application</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#ad4a41564ed00989e520925b2f2469c9f">Harlinn::Common::Core::Logging::LogManager</a>, and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_l_m_d_b_sink.html#a9dca79bbbba5bac4ad546cfe5eacf5d2">Harlinn::Common::Core::Logging::Sinks::LMDBSink</a>.</p>
+<p>Reimplemented in <a class="el" href="class_harlinn_1_1_a_i_1_1_o_n_n_x_1_1_direct_m_l_1_1_compute_node.html#aef4f7ca1b1658cf584001bbcdab6c4fb">Harlinn::AI::ONNX::DirectML::ComputeNode</a>, and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_application.html#ae015272f665113f973f6e8be4cfec68a">Harlinn::Common::Core::Application</a>.</p>
 
 </div>
 </div>
@@ -751,7 +749,7 @@ template&lt;typename MessageT , size_t maxQueueSize = 10 * 1024&gt; </div>
 
 <p>Start must be implemented by derived classes. The implementation should only return when it is able to determine that the thread has successfully started. </p>
 
-<p>Implemented in <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_application.html#a93c3f0754de346d945c58d6e8012eefc">Harlinn::Common::Core::Application</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a3220f642681d2270a19fee5fdb206ae2">Harlinn::Common::Core::Concurrency::ActiveObject&lt; MessageT, maxQueueSize &gt;</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a3220f642681d2270a19fee5fdb206ae2">Harlinn::Common::Core::Concurrency::ActiveObject&lt; std::shared_ptr&lt; ApplicationMessage &gt; &gt;</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a3220f642681d2270a19fee5fdb206ae2">Harlinn::Common::Core::Concurrency::ActiveObject&lt; std::shared_ptr&lt; ComputeNodeMessage &gt; &gt;</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a3220f642681d2270a19fee5fdb206ae2">Harlinn::Common::Core::Concurrency::ActiveObject&lt; std::shared_ptr&lt; LMDBSinkMessage &gt; &gt;</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a3220f642681d2270a19fee5fdb206ae2">Harlinn::Common::Core::Concurrency::ActiveObject&lt; std::shared_ptr&lt; LogManagerMessage &gt; &gt;</a>, and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a21be309114fb5f9ce4f81c31df0dbb4e">Harlinn::Common::Core::Logging::LogManager</a>.</p>
+<p>Implemented in <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a3220f642681d2270a19fee5fdb206ae2">Harlinn::Common::Core::Concurrency::ActiveObject&lt; MessageT, maxQueueSize &gt;</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a3220f642681d2270a19fee5fdb206ae2">Harlinn::Common::Core::Concurrency::ActiveObject&lt; std::shared_ptr&lt; ApplicationMessage &gt; &gt;</a>, and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a3220f642681d2270a19fee5fdb206ae2">Harlinn::Common::Core::Concurrency::ActiveObject&lt; std::shared_ptr&lt; ComputeNodeMessage &gt; &gt;</a>.</p>
 
 </div>
 </div>
@@ -812,7 +810,7 @@ template&lt;typename MessageT , size_t maxQueueSize = 10 * 1024&gt; </div>
 
 <p>Stop must be implemented by derived classes. The implementation should wait a reasonable amount time for the message processing thread to exit. </p>
 
-<p>Implemented in <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_application.html#adc151fac8f6b8c9f816645a4277644e5">Harlinn::Common::Core::Application</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a74813b7b21d513b66b294b6be811d74e">Harlinn::Common::Core::Concurrency::ActiveObject&lt; MessageT, maxQueueSize &gt;</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a74813b7b21d513b66b294b6be811d74e">Harlinn::Common::Core::Concurrency::ActiveObject&lt; std::shared_ptr&lt; ApplicationMessage &gt; &gt;</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a74813b7b21d513b66b294b6be811d74e">Harlinn::Common::Core::Concurrency::ActiveObject&lt; std::shared_ptr&lt; ComputeNodeMessage &gt; &gt;</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a74813b7b21d513b66b294b6be811d74e">Harlinn::Common::Core::Concurrency::ActiveObject&lt; std::shared_ptr&lt; LMDBSinkMessage &gt; &gt;</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a74813b7b21d513b66b294b6be811d74e">Harlinn::Common::Core::Concurrency::ActiveObject&lt; std::shared_ptr&lt; LogManagerMessage &gt; &gt;</a>, and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_log_manager.html#a7342c373eeeaf4df6d4a05f51603b011">Harlinn::Common::Core::Logging::LogManager</a>.</p>
+<p>Implemented in <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a74813b7b21d513b66b294b6be811d74e">Harlinn::Common::Core::Concurrency::ActiveObject&lt; MessageT, maxQueueSize &gt;</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a74813b7b21d513b66b294b6be811d74e">Harlinn::Common::Core::Concurrency::ActiveObject&lt; std::shared_ptr&lt; ApplicationMessage &gt; &gt;</a>, and <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object.html#a74813b7b21d513b66b294b6be811d74e">Harlinn::Common::Core::Concurrency::ActiveObject&lt; std::shared_ptr&lt; ComputeNodeMessage &gt; &gt;</a>.</p>
 
 </div>
 </div>

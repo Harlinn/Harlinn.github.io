@@ -48,6 +48,7 @@ var dir_3d2276ea2e3cf69109f5d835ea6d8101 =
     [ "e_sinhf.inl", "e__sinhf_8inl.html", "e__sinhf_8inl" ],
     [ "e_sqrt.inl", "e__sqrt_8inl.html", "e__sqrt_8inl" ],
     [ "e_sqrtf.inl", "e__sqrtf_8inl.html", "e__sqrtf_8inl" ],
+    [ "e_tgamma.inl", "e__tgamma_8inl.html", "e__tgamma_8inl" ],
     [ "fpmath.h", "fpmath_8h.html", "fpmath_8h" ],
     [ "k_cos.inl", "k__cos_8inl.html", "k__cos_8inl" ],
     [ "k_cosf.inl", "k__cosf_8inl.html", "k__cosf_8inl" ],

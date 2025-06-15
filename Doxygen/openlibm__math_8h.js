@@ -239,7 +239,7 @@ var openlibm__math_8h =
     [ "tanhf", "openlibm__math_8h.html#a5e2c0aa6787d1908803bc3a1a1311ad5", null ],
     [ "tanhl", "openlibm__math_8h.html#a03959dff489e6f751ecf132eb2b28397", null ],
     [ "tanl", "openlibm__math_8h.html#ab8bc29274dc8ee0dae83843bfca70053", null ],
-    [ "tgamma", "openlibm__math_8h.html#aef1c3d288c2ebff126dfa2134ea8c6c8", null ],
+    [ "tgamma", "openlibm__math_8h.html#a2e1754283d2dc8e953d0e81c2dfb41f9", null ],
     [ "tgammaf", "openlibm__math_8h.html#a610ab3ebff9f93cfcc0c563313160f5a", null ],
     [ "tgammal", "openlibm__math_8h.html#ae6d81534e3cc468dd636c14b77e8cb3f", null ],
     [ "trunc", "openlibm__math_8h.html#a4aa1463249a5bb86e7761e23a289dc32", null ],

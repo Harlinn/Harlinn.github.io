@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['linkedlistbase_0',['LinkedListBase',['../class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html#ab9c3ad4449525b8fbdfcd0dda6aa7ffa',1,'Harlinn::Common::Core::Http::Server::Internal::LinkedList']]],
-  ['listconstiterator_1',['ListConstIterator',['../class_harlinn_1_1_common_1_1_core_1_1_list.html#a6a50ae1c840e4949cf18b4ce01d40c80',1,'Harlinn::Common::Core::List']]],
-  ['listenerhandler_2',['ListenerHandler',['../class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_sockets_1_1_tcp_1_1_server_1_1_connection_handler.html#a0999492ca7a7ad35dd596ca0667779a2',1,'Harlinn::Common::Core::IO::Sockets::Tcp::Server::ConnectionHandler']]],
-  ['listiterator_3',['ListIterator',['../class_harlinn_1_1_common_1_1_core_1_1_list.html#a0aca4fe5d462a9a0528415cb9475b5f6',1,'Harlinn::Common::Core::List']]],
-  ['logcomputerindex_4',['LogComputerIndex',['../class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_table_t.html#a86236cc79511898959acf37b7d328e92',1,'Harlinn::Common::Core::Logging::Sinks::Storage::LogTableT']]],
-  ['loghashindext_5',['LogHashIndexT',['../class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_table_t.html#a13c5426919268d964f2f141320f8679a',1,'Harlinn::Common::Core::Logging::Sinks::Storage::LogTableT']]],
-  ['logmanager_6',['LogManager',['../class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_thread_logger.html#a42122844816425e371e961638cdaf796',1,'Harlinn::Common::Core::Logging::ThreadLogger']]],
-  ['logsiteindex_7',['LogSiteIndex',['../class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_sinks_1_1_storage_1_1_log_site_table.html#aa4abf1c0a368e5c68406893c0a5ba550',1,'Harlinn::Common::Core::Logging::Sinks::Storage::LogSiteTable']]]
+  ['menu_0',['Menu',['../class_harlinn_1_1_windows_1_1_menu_item.html#a834cec0fab7efabab3cd53540e4d466d',1,'Harlinn::Windows::MenuItem::Menu'],['../class_harlinn_1_1_windows_1_1_menu_items.html#a834cec0fab7efabab3cd53540e4d466d',1,'Harlinn::Windows::MenuItems::Menu']]],
+  ['menuitems_1',['MenuItems',['../class_harlinn_1_1_windows_1_1_menu_item.html#a71fbe9f2b1675c9247d5139391fbd1de',1,'Harlinn::Windows::MenuItem::MenuItems'],['../class_harlinn_1_1_windows_1_1_menu.html#a71fbe9f2b1675c9247d5139391fbd1de',1,'Harlinn::Windows::Menu::MenuItems']]],
+  ['messagedispatcherbase_2',['MessageDispatcherBase',['../class_harlinn_1_1_windows_1_1_control.html#a3d80f92913fcfae53b10c0fbb75fe220',1,'Harlinn::Windows::Control']]]
 ];

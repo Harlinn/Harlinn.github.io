@@ -15,7 +15,7 @@ var math__private__openbsd_8h =
     [ "SET_LDOUBLE_WORDS64", "math__private__openbsd_8h.html#ab470af6ceff657ace5268836f90b816b", null ],
     [ "__exp__D", "math__private__openbsd_8h.html#ae267ade0e6ca6800c45f82a9a909c9f0", null ],
     [ "__log__D", "math__private__openbsd_8h.html#ad32b885ecffdf6f6474ced39ce4eeafa", null ],
-    [ "__p1evll", "math__private__openbsd_8h.html#aa8161f6105556c9b5cb6885fd3e0c1bb", null ],
-    [ "__polevll", "math__private__openbsd_8h.html#ae841b7bdece01c81eb1fb7d0007467ca", null ],
+    [ "__p1evll", "math__private__openbsd_8h.html#a9f3f1d7eb05d8e7c152c83d968825168", null ],
+    [ "__polevll", "math__private__openbsd_8h.html#a4ff7feb468161afd6134d27ed69c964c", null ],
     [ "__scan_nan", "math__private__openbsd_8h.html#ad8e813b0c041dc60420a647054923c65", null ]
 ];

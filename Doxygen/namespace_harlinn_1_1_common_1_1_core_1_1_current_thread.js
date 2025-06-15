@@ -3,7 +3,7 @@ var namespace_harlinn_1_1_common_1_1_core_1_1_current_thread =
     [ "Internal", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread_1_1_internal.html", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread_1_1_internal" ],
     [ "Description", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread.html#ae3ce360bfa3accace0a0f3dee3d3a12b", null ],
     [ "EnvironmentBlock", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread.html#ad2c7cec8a89a975bcd310de0bb79e233", null ],
-    [ "FlushLogger", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread.html#a39ce80f94cd62af4dbf44bcd5a5b6d47", null ],
+    [ "FlushLogger", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread.html#a2a76c8a692c13a1ec3f40de84268a311", null ],
     [ "Handle", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread.html#a9436b3f1b6302033690d870cdaaaf15a", null ],
     [ "Id", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread.html#a3920ffa33f6175a0b1decd1c6806a12a", null ],
     [ "OpenToken", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread.html#afe8f345d8bbb613a1ed83a3eb8150106", null ],
@@ -16,7 +16,7 @@ var namespace_harlinn_1_1_common_1_1_core_1_1_current_thread =
     [ "Sleep", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread.html#aa11ffcc01bd7fd2ed9852230e9473557", null ],
     [ "sleep", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread.html#a5e7ab823c4554cba6930cb1e6a263135", null ],
     [ "sleep", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread.html#adb94acce46791c4359319374745cdce7", null ],
-    [ "ThreadLogger", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread.html#a61476bf952bd954f1e7bf5cec767b69e", null ],
+    [ "ThreadLogger", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread.html#ac09d136a673657cbfefbc32286042ee6", null ],
     [ "Yield", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread.html#a4c12e27a4b7840f47e0c3dda18010549", null ],
     [ "yield", "namespace_harlinn_1_1_common_1_1_core_1_1_current_thread.html#afb9290634ad530168ee26c2ce52e035b", null ]
 ];

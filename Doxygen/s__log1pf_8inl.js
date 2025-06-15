@@ -11,5 +11,5 @@ var s__log1pf_8inl =
     [ "Lp6", "s__log1pf_8inl.html#aae07688dd723298ef67e445ec4a2d69f", null ],
     [ "Lp7", "s__log1pf_8inl.html#affb93d56be5924adcbd10884e7e5505f", null ],
     [ "two25", "s__log1pf_8inl.html#a9bce5f99fc7889b824ea84828fb20dda", null ],
-    [ "zero", "s__log1pf_8inl.html#a63f274a87b88f1b705afd13365f96777", null ]
+    [ "zero", "s__log1pf_8inl.html#a74a659364e069480d12089eb017057dd", null ]
 ];

@@ -66,6 +66,5 @@ var searchData=
   ['operatordescarrayfieldinfo_63',['OperatorDescArrayFieldInfo',['../namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a38fc1c8b477e256fd0cbdbcf140fda65',1,'Harlinn::AI::DML']]],
   ['operatordescfieldinfo_64',['OperatorDescFieldInfo',['../namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a16c650ca5689bc5a178120840a906d63',1,'Harlinn::AI::DML']]],
   ['operatortypeinfomap_65',['OperatorTypeInfoMap',['../namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a1fc2aeec89c4ad20a60962d0115ede2e',1,'Harlinn::AI::DML']]],
-  ['oracletype_66',['OracleType',['../class_harlinn_1_1_o_c_i_1_1_descriptor_bind.html#afceae6720d94f731525eed09b463560b',1,'Harlinn::OCI::DescriptorBind::OracleType'],['../class_harlinn_1_1_o_c_i_1_1_descriptor_array_bind.html#a78ba75da2022b6f82b743891dbb492f9',1,'Harlinn::OCI::DescriptorArrayBind::OracleType']]],
-  ['outputstreamtype_67',['OutputStreamType',['../class_harlinn_1_1_common_1_1_core_1_1_logging_1_1_formatters_1_1_text_formatter.html#a466ac69c11b486003e2c1191c4b1aff8',1,'Harlinn::Common::Core::Logging::Formatters::TextFormatter']]]
+  ['oracletype_66',['OracleType',['../class_harlinn_1_1_o_c_i_1_1_descriptor_bind.html#afceae6720d94f731525eed09b463560b',1,'Harlinn::OCI::DescriptorBind::OracleType'],['../class_harlinn_1_1_o_c_i_1_1_descriptor_array_bind.html#a78ba75da2022b6f82b743891dbb492f9',1,'Harlinn::OCI::DescriptorArrayBind::OracleType']]]
 ];

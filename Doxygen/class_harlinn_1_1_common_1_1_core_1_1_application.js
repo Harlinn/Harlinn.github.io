@@ -22,8 +22,6 @@ var class_harlinn_1_1_common_1_1_core_1_1_application =
     [ "ProcessMessage", "class_harlinn_1_1_common_1_1_core_1_1_application.html#ae015272f665113f973f6e8be4cfec68a", null ],
     [ "ProcessThreadAttachedMessage", "class_harlinn_1_1_common_1_1_core_1_1_application.html#ad3040ffec9379df7abf70bc41694019a", null ],
     [ "ProcessThreadDetachedMessage", "class_harlinn_1_1_common_1_1_core_1_1_application.html#ace2431ffe17f3e0c55a97e43833e1730", null ],
-    [ "Start", "class_harlinn_1_1_common_1_1_core_1_1_application.html#a93c3f0754de346d945c58d6e8012eefc", null ],
-    [ "Stop", "class_harlinn_1_1_common_1_1_core_1_1_application.html#adc151fac8f6b8c9f816645a4277644e5", null ],
     [ "instance_", "class_harlinn_1_1_common_1_1_core_1_1_application.html#aac341b1dc388478d60119b5e44148a03", null ],
     [ "OnThreadAttached", "class_harlinn_1_1_common_1_1_core_1_1_application.html#a3c52273ee89f1f15538d166f6e702648", null ],
     [ "OnThreadDetached", "class_harlinn_1_1_common_1_1_core_1_1_application.html#a066c95006e89f48992a7ef730d1f55c2", null ],

@@ -61,13 +61,10 @@ var concepts =
             [ "QuaternionOrQuaternionSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_or_quaternion_simd_type.html", null ],
             [ "SquareMatrixSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_type.html", null ],
             [ "SquareMatrixType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_type.html", null ],
-            [ "SquareMatrixOrSquareMatrixSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_or_square_matrix_simd_type.html", null ]
-          ] ],
-          [ "Persistent", "namespace_harlinn_1_1_common_1_1_core_1_1_persistent.html", [
-            [ "Internal", "namespace_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal.html", [
-              [ "WriterCanWrite", "concept_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_writer_can_write.html", null ],
-              [ "ReaderCanRead", "concept_harlinn_1_1_common_1_1_core_1_1_persistent_1_1_internal_1_1_reader_can_read.html", null ]
-            ] ]
+            [ "SquareMatrixOrSquareMatrixSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_or_square_matrix_simd_type.html", null ],
+            [ "PlaneSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_plane_simd_type.html", null ],
+            [ "PlaneType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_plane_type.html", null ],
+            [ "PlaneOrPlaneSimdType", "concept_harlinn_1_1_common_1_1_core_1_1_math_1_1_plane_or_plane_simd_type.html", null ]
           ] ],
           [ "Test", "namespace_harlinn_1_1_common_1_1_core_1_1_test.html", [
             [ "Generators", "namespace_harlinn_1_1_common_1_1_core_1_1_test_1_1_generators.html", [

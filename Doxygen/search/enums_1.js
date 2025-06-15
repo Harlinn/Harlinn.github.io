@@ -26,8 +26,7 @@ var searchData=
   ['borderstyle_23',['BorderStyle',['../namespace_harlinn_1_1_windows.html#aa2c7085feb84b0e4bc8ed1770225e168',1,'Harlinn::Windows']]],
   ['boundsaccumulationflags_24',['BoundsAccumulationFlags',['../namespace_harlinn_1_1_windows.html#a0fb3216d0e7ddf472c42a57aadbe9b26',1,'Harlinn::Windows']]],
   ['brushstyle_25',['BrushStyle',['../namespace_harlinn_1_1_windows.html#a651ddb401a56e0a5c3d57e5a1075d401',1,'Harlinn::Windows']]],
-  ['bufferflags_26',['BufferFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_logging_1_1_internal.html#a87a11b626e6a7c2a9baa858967d0f266',1,'Harlinn::Common::Core::Logging::Internal']]],
-  ['buffersrvflags_27',['BufferSRVFlags',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a1fe011867cfaf27b6f3bbe1e81173efd',1,'Harlinn::Windows::Graphics::D3D12']]],
-  ['bufferuavflags_28',['BufferUAVFlags',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a125e5b8913675f617b7e496bc19eb946',1,'Harlinn::Windows::Graphics::D3D12']]],
-  ['bulkoperation_29',['BulkOperation',['../namespace_harlinn_1_1_o_d_b_c.html#ad9b70b371a684d3b08d4ae9bf3cbe0a8',1,'Harlinn::ODBC']]]
+  ['buffersrvflags_26',['BufferSRVFlags',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a1fe011867cfaf27b6f3bbe1e81173efd',1,'Harlinn::Windows::Graphics::D3D12']]],
+  ['bufferuavflags_27',['BufferUAVFlags',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a125e5b8913675f617b7e496bc19eb946',1,'Harlinn::Windows::Graphics::D3D12']]],
+  ['bulkoperation_28',['BulkOperation',['../namespace_harlinn_1_1_o_d_b_c.html#ad9b70b371a684d3b08d4ae9bf3cbe0a8',1,'Harlinn::ODBC']]]
 ];
