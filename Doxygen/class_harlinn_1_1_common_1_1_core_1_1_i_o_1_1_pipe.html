@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -131,7 +140,7 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af3f75a15792b6ca83bda0a168e0a0836" id="r_af3f75a15792b6ca83bda0a168e0a0836"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3f75a15792b6ca83bda0a168e0a0836">Pipe</a> (const wchar_t *pipeName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a27ab962996878b0c809db3bf2e60a8e6">PipeOpenMode</a> pipeOpenMode=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a27ab962996878b0c809db3bf2e60a8e6a47a54d9da8952a3980d27488b00a21c1">PipeOpenMode::InOut</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#abe2205c129a5f919fc08afd10e3afefb">PipeMode</a> pipeMode=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#abe2205c129a5f919fc08afd10e3afefba4c2a8fe7eaf24721cc7a9f0175115bd4">PipeMode::Message</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#abe2205c129a5f919fc08afd10e3afefba1e1b48ea3466b9169faa2a419e52a7c3">PipeMode::RejectRemoteClients</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> maxInstances=<a class="el" href="#abe533c344f23faa0bb96fd3c92b3d004">UnlimitedInstances</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> outBufferSize=<a class="el" href="#af33e8da738f41d898b7af5e48950a3a7">DefaultOutBufferSize</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> inBufferSize=<a class="el" href="#a7e58d9d681df8b559c0450e2003bd5af">DefaultInBufferSize</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> defaultTimeout=<a class="el" href="#adb1f90f3306f5f939457862faf4680d7">DefaultTimeout</a>, LPSECURITY_ATTRIBUTES lpSecurityAttributes=nullptr)</td></tr>
+<tr class="memitem:af3f75a15792b6ca83bda0a168e0a0836" id="r_af3f75a15792b6ca83bda0a168e0a0836"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3f75a15792b6ca83bda0a168e0a0836">Pipe</a> (const wchar_t *pipeName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a27ab962996878b0c809db3bf2e60a8e6">PipeOpenMode</a> pipeOpenMode=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a27ab962996878b0c809db3bf2e60a8e6a47a54d9da8952a3980d27488b00a21c1">PipeOpenMode::InOut</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#abe2205c129a5f919fc08afd10e3afefb">PipeMode</a> pipeMode=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#abe2205c129a5f919fc08afd10e3afefba4c2a8fe7eaf24721cc7a9f0175115bd4">PipeMode::Message</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#abe2205c129a5f919fc08afd10e3afefba1e1b48ea3466b9169faa2a419e52a7c3">PipeMode::RejectRemoteClients</a>, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> maxInstances=<a class="el" href="#abe533c344f23faa0bb96fd3c92b3d004">UnlimitedInstances</a>, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> outBufferSize=<a class="el" href="#af33e8da738f41d898b7af5e48950a3a7">DefaultOutBufferSize</a>, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> inBufferSize=<a class="el" href="#a7e58d9d681df8b559c0450e2003bd5af">DefaultInBufferSize</a>, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> defaultTimeout=<a class="el" href="#adb1f90f3306f5f939457862faf4680d7">DefaultTimeout</a>, LPSECURITY_ATTRIBUTES lpSecurityAttributes=nullptr)</td></tr>
 <tr class="separator:af3f75a15792b6ca83bda0a168e0a0836"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a463c366a463f835c731e31749493cc77" id="r_a463c366a463f835c731e31749493cc77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a463c366a463f835c731e31749493cc77">Transact</a> (const void *inBuffer, size_t inBufferSize, void *outBuffer, size_t outBufferSize, size_t *bytesRead, OVERLAPPED *overlapped) const</td></tr>
 <tr class="separator:a463c366a463f835c731e31749493cc77"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,7 +214,7 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae816b867af6296d6debe04b6ea198197" id="r_ae816b867af6296d6debe04b6ea198197"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe.html">Pipe</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae816b867af6296d6debe04b6ea198197">Open</a> (const wchar_t *pipeName, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> timeout=<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html#a416ad8596b30ee6587c413cc7409e4ab">TimeSpan::FromMinutes</a>(1))</td></tr>
 <tr class="separator:ae816b867af6296d6debe04b6ea198197"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3f2e3eef784b7475c3772a7c823c11f" id="r_ac3f2e3eef784b7475c3772a7c823c11f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3f2e3eef784b7475c3772a7c823c11f">Call</a> (const wchar_t *pipeName, const void *inBuffer, size_t inBufferSize, void *outBuffer, size_t outBufferSize, size_t *bytesRead, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> timeout)</td></tr>
+<tr class="memitem:ac3f2e3eef784b7475c3772a7c823c11f" id="r_ac3f2e3eef784b7475c3772a7c823c11f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3f2e3eef784b7475c3772a7c823c11f">Call</a> (const wchar_t *pipeName, const void *inBuffer, size_t inBufferSize, void *outBuffer, size_t outBufferSize, size_t *bytesRead, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> timeout)</td></tr>
 <tr class="separator:ac3f2e3eef784b7475c3772a7c823c11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -235,7 +244,7 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a15be35b0ff9560d7e3c1952b2475e5a6" id="r_a15be35b0ff9560d7e3c1952b2475e5a6"><td class="memItemLeft" align="right" valign="top">static HANDLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15be35b0ff9560d7e3c1952b2475e5a6">Create</a> (const wchar_t *pipeName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a27ab962996878b0c809db3bf2e60a8e6">PipeOpenMode</a> pipeOpenMode, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#abe2205c129a5f919fc08afd10e3afefb">PipeMode</a> pipeMode, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> maxInstances, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> outBufferSize, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> inBufferSize, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> defaultTimeout, LPSECURITY_ATTRIBUTES lpSecurityAttributes)</td></tr>
+<tr class="memitem:a15be35b0ff9560d7e3c1952b2475e5a6" id="r_a15be35b0ff9560d7e3c1952b2475e5a6"><td class="memItemLeft" align="right" valign="top">static HANDLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15be35b0ff9560d7e3c1952b2475e5a6">Create</a> (const wchar_t *pipeName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a27ab962996878b0c809db3bf2e60a8e6">PipeOpenMode</a> pipeOpenMode, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#abe2205c129a5f919fc08afd10e3afefb">PipeMode</a> pipeMode, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> maxInstances, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> outBufferSize, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> inBufferSize, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> defaultTimeout, LPSECURITY_ATTRIBUTES lpSecurityAttributes)</td></tr>
 <tr class="separator:a15be35b0ff9560d7e3c1952b2475e5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -287,22 +296,22 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>maxInstances</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#abe533c344f23faa0bb96fd3c92b3d004">UnlimitedInstances</a></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>maxInstances</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#abe533c344f23faa0bb96fd3c92b3d004">UnlimitedInstances</a></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>outBufferSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#af33e8da738f41d898b7af5e48950a3a7">DefaultOutBufferSize</a></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>outBufferSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#af33e8da738f41d898b7af5e48950a3a7">DefaultOutBufferSize</a></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>inBufferSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a7e58d9d681df8b559c0450e2003bd5af">DefaultInBufferSize</a></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>inBufferSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a7e58d9d681df8b559c0450e2003bd5af">DefaultInBufferSize</a></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>defaultTimeout</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#adb1f90f3306f5f939457862faf4680d7">DefaultTimeout</a></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>defaultTimeout</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#adb1f90f3306f5f939457862faf4680d7">DefaultTimeout</a></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -387,7 +396,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -451,22 +460,22 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>maxInstances</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>maxInstances</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>outBufferSize</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>outBufferSize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>inBufferSize</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>inBufferSize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>defaultTimeout</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>defaultTimeout</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

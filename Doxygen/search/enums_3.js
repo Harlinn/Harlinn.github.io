@@ -2,7 +2,7 @@ var searchData=
 [
   ['databaseflags_0',['DatabaseFlags',['../namespace_harlinn_1_1_common_1_1_core_1_1_l_m_d_b.html#afeaae15bce6893f889e1961ac5d7f101',1,'Harlinn::Common::Core::LMDB']]],
   ['datachunktype_1',['DataChunkType',['../namespace_harlinn_1_1_common_1_1_core_1_1_http.html#a660f0ccc4f11ee159e0af422f33d9964',1,'Harlinn::Common::Core::Http']]],
-  ['datatype_2',['DataType',['../namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization.html#a6cda6df301d78a0c1f0957cc23811098',1,'Harlinn::Common::Core::IO::Serialization::DataType'],['../namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a81f751d1a95891a5fac3a87d2b2fc77f',1,'Harlinn::Common::Core::SIMD::DataType']]],
+  ['datatype_2',['DataType',['../namespace_harlinn_1_1_math_1_1_s_i_m_d.html#a2e33c9205cf2921510d67f72712b7d5d',1,'Harlinn::Math::SIMD::DataType'],['../namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization.html#a6cda6df301d78a0c1f0957cc23811098',1,'Harlinn::Common::Core::IO::Serialization::DataType'],['../namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a81f751d1a95891a5fac3a87d2b2fc77f',1,'Harlinn::Common::Core::SIMD::DataType']]],
   ['datepart_3',['DatePart',['../namespace_harlinn_1_1_common_1_1_core.html#a2bad736145da8233a22d4e06ec9623e5',1,'Harlinn::Common::Core']]],
   ['datetimeerrorflag_4',['DateTimeErrorFlag',['../namespace_harlinn_1_1_o_c_i.html#adf8533d8c2e973a0f90571e38d3d6f07',1,'Harlinn::OCI']]],
   ['dayofweek_5',['DayOfWeek',['../namespace_harlinn_1_1_common_1_1_core.html#a663636b97aa32afb14b0c0d507343375',1,'Harlinn::Common::Core']]],

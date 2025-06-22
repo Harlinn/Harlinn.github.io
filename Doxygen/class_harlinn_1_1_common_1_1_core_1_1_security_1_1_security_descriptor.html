@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -121,7 +130,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a33001b96a60dabe8906d9e8d8f0d7e0c" id="r_a33001b96a60dabe8906d9e8d8f0d7e0c"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33001b96a60dabe8906d9e8d8f0d7e0c">SecurityDescriptor</a> () noexcept</td></tr>
 <tr class="separator:a33001b96a60dabe8906d9e8d8f0d7e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab37fa2dab5f8f5b6ef41182056edc4f1" id="r_ab37fa2dab5f8f5b6ef41182056edc4f1"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab37fa2dab5f8f5b6ef41182056edc4f1">SecurityDescriptor</a> (SECURITY_DESCRIPTOR *securityDescriptor, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_security_1_1_internal.html#a233c71254aa3400006314516b38de4ed">ReleaseMethod</a> releaseMethod, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> size) noexcept</td></tr>
+<tr class="memitem:ab37fa2dab5f8f5b6ef41182056edc4f1" id="r_ab37fa2dab5f8f5b6ef41182056edc4f1"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab37fa2dab5f8f5b6ef41182056edc4f1">SecurityDescriptor</a> (SECURITY_DESCRIPTOR *securityDescriptor, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_security_1_1_internal.html#a233c71254aa3400006314516b38de4ed">ReleaseMethod</a> releaseMethod, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> size) noexcept</td></tr>
 <tr class="separator:ab37fa2dab5f8f5b6ef41182056edc4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b759e74f1f0354e997dc2505213cac5" id="r_a1b759e74f1f0354e997dc2505213cac5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b759e74f1f0354e997dc2505213cac5">SecurityDescriptor</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_descriptor.html">SecurityDescriptor</a> &amp;other)=delete</td></tr>
 <tr class="separator:a1b759e74f1f0354e997dc2505213cac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,7 +211,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:abe03a5086805a79a3b0612c35f691c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6ae2a372bd26e98bf346c1d1758db70" id="r_af6ae2a372bd26e98bf346c1d1758db70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_security_1_1_internal.html#a233c71254aa3400006314516b38de4ed">ReleaseMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6ae2a372bd26e98bf346c1d1758db70">releaseMethod_</a></td></tr>
 <tr class="separator:af6ae2a372bd26e98bf346c1d1758db70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1344e1b3459f7d1129734b9dd8d952d" id="r_ab1344e1b3459f7d1129734b9dd8d952d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1344e1b3459f7d1129734b9dd8d952d">size_</a></td></tr>
+<tr class="memitem:ab1344e1b3459f7d1129734b9dd8d952d" id="r_ab1344e1b3459f7d1129734b9dd8d952d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1344e1b3459f7d1129734b9dd8d952d">size_</a></td></tr>
 <tr class="separator:ab1344e1b3459f7d1129734b9dd8d952d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -270,7 +279,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1125,7 +1134,7 @@ template&lt;typename Writer &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::Security::SecurityDescriptor::size_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::Security::SecurityDescriptor::size_</td>
         </tr>
       </table>
   </td>

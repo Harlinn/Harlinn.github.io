@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -158,7 +167,7 @@ $(function(){initNavTree('namespacemembers_d.html',''); initResizable(true); });
 <li>D3DBlob&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics.html#a5f96a1bb417a3602c1d91e5fef357a4f">Harlinn::Windows::Graphics</a></li>
 <li>DatabaseFlags&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_l_m_d_b.html#afeaae15bce6893f889e1961ac5d7f101">Harlinn::Common::Core::LMDB</a></li>
 <li>DataChunkType&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_http.html#a660f0ccc4f11ee159e0af422f33d9964">Harlinn::Common::Core::Http</a></li>
-<li>DataType&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization.html#a6cda6df301d78a0c1f0957cc23811098">Harlinn::Common::Core::IO::Serialization</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a81f751d1a95891a5fac3a87d2b2fc77f">Harlinn::Common::Core::SIMD</a></li>
+<li>DataType&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization.html#a6cda6df301d78a0c1f0957cc23811098">Harlinn::Common::Core::IO::Serialization</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a81f751d1a95891a5fac3a87d2b2fc77f">Harlinn::Common::Core::SIMD</a>, <a class="el" href="namespace_harlinn_1_1_math_1_1_s_i_m_d.html#a2e33c9205cf2921510d67f72712b7d5d">Harlinn::Math::SIMD</a></li>
 <li>DateAddDays()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a1afc8a7992f7b44ae70a5faacc32c80e">Harlinn::OCI</a></li>
 <li>DateAddMonths()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a514f400b597faee28a5b417e30c41516">Harlinn::OCI</a></li>
 <li>DateAssign()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_o_c_i.html#af521d29e1d117afb2b97139abb702225">Harlinn::OCI</a></li>
@@ -243,8 +252,6 @@ $(function(){initNavTree('namespacemembers_d.html',''); initResizable(true); });
 <li>DBUInt64&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_o_d_b_c.html#aae6faa55e6e0b77308e3b2c1f40df73e">Harlinn::ODBC</a></li>
 <li>DBUSMALLINT&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_o_d_b_c_1_1_ms_sql.html#aa120e9f8a0900aa17688dca3ab731145">Harlinn::ODBC::MsSql</a></li>
 <li>DBWideString&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_o_d_b_c.html#a005df5b28b342abe0ad4ed41920eac80">Harlinn::ODBC</a></li>
-<li>dd_add()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1fma__internal.html#a85bb859cd2cbdc9c984f2556f7c20ca8">Harlinn::Common::Core::Math::Internal::OpenLibM::fma_internal</a></li>
-<li>dd_mul()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1fma__internal.html#a975df7b8e805e5f3894c8bcec48c00a2">Harlinn::Common::Core::Math::Internal::OpenLibM::fma_internal</a></li>
 <li>DeclarePush()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_http.html#ad8e827a283bd4eadaddb3c4bba72b22c">Harlinn::Common::Core::Http</a></li>
 <li>Decode()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_html.html#aa37c217305627106077f7c1f9d0d0631">Harlinn::Common::Core::Html</a></li>
 <li>DecodeCommandList&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_video.html#a7d871daf3a3e43d8d381e32c5f712b22">Harlinn::Windows::Graphics::D3D12::Video</a></li>
@@ -254,14 +261,14 @@ $(function(){initNavTree('namespacemembers_d.html',''); initResizable(true); });
 <li>DecodeMIPFilter()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#ac01d20a5b3ca020698b76a87d440e013">Harlinn::Windows::Graphics::D3D12</a></li>
 <li>DecodeOptions&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.html#a93de51c162208dbd01ecde7e7af1f543">Harlinn::Windows::Graphics::Imaging</a></li>
 <li>DecodeShader4ComponentMapping()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8ca856f6c2d0ca2e7dad3339ecf46b62">Harlinn::Windows::Graphics::D3D12</a></li>
-<li>Decompose()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#ab9b95cd43d4a3d6027a5a8b3f100cafe">Harlinn::Common::Core::Math</a></li>
+<li>Decompose()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a68dafb1c605411399bbba722ee3e04ee">Harlinn::Math</a></li>
 <li>DecomposeSubresource()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#add7df6a5bd2ee912e1c7cd13764e6eb7">Harlinn::Windows::Graphics::D3D12</a></li>
 <li>Decrement()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_atomic.html#a4d89c7068b0923c98c22b72b95387235">Harlinn::Common::Core::Atomic</a></li>
 <li>DefaultControlMessageDispatcher&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows.html#ab9f1a1b61c10dc3f7f50a423801a03ea">Harlinn::Windows</a></li>
 <li>DefaultShader4ComponentMapping&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a75884f7af37509781f2ec4c9055dea9c">Harlinn::Windows::Graphics::D3D12</a></li>
 <li>DEFINE_ENUM_FLAG_OPERATORS()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a0e474e2c95647a09b150ac0a034df678">Harlinn::Windows::Graphics::D3D12</a></li>
-<li>Deg2Rad()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a6c35aa10ab17556116a0b46a55a4d8d1">Harlinn::Common::Core::Math</a></li>
-<li>Degrees()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a2411da54c868cb5e38bb5389bf292bd8">Harlinn::Common::Core::Math</a></li>
+<li>Deg2Rad()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a287eb5f21fefd281a70f0477f9913256">Harlinn::Math</a></li>
+<li>Degrees()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a90f7f39bed785c1c37775de0789ca8b4">Harlinn::Math</a></li>
 <li>DelegateRequestPropertyId&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_http.html#a4a45740beebe2f46f86fbed24ec4a0ce">Harlinn::Common::Core::Http</a></li>
 <li>DeleteKey()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_com_1_1_registry_1_1_internal.html#a464cb25a8109d6d9ec2b47a81f1d16b5">Harlinn::Common::Core::Com::Registry::Internal</a></li>
 <li>DeleteTimeseriesRangeType&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_net_1_1_data.html#a4be80cdce89ce7a144fda714413c3b5a">Harlinn.Common.Core.Net.Data</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_data.html#a96da633ff291466e3b05f517ab096d5e">Harlinn::Common::Core::Data</a></li>
@@ -281,7 +288,7 @@ $(function(){initNavTree('namespacemembers_d.html',''); initResizable(true); });
 <li>Desktop()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_environment_1_1_known_folder.html#af9a74becde4f0995f9fa171c3637337a">Harlinn::Windows::Environment::KnownFolder</a></li>
 <li>DesktopWallpaper()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_environment_1_1_system_parameters.html#a7fa301e6726ef8d44626b167adeade38">Harlinn::Windows::Environment::SystemParameters</a></li>
 <li>DetachDatabaseFlags&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#acd1b4fd19201c594aba26b0d231e2e0b">Harlinn::Common::Core::Ese</a></li>
-<li>Determinant()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#ad0a4386a90ab46148efb064327fb60ca">Harlinn::Common::Core::Math</a></li>
+<li>Determinant()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#ab056d5780d63e945050659a902d81827">Harlinn::Math</a></li>
 <li>Deviation()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_test.html#a9f518248db45e7e2156893306a84fe05">Harlinn::Common::Core::Test</a></li>
 <li>DeviceEventType&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_services.html#ab345cddc9ff77361725f12d368372f35">Harlinn::Common::Core::Services</a></li>
 <li>DeviceFactoryFlags&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a3d8fc4fa9389961e6f7447eb6c64f7a5">Harlinn::Windows::Graphics::D3D12</a></li>
@@ -289,19 +296,18 @@ $(function(){initNavTree('namespacemembers_d.html',''); initResizable(true); });
 <li>DeviceMetadataStore()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_environment_1_1_known_folder.html#a2de493cce1fc277c7b1db7fc25f2c66c">Harlinn::Windows::Environment::KnownFolder</a></li>
 <li>DFloat32&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i.html#a44af51316c575dcac6b4f3fd7fe8233fa1083bd7fe3a1c598543a33c828da1f4e">Harlinn::Windows::Graphics::DXGI</a></li>
 <li>DFloat32SInt8X24&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i.html#a44af51316c575dcac6b4f3fd7fe8233fa6cd47b021c577f3cfe08e7410f577afd">Harlinn::Windows::Graphics::DXGI</a></li>
-<li>DifferenceOfProducts()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#ae359b06ce52a1982f0161ee41bca52e5">Harlinn::Common::Core::Math</a></li>
-<li>digittoint()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#ad4144b4bc9cfd9baa2dfeb5e002fc4b6">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
+<li>DifferenceOfProducts()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a919dbd5d34368d35dc39ae109e215816">Harlinn::Math</a></li>
 <li>DirectoryAccessRights&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#ab001dd07a0b69031da4f40347aa14b26">Harlinn::Common::Core::IO</a></li>
 <li>DirectoryInfo&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a70b3ac21b4a57e030c23bb12becc0009">Harlinn::Common::Core::IO</a></li>
 <li>DirectorySeparatorChar&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_path.html#a042d7cb54eaf59189237286f951ed069">Harlinn::Common::Core::IO::Path</a></li>
 <li>DispatchMode&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a001aa640bc18590ed31b82ea5e7b3635">Harlinn::Windows::Graphics::D3D12</a></li>
 <li>Display()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_environment_1_1_user_name.html#aceec97c95e3e73adaf0ffa9808b5604e">Harlinn::Windows::Environment::UserName</a></li>
-<li>Distance()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a0138a8736429437ecaaedbcdf8c1ba8a">Harlinn::Common::Core::Math</a></li>
-<li>DistanceSquared()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a97a6b450c9072c98cad56692b9391798">Harlinn::Common::Core::Math</a></li>
-<li>DivAdjustDown()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#ac59675283097770de003d8c40c2536b4">Harlinn::Common::Core::Math</a></li>
-<li>DivAdjustUp()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#abc22322bafda9e5ba9019bbdf1169746">Harlinn::Common::Core::Math</a></li>
+<li>Distance()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#aff15aade37ccacb452f6c77ca7c65c97">Harlinn::Math</a></li>
+<li>DistanceSquared()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a4a213a957f84c2ff45dd040b31ae57be">Harlinn::Math</a></li>
+<li>DivAdjustDown()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a09a07d6a2a096115ebcff9fc1e8bde70">Harlinn::Math</a></li>
+<li>DivAdjustUp()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a18c4e7d809288dbc2f8e7223b3940e3d">Harlinn::Math</a></li>
 <li>Divide()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a3461bc2eb38fd71287a17198f3f46c50">Harlinn::AI::DML::X</a></li>
-<li>DivImpl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a3c953a4965dba0fe20163b3b807a530b">Harlinn::Common::Core::Math::Internal</a></li>
+<li>DivImpl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math_1_1_internal.html#af3c4bedd3f934d3bc28d5eb2d860b99a">Harlinn::Math::Internal</a></li>
 <li>DnsDomain()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_environment_1_1_computer_name.html#a9c5cb4f5784c083d2823e1a9ad93815b">Harlinn::Windows::Environment::ComputerName</a>, <a class="el" href="namespace_harlinn_1_1_windows_1_1_environment_1_1_user_name.html#a45d89fc3039c8ab77df2f3bd7c66c8d4">Harlinn::Windows::Environment::UserName</a></li>
 <li>DnsFullyQualified()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_environment_1_1_computer_name.html#a17f5932a95a42587d97a2f9ca818786a">Harlinn::Windows::Environment::ComputerName</a></li>
 <li>DnsHostname()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_environment_1_1_computer_name.html#a4995b2a033dd2e2db8fb8383a60cb4fb">Harlinn::Windows::Environment::ComputerName</a></li>
@@ -367,8 +373,8 @@ $(function(){initNavTree('namespacemembers_d.html',''); initResizable(true); });
 <li>DocVarListEntryTypePtr&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_doxygen.html#adb16308e087afc1fd7be64eb678cdfcc">Harlinn::Common::Core::Doxygen</a></li>
 <li>DocXRefSectTypePtr&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_doxygen.html#ab60f8d9b64c40117bc99bdb1e770cfdd">Harlinn::Common::Core::Doxygen</a></li>
 <li>DomainName()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_environment.html#ac0b589b047974a4e1fa6bbc93d1c796f">Harlinn::Common::Core::Environment</a></li>
-<li>Dot()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a0921c2104cb5da7cd0873a51f1d9009a">Harlinn::Common::Core::Math</a></li>
-<li>Double&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a789293c13583af2e0a4926d068e0415e">Harlinn::Common::Core</a></li>
+<li>Dot()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a58ef4fecdb929d9eab252bb3ec07f3df">Harlinn::Math</a></li>
+<li>Double&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common.html#ac64a8ae07a54f821850d17535e60682d">Harlinn::Common</a></li>
 <li>DoubleArrayBind&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a806d91f7d98f0732d6007436c860e697">Harlinn::OCI</a></li>
 <li>DoubleArrayDefine&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a0959f0ef9e6ee559fdb153cad1eaae70">Harlinn::OCI</a></li>
 <li>DoubleAttribute&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_media.html#a6554ed1dedf1017e60212c01c4602e98">Harlinn::Windows::Media</a></li>
@@ -402,8 +408,6 @@ $(function(){initNavTree('namespacemembers_d.html',''); initResizable(true); });
 <li>DoxVersionNumber&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_doxygen.html#a915b2549e596af234db9e8e81cc433b8">Harlinn::Common::Core::Doxygen</a></li>
 <li>DoxVerticalAlign&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_doxygen.html#aef99d06a61d592b75c2e551e924750ad">Harlinn::Common::Core::Doxygen</a></li>
 <li>DoxVirtualKind&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_doxygen.html#aea78521824b4e4bd54b08a9e69a511d3">Harlinn::Common::Core::Doxygen</a></li>
-<li>dp_h&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1pow__internal.html#ae3e178efc19468eb7392f1736f124f93">Harlinn::Common::Core::Math::Internal::OpenLibM::pow_internal</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1powf__internal.html#a92e905c16803ab43bac49b4786553ef4">Harlinn::Common::Core::Math::Internal::OpenLibM::powf_internal</a></li>
-<li>dp_l&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1pow__internal.html#a2a05d170a8e091317fb5e6d044f57456">Harlinn::Common::Core::Math::Internal::OpenLibM::pow_internal</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1powf__internal.html#a6b45c6418bf4a25467c5aa38dd45635a">Harlinn::Common::Core::Math::Internal::OpenLibM::powf_internal</a></li>
 <li>DrawCaptionOptions&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows.html#a468e1bed56acd021b3aacdf3423c35ed">Harlinn::Windows</a></li>
 <li>DrawFrameControlButtonOptions&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows.html#aa79629e1d1e5dcba07bd151de190a9bb">Harlinn::Windows</a></li>
 <li>DrawFrameControlCaptionPart&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows.html#adc4c0bb6c088ef58d2a05e5aee604522">Harlinn::Windows</a></li>
@@ -420,7 +424,6 @@ $(function(){initNavTree('namespacemembers_d.html',''); initResizable(true); });
 <li>DREDFlags&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2ed1740fd0f9fea39016e325b8696df6">Harlinn::Windows::Graphics::D3D12</a></li>
 <li>DREDPageFaultFlags&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a3fa7d81da731c3e3af98140fcd506e0a">Harlinn::Windows::Graphics::D3D12</a></li>
 <li>DREDVersion&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a12a13a3f0201483c2a74a04f9bc976ba">Harlinn::Windows::Graphics::D3D12</a></li>
-<li>dremf()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#ac8fbd6094f6d7ae08d4a7269e8a4f413">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
 <li>DriverCompletion&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_o_d_b_c.html#a3ab105348fa913bb4cda0ab67c00eb4c">Harlinn::ODBC</a></li>
 <li>DriverMatchingIdentifierStatus&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a920cf30a2434a4b392effabec352a32e">Harlinn::Windows::Graphics::D3D12</a></li>
 <li>DropDownMenusAreRightAligned()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_environment_1_1_system_metrics.html#afd8d1f4d95f356c72a6befdfb2b5886b">Harlinn::Windows::Environment::SystemMetrics</a></li>
@@ -430,9 +433,9 @@ $(function(){initNavTree('namespacemembers_d.html',''); initResizable(true); });
 <li>DSVFlags&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7ca811b48874bfac2a7f34d7263726e4">Harlinn::Windows::Graphics::D3D12</a></li>
 <li>DtrControl&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a4be71424be3b33461bc74f680953efc0">Harlinn::Common::Core::IO</a></li>
 <li>Duration&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a549a96d70db981b29965b15b21d7c3c8">Harlinn::OCI</a></li>
-<li>DWord&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af96f341c2209d644f0b3474bd55d0e93">Harlinn::Common::Core</a></li>
-<li>DWord32&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#afb68b3d6559efb1fb9d339581c0d704b">Harlinn::Common::Core</a></li>
-<li>DWord64&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af5c1b1b6348d907d5872bddd34c4aede">Harlinn::Common::Core</a></li>
+<li>DWord&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common.html#ac2fed82cdc67259efd09b0229438db4b">Harlinn::Common</a></li>
+<li>DWord32&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common.html#ae709d3818c8e242b4152bdea0603666c">Harlinn::Common</a></li>
+<li>DWord64&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common.html#a8a4d2d724e8201a0b52e71ee6b3dd9f6">Harlinn::Common</a></li>
 <li>dword_table&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#ab2767921e5dea1114523541a07855bf6">Harlinn::Common::Core</a></li>
 </ul>
 </div><!-- contents -->

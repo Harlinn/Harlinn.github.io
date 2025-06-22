@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -120,9 +129,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a2292d4e456732bacaa04c8a1ff7cde44" id="r_a2292d4e456732bacaa04c8a1ff7cde44"><td class="memItemLeft" align="right" valign="top">wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2292d4e456732bacaa04c8a1ff7cde44">SoftwareName</a></td></tr>
 <tr class="memdesc:a2292d4e456732bacaa04c8a1ff7cde44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional informatonal software directive string for W3C type logging. Not used for other types of logging. If nothing is provided here HTTPAPI will log a default string. Any arbitrary string could be used here to identify the application. Length cannot be greater than MAX_PATH. Lenght is in bytes.  <br /></td></tr>
 <tr class="separator:a2292d4e456732bacaa04c8a1ff7cde44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a754bf2600f92d772a0de619dadb65016" id="r_a754bf2600f92d772a0de619dadb65016"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a754bf2600f92d772a0de619dadb65016">SoftwareNameLength</a></td></tr>
+<tr class="memitem:a754bf2600f92d772a0de619dadb65016" id="r_a754bf2600f92d772a0de619dadb65016"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a754bf2600f92d772a0de619dadb65016">SoftwareNameLength</a></td></tr>
 <tr class="separator:a754bf2600f92d772a0de619dadb65016"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6620ae500a5b5448b6471c8564e8fd9c" id="r_a6620ae500a5b5448b6471c8564e8fd9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6620ae500a5b5448b6471c8564e8fd9c">DirectoryNameLength</a></td></tr>
+<tr class="memitem:a6620ae500a5b5448b6471c8564e8fd9c" id="r_a6620ae500a5b5448b6471c8564e8fd9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6620ae500a5b5448b6471c8564e8fd9c">DirectoryNameLength</a></td></tr>
 <tr class="memdesc:a6620ae500a5b5448b6471c8564e8fd9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log file directory must be a fully qualified path. Length must be in number of bytes.  <br /></td></tr>
 <tr class="separator:a6620ae500a5b5448b6471c8564e8fd9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1707fdb415ab612aa31e9bae46e3b607" id="r_a1707fdb415ab612aa31e9bae46e3b607"><td class="memItemLeft" align="right" valign="top">wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1707fdb415ab612aa31e9bae46e3b607">DirectoryName</a></td></tr>
@@ -135,13 +144,13 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a18e7469654d5ae832aa25858960a67a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d26a9bf718031cac8135330bd906e39" id="r_a2d26a9bf718031cac8135330bd906e39"><td class="memItemLeft" align="right" valign="top">PVOID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d26a9bf718031cac8135330bd906e39">pExtFields</a></td></tr>
 <tr class="separator:a2d26a9bf718031cac8135330bd906e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafa0b95490a6c75ed1438342b74021dd" id="r_aafa0b95490a6c75ed1438342b74021dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafa0b95490a6c75ed1438342b74021dd">NumOfExtFields</a></td></tr>
+<tr class="memitem:aafa0b95490a6c75ed1438342b74021dd" id="r_aafa0b95490a6c75ed1438342b74021dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafa0b95490a6c75ed1438342b74021dd">NumOfExtFields</a></td></tr>
 <tr class="separator:aafa0b95490a6c75ed1438342b74021dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a634156f8d42fc0fe5bdf57f0126994c0" id="r_a634156f8d42fc0fe5bdf57f0126994c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a634156f8d42fc0fe5bdf57f0126994c0">MaxRecordSize</a></td></tr>
+<tr class="memitem:a634156f8d42fc0fe5bdf57f0126994c0" id="r_a634156f8d42fc0fe5bdf57f0126994c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a634156f8d42fc0fe5bdf57f0126994c0">MaxRecordSize</a></td></tr>
 <tr class="separator:a634156f8d42fc0fe5bdf57f0126994c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aa8ff3f3e7b502ce2cb9041618dfe16" id="r_a2aa8ff3f3e7b502ce2cb9041618dfe16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_http.html#a07575c0d1c1ae7ebbaf04d13274b6aaf">LoggingRolloverType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2aa8ff3f3e7b502ce2cb9041618dfe16">RolloverType</a></td></tr>
 <tr class="separator:a2aa8ff3f3e7b502ce2cb9041618dfe16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c57c59f0b182851522d7da2b2776cc6" id="r_a8c57c59f0b182851522d7da2b2776cc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c57c59f0b182851522d7da2b2776cc6">RolloverSize</a></td></tr>
+<tr class="memitem:a8c57c59f0b182851522d7da2b2776cc6" id="r_a8c57c59f0b182851522d7da2b2776cc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c57c59f0b182851522d7da2b2776cc6">RolloverSize</a></td></tr>
 <tr class="separator:a8c57c59f0b182851522d7da2b2776cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af82fdb26c06cb7cda3f3172302c8c386" id="r_af82fdb26c06cb7cda3f3172302c8c386"><td class="memItemLeft" align="right" valign="top">PSECURITY_DESCRIPTOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af82fdb26c06cb7cda3f3172302c8c386">pSecurityDescriptor</a></td></tr>
 <tr class="separator:af82fdb26c06cb7cda3f3172302c8c386"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,7 +179,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::Http::LoggingInfo::DirectoryNameLength</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::Http::LoggingInfo::DirectoryNameLength</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -250,7 +259,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::Http::LoggingInfo::MaxRecordSize</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::Http::LoggingInfo::MaxRecordSize</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -264,7 +273,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::Http::LoggingInfo::NumOfExtFields</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::Http::LoggingInfo::NumOfExtFields</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -306,7 +315,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::Http::LoggingInfo::RolloverSize</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::Http::LoggingInfo::RolloverSize</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -350,7 +359,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::Http::LoggingInfo::SoftwareNameLength</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::Http::LoggingInfo::SoftwareNameLength</td>
         </tr>
       </table>
 </div><div class="memdoc">

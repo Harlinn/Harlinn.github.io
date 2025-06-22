@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -165,15 +174,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aae4ff58e936332cf031d08f02638e723"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa109dbdbed26e4b4bd8fa2f6979c46f" id="r_aaa109dbdbed26e4b4bd8fa2f6979c46f"><td class="memTemplParams" colspan="2">template&lt;SimpleSpanLike T&gt; <br />
 requires std::is_same_v&lt;typename T::value_type, <a class="el" href="#a201c8a83c65d8b3181c051f1471e59e8">CharType</a>&gt;</td></tr>
-<tr class="memitem:aaa109dbdbed26e4b4bd8fa2f6979c46f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aaa109dbdbed26e4b4bd8fa2f6979c46f">FixedDBString</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;str)</td></tr>
+<tr class="memitem:aaa109dbdbed26e4b4bd8fa2f6979c46f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aaa109dbdbed26e4b4bd8fa2f6979c46f">FixedDBString</a> (const T &amp;str)</td></tr>
 <tr class="separator:aaa109dbdbed26e4b4bd8fa2f6979c46f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa06a1a92bb435b81d182aa7f7ec9f409" id="r_aa06a1a92bb435b81d182aa7f7ec9f409"><td class="memTemplParams" colspan="2">template&lt;SimpleSpanLike T&gt; <br />
 requires std::is_same_v&lt;typename T::value_type, CharT&gt;</td></tr>
-<tr class="memitem:aa06a1a92bb435b81d182aa7f7ec9f409"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_o_d_b_c_1_1_fixed_d_b_string.html">FixedDBString</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa06a1a92bb435b81d182aa7f7ec9f409">operator=</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;str)</td></tr>
+<tr class="memitem:aa06a1a92bb435b81d182aa7f7ec9f409"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_o_d_b_c_1_1_fixed_d_b_string.html">FixedDBString</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa06a1a92bb435b81d182aa7f7ec9f409">operator=</a> (const T &amp;str)</td></tr>
 <tr class="separator:aa06a1a92bb435b81d182aa7f7ec9f409"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ea78fd3b2a4e877b93b577eb67f820f" id="r_a5ea78fd3b2a4e877b93b577eb67f820f"><td class="memTemplParams" colspan="2">template&lt;SimpleSpanLike T&gt; <br />
 requires std::is_same_v&lt;typename T::value_type, CharT&gt;</td></tr>
-<tr class="memitem:a5ea78fd3b2a4e877b93b577eb67f820f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_o_d_b_c_1_1_fixed_d_b_string.html">FixedDBString</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5ea78fd3b2a4e877b93b577eb67f820f">operator=</a> (const std::optional&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;str)</td></tr>
+<tr class="memitem:a5ea78fd3b2a4e877b93b577eb67f820f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_o_d_b_c_1_1_fixed_d_b_string.html">FixedDBString</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5ea78fd3b2a4e877b93b577eb67f820f">operator=</a> (const std::optional&lt; T &gt; &amp;str)</td></tr>
 <tr class="separator:a5ea78fd3b2a4e877b93b577eb67f820f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7155f4452c327b70da68678b9aa3d704" id="r_a7155f4452c327b70da68678b9aa3d704"><td class="memItemLeft" align="right" valign="top">SQLLEN *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7155f4452c327b70da68678b9aa3d704">Indicator</a> ()</td></tr>
 <tr class="separator:a7155f4452c327b70da68678b9aa3d704"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,11 +201,11 @@ requires std::is_same_v&lt;typename T::value_type, CharT&gt;</td></tr>
 <tr class="separator:aa0a22bb778691cccff3795d9bdc8309e inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_fixed_string"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5c74d30d3d2784edb1698074fe9caaf inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_fixed_string" id="r_ac5c74d30d3d2784edb1698074fe9caaf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html#ac5c74d30d3d2784edb1698074fe9caaf">FixedString</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html#a4f4f86ffcffe70da092a235b26f27659">CharType</a> *str)</td></tr>
 <tr class="separator:ac5c74d30d3d2784edb1698074fe9caaf inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_fixed_string"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d27e9588735f95d806caef5a4b1b19b inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_fixed_string" id="r_a5d27e9588735f95d806caef5a4b1b19b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html#a5d27e9588735f95d806caef5a4b1b19b">FixedString</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;str)</td></tr>
+<tr class="memitem:a5d27e9588735f95d806caef5a4b1b19b inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_fixed_string" id="r_a5d27e9588735f95d806caef5a4b1b19b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html#a5d27e9588735f95d806caef5a4b1b19b">FixedString</a> (const T &amp;str)</td></tr>
 <tr class="separator:a5d27e9588735f95d806caef5a4b1b19b inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_fixed_string"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11cf3e7b0da4751edcb311fd07e9094f inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_fixed_string" id="r_a11cf3e7b0da4751edcb311fd07e9094f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html#a11cf3e7b0da4751edcb311fd07e9094f">Assign</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html#a4f4f86ffcffe70da092a235b26f27659">CharType</a> *str, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html#adfcd89fe4593b4ba3cf05aa003057090">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html#ad6f4e42e9245e42f891727b0ec6cfeaa">length</a>)</td></tr>
 <tr class="separator:a11cf3e7b0da4751edcb311fd07e9094f inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_fixed_string"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05e2c7014173f53b3ff29d2970a1210a inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_fixed_string" id="r_a05e2c7014173f53b3ff29d2970a1210a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html">FixedString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html#a05e2c7014173f53b3ff29d2970a1210a">operator=</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;str)</td></tr>
+<tr class="memitem:a05e2c7014173f53b3ff29d2970a1210a inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_fixed_string" id="r_a05e2c7014173f53b3ff29d2970a1210a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html">FixedString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html#a05e2c7014173f53b3ff29d2970a1210a">operator=</a> (const T &amp;str)</td></tr>
 <tr class="separator:a05e2c7014173f53b3ff29d2970a1210a inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_fixed_string"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a591cb55961adaa037fb6fc59c7e65ae6 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_fixed_string" id="r_a591cb55961adaa037fb6fc59c7e65ae6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html">FixedString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html#a591cb55961adaa037fb6fc59c7e65ae6">operator=</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_string.html#a4f4f86ffcffe70da092a235b26f27659">CharType</a> *str)</td></tr>
 <tr class="separator:a591cb55961adaa037fb6fc59c7e65ae6 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_fixed_string"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -417,7 +426,7 @@ requires std::is_same_v&lt;typename T::value_type, <a class="el" href="#a201c8a8
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_o_d_b_c_1_1_fixed_d_b_string.html">Harlinn::ODBC::FixedDBString</a>&lt; CharT, maxSize &gt;::FixedDBString </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -502,7 +511,7 @@ requires std::is_same_v&lt;typename T::value_type, CharT&gt;</div>
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_o_d_b_c_1_1_fixed_d_b_string.html">FixedDBString</a> &amp; <a class="el" href="class_harlinn_1_1_o_d_b_c_1_1_fixed_d_b_string.html">Harlinn::ODBC::FixedDBString</a>&lt; CharT, maxSize &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype">const std::optional&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td class="paramtype">const std::optional&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -532,7 +541,7 @@ requires std::is_same_v&lt;typename T::value_type, CharT&gt;</div>
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_o_d_b_c_1_1_fixed_d_b_string.html">FixedDBString</a> &amp; <a class="el" href="class_harlinn_1_1_o_d_b_c_1_1_fixed_d_b_string.html">Harlinn::ODBC::FixedDBString</a>&lt; CharT, maxSize &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

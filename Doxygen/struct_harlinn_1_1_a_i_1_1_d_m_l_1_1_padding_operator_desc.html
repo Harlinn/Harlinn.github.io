@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -126,13 +135,13 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a319f091c29920a1cd435858c246c927c" id="r_a319f091c29920a1cd435858c246c927c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a319f091c29920a1cd435858c246c927c">_Field_size_</a> (<a class="el" href="#ac301835c1c7a4964d88d213db775dcae">DimensionCount</a>) const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *StartPadding</td></tr>
+<tr class="memitem:a319f091c29920a1cd435858c246c927c" id="r_a319f091c29920a1cd435858c246c927c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a319f091c29920a1cd435858c246c927c">_Field_size_</a> (<a class="el" href="#ac301835c1c7a4964d88d213db775dcae">DimensionCount</a>) const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *StartPadding</td></tr>
 <tr class="separator:a319f091c29920a1cd435858c246c927c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32c201062fb0a1028d0f79e756a83fe3" id="r_a32c201062fb0a1028d0f79e756a83fe3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32c201062fb0a1028d0f79e756a83fe3">_Field_size_</a> (<a class="el" href="#ac301835c1c7a4964d88d213db775dcae">DimensionCount</a>) const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *EndPadding</td></tr>
+<tr class="memitem:a32c201062fb0a1028d0f79e756a83fe3" id="r_a32c201062fb0a1028d0f79e756a83fe3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32c201062fb0a1028d0f79e756a83fe3">_Field_size_</a> (<a class="el" href="#ac301835c1c7a4964d88d213db775dcae">DimensionCount</a>) const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *EndPadding</td></tr>
 <tr class="separator:a32c201062fb0a1028d0f79e756a83fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a243429f78709fe1fa69777626b84a753" id="r_a243429f78709fe1fa69777626b84a753"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a243429f78709fe1fa69777626b84a753">PaddingOperatorDesc</a> () noexcept=default</td></tr>
 <tr class="separator:a243429f78709fe1fa69777626b84a753"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bd62722a199816edf6d9a1629c99a03" id="r_a9bd62722a199816edf6d9a1629c99a03"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bd62722a199816edf6d9a1629c99a03">PaddingOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> dimensionCount=0, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *startPadding=nullptr, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *endPadding=nullptr, FLOAT paddingValue=0.f, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#acb000c32b3d5bf5e47f1afc5fda6fb63">DML::PaddingMode</a> paddingMode=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#acb000c32b3d5bf5e47f1afc5fda6fb63acb17869fe51048b5a5c4c6106551a255">DML::PaddingMode::Constant</a>) noexcept</td></tr>
+<tr class="memitem:a9bd62722a199816edf6d9a1629c99a03" id="r_a9bd62722a199816edf6d9a1629c99a03"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bd62722a199816edf6d9a1629c99a03">PaddingOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> dimensionCount=0, const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *startPadding=nullptr, const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *endPadding=nullptr, FLOAT paddingValue=0.f, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#acb000c32b3d5bf5e47f1afc5fda6fb63">DML::PaddingMode</a> paddingMode=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#acb000c32b3d5bf5e47f1afc5fda6fb63acb17869fe51048b5a5c4c6106551a255">DML::PaddingMode::Constant</a>) noexcept</td></tr>
 <tr class="separator:a9bd62722a199816edf6d9a1629c99a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c9fb3108490210dc8138663fb9c8e52" id="r_a7c9fb3108490210dc8138663fb9c8e52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c9fb3108490210dc8138663fb9c8e52">DML_IMPLEMENT_CONVERSIONS_TO</a> (DML_PADDING_OPERATOR_DESC)</td></tr>
 <tr class="separator:a7c9fb3108490210dc8138663fb9c8e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,7 +152,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a930b27d64f3bf0bc44402cc876e2753e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7cd84427f8775810c8aeb4bcfd06b50" id="r_aa7cd84427f8775810c8aeb4bcfd06b50"><td class="memItemLeft" align="right" valign="top">FLOAT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7cd84427f8775810c8aeb4bcfd06b50">PaddingValue</a> = 0.f</td></tr>
 <tr class="separator:aa7cd84427f8775810c8aeb4bcfd06b50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac301835c1c7a4964d88d213db775dcae" id="r_ac301835c1c7a4964d88d213db775dcae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac301835c1c7a4964d88d213db775dcae">DimensionCount</a> = 0</td></tr>
+<tr class="memitem:ac301835c1c7a4964d88d213db775dcae" id="r_ac301835c1c7a4964d88d213db775dcae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac301835c1c7a4964d88d213db775dcae">DimensionCount</a> = 0</td></tr>
 <tr class="separator:ac301835c1c7a4964d88d213db775dcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -217,17 +226,17 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>dimensionCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>dimensionCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>startPadding</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>startPadding</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>endPadding</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>endPadding</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -309,7 +318,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::PaddingOperatorDesc::DimensionCount = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::PaddingOperatorDesc::DimensionCount = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -176,10 +185,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:af33d0e9a9d463c039740c949c24e75aa" id="r_af33d0e9a9d463c039740c949c24e75aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af33d0e9a9d463c039740c949c24e75aa">InitializeHandle</a> (void *handle, bool ownsHandle)</td></tr>
 <tr class="memdesc:af33d0e9a9d463c039740c949c24e75aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a "safe" mechanism for assigning a handle value. This functions throws if a handle value is already assigned to this object.  <br /></td></tr>
 <tr class="separator:af33d0e9a9d463c039740c949c24e75aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42f25b24d230c6c4f3538453e8ccf9c2" id="r_a42f25b24d230c6c4f3538453e8ccf9c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_o_def_8h.html#aaa8205634629a73c8520f9556792b16a">HO_EXPORT</a> <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42f25b24d230c6c4f3538453e8ccf9c2">GetAttribute</a> (void *buffer, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *size, <a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
+<tr class="memitem:a42f25b24d230c6c4f3538453e8ccf9c2" id="r_a42f25b24d230c6c4f3538453e8ccf9c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_o_def_8h.html#aaa8205634629a73c8520f9556792b16a">HO_EXPORT</a> <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42f25b24d230c6c4f3538453e8ccf9c2">GetAttribute</a> (void *buffer, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *size, <a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
 <tr class="memdesc:a42f25b24d230c6c4f3538453e8ccf9c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of an attribute from the handle.  <br /></td></tr>
 <tr class="separator:a42f25b24d230c6c4f3538453e8ccf9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a948f50c692c4da30efc907d4c53c04d3" id="r_a948f50c692c4da30efc907d4c53c04d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_o_def_8h.html#aaa8205634629a73c8520f9556792b16a">HO_EXPORT</a> <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a948f50c692c4da30efc907d4c53c04d3">SetAttribute</a> (void *buffer, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> size, <a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
+<tr class="memitem:a948f50c692c4da30efc907d4c53c04d3" id="r_a948f50c692c4da30efc907d4c53c04d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_o_def_8h.html#aaa8205634629a73c8520f9556792b16a">HO_EXPORT</a> <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a948f50c692c4da30efc907d4c53c04d3">SetAttribute</a> (void *buffer, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> size, <a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
 <tr class="memdesc:a948f50c692c4da30efc907d4c53c04d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of an attribute on the handle.  <br /></td></tr>
 <tr class="separator:a948f50c692c4da30efc907d4c53c04d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa98c41b2694b608bec613abf1bc74632" id="r_aa98c41b2694b608bec613abf1bc74632"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa98c41b2694b608bec613abf1bc74632">GetDateTimeAttribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
@@ -208,52 +217,52 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a672d2e206bce996e693decd4513f108c" id="r_a672d2e206bce996e693decd4513f108c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a672d2e206bce996e693decd4513f108c">SetBooleanAttribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, bool value) const</td></tr>
 <tr class="memdesc:a672d2e206bce996e693decd4513f108c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of an attribute on the handle as a bool.  <br /></td></tr>
 <tr class="separator:a672d2e206bce996e693decd4513f108c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8258033ab7bee312a6ef5bde0004a712" id="r_a8258033ab7bee312a6ef5bde0004a712"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8258033ab7bee312a6ef5bde0004a712">GetByteAttribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
+<tr class="memitem:a8258033ab7bee312a6ef5bde0004a712" id="r_a8258033ab7bee312a6ef5bde0004a712"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8258033ab7bee312a6ef5bde0004a712">GetByteAttribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
 <tr class="memdesc:a8258033ab7bee312a6ef5bde0004a712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of an attribute from the handle as a Byte.  <br /></td></tr>
 <tr class="separator:a8258033ab7bee312a6ef5bde0004a712"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab20f8a899a86336263ccb4601febd121" id="r_ab20f8a899a86336263ccb4601febd121"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab20f8a899a86336263ccb4601febd121">SetByteAttribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> value) const</td></tr>
+<tr class="memitem:ab20f8a899a86336263ccb4601febd121" id="r_ab20f8a899a86336263ccb4601febd121"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab20f8a899a86336263ccb4601febd121">SetByteAttribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> value) const</td></tr>
 <tr class="memdesc:ab20f8a899a86336263ccb4601febd121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of an attribute on the handle as a Byte.  <br /></td></tr>
 <tr class="separator:ab20f8a899a86336263ccb4601febd121"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05bc228bb82aa2341d501e28dd2c3aa1" id="r_a05bc228bb82aa2341d501e28dd2c3aa1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05bc228bb82aa2341d501e28dd2c3aa1">GetSByteAttribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
+<tr class="memitem:a05bc228bb82aa2341d501e28dd2c3aa1" id="r_a05bc228bb82aa2341d501e28dd2c3aa1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05bc228bb82aa2341d501e28dd2c3aa1">GetSByteAttribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
 <tr class="memdesc:a05bc228bb82aa2341d501e28dd2c3aa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of an attribute from the handle as a SByte.  <br /></td></tr>
 <tr class="separator:a05bc228bb82aa2341d501e28dd2c3aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40f275f5052017db1725724a73fefcef" id="r_a40f275f5052017db1725724a73fefcef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40f275f5052017db1725724a73fefcef">SetSByteAttribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a> value) const</td></tr>
+<tr class="memitem:a40f275f5052017db1725724a73fefcef" id="r_a40f275f5052017db1725724a73fefcef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40f275f5052017db1725724a73fefcef">SetSByteAttribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a> value) const</td></tr>
 <tr class="memdesc:a40f275f5052017db1725724a73fefcef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of an attribute on the handle as a Byte.  <br /></td></tr>
 <tr class="separator:a40f275f5052017db1725724a73fefcef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab602c1707d25c35370c7049886703e62" id="r_ab602c1707d25c35370c7049886703e62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab602c1707d25c35370c7049886703e62">GetInt16Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
+<tr class="memitem:ab602c1707d25c35370c7049886703e62" id="r_ab602c1707d25c35370c7049886703e62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab602c1707d25c35370c7049886703e62">GetInt16Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
 <tr class="memdesc:ab602c1707d25c35370c7049886703e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of an attribute from the handle as an Int16.  <br /></td></tr>
 <tr class="separator:ab602c1707d25c35370c7049886703e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a061f71b45ecce4b8073cd29788d05870" id="r_a061f71b45ecce4b8073cd29788d05870"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a061f71b45ecce4b8073cd29788d05870">SetInt16Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a> value) const</td></tr>
+<tr class="memitem:a061f71b45ecce4b8073cd29788d05870" id="r_a061f71b45ecce4b8073cd29788d05870"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a061f71b45ecce4b8073cd29788d05870">SetInt16Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a> value) const</td></tr>
 <tr class="memdesc:a061f71b45ecce4b8073cd29788d05870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of an attribute on the handle as an Int16.  <br /></td></tr>
 <tr class="separator:a061f71b45ecce4b8073cd29788d05870"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5a047da786392feab18d982b719e3fe" id="r_ac5a047da786392feab18d982b719e3fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5a047da786392feab18d982b719e3fe">GetUInt16Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
+<tr class="memitem:ac5a047da786392feab18d982b719e3fe" id="r_ac5a047da786392feab18d982b719e3fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5a047da786392feab18d982b719e3fe">GetUInt16Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
 <tr class="memdesc:ac5a047da786392feab18d982b719e3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of an attribute from the handle as an UInt16.  <br /></td></tr>
 <tr class="separator:ac5a047da786392feab18d982b719e3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a618a9ee417f012d8b27b53b8a5139984" id="r_a618a9ee417f012d8b27b53b8a5139984"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a618a9ee417f012d8b27b53b8a5139984">SetUInt16Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> value) const</td></tr>
+<tr class="memitem:a618a9ee417f012d8b27b53b8a5139984" id="r_a618a9ee417f012d8b27b53b8a5139984"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a618a9ee417f012d8b27b53b8a5139984">SetUInt16Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> value) const</td></tr>
 <tr class="memdesc:a618a9ee417f012d8b27b53b8a5139984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of an attribute on the handle as an UInt16.  <br /></td></tr>
 <tr class="separator:a618a9ee417f012d8b27b53b8a5139984"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b1fbcaa8add506f0493491ef9c598e0" id="r_a0b1fbcaa8add506f0493491ef9c598e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b1fbcaa8add506f0493491ef9c598e0">GetInt32Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
+<tr class="memitem:a0b1fbcaa8add506f0493491ef9c598e0" id="r_a0b1fbcaa8add506f0493491ef9c598e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b1fbcaa8add506f0493491ef9c598e0">GetInt32Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
 <tr class="memdesc:a0b1fbcaa8add506f0493491ef9c598e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of an attribute from the handle as an Int32.  <br /></td></tr>
 <tr class="separator:a0b1fbcaa8add506f0493491ef9c598e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc896edec53ffe12bb391ae8030b47f6" id="r_afc896edec53ffe12bb391ae8030b47f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc896edec53ffe12bb391ae8030b47f6">SetInt32Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> value) const</td></tr>
+<tr class="memitem:afc896edec53ffe12bb391ae8030b47f6" id="r_afc896edec53ffe12bb391ae8030b47f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc896edec53ffe12bb391ae8030b47f6">SetInt32Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> value) const</td></tr>
 <tr class="memdesc:afc896edec53ffe12bb391ae8030b47f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of an attribute on the handle as an Int32.  <br /></td></tr>
 <tr class="separator:afc896edec53ffe12bb391ae8030b47f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a15a414bf308edda1e25b4107c0c042" id="r_a5a15a414bf308edda1e25b4107c0c042"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a15a414bf308edda1e25b4107c0c042">GetUInt32Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
+<tr class="memitem:a5a15a414bf308edda1e25b4107c0c042" id="r_a5a15a414bf308edda1e25b4107c0c042"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a15a414bf308edda1e25b4107c0c042">GetUInt32Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
 <tr class="memdesc:a5a15a414bf308edda1e25b4107c0c042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of an attribute from the handle as an UInt32.  <br /></td></tr>
 <tr class="separator:a5a15a414bf308edda1e25b4107c0c042"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a680262a18de24aa36338d383b78dd045" id="r_a680262a18de24aa36338d383b78dd045"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a680262a18de24aa36338d383b78dd045">SetUInt32Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> value) const</td></tr>
+<tr class="memitem:a680262a18de24aa36338d383b78dd045" id="r_a680262a18de24aa36338d383b78dd045"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a680262a18de24aa36338d383b78dd045">SetUInt32Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> value) const</td></tr>
 <tr class="memdesc:a680262a18de24aa36338d383b78dd045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of an attribute on the handle as an UInt32.  <br /></td></tr>
 <tr class="separator:a680262a18de24aa36338d383b78dd045"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4902645bc37c9ec3d082fa124026020e" id="r_a4902645bc37c9ec3d082fa124026020e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4902645bc37c9ec3d082fa124026020e">GetInt64Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
+<tr class="memitem:a4902645bc37c9ec3d082fa124026020e" id="r_a4902645bc37c9ec3d082fa124026020e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4902645bc37c9ec3d082fa124026020e">GetInt64Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
 <tr class="memdesc:a4902645bc37c9ec3d082fa124026020e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of an attribute from the handle as an Int64.  <br /></td></tr>
 <tr class="separator:a4902645bc37c9ec3d082fa124026020e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5e099176523ac1cb77d47d0e362c020" id="r_ac5e099176523ac1cb77d47d0e362c020"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5e099176523ac1cb77d47d0e362c020">SetInt64Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a> value) const</td></tr>
+<tr class="memitem:ac5e099176523ac1cb77d47d0e362c020" id="r_ac5e099176523ac1cb77d47d0e362c020"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5e099176523ac1cb77d47d0e362c020">SetInt64Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a> value) const</td></tr>
 <tr class="memdesc:ac5e099176523ac1cb77d47d0e362c020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of an attribute on the handle as an Int64.  <br /></td></tr>
 <tr class="separator:ac5e099176523ac1cb77d47d0e362c020"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab090c9e4af36f8ad0fc32980be420f28" id="r_ab090c9e4af36f8ad0fc32980be420f28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab090c9e4af36f8ad0fc32980be420f28">GetUInt64Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
+<tr class="memitem:ab090c9e4af36f8ad0fc32980be420f28" id="r_ab090c9e4af36f8ad0fc32980be420f28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab090c9e4af36f8ad0fc32980be420f28">GetUInt64Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
 <tr class="memdesc:ab090c9e4af36f8ad0fc32980be420f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the value of an attribute from the handle as an UInt64.  <br /></td></tr>
 <tr class="separator:ab090c9e4af36f8ad0fc32980be420f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7576d86b8abcd84bd95e4fc0e27d07a" id="r_af7576d86b8abcd84bd95e4fc0e27d07a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7576d86b8abcd84bd95e4fc0e27d07a">SetUInt64Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> value) const</td></tr>
+<tr class="memitem:af7576d86b8abcd84bd95e4fc0e27d07a" id="r_af7576d86b8abcd84bd95e4fc0e27d07a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7576d86b8abcd84bd95e4fc0e27d07a">SetUInt64Attribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> value) const</td></tr>
 <tr class="memdesc:af7576d86b8abcd84bd95e4fc0e27d07a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of an attribute on the handle as an UInt64.  <br /></td></tr>
 <tr class="separator:af7576d86b8abcd84bd95e4fc0e27d07a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e10d79ef505a276923878538cbf482c" id="r_a0e10d79ef505a276923878538cbf482c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e10d79ef505a276923878538cbf482c">GetPointerAttribute</a> (<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a> attribute) const</td></tr>
@@ -536,14 +545,14 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> Harlinn::OCI::HandleBase::GetAttribute </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> Harlinn::OCI::HandleBase::GetAttribute </td>
           <td>(</td>
           <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -615,7 +624,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> Harlinn::OCI::HandleBase::GetByteAttribute </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> Harlinn::OCI::HandleBase::GetByteAttribute </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a></td>          <td class="paramname"><span class="paramname"><em>attribute</em></span></td><td>)</td>
           <td> const</td>
@@ -683,7 +692,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a> Harlinn::OCI::HandleBase::GetInt16Attribute </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a> Harlinn::OCI::HandleBase::GetInt16Attribute </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a></td>          <td class="paramname"><span class="paramname"><em>attribute</em></span></td><td>)</td>
           <td> const</td>
@@ -717,7 +726,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> Harlinn::OCI::HandleBase::GetInt32Attribute </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> Harlinn::OCI::HandleBase::GetInt32Attribute </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a></td>          <td class="paramname"><span class="paramname"><em>attribute</em></span></td><td>)</td>
           <td> const</td>
@@ -751,7 +760,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a> Harlinn::OCI::HandleBase::GetInt64Attribute </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a> Harlinn::OCI::HandleBase::GetInt64Attribute </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a></td>          <td class="paramname"><span class="paramname"><em>attribute</em></span></td><td>)</td>
           <td> const</td>
@@ -853,7 +862,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a> Harlinn::OCI::HandleBase::GetSByteAttribute </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a> Harlinn::OCI::HandleBase::GetSByteAttribute </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a></td>          <td class="paramname"><span class="paramname"><em>attribute</em></span></td><td>)</td>
           <td> const</td>
@@ -959,7 +968,7 @@ template&lt;WideStringLike StringT = WideString&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::OCI::HandleBase::GetUInt16Attribute </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::OCI::HandleBase::GetUInt16Attribute </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a></td>          <td class="paramname"><span class="paramname"><em>attribute</em></span></td><td>)</td>
           <td> const</td>
@@ -993,7 +1002,7 @@ template&lt;WideStringLike StringT = WideString&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::OCI::HandleBase::GetUInt32Attribute </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::OCI::HandleBase::GetUInt32Attribute </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a></td>          <td class="paramname"><span class="paramname"><em>attribute</em></span></td><td>)</td>
           <td> const</td>
@@ -1027,7 +1036,7 @@ template&lt;WideStringLike StringT = WideString&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::OCI::HandleBase::GetUInt64Attribute </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> Harlinn::OCI::HandleBase::GetUInt64Attribute </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_o_c_i.html#a081c2b551c3ae19a8eef46db581824f1">Attribute</a></td>          <td class="paramname"><span class="paramname"><em>attribute</em></span></td><td>)</td>
           <td> const</td>
@@ -1328,14 +1337,14 @@ template&lt;WideStringLike StringT = WideString&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> Harlinn::OCI::HandleBase::SetAttribute </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> Harlinn::OCI::HandleBase::SetAttribute </td>
           <td>(</td>
           <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1418,7 +1427,7 @@ template&lt;WideStringLike StringT = WideString&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1533,7 +1542,7 @@ template&lt;WideStringLike StringT = WideString&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1571,7 +1580,7 @@ template&lt;WideStringLike StringT = WideString&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1609,7 +1618,7 @@ template&lt;WideStringLike StringT = WideString&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1685,7 +1694,7 @@ template&lt;WideStringLike StringT = WideString&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1797,7 +1806,7 @@ template&lt;WideStringLike StringT&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1835,7 +1844,7 @@ template&lt;WideStringLike StringT&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -1873,7 +1882,7 @@ template&lt;WideStringLike StringT&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>

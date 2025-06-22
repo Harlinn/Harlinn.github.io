@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -137,7 +146,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a19572ab6fcdc5d5902af69cb6dec8bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1762d4c9b92fec8e6d966cbdf72b5dc0" id="r_a1762d4c9b92fec8e6d966cbdf72b5dc0"><td class="memItemLeft" align="right" valign="top">HANDLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1762d4c9b92fec8e6d966cbdf72b5dc0">ReleaseHandle</a> () noexcept</td></tr>
 <tr class="separator:a1762d4c9b92fec8e6d966cbdf72b5dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f5635679a1d8287ad451418a8cd3ba6" id="r_a2f5635679a1d8287ad451418a8cd3ba6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f5635679a1d8287ad451418a8cd3ba6">Wait</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> timeoutInMillis=INFINITE) const</td></tr>
+<tr class="memitem:a2f5635679a1d8287ad451418a8cd3ba6" id="r_a2f5635679a1d8287ad451418a8cd3ba6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f5635679a1d8287ad451418a8cd3ba6">Wait</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> timeoutInMillis=INFINITE) const</td></tr>
 <tr class="separator:a2f5635679a1d8287ad451418a8cd3ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b234e0997a33fcf13c837e2cf46d02a" id="r_a9b234e0997a33fcf13c837e2cf46d02a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b234e0997a33fcf13c837e2cf46d02a">Wait</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;timeout) const</td></tr>
 <tr class="separator:a9b234e0997a33fcf13c837e2cf46d02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,9 +161,9 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0bbd4644a94ea19a64dffb868cdbcb9c" id="r_a0bbd4644a94ea19a64dffb868cdbcb9c"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bbd4644a94ea19a64dffb868cdbcb9c">WaitableHandle</a> (HANDLE handle) noexcept</td></tr>
 <tr class="separator:a0bbd4644a94ea19a64dffb868cdbcb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72a7dfea3e92b0080efe4b7726db8d95" id="r_a72a7dfea3e92b0080efe4b7726db8d95"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html">WaitableHandle</a>, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a72a7dfea3e92b0080efe4b7726db8d95"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a72a7dfea3e92b0080efe4b7726db8d95">TakeOwnership</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;&amp;other)</td></tr>
+<tr class="memitem:a72a7dfea3e92b0080efe4b7726db8d95" id="r_a72a7dfea3e92b0080efe4b7726db8d95"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html">WaitableHandle</a>, T&gt;</td></tr>
+<tr class="memitem:a72a7dfea3e92b0080efe4b7726db8d95"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a72a7dfea3e92b0080efe4b7726db8d95">TakeOwnership</a> (T &amp;&amp;other)</td></tr>
 <tr class="separator:a72a7dfea3e92b0080efe4b7726db8d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -495,8 +504,8 @@ Private Attributes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html">WaitableHandle</a>, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html">WaitableHandle</a>, T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -504,7 +513,7 @@ requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_common_1_1_
         <tr>
           <td class="memname">void Harlinn::Common::Core::WaitableHandle::TakeOwnership </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -604,7 +613,7 @@ requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_common_1_1_
         <tr>
           <td class="memname">bool Harlinn::Common::Core::WaitableHandle::Wait </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>timeoutInMillis</em></span><span class="paramdefsep"> = </span><span class="paramdefval">INFINITE</span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>timeoutInMillis</em></span><span class="paramdefsep"> = </span><span class="paramdefval">INFINITE</span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>

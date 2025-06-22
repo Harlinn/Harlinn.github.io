@@ -1,7 +1,5 @@
 var hierarchy =
 [
-    [ "Harlinn::Common::Core::Math::Internal::OpenLibM::__infinity_un", "union_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1____infinity__un.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::OpenLibM::__nan_un", "union_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1____nan__un.html", null ],
     [ "_caldatetime", "struct__caldatetime.html", null ],
     [ "Harlinn::Common::Core::details::_hash_32_or_64< use32 >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1__hash__32__or__64.html", null ],
     [ "Harlinn::Common::Core::details::_hash_32_or_64< 1 >", "struct_harlinn_1_1_common_1_1_core_1_1details_1_1__hash__32__or__64_3_011_01_4.html", null ],
@@ -138,7 +136,7 @@ var hierarchy =
     ] ],
     [ "Harlinn::Common::Core::Concurrency::ActiveObjectExceptionEventArgs", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object_exception_event_args.html", null ],
     [ "Harlinn::Common::Core::Concurrency::ActiveObjectMessageEventArgs< MessageT >", "class_harlinn_1_1_common_1_1_core_1_1_concurrency_1_1_active_object_message_event_args.html", null ],
-    [ "Harlinn::Common::Core::Math::AffineTransformation", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_affine_transformation.html", null ],
+    [ "Harlinn::Math::AffineTransformation", "class_harlinn_1_1_math_1_1_affine_transformation.html", null ],
     [ "Harlinn::Common::Core::Allocator", "class_harlinn_1_1_common_1_1_core_1_1_allocator.html", [
       [ "Harlinn::Common::Core::MallocAllocator", "class_harlinn_1_1_common_1_1_core_1_1_malloc_allocator.html", null ]
     ] ],
@@ -169,7 +167,7 @@ var hierarchy =
     [ "Harlinn::Common::Core::Http::AuthenticationInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_authentication_info.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::AutoBreadcrumbNode", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_auto_breadcrumb_node.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::AutoBreadcrumbNode1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_auto_breadcrumb_node1.html", null ],
-    [ "Harlinn::Common::Core::Math::Quaternion< T >::AxisAngle", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_1_1_axis_angle.html", null ],
+    [ "Harlinn::Math::Quaternion< T >::AxisAngle", "struct_harlinn_1_1_math_1_1_quaternion_1_1_axis_angle.html", null ],
     [ "Harlinn::Common::Core::Http::BandwidthLimitInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_bandwidth_limit_info.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::BarrierGroup", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_barrier_group.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::BarrierSubresourceRange", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_barrier_subresource_range.html", null ],
@@ -275,18 +273,18 @@ var hierarchy =
     [ "Harlinn::AI::DML::BindingTableDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_binding_table_desc.html", null ],
     [ "Harlinn::Windows::Graphics::Imaging::BitmapPattern", "struct_harlinn_1_1_windows_1_1_graphics_1_1_imaging_1_1_bitmap_pattern.html", null ],
     [ "Harlinn::Windows::BitmapSelection", "class_harlinn_1_1_windows_1_1_bitmap_selection.html", null ],
-    [ "Harlinn::Common::Core::BitMask< N >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_mask.html", null ],
-    [ "Harlinn::Common::Core::BitMask< Size >", "struct_harlinn_1_1_common_1_1_core_1_1_bit_mask.html", null ],
+    [ "Harlinn::Common::BitMask< N >", "struct_harlinn_1_1_common_1_1_bit_mask.html", null ],
+    [ "Harlinn::Common::BitMask< Size >", "struct_harlinn_1_1_common_1_1_bit_mask.html", null ],
     [ "Harlinn::Common::Core::Bits< bitCount >", "class_harlinn_1_1_common_1_1_core_1_1_bits.html", null ],
     [ "half_float::detail::bits< T >", "structhalf__float_1_1detail_1_1bits.html", [
       [ "half_float::detail::bits< const T >", "structhalf__float_1_1detail_1_1bits_3_01const_01_t_01_4.html", null ],
       [ "half_float::detail::bits< const volatile T >", "structhalf__float_1_1detail_1_1bits_3_01const_01volatile_01_t_01_4.html", null ],
       [ "half_float::detail::bits< volatile T >", "structhalf__float_1_1detail_1_1bits_3_01volatile_01_t_01_4.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::Bits16", "union_harlinn_1_1_common_1_1_core_1_1_bits16.html", null ],
-    [ "Harlinn::Common::Core::Bits32", "union_harlinn_1_1_common_1_1_core_1_1_bits32.html", null ],
-    [ "Harlinn::Common::Core::Bits64", "union_harlinn_1_1_common_1_1_core_1_1_bits64.html", null ],
-    [ "Harlinn::Common::Core::Bits8", "struct_harlinn_1_1_common_1_1_core_1_1_bits8.html", null ],
+    [ "Harlinn::Common::Bits16", "union_harlinn_1_1_common_1_1_bits16.html", null ],
+    [ "Harlinn::Common::Bits32", "union_harlinn_1_1_common_1_1_bits32.html", null ],
+    [ "Harlinn::Common::Bits64", "union_harlinn_1_1_common_1_1_bits64.html", null ],
+    [ "Harlinn::Common::Bits8", "struct_harlinn_1_1_common_1_1_bits8.html", null ],
     [ "half_float::detail::bits< double >", "structhalf__float_1_1detail_1_1bits_3_01double_01_4.html", null ],
     [ "Harlinn::Common::Core::BitVector< VectorT >", "class_harlinn_1_1_common_1_1_core_1_1_bit_vector.html", null ],
     [ "Harlinn::Common::Core::Internal::BitVectorLogicalResult< BitVectorT, BitVectorU >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_bit_vector_logical_result.html", null ],
@@ -360,8 +358,8 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::CommandSignatureDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_command_signature_desc.html", null ],
     [ "Harlinn::Common::Core::IO::CommConfig", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_comm_config.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::CommonComputeNodeOverrides", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_common_compute_node_overrides.html", null ],
-    [ "Harlinn::Common::Core::Math::CompensatedFloat< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_compensated_float.html", null ],
-    [ "Harlinn::Common::Core::Math::CompensatedSum< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_compensated_sum.html", null ],
+    [ "Harlinn::Math::CompensatedFloat< T >", "class_harlinn_1_1_math_1_1_compensated_float.html", null ],
+    [ "Harlinn::Math::CompensatedSum< T >", "class_harlinn_1_1_math_1_1_compensated_sum.html", null ],
     [ "Harlinn::AI::ONNX::DirectML::ComputeMessageParams", "struct_harlinn_1_1_a_i_1_1_o_n_n_x_1_1_direct_m_l_1_1_compute_message_params.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::ComputePipelineStateDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_compute_pipeline_state_desc.html", null ],
     [ "Harlinn::Common::Core::ComString", "class_harlinn_1_1_common_1_1_core_1_1_com_string.html", null ],
@@ -398,6 +396,10 @@ var hierarchy =
     [ "Harlinn::Common::Core::SIMD::Internal::Constants", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_constants.html", [
       [ "Harlinn::Common::Core::SIMD::Internal::m128Constants", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1m128_constants.html", null ],
       [ "Harlinn::Common::Core::SIMD::Internal::m256Constants", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1m256_constants.html", null ]
+    ] ],
+    [ "Harlinn::Math::SIMD::Internal::Constants", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1_constants.html", [
+      [ "Harlinn::Math::SIMD::Internal::m128Constants", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1m128_constants.html", null ],
+      [ "Harlinn::Math::SIMD::Internal::m256Constants", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1m256_constants.html", null ]
     ] ],
     [ "Harlinn::Common::Core::Internal::ConstPointerIterator< ContainerT >", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_const_pointer_iterator.html", [
       [ "Harlinn::Common::Core::Internal::PointerIterator< ContainerT >", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_pointer_iterator.html", null ]
@@ -530,7 +532,6 @@ var hierarchy =
     [ "Harlinn::ODBC::MsSql::dbdatetime4", "struct_harlinn_1_1_o_d_b_c_1_1_ms_sql_1_1dbdatetime4.html", null ],
     [ "Harlinn::ODBC::MsSql::dbmoney", "struct_harlinn_1_1_o_d_b_c_1_1_ms_sql_1_1dbmoney.html", null ],
     [ "Harlinn::ODBC::Internal::DBValue< T >", "class_harlinn_1_1_o_d_b_c_1_1_internal_1_1_d_b_value.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::OpenLibM::fma_internal::dd", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1fma__internal_1_1dd.html", null ],
     [ "Harlinn::Common::Core::Http::DelegateRequestPropertyInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_delegate_request_property_info.html", null ],
     [ "Harlinn::Common::Core::Data::DeletedData< ObjectT, KeyT >", "class_harlinn_1_1_common_1_1_core_1_1_data_1_1_deleted_data.html", null ],
     [ "Harlinn.Common.Core.Net.Data.DeleteTimeseriesRangeData< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_delete_timeseries_range_data.html", [
@@ -566,10 +567,10 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::DispatchGraphDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_dispatch_graph_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::DispatchMeshArguments", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_dispatch_mesh_arguments.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::DispatchRaysDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_dispatch_rays_desc.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::DistanceType< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_distance_type.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::DistanceType< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_distance_type_3_01double_01_4.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::DistanceType< Int64 >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_distance_type_3_01_int64_01_4.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::DistanceType< UInt64 >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_distance_type_3_01_u_int64_01_4.html", null ],
+    [ "Harlinn::Math::Internal::DistanceType< T >", "struct_harlinn_1_1_math_1_1_internal_1_1_distance_type.html", null ],
+    [ "Harlinn::Math::Internal::DistanceType< double >", "struct_harlinn_1_1_math_1_1_internal_1_1_distance_type_3_01double_01_4.html", null ],
+    [ "Harlinn::Math::Internal::DistanceType< Int64 >", "struct_harlinn_1_1_math_1_1_internal_1_1_distance_type_3_01_int64_01_4.html", null ],
+    [ "Harlinn::Math::Internal::DistanceType< UInt64 >", "struct_harlinn_1_1_math_1_1_internal_1_1_distance_type_3_01_u_int64_01_4.html", null ],
     [ "Harlinn::Common::Core::Internal::DmlFormatterImpl< EnumT, CharT >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_dml_formatter_impl.html", null ],
     [ "Harlinn::Common::Core::Doxygen::DocCmdGroupType", "struct_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_doc_cmd_group_type.html", null ],
     [ "Harlinn::Common::Core::Environment::DomainObject", "class_harlinn_1_1_common_1_1_core_1_1_environment_1_1_domain_object.html", [
@@ -1200,14 +1201,17 @@ var hierarchy =
       [ "Harlinn::Common::Core::IO::Serialization::Internal::SignedDataTypeResolver< T >", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_signed_data_type_resolver.html", null ],
       [ "Harlinn::Common::Core::IO::Serialization::Internal::TimeTypeDataTypeResolver< T >", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_time_type_data_type_resolver.html", null ],
       [ "Harlinn::Common::Core::IO::Serialization::Internal::UnsignedDataTypeResolver< T >", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_type_resolver.html", null ],
-      [ "Harlinn::Common::Core::Math::Constants< ArthmeticT >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants.html", null ],
       [ "Harlinn::Common::Core::SIMD::DataTypeTraits< dt >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_data_type_traits.html", null ],
       [ "Harlinn::Common::Core::SIMD::TraitLimits< T >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_trait_limits.html", null ],
       [ "Harlinn::Common::Core::SIMD::Traits< T, N >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html", null ],
       [ "Harlinn::Common::Core::Types::Adapters::TypeAdapter< T >", "struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_adapters_1_1_type_adapter.html", null ],
-      [ "Harlinn::Common::Core::VariantTypeTraits< T >", "struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html", null ]
+      [ "Harlinn::Common::Core::VariantTypeTraits< T >", "struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html", null ],
+      [ "Harlinn::Math::Constants< ArthmeticT >", "struct_harlinn_1_1_math_1_1_constants.html", null ],
+      [ "Harlinn::Math::SIMD::DataTypeTraits< dt >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_data_type_traits.html", null ],
+      [ "Harlinn::Math::SIMD::TraitLimits< T >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_trait_limits.html", null ],
+      [ "Harlinn::Math::SIMD::Traits< T, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::Math::Internal::FastPowImpl< FloatT >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_fast_pow_impl.html", null ],
+    [ "Harlinn::Math::Internal::FastPowImpl< FloatT >", "struct_harlinn_1_1_math_1_1_internal_1_1_fast_pow_impl.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::FeatureDataArchitecture", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_architecture.html", [
       [ "Harlinn::Windows::Graphics::D3D12::FeatureDataArchitecture1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_feature_data_architecture1.html", null ]
     ] ],
@@ -1280,7 +1284,7 @@ var hierarchy =
     [ "Harlinn::Common::Core::Math::FloatingPoint< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_floating_point.html", null ],
     [ "Harlinn::Common::Core::Http::FlowrateInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_flowrate_info.html", null ],
     [ "Fn", null, [
-      [ "Harlinn::Common::Core::Internal::FinallyImpl< Fn >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_finally_impl.html", null ]
+      [ "Harlinn::Common::Internal::FinallyImpl< Fn >", "struct_harlinn_1_1_common_1_1_internal_1_1_finally_impl.html", null ]
     ] ],
     [ "Harlinn::Windows::DirectShow::AMCameraControl::Focus", "struct_harlinn_1_1_windows_1_1_direct_show_1_1_a_m_camera_control_1_1_focus.html", null ],
     [ "Harlinn::Windows::Fonts::Font", "class_harlinn_1_1_windows_1_1_fonts_1_1_font.html", null ],
@@ -1288,39 +1292,39 @@ var hierarchy =
     [ "std::formatter< Harlinn::Common::Core::BasicString< CharT >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_basic_string_3_01_char_t_01_4_00_01_char_t_01_4.html", null ],
     [ "std::formatter< Harlinn::Common::Core::BasicStringView< CharT >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_basic_string_view_3_01_char_t_01_4_00_01_char_t_01_4.html", null ],
     [ "std::formatter< Harlinn::Common::Core::DateTime, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_date_time_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Half, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_half_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Interval< double >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_interval_3_01double_01_4_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Interval< float >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_interval_3_01float_01_4_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Normal3f, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_normal3f_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Normal3f::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_normal3f_1_1_simd_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Point2f, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_point2f_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Point2f::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_point2f_1_1_simd_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Point2i, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_point2i_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Point2i::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_point2i_1_1_simd_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Point3f, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_point3f_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Point3f::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_point3f_1_1_simd_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Point3i, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_point3i_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Point3i::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_point3i_1_1_simd_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Quaternion< float >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_3_01float_01_4_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::SquareMatrix< float, 3 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_3_01float_00_013_01_4_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::SquareMatrix< float, 3 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_3_01float_00_6ef9aafbfd4fd7df40deb6156dce92b2.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::SquareMatrix< float, 4 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_3_01float_00_014_01_4_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::SquareMatrix< float, 4 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_3_01float_00_f5b9339ae01af9ddb0edce30bfb5f5b7.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Vector< float, 2 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_012_01_4_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Vector< float, 2 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_012_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Vector< float, 3 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_013_01_4_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Vector< float, 3 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_013_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Vector< float, 4 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_014_01_4_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Vector< float, 4 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_014_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Vector< int, 2 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01int_00_012_01_4_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Vector< int, 2 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01int_00_012_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Vector< int, 3 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01int_00_013_01_4_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Vector< int, 3 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01int_00_013_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Vector< int, 4 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01int_00_014_01_4_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< Harlinn::Common::Core::Math::Vector< int, 4 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01int_00_014_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
     [ "std::formatter< Harlinn::Common::Core::SysString, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_sys_string_00_01_char_t_01_4.html", null ],
     [ "std::formatter< Harlinn::Common::Core::TimeSpan, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_common_1_1_core_1_1_time_span_00_01_char_t_01_4.html", null ],
-    [ "std::formatter< typename Harlinn::Common::Core::Math::Quaternion< float >::Simd, CharT >", "structstd_1_1formatter_3_01typename_01_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_3_01f5c5439c298d348f49a3116d89c817ec1.html", null ],
+    [ "std::formatter< Harlinn::Math::Half, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_half_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Interval< double >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_interval_3_01double_01_4_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Interval< float >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_interval_3_01float_01_4_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Normal3f, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_normal3f_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Normal3f::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_normal3f_1_1_simd_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Point2f, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_point2f_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Point2f::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_point2f_1_1_simd_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Point2i, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_point2i_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Point2i::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_point2i_1_1_simd_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Point3f, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_point3f_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Point3f::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_point3f_1_1_simd_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Point3i, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_point3i_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Point3i::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_point3i_1_1_simd_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Quaternion< float >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_quaternion_3_01float_01_4_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::SquareMatrix< float, 3 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_square_matrix_3_01float_00_013_01_4_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::SquareMatrix< float, 3 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_square_matrix_3_01float_00_013_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::SquareMatrix< float, 4 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_square_matrix_3_01float_00_014_01_4_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::SquareMatrix< float, 4 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_square_matrix_3_01float_00_014_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Vector< float, 2 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_vector_3_01float_00_012_01_4_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Vector< float, 2 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_vector_3_01float_00_012_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Vector< float, 3 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_vector_3_01float_00_013_01_4_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Vector< float, 3 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_vector_3_01float_00_013_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Vector< float, 4 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_vector_3_01float_00_014_01_4_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Vector< float, 4 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_vector_3_01float_00_014_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Vector< int, 2 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_vector_3_01int_00_012_01_4_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Vector< int, 2 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_vector_3_01int_00_012_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Vector< int, 3 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_vector_3_01int_00_013_01_4_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Vector< int, 3 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_vector_3_01int_00_013_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Vector< int, 4 >, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_vector_3_01int_00_014_01_4_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< Harlinn::Math::Vector< int, 4 >::Simd, CharT >", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_vector_3_01int_00_014_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
+    [ "std::formatter< typename Harlinn::Math::Quaternion< float >::Simd, CharT >", "structstd_1_1formatter_3_01typename_01_harlinn_1_1_math_1_1_quaternion_3_01float_01_4_1_1_simd_00_01_char_t_01_4.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::FractionWidth< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_fraction_width.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::FractionWidth< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_fraction_width_3_01double_01_4.html", null ],
     [ "Harlinn::Common::Core::Math::Internal::FractionWidth< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_fraction_width_3_01float_01_4.html", null ],
@@ -1358,7 +1362,7 @@ var hierarchy =
       [ "Harlinn::Common::Core::Guid::DataT", "struct_harlinn_1_1_common_1_1_core_1_1_guid_1_1_data_t.html", null ]
     ] ],
     [ "Harlinn::Common::Core::Guid", "class_harlinn_1_1_common_1_1_core_1_1_guid.html", null ],
-    [ "Harlinn::Common::Core::Math::Half", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_half.html", null ],
+    [ "Harlinn::Math::Half", "class_harlinn_1_1_math_1_1_half.html", null ],
     [ "half_float::half", "classhalf__float_1_1half.html", null ],
     [ "half_float::detail::half_caster< T, U, R >", "structhalf__float_1_1detail_1_1half__caster.html", null ],
     [ "half_float::detail::half_caster< half, half, R >", "structhalf__float_1_1detail_1_1half__caster_3_01half_00_01half_00_01_r_01_4.html", [
@@ -1670,13 +1674,6 @@ var hierarchy =
     [ "IEditableObject", null, [
       [ "Harlinn.Common.Core.Net.Entities.BaseEntity< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_entities_1_1_base_entity.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::Math::Internal::OpenLibM::ieee_double_shape_type", "union_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1ieee__double__shape__type.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::OpenLibM::ieee_extended_shape_type", "union_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1ieee__extended__shape__type.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::OpenLibM::ieee_float_shape_type", "union_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1ieee__float__shape__type.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::OpenLibM::ieee_quad_shape_type", "union_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1ieee__quad__shape__type.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::OpenLibM::IEEEd2bits", "union_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1_i_e_e_ed2bits.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::OpenLibM::IEEEf2bits", "union_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m_1_1_i_e_e_ef2bits.html", null ],
-    [ "IEEEl2bits", "union_i_e_e_el2bits.html", null ],
     [ "IEnumerator", null, [
       [ "Harlinn.Common.Core.Net.Collections.Generic.SortedListEx< TKey, TValue >.Enumerator", "struct_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_list_ex_1_1_enumerator.html", null ],
       [ "Harlinn.Common.Core.Net.Collections.Generic.SortedListEx< TKey, TValue >.SortedListKeyEnumerator", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_collections_1_1_generic_1_1_sorted_list_ex_1_1_sorted_list_key_enumerator.html", null ],
@@ -1740,7 +1737,7 @@ var hierarchy =
     [ "Harlinn::Common::Core::Network::InterfaceTable", "class_harlinn_1_1_common_1_1_core_1_1_network_1_1_interface_table.html", null ],
     [ "Harlinn::Common::Core::InterlockedLinkedList", "class_harlinn_1_1_common_1_1_core_1_1_interlocked_linked_list.html", null ],
     [ "Harlinn::AI::DML::IntermediateGraphEdgeDesc", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_intermediate_graph_edge_desc.html", null ],
-    [ "Harlinn::Common::Core::Math::Interval< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_interval.html", null ],
+    [ "Harlinn::Math::Interval< T >", "class_harlinn_1_1_math_1_1_interval.html", null ],
     [ "boost::icl::interval_bound_type< Harlinn::Common::Core::Interval >", "structboost_1_1icl_1_1interval__bound__type_3_01_harlinn_1_1_common_1_1_core_1_1_interval_01_4.html", null ],
     [ "boost::icl::interval_traits< Harlinn::Common::Core::Interval >", "structboost_1_1icl_1_1interval__traits_3_01_harlinn_1_1_common_1_1_core_1_1_interval_01_4.html", null ],
     [ "Harlinn::Common::Core::IO::IOCompletionPort", "class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_i_o_completion_port.html", [
@@ -1796,6 +1793,11 @@ var hierarchy =
       [ "Harlinn::Common::Core::LightweightSemaphore", "class_harlinn_1_1_common_1_1_core_1_1_lightweight_semaphore.html", null ]
     ] ],
     [ "Harlinn::Common::Core::Internal::LightweightSemaphoreImpl< Core::SemaphoreEx, ConcurrentQueueDefaultTraits::MAX_SEMA_SPINS >", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html", null ],
+    [ "Harlinn::Math::Internal::LineBase", "struct_harlinn_1_1_math_1_1_internal_1_1_line_base.html", [
+      [ "Harlinn::Math::Line< T, N >", "struct_harlinn_1_1_math_1_1_line.html", null ],
+      [ "Harlinn::Math::LineSimd< T, N >", "struct_harlinn_1_1_math_1_1_line_simd.html", null ]
+    ] ],
+    [ "Harlinn::Math::LineSimd< T, N >::LineDistanceResult", "class_harlinn_1_1_math_1_1_line_simd_1_1_line_distance_result.html", null ],
     [ "Harlinn::Common::Core::Http::Server::Internal::LinkedListBase< DerivedT, T, hasOwnership >", "class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html", null ],
     [ "Harlinn::Common::Core::Http::Server::Internal::LinkedListBase< LinkedList< HttpReceiveRequest, hasOwnership >, HttpReceiveRequest, hasOwnership >", "class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html", [
       [ "Harlinn::Common::Core::Http::Server::Internal::LinkedList< HttpReceiveRequest, true >", "class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html", null ]
@@ -1821,24 +1823,32 @@ var hierarchy =
     [ "Harlinn::Common::Core::Http::LoggingInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_logging_info.html", null ],
     [ "Harlinn::OCI::Internal::LongVarBinaryDataType", "struct_harlinn_1_1_o_c_i_1_1_internal_1_1_long_var_binary_data_type.html", null ],
     [ "Harlinn::Common::Core::SIMD::Traits< float, N >::m128Permute", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1m128_permute.html", null ],
+    [ "Harlinn::Math::SIMD::Traits< float, N >::m128Permute", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1m128_permute.html", null ],
     [ "Harlinn::Common::Core::SIMD::Traits< float, N >::m128Select", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1m128_select.html", null ],
+    [ "Harlinn::Math::SIMD::Traits< float, N >::m128Select", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1m128_select.html", null ],
     [ "Harlinn::Common::Core::SIMD::Traits< float, N >::m256Select", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1m256_select.html", null ],
+    [ "Harlinn::Math::SIMD::Traits< float, N >::m256Select", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1m256_select.html", null ],
     [ "Harlinn::Common::Core::Internal::MakeFloatingPointImpl< Args >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_make_floating_point_impl.html", null ],
     [ "Harlinn::Common::Core::Internal::MakeFloatingPointImpl< float, float >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_make_floating_point_impl_3_01float_00_01float_01_4.html", null ],
     [ "Harlinn::Common::Core::Internal::MakeUnsignedHelper< size_t >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_make_unsigned_helper.html", null ],
+    [ "Harlinn::Common::Internal::MakeUnsignedHelper< size_t >", "struct_harlinn_1_1_common_1_1_internal_1_1_make_unsigned_helper.html", null ],
     [ "Harlinn::Common::Core::Internal::MakeUnsignedHelper< 1 >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_make_unsigned_helper_3_011_01_4.html", null ],
+    [ "Harlinn::Common::Internal::MakeUnsignedHelper< 1 >", "struct_harlinn_1_1_common_1_1_internal_1_1_make_unsigned_helper_3_011_01_4.html", null ],
     [ "Harlinn::Common::Core::Internal::MakeUnsignedHelper< 2 >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_make_unsigned_helper_3_012_01_4.html", null ],
+    [ "Harlinn::Common::Internal::MakeUnsignedHelper< 2 >", "struct_harlinn_1_1_common_1_1_internal_1_1_make_unsigned_helper_3_012_01_4.html", null ],
     [ "Harlinn::Common::Core::Internal::MakeUnsignedHelper< 4 >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_make_unsigned_helper_3_014_01_4.html", null ],
+    [ "Harlinn::Common::Internal::MakeUnsignedHelper< 4 >", "struct_harlinn_1_1_common_1_1_internal_1_1_make_unsigned_helper_3_014_01_4.html", null ],
     [ "Harlinn::Common::Core::Internal::MakeUnsignedHelper< 8 >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_make_unsigned_helper_3_018_01_4.html", null ],
-    [ "Harlinn::Common::Core::MallocaDeleter< T >", "class_harlinn_1_1_common_1_1_core_1_1_malloca_deleter.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::MatrixBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_matrix_base.html", [
-      [ "Harlinn::Common::Core::Math::SquareMatrix< T, N >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix.html", null ]
+    [ "Harlinn::Common::Internal::MakeUnsignedHelper< 8 >", "struct_harlinn_1_1_common_1_1_internal_1_1_make_unsigned_helper_3_018_01_4.html", null ],
+    [ "Harlinn::Common::MallocaDeleter< T >", "class_harlinn_1_1_common_1_1_malloca_deleter.html", null ],
+    [ "Harlinn::Math::Internal::MatrixBase", "struct_harlinn_1_1_math_1_1_internal_1_1_matrix_base.html", [
+      [ "Harlinn::Math::SquareMatrix< T, N >", "class_harlinn_1_1_math_1_1_square_matrix.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::Math::Internal::MatrixSimdBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_matrix_simd_base.html", [
-      [ "Harlinn::Common::Core::Math::SquareMatrixSimd< MatrixT, 1 >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_011_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::SquareMatrixSimd< MatrixT, 2 >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_012_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::SquareMatrixSimd< MatrixT, 3 >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_013_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::SquareMatrixSimd< MatrixT, 4 >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_014_01_4.html", null ]
+    [ "Harlinn::Math::Internal::MatrixSimdBase", "struct_harlinn_1_1_math_1_1_internal_1_1_matrix_simd_base.html", [
+      [ "Harlinn::Math::SquareMatrixSimd< MatrixT, 1 >", "struct_harlinn_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_011_01_4.html", null ],
+      [ "Harlinn::Math::SquareMatrixSimd< MatrixT, 2 >", "struct_harlinn_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_012_01_4.html", null ],
+      [ "Harlinn::Math::SquareMatrixSimd< MatrixT, 3 >", "struct_harlinn_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_013_01_4.html", null ],
+      [ "Harlinn::Math::SquareMatrixSimd< MatrixT, 4 >", "struct_harlinn_1_1_math_1_1_square_matrix_simd_3_01_matrix_t_00_014_01_4.html", null ]
     ] ],
     [ "Harlinn::Common::Core::details::max_align_t", "union_harlinn_1_1_common_1_1_core_1_1details_1_1max__align__t.html", null ],
     [ "Harlinn::AI::DML::X::MaxPoolingBuilder", "class_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_max_pooling_builder.html", null ],
@@ -1950,8 +1960,9 @@ var hierarchy =
       [ "Harlinn::Windows::NonClientMetrics", "class_harlinn_1_1_windows_1_1_non_client_metrics.html", null ]
     ] ],
     [ "Harlinn::AI::DML::X::NonZeroCoordinatesOutputs", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_non_zero_coordinates_outputs.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::NormalBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_normal_base.html", [
-      [ "Harlinn::Common::Core::Math::Normal3f", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_normal3f.html", null ]
+    [ "Harlinn::Math::Normal< T, N >", "class_harlinn_1_1_math_1_1_normal.html", null ],
+    [ "Harlinn::Math::Internal::NormalBase", "struct_harlinn_1_1_math_1_1_internal_1_1_normal_base.html", [
+      [ "Harlinn::Math::Normal< float, 3 >", "class_harlinn_1_1_math_1_1_normal_3_01float_00_013_01_4.html", null ]
     ] ],
     [ "Harlinn::Common::Core::Math::NormalizedFloat< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_normalized_float.html", null ],
     [ "Harlinn::Common::Core::ZeroMq::ZMQNotificationServer::NotificationEntry::NotificationMessage", "struct_harlinn_1_1_common_1_1_core_1_1_zero_mq_1_1_z_m_q_notification_server_1_1_notification_entry_1_1_notification_message.html", null ],
@@ -2068,22 +2079,33 @@ var hierarchy =
     [ "Harlinn::Windows::PenSelection", "class_harlinn_1_1_windows_1_1_pen_selection.html", null ],
     [ "Harlinn::Common::Core::Http::PerformanceParam", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_performance_param.html", null ],
     [ "Harlinn::Common::Core::SIMD::Traits< float, N >::PermuteImpl< shuffle, v2x, v2y, v2z, v2w >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1_permute_impl.html", null ],
+    [ "Harlinn::Math::SIMD::Traits< float, N >::PermuteImpl< shuffle, v2x, v2y, v2z, v2w >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1_permute_impl.html", null ],
     [ "Harlinn::Common::Core::SIMD::Traits< float, N >::PermuteImpl< shuffle, false, false, false, false >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1_permute_imp3acca3291c4aef19830b5adf3a2233b5.html", null ],
+    [ "Harlinn::Math::SIMD::Traits< float, N >::PermuteImpl< shuffle, false, false, false, false >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1_permute_impl_3_01shuffd3f1a3fa92d6f17e5f17b6870d185c14.html", null ],
     [ "Harlinn::Common::Core::SIMD::Traits< float, N >::PermuteImpl< shuffle, false, false, true, true >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1_permute_impbbae313c4a84d6338b459fa2a6603be3.html", null ],
+    [ "Harlinn::Math::SIMD::Traits< float, N >::PermuteImpl< shuffle, false, false, true, true >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1_permute_impl_3_01shuff60c57e90a088fa741f0f03a44de751b8.html", null ],
     [ "Harlinn::Common::Core::SIMD::Traits< float, N >::PermuteImpl< shuffle, true, true, false, false >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1_permute_impacfe779074633e93143aac97bfcdd106.html", null ],
+    [ "Harlinn::Math::SIMD::Traits< float, N >::PermuteImpl< shuffle, true, true, false, false >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1_permute_impl_3_01shuff3cff18e56ddc2a59d5fde795d1235821.html", null ],
     [ "Harlinn::Common::Core::SIMD::Traits< float, N >::PermuteImpl< shuffle, true, true, true, true >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1_permute_impd576081ed0234425c3da4049805e429a.html", null ],
+    [ "Harlinn::Math::SIMD::Traits< float, N >::PermuteImpl< shuffle, true, true, true, true >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4_1_1_permute_impl_3_01shuff27b1a9a66e6b5330b0428c56d6f003d8.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::PipelineStateStreamDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_pipeline_state_stream_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::PlacedSubresourceFootprint", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_placed_subresource_footprint.html", null ],
-    [ "Harlinn::Common::Core::Math::Plane", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_plane.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::PlaneBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_plane_base.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::PlaneSimdBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_plane_simd_base.html", null ],
-    [ "Harlinn::Common::Core::RtWorkQ::Platform", "class_harlinn_1_1_common_1_1_core_1_1_rt_work_q_1_1_platform.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::PointBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_point_base.html", [
-      [ "Harlinn::Common::Core::Math::Point2f", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_point2f.html", null ],
-      [ "Harlinn::Common::Core::Math::Point2i", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_point2i.html", null ],
-      [ "Harlinn::Common::Core::Math::Point3f", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_point3f.html", null ],
-      [ "Harlinn::Common::Core::Math::Point3i", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_point3i.html", null ]
+    [ "Harlinn::Math::Internal::PlaneBase", "struct_harlinn_1_1_math_1_1_internal_1_1_plane_base.html", [
+      [ "Harlinn::Math::Plane< T >", "class_harlinn_1_1_math_1_1_plane.html", null ]
     ] ],
+    [ "Harlinn::Math::Internal::PlaneSimdBase", "struct_harlinn_1_1_math_1_1_internal_1_1_plane_simd_base.html", [
+      [ "Harlinn::Math::PlaneSimd< PlaneT >", "class_harlinn_1_1_math_1_1_plane_simd.html", null ]
+    ] ],
+    [ "Harlinn::Common::Core::RtWorkQ::Platform", "class_harlinn_1_1_common_1_1_core_1_1_rt_work_q_1_1_platform.html", null ],
+    [ "Harlinn::Math::Point< T, N >", "class_harlinn_1_1_math_1_1_point.html", null ],
+    [ "Harlinn::Math::Internal::PointBase", "struct_harlinn_1_1_math_1_1_internal_1_1_point_base.html", [
+      [ "Harlinn::Math::Point< Int32, 2 >", "class_harlinn_1_1_math_1_1_point_3_01_int32_00_012_01_4.html", null ],
+      [ "Harlinn::Math::Point< Int32, 3 >", "class_harlinn_1_1_math_1_1_point_3_01_int32_00_013_01_4.html", null ],
+      [ "Harlinn::Math::Point< float, 2 >", "class_harlinn_1_1_math_1_1_point_3_01float_00_012_01_4.html", null ],
+      [ "Harlinn::Math::Point< float, 3 >", "class_harlinn_1_1_math_1_1_point_3_01float_00_013_01_4.html", null ]
+    ] ],
+    [ "Harlinn::Math::LineSimd< T, N >::PointDistanceResult", "class_harlinn_1_1_math_1_1_line_simd_1_1_point_distance_result.html", null ],
+    [ "Harlinn::Math::SegmentSimd< T, N >::PointDistanceResult", "class_harlinn_1_1_math_1_1_segment_simd_1_1_point_distance_result.html", null ],
     [ "std::pointer_traits< Harlinn::Common::Core::Internal::ConstPointerIterator< ContainerT > >", "structstd_1_1pointer__traits_3_01_harlinn_1_1_common_1_1_core_1_1_internal_1_1_const_pointer_ite08ab37d9915b55dadb36beab13f4677b.html", null ],
     [ "std::pointer_traits< Harlinn::Common::Core::Internal::PointerIterator< ContainerT > >", "structstd_1_1pointer__traits_3_01_harlinn_1_1_common_1_1_core_1_1_internal_1_1_pointer_iterator_3_01_container_t_01_4_01_4.html", null ],
     [ "Harlinn::Windows::PointT< PT >", "class_harlinn_1_1_windows_1_1_point_t.html", null ],
@@ -2105,11 +2127,11 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::ProtectedResourceSessionDesc1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_protected_resource_session_desc1.html", null ],
     [ "Harlinn::Common::Core::Http::ProtectionLevelInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_protection_level_info.html", null ],
     [ "Harlinn::Common::Core::Http::QosSettingInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_qos_setting_info.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::QuaternionBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quaternion_base.html", [
-      [ "Harlinn::Common::Core::Math::Quaternion< T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion.html", null ]
+    [ "Harlinn::Math::Internal::QuaternionBase", "struct_harlinn_1_1_math_1_1_internal_1_1_quaternion_base.html", [
+      [ "Harlinn::Math::Quaternion< T >", "class_harlinn_1_1_math_1_1_quaternion.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::Math::Internal::QuaternionSimdBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_quaternion_simd_base.html", [
-      [ "Harlinn::Common::Core::Math::QuaternionSimd< QuaternionT >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_simd.html", null ]
+    [ "Harlinn::Math::Internal::QuaternionSimdBase", "struct_harlinn_1_1_math_1_1_internal_1_1_quaternion_simd_base.html", [
+      [ "Harlinn::Math::QuaternionSimd< QuaternionT >", "class_harlinn_1_1_math_1_1_quaternion_simd.html", null ]
     ] ],
     [ "Harlinn::Windows::Graphics::D3D12::QueryDataPipelineStatistics", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_query_data_pipeline_statistics.html", [
       [ "Harlinn::Windows::Graphics::D3D12::QueryDataPipelineStatistics1", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_query_data_pipeline_statistics1.html", null ]
@@ -2130,9 +2152,6 @@ var hierarchy =
     [ "Harlinn::Common::Core::Test::Generators::RangeGeneratorBase", "class_harlinn_1_1_common_1_1_core_1_1_test_1_1_generators_1_1_range_generator_base.html", [
       [ "Harlinn::Common::Core::Test::Generators::RangeGenerator< ValueT >", "struct_harlinn_1_1_common_1_1_core_1_1_test_1_1_generators_1_1_range_generator.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::Math::Internal::RangeReduction< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::RangeReduction< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction_3_01double_01_4.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::RangeReduction< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_range_reduction_3_01float_01_4.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::RangeUInt64", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_range_u_int64.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::RasterizerDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_rasterizer_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::RaytracingAABB", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_raytracing_a_a_b_b.html", null ],
@@ -2247,14 +2266,14 @@ var hierarchy =
     [ "Harlinn::Windows::Graphics::D3D12::SamplePosition", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_sample_position.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::SamplerDesc", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_sampler_desc.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::SamplerDesc2", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_sampler_desc2.html", null ],
-    [ "Harlinn::Common::Core::Math::Scalar< T, N >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::ScalarBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_scalar_base.html", [
-      [ "Harlinn::Common::Core::Math::Scalar< double, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01double_00_012_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Scalar< double, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01double_00_013_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Scalar< double, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01double_00_014_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Scalar< float, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01float_00_012_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Scalar< float, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01float_00_013_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Scalar< float, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01float_00_014_01_4.html", null ]
+    [ "Harlinn::Math::Scalar< T, N >", "class_harlinn_1_1_math_1_1_scalar.html", null ],
+    [ "Harlinn::Math::Internal::ScalarBase", "struct_harlinn_1_1_math_1_1_internal_1_1_scalar_base.html", [
+      [ "Harlinn::Math::Scalar< double, 2 >", "class_harlinn_1_1_math_1_1_scalar_3_01double_00_012_01_4.html", null ],
+      [ "Harlinn::Math::Scalar< double, 3 >", "class_harlinn_1_1_math_1_1_scalar_3_01double_00_013_01_4.html", null ],
+      [ "Harlinn::Math::Scalar< double, 4 >", "class_harlinn_1_1_math_1_1_scalar_3_01double_00_014_01_4.html", null ],
+      [ "Harlinn::Math::Scalar< float, 2 >", "class_harlinn_1_1_math_1_1_scalar_3_01float_00_012_01_4.html", null ],
+      [ "Harlinn::Math::Scalar< float, 3 >", "class_harlinn_1_1_math_1_1_scalar_3_01float_00_013_01_4.html", null ],
+      [ "Harlinn::Math::Scalar< float, 4 >", "class_harlinn_1_1_math_1_1_scalar_3_01float_00_014_01_4.html", null ]
     ] ],
     [ "Harlinn::AI::DML::ScaleBias", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_scale_bias.html", null ],
     [ "Harlinn::Windows::Media::MF2DBuffer::Scanline0AndPitch", "struct_harlinn_1_1_windows_1_1_media_1_1_m_f2_d_buffer_1_1_scanline0_and_pitch.html", null ],
@@ -2308,6 +2327,8 @@ var hierarchy =
     [ "Harlinn::Common::Core::Security::SecurityIdInfo", "struct_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_id_info.html", null ],
     [ "Harlinn::Common::Core::Security::SecurityIdsAndFlagsWithHash", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_ids_and_flags_with_hash.html", null ],
     [ "Harlinn::Common::Core::Security::SecurityPackage", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_package.html", null ],
+    [ "Harlinn::Math::Segment< T, N >", "struct_harlinn_1_1_math_1_1_segment.html", null ],
+    [ "Harlinn::Math::SegmentSimd< T, N >", "struct_harlinn_1_1_math_1_1_segment_simd.html", null ],
     [ "Harlinn::Common::Core::SemaphoreEx", "class_harlinn_1_1_common_1_1_core_1_1_semaphore_ex.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::SerializedDataDriverMatchingIdentifier", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_serialized_data_driver_matching_identifier.html", null ],
     [ "Harlinn::Windows::Graphics::D3D12::SerializedRaytracingAccelerationStructureHeader", "struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_serialized_raytracing_acceleration_structure_header.html", null ],
@@ -2405,7 +2426,7 @@ var hierarchy =
       [ "Harlinn::Common::Core::Security::SecurityId::IdentifierAuthority", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_id_1_1_identifier_authority.html", null ]
     ] ],
     [ "Harlinn::Common::Core::Sign", "class_harlinn_1_1_common_1_1_core_1_1_sign.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::SimdFastPowImpl< T >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_simd_fast_pow_impl.html", null ],
+    [ "Harlinn::Math::Internal::SimdFastPowImpl< T >", "struct_harlinn_1_1_math_1_1_internal_1_1_simd_fast_pow_impl.html", null ],
     [ "Harlinn::Common::Core::SimpleConcurrentQueue< T, maxQueueSize >", "class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html", null ],
     [ "Harlinn::Common::Core::SimpleConcurrentQueue< MessageT, 10 *1024 >", "class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html", null ],
     [ "Harlinn::Common::Core::SimpleConcurrentQueue< MessageT, maxQueueSize >", "class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html", null ],
@@ -2462,7 +2483,7 @@ var hierarchy =
     [ "Harlinn.Common.Core.Net.Data.Updates.SqlServerUpdateHandlerBase< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_handler_base.html", null ],
     [ "Harlinn.Common.Core.Net.Data.Updates.SqlServerUpdateNodeBase< TKind >", "class_harlinn_1_1_common_1_1_core_1_1_net_1_1_data_1_1_updates_1_1_sql_server_update_node_base.html", null ],
     [ "Harlinn::ODBC::SqlState", "struct_harlinn_1_1_o_d_b_c_1_1_sql_state.html", null ],
-    [ "Harlinn::Common::Core::Math::SquareMatrixSimd< MatrixT, N >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_square_matrix_simd.html", null ],
+    [ "Harlinn::Math::SquareMatrixSimd< MatrixT, N >", "struct_harlinn_1_1_math_1_1_square_matrix_simd.html", null ],
     [ "Harlinn::Common::Core::Http::SSLClientCertInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_s_s_l_client_cert_info.html", null ],
     [ "Harlinn::Common::Core::Http::SSLInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_s_s_l_info.html", null ],
     [ "Harlinn::Common::Core::Http::SSLProtocolInfo", "struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_s_s_l_protocol_info.html", null ],
@@ -2781,6 +2802,39 @@ var hierarchy =
       [ "Harlinn::Common::Core::SIMD::Internal::TraitLimitsImpl< float, __m256 >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1_trait_limits_impl.html", [
         [ "Harlinn::Common::Core::SIMD::TraitLimits< float >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_trait_limits_3_01float_01_4.html", null ]
       ] ],
+      [ "Harlinn::Math::SIMD::Internal::TraitLimitsImpl< Byte, __m256i >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1_trait_limits_impl.html", [
+        [ "Harlinn::Math::SIMD::TraitLimits< Byte >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_trait_limits_3_01_byte_01_4.html", null ]
+      ] ],
+      [ "Harlinn::Math::SIMD::Internal::TraitLimitsImpl< Int16, __m256i >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1_trait_limits_impl.html", [
+        [ "Harlinn::Math::SIMD::TraitLimits< Int16 >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_trait_limits_3_01_int16_01_4.html", null ]
+      ] ],
+      [ "Harlinn::Math::SIMD::Internal::TraitLimitsImpl< Int32, __m256i >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1_trait_limits_impl.html", [
+        [ "Harlinn::Math::SIMD::TraitLimits< Int32 >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_trait_limits_3_01_int32_01_4.html", null ]
+      ] ],
+      [ "Harlinn::Math::SIMD::Internal::TraitLimitsImpl< Int64, __m256i >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1_trait_limits_impl.html", [
+        [ "Harlinn::Math::SIMD::TraitLimits< Int64 >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_trait_limits_3_01_int64_01_4.html", null ]
+      ] ],
+      [ "Harlinn::Math::SIMD::Internal::TraitLimitsImpl< SByte, __m256i >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1_trait_limits_impl.html", [
+        [ "Harlinn::Math::SIMD::TraitLimits< SByte >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_trait_limits_3_01_s_byte_01_4.html", null ]
+      ] ],
+      [ "Harlinn::Math::SIMD::Internal::TraitLimitsImpl< UInt16, __m256i >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1_trait_limits_impl.html", [
+        [ "Harlinn::Math::SIMD::TraitLimits< UInt16 >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_trait_limits_3_01_u_int16_01_4.html", null ]
+      ] ],
+      [ "Harlinn::Math::SIMD::Internal::TraitLimitsImpl< UInt32, __m256i >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1_trait_limits_impl.html", [
+        [ "Harlinn::Math::SIMD::TraitLimits< UInt32 >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_trait_limits_3_01_u_int32_01_4.html", null ]
+      ] ],
+      [ "Harlinn::Math::SIMD::Internal::TraitLimitsImpl< UInt64, __m256i >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1_trait_limits_impl.html", [
+        [ "Harlinn::Math::SIMD::TraitLimits< UInt64 >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_trait_limits_3_01_u_int64_01_4.html", null ]
+      ] ],
+      [ "Harlinn::Math::SIMD::Internal::TraitLimitsImpl< char, __m256i >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1_trait_limits_impl.html", [
+        [ "Harlinn::Math::SIMD::TraitLimits< char >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_trait_limits_3_01char_01_4.html", null ]
+      ] ],
+      [ "Harlinn::Math::SIMD::Internal::TraitLimitsImpl< double, __m256 >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1_trait_limits_impl.html", [
+        [ "Harlinn::Math::SIMD::TraitLimits< double >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_trait_limits_3_01double_01_4.html", null ]
+      ] ],
+      [ "Harlinn::Math::SIMD::Internal::TraitLimitsImpl< float, __m256 >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1_trait_limits_impl.html", [
+        [ "Harlinn::Math::SIMD::TraitLimits< float >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_trait_limits_3_01float_01_4.html", null ]
+      ] ],
       [ "Harlinn::AI::DML::Internal::TensorTraitsBase", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_internal_1_1_tensor_traits_base.html", [
         [ "Harlinn::AI::DML::Internal::TensorTraits< Int16 >", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01_int16_01_4.html", null ],
         [ "Harlinn::AI::DML::Internal::TensorTraits< Int32 >", "struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_internal_1_1_tensor_traits_3_01_int32_01_4.html", null ],
@@ -2843,8 +2897,6 @@ var hierarchy =
       [ "Harlinn::Common::Core::IO::Serialization::Internal::UnsignedDataTypeResolver< unsigned short >", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_typee2c69e416769ea5eeae0f03fc6e535cc.html", null ],
       [ "Harlinn::Common::Core::IO::Serialization::Internal::UnsignedDataTypeResolver< wchar_t >", "struct_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serialization_1_1_internal_1_1_unsigned_data_type_resolver_3_01wchar__t_01_4.html", null ],
       [ "Harlinn::Common::Core::Internal::VariantTypeTraits< vt, ValueT, VariantValueT >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_variant_type_traits.html", null ],
-      [ "Harlinn::Common::Core::Math::Constants< double >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01double_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Constants< float >", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_constants_3_01float_01_4.html", null ],
       [ "Harlinn::Common::Core::SIMD::DataTypeTraits< DataType::m128 >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m128_01_4.html", null ],
       [ "Harlinn::Common::Core::SIMD::DataTypeTraits< DataType::m128d >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m128d_01_4.html", null ],
       [ "Harlinn::Common::Core::SIMD::DataTypeTraits< DataType::m128i >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m128i_01_4.html", null ],
@@ -2890,6 +2942,54 @@ var hierarchy =
         [ "Harlinn::Common::Core::SIMD::Traits8Bit< T, N >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits8_bit.html", null ],
         [ "Harlinn::Common::Core::SIMD::Traits< double, N >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01double_00_01_n_01_4.html", null ],
         [ "Harlinn::Common::Core::SIMD::Traits< float, N >", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html", null ]
+      ] ],
+      [ "Harlinn::Math::Constants< double >", "struct_harlinn_1_1_math_1_1_constants_3_01double_01_4.html", null ],
+      [ "Harlinn::Math::Constants< float >", "struct_harlinn_1_1_math_1_1_constants_3_01float_01_4.html", null ],
+      [ "Harlinn::Math::SIMD::DataTypeTraits< DataType::m128 >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m128_01_4.html", null ],
+      [ "Harlinn::Math::SIMD::DataTypeTraits< DataType::m128d >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m128d_01_4.html", null ],
+      [ "Harlinn::Math::SIMD::DataTypeTraits< DataType::m128i >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m128i_01_4.html", null ],
+      [ "Harlinn::Math::SIMD::DataTypeTraits< DataType::m256 >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m256_01_4.html", null ],
+      [ "Harlinn::Math::SIMD::DataTypeTraits< DataType::m256d >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m256d_01_4.html", null ],
+      [ "Harlinn::Math::SIMD::DataTypeTraits< DataType::m256i >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m256i_01_4.html", null ],
+      [ "Harlinn::Math::SIMD::DataTypeTraits< DataType::m512 >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m512_01_4.html", null ],
+      [ "Harlinn::Math::SIMD::DataTypeTraits< DataType::m512d >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m512d_01_4.html", null ],
+      [ "Harlinn::Math::SIMD::DataTypeTraits< DataType::m512i >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m512i_01_4.html", null ],
+      [ "Harlinn::Math::SIMD::DataTypeTraits< DataType::m64 >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_data_type_traits_3_01_data_type_1_1m64_01_4.html", null ],
+      [ "Harlinn::Math::SIMD::Internal::TraitLimitsImpl< ElementT, SIMDT >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1_trait_limits_impl.html", null ],
+      [ "Harlinn::Math::SIMD::Internal::TraitsBase", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_internal_1_1_traits_base.html", [
+        [ "Harlinn::Math::SIMD::Traits16Bit< Int16, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits16_bit.html", [
+          [ "Harlinn::Math::SIMD::Traits< Int16, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01_int16_00_01_n_01_4.html", null ]
+        ] ],
+        [ "Harlinn::Math::SIMD::Traits16Bit< UInt16, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits16_bit.html", [
+          [ "Harlinn::Math::SIMD::Traits< UInt16, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01_u_int16_00_01_n_01_4.html", null ]
+        ] ],
+        [ "Harlinn::Math::SIMD::Traits32Bit< Int32, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits32_bit.html", [
+          [ "Harlinn::Math::SIMD::Traits< Int32, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01_int32_00_01_n_01_4.html", null ]
+        ] ],
+        [ "Harlinn::Math::SIMD::Traits32Bit< UInt32, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits32_bit.html", [
+          [ "Harlinn::Math::SIMD::Traits< UInt32, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01_u_int32_00_01_n_01_4.html", null ]
+        ] ],
+        [ "Harlinn::Math::SIMD::Traits64Bit< Int64, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits64_bit.html", [
+          [ "Harlinn::Math::SIMD::Traits< Int64, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01_int64_00_01_n_01_4.html", null ]
+        ] ],
+        [ "Harlinn::Math::SIMD::Traits64Bit< UInt64, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits64_bit.html", [
+          [ "Harlinn::Math::SIMD::Traits< UInt64, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01_u_int64_00_01_n_01_4.html", null ]
+        ] ],
+        [ "Harlinn::Math::SIMD::Traits8Bit< Byte, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits8_bit.html", [
+          [ "Harlinn::Math::SIMD::Traits< Byte, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01_byte_00_01_n_01_4.html", null ]
+        ] ],
+        [ "Harlinn::Math::SIMD::Traits8Bit< SByte, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits8_bit.html", [
+          [ "Harlinn::Math::SIMD::Traits< SByte, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01_s_byte_00_01_n_01_4.html", null ]
+        ] ],
+        [ "Harlinn::Math::SIMD::Traits8Bit< char, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits8_bit.html", [
+          [ "Harlinn::Math::SIMD::Traits< char, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01char_00_01_n_01_4.html", null ]
+        ] ],
+        [ "Harlinn::Math::SIMD::Traits16Bit< T, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits16_bit.html", null ],
+        [ "Harlinn::Math::SIMD::Traits32Bit< T, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits32_bit.html", null ],
+        [ "Harlinn::Math::SIMD::Traits64Bit< T, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits64_bit.html", null ],
+        [ "Harlinn::Math::SIMD::Traits8Bit< T, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits8_bit.html", null ],
+        [ "Harlinn::Math::SIMD::Traits< double, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01double_00_01_n_01_4.html", null ],
+        [ "Harlinn::Math::SIMD::Traits< float, N >", "struct_harlinn_1_1_math_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html", null ]
       ] ]
     ] ],
     [ "Harlinn::Common::Core::Security::Trustee", "class_harlinn_1_1_common_1_1_core_1_1_security_1_1_trustee.html", null ],
@@ -2899,79 +2999,79 @@ var hierarchy =
     ] ],
     [ "Harlinn::Common::Core::Tuple<>", "class_harlinn_1_1_common_1_1_core_1_1_tuple_3_4.html", null ],
     [ "Harlinn::Common::Core::Internal::TupleBase< index, types >", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_tuple_base.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::TupleBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_tuple_base.html", [
-      [ "Harlinn::Common::Core::Math::Tuple2< Point2f, float >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html", [
-        [ "Harlinn::Common::Core::Math::Point2f", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_point2f.html", null ]
+    [ "Harlinn::Math::Internal::TupleBase", "struct_harlinn_1_1_math_1_1_internal_1_1_tuple_base.html", [
+      [ "Harlinn::Math::Tuple2< Point< Int32, 2 >, Int32 >", "class_harlinn_1_1_math_1_1_tuple2.html", [
+        [ "Harlinn::Math::Point< Int32, 2 >", "class_harlinn_1_1_math_1_1_point_3_01_int32_00_012_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple2< Point2i, Int32 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html", [
-        [ "Harlinn::Common::Core::Math::Point2i", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_point2i.html", null ]
+      [ "Harlinn::Math::Tuple2< Point< float, 2 >, float >", "class_harlinn_1_1_math_1_1_tuple2.html", [
+        [ "Harlinn::Math::Point< float, 2 >", "class_harlinn_1_1_math_1_1_point_3_01float_00_012_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple2< Scalar< double, 2 >, double >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html", [
-        [ "Harlinn::Common::Core::Math::Scalar< double, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01double_00_012_01_4.html", null ]
+      [ "Harlinn::Math::Tuple2< Scalar< double, 2 >, double >", "class_harlinn_1_1_math_1_1_tuple2.html", [
+        [ "Harlinn::Math::Scalar< double, 2 >", "class_harlinn_1_1_math_1_1_scalar_3_01double_00_012_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple2< Scalar< float, 2 >, float >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html", [
-        [ "Harlinn::Common::Core::Math::Scalar< float, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01float_00_012_01_4.html", null ]
+      [ "Harlinn::Math::Tuple2< Scalar< float, 2 >, float >", "class_harlinn_1_1_math_1_1_tuple2.html", [
+        [ "Harlinn::Math::Scalar< float, 2 >", "class_harlinn_1_1_math_1_1_scalar_3_01float_00_012_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple2< Vector< Int32, 2 >, Int32 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html", [
-        [ "Harlinn::Common::Core::Math::Vector< Int32, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_int32_00_012_01_4.html", null ]
+      [ "Harlinn::Math::Tuple2< Vector< Int32, 2 >, Int32 >", "class_harlinn_1_1_math_1_1_tuple2.html", [
+        [ "Harlinn::Math::Vector< Int32, 2 >", "class_harlinn_1_1_math_1_1_vector_3_01_int32_00_012_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple2< Vector< UInt32, 2 >, UInt32 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html", [
-        [ "Harlinn::Common::Core::Math::Vector< UInt32, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_u_int32_00_012_01_4.html", null ]
+      [ "Harlinn::Math::Tuple2< Vector< UInt32, 2 >, UInt32 >", "class_harlinn_1_1_math_1_1_tuple2.html", [
+        [ "Harlinn::Math::Vector< UInt32, 2 >", "class_harlinn_1_1_math_1_1_vector_3_01_u_int32_00_012_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple2< Vector< double, 2 >, double >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html", [
-        [ "Harlinn::Common::Core::Math::Vector< double, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01double_00_012_01_4.html", null ]
+      [ "Harlinn::Math::Tuple2< Vector< double, 2 >, double >", "class_harlinn_1_1_math_1_1_tuple2.html", [
+        [ "Harlinn::Math::Vector< double, 2 >", "class_harlinn_1_1_math_1_1_vector_3_01double_00_012_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple2< Vector< float, 2 >, float >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html", [
-        [ "Harlinn::Common::Core::Math::Vector< float, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_012_01_4.html", null ]
+      [ "Harlinn::Math::Tuple2< Vector< float, 2 >, float >", "class_harlinn_1_1_math_1_1_tuple2.html", [
+        [ "Harlinn::Math::Vector< float, 2 >", "class_harlinn_1_1_math_1_1_vector_3_01float_00_012_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple3< Normal3f, float >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3.html", [
-        [ "Harlinn::Common::Core::Math::Normal3f", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_normal3f.html", null ]
+      [ "Harlinn::Math::Tuple3< Normal< float, 3 >, float >", "class_harlinn_1_1_math_1_1_tuple3.html", [
+        [ "Harlinn::Math::Normal< float, 3 >", "class_harlinn_1_1_math_1_1_normal_3_01float_00_013_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple3< Point3f, float >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3.html", [
-        [ "Harlinn::Common::Core::Math::Point3f", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_point3f.html", null ]
+      [ "Harlinn::Math::Tuple3< Point< Int32, 3 >, Int32 >", "class_harlinn_1_1_math_1_1_tuple3.html", [
+        [ "Harlinn::Math::Point< Int32, 3 >", "class_harlinn_1_1_math_1_1_point_3_01_int32_00_013_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple3< Point3i, Int32 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3.html", [
-        [ "Harlinn::Common::Core::Math::Point3i", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_point3i.html", null ]
+      [ "Harlinn::Math::Tuple3< Point< float, 3 >, float >", "class_harlinn_1_1_math_1_1_tuple3.html", [
+        [ "Harlinn::Math::Point< float, 3 >", "class_harlinn_1_1_math_1_1_point_3_01float_00_013_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple3< Scalar< double, 3 >, double >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3.html", [
-        [ "Harlinn::Common::Core::Math::Scalar< double, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01double_00_013_01_4.html", null ]
+      [ "Harlinn::Math::Tuple3< Scalar< double, 3 >, double >", "class_harlinn_1_1_math_1_1_tuple3.html", [
+        [ "Harlinn::Math::Scalar< double, 3 >", "class_harlinn_1_1_math_1_1_scalar_3_01double_00_013_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple3< Scalar< float, 3 >, float >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3.html", [
-        [ "Harlinn::Common::Core::Math::Scalar< float, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01float_00_013_01_4.html", null ]
+      [ "Harlinn::Math::Tuple3< Scalar< float, 3 >, float >", "class_harlinn_1_1_math_1_1_tuple3.html", [
+        [ "Harlinn::Math::Scalar< float, 3 >", "class_harlinn_1_1_math_1_1_scalar_3_01float_00_013_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple3< Vector< Int32, 3 >, Int32 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3.html", [
-        [ "Harlinn::Common::Core::Math::Vector< Int32, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_int32_00_013_01_4.html", null ]
+      [ "Harlinn::Math::Tuple3< Vector< Int32, 3 >, Int32 >", "class_harlinn_1_1_math_1_1_tuple3.html", [
+        [ "Harlinn::Math::Vector< Int32, 3 >", "class_harlinn_1_1_math_1_1_vector_3_01_int32_00_013_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple3< Vector< UInt32, 3 >, UInt32 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3.html", [
-        [ "Harlinn::Common::Core::Math::Vector< UInt32, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_u_int32_00_013_01_4.html", null ]
+      [ "Harlinn::Math::Tuple3< Vector< UInt32, 3 >, UInt32 >", "class_harlinn_1_1_math_1_1_tuple3.html", [
+        [ "Harlinn::Math::Vector< UInt32, 3 >", "class_harlinn_1_1_math_1_1_vector_3_01_u_int32_00_013_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple3< Vector< double, 3 >, double >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3.html", [
-        [ "Harlinn::Common::Core::Math::Vector< double, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01double_00_013_01_4.html", null ]
+      [ "Harlinn::Math::Tuple3< Vector< double, 3 >, double >", "class_harlinn_1_1_math_1_1_tuple3.html", [
+        [ "Harlinn::Math::Vector< double, 3 >", "class_harlinn_1_1_math_1_1_vector_3_01double_00_013_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple3< Vector< float, 3 >, float >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3.html", [
-        [ "Harlinn::Common::Core::Math::Vector< float, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_013_01_4.html", null ]
+      [ "Harlinn::Math::Tuple3< Vector< float, 3 >, float >", "class_harlinn_1_1_math_1_1_tuple3.html", [
+        [ "Harlinn::Math::Vector< float, 3 >", "class_harlinn_1_1_math_1_1_vector_3_01float_00_013_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple4< Scalar< double, 4 >, double >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html", [
-        [ "Harlinn::Common::Core::Math::Scalar< double, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01double_00_014_01_4.html", null ]
+      [ "Harlinn::Math::Tuple4< Scalar< double, 4 >, double >", "class_harlinn_1_1_math_1_1_tuple4.html", [
+        [ "Harlinn::Math::Scalar< double, 4 >", "class_harlinn_1_1_math_1_1_scalar_3_01double_00_014_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple4< Scalar< float, 4 >, float >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html", [
-        [ "Harlinn::Common::Core::Math::Scalar< float, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_scalar_3_01float_00_014_01_4.html", null ]
+      [ "Harlinn::Math::Tuple4< Scalar< float, 4 >, float >", "class_harlinn_1_1_math_1_1_tuple4.html", [
+        [ "Harlinn::Math::Scalar< float, 4 >", "class_harlinn_1_1_math_1_1_scalar_3_01float_00_014_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple4< Vector< Int32, 4 >, Int32 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html", [
-        [ "Harlinn::Common::Core::Math::Vector< Int32, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_int32_00_014_01_4.html", null ]
+      [ "Harlinn::Math::Tuple4< Vector< Int32, 4 >, Int32 >", "class_harlinn_1_1_math_1_1_tuple4.html", [
+        [ "Harlinn::Math::Vector< Int32, 4 >", "class_harlinn_1_1_math_1_1_vector_3_01_int32_00_014_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple4< Vector< UInt32, 4 >, UInt32 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html", [
-        [ "Harlinn::Common::Core::Math::Vector< UInt32, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_u_int32_00_014_01_4.html", null ]
+      [ "Harlinn::Math::Tuple4< Vector< UInt32, 4 >, UInt32 >", "class_harlinn_1_1_math_1_1_tuple4.html", [
+        [ "Harlinn::Math::Vector< UInt32, 4 >", "class_harlinn_1_1_math_1_1_vector_3_01_u_int32_00_014_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple4< Vector< double, 4 >, double >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html", [
-        [ "Harlinn::Common::Core::Math::Vector< double, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01double_00_014_01_4.html", null ]
+      [ "Harlinn::Math::Tuple4< Vector< double, 4 >, double >", "class_harlinn_1_1_math_1_1_tuple4.html", [
+        [ "Harlinn::Math::Vector< double, 4 >", "class_harlinn_1_1_math_1_1_vector_3_01double_00_014_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple4< Vector< float, 4 >, float >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html", [
-        [ "Harlinn::Common::Core::Math::Vector< float, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_014_01_4.html", null ]
+      [ "Harlinn::Math::Tuple4< Vector< float, 4 >, float >", "class_harlinn_1_1_math_1_1_tuple4.html", [
+        [ "Harlinn::Math::Vector< float, 4 >", "class_harlinn_1_1_math_1_1_vector_3_01float_00_014_01_4.html", null ]
       ] ],
-      [ "Harlinn::Common::Core::Math::Tuple2< DerivedT, T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple2.html", null ],
-      [ "Harlinn::Common::Core::Math::Tuple3< DerivedT, T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple3.html", null ],
-      [ "Harlinn::Common::Core::Math::Tuple4< DerivedT, T >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple4.html", null ]
+      [ "Harlinn::Math::Tuple2< DerivedT, T >", "class_harlinn_1_1_math_1_1_tuple2.html", null ],
+      [ "Harlinn::Math::Tuple3< DerivedT, T >", "class_harlinn_1_1_math_1_1_tuple3.html", null ],
+      [ "Harlinn::Math::Tuple4< DerivedT, T >", "class_harlinn_1_1_math_1_1_tuple4.html", null ]
     ] ],
     [ "Harlinn::Common::Core::Internal::TupleBase< 0, T, Types... >", "class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_tuple_base.html", [
       [ "Harlinn::Common::Core::Tuple< T, Types... >", "class_harlinn_1_1_common_1_1_core_1_1_tuple_3_01_t_00_01_types_8_8_8_01_4.html", null ]
@@ -2987,8 +3087,8 @@ var hierarchy =
       [ "Harlinn::Common::Core::Internal::TupleCatTraits< Tuples >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_tuple_cat_traits.html", null ]
     ] ],
     [ "Harlinn::Common::Core::TupleElement< index, Args >", "struct_harlinn_1_1_common_1_1_core_1_1_tuple_element.html", null ],
-    [ "Harlinn::Common::Core::Math::Internal::TupleSimdBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_tuple_simd_base.html", [
-      [ "Harlinn::Common::Core::Math::TupleSimd< TraitsT, TupleT >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_tuple_simd.html", null ]
+    [ "Harlinn::Math::Internal::TupleSimdBase", "struct_harlinn_1_1_math_1_1_internal_1_1_tuple_simd_base.html", [
+      [ "Harlinn::Math::TupleSimd< TupleT >", "class_harlinn_1_1_math_1_1_tuple_simd.html", null ]
     ] ],
     [ "Harlinn::Common::Core::Internal::TupleTypeFor< Types >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_tuple_type_for.html", null ],
     [ "Harlinn::Common::Core::Internal::TupleTypeForDecay< Types >", "struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_tuple_type_for_decay.html", null ],
@@ -4673,25 +4773,30 @@ var hierarchy =
       [ "Harlinn::OCI::TypeInfo", "class_harlinn_1_1_o_c_i_1_1_type_info.html", null ],
       [ "Harlinn::Windows::Fonts::TypeFaceList", "class_harlinn_1_1_windows_1_1_fonts_1_1_type_face_list.html", null ]
     ] ],
-    [ "Harlinn::Common::Core::Math::Internal::VectorBase", "struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_vector_base.html", [
-      [ "Harlinn::Common::Core::Math::Vector< value_type, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector.html", null ],
-      [ "Harlinn::Common::Core::Math::Vector< ValueT, N >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector.html", null ],
-      [ "Harlinn::Common::Core::Math::Vector< Int32, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_int32_00_012_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Vector< Int32, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_int32_00_013_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Vector< Int32, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_int32_00_014_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Vector< UInt32, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_u_int32_00_012_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Vector< UInt32, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_u_int32_00_013_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Vector< UInt32, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01_u_int32_00_014_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Vector< double, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01double_00_012_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Vector< double, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01double_00_013_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Vector< double, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01double_00_014_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Vector< float, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_012_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Vector< float, 3 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_013_01_4.html", null ],
-      [ "Harlinn::Common::Core::Math::Vector< float, 4 >", "class_harlinn_1_1_common_1_1_core_1_1_math_1_1_vector_3_01float_00_014_01_4.html", null ]
-    ] ],
     [ "Harlinn::Common::Core::VectorBase< T, IteratorT, ConstIteratorT >", "class_harlinn_1_1_common_1_1_core_1_1_vector_base.html", null ],
+    [ "Harlinn::Math::Internal::VectorBase", "struct_harlinn_1_1_math_1_1_internal_1_1_vector_base.html", [
+      [ "Harlinn::Math::Vector< T, N >", "class_harlinn_1_1_math_1_1_vector.html", null ],
+      [ "Harlinn::Math::Vector< ValueType, 3 >", "class_harlinn_1_1_math_1_1_vector.html", null ],
+      [ "Harlinn::Math::Vector< value_type, 3 >", "class_harlinn_1_1_math_1_1_vector.html", null ],
+      [ "Harlinn::Math::Vector< ValueT, N >", "class_harlinn_1_1_math_1_1_vector.html", null ],
+      [ "Harlinn::Math::Vector< Int32, 2 >", "class_harlinn_1_1_math_1_1_vector_3_01_int32_00_012_01_4.html", null ],
+      [ "Harlinn::Math::Vector< Int32, 3 >", "class_harlinn_1_1_math_1_1_vector_3_01_int32_00_013_01_4.html", null ],
+      [ "Harlinn::Math::Vector< Int32, 4 >", "class_harlinn_1_1_math_1_1_vector_3_01_int32_00_014_01_4.html", null ],
+      [ "Harlinn::Math::Vector< UInt32, 2 >", "class_harlinn_1_1_math_1_1_vector_3_01_u_int32_00_012_01_4.html", null ],
+      [ "Harlinn::Math::Vector< UInt32, 3 >", "class_harlinn_1_1_math_1_1_vector_3_01_u_int32_00_013_01_4.html", null ],
+      [ "Harlinn::Math::Vector< UInt32, 4 >", "class_harlinn_1_1_math_1_1_vector_3_01_u_int32_00_014_01_4.html", null ],
+      [ "Harlinn::Math::Vector< double, 2 >", "class_harlinn_1_1_math_1_1_vector_3_01double_00_012_01_4.html", null ],
+      [ "Harlinn::Math::Vector< double, 3 >", "class_harlinn_1_1_math_1_1_vector_3_01double_00_013_01_4.html", null ],
+      [ "Harlinn::Math::Vector< double, 4 >", "class_harlinn_1_1_math_1_1_vector_3_01double_00_014_01_4.html", null ],
+      [ "Harlinn::Math::Vector< float, 2 >", "class_harlinn_1_1_math_1_1_vector_3_01float_00_012_01_4.html", null ],
+      [ "Harlinn::Math::Vector< float, 3 >", "class_harlinn_1_1_math_1_1_vector_3_01float_00_013_01_4.html", null ],
+      [ "Harlinn::Math::Vector< float, 4 >", "class_harlinn_1_1_math_1_1_vector_3_01float_00_014_01_4.html", null ]
+    ] ],
     [ "Harlinn::Common::Core::VectorBase< Byte, Internal::PointerIterator< Vector< Byte > >, Internal::ConstPointerIterator< Vector< Byte > > >", "class_harlinn_1_1_common_1_1_core_1_1_vector_base.html", [
       [ "Harlinn::Common::Core::Vector< Byte >", "class_harlinn_1_1_common_1_1_core_1_1_vector.html", null ]
+    ] ],
+    [ "Harlinn::Common::Core::VectorBase< float, Internal::PointerIterator< Vector< float > >, Internal::ConstPointerIterator< Vector< float > > >", "class_harlinn_1_1_common_1_1_core_1_1_vector_base.html", [
+      [ "Harlinn::Common::Core::Vector< float, 2 >", "class_harlinn_1_1_common_1_1_core_1_1_vector.html", null ]
     ] ],
     [ "Harlinn::Common::Core::VectorBase< T, Internal::PointerIterator< Vector< T > >, Internal::ConstPointerIterator< Vector< T > > >", "class_harlinn_1_1_common_1_1_core_1_1_vector_base.html", [
       [ "Harlinn::Common::Core::Vector< T * >", "class_harlinn_1_1_common_1_1_core_1_1_vector.html", null ],

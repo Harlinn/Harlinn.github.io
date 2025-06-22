@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -129,21 +138,21 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0621536ff9fd8a7c98d678644839dc70" id="r_a0621536ff9fd8a7c98d678644839dc70"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0621536ff9fd8a7c98d678644839dc70">Value</a> () noexcept</td></tr>
 <tr class="separator:a0621536ff9fd8a7c98d678644839dc70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f7bddc8da86453d83b1462d01e6cd61" id="r_a0f7bddc8da86453d83b1462d01e6cd61"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires (!requires( <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> t ) { { t.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; { t.data( ) }-&gt;std::convertible_to&lt;typename T::value_type*&gt;; })</td></tr>
-<tr class="memitem:a0f7bddc8da86453d83b1462d01e6cd61"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0f7bddc8da86453d83b1462d01e6cd61">Value</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value)</td></tr>
+<tr class="memitem:a0f7bddc8da86453d83b1462d01e6cd61" id="r_a0f7bddc8da86453d83b1462d01e6cd61"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires (!requires( T t ) { { t.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; { t.data( ) }-&gt;std::convertible_to&lt;typename T::value_type*&gt;; })</td></tr>
+<tr class="memitem:a0f7bddc8da86453d83b1462d01e6cd61"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0f7bddc8da86453d83b1462d01e6cd61">Value</a> (const T &amp;value)</td></tr>
 <tr class="separator:a0f7bddc8da86453d83b1462d01e6cd61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa89e043dd6e29b95d759fdd070218905" id="r_aa89e043dd6e29b95d759fdd070218905"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires requires( <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> t ) { { t.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; { t.data( ) }-&gt;std::convertible_to&lt;typename T::value_type*&gt;; }</td></tr>
-<tr class="memitem:aa89e043dd6e29b95d759fdd070218905"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa89e043dd6e29b95d759fdd070218905">Value</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value)</td></tr>
+<tr class="memitem:aa89e043dd6e29b95d759fdd070218905" id="r_aa89e043dd6e29b95d759fdd070218905"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires requires( T t ) { { t.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; { t.data( ) }-&gt;std::convertible_to&lt;typename T::value_type*&gt;; }</td></tr>
+<tr class="memitem:aa89e043dd6e29b95d759fdd070218905"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa89e043dd6e29b95d759fdd070218905">Value</a> (const T &amp;value)</td></tr>
 <tr class="separator:aa89e043dd6e29b95d759fdd070218905"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d14e3761a33cc8cbcbf453513fa954b" id="r_a5d14e3761a33cc8cbcbf453513fa954b"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires requires( <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> t ) { { t.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; { t.data( ) }-&gt;std::convertible_to&lt;typename T::value_type*&gt;; }</td></tr>
-<tr class="memitem:a5d14e3761a33cc8cbcbf453513fa954b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5d14e3761a33cc8cbcbf453513fa954b">Value</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value, size_t count)</td></tr>
+<tr class="memitem:a5d14e3761a33cc8cbcbf453513fa954b" id="r_a5d14e3761a33cc8cbcbf453513fa954b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires requires( T t ) { { t.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; { t.data( ) }-&gt;std::convertible_to&lt;typename T::value_type*&gt;; }</td></tr>
+<tr class="memitem:a5d14e3761a33cc8cbcbf453513fa954b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5d14e3761a33cc8cbcbf453513fa954b">Value</a> (const T &amp;value, size_t count)</td></tr>
 <tr class="separator:a5d14e3761a33cc8cbcbf453513fa954b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76c92670ee424245fdb3d84850fa944a" id="r_a76c92670ee424245fdb3d84850fa944a"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_pointer_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a76c92670ee424245fdb3d84850fa944a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a76c92670ee424245fdb3d84850fa944a">Value</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a13924c1d5f2db40d873e0a808bb89b68">data</a>, size_t count)</td></tr>
+<tr class="memitem:a76c92670ee424245fdb3d84850fa944a" id="r_a76c92670ee424245fdb3d84850fa944a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_pointer_v&lt;T&gt;</td></tr>
+<tr class="memitem:a76c92670ee424245fdb3d84850fa944a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a76c92670ee424245fdb3d84850fa944a">Value</a> (const T <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a13924c1d5f2db40d873e0a808bb89b68">data</a>, size_t count)</td></tr>
 <tr class="separator:a76c92670ee424245fdb3d84850fa944a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ecca9589ad0ecb6ad2aedd1b042d214" id="r_a3ecca9589ad0ecb6ad2aedd1b042d214"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ecca9589ad0ecb6ad2aedd1b042d214">Value</a> (const void *buffer, size_t bufferSize)</td></tr>
 <tr class="separator:a3ecca9589ad0ecb6ad2aedd1b042d214"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,8 +212,8 @@ requires std::is_pointer_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires (!requires( <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> t ) { { t.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; { t.data( ) }-&gt;std::convertible_to&lt;typename T::value_type*&gt;; })</div>
+template&lt;typename T &gt; <br />
+requires (!requires( T t ) { { t.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; { t.data( ) }-&gt;std::convertible_to&lt;typename T::value_type*&gt;; })</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -212,7 +221,7 @@ requires (!requires( <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
         <tr>
           <td class="memname">Harlinn::Common::Core::LMDB::Value::Value </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -231,8 +240,8 @@ requires (!requires( <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires requires( <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> t ) { { t.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; { t.data( ) }-&gt;std::convertible_to&lt;typename T::value_type*&gt;; }</div>
+template&lt;typename T &gt; <br />
+requires requires( T t ) { { t.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; { t.data( ) }-&gt;std::convertible_to&lt;typename T::value_type*&gt;; }</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -240,7 +249,7 @@ requires requires( <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b9185
         <tr>
           <td class="memname">Harlinn::Common::Core::LMDB::Value::Value </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -259,8 +268,8 @@ requires requires( <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b9185
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires requires( <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> t ) { { t.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; { t.data( ) }-&gt;std::convertible_to&lt;typename T::value_type*&gt;; }</div>
+template&lt;typename T &gt; <br />
+requires requires( T t ) { { t.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; { t.data( ) }-&gt;std::convertible_to&lt;typename T::value_type*&gt;; }</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -268,7 +277,7 @@ requires requires( <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b9185
         <tr>
           <td class="memname">Harlinn::Common::Core::LMDB::Value::Value </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -291,8 +300,8 @@ requires requires( <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b9185
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_pointer_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_pointer_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -300,7 +309,7 @@ requires std::is_pointer_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260
         <tr>
           <td class="memname">Harlinn::Common::Core::LMDB::Value::Value </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+          <td class="paramtype">const T</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

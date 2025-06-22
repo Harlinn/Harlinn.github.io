@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -144,7 +153,7 @@ Classes</h2></td></tr>
 Public Types</h2></td></tr>
 <tr class="memitem:af07135403121ecf7409e917fefe762fc" id="r_af07135403121ecf7409e917fefe762fc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af07135403121ecf7409e917fefe762fc">Type</a> = float</td></tr>
 <tr class="separator:af07135403121ecf7409e917fefe762fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41e9c58df7a90e7d1af78d5311c63d38" id="r_a41e9c58df7a90e7d1af78d5311c63d38"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41e9c58df7a90e7d1af78d5311c63d38">UIntType</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td></tr>
+<tr class="memitem:a41e9c58df7a90e7d1af78d5311c63d38" id="r_a41e9c58df7a90e7d1af78d5311c63d38"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41e9c58df7a90e7d1af78d5311c63d38">UIntType</a> = <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td></tr>
 <tr class="separator:a41e9c58df7a90e7d1af78d5311c63d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cabb0b2b55110ff4f4fdac77f05e551" id="r_a7cabb0b2b55110ff4f4fdac77f05e551"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cabb0b2b55110ff4f4fdac77f05e551">Constants</a> = std::conditional_t&lt;<a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDType</a>, <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1m128_constants.html">Internal::m128Constants</a>, <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_internal_1_1m256_constants.html">Internal::m256Constants</a>&gt;</td></tr>
 <tr class="separator:a7cabb0b2b55110ff4f4fdac77f05e551"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -285,22 +294,22 @@ requires ( index &lt; <a class="el" href="#a4f65b49e2ad044f0ceaac1ebc527bfa3">Si
 <tr class="memitem:ac731b2fe5bbee0c07b2aab68071b8113" id="r_ac731b2fe5bbee0c07b2aab68071b8113"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
 <tr class="memitem:ac731b2fe5bbee0c07b2aab68071b8113"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac731b2fe5bbee0c07b2aab68071b8113">Swizzle</a> (Args &amp;&amp;... args)</td></tr>
 <tr class="separator:ac731b2fe5bbee0c07b2aab68071b8113"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8814df8d6be8ab90278afbcbb0a9f4b" id="r_af8814df8d6be8ab90278afbcbb0a9f4b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8814df8d6be8ab90278afbcbb0a9f4b">Swizzle</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection1) noexcept</td></tr>
+<tr class="memitem:af8814df8d6be8ab90278afbcbb0a9f4b" id="r_af8814df8d6be8ab90278afbcbb0a9f4b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8814df8d6be8ab90278afbcbb0a9f4b">Swizzle</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection1) noexcept</td></tr>
 <tr class="separator:af8814df8d6be8ab90278afbcbb0a9f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bfedf004059de0f7fca395d189b3853" id="r_a4bfedf004059de0f7fca395d189b3853"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bfedf004059de0f7fca395d189b3853">Swizzle</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection8, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection7, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection6, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection5, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection1) noexcept</td></tr>
+<tr class="memitem:a4bfedf004059de0f7fca395d189b3853" id="r_a4bfedf004059de0f7fca395d189b3853"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bfedf004059de0f7fca395d189b3853">Swizzle</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection8, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection7, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection6, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection5, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection1) noexcept</td></tr>
 <tr class="separator:a4bfedf004059de0f7fca395d189b3853"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1724d1bb0355ad09cd92ea5f5e7a8222" id="r_a1724d1bb0355ad09cd92ea5f5e7a8222"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection1&gt; <br />
+<tr class="memitem:a1724d1bb0355ad09cd92ea5f5e7a8222" id="r_a1724d1bb0355ad09cd92ea5f5e7a8222"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection1&gt; <br />
 requires ( <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDType</a> )</td></tr>
 <tr class="memitem:a1724d1bb0355ad09cd92ea5f5e7a8222"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1724d1bb0355ad09cd92ea5f5e7a8222">Swizzle</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v) noexcept</td></tr>
 <tr class="separator:a1724d1bb0355ad09cd92ea5f5e7a8222"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf657386f08a303536c7731ad6d16f16" id="r_adf657386f08a303536c7731ad6d16f16"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
 <tr class="memitem:adf657386f08a303536c7731ad6d16f16"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adf657386f08a303536c7731ad6d16f16">Shuffle</a> (Args &amp;&amp;... args)</td></tr>
 <tr class="separator:adf657386f08a303536c7731ad6d16f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09e175f72825c830a89ed083a48b138b" id="r_a09e175f72825c830a89ed083a48b138b"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection1&gt; <br />
+<tr class="memitem:a09e175f72825c830a89ed083a48b138b" id="r_a09e175f72825c830a89ed083a48b138b"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection1&gt; <br />
 requires ( <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDType</a> )</td></tr>
 <tr class="memitem:a09e175f72825c830a89ed083a48b138b"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a09e175f72825c830a89ed083a48b138b">Shuffle</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v1, <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v2) noexcept</td></tr>
 <tr class="separator:a09e175f72825c830a89ed083a48b138b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64e84a8a61a526bf2e476a23de0462fa" id="r_a64e84a8a61a526bf2e476a23de0462fa"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection1&gt; <br />
+<tr class="memitem:a64e84a8a61a526bf2e476a23de0462fa" id="r_a64e84a8a61a526bf2e476a23de0462fa"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection1&gt; <br />
 requires ( <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDType</a> )</td></tr>
 <tr class="memitem:a64e84a8a61a526bf2e476a23de0462fa"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a64e84a8a61a526bf2e476a23de0462fa">Shuffle</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v1) noexcept</td></tr>
 <tr class="separator:a64e84a8a61a526bf2e476a23de0462fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -310,7 +319,7 @@ requires ( <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDT
 <tr class="memitem:ad4418b9e061a243ced073d06860aedd6" id="r_ad4418b9e061a243ced073d06860aedd6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4418b9e061a243ced073d06860aedd6">MoveMask</a> (<a class="el" href="#a5569c34a503ee1d41f5e8fcb2a2f7831">SIMDIntegerType</a> v) noexcept</td></tr>
 <tr class="memdesc:ad4418b9e061a243ced073d06860aedd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set each bit of the result based on the most significant bit of the corresponding packed single-precision (32-bit) floating-point element in v.  <br /></td></tr>
 <tr class="separator:ad4418b9e061a243ced073d06860aedd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef5a2c595348e8657b45c6b198280de3" id="r_aef5a2c595348e8657b45c6b198280de3"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> X, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Y, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Z, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> W&gt; </td></tr>
+<tr class="memitem:aef5a2c595348e8657b45c6b198280de3" id="r_aef5a2c595348e8657b45c6b198280de3"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> X, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Y, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Z, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> W&gt; </td></tr>
 <tr class="memitem:aef5a2c595348e8657b45c6b198280de3"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aef5a2c595348e8657b45c6b198280de3">Permute</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v1, <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v2) noexcept</td></tr>
 <tr class="separator:aef5a2c595348e8657b45c6b198280de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd61091cac9589388a500ab04955c4dc" id="r_acd61091cac9589388a500ab04955c4dc"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
@@ -376,10 +385,10 @@ requires ( <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDT
 <tr class="memitem:a06c35ef2273dc2c775c43cb14cb98691" id="r_a06c35ef2273dc2c775c43cb14cb98691"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:a06c35ef2273dc2c775c43cb14cb98691"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a06c35ef2273dc2c775c43cb14cb98691">Permute</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v1, <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v2) noexcept</td></tr>
 <tr class="separator:a06c35ef2273dc2c775c43cb14cb98691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fe9eaf35e1301cb8d2aacda8585b00a" id="r_a4fe9eaf35e1301cb8d2aacda8585b00a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fe9eaf35e1301cb8d2aacda8585b00a">SelectControl</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> index0=0, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> index1=0, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> index2=0, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> index3=0) noexcept</td></tr>
+<tr class="memitem:a4fe9eaf35e1301cb8d2aacda8585b00a" id="r_a4fe9eaf35e1301cb8d2aacda8585b00a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fe9eaf35e1301cb8d2aacda8585b00a">SelectControl</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> index0=0, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> index1=0, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> index2=0, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> index3=0) noexcept</td></tr>
 <tr class="memdesc:a4fe9eaf35e1301cb8d2aacda8585b00a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a control vector for use with Select.  <br /></td></tr>
 <tr class="separator:a4fe9eaf35e1301cb8d2aacda8585b00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa40beba0b5fd8141395590598a0f430b" id="r_aa40beba0b5fd8141395590598a0f430b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa40beba0b5fd8141395590598a0f430b">SelectControl</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> index0=0, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> index1=0, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> index2=0, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> index3=0, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> index4=0, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> index5=0, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> index6=0, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> index7=0) noexcept</td></tr>
+<tr class="memitem:aa40beba0b5fd8141395590598a0f430b" id="r_aa40beba0b5fd8141395590598a0f430b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa40beba0b5fd8141395590598a0f430b">SelectControl</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> index0=0, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> index1=0, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> index2=0, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> index3=0, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> index4=0, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> index5=0, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> index6=0, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> index7=0) noexcept</td></tr>
 <tr class="memdesc:aa40beba0b5fd8141395590598a0f430b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a control vector for use with Select.  <br /></td></tr>
 <tr class="separator:aa40beba0b5fd8141395590598a0f430b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2cc9de0f0e1aea0010352abd7b0d16f" id="r_aa2cc9de0f0e1aea0010352abd7b0d16f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2cc9de0f0e1aea0010352abd7b0d16f">Select</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v1, <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v2, <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> control) noexcept</td></tr>
@@ -638,9 +647,15 @@ requires ( <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDT
 <tr class="memitem:a36e71e4c0be45f0516b832bb102e38ab" id="r_a36e71e4c0be45f0516b832bb102e38ab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36e71e4c0be45f0516b832bb102e38ab">Sqrt</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v) noexcept</td></tr>
 <tr class="memdesc:a36e71e4c0be45f0516b832bb102e38ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Square Root of Single-Precision Floating-Point Values.  <br /></td></tr>
 <tr class="separator:a36e71e4c0be45f0516b832bb102e38ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1c5a6abf97c171d71ba5a3b0f49a808" id="r_af1c5a6abf97c171d71ba5a3b0f49a808"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1c5a6abf97c171d71ba5a3b0f49a808">ReciprocalSqrt</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v) noexcept</td></tr>
+<tr class="memdesc:af1c5a6abf97c171d71ba5a3b0f49a808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reciprocal square Root of Single-Precision Floating-Point Values.  <br /></td></tr>
+<tr class="separator:af1c5a6abf97c171d71ba5a3b0f49a808"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6990e422677b84aeb3e9c4e73362b5e5" id="r_a6990e422677b84aeb3e9c4e73362b5e5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6990e422677b84aeb3e9c4e73362b5e5">Cbrt</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v) noexcept</td></tr>
 <tr class="memdesc:a6990e422677b84aeb3e9c4e73362b5e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cube Root of Single-Precision Floating-Point Values.  <br /></td></tr>
 <tr class="separator:a6990e422677b84aeb3e9c4e73362b5e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a740929fdd63cab43f252c62bcecb713b" id="r_a740929fdd63cab43f252c62bcecb713b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a740929fdd63cab43f252c62bcecb713b">Reciprocal</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> v) noexcept</td></tr>
+<tr class="memdesc:a740929fdd63cab43f252c62bcecb713b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reciprocal of Single-Precision Floating-Point Values.  <br /></td></tr>
+<tr class="separator:a740929fdd63cab43f252c62bcecb713b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397ddd57a0a214566a235f3ddb5ed6de" id="r_a397ddd57a0a214566a235f3ddb5ed6de"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a397ddd57a0a214566a235f3ddb5ed6de">FMAdd</a> (<a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> a, <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> b, <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> c) noexcept</td></tr>
 <tr class="memdesc:a397ddd57a0a214566a235f3ddb5ed6de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply-adds packed single-precision floating-point values using three float32 vectors.  <br /></td></tr>
 <tr class="separator:a397ddd57a0a214566a235f3ddb5ed6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -714,7 +729,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:aa99fca242e3fd51487ea20e1e6650f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d4963ecc5b5cc5c60b00cdc544dd35" id="r_a02d4963ecc5b5cc5c60b00cdc544dd35"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02d4963ecc5b5cc5c60b00cdc544dd35">SIMDTypeCapacity</a> = <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDType</a> ? 4 : 8</td></tr>
 <tr class="separator:a02d4963ecc5b5cc5c60b00cdc544dd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1b5e73d1a6cdfa6a2aa6c48dcee3301" id="r_af1b5e73d1a6cdfa6a2aa6c48dcee3301"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1b5e73d1a6cdfa6a2aa6c48dcee3301">Capacity</a> = <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDType</a> ? 4 : ( ( N + 7 ) &amp; static_cast&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt;( -8 ) )</td></tr>
+<tr class="memitem:af1b5e73d1a6cdfa6a2aa6c48dcee3301" id="r_af1b5e73d1a6cdfa6a2aa6c48dcee3301"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1b5e73d1a6cdfa6a2aa6c48dcee3301">Capacity</a> = <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDType</a> ? 4 : ( ( N + 7 ) &amp; static_cast&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&gt;( -8 ) )</td></tr>
 <tr class="separator:af1b5e73d1a6cdfa6a2aa6c48dcee3301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cd8e26f5abfb8348b80c6e2225f61e7" id="r_a9cd8e26f5abfb8348b80c6e2225f61e7"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cd8e26f5abfb8348b80c6e2225f61e7">SIMDIterations</a> = ( <a class="el" href="#af1b5e73d1a6cdfa6a2aa6c48dcee3301">Capacity</a> * sizeof( <a class="el" href="#af07135403121ecf7409e917fefe762fc">Type</a> ) ) / <a class="el" href="#aa99fca242e3fd51487ea20e1e6650f9e">SIMDTypeSize</a></td></tr>
 <tr class="separator:a9cd8e26f5abfb8348b80c6e2225f61e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -875,7 +890,7 @@ template&lt;size_t N&gt; </div>
 template&lt;size_t N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; float, N &gt;::UIntType = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; float, N &gt;::UIntType = <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -5222,7 +5237,7 @@ template&lt;int shuffleMask&gt; </div>
 <div class="memtemplate">
 template&lt;size_t N&gt; </div>
 <div class="memtemplate">
-template&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> X, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Y, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Z, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> W&gt; </div>
+template&lt;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> X, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Y, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Z, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> W&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -6002,6 +6017,76 @@ template&lt;size_t N&gt; </div>
 
 </div>
 </div>
+<a id="a740929fdd63cab43f252c62bcecb713b" name="a740929fdd63cab43f252c62bcecb713b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740929fdd63cab43f252c62bcecb713b">&#9670;&#160;</a></span>Reciprocal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; float, N &gt;::Reciprocal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reciprocal of Single-Precision Floating-Point Values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af1c5a6abf97c171d71ba5a3b0f49a808" name="af1c5a6abf97c171d71ba5a3b0f49a808"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1c5a6abf97c171d71ba5a3b0f49a808">&#9670;&#160;</a></span>ReciprocalSqrt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; float, N &gt;::ReciprocalSqrt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reciprocal square Root of Single-Precision Floating-Point Values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a7d5bcf95ff627f366ed3bb7d9e531d14" name="a7d5bcf95ff627f366ed3bb7d9e531d14"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d5bcf95ff627f366ed3bb7d9e531d14">&#9670;&#160;</a></span>Round()</h2>
 
@@ -6590,22 +6675,22 @@ template&lt;size_t N&gt; </div>
         <tr>
           <td class="memname">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; float, N &gt;::SelectControl </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index0</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index0</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index1</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index1</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index2</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index2</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index3</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index3</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -6642,42 +6727,42 @@ template&lt;size_t N&gt; </div>
         <tr>
           <td class="memname">static <a class="el" href="#a5a9c9123ae30a3c77c9725a9f8d0240b">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; float, N &gt;::SelectControl </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index0</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index0</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index1</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index1</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index2</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index2</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index3</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index3</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index4</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index4</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index5</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index5</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index6</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index6</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index7</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index7</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -7214,7 +7299,7 @@ template&lt;typename ... Args&gt; </div>
 <div class="memtemplate">
 template&lt;size_t N&gt; </div>
 <div class="memtemplate">
-template&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection1&gt; <br />
+template&lt;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection1&gt; <br />
 requires ( <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDType</a> )</div>
 <table class="mlabels">
   <tr>
@@ -7244,7 +7329,7 @@ requires ( <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDT
 <div class="memtemplate">
 template&lt;size_t N&gt; </div>
 <div class="memtemplate">
-template&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection1&gt; <br />
+template&lt;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection1&gt; <br />
 requires ( <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDType</a> )</div>
 <table class="mlabels">
   <tr>
@@ -7536,7 +7621,7 @@ template&lt;typename ... Args&gt; </div>
 <div class="memtemplate">
 template&lt;size_t N&gt; </div>
 <div class="memtemplate">
-template&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection1&gt; <br />
+template&lt;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection1&gt; <br />
 requires ( <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDType</a> )</div>
 <table class="mlabels">
   <tr>
@@ -7577,22 +7662,22 @@ template&lt;size_t N&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection4</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection4</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection3</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection3</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection2</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection2</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection1</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection1</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -7623,42 +7708,42 @@ template&lt;size_t N&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection8</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection8</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection7</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection7</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection6</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection6</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection5</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection5</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection4</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection4</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection3</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection3</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection2</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection2</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection1</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>selection1</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -8383,7 +8468,7 @@ template&lt;size_t N&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; float, N &gt;::Capacity = <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDType</a> ? 4 : ( ( N + 7 ) &amp; static_cast&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt;( -8 ) )</td>
+          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; float, N &gt;::Capacity = <a class="el" href="#a4e40f40d08d46a60468bb0e39e5e4c37">UseShortSIMDType</a> ? 4 : ( ( N + 7 ) &amp; static_cast&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&gt;( -8 ) )</td>
         </tr>
       </table>
   </td>

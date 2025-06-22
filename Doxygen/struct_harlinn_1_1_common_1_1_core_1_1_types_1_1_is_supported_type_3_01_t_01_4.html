@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -109,9 +118,9 @@ $(function(){initNavTree('struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_is_su
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a1002d51394fccaf31a379a9e07f25a3c" id="r_a1002d51394fccaf31a379a9e07f25a3c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1002d51394fccaf31a379a9e07f25a3c">TypeTraits</a> = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a1002d51394fccaf31a379a9e07f25a3c" id="r_a1002d51394fccaf31a379a9e07f25a3c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1002d51394fccaf31a379a9e07f25a3c">TypeTraits</a> = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;T&gt;</td></tr>
 <tr class="separator:a1002d51394fccaf31a379a9e07f25a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37c937cb281f558d696990c39df7a3a5" id="r_a37c937cb281f558d696990c39df7a3a5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37c937cb281f558d696990c39df7a3a5">TypeTraits</a> = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a37c937cb281f558d696990c39df7a3a5" id="r_a37c937cb281f558d696990c39df7a3a5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37c937cb281f558d696990c39df7a3a5">TypeTraits</a> = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;T&gt;</td></tr>
 <tr class="separator:a37c937cb281f558d696990c39df7a3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -129,7 +138,7 @@ Static Public Attributes</h2></td></tr>
 template&lt;Types::VariadicTemplateType T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_is_supported_type.html">Harlinn::Common::Core::Types::IsSupportedType</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::TypeTraits = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td>
+          <td class="memname">typedef typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt; T &gt; <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_is_supported_type.html">Harlinn::Common::Core::Types::IsSupportedType</a>&lt; T &gt;::TypeTraits = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;T&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -145,7 +154,7 @@ template&lt;Types::VariadicTemplateType T&gt; </div>
 template&lt;Types::VariadicTemplateType T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_is_supported_type.html">Harlinn::Common::Core::Types::IsSupportedType</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::TypeTraits = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_is_supported_type.html">Harlinn::Common::Core::Types::IsSupportedType</a>&lt; T &gt;::TypeTraits = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;T&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -165,7 +174,7 @@ template&lt;Types::VariadicTemplateType T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_is_supported_type.html">Harlinn::Common::Core::Types::IsSupportedType</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::value = TypeTraits::IsSupported</td>
+          <td class="memname">static constexpr bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_is_supported_type.html">Harlinn::Common::Core::Types::IsSupportedType</a>&lt; T &gt;::value = TypeTraits::IsSupported</td>
         </tr>
       </table>
   </td>

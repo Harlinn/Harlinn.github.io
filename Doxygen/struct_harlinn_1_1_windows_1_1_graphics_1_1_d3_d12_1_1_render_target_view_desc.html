@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -118,26 +127,26 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a7d8d15ea7f074cbc29315e6a32269654"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d05572dd171a7861f5f4b1ea913705e" id="r_a5d05572dd171a7861f5f4b1ea913705e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#af665c0d13a7cf02abe20aafb9d4f60d7">RenderTargetViewType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d05572dd171a7861f5f4b1ea913705e">ViewDimension</a> = <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#af665c0d13a7cf02abe20aafb9d4f60d7a88183b946cc5f0e8c96b2e66e1c74a7e">RenderTargetViewType::Unknown</a></td></tr>
 <tr class="separator:a5d05572dd171a7861f5f4b1ea913705e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bdd2d2e4b3f78febb8bc0a374f189fa" id="r_a8bdd2d2e4b3f78febb8bc0a374f189fa"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memitem:ab64fa469d451e5766aa27c9e4e8fe238" id="r_ab64fa469d451e5766aa27c9e4e8fe238"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3b0c5e71ce8bf1df44eb370ac1bc4bc" id="r_af3b0c5e71ce8bf1df44eb370ac1bc4bc"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_BUFFER_RTV&#160;&#160;&#160;<a class="el" href="#aa96580067175e89f0b5a513b6e62e74b">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:af3b0c5e71ce8bf1df44eb370ac1bc4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48e4f71ab36b260b8000e931aa603287" id="r_a48e4f71ab36b260b8000e931aa603287"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_TEX1D_RTV&#160;&#160;&#160;<a class="el" href="#a33ecd781280d9f2583ad1dc0dad4aae2">Texture1D</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a48e4f71ab36b260b8000e931aa603287"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38a325a53f362f4999c23c20fa1a96da" id="r_a38a325a53f362f4999c23c20fa1a96da"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_TEX1D_ARRAY_RTV&#160;&#160;&#160;<a class="el" href="#aed2b2a1e4bb2ce3cd6044f7cc1b3667a">Texture1DArray</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a38a325a53f362f4999c23c20fa1a96da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81c679a9833bf22857032f1b6042f6a4" id="r_a81c679a9833bf22857032f1b6042f6a4"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_TEX2D_RTV&#160;&#160;&#160;<a class="el" href="#a4796d877747184d5d64d9457dc7c659a">Texture2D</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a81c679a9833bf22857032f1b6042f6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8c9a0b77e3f9d98524258317a2947e3" id="r_ab8c9a0b77e3f9d98524258317a2947e3"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_TEX2D_ARRAY_RTV&#160;&#160;&#160;<a class="el" href="#a1c401fd144afc473189bb15556f3e9cf">Texture2DArray</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ab8c9a0b77e3f9d98524258317a2947e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e53a884dce77faec68e7b8993547c28" id="r_a6e53a884dce77faec68e7b8993547c28"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_TEX2DMS_RTV&#160;&#160;&#160;<a class="el" href="#a0152b1b4b3b7dbc9d6f3cb48d45aaa6a">Texture2DMS</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a6e53a884dce77faec68e7b8993547c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3773c146e5c4e244134aee9dba3c9fb4" id="r_a3773c146e5c4e244134aee9dba3c9fb4"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_TEX2DMS_ARRAY_RTV&#160;&#160;&#160;<a class="el" href="#a9433afa6db0c2d0d3d6f96b873a42e44">Texture2DMSArray</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a3773c146e5c4e244134aee9dba3c9fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b14330ffc1790d388dc85dba072ca34" id="r_a3b14330ffc1790d388dc85dba072ca34"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_TEX3D_RTV&#160;&#160;&#160;<a class="el" href="#a21e3f359fd8afb57cfd2bb38bad2aa7c">Texture3D</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a3b14330ffc1790d388dc85dba072ca34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bdd2d2e4b3f78febb8bc0a374f189fa" id="r_a8bdd2d2e4b3f78febb8bc0a374f189fa"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a8bdd2d2e4b3f78febb8bc0a374f189fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93bbf37721dff5bf087801b7fc5460ca" id="r_a93bbf37721dff5bf087801b7fc5460ca"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_BUFFER_RTV&#160;&#160;&#160;<a class="el" href="#aa96580067175e89f0b5a513b6e62e74b">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a93bbf37721dff5bf087801b7fc5460ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5588b71e6a80d26be44e09e88da474" id="r_a6e5588b71e6a80d26be44e09e88da474"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_TEX1D_RTV&#160;&#160;&#160;<a class="el" href="#a33ecd781280d9f2583ad1dc0dad4aae2">Texture1D</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a6e5588b71e6a80d26be44e09e88da474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a000233da0ec3fa9717f420f1676b2da0" id="r_a000233da0ec3fa9717f420f1676b2da0"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_TEX1D_ARRAY_RTV&#160;&#160;&#160;<a class="el" href="#aed2b2a1e4bb2ce3cd6044f7cc1b3667a">Texture1DArray</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a000233da0ec3fa9717f420f1676b2da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a447432947e699043a2c9a62594f3b7bc" id="r_a447432947e699043a2c9a62594f3b7bc"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_TEX2D_RTV&#160;&#160;&#160;<a class="el" href="#a4796d877747184d5d64d9457dc7c659a">Texture2D</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a447432947e699043a2c9a62594f3b7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a2b4a02e27af8b6bc4e9c760faf64d" id="r_aa4a2b4a02e27af8b6bc4e9c760faf64d"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_TEX2D_ARRAY_RTV&#160;&#160;&#160;<a class="el" href="#a1c401fd144afc473189bb15556f3e9cf">Texture2DArray</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:aa4a2b4a02e27af8b6bc4e9c760faf64d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8ca6530dc340fa7a1a3a2af39525d8" id="r_a4b8ca6530dc340fa7a1a3a2af39525d8"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_TEX2DMS_RTV&#160;&#160;&#160;<a class="el" href="#a0152b1b4b3b7dbc9d6f3cb48d45aaa6a">Texture2DMS</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a4b8ca6530dc340fa7a1a3a2af39525d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a048f8450cc051f0c03a0f703b31b4b0f" id="r_a048f8450cc051f0c03a0f703b31b4b0f"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_TEX2DMS_ARRAY_RTV&#160;&#160;&#160;<a class="el" href="#a9433afa6db0c2d0d3d6f96b873a42e44">Texture2DMSArray</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a048f8450cc051f0c03a0f703b31b4b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a034b015efabcc380cf33354f7b562ef5" id="r_a034b015efabcc380cf33354f7b562ef5"><td class="memItemLeft" >&#160;&#160;&#160;D3D12_TEX3D_RTV&#160;&#160;&#160;<a class="el" href="#a21e3f359fd8afb57cfd2bb38bad2aa7c">Texture3D</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a034b015efabcc380cf33354f7b562ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64fa469d451e5766aa27c9e4e8fe238" id="r_ab64fa469d451e5766aa27c9e4e8fe238"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ab64fa469d451e5766aa27c9e4e8fe238"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Describes the subresources from a resource that are accessible by using a render-target view. </p>
@@ -161,8 +170,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a8bdd2d2e4b3f78febb8bc0a374f189fa" name="a8bdd2d2e4b3f78febb8bc0a374f189fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bdd2d2e4b3f78febb8bc0a374f189fa">&#9670;&#160;</a></span>[union]</h2>
+<a id="ab64fa469d451e5766aa27c9e4e8fe238" name="ab64fa469d451e5766aa27c9e4e8fe238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64fa469d451e5766aa27c9e4e8fe238">&#9670;&#160;</a></span>[union]</h2>
 
 <div class="memitem">
 <div class="memproto">

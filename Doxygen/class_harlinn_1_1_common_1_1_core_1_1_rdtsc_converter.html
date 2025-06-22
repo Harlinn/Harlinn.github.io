@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -120,22 +129,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a05ddcf7db8f7afdb99181438bf309105"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2342e347c32f454c91b1d124f541471" id="r_ae2342e347c32f454c91b1d124f541471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2342e347c32f454c91b1d124f541471">Recalibrate</a> ()</td></tr>
 <tr class="separator:ae2342e347c32f454c91b1d124f541471"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac29153a3c1086095512db99c025c5bf9" id="r_ac29153a3c1086095512db99c025c5bf9"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac29153a3c1086095512db99c025c5bf9">ToDateTime</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> rdtsc) const noexcept</td></tr>
+<tr class="memitem:ac29153a3c1086095512db99c025c5bf9" id="r_ac29153a3c1086095512db99c025c5bf9"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac29153a3c1086095512db99c025c5bf9">ToDateTime</a> (<a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> rdtsc) const noexcept</td></tr>
 <tr class="separator:ac29153a3c1086095512db99c025c5bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa666b109beb80e63c8be08c5b47235ca" id="r_aa666b109beb80e63c8be08c5b47235ca"><td class="memItemLeft" align="right" valign="top">constexpr const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa666b109beb80e63c8be08c5b47235ca">Start</a> () const noexcept</td></tr>
 <tr class="separator:aa666b109beb80e63c8be08c5b47235ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd4c04b8789d6eba9ee876d61ea26227" id="r_abd4c04b8789d6eba9ee876d61ea26227"><td class="memItemLeft" align="right" valign="top">constexpr const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd4c04b8789d6eba9ee876d61ea26227">End</a> () const noexcept</td></tr>
 <tr class="separator:abd4c04b8789d6eba9ee876d61ea26227"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a540a45c16bbfbbdea2ad4d589b3ecbbc" id="r_a540a45c16bbfbbdea2ad4d589b3ecbbc"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a540a45c16bbfbbdea2ad4d589b3ecbbc">RdtscStart</a> () const noexcept</td></tr>
+<tr class="memitem:a540a45c16bbfbbdea2ad4d589b3ecbbc" id="r_a540a45c16bbfbbdea2ad4d589b3ecbbc"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a540a45c16bbfbbdea2ad4d589b3ecbbc">RdtscStart</a> () const noexcept</td></tr>
 <tr class="separator:a540a45c16bbfbbdea2ad4d589b3ecbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4734394a7da2283420c09ac9626bf35e" id="r_a4734394a7da2283420c09ac9626bf35e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4734394a7da2283420c09ac9626bf35e">RdtscEnd</a> () const noexcept</td></tr>
+<tr class="memitem:a4734394a7da2283420c09ac9626bf35e" id="r_a4734394a7da2283420c09ac9626bf35e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4734394a7da2283420c09ac9626bf35e">RdtscEnd</a> () const noexcept</td></tr>
 <tr class="separator:a4734394a7da2283420c09ac9626bf35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5939b8087e48980aa9ee4aed5d806030" id="r_a5939b8087e48980aa9ee4aed5d806030"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5939b8087e48980aa9ee4aed5d806030">RdtscCyclesPerTick</a> () const noexcept</td></tr>
+<tr class="memitem:a5939b8087e48980aa9ee4aed5d806030" id="r_a5939b8087e48980aa9ee4aed5d806030"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5939b8087e48980aa9ee4aed5d806030">RdtscCyclesPerTick</a> () const noexcept</td></tr>
 <tr class="separator:a5939b8087e48980aa9ee4aed5d806030"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a59cc1a92a4298fec4e5c11f3324f2e8a" id="r_a59cc1a92a4298fec4e5c11f3324f2e8a"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59cc1a92a4298fec4e5c11f3324f2e8a">ToDateTime</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> rdtsc, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> &amp;epoch, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> rdtscEpoch, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> rdtscCyclesPerTick) noexcept</td></tr>
+<tr class="memitem:a59cc1a92a4298fec4e5c11f3324f2e8a" id="r_a59cc1a92a4298fec4e5c11f3324f2e8a"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59cc1a92a4298fec4e5c11f3324f2e8a">ToDateTime</a> (<a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> rdtsc, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> &amp;epoch, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> rdtscEpoch, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> rdtscCyclesPerTick) noexcept</td></tr>
 <tr class="separator:a59cc1a92a4298fec4e5c11f3324f2e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
@@ -151,11 +160,11 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ad45a4476a5735389edbfbb0d4e66d8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a040b92c1da02d97eeaac288b2feeba02" id="r_a040b92c1da02d97eeaac288b2feeba02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a040b92c1da02d97eeaac288b2feeba02">end_</a></td></tr>
 <tr class="separator:a040b92c1da02d97eeaac288b2feeba02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e4e9263068e0686adc774d69fb1d05c" id="r_a1e4e9263068e0686adc774d69fb1d05c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e4e9263068e0686adc774d69fb1d05c">rdtscStart_</a></td></tr>
+<tr class="memitem:a1e4e9263068e0686adc774d69fb1d05c" id="r_a1e4e9263068e0686adc774d69fb1d05c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e4e9263068e0686adc774d69fb1d05c">rdtscStart_</a></td></tr>
 <tr class="separator:a1e4e9263068e0686adc774d69fb1d05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bfd01ed70851fc0dd8dab3c8258a712" id="r_a5bfd01ed70851fc0dd8dab3c8258a712"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bfd01ed70851fc0dd8dab3c8258a712">rdtscEnd_</a></td></tr>
+<tr class="memitem:a5bfd01ed70851fc0dd8dab3c8258a712" id="r_a5bfd01ed70851fc0dd8dab3c8258a712"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bfd01ed70851fc0dd8dab3c8258a712">rdtscEnd_</a></td></tr>
 <tr class="separator:a5bfd01ed70851fc0dd8dab3c8258a712"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59c1ab8e55576fd70aac9e34f5aaec29" id="r_a59c1ab8e55576fd70aac9e34f5aaec29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59c1ab8e55576fd70aac9e34f5aaec29">rdtscCyclesPerTick_</a></td></tr>
+<tr class="memitem:a59c1ab8e55576fd70aac9e34f5aaec29" id="r_a59c1ab8e55576fd70aac9e34f5aaec29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59c1ab8e55576fd70aac9e34f5aaec29">rdtscCyclesPerTick_</a></td></tr>
 <tr class="separator:a59c1ab8e55576fd70aac9e34f5aaec29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -245,7 +254,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::Common::Core::RdtscConverter::RdtscCyclesPerTick </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> Harlinn::Common::Core::RdtscConverter::RdtscCyclesPerTick </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -270,7 +279,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::Common::Core::RdtscConverter::RdtscEnd </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> Harlinn::Common::Core::RdtscConverter::RdtscEnd </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -295,7 +304,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::Common::Core::RdtscConverter::RdtscStart </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> Harlinn::Common::Core::RdtscConverter::RdtscStart </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -372,7 +381,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> Harlinn::Common::Core::RdtscConverter::ToDateTime </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>rdtsc</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>rdtsc</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -397,7 +406,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">static constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> Harlinn::Common::Core::RdtscConverter::ToDateTime </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>rdtsc</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>rdtsc</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -407,12 +416,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>rdtscEpoch</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>rdtscEpoch</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>rdtscCyclesPerTick</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>rdtscCyclesPerTick</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -479,7 +488,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::Common::Core::RdtscConverter::rdtscCyclesPerTick_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> Harlinn::Common::Core::RdtscConverter::rdtscCyclesPerTick_</td>
         </tr>
       </table>
   </td>
@@ -501,7 +510,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::Common::Core::RdtscConverter::rdtscEnd_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> Harlinn::Common::Core::RdtscConverter::rdtscEnd_</td>
         </tr>
       </table>
   </td>
@@ -523,7 +532,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::Common::Core::RdtscConverter::rdtscStart_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> Harlinn::Common::Core::RdtscConverter::rdtscStart_</td>
         </tr>
       </table>
   </td>

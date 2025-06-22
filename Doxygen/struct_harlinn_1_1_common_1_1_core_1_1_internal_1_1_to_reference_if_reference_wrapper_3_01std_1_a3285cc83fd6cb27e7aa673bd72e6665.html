@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -108,7 +117,7 @@ $(function(){initNavTree('struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_to
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a47db78533c980d3e5e8482470fa91772" id="r_a47db78533c980d3e5e8482470fa91772"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47db78533c980d3e5e8482470fa91772">type</a> = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&amp;</td></tr>
+<tr class="memitem:a47db78533c980d3e5e8482470fa91772" id="r_a47db78533c980d3e5e8482470fa91772"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47db78533c980d3e5e8482470fa91772">type</a> = T&amp;</td></tr>
 <tr class="separator:a47db78533c980d3e5e8482470fa91772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
@@ -118,10 +127,10 @@ Public Types</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_to_reference_if_reference_wrapper.html">Harlinn::Common::Core::Internal::ToReferenceIfReferenceWrapper</a>&lt; std::reference_wrapper&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &gt;::type = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&amp;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_to_reference_if_reference_wrapper.html">Harlinn::Common::Core::Internal::ToReferenceIfReferenceWrapper</a>&lt; std::reference_wrapper&lt; T &gt; &gt;::type = T&amp;</td>
         </tr>
       </table>
 </div><div class="memdoc">

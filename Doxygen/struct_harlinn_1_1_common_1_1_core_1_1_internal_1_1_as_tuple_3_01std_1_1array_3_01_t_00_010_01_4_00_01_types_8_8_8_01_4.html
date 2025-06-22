@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -118,10 +127,10 @@ Public Types</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename... Types&gt; </div>
+template&lt;typename T , typename... Types&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_as_tuple.html">Harlinn::Common::Core::Internal::AsTuple</a>&lt; std::array&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, 0 &gt;, Types... &gt;::type = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_tuple.html">Tuple</a>&lt;Types...&gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_internal_1_1_as_tuple.html">Harlinn::Common::Core::Internal::AsTuple</a>&lt; std::array&lt; T, 0 &gt;, Types... &gt;::type = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_tuple.html">Tuple</a>&lt;Types...&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

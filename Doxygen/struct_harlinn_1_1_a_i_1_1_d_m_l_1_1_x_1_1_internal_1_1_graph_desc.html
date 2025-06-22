@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -114,14 +123,14 @@ Collaboration diagram for Harlinn::AI::DML::X::Internal::GraphDesc:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac5a0bbb2cf93484eff2e29633307a057" id="r_ac5a0bbb2cf93484eff2e29633307a057"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5a0bbb2cf93484eff2e29633307a057">BaseOperatorNodeIndexInMergedNodes</a> () const</td></tr>
+<tr class="memitem:ac5a0bbb2cf93484eff2e29633307a057" id="r_ac5a0bbb2cf93484eff2e29633307a057"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5a0bbb2cf93484eff2e29633307a057">BaseOperatorNodeIndexInMergedNodes</a> () const</td></tr>
 <tr class="separator:ac5a0bbb2cf93484eff2e29633307a057"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dfd98ed0288fe5a4501ebcce934f4f2" id="r_a6dfd98ed0288fe5a4501ebcce934f4f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dfd98ed0288fe5a4501ebcce934f4f2">BaseConstantNodeIndexInMergedNodes</a> () const</td></tr>
+<tr class="memitem:a6dfd98ed0288fe5a4501ebcce934f4f2" id="r_a6dfd98ed0288fe5a4501ebcce934f4f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dfd98ed0288fe5a4501ebcce934f4f2">BaseConstantNodeIndexInMergedNodes</a> () const</td></tr>
 <tr class="separator:a6dfd98ed0288fe5a4501ebcce934f4f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afda15b6bdba0a0f1b5ac944fedde79cd" id="r_afda15b6bdba0a0f1b5ac944fedde79cd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_graph_node_desc.html">DML::GraphNodeDesc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afda15b6bdba0a0f1b5ac944fedde79cd">Nodes</a> () const</td></tr>
 <tr class="separator:afda15b6bdba0a0f1b5ac944fedde79cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a841807ab84c062e36ad752a57a75481c" id="r_a841807ab84c062e36ad752a57a75481c"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &gt; </td></tr>
-<tr class="memitem:a841807ab84c062e36ad752a57a75481c"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_graph_edge_desc.html">DML::GraphEdgeDesc</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a841807ab84c062e36ad752a57a75481c">Edges</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a0705419b99316faf8c3cd0d873a75312">DML::GraphEdgeType</a> <a class="el" href="s__llrint_8inl.html#a53155e22eaa05190346890241be3367c">type</a>, std::span&lt; const <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &gt; edgesImpl) const</td></tr>
+<tr class="memitem:a841807ab84c062e36ad752a57a75481c"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_graph_edge_desc.html">DML::GraphEdgeDesc</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a841807ab84c062e36ad752a57a75481c">Edges</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a0705419b99316faf8c3cd0d873a75312">DML::GraphEdgeType</a> type, std::span&lt; const <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &gt; edgesImpl) const</td></tr>
 <tr class="separator:a841807ab84c062e36ad752a57a75481c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ca9eda4896bfbb65a192b56f383cbd0" id="r_a0ca9eda4896bfbb65a192b56f383cbd0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_graph_edge_desc.html">DML::GraphEdgeDesc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ca9eda4896bfbb65a192b56f383cbd0">InputEdges</a> () const</td></tr>
 <tr class="separator:a0ca9eda4896bfbb65a192b56f383cbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,9 +141,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aa4c75b566b176ce999a6cc62795bf2be" id="r_aa4c75b566b176ce999a6cc62795bf2be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4c75b566b176ce999a6cc62795bf2be">inputCount</a> = 0</td></tr>
+<tr class="memitem:aa4c75b566b176ce999a6cc62795bf2be" id="r_aa4c75b566b176ce999a6cc62795bf2be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4c75b566b176ce999a6cc62795bf2be">inputCount</a> = 0</td></tr>
 <tr class="separator:aa4c75b566b176ce999a6cc62795bf2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd0ae94f6b370408c80f5c7369af7b55" id="r_acd0ae94f6b370408c80f5c7369af7b55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd0ae94f6b370408c80f5c7369af7b55">outputCount</a> = 0</td></tr>
+<tr class="memitem:acd0ae94f6b370408c80f5c7369af7b55" id="r_acd0ae94f6b370408c80f5c7369af7b55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd0ae94f6b370408c80f5c7369af7b55">outputCount</a> = 0</td></tr>
 <tr class="separator:acd0ae94f6b370408c80f5c7369af7b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a940610aaf1204232d161ec4ab98486ac" id="r_a940610aaf1204232d161ec4ab98486ac"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_operator_graph_node_desc.html">DML::OperatorGraphNodeDesc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a940610aaf1204232d161ec4ab98486ac">operatorNodes</a></td></tr>
 <tr class="separator:a940610aaf1204232d161ec4ab98486ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,7 +165,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::X::Internal::GraphDesc::BaseConstantNodeIndexInMergedNodes </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::X::Internal::GraphDesc::BaseConstantNodeIndexInMergedNodes </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -181,7 +190,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::X::Internal::GraphDesc::BaseOperatorNodeIndexInMergedNodes </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::X::Internal::GraphDesc::BaseOperatorNodeIndexInMergedNodes </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -335,7 +344,7 @@ template&lt;typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::X::Internal::GraphDesc::inputCount = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::X::Internal::GraphDesc::inputCount = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -391,7 +400,7 @@ template&lt;typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::X::Internal::GraphDesc::outputCount = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::X::Internal::GraphDesc::outputCount = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

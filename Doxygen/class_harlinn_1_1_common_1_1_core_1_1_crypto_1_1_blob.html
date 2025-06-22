@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -116,13 +125,13 @@ Inheritance diagram for Harlinn::Common::Core::Crypto::Blob:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6a06ef0a7e47f089d5195f5cdad1489e" id="r_a6a06ef0a7e47f089d5195f5cdad1489e"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a06ef0a7e47f089d5195f5cdad1489e">Blob</a> () noexcept</td></tr>
 <tr class="separator:a6a06ef0a7e47f089d5195f5cdad1489e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad16910c11604f8d3935e7174a074f90b" id="r_ad16910c11604f8d3935e7174a074f90b"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad16910c11604f8d3935e7174a074f90b">Blob</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *<a class="el" href="#a43bc10b139b1e0bae3481600fcd576d0">data</a>, DWORD blobSize) noexcept</td></tr>
+<tr class="memitem:ad16910c11604f8d3935e7174a074f90b" id="r_ad16910c11604f8d3935e7174a074f90b"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad16910c11604f8d3935e7174a074f90b">Blob</a> (<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *<a class="el" href="#a43bc10b139b1e0bae3481600fcd576d0">data</a>, DWORD blobSize) noexcept</td></tr>
 <tr class="separator:ad16910c11604f8d3935e7174a074f90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a224dde8a987e59529eb057df8cf562e9" id="r_a224dde8a987e59529eb057df8cf562e9"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a224dde8a987e59529eb057df8cf562e9">Assign</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *<a class="el" href="#a43bc10b139b1e0bae3481600fcd576d0">data</a>, DWORD blobSize) noexcept</td></tr>
+<tr class="memitem:a224dde8a987e59529eb057df8cf562e9" id="r_a224dde8a987e59529eb057df8cf562e9"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a224dde8a987e59529eb057df8cf562e9">Assign</a> (<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *<a class="el" href="#a43bc10b139b1e0bae3481600fcd576d0">data</a>, DWORD blobSize) noexcept</td></tr>
 <tr class="separator:a224dde8a987e59529eb057df8cf562e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43bc10b139b1e0bae3481600fcd576d0" id="r_a43bc10b139b1e0bae3481600fcd576d0"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43bc10b139b1e0bae3481600fcd576d0">data</a> () noexcept</td></tr>
+<tr class="memitem:a43bc10b139b1e0bae3481600fcd576d0" id="r_a43bc10b139b1e0bae3481600fcd576d0"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43bc10b139b1e0bae3481600fcd576d0">data</a> () noexcept</td></tr>
 <tr class="separator:a43bc10b139b1e0bae3481600fcd576d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bbef7d2838b97b972181c4da4ab8ad3" id="r_a7bbef7d2838b97b972181c4da4ab8ad3"><td class="memItemLeft" align="right" valign="top">constexpr const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bbef7d2838b97b972181c4da4ab8ad3">data</a> () const noexcept</td></tr>
+<tr class="memitem:a7bbef7d2838b97b972181c4da4ab8ad3" id="r_a7bbef7d2838b97b972181c4da4ab8ad3"><td class="memItemLeft" align="right" valign="top">constexpr const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bbef7d2838b97b972181c4da4ab8ad3">data</a> () const noexcept</td></tr>
 <tr class="separator:a7bbef7d2838b97b972181c4da4ab8ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a605b1102afbf5374e06f8b4a03eed5a9" id="r_a605b1102afbf5374e06f8b4a03eed5a9"><td class="memItemLeft" align="right" valign="top">constexpr DWORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a605b1102afbf5374e06f8b4a03eed5a9">BlobSize</a> () const noexcept</td></tr>
 <tr class="separator:a605b1102afbf5374e06f8b4a03eed5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,7 +140,7 @@ Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a03e906c9b89d36c5272e9904164b3b0d" id="r_a03e906c9b89d36c5272e9904164b3b0d"><td class="memItemLeft" align="right" valign="top">DWORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03e906c9b89d36c5272e9904164b3b0d">blobSize_</a></td></tr>
 <tr class="separator:a03e906c9b89d36c5272e9904164b3b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fdc9be05c98d9eedf801da161d6ac49" id="r_a2fdc9be05c98d9eedf801da161d6ac49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fdc9be05c98d9eedf801da161d6ac49">data_</a></td></tr>
+<tr class="memitem:a2fdc9be05c98d9eedf801da161d6ac49" id="r_a2fdc9be05c98d9eedf801da161d6ac49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fdc9be05c98d9eedf801da161d6ac49">data_</a></td></tr>
 <tr class="separator:a2fdc9be05c98d9eedf801da161d6ac49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -172,7 +181,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Common::Core::Crypto::Blob::Blob </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -202,7 +211,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Harlinn::Common::Core::Crypto::Blob::Assign </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -254,7 +263,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> * Harlinn::Common::Core::Crypto::Blob::data </td>
+          <td class="memname">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> * Harlinn::Common::Core::Crypto::Blob::data </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -279,7 +288,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> * Harlinn::Common::Core::Crypto::Blob::data </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> * Harlinn::Common::Core::Crypto::Blob::data </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -327,7 +336,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>* Harlinn::Common::Core::Crypto::Blob::data_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>* Harlinn::Common::Core::Crypto::Blob::data_</td>
         </tr>
       </table>
   </td>

@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -118,10 +127,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af38d53c67804bccaa9513722c072a778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fa82e1bb3b3a4ac2ef726f1f2097c75" id="r_a9fa82e1bb3b3a4ac2ef726f1f2097c75"><td class="memItemLeft" align="right" valign="top">const DCB *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fa82e1bb3b3a4ac2ef726f1f2097c75">data</a> () const noexcept</td></tr>
 <tr class="separator:a9fa82e1bb3b3a4ac2ef726f1f2097c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45f21af7c784f595b7a0a1294a233594" id="r_a45f21af7c784f595b7a0a1294a233594"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45f21af7c784f595b7a0a1294a233594">BaudRate</a> () const noexcept</td></tr>
+<tr class="memitem:a45f21af7c784f595b7a0a1294a233594" id="r_a45f21af7c784f595b7a0a1294a233594"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45f21af7c784f595b7a0a1294a233594">BaudRate</a> () const noexcept</td></tr>
 <tr class="memdesc:a45f21af7c784f595b7a0a1294a233594"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the baud rate at which the communications device operates.  <br /></td></tr>
 <tr class="separator:a45f21af7c784f595b7a0a1294a233594"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63658b4b19b6d8b66bc579d7256d06e7" id="r_a63658b4b19b6d8b66bc579d7256d06e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63658b4b19b6d8b66bc579d7256d06e7">SetBaudRate</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> baudRate) noexcept</td></tr>
+<tr class="memitem:a63658b4b19b6d8b66bc579d7256d06e7" id="r_a63658b4b19b6d8b66bc579d7256d06e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63658b4b19b6d8b66bc579d7256d06e7">SetBaudRate</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> baudRate) noexcept</td></tr>
 <tr class="separator:a63658b4b19b6d8b66bc579d7256d06e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb0a609ee6b2369cd938c27d0ce61404" id="r_aeb0a609ee6b2369cd938c27d0ce61404"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb0a609ee6b2369cd938c27d0ce61404">Binary</a> () const noexcept</td></tr>
 <tr class="memdesc:aeb0a609ee6b2369cd938c27d0ce61404"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_harlinn_1_1_windows.html">Windows</a> does not support nonbinary mode transfers, so this function must return true.  <br /></td></tr>
@@ -158,11 +167,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2fe17aa1fb87729c7b0d6f6d86b1c4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dc590e390e8edea9136cb8e038a98e1" id="r_a8dc590e390e8edea9136cb8e038a98e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dc590e390e8edea9136cb8e038a98e1">AbortOnError</a> () const noexcept</td></tr>
 <tr class="separator:a8dc590e390e8edea9136cb8e038a98e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5395235efbd6a6688ec4aa0760f76ea7" id="r_a5395235efbd6a6688ec4aa0760f76ea7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5395235efbd6a6688ec4aa0760f76ea7">XonLim</a> () const noexcept</td></tr>
+<tr class="memitem:a5395235efbd6a6688ec4aa0760f76ea7" id="r_a5395235efbd6a6688ec4aa0760f76ea7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5395235efbd6a6688ec4aa0760f76ea7">XonLim</a> () const noexcept</td></tr>
 <tr class="separator:a5395235efbd6a6688ec4aa0760f76ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6c616d57bd44644c7835ffd5fd2add4" id="r_ac6c616d57bd44644c7835ffd5fd2add4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6c616d57bd44644c7835ffd5fd2add4">XoffLim</a> () const noexcept</td></tr>
+<tr class="memitem:ac6c616d57bd44644c7835ffd5fd2add4" id="r_ac6c616d57bd44644c7835ffd5fd2add4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6c616d57bd44644c7835ffd5fd2add4">XoffLim</a> () const noexcept</td></tr>
 <tr class="separator:ac6c616d57bd44644c7835ffd5fd2add4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaec147a8530e2380d9dd62997cd214ff" id="r_aaec147a8530e2380d9dd62997cd214ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaec147a8530e2380d9dd62997cd214ff">ByteSize</a> () const noexcept</td></tr>
+<tr class="memitem:aaec147a8530e2380d9dd62997cd214ff" id="r_aaec147a8530e2380d9dd62997cd214ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaec147a8530e2380d9dd62997cd214ff">ByteSize</a> () const noexcept</td></tr>
 <tr class="separator:aaec147a8530e2380d9dd62997cd214ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa03b96173b058139a39560707bc64bf0" id="r_aa03b96173b058139a39560707bc64bf0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a6a9aa4730805d9ba69493d528a169f86">IO::Parity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa03b96173b058139a39560707bc64bf0">Parity</a> () const noexcept</td></tr>
 <tr class="separator:aa03b96173b058139a39560707bc64bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -276,7 +285,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::IO::DeviceControlBlock::BaudRate </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::IO::DeviceControlBlock::BaudRate </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -332,7 +341,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> Harlinn::Common::Core::IO::DeviceControlBlock::ByteSize </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> Harlinn::Common::Core::IO::DeviceControlBlock::ByteSize </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -769,7 +778,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void Harlinn::Common::Core::IO::DeviceControlBlock::SetBaudRate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>baudRate</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>baudRate</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -894,7 +903,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::IO::DeviceControlBlock::XoffLim </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::IO::DeviceControlBlock::XoffLim </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -944,7 +953,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::IO::DeviceControlBlock::XonLim </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::IO::DeviceControlBlock::XonLim </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

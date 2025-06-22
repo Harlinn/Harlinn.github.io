@@ -232,15 +232,15 @@
   </header>
 
   <div class="post-content">
-    <p>The header, <code class="language-plaintext highlighter-rouge">HCCMath.h</code>, provides alternatives to many of the core mathematical function that is specified in 
+    <p>The header, <code class="language-plaintext highlighter-rouge">Harlinn/Math/Math.h</code>, provides alternatives to many of the core mathematical function that is specified in 
 the C and C++ standards. All of the functions can be <code class="language-plaintext highlighter-rouge">constexpr</code> evaluated, and several offer 
 runtime performance benefits as well.</p>
 
-<p><code class="language-plaintext highlighter-rouge">HCCMath.h</code> is header only, and does not require linking with <code class="language-plaintext highlighter-rouge">Harlinn.Common.Core.lib</code>.</p>
+<p><code class="language-plaintext highlighter-rouge">Harlinn/Math/Math.h</code> is header only.</p>
 
 <p><img src="assets/BasicMath.svg" alt="" /></p>
 
-<p>The functions are implemented in the <a href="/Doxygen/namespace_harlinn_1_1_common_1_1_core_1_1_math.html"><code class="language-plaintext highlighter-rouge">Harlinn::Common::Core::Math</code> namespace</a>.</p>
+<p>The functions are implemented in the <a href="/Doxygen/namespace_harlinn_1_1_common_1_1_core_1_1_math.html"><code class="language-plaintext highlighter-rouge">Harlinn::Math</code> namespace</a>.</p>
 
 <h3 id="concepts">Concepts</h3>
 
@@ -277,7 +277,7 @@ The <code class="language-plaintext highlighter-rouge">constexpr</code> evaluate
 eliminated from the execution path of the <code class="language-plaintext highlighter-rouge">constexpr</code> evaluated code.</p>
 
 <p>While C++ 26 will enable <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of many of the functions within <code class="language-plaintext highlighter-rouge">&lt;cmath&gt;</code>, 
-<code class="language-plaintext highlighter-rouge">HCCMath.h</code> makes this possible right now.</p>
+<code class="language-plaintext highlighter-rouge">Harlinn/Math/Math.h</code> makes this possible right now.</p>
 
 <p>Much of the code is based on version <code class="language-plaintext highlighter-rouge">0.8.5</code> of the <a href="https://github.com/JuliaMath/openlibm">OpenLibm</a> 
 mathematical C library used by the <a href="https://julialang.org/">Julia</a> programming language.</p>
@@ -293,7 +293,7 @@ floating point values do not accept integer values without an explicit cast to
 
 <h3 id="unit-tests">Unit Tests</h3>
 
-<p>Unit tests for <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of the core functions from <code class="language-plaintext highlighter-rouge">HCCMath.h</code> are provided in 
+<p>Unit tests for <code class="language-plaintext highlighter-rouge">constexpr</code> evaluation of the core functions from <code class="language-plaintext highlighter-rouge">Harlinn/Math/Math.h</code> are provided in 
 <a href="https://github.com/Harlinn/Harlinn.Windows/blob/master/Tests/Harlinn.Common.Core.Math.Tests/ConstexprMathTests.cpp">ConstexprMathTests.cpp</a>.</p>
 
 <p><a href="https://github.com/Harlinn/Harlinn.Windows/tree/master/Tests/Harlinn.Common.Core.Math.Tests">Harlinn.Common.Core.Math.Tests</a> contains 678 test cases, 
@@ -318,7 +318,7 @@ the compilation units, there are often a few surprises. PBRTO was created as a t
 uncovering these surprises.</p>
 
 <p>PBRTO is a micro optimized version of <a href="https://github.com/mmp/pbrt-v4">PBRT-v4</a>, under development 
-as an example of how the functionality in <code class="language-plaintext highlighter-rouge">HCCMath.h</code>, <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> and <code class="language-plaintext highlighter-rouge">HCCVectorMath.h</code> can be used to 
+as an example of how the functionality in <code class="language-plaintext highlighter-rouge">Harlinn/Math/Math.h</code>, <code class="language-plaintext highlighter-rouge">Harlinn/Math/Simd.h</code> and <code class="language-plaintext highlighter-rouge">Harlinn/Math/VectorMath.h</code> can be used to 
 optimize the performance of real, computationally intensive, apps. It’s now about <code class="language-plaintext highlighter-rouge">91</code> % 
 faster than the release build of the original PBRT. <a href="pbrto.html">more…</a></p>
 

@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -140,10 +149,10 @@ Static Public Attributes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html">Harlinn::Common::Core::VariantTypeTraits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ValueType = void</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html">Harlinn::Common::Core::VariantTypeTraits</a>&lt; T &gt;::ValueType = void</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -156,10 +165,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html">Harlinn::Common::Core::VariantTypeTraits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::VariantValueType = void</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html">Harlinn::Common::Core::VariantTypeTraits</a>&lt; T &gt;::VariantValueType = void</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -173,13 +182,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html">Harlinn::Common::Core::VariantTypeTraits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsRecord = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html">Harlinn::Common::Core::VariantTypeTraits</a>&lt; T &gt;::IsRecord = false</td>
         </tr>
       </table>
   </td>
@@ -197,13 +206,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html">Harlinn::Common::Core::VariantTypeTraits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::RequiresConversion = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html">Harlinn::Common::Core::VariantTypeTraits</a>&lt; T &gt;::RequiresConversion = false</td>
         </tr>
       </table>
   </td>
@@ -221,13 +230,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aeda58257f3f008fc31abc56e9c8635fe">Core::VariantType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html">Harlinn::Common::Core::VariantTypeTraits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::VariantType = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aeda58257f3f008fc31abc56e9c8635feace2c8aed9c2fa0cfbed56cbda4d8bf07">Core::VariantType::Empty</a></td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aeda58257f3f008fc31abc56e9c8635fe">Core::VariantType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_variant_type_traits.html">Harlinn::Common::Core::VariantTypeTraits</a>&lt; T &gt;::VariantType = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aeda58257f3f008fc31abc56e9c8635feace2c8aed9c2fa0cfbed56cbda4d8bf07">Core::VariantType::Empty</a></td>
         </tr>
       </table>
   </td>

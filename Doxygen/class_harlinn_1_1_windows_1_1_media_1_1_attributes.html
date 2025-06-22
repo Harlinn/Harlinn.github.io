@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -129,7 +138,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9489debc1781a834dc7341f6786522cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89a890ca7547478bf2d540befea51a77" id="r_a89a890ca7547478bf2d540befea51a77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_w_def_8h.html#afef48e77e08fbd01c5e087508f4bccef">HW_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89a890ca7547478bf2d540befea51a77">Add</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_m_f_attributes.html">MFAttributes</a> &amp;attributes)</td></tr>
 <tr class="separator:a89a890ca7547478bf2d540befea51a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a822ae856f9f2df68322e67bf30bd1a00" id="r_a822ae856f9f2df68322e67bf30bd1a00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_w_def_8h.html#afef48e77e08fbd01c5e087508f4bccef">HW_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a822ae856f9f2df68322e67bf30bd1a00">Add</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_m_f_attributes.html">MFAttributes</a> &amp;attributes, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> index)</td></tr>
+<tr class="memitem:a822ae856f9f2df68322e67bf30bd1a00" id="r_a822ae856f9f2df68322e67bf30bd1a00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_w_def_8h.html#afef48e77e08fbd01c5e087508f4bccef">HW_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a822ae856f9f2df68322e67bf30bd1a00">Add</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_m_f_attributes.html">MFAttributes</a> &amp;attributes, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> index)</td></tr>
 <tr class="separator:a822ae856f9f2df68322e67bf30bd1a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c202d5da286dfeeb9003e8306db255a" id="r_a9c202d5da286dfeeb9003e8306db255a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_w_def_8h.html#afef48e77e08fbd01c5e087508f4bccef">HW_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c202d5da286dfeeb9003e8306db255a">AssignTo</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_m_f_attributes.html">MFAttributes</a> &amp;attributes) const</td></tr>
 <tr class="separator:a9c202d5da286dfeeb9003e8306db255a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,7 +186,7 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:acc6504a32ae9b28daae155d182dee37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e476c9d6abd86f079ce4576b45ea075" id="r_a4e476c9d6abd86f079ce4576b45ea075"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_w_def_8h.html#afef48e77e08fbd01c5e087508f4bccef">HW_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e476c9d6abd86f079ce4576b45ea075">AddUnknown</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_m_f_attributes.html">MFAttributes</a> &amp;attributes, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a> &amp;key)</td></tr>
 <tr class="separator:a4e476c9d6abd86f079ce4576b45ea075"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ec9583e566eeec74602256788500655" id="r_a4ec9583e566eeec74602256788500655"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ec9583e566eeec74602256788500655">CountSerializableAttributes</a> () const</td></tr>
+<tr class="memitem:a4ec9583e566eeec74602256788500655" id="r_a4ec9583e566eeec74602256788500655"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ec9583e566eeec74602256788500655">CountSerializableAttributes</a> () const</td></tr>
 <tr class="separator:a4ec9583e566eeec74602256788500655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24263b4420c3dbb3e2c2872ad4cbe124" id="r_a24263b4420c3dbb3e2c2872ad4cbe124"><td class="memTemplParams" colspan="2">template&lt;typename ReaderT , typename AttributeT &gt; </td></tr>
 <tr class="memitem:a24263b4420c3dbb3e2c2872ad4cbe124"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a24263b4420c3dbb3e2c2872ad4cbe124">ReadAttribute</a> (ReaderT &amp;reader)</td></tr>
@@ -375,7 +384,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -915,7 +924,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Media::Attributes::CountSerializableAttributes </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Media::Attributes::CountSerializableAttributes </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

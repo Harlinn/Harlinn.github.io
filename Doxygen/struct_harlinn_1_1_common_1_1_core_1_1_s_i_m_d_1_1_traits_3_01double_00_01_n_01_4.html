@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -234,11 +243,11 @@ requires ( index &lt; <a class="el" href="#a7c3e5261f5f51a9410369910fe578920">Si
 <tr class="memitem:a32da8b87b0ad9521dffa684537afc09e" id="r_a32da8b87b0ad9521dffa684537afc09e"><td class="memTemplParams" colspan="2">template&lt;int shuffleMask&gt; </td></tr>
 <tr class="memitem:a32da8b87b0ad9521dffa684537afc09e"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#ac66d54515bec284af8ee4e4189075a06">SIMDType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a32da8b87b0ad9521dffa684537afc09e">Permute</a> (<a class="el" href="#ac66d54515bec284af8ee4e4189075a06">SIMDType</a> v) noexcept</td></tr>
 <tr class="separator:a32da8b87b0ad9521dffa684537afc09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8936a505d28a2053264f7dcd9345ea64" id="r_a8936a505d28a2053264f7dcd9345ea64"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection1&gt; <br />
+<tr class="memitem:a8936a505d28a2053264f7dcd9345ea64" id="r_a8936a505d28a2053264f7dcd9345ea64"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection1&gt; <br />
 requires ( <a class="el" href="#a550ef0ae0b812cf96956cce8febba159">UseShortSIMDType</a> )</td></tr>
 <tr class="memitem:a8936a505d28a2053264f7dcd9345ea64"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#ac66d54515bec284af8ee4e4189075a06">SIMDType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8936a505d28a2053264f7dcd9345ea64">Swizzle</a> (<a class="el" href="#ac66d54515bec284af8ee4e4189075a06">SIMDType</a> v) noexcept</td></tr>
 <tr class="separator:a8936a505d28a2053264f7dcd9345ea64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5a8e48f9bd45b5387fecea02563cf12" id="r_af5a8e48f9bd45b5387fecea02563cf12"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection1&gt; <br />
+<tr class="memitem:af5a8e48f9bd45b5387fecea02563cf12" id="r_af5a8e48f9bd45b5387fecea02563cf12"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection1&gt; <br />
 requires ( <a class="el" href="#a550ef0ae0b812cf96956cce8febba159">UseShortSIMDType</a> == false )</td></tr>
 <tr class="memitem:af5a8e48f9bd45b5387fecea02563cf12"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="#ac66d54515bec284af8ee4e4189075a06">SIMDType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af5a8e48f9bd45b5387fecea02563cf12">Swizzle</a> (<a class="el" href="#ac66d54515bec284af8ee4e4189075a06">SIMDType</a> v) noexcept</td></tr>
 <tr class="separator:af5a8e48f9bd45b5387fecea02563cf12"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -398,7 +407,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a48f4692b9369f079be0f52906ab4857c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaebaf28b527bcf4dfd584076e8d1aa81" id="r_aaebaf28b527bcf4dfd584076e8d1aa81"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaebaf28b527bcf4dfd584076e8d1aa81">SIMDTypeCapacity</a> = <a class="el" href="#a550ef0ae0b812cf96956cce8febba159">UseShortSIMDType</a> ? 2 : 4</td></tr>
 <tr class="separator:aaebaf28b527bcf4dfd584076e8d1aa81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8f599cec1581843c743c4c3b8d8f360" id="r_ac8f599cec1581843c743c4c3b8d8f360"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8f599cec1581843c743c4c3b8d8f360">Capacity</a> = <a class="el" href="#a550ef0ae0b812cf96956cce8febba159">UseShortSIMDType</a> ? 2 : ( ( N + 3 ) &amp; static_cast&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt;( -4 ) )</td></tr>
+<tr class="memitem:ac8f599cec1581843c743c4c3b8d8f360" id="r_ac8f599cec1581843c743c4c3b8d8f360"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8f599cec1581843c743c4c3b8d8f360">Capacity</a> = <a class="el" href="#a550ef0ae0b812cf96956cce8febba159">UseShortSIMDType</a> ? 2 : ( ( N + 3 ) &amp; static_cast&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&gt;( -4 ) )</td></tr>
 <tr class="separator:ac8f599cec1581843c743c4c3b8d8f360"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1030972364f30c981f38fefda2d9ab8b" id="r_a1030972364f30c981f38fefda2d9ab8b"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1030972364f30c981f38fefda2d9ab8b">SIMDIterations</a> = ( <a class="el" href="#ac8f599cec1581843c743c4c3b8d8f360">Capacity</a> * sizeof( <a class="el" href="#a8b61a37cfffc432a967a17fbf5e1a0a1">Type</a> ) ) / <a class="el" href="#a48f4692b9369f079be0f52906ab4857c">SIMDTypeSize</a></td></tr>
 <tr class="separator:a1030972364f30c981f38fefda2d9ab8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3549,7 +3558,7 @@ template&lt;size_t N&gt; </div>
 <div class="memtemplate">
 template&lt;size_t N&gt; </div>
 <div class="memtemplate">
-template&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection1&gt; <br />
+template&lt;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection1&gt; <br />
 requires ( <a class="el" href="#a550ef0ae0b812cf96956cce8febba159">UseShortSIMDType</a> )</div>
 <table class="mlabels">
   <tr>
@@ -3579,7 +3588,7 @@ requires ( <a class="el" href="#a550ef0ae0b812cf96956cce8febba159">UseShortSIMDT
 <div class="memtemplate">
 template&lt;size_t N&gt; </div>
 <div class="memtemplate">
-template&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> selection1&gt; <br />
+template&lt;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection4, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection3, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection2, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> selection1&gt; <br />
 requires ( <a class="el" href="#a550ef0ae0b812cf96956cce8febba159">UseShortSIMDType</a> == false )</div>
 <table class="mlabels">
   <tr>
@@ -3900,7 +3909,7 @@ template&lt;size_t N&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; double, N &gt;::Capacity = <a class="el" href="#a550ef0ae0b812cf96956cce8febba159">UseShortSIMDType</a> ? 2 : ( ( N + 3 ) &amp; static_cast&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt;( -4 ) )</td>
+          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits.html">Harlinn::Common::Core::SIMD::Traits</a>&lt; double, N &gt;::Capacity = <a class="el" href="#a550ef0ae0b812cf96956cce8febba159">UseShortSIMDType</a> ? 2 : ( ( N + 3 ) &amp; static_cast&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&gt;( -4 ) )</td>
         </tr>
       </table>
   </td>

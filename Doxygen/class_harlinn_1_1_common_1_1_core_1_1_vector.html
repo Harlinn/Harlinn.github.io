@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -109,7 +118,7 @@ $(function(){initNavTree('class_harlinn_1_1_common_1_1_core_1_1_vector.html','')
 <div class="dynheader">
 Inheritance diagram for Harlinn::Common::Core::Vector&lt; T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_harlinn_1_1_common_1_1_core_1_1_vector__inherit__graph.svg" width="1115" height="122"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_harlinn_1_1_common_1_1_core_1_1_vector__inherit__graph.svg" width="1127" height="179"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for Harlinn::Common::Core::Vector&lt; T &gt;:</div>
@@ -119,7 +128,7 @@ Collaboration diagram for Harlinn::Common::Core::Vector&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a8ec1fa15eaccaa0c140b2552304171ec" id="r_a8ec1fa15eaccaa0c140b2552304171ec"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ec1fa15eaccaa0c140b2552304171ec">Base</a> = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html">VectorBase</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_pointer_iterator.html">Internal::PointerIterator</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&gt;, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_const_pointer_iterator.html">Internal::ConstPointerIterator</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&gt; &gt;</td></tr>
+<tr class="memitem:a8ec1fa15eaccaa0c140b2552304171ec" id="r_a8ec1fa15eaccaa0c140b2552304171ec"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ec1fa15eaccaa0c140b2552304171ec">Base</a> = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html">VectorBase</a>&lt;T, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_pointer_iterator.html">Internal::PointerIterator</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt;T&gt;&gt;, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_const_pointer_iterator.html">Internal::ConstPointerIterator</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt;T&gt;&gt; &gt;</td></tr>
 <tr class="separator:a8ec1fa15eaccaa0c140b2552304171ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e82048c74488386c0394fb98342c8e7" id="r_a8e82048c74488386c0394fb98342c8e7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e82048c74488386c0394fb98342c8e7">value_type</a> = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#abd685626c82e6cb72fc08016c90b71cd">Base::value_type</a></td></tr>
 <tr class="separator:a8e82048c74488386c0394fb98342c8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,7 +178,7 @@ Public Member Functions</h2></td></tr>
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9765bf4143d8820765b98dea5b">IsIterator_v</a>&lt;It&gt;</td></tr>
 <tr class="memitem:a5eacc5987d3635f777a25bc484ade386"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5eacc5987d3635f777a25bc484ade386">Vector</a> (It first, It last)</td></tr>
 <tr class="separator:a5eacc5987d3635f777a25bc484ade386"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e1b9ba595505cc97dee546ec7b019ab" id="r_a9e1b9ba595505cc97dee546ec7b019ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e1b9ba595505cc97dee546ec7b019ab">Vector</a> (std::initializer_list&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; values)</td></tr>
+<tr class="memitem:a9e1b9ba595505cc97dee546ec7b019ab" id="r_a9e1b9ba595505cc97dee546ec7b019ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e1b9ba595505cc97dee546ec7b019ab">Vector</a> (std::initializer_list&lt; T &gt; values)</td></tr>
 <tr class="separator:a9e1b9ba595505cc97dee546ec7b019ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af10e0060d43e03a4adf8739ceeff5a20" id="r_af10e0060d43e03a4adf8739ceeff5a20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af10e0060d43e03a4adf8739ceeff5a20">operator=</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a> &amp;other) noexcept=default</td></tr>
 <tr class="separator:af10e0060d43e03a4adf8739ceeff5a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,7 +193,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9
 <tr class="separator:a142c0bf9508f97abddbd15a0669ab5df inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad35ce1bc198572eb76e5e92235ed9509 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_ad35ce1bc198572eb76e5e92235ed9509"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ad35ce1bc198572eb76e5e92235ed9509">VectorBase</a> (It first, It last)</td></tr>
 <tr class="separator:ad35ce1bc198572eb76e5e92235ed9509 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a327cbfb04bf670dcc90beed99b5b98c4 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a327cbfb04bf670dcc90beed99b5b98c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a327cbfb04bf670dcc90beed99b5b98c4">VectorBase</a> (std::initializer_list&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; values)</td></tr>
+<tr class="memitem:a327cbfb04bf670dcc90beed99b5b98c4 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a327cbfb04bf670dcc90beed99b5b98c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a327cbfb04bf670dcc90beed99b5b98c4">VectorBase</a> (std::initializer_list&lt; T &gt; values)</td></tr>
 <tr class="separator:a327cbfb04bf670dcc90beed99b5b98c4 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3e70eea46725b4e1ee9ad3036908dd2 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_af3e70eea46725b4e1ee9ad3036908dd2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#af3e70eea46725b4e1ee9ad3036908dd2">VectorBase</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html">VectorBase</a> &amp;other)</td></tr>
 <tr class="separator:af3e70eea46725b4e1ee9ad3036908dd2 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,7 +269,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9
 <tr class="separator:a66a48c5444715e16acd83b1a7bd3744a inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad307d3af88f2cee59a8afb07f8d67532 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_ad307d3af88f2cee59a8afb07f8d67532"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ad307d3af88f2cee59a8afb07f8d67532">resize</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a5a11e30cb7262870362a393a4120c9eb">size_type</a> newSize)</td></tr>
 <tr class="separator:ad307d3af88f2cee59a8afb07f8d67532 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74603c0b49d2e4c424fdde8786244824 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a74603c0b49d2e4c424fdde8786244824"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74603c0b49d2e4c424fdde8786244824">resize</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a5a11e30cb7262870362a393a4120c9eb">size_type</a> newSize, const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v)</td></tr>
+<tr class="memitem:a74603c0b49d2e4c424fdde8786244824 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a74603c0b49d2e4c424fdde8786244824"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74603c0b49d2e4c424fdde8786244824">resize</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a5a11e30cb7262870362a393a4120c9eb">size_type</a> newSize, const T &amp;v)</td></tr>
 <tr class="separator:a74603c0b49d2e4c424fdde8786244824 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a063621bfc07808faeb65cb728f59d564 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a063621bfc07808faeb65cb728f59d564"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a063621bfc07808faeb65cb728f59d564">shrink</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a5a11e30cb7262870362a393a4120c9eb">size_type</a> newSize)</td></tr>
 <tr class="separator:a063621bfc07808faeb65cb728f59d564 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -272,45 +281,45 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9
 <tr class="separator:a537fd1e56ecc37d781c9a8a7d9d491c6 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78ac62aa35ef7913fbfe27d24e8d1c12 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a78ac62aa35ef7913fbfe27d24e8d1c12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a78ac62aa35ef7913fbfe27d24e8d1c12">emplace</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> it, Args &amp;&amp;... args)</td></tr>
 <tr class="separator:a78ac62aa35ef7913fbfe27d24e8d1c12 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a412aee6f47ff94d16c2e95ecd25fc3d4 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a412aee6f47ff94d16c2e95ecd25fc3d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a412aee6f47ff94d16c2e95ecd25fc3d4">push_back</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v)</td></tr>
+<tr class="memitem:a412aee6f47ff94d16c2e95ecd25fc3d4 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a412aee6f47ff94d16c2e95ecd25fc3d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a412aee6f47ff94d16c2e95ecd25fc3d4">push_back</a> (const T &amp;v)</td></tr>
 <tr class="separator:a412aee6f47ff94d16c2e95ecd25fc3d4 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8cb141034535d200eda09a6987d1d29 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_af8cb141034535d200eda09a6987d1d29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#af8cb141034535d200eda09a6987d1d29">push_back</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;&amp;v)</td></tr>
+<tr class="memitem:af8cb141034535d200eda09a6987d1d29 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_af8cb141034535d200eda09a6987d1d29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#af8cb141034535d200eda09a6987d1d29">push_back</a> (T &amp;&amp;v)</td></tr>
 <tr class="separator:af8cb141034535d200eda09a6987d1d29 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35cfb392ed86585f279a041366d78951 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a35cfb392ed86585f279a041366d78951"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a35cfb392ed86585f279a041366d78951">pop_back</a> ()</td></tr>
 <tr class="separator:a35cfb392ed86585f279a041366d78951 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86f887e45113cd31a9d861d7b9db02b1 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a86f887e45113cd31a9d861d7b9db02b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a86f887e45113cd31a9d861d7b9db02b1">push_front</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v)</td></tr>
+<tr class="memitem:a86f887e45113cd31a9d861d7b9db02b1 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a86f887e45113cd31a9d861d7b9db02b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a86f887e45113cd31a9d861d7b9db02b1">push_front</a> (const T &amp;v)</td></tr>
 <tr class="separator:a86f887e45113cd31a9d861d7b9db02b1 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b2b0317291e9ede185078dbac6e46de inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a3b2b0317291e9ede185078dbac6e46de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a3b2b0317291e9ede185078dbac6e46de">push_front</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;&amp;v)</td></tr>
+<tr class="memitem:a3b2b0317291e9ede185078dbac6e46de inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a3b2b0317291e9ede185078dbac6e46de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a3b2b0317291e9ede185078dbac6e46de">push_front</a> (T &amp;&amp;v)</td></tr>
 <tr class="separator:a3b2b0317291e9ede185078dbac6e46de inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf8805f086f64a12a533588be3554272 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_aaf8805f086f64a12a533588be3554272"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#aaf8805f086f64a12a533588be3554272">erase</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> it)</td></tr>
 <tr class="separator:aaf8805f086f64a12a533588be3554272 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dca75be6ff6f1e53421deff5e856bca inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a7dca75be6ff6f1e53421deff5e856bca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a7dca75be6ff6f1e53421deff5e856bca">erase</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> it, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> itLast)</td></tr>
 <tr class="separator:a7dca75be6ff6f1e53421deff5e856bca inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3df2c4339c74e0256b81a3c2b5e3ac12 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a3df2c4339c74e0256b81a3c2b5e3ac12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a3df2c4339c74e0256b81a3c2b5e3ac12">insert</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> it, const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v)</td></tr>
+<tr class="memitem:a3df2c4339c74e0256b81a3c2b5e3ac12 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a3df2c4339c74e0256b81a3c2b5e3ac12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a3df2c4339c74e0256b81a3c2b5e3ac12">insert</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> it, const T &amp;v)</td></tr>
 <tr class="separator:a3df2c4339c74e0256b81a3c2b5e3ac12 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0468097f186919701653e58d02e0e688 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a0468097f186919701653e58d02e0e688"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a0468097f186919701653e58d02e0e688">insert</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> it, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;&amp;v)</td></tr>
+<tr class="memitem:a0468097f186919701653e58d02e0e688 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a0468097f186919701653e58d02e0e688"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a0468097f186919701653e58d02e0e688">insert</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> it, T &amp;&amp;v)</td></tr>
 <tr class="separator:a0468097f186919701653e58d02e0e688 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cc4bf4254fde0facbf9329f61a65251 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a3cc4bf4254fde0facbf9329f61a65251"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a3cc4bf4254fde0facbf9329f61a65251">MoveToFront</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> it)</td></tr>
 <tr class="separator:a3cc4bf4254fde0facbf9329f61a65251 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac539da6355b70868ad1c897c6d9b565 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_aac539da6355b70868ad1c897c6d9b565"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#aac539da6355b70868ad1c897c6d9b565">MoveToBack</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> it)</td></tr>
 <tr class="separator:aac539da6355b70868ad1c897c6d9b565 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a343c365e637611e514b055f1bde41dae inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a343c365e637611e514b055f1bde41dae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a343c365e637611e514b055f1bde41dae">contains</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v) const</td></tr>
+<tr class="memitem:a343c365e637611e514b055f1bde41dae inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a343c365e637611e514b055f1bde41dae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a343c365e637611e514b055f1bde41dae">contains</a> (const T &amp;v) const</td></tr>
 <tr class="separator:a343c365e637611e514b055f1bde41dae inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c1246118afeed4a78b9ab79d34f7e97 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a7c1246118afeed4a78b9ab79d34f7e97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a7c1246118afeed4a78b9ab79d34f7e97">find</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v)</td></tr>
+<tr class="memitem:a7c1246118afeed4a78b9ab79d34f7e97 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a7c1246118afeed4a78b9ab79d34f7e97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a7c1246118afeed4a78b9ab79d34f7e97">find</a> (const T &amp;v)</td></tr>
 <tr class="separator:a7c1246118afeed4a78b9ab79d34f7e97 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab484794026cf7256e0f6af39eebd66d8 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_ab484794026cf7256e0f6af39eebd66d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ab484794026cf7256e0f6af39eebd66d8">find</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v) const</td></tr>
+<tr class="memitem:ab484794026cf7256e0f6af39eebd66d8 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_ab484794026cf7256e0f6af39eebd66d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ab484794026cf7256e0f6af39eebd66d8">find</a> (const T &amp;v) const</td></tr>
 <tr class="separator:ab484794026cf7256e0f6af39eebd66d8 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bfe9456a6946f4aa9bd0bde68a86bf3 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a1bfe9456a6946f4aa9bd0bde68a86bf3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a1bfe9456a6946f4aa9bd0bde68a86bf3">reverse_find</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v)</td></tr>
+<tr class="memitem:a1bfe9456a6946f4aa9bd0bde68a86bf3 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a1bfe9456a6946f4aa9bd0bde68a86bf3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a1bfe9456a6946f4aa9bd0bde68a86bf3">reverse_find</a> (const T &amp;v)</td></tr>
 <tr class="separator:a1bfe9456a6946f4aa9bd0bde68a86bf3 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bf3a5d55a65719d09317c3243a73e0f inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a1bf3a5d55a65719d09317c3243a73e0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a1bf3a5d55a65719d09317c3243a73e0f">reverse_find</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v) const</td></tr>
+<tr class="memitem:a1bf3a5d55a65719d09317c3243a73e0f inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a1bf3a5d55a65719d09317c3243a73e0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a1bf3a5d55a65719d09317c3243a73e0f">reverse_find</a> (const T &amp;v) const</td></tr>
 <tr class="separator:a1bf3a5d55a65719d09317c3243a73e0f inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a705ee0b90e2f92769ca31918cb17ce9c inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a705ee0b90e2f92769ca31918cb17ce9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a705ee0b90e2f92769ca31918cb17ce9c">reverse_find</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> itLast)</td></tr>
+<tr class="memitem:a705ee0b90e2f92769ca31918cb17ce9c inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a705ee0b90e2f92769ca31918cb17ce9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a705ee0b90e2f92769ca31918cb17ce9c">reverse_find</a> (const T &amp;v, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> itLast)</td></tr>
 <tr class="separator:a705ee0b90e2f92769ca31918cb17ce9c inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af61f4bad06163ba1cfb23aedfb19f8d9 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_af61f4bad06163ba1cfb23aedfb19f8d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#af61f4bad06163ba1cfb23aedfb19f8d9">reverse_find</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> itLast) const</td></tr>
+<tr class="memitem:af61f4bad06163ba1cfb23aedfb19f8d9 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_af61f4bad06163ba1cfb23aedfb19f8d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#af61f4bad06163ba1cfb23aedfb19f8d9">reverse_find</a> (const T &amp;v, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> itLast) const</td></tr>
 <tr class="separator:af61f4bad06163ba1cfb23aedfb19f8d9 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71c95d3a132a7c9ce7336da9daf48286 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a71c95d3a132a7c9ce7336da9daf48286"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a71c95d3a132a7c9ce7336da9daf48286">find_erase</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;v)</td></tr>
+<tr class="memitem:a71c95d3a132a7c9ce7336da9daf48286 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a71c95d3a132a7c9ce7336da9daf48286"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a71c95d3a132a7c9ce7336da9daf48286">find_erase</a> (const T &amp;v)</td></tr>
 <tr class="separator:a71c95d3a132a7c9ce7336da9daf48286 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac07a4538bceebb6f939bd9d4da55c47c inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_ac07a4538bceebb6f939bd9d4da55c47c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a5a11e30cb7262870362a393a4120c9eb">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ac07a4538bceebb6f939bd9d4da55c47c">IndexOf</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr) const</td></tr>
+<tr class="memitem:ac07a4538bceebb6f939bd9d4da55c47c inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_ac07a4538bceebb6f939bd9d4da55c47c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a5a11e30cb7262870362a393a4120c9eb">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ac07a4538bceebb6f939bd9d4da55c47c">IndexOf</a> (const T *ptr) const</td></tr>
 <tr class="separator:ac07a4538bceebb6f939bd9d4da55c47c inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5802db0d7487e7bb7faed2adbb77cfa2 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base" id="r_a5802db0d7487e7bb7faed2adbb77cfa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a5a11e30cb7262870362a393a4120c9eb">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a5802db0d7487e7bb7faed2adbb77cfa2">IndexOf</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">const_iterator</a> it) const</td></tr>
 <tr class="separator:a5802db0d7487e7bb7faed2adbb77cfa2 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -322,10 +331,10 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Base = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html">VectorBase</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_pointer_iterator.html">Internal::PointerIterator</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&gt;, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_const_pointer_iterator.html">Internal::ConstPointerIterator</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&gt; &gt;</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; T &gt;::Base = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html">VectorBase</a>&lt;T, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_pointer_iterator.html">Internal::PointerIterator</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt;T&gt;&gt;, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_const_pointer_iterator.html">Internal::ConstPointerIterator</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt;T&gt;&gt; &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -338,10 +347,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::const_iterator = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">Base::const_iterator</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; T &gt;::const_iterator = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#ade0cdd95963c1a217ff58e41243d78a8">Base::const_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -354,10 +363,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::iterator = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">Base::iterator</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; T &gt;::iterator = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a74c136faa5eb244c95d619bb12bb866a">Base::iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -370,10 +379,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::size_type = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a5a11e30cb7262870362a393a4120c9eb">Base::size_type</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; T &gt;::size_type = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a5a11e30cb7262870362a393a4120c9eb">Base::size_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -386,10 +395,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::value_type = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#abd685626c82e6cb72fc08016c90b71cd">Base::value_type</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; T &gt;::value_type = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#abd685626c82e6cb72fc08016c90b71cd">Base::value_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -403,13 +412,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Vector </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; T &gt;::Vector </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -430,15 +439,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Vector </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; T &gt;::Vector </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -457,15 +466,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Vector </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; T &gt;::Vector </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -484,13 +493,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Vector </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; T &gt;::Vector </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a80b981c6bb999b01ab16c7212fce2c77">size_type</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
         </tr>
@@ -515,13 +524,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Vector </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; T &gt;::Vector </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a80b981c6bb999b01ab16c7212fce2c77">size_type</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span></td><td>)</td>
           <td></td>
@@ -542,7 +551,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <div class="memtemplate">
 template&lt;typename It &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9765bf4143d8820765b98dea5b">IsIterator_v</a>&lt;It&gt;</div>
@@ -551,7 +560,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Vector </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; T &gt;::Vector </td>
           <td>(</td>
           <td class="paramtype">It</td>          <td class="paramname"><span class="paramname"><em>first</em></span>, </td>
         </tr>
@@ -576,15 +585,15 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Vector </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; T &gt;::Vector </td>
           <td>(</td>
-          <td class="paramtype">std::initializer_list&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>values</em></span></td><td>)</td>
+          <td class="paramtype">std::initializer_list&lt; T &gt;</td>          <td class="paramname"><span class="paramname"><em>values</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -604,15 +613,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator= </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; T &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -631,15 +640,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator= </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Harlinn::Common::Core::Vector</a>&lt; T &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

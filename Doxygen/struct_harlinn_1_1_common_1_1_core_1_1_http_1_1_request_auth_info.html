@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -126,25 +135,25 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a5f0433b96db75b0bde01b3227db3e37b" id="r_a5f0433b96db75b0bde01b3227db3e37b"><td class="memItemLeft" align="right" valign="top">HANDLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f0433b96db75b0bde01b3227db3e37b">AccessToken</a></td></tr>
 <tr class="memdesc:a5f0433b96db75b0bde01b3227db3e37b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A handle to the client token that the receiving process can use to impersonate the authenticated client.  <br /></td></tr>
 <tr class="separator:a5f0433b96db75b0bde01b3227db3e37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2abb8aa97acbc07b14daf6767b0dc641" id="r_a2abb8aa97acbc07b14daf6767b0dc641"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2abb8aa97acbc07b14daf6767b0dc641">ContextAttributes</a></td></tr>
+<tr class="memitem:a2abb8aa97acbc07b14daf6767b0dc641" id="r_a2abb8aa97acbc07b14daf6767b0dc641"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2abb8aa97acbc07b14daf6767b0dc641">ContextAttributes</a></td></tr>
 <tr class="memdesc:a2abb8aa97acbc07b14daf6767b0dc641"><td class="mdescLeft">&#160;</td><td class="mdescRight">The client context attributes for the access token.  <br /></td></tr>
 <tr class="separator:a2abb8aa97acbc07b14daf6767b0dc641"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f8799a17c769589f9ef46376f977d55" id="r_a2f8799a17c769589f9ef46376f977d55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f8799a17c769589f9ef46376f977d55">PackedContextLength</a></td></tr>
+<tr class="memitem:a2f8799a17c769589f9ef46376f977d55" id="r_a2f8799a17c769589f9ef46376f977d55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f8799a17c769589f9ef46376f977d55">PackedContextLength</a></td></tr>
 <tr class="memdesc:a2f8799a17c769589f9ef46376f977d55"><td class="mdescLeft">&#160;</td><td class="mdescRight">The length, in bytes, of the PackedContext.  <br /></td></tr>
 <tr class="separator:a2f8799a17c769589f9ef46376f977d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d28d209e467c347652e52eb00afd223" id="r_a0d28d209e467c347652e52eb00afd223"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d28d209e467c347652e52eb00afd223">PackedContextType</a></td></tr>
+<tr class="memitem:a0d28d209e467c347652e52eb00afd223" id="r_a0d28d209e467c347652e52eb00afd223"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d28d209e467c347652e52eb00afd223">PackedContextType</a></td></tr>
 <tr class="memdesc:a0d28d209e467c347652e52eb00afd223"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of context in the PackedContext member.  <br /></td></tr>
 <tr class="separator:a0d28d209e467c347652e52eb00afd223"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e20eef77962bb41007b72bd8ac640e7" id="r_a1e20eef77962bb41007b72bd8ac640e7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e20eef77962bb41007b72bd8ac640e7">PackedContext</a></td></tr>
 <tr class="memdesc:a1e20eef77962bb41007b72bd8ac640e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The security context for the authentication type.  <br /></td></tr>
 <tr class="separator:a1e20eef77962bb41007b72bd8ac640e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc2a95ea9e1585614f91a4cd9154c813" id="r_abc2a95ea9e1585614f91a4cd9154c813"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc2a95ea9e1585614f91a4cd9154c813">MutualAuthDataLength</a></td></tr>
+<tr class="memitem:abc2a95ea9e1585614f91a4cd9154c813" id="r_abc2a95ea9e1585614f91a4cd9154c813"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc2a95ea9e1585614f91a4cd9154c813">MutualAuthDataLength</a></td></tr>
 <tr class="memdesc:abc2a95ea9e1585614f91a4cd9154c813"><td class="mdescLeft">&#160;</td><td class="mdescRight">The length, in bytes, of the pMutualAuthData member.  <br /></td></tr>
 <tr class="separator:abc2a95ea9e1585614f91a4cd9154c813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88628ab017264891c2added5234e4ebf" id="r_a88628ab017264891c2added5234e4ebf"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88628ab017264891c2added5234e4ebf">pMutualAuthData</a></td></tr>
 <tr class="memdesc:a88628ab017264891c2added5234e4ebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Base64 encoded mutual authentication data used in the WWW-Authenticate header.  <br /></td></tr>
 <tr class="separator:a88628ab017264891c2added5234e4ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ac012c85a9484640e9b0b8886617449" id="r_a7ac012c85a9484640e9b0b8886617449"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ac012c85a9484640e9b0b8886617449">PackageNameLength</a></td></tr>
+<tr class="memitem:a7ac012c85a9484640e9b0b8886617449" id="r_a7ac012c85a9484640e9b0b8886617449"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ac012c85a9484640e9b0b8886617449">PackageNameLength</a></td></tr>
 <tr class="separator:a7ac012c85a9484640e9b0b8886617449"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a011947abc757dae3862e142278ecd060" id="r_a011947abc757dae3862e142278ecd060"><td class="memItemLeft" align="right" valign="top">wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a011947abc757dae3862e142278ecd060">pPackageName</a></td></tr>
 <tr class="separator:a011947abc757dae3862e142278ecd060"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,7 +218,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::Http::RequestAuthInfo::ContextAttributes</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::Http::RequestAuthInfo::ContextAttributes</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -241,7 +250,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::Http::RequestAuthInfo::MutualAuthDataLength</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::Http::RequestAuthInfo::MutualAuthDataLength</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -257,7 +266,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::Http::RequestAuthInfo::PackageNameLength</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::Http::RequestAuthInfo::PackageNameLength</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -289,7 +298,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::Http::RequestAuthInfo::PackedContextLength</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::Http::RequestAuthInfo::PackedContextLength</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -305,7 +314,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::Http::RequestAuthInfo::PackedContextType</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::Http::RequestAuthInfo::PackedContextType</td>
         </tr>
       </table>
 </div><div class="memdoc">

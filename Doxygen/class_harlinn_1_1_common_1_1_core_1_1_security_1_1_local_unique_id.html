@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -122,7 +131,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad87605ce9436c8bc281fd878ae3891d3" id="r_ad87605ce9436c8bc281fd878ae3891d3"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad87605ce9436c8bc281fd878ae3891d3">LocalUniqueId</a> () noexcept</td></tr>
 <tr class="separator:ad87605ce9436c8bc281fd878ae3891d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2875d62c12fe5df76377832cba3b215f" id="r_a2875d62c12fe5df76377832cba3b215f"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2875d62c12fe5df76377832cba3b215f">LocalUniqueId</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a13924c1d5f2db40d873e0a808bb89b68">data</a>) noexcept</td></tr>
+<tr class="memitem:a2875d62c12fe5df76377832cba3b215f" id="r_a2875d62c12fe5df76377832cba3b215f"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2875d62c12fe5df76377832cba3b215f">LocalUniqueId</a> (<a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a> <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a13924c1d5f2db40d873e0a808bb89b68">data</a>) noexcept</td></tr>
 <tr class="separator:a2875d62c12fe5df76377832cba3b215f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a188348a23093186a8178981bd302cfa1" id="r_a188348a23093186a8178981bd302cfa1"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a188348a23093186a8178981bd302cfa1">LocalUniqueId</a> (LUID <a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a13924c1d5f2db40d873e0a808bb89b68">data</a>) noexcept</td></tr>
 <tr class="separator:a188348a23093186a8178981bd302cfa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,7 +139,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a227139d0e9cb1f92966bb3782939831c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16ede4e65b787501eb437ce73f42db57" id="r_a16ede4e65b787501eb437ce73f42db57"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16ede4e65b787501eb437ce73f42db57">operator&lt;=&gt;</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_security_1_1_local_unique_id.html">LocalUniqueId</a> &amp;other) const noexcept=default</td></tr>
 <tr class="separator:a16ede4e65b787501eb437ce73f42db57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81885ad5266c5df5c5156f0d491bda6a" id="r_a81885ad5266c5df5c5156f0d491bda6a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81885ad5266c5df5c5156f0d491bda6a">operator&lt;=&gt;</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a> other) const noexcept</td></tr>
+<tr class="memitem:a81885ad5266c5df5c5156f0d491bda6a" id="r_a81885ad5266c5df5c5156f0d491bda6a"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81885ad5266c5df5c5156f0d491bda6a">operator&lt;=&gt;</a> (<a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a> other) const noexcept</td></tr>
 <tr class="separator:a81885ad5266c5df5c5156f0d491bda6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fb23cb00818a4624da22bd70f83e146" id="r_a9fb23cb00818a4624da22bd70f83e146"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fb23cb00818a4624da22bd70f83e146">operator&lt;=&gt;</a> (LUID other) const noexcept</td></tr>
 <tr class="separator:a9fb23cb00818a4624da22bd70f83e146"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,7 +176,7 @@ Static Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ab7e50795c090f23ce9d34c18a4ad0396" id="r_ab7e50795c090f23ce9d34c18a4ad0396"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7e50795c090f23ce9d34c18a4ad0396">data_</a></td></tr>
+<tr class="memitem:ab7e50795c090f23ce9d34c18a4ad0396" id="r_ab7e50795c090f23ce9d34c18a4ad0396"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7e50795c090f23ce9d34c18a4ad0396">data_</a></td></tr>
 <tr class="separator:ab7e50795c090f23ce9d34c18a4ad0396"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -225,7 +234,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Common::Core::Security::LocalUniqueId::LocalUniqueId </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a></td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a></td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -429,7 +438,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">auto Harlinn::Common::Core::Security::LocalUniqueId::operator&lt;=&gt; </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a></td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a></td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -661,7 +670,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a> Harlinn::Common::Core::Security::LocalUniqueId::data_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a> Harlinn::Common::Core::Security::LocalUniqueId::data_</td>
         </tr>
       </table>
   </td>

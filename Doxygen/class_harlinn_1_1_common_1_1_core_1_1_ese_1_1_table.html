@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -162,7 +171,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a86d08343e8dcbd94e10e2a3f132f5779" id="r_a86d08343e8dcbd94e10e2a3f132f5779"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86d08343e8dcbd94e10e2a3f132f5779">MakeKey</a> (const void *keyData, unsigned long keyDataLength, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9">KeyFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9a6adf97f83acf6453d4a6a4b1070f3754">KeyFlags::None</a>) const</td></tr>
 <tr class="separator:a86d08343e8dcbd94e10e2a3f132f5779"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09a472799649dee8d478a45256f96e2b" id="r_a09a472799649dee8d478a45256f96e2b"><td class="memTemplParams" colspan="2">template&lt;DirectType T&gt; </td></tr>
-<tr class="memitem:a09a472799649dee8d478a45256f96e2b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a09a472799649dee8d478a45256f96e2b">MakeKey</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;keyData, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9">KeyFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9a6adf97f83acf6453d4a6a4b1070f3754">KeyFlags::None</a>) const</td></tr>
+<tr class="memitem:a09a472799649dee8d478a45256f96e2b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a09a472799649dee8d478a45256f96e2b">MakeKey</a> (const T &amp;keyData, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9">KeyFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9a6adf97f83acf6453d4a6a4b1070f3754">KeyFlags::None</a>) const</td></tr>
 <tr class="separator:a09a472799649dee8d478a45256f96e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97a1cfce7904adeb572f9c89da453883" id="r_a97a1cfce7904adeb572f9c89da453883"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97a1cfce7904adeb572f9c89da453883">MakeKey</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> &amp;dateTime, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9">KeyFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9a6adf97f83acf6453d4a6a4b1070f3754">KeyFlags::None</a>) const</td></tr>
 <tr class="separator:a97a1cfce7904adeb572f9c89da453883"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,10 +180,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a15074c48a7424c00868791774c2f1e9a" id="r_a15074c48a7424c00868791774c2f1e9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15074c48a7424c00868791774c2f1e9a">MakeKey</a> (bool value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9">KeyFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9a6adf97f83acf6453d4a6a4b1070f3754">KeyFlags::None</a>) const</td></tr>
 <tr class="separator:a15074c48a7424c00868791774c2f1e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17f8a1634965145d7739e3bdaa514e61" id="r_a17f8a1634965145d7739e3bdaa514e61"><td class="memTemplParams" colspan="2">template&lt;SimpleCharSpanLike T&gt; </td></tr>
-<tr class="memitem:a17f8a1634965145d7739e3bdaa514e61"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a17f8a1634965145d7739e3bdaa514e61">MakeKey</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9">KeyFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9a6adf97f83acf6453d4a6a4b1070f3754">KeyFlags::None</a>) const</td></tr>
+<tr class="memitem:a17f8a1634965145d7739e3bdaa514e61"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a17f8a1634965145d7739e3bdaa514e61">MakeKey</a> (const T &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9">KeyFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9a6adf97f83acf6453d4a6a4b1070f3754">KeyFlags::None</a>) const</td></tr>
 <tr class="separator:a17f8a1634965145d7739e3bdaa514e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17f8a1634965145d7739e3bdaa514e61" id="r_a17f8a1634965145d7739e3bdaa514e61"><td class="memTemplParams" colspan="2">template&lt;SimpleByteSpanLike T&gt; </td></tr>
-<tr class="memitem:a17f8a1634965145d7739e3bdaa514e61"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a17f8a1634965145d7739e3bdaa514e61">MakeKey</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9">KeyFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9a6adf97f83acf6453d4a6a4b1070f3754">KeyFlags::None</a>) const</td></tr>
+<tr class="memitem:a17f8a1634965145d7739e3bdaa514e61"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a17f8a1634965145d7739e3bdaa514e61">MakeKey</a> (const T &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9">KeyFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9a6adf97f83acf6453d4a6a4b1070f3754">KeyFlags::None</a>) const</td></tr>
 <tr class="separator:a17f8a1634965145d7739e3bdaa514e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c616091cbd79d7668f7c1eb6a6f5ab6" id="r_a5c616091cbd79d7668f7c1eb6a6f5ab6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c616091cbd79d7668f7c1eb6a6f5ab6">MakeKey</a> (const char *value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9">KeyFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#af3c227813acacef67b1a7456139e7ce9a6adf97f83acf6453d4a6a4b1070f3754">KeyFlags::None</a>) const</td></tr>
 <tr class="separator:a5c616091cbd79d7668f7c1eb6a6f5ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,7 +204,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad21eb1b704a2658bebbbd9187071a490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current index of a cursor. The current index of a cursor defines which records in a table are visible to that cursor and the order in which they appear by selecting the set of index entries to use to expose those records.  <br /></td></tr>
 <tr class="separator:ad21eb1b704a2658bebbbd9187071a490"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f556bfc08ae8f0b6cf16674e6019799" id="r_a1f556bfc08ae8f0b6cf16674e6019799"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:a1f556bfc08ae8f0b6cf16674e6019799"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1f556bfc08ae8f0b6cf16674e6019799">SetCurrentIndex</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;indexName) const</td></tr>
+<tr class="memitem:a1f556bfc08ae8f0b6cf16674e6019799"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1f556bfc08ae8f0b6cf16674e6019799">SetCurrentIndex</a> (const T &amp;indexName) const</td></tr>
 <tr class="memdesc:a1f556bfc08ae8f0b6cf16674e6019799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current index of a cursor. The current index of a cursor defines which records in a table are visible to that cursor and the order in which they appear by selecting the set of index entries to use to expose those records.  <br /></td></tr>
 <tr class="separator:a1f556bfc08ae8f0b6cf16674e6019799"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99b58f3c5b4b39120a4c1866811928dc" id="r_a99b58f3c5b4b39120a4c1866811928dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99b58f3c5b4b39120a4c1866811928dc">SetCurrentIndex</a> (const wchar_t *indexName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a049876128f09ba0c2fa5d4b906735ae8">SetCurrentIndexFlags</a> flags) const</td></tr>
@@ -205,7 +214,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a375fb3219c6fcf29074bc499c60517ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current index of a cursor that defines which records in a table are visible to that cursor and the order in which they appear by selecting the set of index entries to use to expose those records.  <br /></td></tr>
 <tr class="separator:a375fb3219c6fcf29074bc499c60517ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa45e808a3a6e77d1229166034c8b3b4c" id="r_aa45e808a3a6e77d1229166034c8b3b4c"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:aa45e808a3a6e77d1229166034c8b3b4c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa45e808a3a6e77d1229166034c8b3b4c">SetCurrentIndex</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;indexName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a049876128f09ba0c2fa5d4b906735ae8">SetCurrentIndexFlags</a> flags) const</td></tr>
+<tr class="memitem:aa45e808a3a6e77d1229166034c8b3b4c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa45e808a3a6e77d1229166034c8b3b4c">SetCurrentIndex</a> (const T &amp;indexName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a049876128f09ba0c2fa5d4b906735ae8">SetCurrentIndexFlags</a> flags) const</td></tr>
 <tr class="memdesc:aa45e808a3a6e77d1229166034c8b3b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current index of a cursor. The current index of a cursor defines which records in a table are visible to that cursor and the order in which they appear by selecting the set of index entries to use to expose those records.  <br /></td></tr>
 <tr class="separator:aa45e808a3a6e77d1229166034c8b3b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a447005d8585b64c94c8a5aac41470f57" id="r_a447005d8585b64c94c8a5aac41470f57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a447005d8585b64c94c8a5aac41470f57">SetCurrentIndex</a> (const wchar_t *indexName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a049876128f09ba0c2fa5d4b906735ae8">SetCurrentIndexFlags</a> flags, unsigned long itagSequence) const</td></tr>
@@ -215,18 +224,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afee15e2af7c95672b31396a28528cadd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current index of a cursor. The current index of a cursor defines which records in a table are visible to that cursor and the order in which they appear by selecting the set of index entries to use to expose those records.  <br /></td></tr>
 <tr class="separator:afee15e2af7c95672b31396a28528cadd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23a70b29e1f17ab3bc2169aa7d38ead3" id="r_a23a70b29e1f17ab3bc2169aa7d38ead3"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:a23a70b29e1f17ab3bc2169aa7d38ead3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a23a70b29e1f17ab3bc2169aa7d38ead3">SetCurrentIndex</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;indexName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a049876128f09ba0c2fa5d4b906735ae8">SetCurrentIndexFlags</a> flags, unsigned long itagSequence) const</td></tr>
+<tr class="memitem:a23a70b29e1f17ab3bc2169aa7d38ead3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a23a70b29e1f17ab3bc2169aa7d38ead3">SetCurrentIndex</a> (const T &amp;indexName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a049876128f09ba0c2fa5d4b906735ae8">SetCurrentIndexFlags</a> flags, unsigned long itagSequence) const</td></tr>
 <tr class="memdesc:a23a70b29e1f17ab3bc2169aa7d38ead3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current index of a cursor. The current index of a cursor defines which records in a table are visible to that cursor and the order in which they appear by selecting the set of index entries to use to expose those records.  <br /></td></tr>
 <tr class="separator:a23a70b29e1f17ab3bc2169aa7d38ead3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae53e0e4756dc1e7d0fd803fb012b8d65" id="r_ae53e0e4756dc1e7d0fd803fb012b8d65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa71c1814cc10465a29c98721f5580304">Ese::Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae53e0e4756dc1e7d0fd803fb012b8d65">Seek</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#afdba0c321abc818cb263067065607aeb">SeekFlags</a> flags) const</td></tr>
 <tr class="memdesc:ae53e0e4756dc1e7d0fd803fb012b8d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Efficiently positions a cursor to an index entry that matches the search criteria specified by the search key in that cursor and the specified inequality. A search key must have been previously constructed using <a class="el" href="#a86d08343e8dcbd94e10e2a3f132f5779">Table::MakeKey</a>.  <br /></td></tr>
 <tr class="separator:ae53e0e4756dc1e7d0fd803fb012b8d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0275bb98afacca29e68a900149fe3d3" id="r_ad0275bb98afacca29e68a900149fe3d3"><td class="memTemplParams" colspan="2">template&lt;BinaryLike T&gt; </td></tr>
-<tr class="memitem:ad0275bb98afacca29e68a900149fe3d3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad0275bb98afacca29e68a900149fe3d3">GetBookmark</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;result) const</td></tr>
+<tr class="memitem:ad0275bb98afacca29e68a900149fe3d3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad0275bb98afacca29e68a900149fe3d3">GetBookmark</a> (T &amp;result) const</td></tr>
 <tr class="memdesc:ad0275bb98afacca29e68a900149fe3d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the bookmark for the record that is associated with the index entry at the current position of a cursor. This bookmark can then be used to reposition that cursor back to the same record using Table::GoToBookmark.  <br /></td></tr>
 <tr class="separator:ad0275bb98afacca29e68a900149fe3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57885a7c38c203ab4066941fcd4b0192" id="r_a57885a7c38c203ab4066941fcd4b0192"><td class="memTemplParams" colspan="2">template&lt;SimpleByteSpanLike T&gt; </td></tr>
-<tr class="memitem:a57885a7c38c203ab4066941fcd4b0192"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a57885a7c38c203ab4066941fcd4b0192">GotoBookmark</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;bookmark) const</td></tr>
+<tr class="memitem:a57885a7c38c203ab4066941fcd4b0192"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a57885a7c38c203ab4066941fcd4b0192">GotoBookmark</a> (const T &amp;bookmark) const</td></tr>
 <tr class="memdesc:a57885a7c38c203ab4066941fcd4b0192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Positions the cursor to an index entry for the record that is associated with the specified bookmark. The bookmark can be used with any index defined over a table. The bookmark for a record can be retrieved using <a class="el" href="#ad0275bb98afacca29e68a900149fe3d3" title="Retrieves the bookmark for the record that is associated with the index entry at the current position...">Table::GetBookmark</a>.  <br /></td></tr>
 <tr class="separator:a57885a7c38c203ab4066941fcd4b0192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab06efae029420bbc3e4c07c700ec88d2" id="r_ab06efae029420bbc3e4c07c700ec88d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab06efae029420bbc3e4c07c700ec88d2">Move</a> (long offset, bool moveKeyNE=false) const</td></tr>
@@ -347,7 +356,7 @@ requires (SimpleWideStringLike&lt;StringT&gt; &amp;&amp; std::is_same_v&lt;Colum
 <tr class="memitem:ab2895cc82e6c7c03e67a2b8a82d49180" id="r_ab2895cc82e6c7c03e67a2b8a82d49180"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2895cc82e6c7c03e67a2b8a82d49180">Store</a> () const</td></tr>
 <tr class="memdesc:ab2895cc82e6c7c03e67a2b8a82d49180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs an update operation including inserting a new row into a table or updating an existing row.  <br /></td></tr>
 <tr class="separator:ab2895cc82e6c7c03e67a2b8a82d49180"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad41e1eb65033933e16d7e6cb8100cd65" id="r_ad41e1eb65033933e16d7e6cb8100cd65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad41e1eb65033933e16d7e6cb8100cd65">EscrowUpdate</a> (__in JET_COLUMNID columnId, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> addendum, __in bool escrowNoRollback=false)</td></tr>
+<tr class="memitem:ad41e1eb65033933e16d7e6cb8100cd65" id="r_ad41e1eb65033933e16d7e6cb8100cd65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad41e1eb65033933e16d7e6cb8100cd65">EscrowUpdate</a> (__in JET_COLUMNID columnId, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> addendum, __in bool escrowNoRollback=false)</td></tr>
 <tr class="memdesc:ad41e1eb65033933e16d7e6cb8100cd65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs an atomic addition operation on one column. This function allows multiple sessions to update the same record concurrently without conflicts.  <br /></td></tr>
 <tr class="separator:ad41e1eb65033933e16d7e6cb8100cd65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f73a9247091f2be60ad233c15f9df9a" id="r_a9f73a9247091f2be60ad233c15f9df9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f73a9247091f2be60ad233c15f9df9a">Delete</a> () const</td></tr>
@@ -357,11 +366,11 @@ requires (SimpleWideStringLike&lt;StringT&gt; &amp;&amp; std::is_same_v&lt;Colum
 <tr class="memdesc:acf5441f69ea1c7569b821d1f94e5bd2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SetSequential function notifies the database engine that the application is scanning the entire current index that contains a given cursor. Consequently, the methods that are used to access the index data will be tuned to make this scenario as fast as possible.  <br /></td></tr>
 <tr class="separator:acf5441f69ea1c7569b821d1f94e5bd2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32cdf8e0521884d36e5122c169397e21" id="r_a32cdf8e0521884d36e5122c169397e21"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:a32cdf8e0521884d36e5122c169397e21"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a32cdf8e0521884d36e5122c169397e21">GetColumnId</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName)</td></tr>
+<tr class="memitem:a32cdf8e0521884d36e5122c169397e21"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a32cdf8e0521884d36e5122c169397e21">GetColumnId</a> (const T *columnName)</td></tr>
 <tr class="memdesc:a32cdf8e0521884d36e5122c169397e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the column id for the column identified by the columnName argument.  <br /></td></tr>
 <tr class="separator:a32cdf8e0521884d36e5122c169397e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae991bb8c4ede33e42e42fc099b78a32" id="r_aae991bb8c4ede33e42e42fc099b78a32"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:aae991bb8c4ede33e42e42fc099b78a32"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aae991bb8c4ede33e42e42fc099b78a32">GetColumnId</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName)</td></tr>
+<tr class="memitem:aae991bb8c4ede33e42e42fc099b78a32"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aae991bb8c4ede33e42e42fc099b78a32">GetColumnId</a> (const T &amp;columnName)</td></tr>
 <tr class="memdesc:aae991bb8c4ede33e42e42fc099b78a32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the column id for the column identified by the columnName argument.  <br /></td></tr>
 <tr class="separator:aae991bb8c4ede33e42e42fc099b78a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af306ecc8fad0c3b0d777ecfb3e3ad1ed" id="r_af306ecc8fad0c3b0d777ecfb3e3ad1ed"><td class="memItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af306ecc8fad0c3b0d777ecfb3e3ad1ed">AddColumn</a> (const wchar_t *columnName, const JET_COLUMNDEF &amp;columnDef, const void *defaultValueBuffer=nullptr, unsigned long defaultValueBufferSize=0) const</td></tr>
@@ -371,137 +380,137 @@ requires (SimpleWideStringLike&lt;StringT&gt; &amp;&amp; std::is_same_v&lt;Colum
 <tr class="memdesc:a457804f745688570a21479498e3e526f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new column to an existing table in an ESE database.  <br /></td></tr>
 <tr class="separator:a457804f745688570a21479498e3e526f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99d5e2646b1df04e037d4034df120d23" id="r_a99d5e2646b1df04e037d4034df120d23"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:a99d5e2646b1df04e037d4034df120d23"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a99d5e2646b1df04e037d4034df120d23">AddColumn</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, const JET_COLUMNDEF &amp;columnDef, const void *defaultValueBuffer=nullptr, unsigned long defaultValueBufferSize=0) const</td></tr>
+<tr class="memitem:a99d5e2646b1df04e037d4034df120d23"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a99d5e2646b1df04e037d4034df120d23">AddColumn</a> (const T &amp;columnName, const JET_COLUMNDEF &amp;columnDef, const void *defaultValueBuffer=nullptr, unsigned long defaultValueBufferSize=0) const</td></tr>
 <tr class="memdesc:a99d5e2646b1df04e037d4034df120d23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new column to an existing table in an ESE database.  <br /></td></tr>
 <tr class="separator:a99d5e2646b1df04e037d4034df120d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea555df1f3078225e295d15bed8b9f3a" id="r_aea555df1f3078225e295d15bed8b9f3a"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:aea555df1f3078225e295d15bed8b9f3a"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aea555df1f3078225e295d15bed8b9f3a">AddBoolean</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:aea555df1f3078225e295d15bed8b9f3a"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aea555df1f3078225e295d15bed8b9f3a">AddBoolean</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:aea555df1f3078225e295d15bed8b9f3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a boolean column to the table.  <br /></td></tr>
 <tr class="separator:aea555df1f3078225e295d15bed8b9f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdbdb374c50204980723739d3b5372ac" id="r_acdbdb374c50204980723739d3b5372ac"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:acdbdb374c50204980723739d3b5372ac"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acdbdb374c50204980723739d3b5372ac">AddBoolean</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:acdbdb374c50204980723739d3b5372ac"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#acdbdb374c50204980723739d3b5372ac">AddBoolean</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:acdbdb374c50204980723739d3b5372ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a boolean column to the table.  <br /></td></tr>
 <tr class="separator:acdbdb374c50204980723739d3b5372ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addf38f4eaa4a27c2626d578ccf09ca7d" id="r_addf38f4eaa4a27c2626d578ccf09ca7d"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:addf38f4eaa4a27c2626d578ccf09ca7d"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#addf38f4eaa4a27c2626d578ccf09ca7d">AddSByte</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:addf38f4eaa4a27c2626d578ccf09ca7d"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#addf38f4eaa4a27c2626d578ccf09ca7d">AddSByte</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:addf38f4eaa4a27c2626d578ccf09ca7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a SByte column to the table.  <br /></td></tr>
 <tr class="separator:addf38f4eaa4a27c2626d578ccf09ca7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8784077c21143a45f6f93a8366d46e08" id="r_a8784077c21143a45f6f93a8366d46e08"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:a8784077c21143a45f6f93a8366d46e08"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8784077c21143a45f6f93a8366d46e08">AddSByte</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a8784077c21143a45f6f93a8366d46e08"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8784077c21143a45f6f93a8366d46e08">AddSByte</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a8784077c21143a45f6f93a8366d46e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a SByte column to the table.  <br /></td></tr>
 <tr class="separator:a8784077c21143a45f6f93a8366d46e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cc77b58db6441e09e25decf78a927dd" id="r_a3cc77b58db6441e09e25decf78a927dd"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:a3cc77b58db6441e09e25decf78a927dd"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3cc77b58db6441e09e25decf78a927dd">AddByte</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a3cc77b58db6441e09e25decf78a927dd"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3cc77b58db6441e09e25decf78a927dd">AddByte</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a3cc77b58db6441e09e25decf78a927dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a Byte column to the table.  <br /></td></tr>
 <tr class="separator:a3cc77b58db6441e09e25decf78a927dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67b35e8a0cffa371b45060a0877b8537" id="r_a67b35e8a0cffa371b45060a0877b8537"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:a67b35e8a0cffa371b45060a0877b8537"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a67b35e8a0cffa371b45060a0877b8537">AddByte</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a67b35e8a0cffa371b45060a0877b8537"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a67b35e8a0cffa371b45060a0877b8537">AddByte</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a67b35e8a0cffa371b45060a0877b8537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a Byte column to the table.  <br /></td></tr>
 <tr class="separator:a67b35e8a0cffa371b45060a0877b8537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c10519e0532ec83a4c45235ae956963" id="r_a7c10519e0532ec83a4c45235ae956963"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:a7c10519e0532ec83a4c45235ae956963"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7c10519e0532ec83a4c45235ae956963">AddInt16</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a7c10519e0532ec83a4c45235ae956963"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7c10519e0532ec83a4c45235ae956963">AddInt16</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a7c10519e0532ec83a4c45235ae956963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an Int16 column to the table.  <br /></td></tr>
 <tr class="separator:a7c10519e0532ec83a4c45235ae956963"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6450550ac7735d1faeb2c651200b32b4" id="r_a6450550ac7735d1faeb2c651200b32b4"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:a6450550ac7735d1faeb2c651200b32b4"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6450550ac7735d1faeb2c651200b32b4">AddInt16</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a6450550ac7735d1faeb2c651200b32b4"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6450550ac7735d1faeb2c651200b32b4">AddInt16</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a6450550ac7735d1faeb2c651200b32b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an Int16 column to the table.  <br /></td></tr>
 <tr class="separator:a6450550ac7735d1faeb2c651200b32b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a575aece88a35cd12982267437c53a152" id="r_a575aece88a35cd12982267437c53a152"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:a575aece88a35cd12982267437c53a152"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a575aece88a35cd12982267437c53a152">AddUInt16</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a575aece88a35cd12982267437c53a152"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a575aece88a35cd12982267437c53a152">AddUInt16</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a575aece88a35cd12982267437c53a152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an UInt16 column to the table.  <br /></td></tr>
 <tr class="separator:a575aece88a35cd12982267437c53a152"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a208ad16d86db2298d6284deb0141d367" id="r_a208ad16d86db2298d6284deb0141d367"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:a208ad16d86db2298d6284deb0141d367"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a208ad16d86db2298d6284deb0141d367">AddUInt16</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a208ad16d86db2298d6284deb0141d367"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a208ad16d86db2298d6284deb0141d367">AddUInt16</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a208ad16d86db2298d6284deb0141d367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an UInt16 column to the table.  <br /></td></tr>
 <tr class="separator:a208ad16d86db2298d6284deb0141d367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dc4a3b4840c28d1d49da73368ee904a" id="r_a2dc4a3b4840c28d1d49da73368ee904a"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:a2dc4a3b4840c28d1d49da73368ee904a"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2dc4a3b4840c28d1d49da73368ee904a">AddInt32</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a2dc4a3b4840c28d1d49da73368ee904a"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a2dc4a3b4840c28d1d49da73368ee904a">AddInt32</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a2dc4a3b4840c28d1d49da73368ee904a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an Int32 column to the table.  <br /></td></tr>
 <tr class="separator:a2dc4a3b4840c28d1d49da73368ee904a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99946db5b56fce7ab2ebb67be5ae5434" id="r_a99946db5b56fce7ab2ebb67be5ae5434"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:a99946db5b56fce7ab2ebb67be5ae5434"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a99946db5b56fce7ab2ebb67be5ae5434">AddInt32</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a99946db5b56fce7ab2ebb67be5ae5434"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a99946db5b56fce7ab2ebb67be5ae5434">AddInt32</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a99946db5b56fce7ab2ebb67be5ae5434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an Int32 column to the table.  <br /></td></tr>
 <tr class="separator:a99946db5b56fce7ab2ebb67be5ae5434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c9b050471023eeb465f3f949b77a2e5" id="r_a9c9b050471023eeb465f3f949b77a2e5"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:a9c9b050471023eeb465f3f949b77a2e5"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9c9b050471023eeb465f3f949b77a2e5">AddUInt32</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a9c9b050471023eeb465f3f949b77a2e5"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9c9b050471023eeb465f3f949b77a2e5">AddUInt32</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a9c9b050471023eeb465f3f949b77a2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an UInt32 column to the table.  <br /></td></tr>
 <tr class="separator:a9c9b050471023eeb465f3f949b77a2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d05dd255614400e5fb41eb5bea51300" id="r_a0d05dd255614400e5fb41eb5bea51300"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:a0d05dd255614400e5fb41eb5bea51300"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0d05dd255614400e5fb41eb5bea51300">AddUInt32</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a0d05dd255614400e5fb41eb5bea51300"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0d05dd255614400e5fb41eb5bea51300">AddUInt32</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a0d05dd255614400e5fb41eb5bea51300"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an UInt32 column to the table.  <br /></td></tr>
 <tr class="separator:a0d05dd255614400e5fb41eb5bea51300"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a873e1356b98e638f667cd3ed6cc87c0c" id="r_a873e1356b98e638f667cd3ed6cc87c0c"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:a873e1356b98e638f667cd3ed6cc87c0c"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a873e1356b98e638f667cd3ed6cc87c0c">AddInt64</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a873e1356b98e638f667cd3ed6cc87c0c"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a873e1356b98e638f667cd3ed6cc87c0c">AddInt64</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a873e1356b98e638f667cd3ed6cc87c0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an Int64 column to the table.  <br /></td></tr>
 <tr class="separator:a873e1356b98e638f667cd3ed6cc87c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0335e6691e59075a4947ccca5fe4e43" id="r_ad0335e6691e59075a4947ccca5fe4e43"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:ad0335e6691e59075a4947ccca5fe4e43"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad0335e6691e59075a4947ccca5fe4e43">AddInt64</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:ad0335e6691e59075a4947ccca5fe4e43"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad0335e6691e59075a4947ccca5fe4e43">AddInt64</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:ad0335e6691e59075a4947ccca5fe4e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an Int64 column to the table.  <br /></td></tr>
 <tr class="separator:ad0335e6691e59075a4947ccca5fe4e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacff8d3020e10dacfb6a3dd19b2d6881" id="r_aacff8d3020e10dacfb6a3dd19b2d6881"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:aacff8d3020e10dacfb6a3dd19b2d6881"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aacff8d3020e10dacfb6a3dd19b2d6881">AddUInt64</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:aacff8d3020e10dacfb6a3dd19b2d6881"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aacff8d3020e10dacfb6a3dd19b2d6881">AddUInt64</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:aacff8d3020e10dacfb6a3dd19b2d6881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an UInt64 column to the table.  <br /></td></tr>
 <tr class="separator:aacff8d3020e10dacfb6a3dd19b2d6881"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a44c9e648fc929205d775928ffdc48a" id="r_a7a44c9e648fc929205d775928ffdc48a"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:a7a44c9e648fc929205d775928ffdc48a"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7a44c9e648fc929205d775928ffdc48a">AddUInt64</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a7a44c9e648fc929205d775928ffdc48a"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7a44c9e648fc929205d775928ffdc48a">AddUInt64</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a7a44c9e648fc929205d775928ffdc48a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an UInt64 column to the table.  <br /></td></tr>
 <tr class="separator:a7a44c9e648fc929205d775928ffdc48a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabc5e9b00cdf4f17a178f9f24010febd" id="r_aabc5e9b00cdf4f17a178f9f24010febd"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:aabc5e9b00cdf4f17a178f9f24010febd"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aabc5e9b00cdf4f17a178f9f24010febd">AddSingle</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:aabc5e9b00cdf4f17a178f9f24010febd"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aabc5e9b00cdf4f17a178f9f24010febd">AddSingle</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:aabc5e9b00cdf4f17a178f9f24010febd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an single precision floating point column to the table.  <br /></td></tr>
 <tr class="separator:aabc5e9b00cdf4f17a178f9f24010febd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dd1e74297cf492484adbafe9ce6e4ae" id="r_a0dd1e74297cf492484adbafe9ce6e4ae"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:a0dd1e74297cf492484adbafe9ce6e4ae"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0dd1e74297cf492484adbafe9ce6e4ae">AddSingle</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a0dd1e74297cf492484adbafe9ce6e4ae"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0dd1e74297cf492484adbafe9ce6e4ae">AddSingle</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a0dd1e74297cf492484adbafe9ce6e4ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an single precision floating point column to the table.  <br /></td></tr>
 <tr class="separator:a0dd1e74297cf492484adbafe9ce6e4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68976eb327b3b01090ac71a8850be86b" id="r_a68976eb327b3b01090ac71a8850be86b"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:a68976eb327b3b01090ac71a8850be86b"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a68976eb327b3b01090ac71a8850be86b">AddDouble</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a68976eb327b3b01090ac71a8850be86b"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a68976eb327b3b01090ac71a8850be86b">AddDouble</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a68976eb327b3b01090ac71a8850be86b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an double precision floating point column to the table.  <br /></td></tr>
 <tr class="separator:a68976eb327b3b01090ac71a8850be86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a037cdc46d9c2c293441892d7225ecf11" id="r_a037cdc46d9c2c293441892d7225ecf11"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:a037cdc46d9c2c293441892d7225ecf11"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a037cdc46d9c2c293441892d7225ecf11">AddDouble</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a037cdc46d9c2c293441892d7225ecf11"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a037cdc46d9c2c293441892d7225ecf11">AddDouble</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a037cdc46d9c2c293441892d7225ecf11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an double precision floating point column to the table.  <br /></td></tr>
 <tr class="separator:a037cdc46d9c2c293441892d7225ecf11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8640e4e79ef6523e7600cbedb14425ec" id="r_a8640e4e79ef6523e7600cbedb14425ec"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:a8640e4e79ef6523e7600cbedb14425ec"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8640e4e79ef6523e7600cbedb14425ec">AddCurrency</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a8640e4e79ef6523e7600cbedb14425ec"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8640e4e79ef6523e7600cbedb14425ec">AddCurrency</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a8640e4e79ef6523e7600cbedb14425ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a> column to the table.  <br /></td></tr>
 <tr class="separator:a8640e4e79ef6523e7600cbedb14425ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1064fade461391cd83e040a3c4071af1" id="r_a1064fade461391cd83e040a3c4071af1"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:a1064fade461391cd83e040a3c4071af1"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1064fade461391cd83e040a3c4071af1">AddCurrency</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a1064fade461391cd83e040a3c4071af1"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a1064fade461391cd83e040a3c4071af1">AddCurrency</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a1064fade461391cd83e040a3c4071af1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a> column to the table.  <br /></td></tr>
 <tr class="separator:a1064fade461391cd83e040a3c4071af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7653cfb8f23f4bb5eb41d32e8888ca45" id="r_a7653cfb8f23f4bb5eb41d32e8888ca45"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:a7653cfb8f23f4bb5eb41d32e8888ca45"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7653cfb8f23f4bb5eb41d32e8888ca45">AddTimeSpan</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a7653cfb8f23f4bb5eb41d32e8888ca45"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7653cfb8f23f4bb5eb41d32e8888ca45">AddTimeSpan</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="separator:a7653cfb8f23f4bb5eb41d32e8888ca45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3cce3d9243ea04b05acbcb9a46958d7" id="r_af3cce3d9243ea04b05acbcb9a46958d7"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:af3cce3d9243ea04b05acbcb9a46958d7"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af3cce3d9243ea04b05acbcb9a46958d7">AddTimeSpan</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:af3cce3d9243ea04b05acbcb9a46958d7"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af3cce3d9243ea04b05acbcb9a46958d7">AddTimeSpan</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="separator:af3cce3d9243ea04b05acbcb9a46958d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e6f48522f5c87034009b6aa13b05012" id="r_a5e6f48522f5c87034009b6aa13b05012"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:a5e6f48522f5c87034009b6aa13b05012"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5e6f48522f5c87034009b6aa13b05012">AddDateTime</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a5e6f48522f5c87034009b6aa13b05012"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5e6f48522f5c87034009b6aa13b05012">AddDateTime</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a5e6f48522f5c87034009b6aa13b05012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> column to the table.  <br /></td></tr>
 <tr class="separator:a5e6f48522f5c87034009b6aa13b05012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ded25b0e6a732f7d61a46c5f5f54422" id="r_a6ded25b0e6a732f7d61a46c5f5f54422"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:a6ded25b0e6a732f7d61a46c5f5f54422"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6ded25b0e6a732f7d61a46c5f5f54422">AddDateTime</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a6ded25b0e6a732f7d61a46c5f5f54422"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a6ded25b0e6a732f7d61a46c5f5f54422">AddDateTime</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a6ded25b0e6a732f7d61a46c5f5f54422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> column to the table.  <br /></td></tr>
 <tr class="separator:a6ded25b0e6a732f7d61a46c5f5f54422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a273a671b4bc4f19b9034bdf3622c5074" id="r_a273a671b4bc4f19b9034bdf3622c5074"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:a273a671b4bc4f19b9034bdf3622c5074"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a273a671b4bc4f19b9034bdf3622c5074">AddGuid</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a273a671b4bc4f19b9034bdf3622c5074"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a273a671b4bc4f19b9034bdf3622c5074">AddGuid</a> (const T &amp;columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a273a671b4bc4f19b9034bdf3622c5074"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an Guid/uuid column to the table.  <br /></td></tr>
 <tr class="separator:a273a671b4bc4f19b9034bdf3622c5074"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a997dc15e860c0d5543bf7dd2de07685d" id="r_a997dc15e860c0d5543bf7dd2de07685d"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:a997dc15e860c0d5543bf7dd2de07685d"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a997dc15e860c0d5543bf7dd2de07685d">AddGuid</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a997dc15e860c0d5543bf7dd2de07685d"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a997dc15e860c0d5543bf7dd2de07685d">AddGuid</a> (const T *columnName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7a4457d440870ad6d42bab9082d9bf9b61">ColumnFlags::Fixed</a>|<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a997dc15e860c0d5543bf7dd2de07685d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an Guid/uuid column to the table.  <br /></td></tr>
 <tr class="separator:a997dc15e860c0d5543bf7dd2de07685d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afec1abc0ecee5a944911ee698ef25b5d" id="r_afec1abc0ecee5a944911ee698ef25b5d"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:afec1abc0ecee5a944911ee698ef25b5d"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afec1abc0ecee5a944911ee698ef25b5d">AddText</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, unsigned long maxSize=127, short codePage=1200, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:afec1abc0ecee5a944911ee698ef25b5d"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afec1abc0ecee5a944911ee698ef25b5d">AddText</a> (const T *columnName, unsigned long maxSize=127, short codePage=1200, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:afec1abc0ecee5a944911ee698ef25b5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an text column to the table.  <br /></td></tr>
 <tr class="separator:afec1abc0ecee5a944911ee698ef25b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdb8137f6cfa3c21e9c3a813e384cef0" id="r_afdb8137f6cfa3c21e9c3a813e384cef0"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:afdb8137f6cfa3c21e9c3a813e384cef0"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afdb8137f6cfa3c21e9c3a813e384cef0">AddText</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;columnName, unsigned long maxSize=127, short codePage=1200, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:afdb8137f6cfa3c21e9c3a813e384cef0"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afdb8137f6cfa3c21e9c3a813e384cef0">AddText</a> (const T &amp;columnName, unsigned long maxSize=127, short codePage=1200, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:afdb8137f6cfa3c21e9c3a813e384cef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an text column to the table.  <br /></td></tr>
 <tr class="separator:afdb8137f6cfa3c21e9c3a813e384cef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cf92e481f7e4d0667660e0f3e0f56fd" id="r_a3cf92e481f7e4d0667660e0f3e0f56fd"><td class="memTemplParams" colspan="2">template&lt;ApiCharType T&gt; </td></tr>
-<tr class="memitem:a3cf92e481f7e4d0667660e0f3e0f56fd"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3cf92e481f7e4d0667660e0f3e0f56fd">AddBinary</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *columnName, unsigned long maxSize=255, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
+<tr class="memitem:a3cf92e481f7e4d0667660e0f3e0f56fd"><td class="memTemplItemLeft" align="right" valign="top">JET_COLUMNID&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3cf92e481f7e4d0667660e0f3e0f56fd">AddBinary</a> (const T *columnName, unsigned long maxSize=255, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7">ColumnFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a0c86eb8008b1f9b6e96b23e94a9d59f7ab7856775750aad8f280058d25d19de7b">ColumnFlags::NotNULL</a>) const</td></tr>
 <tr class="memdesc:a3cf92e481f7e4d0667660e0f3e0f56fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an binary column to the table.  <br /></td></tr>
 <tr class="separator:a3cf92e481f7e4d0667660e0f3e0f56fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af18b919dab7a6e925f14bb98c8c8b7db" id="r_af18b919dab7a6e925f14bb98c8c8b7db"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
@@ -512,7 +521,7 @@ requires (SimpleWideStringLike&lt;StringT&gt; &amp;&amp; std::is_same_v&lt;Colum
 <tr class="memdesc:a469903bdb06afba9880fcf493605fb6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the column identified by columnId to NULL.  <br /></td></tr>
 <tr class="separator:a469903bdb06afba9880fcf493605fb6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3f0d67aaa099867f9795c80d15f01aa" id="r_ae3f0d67aaa099867f9795c80d15f01aa"><td class="memTemplParams" colspan="2">template&lt;DirectType T&gt; </td></tr>
-<tr class="memitem:ae3f0d67aaa099867f9795c80d15f01aa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae3f0d67aaa099867f9795c80d15f01aa">Read</a> (JET_COLUMNID columnId, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97">RetrieveFlags</a> retrieveFlags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97a6adf97f83acf6453d4a6a4b1070f3754">RetrieveFlags::None</a>) const</td></tr>
+<tr class="memitem:ae3f0d67aaa099867f9795c80d15f01aa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae3f0d67aaa099867f9795c80d15f01aa">Read</a> (JET_COLUMNID columnId, T &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97">RetrieveFlags</a> retrieveFlags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97a6adf97f83acf6453d4a6a4b1070f3754">RetrieveFlags::None</a>) const</td></tr>
 <tr class="memdesc:ae3f0d67aaa099867f9795c80d15f01aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the column value from the column identified by columnId, returning true if the column contained a value, or false. if the column is NULL.  <br /></td></tr>
 <tr class="separator:ae3f0d67aaa099867f9795c80d15f01aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea09a890a1077b823068ca0c998323ce" id="r_aea09a890a1077b823068ca0c998323ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea09a890a1077b823068ca0c998323ce">Read</a> (JET_COLUMNID columnId, bool &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97">RetrieveFlags</a> retrieveFlags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97a6adf97f83acf6453d4a6a4b1070f3754">RetrieveFlags::None</a>) const</td></tr>
@@ -525,45 +534,45 @@ requires (SimpleWideStringLike&lt;StringT&gt; &amp;&amp; std::is_same_v&lt;Colum
 <tr class="memdesc:a1654bf4f3b349824e5ae582fc72068f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a std::chrono::system_clock::time_point value from the column identified by columnId, returning true if the column contained a value, or false. if the column is NULL.  <br /></td></tr>
 <tr class="separator:a1654bf4f3b349824e5ae582fc72068f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3f0d67aaa099867f9795c80d15f01aa" id="r_ae3f0d67aaa099867f9795c80d15f01aa"><td class="memTemplParams" colspan="2">template&lt;StringLike T&gt; </td></tr>
-<tr class="memitem:ae3f0d67aaa099867f9795c80d15f01aa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae3f0d67aaa099867f9795c80d15f01aa">Read</a> (JET_COLUMNID columnId, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97">RetrieveFlags</a> retrieveFlags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97a6adf97f83acf6453d4a6a4b1070f3754">RetrieveFlags::None</a>) const</td></tr>
+<tr class="memitem:ae3f0d67aaa099867f9795c80d15f01aa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae3f0d67aaa099867f9795c80d15f01aa">Read</a> (JET_COLUMNID columnId, T &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97">RetrieveFlags</a> retrieveFlags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97a6adf97f83acf6453d4a6a4b1070f3754">RetrieveFlags::None</a>) const</td></tr>
 <tr class="memdesc:ae3f0d67aaa099867f9795c80d15f01aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a text value from the column identified by columnId, returning true if the column contained a value, or false. if the column is NULL.  <br /></td></tr>
 <tr class="separator:ae3f0d67aaa099867f9795c80d15f01aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3f0d67aaa099867f9795c80d15f01aa" id="r_ae3f0d67aaa099867f9795c80d15f01aa"><td class="memTemplParams" colspan="2">template&lt;BinaryLike T&gt; </td></tr>
-<tr class="memitem:ae3f0d67aaa099867f9795c80d15f01aa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae3f0d67aaa099867f9795c80d15f01aa">Read</a> (JET_COLUMNID columnId, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97">RetrieveFlags</a> retrieveFlags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97a6adf97f83acf6453d4a6a4b1070f3754">RetrieveFlags::None</a>) const</td></tr>
+<tr class="memitem:ae3f0d67aaa099867f9795c80d15f01aa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae3f0d67aaa099867f9795c80d15f01aa">Read</a> (JET_COLUMNID columnId, T &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97">RetrieveFlags</a> retrieveFlags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97a6adf97f83acf6453d4a6a4b1070f3754">RetrieveFlags::None</a>) const</td></tr>
 <tr class="memdesc:ae3f0d67aaa099867f9795c80d15f01aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a binary value from the column identified by columnId, returning true if the column contained a value, or false. if the column is NULL.  <br /></td></tr>
 <tr class="separator:ae3f0d67aaa099867f9795c80d15f01aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3897d6d5bf4c43eae7088e2dc95517a9" id="r_a3897d6d5bf4c43eae7088e2dc95517a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3897d6d5bf4c43eae7088e2dc95517a9">Read</a> (JET_COLUMNID columnId, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_memory_stream.html">IO::MemoryStream</a> &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97">RetrieveFlags</a> retrieveFlags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97a6adf97f83acf6453d4a6a4b1070f3754">RetrieveFlags::None</a>) const</td></tr>
 <tr class="memdesc:a3897d6d5bf4c43eae7088e2dc95517a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a binary value, into a <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_memory_stream.html" title="Creates a stream stored in memory.">IO::MemoryStream</a>, from the column identified by columnId, returning true if the column contained a value, or false. if the column is NULL.  <br /></td></tr>
 <tr class="separator:a3897d6d5bf4c43eae7088e2dc95517a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affe7e3707205e93198af86b6331d756c" id="r_affe7e3707205e93198af86b6331d756c"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
-<tr class="memitem:affe7e3707205e93198af86b6331d756c"><td class="memTemplItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#affe7e3707205e93198af86b6331d756c">As</a> (JET_COLUMNID columnId, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97">RetrieveFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97a6adf97f83acf6453d4a6a4b1070f3754">RetrieveFlags::None</a>) const</td></tr>
+<tr class="memitem:affe7e3707205e93198af86b6331d756c" id="r_affe7e3707205e93198af86b6331d756c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:affe7e3707205e93198af86b6331d756c"><td class="memTemplItemLeft" align="right" valign="top">std::optional&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#affe7e3707205e93198af86b6331d756c">As</a> (JET_COLUMNID columnId, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97">RetrieveFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97a6adf97f83acf6453d4a6a4b1070f3754">RetrieveFlags::None</a>) const</td></tr>
 <tr class="memdesc:affe7e3707205e93198af86b6331d756c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the column value from the column identified by columnId, returning std::optional&lt;T&gt;.  <br /></td></tr>
 <tr class="separator:affe7e3707205e93198af86b6331d756c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7ebda8a3c8ba05f788c401182573d57" id="r_af7ebda8a3c8ba05f788c401182573d57"><td class="memTemplParams" colspan="2">template&lt;DirectType T&gt; </td></tr>
-<tr class="memitem:af7ebda8a3c8ba05f788c401182573d57"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af7ebda8a3c8ba05f788c401182573d57">SetColumn</a> (JET_COLUMNID columnid, const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78">SetFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78a6adf97f83acf6453d4a6a4b1070f3754">SetFlags::None</a>) const</td></tr>
+<tr class="memitem:af7ebda8a3c8ba05f788c401182573d57"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af7ebda8a3c8ba05f788c401182573d57">SetColumn</a> (JET_COLUMNID columnid, const T &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78">SetFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78a6adf97f83acf6453d4a6a4b1070f3754">SetFlags::None</a>) const</td></tr>
 <tr class="memdesc:af7ebda8a3c8ba05f788c401182573d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value of a column identified by column id.  <br /></td></tr>
 <tr class="separator:af7ebda8a3c8ba05f788c401182573d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeef302d2a7e1cfa5b2a0d0739112922f" id="r_aeef302d2a7e1cfa5b2a0d0739112922f"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:aeef302d2a7e1cfa5b2a0d0739112922f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aeef302d2a7e1cfa5b2a0d0739112922f">SetColumn</a> (JET_COLUMNID columnid, const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78">SetFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78a6adf97f83acf6453d4a6a4b1070f3754">SetFlags::None</a>) const</td></tr>
+<tr class="memitem:aeef302d2a7e1cfa5b2a0d0739112922f" id="r_aeef302d2a7e1cfa5b2a0d0739112922f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>, T&gt;</td></tr>
+<tr class="memitem:aeef302d2a7e1cfa5b2a0d0739112922f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aeef302d2a7e1cfa5b2a0d0739112922f">SetColumn</a> (JET_COLUMNID columnid, const T &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78">SetFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78a6adf97f83acf6453d4a6a4b1070f3754">SetFlags::None</a>) const</td></tr>
 <tr class="memdesc:aeef302d2a7e1cfa5b2a0d0739112922f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> value of a column identified by column id.  <br /></td></tr>
 <tr class="separator:aeef302d2a7e1cfa5b2a0d0739112922f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35509d00bf4964a93c5da0d84e75b08c" id="r_a35509d00bf4964a93c5da0d84e75b08c"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;std::chrono::system_clock::time_point, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a35509d00bf4964a93c5da0d84e75b08c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a35509d00bf4964a93c5da0d84e75b08c">SetColumn</a> (JET_COLUMNID columnid, const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78">SetFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78a6adf97f83acf6453d4a6a4b1070f3754">SetFlags::None</a>) const</td></tr>
+<tr class="memitem:a35509d00bf4964a93c5da0d84e75b08c" id="r_a35509d00bf4964a93c5da0d84e75b08c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;std::chrono::system_clock::time_point, T&gt;</td></tr>
+<tr class="memitem:a35509d00bf4964a93c5da0d84e75b08c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a35509d00bf4964a93c5da0d84e75b08c">SetColumn</a> (JET_COLUMNID columnid, const T &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78">SetFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78a6adf97f83acf6453d4a6a4b1070f3754">SetFlags::None</a>) const</td></tr>
 <tr class="memdesc:a35509d00bf4964a93c5da0d84e75b08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the std::chrono::system_clock::time_point value of a column identified by column id.  <br /></td></tr>
 <tr class="separator:a35509d00bf4964a93c5da0d84e75b08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a978cdb1056460ccd6c046efdbb8ed512" id="r_a978cdb1056460ccd6c046efdbb8ed512"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;bool, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a978cdb1056460ccd6c046efdbb8ed512"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a978cdb1056460ccd6c046efdbb8ed512">SetColumn</a> (JET_COLUMNID columnid, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78">SetFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78a6adf97f83acf6453d4a6a4b1070f3754">SetFlags::None</a>) const</td></tr>
+<tr class="memitem:a978cdb1056460ccd6c046efdbb8ed512" id="r_a978cdb1056460ccd6c046efdbb8ed512"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;bool, T&gt;</td></tr>
+<tr class="memitem:a978cdb1056460ccd6c046efdbb8ed512"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a978cdb1056460ccd6c046efdbb8ed512">SetColumn</a> (JET_COLUMNID columnid, T value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78">SetFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78a6adf97f83acf6453d4a6a4b1070f3754">SetFlags::None</a>) const</td></tr>
 <tr class="memdesc:a978cdb1056460ccd6c046efdbb8ed512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the bool value of a column identified by column id.  <br /></td></tr>
 <tr class="separator:a978cdb1056460ccd6c046efdbb8ed512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb00f8e002b67fc4ab0af6f7337c8b45" id="r_abb00f8e002b67fc4ab0af6f7337c8b45"><td class="memTemplParams" colspan="2">template&lt;SimpleCharSpanLike T&gt; </td></tr>
-<tr class="memitem:abb00f8e002b67fc4ab0af6f7337c8b45"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abb00f8e002b67fc4ab0af6f7337c8b45">SetColumn</a> (JET_COLUMNID columnId, const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;text, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78">SetFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78a6adf97f83acf6453d4a6a4b1070f3754">SetFlags::None</a>) const</td></tr>
+<tr class="memitem:abb00f8e002b67fc4ab0af6f7337c8b45"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abb00f8e002b67fc4ab0af6f7337c8b45">SetColumn</a> (JET_COLUMNID columnId, const T &amp;text, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78">SetFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78a6adf97f83acf6453d4a6a4b1070f3754">SetFlags::None</a>) const</td></tr>
 <tr class="memdesc:abb00f8e002b67fc4ab0af6f7337c8b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the text value of a column identified by column id.  <br /></td></tr>
 <tr class="separator:abb00f8e002b67fc4ab0af6f7337c8b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88df7d0845d79ead5a2ac50d0cae3045" id="r_a88df7d0845d79ead5a2ac50d0cae3045"><td class="memTemplParams" colspan="2">template&lt;SimpleByteSpanLike T&gt; </td></tr>
-<tr class="memitem:a88df7d0845d79ead5a2ac50d0cae3045"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a88df7d0845d79ead5a2ac50d0cae3045">SetColumn</a> (JET_COLUMNID columnId, const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78">SetFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78a6adf97f83acf6453d4a6a4b1070f3754">SetFlags::None</a>) const</td></tr>
+<tr class="memitem:a88df7d0845d79ead5a2ac50d0cae3045"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a88df7d0845d79ead5a2ac50d0cae3045">SetColumn</a> (JET_COLUMNID columnId, const T &amp;value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78">SetFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78a6adf97f83acf6453d4a6a4b1070f3754">SetFlags::None</a>) const</td></tr>
 <tr class="memdesc:a88df7d0845d79ead5a2ac50d0cae3045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the binary value of a column identified by column id.  <br /></td></tr>
 <tr class="separator:a88df7d0845d79ead5a2ac50d0cae3045"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8660636a58074f11658b678e93a02e63" id="r_a8660636a58074f11658b678e93a02e63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa71c1814cc10465a29c98721f5580304">Ese::Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8660636a58074f11658b678e93a02e63">ReadBinary</a> (JET_COLUMNID columnId, void *<a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a13924c1d5f2db40d873e0a808bb89b68">data</a>, unsigned long dataSize, unsigned long columnOffset, unsigned long &amp;actualDataSize, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97">RetrieveFlags</a> retrieveFlags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97a6adf97f83acf6453d4a6a4b1070f3754">RetrieveFlags::None</a>) const</td></tr>
@@ -579,12 +588,12 @@ requires std::is_same_v&lt;bool, <a class="el" href="k__tan_8inl.html#a0acb682b8
 <tr class="memdesc:ae2df2a7c205d11be55cf289c7b4a92e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an index for the table.  <br /></td></tr>
 <tr class="separator:ae2df2a7c205d11be55cf289c7b4a92e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf7d2b4c2d1b51351d8d3777108ec44a" id="r_abf7d2b4c2d1b51351d8d3777108ec44a"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T&gt; </td></tr>
-<tr class="memitem:abf7d2b4c2d1b51351d8d3777108ec44a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abf7d2b4c2d1b51351d8d3777108ec44a">CreateIndex</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;indexName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a1e19cf95aa68737df6f277b761b64a2f">IndexFlags</a> indexFlags, const typename T::value_type *keyString, unsigned long keyStringLength, unsigned long density=95) const</td></tr>
+<tr class="memitem:abf7d2b4c2d1b51351d8d3777108ec44a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abf7d2b4c2d1b51351d8d3777108ec44a">CreateIndex</a> (const T &amp;indexName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a1e19cf95aa68737df6f277b761b64a2f">IndexFlags</a> indexFlags, const typename T::value_type *keyString, unsigned long keyStringLength, unsigned long density=95) const</td></tr>
 <tr class="memdesc:abf7d2b4c2d1b51351d8d3777108ec44a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an index for the table.  <br /></td></tr>
 <tr class="separator:abf7d2b4c2d1b51351d8d3777108ec44a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a699002890be95e7478a41a318fbff5f6" id="r_a699002890be95e7478a41a318fbff5f6"><td class="memTemplParams" colspan="2">template&lt;SimpleStringLike T, SimpleCharSpanLike SpanT&gt; <br />
 requires std::is_same_v&lt;typename T::value_type, typename SpanT::value_type &gt;</td></tr>
-<tr class="memitem:a699002890be95e7478a41a318fbff5f6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a699002890be95e7478a41a318fbff5f6">CreateIndex</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;indexName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a1e19cf95aa68737df6f277b761b64a2f">IndexFlags</a> indexFlags, const SpanT &amp;keyString, unsigned long density=95) const</td></tr>
+<tr class="memitem:a699002890be95e7478a41a318fbff5f6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a699002890be95e7478a41a318fbff5f6">CreateIndex</a> (const T &amp;indexName, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a1e19cf95aa68737df6f277b761b64a2f">IndexFlags</a> indexFlags, const SpanT &amp;keyString, unsigned long density=95) const</td></tr>
 <tr class="memdesc:a699002890be95e7478a41a318fbff5f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an index for the table.  <br /></td></tr>
 <tr class="separator:a699002890be95e7478a41a318fbff5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98d942c3a462e5ae0e5e2a0f855b9663" id="r_a98d942c3a462e5ae0e5e2a0f855b9663"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98d942c3a462e5ae0e5e2a0f855b9663">Close</a> ()</td></tr>
@@ -829,7 +838,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds an binary column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -869,7 +878,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddBinary </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -932,7 +941,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddBoolean </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -950,7 +959,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds a boolean column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -989,7 +998,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddBoolean </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1046,7 +1055,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddByte </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1064,7 +1073,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds a Byte column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1103,7 +1112,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddByte </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1221,7 +1230,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddColumn </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1345,7 +1354,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddCurrency </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1363,7 +1372,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds an <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_currency.html" title="Currency are stored as 64-bit integer, scaled by 10,000 to give a fixed-point number with 15 digits t...">Currency</a> column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1402,7 +1411,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddCurrency </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1459,7 +1468,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddDateTime </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1477,7 +1486,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds an <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1516,7 +1525,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddDateTime </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1573,7 +1582,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddDouble </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1591,7 +1600,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds an double precision floating point column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1630,7 +1639,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddDouble </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1687,7 +1696,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddGuid </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1705,7 +1714,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds an Guid/uuid column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1744,7 +1753,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddGuid </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1801,7 +1810,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddInt16 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1819,7 +1828,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds an Int16 column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1858,7 +1867,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddInt16 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1915,7 +1924,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddInt32 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1933,7 +1942,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds an Int32 column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1972,7 +1981,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddInt32 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2029,7 +2038,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddInt64 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2047,7 +2056,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds an Int64 column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2086,7 +2095,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddInt64 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2143,7 +2152,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddSByte </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2161,7 +2170,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds a SByte column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2200,7 +2209,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddSByte </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2257,7 +2266,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddSingle </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2275,7 +2284,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds an single precision floating point column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2314,7 +2323,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddSingle </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2371,7 +2380,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddText </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2399,7 +2408,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds an text column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2440,7 +2449,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddText </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2509,7 +2518,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddTimeSpan </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2527,7 +2536,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>ESE doesn't have a TimeSpan/duration type, this is an alias for an Int64 column. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2566,7 +2575,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddTimeSpan </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2623,7 +2632,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddUInt16 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2641,7 +2650,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds an UInt16 column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2680,7 +2689,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddUInt16 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2737,7 +2746,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddUInt32 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2755,7 +2764,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds an UInt32 column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2794,7 +2803,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddUInt32 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2851,7 +2860,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddUInt64 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2869,7 +2878,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Adds an UInt64 column to the table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2908,7 +2917,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::AddUInt64 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2957,13 +2966,13 @@ It must contain at least one non-space character.  </li>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; Harlinn::Common::Core::Ese::Table::As </td>
+          <td class="memname">std::optional&lt; T &gt; Harlinn::Common::Core::Ese::Table::As </td>
           <td>(</td>
           <td class="paramtype">JET_COLUMNID</td>          <td class="paramname"><span class="paramname"><em>columnId</em></span>, </td>
         </tr>
@@ -3185,7 +3194,7 @@ requires std::is_same_v&lt;typename T::value_type, typename SpanT::value_type &g
         <tr>
           <td class="memname">void Harlinn::Common::Core::Ese::Table::CreateIndex </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>indexName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>indexName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3247,7 +3256,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">void Harlinn::Common::Core::Ese::Table::CreateIndex </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>indexName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>indexName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3404,14 +3413,14 @@ It must contain at least one non-space character.  </li>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> Harlinn::Common::Core::Ese::Table::EscrowUpdate </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> Harlinn::Common::Core::Ese::Table::EscrowUpdate </td>
           <td>(</td>
           <td class="paramtype">__in JET_COLUMNID</td>          <td class="paramname"><span class="paramname"><em>columnId</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>addendum</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a></td>          <td class="paramname"><span class="paramname"><em>addendum</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3453,7 +3462,7 @@ template&lt;BinaryLike T&gt; </div>
         <tr>
           <td class="memname">void Harlinn::Common::Core::Ese::Table::GetBookmark </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
+          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -3467,7 +3476,7 @@ template&lt;BinaryLike T&gt; </div>
 <p>Retrieves the bookmark for the record that is associated with the index entry at the current position of a cursor. This bookmark can then be used to reposition that cursor back to the same record using Table::GoToBookmark. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_binary_like.html">BinaryLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_binary_like.html">BinaryLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3494,7 +3503,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::GetColumnId </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -3508,7 +3517,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Retrieves the column id for the column identified by the columnName argument. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3536,7 +3545,7 @@ template&lt;ApiCharType T&gt; </div>
         <tr>
           <td class="memname">JET_COLUMNID Harlinn::Common::Core::Ese::Table::GetColumnId </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span></td><td>)</td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>columnName</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -3592,7 +3601,7 @@ template&lt;StringLike StringT&gt; </div>
 <p>Retrieves information about the columns of a table. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">StringT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">StringT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3798,7 +3807,7 @@ requires (SimpleWideStringLike&lt;StringT&gt; &amp;&amp; std::is_same_v&lt;Colum
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">ColumnBaseT</td><td>Either JET_COLUMNBASE_W or JET_COLUMNBASE_A. </td></tr>
-    <tr><td class="paramname">StringT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">StringT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3844,7 +3853,7 @@ template&lt;SimpleStringLike StringT&gt; </div>
 <p>Retrieves information about a table column. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">StringT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">StringT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3890,7 +3899,7 @@ template&lt;SimpleStringLike StringT&gt; </div>
 <p>Retrieves information about a table column. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">StringT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">StringT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3952,7 +3961,7 @@ template&lt;SimpleStringLike StringT&gt; </div>
 </dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">StringT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">StringT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4145,7 +4154,7 @@ template&lt;SimpleByteSpanLike T&gt; </div>
         <tr>
           <td class="memname">bool Harlinn::Common::Core::Ese::Table::GotoBookmark </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>bookmark</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>bookmark</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -4159,7 +4168,7 @@ template&lt;SimpleByteSpanLike T&gt; </div>
 <p>Positions the cursor to an index entry for the record that is associated with the specified bookmark. The bookmark can be used with any index defined over a table. The bookmark for a record can be retrieved using <a class="el" href="#ad0275bb98afacca29e68a900149fe3d3" title="Retrieves the bookmark for the record that is associated with the index entry at the current position...">Table::GetBookmark</a>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_byte_span_like.html" title="Matches most common container classes with sequential memory layout.">SimpleByteSpanLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_byte_span_like.html" title="Matches most common container classes with sequential memory layout.">SimpleByteSpanLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4509,7 +4518,7 @@ template&lt;DirectType T&gt; </div>
         <tr>
           <td class="memname">void Harlinn::Common::Core::Ese::Table::MakeKey </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>keyData</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>keyData</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -4572,7 +4581,7 @@ template&lt;SimpleCharSpanLike T&gt; </div>
         <tr>
           <td class="memname">void Harlinn::Common::Core::Ese::Table::MakeKey </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -4591,7 +4600,7 @@ template&lt;SimpleCharSpanLike T&gt; </div>
 <p>A complete search key is built up in a series of MakeKey calls where each call is used to load the column value for the next key column of the current index of a cursor. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4619,7 +4628,7 @@ template&lt;SimpleByteSpanLike T&gt; </div>
         <tr>
           <td class="memname">void Harlinn::Common::Core::Ese::Table::MakeKey </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -4638,7 +4647,7 @@ template&lt;SimpleByteSpanLike T&gt; </div>
 <p>A complete search key is built up in a series of MakeKey calls where each call is used to load the column value for the next key column of the current index of a cursor. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_byte_span_like.html" title="Matches most common container classes with sequential memory layout.">SimpleByteSpanLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_byte_span_like.html" title="Matches most common container classes with sequential memory layout.">SimpleByteSpanLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5273,7 +5282,7 @@ template&lt;DirectType T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -5326,7 +5335,7 @@ template&lt;StringLike T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -5344,7 +5353,7 @@ template&lt;StringLike T&gt; </div>
 <p>Reads a text value from the column identified by columnId, returning true if the column contained a value, or false. if the column is NULL. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5379,7 +5388,7 @@ template&lt;BinaryLike T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -5397,7 +5406,7 @@ template&lt;BinaryLike T&gt; </div>
 <p>Reads a binary value from the column identified by columnId, returning true if the column contained a value, or false. if the column is NULL. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5681,7 +5690,7 @@ requires (std::is_base_of_v&lt; JET_RETRIEVECOLUMN, typename SpanT::value_type&g
 <p>Retrieves multiple column values from the current record in a single operation. An array of JET_RETRIEVECOLUMN structures or <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_retrieve_column.html" title="Holds input and output parameters for use with the Table::RetrieveColumns function....">Ese::RetrieveColumn</a> objects is used to describe the set of column values to be retrieved, and to describe output buffers for each column value to be retrieved. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">SpanT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_span_like.html" title="Matches most containers with sequential memory layout.">SimpleSpanLike</a> concept with a value_type of JET_RETRIEVECOLUMN, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_retrieve_column.html" title="Holds input and output parameters for use with the Table::RetrieveColumns function....">Ese::RetrieveColumn</a>, or a type derived from either them with the same size as JET_RETRIEVECOLUMN. </td></tr>
+    <tr><td class="paramname">SpanT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_span_like.html" title="Matches most containers with sequential memory layout.">SimpleSpanLike</a> concept with a value_type of JET_RETRIEVECOLUMN, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_retrieve_column.html" title="Holds input and output parameters for use with the Table::RetrieveColumns function....">Ese::RetrieveColumn</a>, or a type derived from either them with the same size as JET_RETRIEVECOLUMN. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5698,20 +5707,20 @@ requires (std::is_base_of_v&lt; JET_RETRIEVECOLUMN, typename SpanT::value_type&g
 <li>
 <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa71c1814cc10465a29c98721f5580304abcfbf127fae6ea1f8c33173f2d2fd3b7">Ese::Result::WarningBufferTruncated</a>: The entire column value could not be retrieved because the given buffer is smaller than the size of the column.  </li>
 </ul>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> ReadSensorPoint( <span class="keyword">const</span> <a class="code hl_class" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Ese::Table</a>&amp; <a class="code hl_variable" href="namespace_harlinn_1_1_common_1_1_core.html#aec2d7e95dfd81e76a185fa1c129321b1">table</a>, SensorPoint&amp; sensorPoint )<span class="keyword"> const</span></div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> ReadSensorPoint( <span class="keyword">const</span> <a class="code hl_class" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Ese::Table</a>&amp; <a class="code hl_variable" href="namespace_harlinn_1_1_common_1_1_core.html#ac31e845a52d3ccd785e97e5f49db3cfe">table</a>, SensorPoint&amp; sensorPoint )<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword"></span>{</div>
-<div class="line">    <a class="code hl_typedef" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a> timestamp = 0;</div>
+<div class="line">    <a class="code hl_typedef" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a> timestamp = 0;</div>
 <div class="line">    std::array&lt;Ese::RetrieveColumn, 3&gt; retrieveColumns;</div>
 <div class="line">    retrieveColumns[ 0 ].Bind( timestampColumnId_, timestamp );</div>
 <div class="line">    retrieveColumns[ 1 ].Bind( flagsColumnId_, sensorPoint.Flags );</div>
 <div class="line">    retrieveColumns[ 2 ].Bind( valueColumnId_, sensorPoint.Value );</div>
-<div class="line">    <a class="code hl_variable" href="namespace_harlinn_1_1_common_1_1_core.html#aec2d7e95dfd81e76a185fa1c129321b1">table</a>.RetrieveColumns( retrieveColumns );</div>
+<div class="line">    <a class="code hl_variable" href="namespace_harlinn_1_1_common_1_1_core.html#ac31e845a52d3ccd785e97e5f49db3cfe">table</a>.RetrieveColumns( retrieveColumns );</div>
 <div class="line">    sensorPoint.Timestamp = <a class="code hl_enumvalue" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a02ba6c1b46fa199c2df41d5875577c3da8cf10d2341ed01492506085688270c1e">DateTime</a>( timestamp );</div>
 <div class="line">}</div>
 <div class="ttc" id="aclass_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table_html"><div class="ttname"><a href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_table.html">Harlinn::Common::Core::Ese::Table</a></div><div class="ttdef"><b>Definition</b> HCCEse.h:2036</div></div>
 <div class="ttc" id="anamespace_harlinn_1_1_common_1_1_core_1_1_ese_html_a02ba6c1b46fa199c2df41d5875577c3da8cf10d2341ed01492506085688270c1e"><div class="ttname"><a href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a02ba6c1b46fa199c2df41d5875577c3da8cf10d2341ed01492506085688270c1e">Harlinn::Common::Core::Ese::ColumnType::DateTime</a></div><div class="ttdeci">@ DateTime</div><div class="ttdoc">A double-precision (8-byte) floating point number that represents a date in fractional days since the...</div></div>
-<div class="ttc" id="anamespace_harlinn_1_1_common_1_1_core_html_a934f1e669bbe888bfa94af14a3647296"><div class="ttname"><a href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Harlinn::Common::Core::Int64</a></div><div class="ttdeci">long long Int64</div><div class="ttdef"><b>Definition</b> HCCDef.h:430</div></div>
-<div class="ttc" id="anamespace_harlinn_1_1_common_1_1_core_html_aec2d7e95dfd81e76a185fa1c129321b1"><div class="ttname"><a href="namespace_harlinn_1_1_common_1_1_core.html#aec2d7e95dfd81e76a185fa1c129321b1">Harlinn::Common::Core::table</a></div><div class="ttdeci">static union Harlinn::Common::Core::@8 table</div></div>
+<div class="ttc" id="anamespace_harlinn_1_1_common_1_1_core_html_ac31e845a52d3ccd785e97e5f49db3cfe"><div class="ttname"><a href="namespace_harlinn_1_1_common_1_1_core.html#ac31e845a52d3ccd785e97e5f49db3cfe">Harlinn::Common::Core::table</a></div><div class="ttdeci">static union Harlinn::Common::Core::@14 table</div></div>
+<div class="ttc" id="anamespace_harlinn_1_1_common_html_a5a63a6a5f3e67cefd19fb0873208989d"><div class="ttname"><a href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Harlinn::Common::Int64</a></div><div class="ttdeci">long long Int64</div><div class="ttdef"><b>Definition</b> BasicTypes.h:123</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -5828,7 +5837,7 @@ template&lt;BinaryLike BinaryT&gt; </div>
 <p>The retrieved key can then be used to efficiently return that cursor to the same index entry by a call to Seek </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">BinaryT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_binary_like.html">BinaryLike</a> concept. </td></tr>
+    <tr><td class="paramname">BinaryT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_binary_like.html">BinaryLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5987,7 +5996,7 @@ template&lt;SimpleCharSpanLike T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6005,7 +6014,7 @@ template&lt;SimpleCharSpanLike T&gt; </div>
 <p>Sets the text value of a column identified by column id. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any string container that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any string container that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -6039,7 +6048,7 @@ template&lt;SimpleByteSpanLike T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6057,7 +6066,7 @@ template&lt;SimpleByteSpanLike T&gt; </div>
 <p>Sets the binary value of a column identified by column id. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_byte_span_like.html" title="Matches most common container classes with sequential memory layout.">SimpleByteSpanLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_byte_span_like.html" title="Matches most common container classes with sequential memory layout.">SimpleByteSpanLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -6091,7 +6100,7 @@ template&lt;DirectType T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6130,8 +6139,8 @@ template&lt;DirectType T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>, T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -6144,7 +6153,7 @@ requires std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6183,8 +6192,8 @@ requires std::is_same_v&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;std::chrono::system_clock::time_point, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;std::chrono::system_clock::time_point, T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -6197,7 +6206,7 @@ requires std::is_same_v&lt;std::chrono::system_clock::time_point, <a class="el" 
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6298,8 +6307,8 @@ itagSequence: Sequence number of the desired multi-valued column value to set. I
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;bool, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;bool, T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -6312,7 +6321,7 @@ requires std::is_same_v&lt;bool, <a class="el" href="k__tan_8inl.html#a0acb682b8
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6421,7 +6430,7 @@ requires (std::is_base_of_v&lt; JET_SETCOLUMN, typename SpanT::value_type&gt; ||
 <p>Set multiple column values in a single operation. An array of JET_SETCOLUMN structures, or <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_set_column.html" title="Contains input and output parameters for Table::SetColumns describing which column value to set,...">Ese::SetColumn</a> objects, is used to describe the set of column values to be set, and to describe input buffers for each column value to be set. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">SpanT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_span_like.html" title="Matches most containers with sequential memory layout.">SimpleSpanLike</a> concept with a value_type of JET_SETCOLUMN, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_set_column.html" title="Contains input and output parameters for Table::SetColumns describing which column value to set,...">Ese::SetColumn</a>, or a type derived from either them with the same size as JET_SETCOLUMN. </td></tr>
+    <tr><td class="paramname">SpanT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_span_like.html" title="Matches most containers with sequential memory layout.">SimpleSpanLike</a> concept with a value_type of JET_SETCOLUMN, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_set_column.html" title="Contains input and output parameters for Table::SetColumns describing which column value to set,...">Ese::SetColumn</a>, or a type derived from either them with the same size as JET_SETCOLUMN. </td></tr>
   </table>
   </dd>
 </dl>
@@ -6565,7 +6574,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">void Harlinn::Common::Core::Ese::Table::SetCurrentIndex </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>indexName</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>indexName</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -6579,7 +6588,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Sets the current index of a cursor. The current index of a cursor defines which records in a table are visible to that cursor and the order in which they appear by selecting the set of index entries to use to expose those records. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -6606,7 +6615,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">bool Harlinn::Common::Core::Ese::Table::SetCurrentIndex </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>indexName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>indexName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6624,7 +6633,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Sets the current index of a cursor. The current index of a cursor defines which records in a table are visible to that cursor and the order in which they appear by selecting the set of index entries to use to expose those records. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -6653,7 +6662,7 @@ template&lt;SimpleStringLike T&gt; </div>
         <tr>
           <td class="memname">bool Harlinn::Common::Core::Ese::Table::SetCurrentIndex </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>indexName</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>indexName</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6676,7 +6685,7 @@ template&lt;SimpleStringLike T&gt; </div>
 <p>Sets the current index of a cursor. The current index of a cursor defines which records in a table are visible to that cursor and the order in which they appear by selecting the set of index entries to use to expose those records. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
+    <tr><td class="paramname">T</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_string_like.html" title="Matches most common zero terminated C++ string classes with sequential memory layout.">SimpleStringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>

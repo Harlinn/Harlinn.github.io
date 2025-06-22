@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -109,14 +118,14 @@ $(function(){initNavTree('structhalf__float_1_1detail_1_1half__caster_3_01_t_00_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:abab2f9d3906f11fd4a24493c0121b14a" id="r_abab2f9d3906f11fd4a24493c0121b14a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abab2f9d3906f11fd4a24493c0121b14a">cast</a> (<a class="el" href="classhalf__float_1_1half.html">half</a> arg)</td></tr>
+<tr class="memitem:abab2f9d3906f11fd4a24493c0121b14a" id="r_abab2f9d3906f11fd4a24493c0121b14a"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abab2f9d3906f11fd4a24493c0121b14a">cast</a> (<a class="el" href="classhalf__float_1_1half.html">half</a> arg)</td></tr>
 <tr class="separator:abab2f9d3906f11fd4a24493c0121b14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a16d67150068b62da0436bba3c21a3402" id="r_a16d67150068b62da0436bba3c21a3402"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16d67150068b62da0436bba3c21a3402">cast_impl</a> (<a class="el" href="classhalf__float_1_1half.html">half</a> arg, <a class="el" href="namespacehalf__float_1_1detail.html#a5e245748a3cc20e348dd92383d99d03c">true_type</a>)</td></tr>
+<tr class="memitem:a16d67150068b62da0436bba3c21a3402" id="r_a16d67150068b62da0436bba3c21a3402"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16d67150068b62da0436bba3c21a3402">cast_impl</a> (<a class="el" href="classhalf__float_1_1half.html">half</a> arg, <a class="el" href="namespacehalf__float_1_1detail.html#a5e245748a3cc20e348dd92383d99d03c">true_type</a>)</td></tr>
 <tr class="separator:a16d67150068b62da0436bba3c21a3402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc5cfb0aae3737d1d59c3d2b4bfedadb" id="r_adc5cfb0aae3737d1d59c3d2b4bfedadb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc5cfb0aae3737d1d59c3d2b4bfedadb">cast_impl</a> (<a class="el" href="classhalf__float_1_1half.html">half</a> arg, <a class="el" href="namespacehalf__float_1_1detail.html#a04d0449ab22bc6d1cfb2f31a8271945c">false_type</a>)</td></tr>
+<tr class="memitem:adc5cfb0aae3737d1d59c3d2b4bfedadb" id="r_adc5cfb0aae3737d1d59c3d2b4bfedadb"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc5cfb0aae3737d1d59c3d2b4bfedadb">cast_impl</a> (<a class="el" href="classhalf__float_1_1half.html">half</a> arg, <a class="el" href="namespacehalf__float_1_1detail.html#a04d0449ab22bc6d1cfb2f31a8271945c">false_type</a>)</td></tr>
 <tr class="separator:adc5cfb0aae3737d1d59c3d2b4bfedadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -126,13 +135,13 @@ Static Private Member Functions</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , std::float_round_style R&gt; </div>
+template&lt;typename T , std::float_round_style R&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="structhalf__float_1_1detail_1_1half__caster.html">half_float::detail::half_caster</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="classhalf__float_1_1half.html">half</a>, R &gt;::cast </td>
+          <td class="memname">static T <a class="el" href="structhalf__float_1_1detail_1_1half__caster.html">half_float::detail::half_caster</a>&lt; T, <a class="el" href="classhalf__float_1_1half.html">half</a>, R &gt;::cast </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classhalf__float_1_1half.html">half</a></td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
           <td></td>
@@ -153,13 +162,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , std::float_round_style R&gt; </div>
+template&lt;typename T , std::float_round_style R&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="structhalf__float_1_1detail_1_1half__caster.html">half_float::detail::half_caster</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="classhalf__float_1_1half.html">half</a>, R &gt;::cast_impl </td>
+          <td class="memname">static T <a class="el" href="structhalf__float_1_1detail_1_1half__caster.html">half_float::detail::half_caster</a>&lt; T, <a class="el" href="classhalf__float_1_1half.html">half</a>, R &gt;::cast_impl </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classhalf__float_1_1half.html">half</a></td>          <td class="paramname"><span class="paramname"><em>arg</em></span>, </td>
         </tr>
@@ -184,13 +193,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , std::float_round_style R&gt; </div>
+template&lt;typename T , std::float_round_style R&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="structhalf__float_1_1detail_1_1half__caster.html">half_float::detail::half_caster</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="classhalf__float_1_1half.html">half</a>, R &gt;::cast_impl </td>
+          <td class="memname">static T <a class="el" href="structhalf__float_1_1detail_1_1half__caster.html">half_float::detail::half_caster</a>&lt; T, <a class="el" href="classhalf__float_1_1half.html">half</a>, R &gt;::cast_impl </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classhalf__float_1_1half.html">half</a></td>          <td class="paramname"><span class="paramname"><em>arg</em></span>, </td>
         </tr>

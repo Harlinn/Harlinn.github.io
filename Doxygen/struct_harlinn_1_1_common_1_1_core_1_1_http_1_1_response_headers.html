@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -121,19 +130,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a85b367923eeae284865eb6560830b403"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7205c27d8ca296f5ba49fe9784b9c49" id="r_ac7205c27d8ca296f5ba49fe9784b9c49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7205c27d8ca296f5ba49fe9784b9c49">SetKnownHeader</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_http.html#a33ced4904758287359246f7247503cc4">HeaderId</a> headerId, const char *value)</td></tr>
 <tr class="separator:ac7205c27d8ca296f5ba49fe9784b9c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29693a64b83fb8341424cc1c4c005a9f" id="r_a29693a64b83fb8341424cc1c4c005a9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29693a64b83fb8341424cc1c4c005a9f">SetKnownHeader</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_http.html#a33ced4904758287359246f7247503cc4">HeaderId</a> headerId, const char *value, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> valueLength)</td></tr>
+<tr class="memitem:a29693a64b83fb8341424cc1c4c005a9f" id="r_a29693a64b83fb8341424cc1c4c005a9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29693a64b83fb8341424cc1c4c005a9f">SetKnownHeader</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_http.html#a33ced4904758287359246f7247503cc4">HeaderId</a> headerId, const char *value, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> valueLength)</td></tr>
 <tr class="separator:a29693a64b83fb8341424cc1c4c005a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0a76d35fb76b558aa00a7973702960e" id="r_ae0a76d35fb76b558aa00a7973702960e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0a76d35fb76b558aa00a7973702960e">SetContentType</a> (const char *value)</td></tr>
 <tr class="separator:ae0a76d35fb76b558aa00a7973702960e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:afbbcb78cd67fd45332c9130c2a7dc338" id="r_afbbcb78cd67fd45332c9130c2a7dc338"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbbcb78cd67fd45332c9130c2a7dc338">UnknownHeaderCount</a></td></tr>
+<tr class="memitem:afbbcb78cd67fd45332c9130c2a7dc338" id="r_afbbcb78cd67fd45332c9130c2a7dc338"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbbcb78cd67fd45332c9130c2a7dc338">UnknownHeaderCount</a></td></tr>
 <tr class="memdesc:afbbcb78cd67fd45332c9130c2a7dc338"><td class="mdescLeft">&#160;</td><td class="mdescRight">The array of unknown HTTP headers and the number of entries in the array.  <br /></td></tr>
 <tr class="separator:afbbcb78cd67fd45332c9130c2a7dc338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d6aef04c8b0c3e79b5a623d47218b9e" id="r_a0d6aef04c8b0c3e79b5a623d47218b9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_unknown_header.html">UnknownHeader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d6aef04c8b0c3e79b5a623d47218b9e">pUnknownHeaders</a></td></tr>
 <tr class="separator:a0d6aef04c8b0c3e79b5a623d47218b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a150e4a33c149161cd4f5f5d11fcf584e" id="r_a150e4a33c149161cd4f5f5d11fcf584e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a150e4a33c149161cd4f5f5d11fcf584e">TrailerCount</a></td></tr>
+<tr class="memitem:a150e4a33c149161cd4f5f5d11fcf584e" id="r_a150e4a33c149161cd4f5f5d11fcf584e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a150e4a33c149161cd4f5f5d11fcf584e">TrailerCount</a></td></tr>
 <tr class="separator:a150e4a33c149161cd4f5f5d11fcf584e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf13c0298f1d3dad56e053915cfd1edf" id="r_abf13c0298f1d3dad56e053915cfd1edf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_unknown_header.html">UnknownHeader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf13c0298f1d3dad56e053915cfd1edf">pTrailers</a></td></tr>
 <tr class="separator:abf13c0298f1d3dad56e053915cfd1edf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,7 +255,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>valueLength</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>valueLength</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -310,7 +319,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::Http::ResponseHeaders::TrailerCount</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::Http::ResponseHeaders::TrailerCount</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -324,7 +333,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::Http::ResponseHeaders::UnknownHeaderCount</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::Http::ResponseHeaders::UnknownHeaderCount</td>
         </tr>
       </table>
 </div><div class="memdoc">

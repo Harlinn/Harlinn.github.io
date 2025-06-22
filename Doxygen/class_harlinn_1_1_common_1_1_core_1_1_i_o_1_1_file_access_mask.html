@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -335,9 +344,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abb64225fa9548a72f0324bbd73a836a6 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask" id="r_abb64225fa9548a72f0324bbd73a836a6"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask.html#abb64225fa9548a72f0324bbd73a836a6">SetSynchronize</a> (bool value=true) noexcept</td></tr>
 <tr class="memdesc:abb64225fa9548a72f0324bbd73a836a6 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets or clears the right to use the object for synchronization. This enables a thread to wait until the object is in the signaled state. Some object types do not support this access right.  <br /></td></tr>
 <tr class="separator:abb64225fa9548a72f0324bbd73a836a6 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1459bdf9cd604d9512b55137f96b3dbf inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask" id="r_a1459bdf9cd604d9512b55137f96b3dbf"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>  = AccessMask&gt; <br />
-requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask.html">AccessMask</a>, std::remove_cvref_t&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &gt;</td></tr>
-<tr class="memitem:a1459bdf9cd604d9512b55137f96b3dbf inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask.html#a1459bdf9cd604d9512b55137f96b3dbf">StandardRightsRequired</a> () const noexcept</td></tr>
+<tr class="memitem:a1459bdf9cd604d9512b55137f96b3dbf inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask" id="r_a1459bdf9cd604d9512b55137f96b3dbf"><td class="memTemplParams" colspan="2">template&lt;typename T  = AccessMask&gt; <br />
+requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask.html">AccessMask</a>, std::remove_cvref_t&lt;T&gt; &gt;</td></tr>
+<tr class="memitem:a1459bdf9cd604d9512b55137f96b3dbf inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask.html#a1459bdf9cd604d9512b55137f96b3dbf">StandardRightsRequired</a> () const noexcept</td></tr>
 <tr class="separator:a1459bdf9cd604d9512b55137f96b3dbf inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a233f79cf6e37de82f8ea5b69eee80f inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask" id="r_a2a233f79cf6e37de82f8ea5b69eee80f"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask.html#a2a233f79cf6e37de82f8ea5b69eee80f">SetStandardRightsRequired</a> (ACCESS_MASK standardRightsRequired=STANDARD_RIGHTS_REQUIRED) noexcept</td></tr>
 <tr class="separator:a2a233f79cf6e37de82f8ea5b69eee80f inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_security_1_1_access_mask"><td class="memSeparator" colspan="2">&#160;</td></tr>

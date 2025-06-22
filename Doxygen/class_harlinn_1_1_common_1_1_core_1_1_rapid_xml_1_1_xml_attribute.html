@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -136,31 +145,31 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adc4b8e26354fdbbf42344fa4d006dac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefb33808135d570820c86072e57d120b" id="r_aefb33808135d570820c86072e57d120b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefb33808135d570820c86072e57d120b">XmlAttribute</a> (rapidxml::xml_attribute&lt; Ch &gt; *<a class="el" href="_h_a_i_o_n_n_x_model_8cpp.html#a13924c1d5f2db40d873e0a808bb89b68">data</a>)</td></tr>
 <tr class="separator:aefb33808135d570820c86072e57d120b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8f933fc0131bb9b34dc8c9669b9ac73" id="r_ab8f933fc0131bb9b34dc8c9669b9ac73"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, bool&gt;</td></tr>
-<tr class="memitem:ab8f933fc0131bb9b34dc8c9669b9ac73"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab8f933fc0131bb9b34dc8c9669b9ac73">Read</a> () const</td></tr>
+<tr class="memitem:ab8f933fc0131bb9b34dc8c9669b9ac73" id="r_ab8f933fc0131bb9b34dc8c9669b9ac73"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, bool&gt;</td></tr>
+<tr class="memitem:ab8f933fc0131bb9b34dc8c9669b9ac73"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab8f933fc0131bb9b34dc8c9669b9ac73">Read</a> () const</td></tr>
 <tr class="separator:ab8f933fc0131bb9b34dc8c9669b9ac73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a292d2825a80fbf5a06beb45d995edc58" id="r_a292d2825a80fbf5a06beb45d995edc58"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, std::optional&lt;bool&gt;&gt;</td></tr>
-<tr class="memitem:a292d2825a80fbf5a06beb45d995edc58"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a292d2825a80fbf5a06beb45d995edc58">Read</a> () const</td></tr>
+<tr class="memitem:a292d2825a80fbf5a06beb45d995edc58" id="r_a292d2825a80fbf5a06beb45d995edc58"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, std::optional&lt;bool&gt;&gt;</td></tr>
+<tr class="memitem:a292d2825a80fbf5a06beb45d995edc58"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a292d2825a80fbf5a06beb45d995edc58">Read</a> () const</td></tr>
 <tr class="separator:a292d2825a80fbf5a06beb45d995edc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dd662a3e9472f6ebbd2753224b06b09" id="r_a4dd662a3e9472f6ebbd2753224b06b09"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; ( std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, bool&gt; == false )</td></tr>
-<tr class="memitem:a4dd662a3e9472f6ebbd2753224b06b09"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4dd662a3e9472f6ebbd2753224b06b09">Read</a> (int radix=10) const</td></tr>
+<tr class="memitem:a4dd662a3e9472f6ebbd2753224b06b09" id="r_a4dd662a3e9472f6ebbd2753224b06b09"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt; &amp;&amp; ( std::is_same_v&lt;T, bool&gt; == false )</td></tr>
+<tr class="memitem:a4dd662a3e9472f6ebbd2753224b06b09"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4dd662a3e9472f6ebbd2753224b06b09">Read</a> (int radix=10) const</td></tr>
 <tr class="separator:a4dd662a3e9472f6ebbd2753224b06b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2dc1933a599fdacdcd3634cbc10d09b" id="r_aa2dc1933a599fdacdcd3634cbc10d09b"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_floating_point_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:aa2dc1933a599fdacdcd3634cbc10d09b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa2dc1933a599fdacdcd3634cbc10d09b">Read</a> () const</td></tr>
+<tr class="memitem:aa2dc1933a599fdacdcd3634cbc10d09b" id="r_aa2dc1933a599fdacdcd3634cbc10d09b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_floating_point_v&lt;T&gt;</td></tr>
+<tr class="memitem:aa2dc1933a599fdacdcd3634cbc10d09b"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa2dc1933a599fdacdcd3634cbc10d09b">Read</a> () const</td></tr>
 <tr class="separator:aa2dc1933a599fdacdcd3634cbc10d09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b72cd393c5754efbf8f873bf01770cb" id="r_a8b72cd393c5754efbf8f873bf01770cb"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_enum_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a8b72cd393c5754efbf8f873bf01770cb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8b72cd393c5754efbf8f873bf01770cb">Read</a> () const</td></tr>
+<tr class="memitem:a8b72cd393c5754efbf8f873bf01770cb" id="r_a8b72cd393c5754efbf8f873bf01770cb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_enum_v&lt;T&gt;</td></tr>
+<tr class="memitem:a8b72cd393c5754efbf8f873bf01770cb"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8b72cd393c5754efbf8f873bf01770cb">Read</a> () const</td></tr>
 <tr class="separator:a8b72cd393c5754efbf8f873bf01770cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a165255a514f3f946f8f5c65fd338d078" id="r_a165255a514f3f946f8f5c65fd338d078"><td class="memTemplParams" colspan="2">template&lt;WideStringLike T&gt; </td></tr>
-<tr class="memitem:a165255a514f3f946f8f5c65fd338d078"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a165255a514f3f946f8f5c65fd338d078">Read</a> () const</td></tr>
+<tr class="memitem:a165255a514f3f946f8f5c65fd338d078"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a165255a514f3f946f8f5c65fd338d078">Read</a> () const</td></tr>
 <tr class="separator:a165255a514f3f946f8f5c65fd338d078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a165255a514f3f946f8f5c65fd338d078" id="r_a165255a514f3f946f8f5c65fd338d078"><td class="memTemplParams" colspan="2">template&lt;AnsiStringLike T&gt; </td></tr>
-<tr class="memitem:a165255a514f3f946f8f5c65fd338d078"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a165255a514f3f946f8f5c65fd338d078">Read</a> () const</td></tr>
+<tr class="memitem:a165255a514f3f946f8f5c65fd338d078"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a165255a514f3f946f8f5c65fd338d078">Read</a> () const</td></tr>
 <tr class="separator:a165255a514f3f946f8f5c65fd338d078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04e5d7fd04e8206291711641f737fc3a" id="r_a04e5d7fd04e8206291711641f737fc3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">XmlAttribute</a>&lt; Ch &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04e5d7fd04e8206291711641f737fc3a">PreviousAttribute</a> (const Ch *n=0, std::size_t nsize=0, bool case_sensitive=true) const</td></tr>
 <tr class="separator:a04e5d7fd04e8206291711641f737fc3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -423,14 +432,14 @@ template&lt;typename Ch &gt; </div>
 <div class="memtemplate">
 template&lt;typename Ch &gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, bool&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, bool&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">Harlinn::Common::Core::RapidXml::XmlAttribute</a>&lt; Ch &gt;::Read </td>
+          <td class="memname">T <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">Harlinn::Common::Core::RapidXml::XmlAttribute</a>&lt; Ch &gt;::Read </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -453,14 +462,14 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memtemplate">
 template&lt;typename Ch &gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, std::optional&lt;bool&gt;&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, std::optional&lt;bool&gt;&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">Harlinn::Common::Core::RapidXml::XmlAttribute</a>&lt; Ch &gt;::Read </td>
+          <td class="memname">T <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">Harlinn::Common::Core::RapidXml::XmlAttribute</a>&lt; Ch &gt;::Read </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -483,14 +492,14 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memtemplate">
 template&lt;typename Ch &gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_floating_point_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_floating_point_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">Harlinn::Common::Core::RapidXml::XmlAttribute</a>&lt; Ch &gt;::Read </td>
+          <td class="memname">T <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">Harlinn::Common::Core::RapidXml::XmlAttribute</a>&lt; Ch &gt;::Read </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -513,14 +522,14 @@ requires std::is_floating_point_v&lt;<a class="el" href="k__tan_8inl.html#a0acb6
 <div class="memtemplate">
 template&lt;typename Ch &gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_enum_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_enum_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">Harlinn::Common::Core::RapidXml::XmlAttribute</a>&lt; Ch &gt;::Read </td>
+          <td class="memname">T <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">Harlinn::Common::Core::RapidXml::XmlAttribute</a>&lt; Ch &gt;::Read </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -549,7 +558,7 @@ template&lt;WideStringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">Harlinn::Common::Core::RapidXml::XmlAttribute</a>&lt; Ch &gt;::Read </td>
+          <td class="memname">T <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">Harlinn::Common::Core::RapidXml::XmlAttribute</a>&lt; Ch &gt;::Read </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -578,7 +587,7 @@ template&lt;AnsiStringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">Harlinn::Common::Core::RapidXml::XmlAttribute</a>&lt; Ch &gt;::Read </td>
+          <td class="memname">T <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">Harlinn::Common::Core::RapidXml::XmlAttribute</a>&lt; Ch &gt;::Read </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -601,14 +610,14 @@ template&lt;AnsiStringLike T&gt; </div>
 <div class="memtemplate">
 template&lt;typename Ch &gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt; &amp;&amp; ( std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, bool&gt; == false )</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt; &amp;&amp; ( std::is_same_v&lt;T, bool&gt; == false )</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">Harlinn::Common::Core::RapidXml::XmlAttribute</a>&lt; Ch &gt;::Read </td>
+          <td class="memname">T <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_rapid_xml_1_1_xml_attribute.html">Harlinn::Common::Core::RapidXml::XmlAttribute</a>&lt; Ch &gt;::Read </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>radix</em></span><span class="paramdefsep"> = </span><span class="paramdefval">10</span></td><td>)</td>
           <td> const</td>

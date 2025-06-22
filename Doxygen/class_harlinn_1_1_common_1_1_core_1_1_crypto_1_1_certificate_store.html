@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -168,11 +177,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af1749ce968932ef99640a617282f21b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a325f9bd551925a0794d268f5edfefc82" id="r_a325f9bd551925a0794d268f5edfefc82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_certificate_trust_list.html">CertificateTrustList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a325f9bd551925a0794d268f5edfefc82">AddLink</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_certificate_trust_list.html">CertificateTrustList</a> certificateTrustList, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_crypto.html#afef7f49b3c0b3e4583d2222053a0d0f2">CertificateStoreAddFlags</a> flags)</td></tr>
 <tr class="separator:a325f9bd551925a0794d268f5edfefc82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad264cc20f3ace2fe6e822293e44b15dd" id="r_ad264cc20f3ace2fe6e822293e44b15dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_certificate_context.html">CertificateContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad264cc20f3ace2fe6e822293e44b15dd">AddEncodedCertificate</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_encoding_type.html">EncodingType</a> &amp;encodingType, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *encodedBuffer, size_t encodedBufferLength, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_crypto.html#afef7f49b3c0b3e4583d2222053a0d0f2">CertificateStoreAddFlags</a> flags)</td></tr>
+<tr class="memitem:ad264cc20f3ace2fe6e822293e44b15dd" id="r_ad264cc20f3ace2fe6e822293e44b15dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_certificate_context.html">CertificateContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad264cc20f3ace2fe6e822293e44b15dd">AddEncodedCertificate</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_encoding_type.html">EncodingType</a> &amp;encodingType, const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *encodedBuffer, size_t encodedBufferLength, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_crypto.html#afef7f49b3c0b3e4583d2222053a0d0f2">CertificateStoreAddFlags</a> flags)</td></tr>
 <tr class="separator:ad264cc20f3ace2fe6e822293e44b15dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9eea8aac98525c0bdac36cea450fade6" id="r_a9eea8aac98525c0bdac36cea450fade6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_certificate_revocation_list.html">CertificateRevocationList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9eea8aac98525c0bdac36cea450fade6">AddEncodedCertificateRevocationList</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_encoding_type.html">EncodingType</a> &amp;encodingType, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *encodedBuffer, size_t encodedBufferLength, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_crypto.html#afef7f49b3c0b3e4583d2222053a0d0f2">CertificateStoreAddFlags</a> flags)</td></tr>
+<tr class="memitem:a9eea8aac98525c0bdac36cea450fade6" id="r_a9eea8aac98525c0bdac36cea450fade6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_certificate_revocation_list.html">CertificateRevocationList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9eea8aac98525c0bdac36cea450fade6">AddEncodedCertificateRevocationList</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_encoding_type.html">EncodingType</a> &amp;encodingType, const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *encodedBuffer, size_t encodedBufferLength, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_crypto.html#afef7f49b3c0b3e4583d2222053a0d0f2">CertificateStoreAddFlags</a> flags)</td></tr>
 <tr class="separator:a9eea8aac98525c0bdac36cea450fade6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32df40ba4a65535cf2a10cb8a8198e6c" id="r_a32df40ba4a65535cf2a10cb8a8198e6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_certificate_trust_list.html">CertificateTrustList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32df40ba4a65535cf2a10cb8a8198e6c">AddEncodedCertificateTrustList</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_encoding_type.html">EncodingType</a> &amp;encodingType, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *encodedBuffer, size_t encodedBufferLength, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_crypto.html#afef7f49b3c0b3e4583d2222053a0d0f2">CertificateStoreAddFlags</a> flags)</td></tr>
+<tr class="memitem:a32df40ba4a65535cf2a10cb8a8198e6c" id="r_a32df40ba4a65535cf2a10cb8a8198e6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_certificate_trust_list.html">CertificateTrustList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32df40ba4a65535cf2a10cb8a8198e6c">AddEncodedCertificateTrustList</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_encoding_type.html">EncodingType</a> &amp;encodingType, const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *encodedBuffer, size_t encodedBufferLength, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_crypto.html#afef7f49b3c0b3e4583d2222053a0d0f2">CertificateStoreAddFlags</a> flags)</td></tr>
 <tr class="separator:a32df40ba4a65535cf2a10cb8a8198e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -183,9 +192,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a97f133b41f6b7258c7d351d845942387" id="r_a97f133b41f6b7258c7d351d845942387"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97f133b41f6b7258c7d351d845942387">GetSystemStoreNames</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_crypto.html#a92b62962bea50e65ab187dfdea2e496c">CertificateStoreLocation</a> certificateStoreLocation, std::vector&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &gt; &amp;result)</td></tr>
 <tr class="memdesc:a97f133b41f6b7258c7d351d845942387"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrives the list of system certificate store names assocciated with the specified certificate store location.  <br /></td></tr>
 <tr class="separator:a97f133b41f6b7258c7d351d845942387"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a195014dd691895c32ffe1188a66b4aec" id="r_a195014dd691895c32ffe1188a66b4aec"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a195014dd691895c32ffe1188a66b4aec">AddEncodedCertificateToSystemStore</a> (const char *certificateStoreName, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *encodedBuffer, size_t encodedBufferLength)</td></tr>
+<tr class="memitem:a195014dd691895c32ffe1188a66b4aec" id="r_a195014dd691895c32ffe1188a66b4aec"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a195014dd691895c32ffe1188a66b4aec">AddEncodedCertificateToSystemStore</a> (const char *certificateStoreName, const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *encodedBuffer, size_t encodedBufferLength)</td></tr>
 <tr class="separator:a195014dd691895c32ffe1188a66b4aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20c6ce869e2cd4b692432ef319d1f364" id="r_a20c6ce869e2cd4b692432ef319d1f364"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20c6ce869e2cd4b692432ef319d1f364">AddEncodedCertificateToSystemStore</a> (const wchar_t *certificateStoreName, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *encodedBuffer, size_t encodedBufferLength)</td></tr>
+<tr class="memitem:a20c6ce869e2cd4b692432ef319d1f364" id="r_a20c6ce869e2cd4b692432ef319d1f364"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20c6ce869e2cd4b692432ef319d1f364">AddEncodedCertificateToSystemStore</a> (const wchar_t *certificateStoreName, const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *encodedBuffer, size_t encodedBufferLength)</td></tr>
 <tr class="separator:a20c6ce869e2cd4b692432ef319d1f364"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -446,7 +455,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>encodedBuffer</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>encodedBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -485,7 +494,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>encodedBuffer</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>encodedBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -524,7 +533,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>encodedBuffer</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>encodedBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -558,7 +567,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>encodedBuffer</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>encodedBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -592,7 +601,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>encodedBuffer</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>encodedBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -121,7 +130,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0fa8730819cb902762227f5c46de98e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06ef9af44dc6dfa11eea3fc8f8f1bda4" id="r_a06ef9af44dc6dfa11eea3fc8f8f1bda4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06ef9af44dc6dfa11eea3fc8f8f1bda4">TensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags, const <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a87756e296086b7c20883fccb6afbb83f">TensorDimensions</a> &amp;sizes, const <a class="el" href="class_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_tensor_policy.html">TensorPolicy</a> &amp;policy={})</td></tr>
 <tr class="separator:a06ef9af44dc6dfa11eea3fc8f8f1bda4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43fa862ad23876509c9a28c5e6201fe7" id="r_a43fa862ad23876509c9a28c5e6201fe7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43fa862ad23876509c9a28c5e6201fe7">TensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags, const <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a87756e296086b7c20883fccb6afbb83f">TensorDimensions</a> &amp;sizes, const std::optional&lt; <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a87756e296086b7c20883fccb6afbb83f">TensorDimensions</a> &gt; &amp;strides, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> totalTensorSizeInBytes, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> guaranteedBaseOffsetAlignment)</td></tr>
+<tr class="memitem:a43fa862ad23876509c9a28c5e6201fe7" id="r_a43fa862ad23876509c9a28c5e6201fe7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43fa862ad23876509c9a28c5e6201fe7">TensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags, const <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a87756e296086b7c20883fccb6afbb83f">TensorDimensions</a> &amp;sizes, const std::optional&lt; <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a87756e296086b7c20883fccb6afbb83f">TensorDimensions</a> &gt; &amp;strides, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> totalTensorSizeInBytes, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> guaranteedBaseOffsetAlignment)</td></tr>
 <tr class="separator:a43fa862ad23876509c9a28c5e6201fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a722b8e3e360c1ff112d57b455b646a22" id="r_a722b8e3e360c1ff112d57b455b646a22"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a722b8e3e360c1ff112d57b455b646a22">TensorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">DML::TensorDesc</a> &amp;desc)</td></tr>
 <tr class="separator:a722b8e3e360c1ff112d57b455b646a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,14 +160,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a4ac719b978015c57ca743bb27ba10c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac68053308388e4f542c36f949f450fdb" id="r_ac68053308388e4f542c36f949f450fdb"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a122e06de0b44c3e0e6acf0e439f84c18">TensorStrides</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac68053308388e4f542c36f949f450fdb">Strides</a></td></tr>
 <tr class="separator:ac68053308388e4f542c36f949f450fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51196722d9e8987208f20012e6d6a8fc" id="r_a51196722d9e8987208f20012e6d6a8fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51196722d9e8987208f20012e6d6a8fc">TotalTensorSizeInBytes</a> = 0</td></tr>
+<tr class="memitem:a51196722d9e8987208f20012e6d6a8fc" id="r_a51196722d9e8987208f20012e6d6a8fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51196722d9e8987208f20012e6d6a8fc">TotalTensorSizeInBytes</a> = 0</td></tr>
 <tr class="separator:a51196722d9e8987208f20012e6d6a8fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53983db53b865344d3e511aecb5de917" id="r_a53983db53b865344d3e511aecb5de917"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53983db53b865344d3e511aecb5de917">GuaranteedBaseOffsetAlignment</a> = 0</td></tr>
+<tr class="memitem:a53983db53b865344d3e511aecb5de917" id="r_a53983db53b865344d3e511aecb5de917"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53983db53b865344d3e511aecb5de917">GuaranteedBaseOffsetAlignment</a> = 0</td></tr>
 <tr class="separator:a53983db53b865344d3e511aecb5de917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:ace222b5b81996d1f57e0a63119f111ab" id="r_ace222b5b81996d1f57e0a63119f111ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace222b5b81996d1f57e0a63119f111ab">Initialize</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> tensorDataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> tensorFlags, const <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a87756e296086b7c20883fccb6afbb83f">TensorDimensions</a> &amp;tensorSizes, const std::optional&lt; <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a122e06de0b44c3e0e6acf0e439f84c18">TensorStrides</a> &gt; &amp;tensorStrides, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> totalTensorSizeInBytesVal, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> guaranteedBaseOffsetAlignmentVal)</td></tr>
+<tr class="memitem:ace222b5b81996d1f57e0a63119f111ab" id="r_ace222b5b81996d1f57e0a63119f111ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace222b5b81996d1f57e0a63119f111ab">Initialize</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> tensorDataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> tensorFlags, const <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a87756e296086b7c20883fccb6afbb83f">TensorDimensions</a> &amp;tensorSizes, const std::optional&lt; <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a122e06de0b44c3e0e6acf0e439f84c18">TensorStrides</a> &gt; &amp;tensorStrides, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> totalTensorSizeInBytesVal, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> guaranteedBaseOffsetAlignmentVal)</td></tr>
 <tr class="separator:ace222b5b81996d1f57e0a63119f111ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -292,12 +301,12 @@ Private Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>totalTensorSizeInBytes</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>totalTensorSizeInBytes</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>guaranteedBaseOffsetAlignment</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>guaranteedBaseOffsetAlignment</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -473,12 +482,12 @@ template&lt;&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>totalTensorSizeInBytesVal</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>totalTensorSizeInBytesVal</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>guaranteedBaseOffsetAlignmentVal</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>guaranteedBaseOffsetAlignmentVal</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -548,7 +557,7 @@ template&lt;&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::X::TensorDesc::GuaranteedBaseOffsetAlignment = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::X::TensorDesc::GuaranteedBaseOffsetAlignment = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -612,7 +621,7 @@ template&lt;&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::AI::DML::X::TensorDesc::TotalTensorSizeInBytes = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> Harlinn::AI::DML::X::TensorDesc::TotalTensorSizeInBytes = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

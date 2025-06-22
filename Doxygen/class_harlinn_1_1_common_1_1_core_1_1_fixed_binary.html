@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -124,9 +133,9 @@ Collaboration diagram for Harlinn::Common::Core::FixedBinary&lt; maxSize &gt;:</
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a2c1e9c58015a2483e6dca130d48d7246" id="r_a2c1e9c58015a2483e6dca130d48d7246"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c1e9c58015a2483e6dca130d48d7246">value_type</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td></tr>
+<tr class="memitem:a2c1e9c58015a2483e6dca130d48d7246" id="r_a2c1e9c58015a2483e6dca130d48d7246"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c1e9c58015a2483e6dca130d48d7246">value_type</a> = <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td></tr>
 <tr class="separator:a2c1e9c58015a2483e6dca130d48d7246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50bb954744fbd45c6188a1dd433b50cb" id="r_a50bb954744fbd45c6188a1dd433b50cb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50bb954744fbd45c6188a1dd433b50cb">ArrayType</a> = std::array&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, <a class="el" href="#a7f599ae787857d2e853347b15ab20a3e">MaxSize</a>&gt;</td></tr>
+<tr class="memitem:a50bb954744fbd45c6188a1dd433b50cb" id="r_a50bb954744fbd45c6188a1dd433b50cb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50bb954744fbd45c6188a1dd433b50cb">ArrayType</a> = std::array&lt;<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>, <a class="el" href="#a7f599ae787857d2e853347b15ab20a3e">MaxSize</a>&gt;</td></tr>
 <tr class="separator:a50bb954744fbd45c6188a1dd433b50cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9507c81b1c3a98e46e7522193ca87c2" id="r_af9507c81b1c3a98e46e7522193ca87c2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9507c81b1c3a98e46e7522193ca87c2">size_type</a> = typename ArrayType::size_type</td></tr>
 <tr class="separator:af9507c81b1c3a98e46e7522193ca87c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,15 +162,15 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a04357b59f392cb280c2c4161b032de30" id="r_a04357b59f392cb280c2c4161b032de30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04357b59f392cb280c2c4161b032de30">FixedBinary</a> () noexcept=default</td></tr>
 <tr class="separator:a04357b59f392cb280c2c4161b032de30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82ff263b4fb4f20f924fc0aa628f7697" id="r_a82ff263b4fb4f20f924fc0aa628f7697"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82ff263b4fb4f20f924fc0aa628f7697">FixedBinary</a> (const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *buffer, size_t <a class="el" href="#a1b30ca8842339b377265bdaa2f080c18">size</a>)</td></tr>
+<tr class="memitem:a82ff263b4fb4f20f924fc0aa628f7697" id="r_a82ff263b4fb4f20f924fc0aa628f7697"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82ff263b4fb4f20f924fc0aa628f7697">FixedBinary</a> (const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *buffer, size_t <a class="el" href="#a1b30ca8842339b377265bdaa2f080c18">size</a>)</td></tr>
 <tr class="separator:a82ff263b4fb4f20f924fc0aa628f7697"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16b958757302de876313e3fc195b321a" id="r_a16b958757302de876313e3fc195b321a"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&gt;&amp;&amp; requires( const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&amp; v ) { { v.data( ) }-&gt;std::convertible_to&lt;const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>*&gt;; { v.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; }</td></tr>
-<tr class="memitem:a16b958757302de876313e3fc195b321a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a16b958757302de876313e3fc195b321a">FixedBinary</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;buffer)</td></tr>
+<tr class="memitem:a16b958757302de876313e3fc195b321a" id="r_a16b958757302de876313e3fc195b321a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&gt;&amp;&amp; requires( const T&amp; v ) { { v.data( ) }-&gt;std::convertible_to&lt;const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>*&gt;; { v.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; }</td></tr>
+<tr class="memitem:a16b958757302de876313e3fc195b321a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a16b958757302de876313e3fc195b321a">FixedBinary</a> (const T &amp;buffer)</td></tr>
 <tr class="separator:a16b958757302de876313e3fc195b321a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23c4797c37013e1878cd26409f56fe95" id="r_a23c4797c37013e1878cd26409f56fe95"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&gt;&amp;&amp; requires( const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&amp; v ) { { v.data( ) }-&gt;std::convertible_to&lt;const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>*&gt;; { v.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; }</td></tr>
-<tr class="memitem:a23c4797c37013e1878cd26409f56fe95"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">FixedBinary</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a23c4797c37013e1878cd26409f56fe95">operator=</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;buffer)</td></tr>
+<tr class="memitem:a23c4797c37013e1878cd26409f56fe95" id="r_a23c4797c37013e1878cd26409f56fe95"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&gt;&amp;&amp; requires( const T&amp; v ) { { v.data( ) }-&gt;std::convertible_to&lt;const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>*&gt;; { v.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; }</td></tr>
+<tr class="memitem:a23c4797c37013e1878cd26409f56fe95"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">FixedBinary</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a23c4797c37013e1878cd26409f56fe95">operator=</a> (const T &amp;buffer)</td></tr>
 <tr class="separator:a23c4797c37013e1878cd26409f56fe95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b30ca8842339b377265bdaa2f080c18" id="r_a1b30ca8842339b377265bdaa2f080c18"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#af9507c81b1c3a98e46e7522193ca87c2">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b30ca8842339b377265bdaa2f080c18">size</a> () const noexcept</td></tr>
 <tr class="separator:a1b30ca8842339b377265bdaa2f080c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,9 +204,9 @@ requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace
 <tr class="separator:adedac31a0e046fe82cdfef739fdaa848"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ff1782ed3499a3f4e20d7a17586f86d" id="r_a9ff1782ed3499a3f4e20d7a17586f86d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a8ed89b09bd765cef64306e8d779743e3">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ff1782ed3499a3f4e20d7a17586f86d">crend</a> () const noexcept</td></tr>
 <tr class="separator:a9ff1782ed3499a3f4e20d7a17586f86d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0230e059a8deb0968f4e8b8c9e2a31c9" id="r_a0230e059a8deb0968f4e8b8c9e2a31c9"><td class="memItemLeft" align="right" valign="top">constexpr const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0230e059a8deb0968f4e8b8c9e2a31c9">data</a> () const noexcept</td></tr>
+<tr class="memitem:a0230e059a8deb0968f4e8b8c9e2a31c9" id="r_a0230e059a8deb0968f4e8b8c9e2a31c9"><td class="memItemLeft" align="right" valign="top">constexpr const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0230e059a8deb0968f4e8b8c9e2a31c9">data</a> () const noexcept</td></tr>
 <tr class="separator:a0230e059a8deb0968f4e8b8c9e2a31c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d86faa3ee69bf3a60bd7362d82962cf" id="r_a8d86faa3ee69bf3a60bd7362d82962cf"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d86faa3ee69bf3a60bd7362d82962cf">data</a> () noexcept</td></tr>
+<tr class="memitem:a8d86faa3ee69bf3a60bd7362d82962cf" id="r_a8d86faa3ee69bf3a60bd7362d82962cf"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d86faa3ee69bf3a60bd7362d82962cf">data</a> () noexcept</td></tr>
 <tr class="separator:a8d86faa3ee69bf3a60bd7362d82962cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a993c1f01ec4f1230875bdae607d3f084" id="r_a993c1f01ec4f1230875bdae607d3f084"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#ad2e04813b128eeaf225e0d365a8f6f78">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a993c1f01ec4f1230875bdae607d3f084">at</a> (<a class="el" href="#af9507c81b1c3a98e46e7522193ca87c2">size_type</a> index) noexcept</td></tr>
 <tr class="separator:a993c1f01ec4f1230875bdae607d3f084"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,7 +248,7 @@ Protected Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:ad821dc07736fddf7166c2a7055166b84" id="r_ad821dc07736fddf7166c2a7055166b84"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad821dc07736fddf7166c2a7055166b84">AreEqual</a> (const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *first, <a class="el" href="#af9507c81b1c3a98e46e7522193ca87c2">size_type</a> firstSize, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *second, <a class="el" href="#af9507c81b1c3a98e46e7522193ca87c2">size_type</a> secondSize)</td></tr>
+<tr class="memitem:ad821dc07736fddf7166c2a7055166b84" id="r_ad821dc07736fddf7166c2a7055166b84"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad821dc07736fddf7166c2a7055166b84">AreEqual</a> (const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *first, <a class="el" href="#af9507c81b1c3a98e46e7522193ca87c2">size_type</a> firstSize, const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *second, <a class="el" href="#af9507c81b1c3a98e46e7522193ca87c2">size_type</a> secondSize)</td></tr>
 <tr class="separator:ad821dc07736fddf7166c2a7055166b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -257,7 +266,7 @@ Private Attributes</h2></td></tr>
 template&lt;size_t maxSize&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">Harlinn::Common::Core::FixedBinary</a>&lt; maxSize &gt;::ArrayType = std::array&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, <a class="el" href="#a7f599ae787857d2e853347b15ab20a3e">MaxSize</a>&gt;</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">Harlinn::Common::Core::FixedBinary</a>&lt; maxSize &gt;::ArrayType = std::array&lt;<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>, <a class="el" href="#a7f599ae787857d2e853347b15ab20a3e">MaxSize</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -433,7 +442,7 @@ template&lt;size_t maxSize&gt; </div>
 template&lt;size_t maxSize&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">Harlinn::Common::Core::FixedBinary</a>&lt; maxSize &gt;::value_type = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">Harlinn::Common::Core::FixedBinary</a>&lt; maxSize &gt;::value_type = <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -482,7 +491,7 @@ template&lt;size_t maxSize&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">Harlinn::Common::Core::FixedBinary</a>&lt; maxSize &gt;::FixedBinary </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -507,8 +516,8 @@ template&lt;size_t maxSize&gt; </div>
 <div class="memtemplate">
 template&lt;size_t maxSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&gt;&amp;&amp; requires( const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&amp; v ) { { v.data( ) }-&gt;std::convertible_to&lt;const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>*&gt;; { v.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; }</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&gt;&amp;&amp; requires( const T&amp; v ) { { v.data( ) }-&gt;std::convertible_to&lt;const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>*&gt;; { v.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; }</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -516,7 +525,7 @@ requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">Harlinn::Common::Core::FixedBinary</a>&lt; maxSize &gt;::FixedBinary </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -544,7 +553,7 @@ template&lt;size_t maxSize&gt; </div>
         <tr>
           <td class="memname">static bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">Harlinn::Common::Core::FixedBinary</a>&lt; maxSize &gt;::AreEqual </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>first</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>first</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -554,7 +563,7 @@ template&lt;size_t maxSize&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>second</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>second</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -880,7 +889,7 @@ template&lt;size_t maxSize&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">Harlinn::Common::Core::FixedBinary</a>&lt; maxSize &gt;::data </td>
+          <td class="memname">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">Harlinn::Common::Core::FixedBinary</a>&lt; maxSize &gt;::data </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -907,7 +916,7 @@ template&lt;size_t maxSize&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">Harlinn::Common::Core::FixedBinary</a>&lt; maxSize &gt;::data </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">Harlinn::Common::Core::FixedBinary</a>&lt; maxSize &gt;::data </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1148,8 +1157,8 @@ template&lt;size_t M&gt; </div>
 <div class="memtemplate">
 template&lt;size_t maxSize&gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&gt;&amp;&amp; requires( const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&amp; v ) { { v.data( ) }-&gt;std::convertible_to&lt;const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>*&gt;; { v.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; }</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&gt;&amp;&amp; requires( const T&amp; v ) { { v.data( ) }-&gt;std::convertible_to&lt;const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>*&gt;; { v.size( ) }-&gt;std::convertible_to&lt;size_t&gt;; }</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1157,7 +1166,7 @@ requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">FixedBinary</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_fixed_binary.html">Harlinn::Common::Core::FixedBinary</a>&lt; maxSize &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

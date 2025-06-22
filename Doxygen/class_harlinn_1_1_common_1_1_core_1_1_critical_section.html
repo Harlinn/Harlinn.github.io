@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -114,7 +123,7 @@ $(function(){initNavTree('class_harlinn_1_1_common_1_1_core_1_1_critical_section
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af6f47086c02718261dbffbb1bed27328" id="r_af6f47086c02718261dbffbb1bed27328"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6f47086c02718261dbffbb1bed27328">CriticalSection</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> spinCount=<a class="el" href="#a207ac65605ede5addba30754287b35cf">DefaultSpinCount</a>, bool noDebugInfo=true)</td></tr>
+<tr class="memitem:af6f47086c02718261dbffbb1bed27328" id="r_af6f47086c02718261dbffbb1bed27328"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6f47086c02718261dbffbb1bed27328">CriticalSection</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> spinCount=<a class="el" href="#a207ac65605ede5addba30754287b35cf">DefaultSpinCount</a>, bool noDebugInfo=true)</td></tr>
 <tr class="separator:af6f47086c02718261dbffbb1bed27328"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab12f3a73ff308a32c7eaf42db2b8f0ca" id="r_ab12f3a73ff308a32c7eaf42db2b8f0ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab12f3a73ff308a32c7eaf42db2b8f0ca">~CriticalSection</a> () noexcept</td></tr>
 <tr class="separator:ab12f3a73ff308a32c7eaf42db2b8f0ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,13 +153,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a61ab51bff2dd2005cd125f0324bac2cc" id="r_a61ab51bff2dd2005cd125f0324bac2cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61ab51bff2dd2005cd125f0324bac2cc">unlock</a> () const noexcept</td></tr>
 <tr class="memdesc:a61ab51bff2dd2005cd125f0324bac2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases ownership of the specified critical section object.  <br /></td></tr>
 <tr class="separator:a61ab51bff2dd2005cd125f0324bac2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94dbd5a57c85296f8d9f430a6c827c30" id="r_a94dbd5a57c85296f8d9f430a6c827c30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94dbd5a57c85296f8d9f430a6c827c30">SetSpinCount</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> spinCount) noexcept</td></tr>
+<tr class="memitem:a94dbd5a57c85296f8d9f430a6c827c30" id="r_a94dbd5a57c85296f8d9f430a6c827c30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94dbd5a57c85296f8d9f430a6c827c30">SetSpinCount</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> spinCount) noexcept</td></tr>
 <tr class="memdesc:a94dbd5a57c85296f8d9f430a6c827c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the spin count for the specified critical section. Spinning means that when a thread tries to acquire a critical section that is locked, the thread enters a loop, checks to see if the lock is released, and if the lock is not released, the thread goes to sleep.  <br /></td></tr>
 <tr class="separator:a94dbd5a57c85296f8d9f430a6c827c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a207ac65605ede5addba30754287b35cf" id="r_a207ac65605ede5addba30754287b35cf"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a207ac65605ede5addba30754287b35cf">DefaultSpinCount</a> = 4000</td></tr>
+<tr class="memitem:a207ac65605ede5addba30754287b35cf" id="r_a207ac65605ede5addba30754287b35cf"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a207ac65605ede5addba30754287b35cf">DefaultSpinCount</a> = 4000</td></tr>
 <tr class="separator:a207ac65605ede5addba30754287b35cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -178,7 +187,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Common::Core::CriticalSection::CriticalSection </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>spinCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a207ac65605ede5addba30754287b35cf">DefaultSpinCount</a></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>spinCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a207ac65605ede5addba30754287b35cf">DefaultSpinCount</a></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -412,9 +421,9 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::CriticalSection::SetSpinCount </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::CriticalSection::SetSpinCount </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>spinCount</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>spinCount</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -579,7 +588,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::CriticalSection::DefaultSpinCount = 4000</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::CriticalSection::DefaultSpinCount = 4000</td>
         </tr>
       </table>
   </td>

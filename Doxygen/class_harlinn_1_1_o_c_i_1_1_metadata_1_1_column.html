@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -132,10 +141,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2bff8957bc4a7ebc441250fb06ef2244" id="r_a2bff8957bc4a7ebc441250fb06ef2244"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bff8957bc4a7ebc441250fb06ef2244">UsesCharacterLength</a> () const</td></tr>
 <tr class="memdesc:a2bff8957bc4a7ebc441250fb06ef2244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the type of length semantics of the column. Zero (0) means byte-length semantics and 1 means character-length semantics.  <br /></td></tr>
 <tr class="separator:a2bff8957bc4a7ebc441250fb06ef2244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b4cfde6b55ba31fe6a4e2d1f71e281e" id="r_a4b4cfde6b55ba31fe6a4e2d1f71e281e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b4cfde6b55ba31fe6a4e2d1f71e281e">CharacterLength</a> () const</td></tr>
+<tr class="memitem:a4b4cfde6b55ba31fe6a4e2d1f71e281e" id="r_a4b4cfde6b55ba31fe6a4e2d1f71e281e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b4cfde6b55ba31fe6a4e2d1f71e281e">CharacterLength</a> () const</td></tr>
 <tr class="memdesc:a4b4cfde6b55ba31fe6a4e2d1f71e281e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the column character length that is the number of characters allowed in the column.  <br /></td></tr>
 <tr class="separator:a4b4cfde6b55ba31fe6a4e2d1f71e281e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad83540043fd97006bd719481d65a0b0c" id="r_ad83540043fd97006bd719481d65a0b0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad83540043fd97006bd719481d65a0b0c">Length</a> () const</td></tr>
+<tr class="memitem:ad83540043fd97006bd719481d65a0b0c" id="r_ad83540043fd97006bd719481d65a0b0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad83540043fd97006bd719481d65a0b0c">Length</a> () const</td></tr>
 <tr class="memdesc:ad83540043fd97006bd719481d65a0b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum size of the column. This length is returned in bytes and not characters for strings and raws. It returns 22 for NUMBERs.  <br /></td></tr>
 <tr class="separator:ad83540043fd97006bd719481d65a0b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4be5987729bc4b0c8e12c2c76a0431ea" id="r_a4be5987729bc4b0c8e12c2c76a0431ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_o_c_i.html#a12779cbe5bcb4ab3ceda0f8ce115ee2e">ColumnProperties</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4be5987729bc4b0c8e12c2c76a0431ea">Properties</a> () const</td></tr>
@@ -147,10 +156,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0e0b40adba7f991b351ab88dfdcb9822" id="r_a0e0b40adba7f991b351ab88dfdcb9822"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_o_c_i.html#a67533cebb8e647326ae8288f9f105308">OraType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e0b40adba7f991b351ab88dfdcb9822">DataType</a> () const</td></tr>
 <tr class="memdesc:a0e0b40adba7f991b351ab88dfdcb9822"><td class="mdescLeft">&#160;</td><td class="mdescRight">The datatype of the column. (OCI_ATTR_DATA_TYPE)  <br /></td></tr>
 <tr class="separator:a0e0b40adba7f991b351ab88dfdcb9822"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c5320ffc965b18326c1c92bf21a9675" id="r_a5c5320ffc965b18326c1c92bf21a9675"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c5320ffc965b18326c1c92bf21a9675">Precision</a> () const</td></tr>
+<tr class="memitem:a5c5320ffc965b18326c1c92bf21a9675" id="r_a5c5320ffc965b18326c1c92bf21a9675"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c5320ffc965b18326c1c92bf21a9675">Precision</a> () const</td></tr>
 <tr class="memdesc:a5c5320ffc965b18326c1c92bf21a9675"><td class="mdescLeft">&#160;</td><td class="mdescRight">The precision of numeric columns. If the precision is nonzero and scale is -127, then it is a FLOAT, else it is a NUMBER(precision, scale). For the case when precision is 0, NUMBER(precision, scale) can be represented simply as NUMBER.  <br /></td></tr>
 <tr class="separator:a5c5320ffc965b18326c1c92bf21a9675"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c69f401495b621e2ec314dc3dc6a47" id="r_a64c69f401495b621e2ec314dc3dc6a47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64c69f401495b621e2ec314dc3dc6a47">Scale</a> () const</td></tr>
+<tr class="memitem:a64c69f401495b621e2ec314dc3dc6a47" id="r_a64c69f401495b621e2ec314dc3dc6a47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64c69f401495b621e2ec314dc3dc6a47">Scale</a> () const</td></tr>
 <tr class="memdesc:a64c69f401495b621e2ec314dc3dc6a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scale of numeric columns. If the precision is nonzero and scale is -127, then it is a FLOAT, else it is a NUMBER(precision, scale). For the case when precision is 0, NUMBER(precision, scale) can be represented simply as NUMBER.  <br /></td></tr>
 <tr class="separator:a64c69f401495b621e2ec314dc3dc6a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed6f6cb2d78c095026fb172bb31342f0" id="r_aed6f6cb2d78c095026fb172bb31342f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed6f6cb2d78c095026fb172bb31342f0">IsNull</a> () const</td></tr>
@@ -183,9 +192,9 @@ Public Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:aef101b307e3c2af820fc1a9f829f6eb5" id="r_aef101b307e3c2af820fc1a9f829f6eb5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef101b307e3c2af820fc1a9f829f6eb5">usesCharacterLength_</a></td></tr>
 <tr class="separator:aef101b307e3c2af820fc1a9f829f6eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada82dfde03fb07d0b536dd36025c0a9c" id="r_ada82dfde03fb07d0b536dd36025c0a9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada82dfde03fb07d0b536dd36025c0a9c">characterLength_</a></td></tr>
+<tr class="memitem:ada82dfde03fb07d0b536dd36025c0a9c" id="r_ada82dfde03fb07d0b536dd36025c0a9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada82dfde03fb07d0b536dd36025c0a9c">characterLength_</a></td></tr>
 <tr class="separator:ada82dfde03fb07d0b536dd36025c0a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf7b99eaba84d3ccc68a87c0de42632a" id="r_acf7b99eaba84d3ccc68a87c0de42632a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf7b99eaba84d3ccc68a87c0de42632a">length_</a></td></tr>
+<tr class="memitem:acf7b99eaba84d3ccc68a87c0de42632a" id="r_acf7b99eaba84d3ccc68a87c0de42632a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf7b99eaba84d3ccc68a87c0de42632a">length_</a></td></tr>
 <tr class="separator:acf7b99eaba84d3ccc68a87c0de42632a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33db3d17f28aea36b5ae7fd6dcaac172" id="r_a33db3d17f28aea36b5ae7fd6dcaac172"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_o_c_i.html#a12779cbe5bcb4ab3ceda0f8ce115ee2e">ColumnProperties</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33db3d17f28aea36b5ae7fd6dcaac172">properties_</a></td></tr>
 <tr class="separator:a33db3d17f28aea36b5ae7fd6dcaac172"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,9 +202,9 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a6611e156dff8ff83f0498798fca5b1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ac9171d6ccf86c47a2f17c34ddb8792" id="r_a9ac9171d6ccf86c47a2f17c34ddb8792"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_o_c_i.html#a67533cebb8e647326ae8288f9f105308">OraType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ac9171d6ccf86c47a2f17c34ddb8792">dataType_</a></td></tr>
 <tr class="separator:a9ac9171d6ccf86c47a2f17c34ddb8792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6937affcd8418fdf063c773ddad7b267" id="r_a6937affcd8418fdf063c773ddad7b267"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6937affcd8418fdf063c773ddad7b267">precision_</a></td></tr>
+<tr class="memitem:a6937affcd8418fdf063c773ddad7b267" id="r_a6937affcd8418fdf063c773ddad7b267"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6937affcd8418fdf063c773ddad7b267">precision_</a></td></tr>
 <tr class="separator:a6937affcd8418fdf063c773ddad7b267"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a124107f4bf2be001449fb3d72d2213c4" id="r_a124107f4bf2be001449fb3d72d2213c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a124107f4bf2be001449fb3d72d2213c4">scale_</a></td></tr>
+<tr class="memitem:a124107f4bf2be001449fb3d72d2213c4" id="r_a124107f4bf2be001449fb3d72d2213c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a124107f4bf2be001449fb3d72d2213c4">scale_</a></td></tr>
 <tr class="separator:a124107f4bf2be001449fb3d72d2213c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dcfdd43dbaf4bd82a1e74b955e0ac64" id="r_a6dcfdd43dbaf4bd82a1e74b955e0ac64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dcfdd43dbaf4bd82a1e74b955e0ac64">nullable_</a></td></tr>
 <tr class="separator:a6dcfdd43dbaf4bd82a1e74b955e0ac64"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -271,7 +280,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::OCI::Metadata::Column::CharacterLength </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::OCI::Metadata::Column::CharacterLength </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -434,7 +443,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::OCI::Metadata::Column::Length </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::OCI::Metadata::Column::Length </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -486,7 +495,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a> Harlinn::OCI::Metadata::Column::Precision </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a> Harlinn::OCI::Metadata::Column::Precision </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -541,7 +550,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a> Harlinn::OCI::Metadata::Column::Scale </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a> Harlinn::OCI::Metadata::Column::Scale </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -650,7 +659,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::OCI::Metadata::Column::characterLength_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::OCI::Metadata::Column::characterLength_</td>
         </tr>
       </table>
   </td>
@@ -738,7 +747,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::OCI::Metadata::Column::length_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::OCI::Metadata::Column::length_</td>
         </tr>
       </table>
   </td>
@@ -782,7 +791,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a> Harlinn::OCI::Metadata::Column::precision_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a> Harlinn::OCI::Metadata::Column::precision_</td>
         </tr>
       </table>
   </td>
@@ -826,7 +835,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a> Harlinn::OCI::Metadata::Column::scale_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a> Harlinn::OCI::Metadata::Column::scale_</td>
         </tr>
       </table>
   </td>

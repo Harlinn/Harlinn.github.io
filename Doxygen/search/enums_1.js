@@ -8,7 +8,7 @@ var searchData=
   ['barrierlayout_5',['BarrierLayout',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#acf10175993b41080a8a4f612d50d9c63',1,'Harlinn::Windows::Graphics::D3D12']]],
   ['barriersync_6',['BarrierSync',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#af84774c5e969ba381491b0042c2d91cb',1,'Harlinn::Windows::Graphics::D3D12']]],
   ['barriertype_7',['BarrierType',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a6f936f64fa661f6cfbf7a8de4f6b852a',1,'Harlinn::Windows::Graphics::D3D12']]],
-  ['basetype_8',['BaseType',['../namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a958e291eca28acf43356c82691ac12a1',1,'Harlinn::Common::Core::SIMD']]],
+  ['basetype_8',['BaseType',['../namespace_harlinn_1_1_math_1_1_s_i_m_d.html#abcb04301f534bdb1376cc877c2a19430',1,'Harlinn::Math::SIMD::BaseType'],['../namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a958e291eca28acf43356c82691ac12a1',1,'Harlinn::Common::Core::SIMD::BaseType']]],
   ['basictypeid_9',['BasicTypeId',['../namespace_harlinn_1_1_common_1_1_core_1_1_types.html#ad7050d48722d01c073c0b3fcdd66613d',1,'Harlinn::Common::Core::Types']]],
   ['bindingtype_10',['BindingType',['../namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a58d56eac4a9bf725b2af0071d5aa9515',1,'Harlinn::AI::DML']]],
   ['bitmapalphachanneloption_11',['BitmapAlphaChannelOption',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_imaging.html#a32b39deb4fba15c8a943e459a31f884b',1,'Harlinn::Windows::Graphics::Imaging']]],

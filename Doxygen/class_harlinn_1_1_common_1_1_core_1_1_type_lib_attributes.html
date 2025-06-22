@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -138,9 +147,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afdff7bbf2f31b4c4219357a8df5d9069"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35c2b73da9d7493c268ec54cd8ac1693" id="r_a35c2b73da9d7493c268ec54cd8ac1693"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35c2b73da9d7493c268ec54cd8ac1693">MinorVersion</a> () const</td></tr>
 <tr class="separator:a35c2b73da9d7493c268ec54cd8ac1693"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d72456721c834459bda5c9fdf4f2c72" id="r_a5d72456721c834459bda5c9fdf4f2c72"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d72456721c834459bda5c9fdf4f2c72">Version</a> () const</td></tr>
+<tr class="memitem:a5d72456721c834459bda5c9fdf4f2c72" id="r_a5d72456721c834459bda5c9fdf4f2c72"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d72456721c834459bda5c9fdf4f2c72">Version</a> () const</td></tr>
 <tr class="separator:a5d72456721c834459bda5c9fdf4f2c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7706fb20810da3bb7879bbf3c7b1e41b" id="r_a7706fb20810da3bb7879bbf3c7b1e41b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7706fb20810da3bb7879bbf3c7b1e41b">Flags</a> () const</td></tr>
+<tr class="memitem:a7706fb20810da3bb7879bbf3c7b1e41b" id="r_a7706fb20810da3bb7879bbf3c7b1e41b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7706fb20810da3bb7879bbf3c7b1e41b">Flags</a> () const</td></tr>
 <tr class="separator:a7706fb20810da3bb7879bbf3c7b1e41b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88928c85deaeee3458284c8e678dddba" id="r_a88928c85deaeee3458284c8e678dddba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88928c85deaeee3458284c8e678dddba">IsRestricted</a> () const</td></tr>
 <tr class="separator:a88928c85deaeee3458284c8e678dddba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -270,7 +279,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::TypeLibAttributes::Flags </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::TypeLibAttributes::Flags </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -595,7 +604,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::pair&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> &gt; Harlinn::Common::Core::TypeLibAttributes::Version </td>
+          <td class="memname">std::pair&lt; <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> &gt; Harlinn::Common::Core::TypeLibAttributes::Version </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

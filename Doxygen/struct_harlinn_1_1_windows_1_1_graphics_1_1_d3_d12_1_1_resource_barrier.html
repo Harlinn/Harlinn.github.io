@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -116,10 +125,10 @@ Collaboration diagram for Harlinn::Windows::Graphics::D3D12::ResourceBarrier:</d
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aef9b72d6aaf60cba5c812b258a822dd8" id="r_aef9b72d6aaf60cba5c812b258a822dd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef9b72d6aaf60cba5c812b258a822dd8">ResourceBarrier</a> () noexcept</td></tr>
 <tr class="separator:aef9b72d6aaf60cba5c812b258a822dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6854cf6459733687acdecad156445f6e" id="r_a6854cf6459733687acdecad156445f6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6854cf6459733687acdecad156445f6e">ResourceBarrier</a> (ID3D12Resource *resource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateBefore, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateAfter, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> subresource=D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES) noexcept</td></tr>
+<tr class="memitem:a6854cf6459733687acdecad156445f6e" id="r_a6854cf6459733687acdecad156445f6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6854cf6459733687acdecad156445f6e">ResourceBarrier</a> (ID3D12Resource *resource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateBefore, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateAfter, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> subresource=D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES) noexcept</td></tr>
 <tr class="memdesc:a6854cf6459733687acdecad156445f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">ResourceBarrier</a> that describes the transition of subresources between different usages.  <br /></td></tr>
 <tr class="separator:a6854cf6459733687acdecad156445f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fa56fb8d5c33831ab8600ad674e3d59" id="r_a0fa56fb8d5c33831ab8600ad674e3d59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fa56fb8d5c33831ab8600ad674e3d59">ResourceBarrier</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource.html">Resource</a> &amp;resource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateBefore, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateAfter, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> subresource=D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES) noexcept</td></tr>
+<tr class="memitem:a0fa56fb8d5c33831ab8600ad674e3d59" id="r_a0fa56fb8d5c33831ab8600ad674e3d59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fa56fb8d5c33831ab8600ad674e3d59">ResourceBarrier</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource.html">Resource</a> &amp;resource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateBefore, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateAfter, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> subresource=D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES) noexcept</td></tr>
 <tr class="memdesc:a0fa56fb8d5c33831ab8600ad674e3d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_barrier.html">ResourceBarrier</a> that describes the transition of subresources between different usages.  <br /></td></tr>
 <tr class="separator:a0fa56fb8d5c33831ab8600ad674e3d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab122a317f8fe023de18d519e6c14cd01" id="r_ab122a317f8fe023de18d519e6c14cd01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab122a317f8fe023de18d519e6c14cd01">ResourceBarrier</a> (ID3D12Resource *resourceBefore, ID3D12Resource *resourceAfter, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a>) noexcept</td></tr>
@@ -143,16 +152,16 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a1d1ad4b254028cffb8211fa7b4a84eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1df32b04b7feabe1d1120fb6a54453e2" id="r_a1df32b04b7feabe1d1120fb6a54453e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5b">ResourceBarrierFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1df32b04b7feabe1d1120fb6a54453e2">Flags</a> = <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a8c50f46f370fdf0b29c44914d1432e5ba6adf97f83acf6453d4a6a4b1070f3754">ResourceBarrierFlags::None</a></td></tr>
 <tr class="separator:a1df32b04b7feabe1d1120fb6a54453e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab49a143b76835ed40f04b40cbbc45c0f" id="r_ab49a143b76835ed40f04b40cbbc45c0f"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memitem:aad4ab6ae45295420d7611572f6b56203" id="r_aad4ab6ae45295420d7611572f6b56203"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acac82f9413730af9b476205f4bf216b1" id="r_acac82f9413730af9b476205f4bf216b1"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_transition_barrier.html">ResourceTransitionBarrier</a>&#160;&#160;&#160;<a class="el" href="#ab82f442bbf4703c8cae38effe50ac03c">Transition</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:acac82f9413730af9b476205f4bf216b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9deea4ca6cbc044bec195ab1dee94441" id="r_a9deea4ca6cbc044bec195ab1dee94441"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_aliasing_barrier.html">ResourceAliasingBarrier</a>&#160;&#160;&#160;<a class="el" href="#a4e369437aaa81f87a46554b23de82733">Aliasing</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a9deea4ca6cbc044bec195ab1dee94441"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe1a71e25ba58475e4c3af24d13d3232" id="r_afe1a71e25ba58475e4c3af24d13d3232"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_u_a_v_barrier.html">ResourceUAVBarrier</a>&#160;&#160;&#160;<a class="el" href="#a25ec1f30fd66dafc5e7a8d46238d06c5">UAV</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:afe1a71e25ba58475e4c3af24d13d3232"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab49a143b76835ed40f04b40cbbc45c0f" id="r_ab49a143b76835ed40f04b40cbbc45c0f"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ab49a143b76835ed40f04b40cbbc45c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd261c2c145fe9380109027b43babaf2" id="r_afd261c2c145fe9380109027b43babaf2"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_transition_barrier.html">ResourceTransitionBarrier</a>&#160;&#160;&#160;<a class="el" href="#ab82f442bbf4703c8cae38effe50ac03c">Transition</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:afd261c2c145fe9380109027b43babaf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae54adce5ec280358c3904fb914c4fe18" id="r_ae54adce5ec280358c3904fb914c4fe18"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_aliasing_barrier.html">ResourceAliasingBarrier</a>&#160;&#160;&#160;<a class="el" href="#a4e369437aaa81f87a46554b23de82733">Aliasing</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ae54adce5ec280358c3904fb914c4fe18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16ae758a3957ff8dbc76b54025f98535" id="r_a16ae758a3957ff8dbc76b54025f98535"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource_u_a_v_barrier.html">ResourceUAVBarrier</a>&#160;&#160;&#160;<a class="el" href="#a25ec1f30fd66dafc5e7a8d46238d06c5">UAV</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a16ae758a3957ff8dbc76b54025f98535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4ab6ae45295420d7611572f6b56203" id="r_aad4ab6ae45295420d7611572f6b56203"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:aad4ab6ae45295420d7611572f6b56203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Describes a resource barrier (transition in resource use). </p>
@@ -215,7 +224,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>subresource</em></span><span class="paramdefsep"> = </span><span class="paramdefval">D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>subresource</em></span><span class="paramdefsep"> = </span><span class="paramdefval">D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -271,7 +280,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>subresource</em></span><span class="paramdefsep"> = </span><span class="paramdefval">D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>subresource</em></span><span class="paramdefsep"> = </span><span class="paramdefval">D3D12_RESOURCE_BARRIER_ALL_SUBRESOURCES</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -480,8 +489,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ab49a143b76835ed40f04b40cbbc45c0f" name="ab49a143b76835ed40f04b40cbbc45c0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab49a143b76835ed40f04b40cbbc45c0f">&#9670;&#160;</a></span>[union]</h2>
+<a id="aad4ab6ae45295420d7611572f6b56203" name="aad4ab6ae45295420d7611572f6b56203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad4ab6ae45295420d7611572f6b56203">&#9670;&#160;</a></span>[union]</h2>
 
 <div class="memitem">
 <div class="memproto">

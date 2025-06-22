@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -112,7 +121,7 @@ $(function(){initNavTree('class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_serial_p
 Public Member Functions</h2></td></tr>
 <tr class="memitem:add61a012ba385660f02d597a36c3d3a1" id="r_add61a012ba385660f02d597a36c3d3a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add61a012ba385660f02d597a36c3d3a1">SerialPort</a> ()=default</td></tr>
 <tr class="separator:add61a012ba385660f02d597a36c3d3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37460b7c6f97cd50ec559630bfdc1818" id="r_a37460b7c6f97cd50ec559630bfdc1818"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37460b7c6f97cd50ec559630bfdc1818">SerialPort</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> portNumber)</td></tr>
+<tr class="memitem:a37460b7c6f97cd50ec559630bfdc1818" id="r_a37460b7c6f97cd50ec559630bfdc1818"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37460b7c6f97cd50ec559630bfdc1818">SerialPort</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> portNumber)</td></tr>
 <tr class="separator:a37460b7c6f97cd50ec559630bfdc1818"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fb3dec590d9eaed5457dac0d3806e26" id="r_a7fb3dec590d9eaed5457dac0d3806e26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_c_c_export_8h.html#afb06ae686742fde98e6427c4a1e2206c">HCC_EXPORT</a> <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fb3dec590d9eaed5457dac0d3806e26">Name</a> () const</td></tr>
 <tr class="separator:a7fb3dec590d9eaed5457dac0d3806e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,21 +129,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0b18bcc85a551e72933a51414d42b7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8f50f9cdbf962755bfd3404b2466af3" id="r_ae8f50f9cdbf962755bfd3404b2466af3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_comm_device_stream.html">CommDeviceStream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8f50f9cdbf962755bfd3404b2466af3">Open</a> (bool overlapped) const</td></tr>
 <tr class="separator:ae8f50f9cdbf962755bfd3404b2466af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab416c78cc9654a746a25709be13f818d" id="r_ab416c78cc9654a746a25709be13f818d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_comm_device_stream.html">CommDeviceStream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab416c78cc9654a746a25709be13f818d">Open</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> baudRate=<a class="el" href="#af11a5545c2c5b837e5779d4274440af1">DefaultBaudRate</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a6a9aa4730805d9ba69493d528a169f86">Parity</a> parity=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a6a9aa4730805d9ba69493d528a169f86a6adf97f83acf6453d4a6a4b1070f3754">Parity::None</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> dataBits=8, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a4c5ca9a1555b20defdf7e823f1e3be84">StopBits</a> stopBits=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a4c5ca9a1555b20defdf7e823f1e3be84a06c2cea18679d64399783748fa367bdd">StopBits::One</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a2fc11016321301bed88a89943f666442">FlowControl</a> flowControl=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a2fc11016321301bed88a89943f666442a6adf97f83acf6453d4a6a4b1070f3754">FlowControl::None</a>, bool overlapped=false) const</td></tr>
+<tr class="memitem:ab416c78cc9654a746a25709be13f818d" id="r_ab416c78cc9654a746a25709be13f818d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_comm_device_stream.html">CommDeviceStream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab416c78cc9654a746a25709be13f818d">Open</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> baudRate=<a class="el" href="#af11a5545c2c5b837e5779d4274440af1">DefaultBaudRate</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a6a9aa4730805d9ba69493d528a169f86">Parity</a> parity=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a6a9aa4730805d9ba69493d528a169f86a6adf97f83acf6453d4a6a4b1070f3754">Parity::None</a>, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> dataBits=8, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a4c5ca9a1555b20defdf7e823f1e3be84">StopBits</a> stopBits=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a4c5ca9a1555b20defdf7e823f1e3be84a06c2cea18679d64399783748fa367bdd">StopBits::One</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a2fc11016321301bed88a89943f666442">FlowControl</a> flowControl=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a2fc11016321301bed88a89943f666442a6adf97f83acf6453d4a6a4b1070f3754">FlowControl::None</a>, bool overlapped=false) const</td></tr>
 <tr class="separator:ab416c78cc9654a746a25709be13f818d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae49729aac02e024f0a288f1f4b7ebdea" id="r_ae49729aac02e024f0a288f1f4b7ebdea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_comm_config.html">CommConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae49729aac02e024f0a288f1f4b7ebdea">DefaultConfig</a> () const</td></tr>
 <tr class="separator:ae49729aac02e024f0a288f1f4b7ebdea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a1f719398d86140d7cf9798f9cf0352f8" id="r_a1f719398d86140d7cf9798f9cf0352f8"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f719398d86140d7cf9798f9cf0352f8">DefaultAccess</a> = GENERIC_READ | GENERIC_WRITE</td></tr>
+<tr class="memitem:a1f719398d86140d7cf9798f9cf0352f8" id="r_a1f719398d86140d7cf9798f9cf0352f8"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f719398d86140d7cf9798f9cf0352f8">DefaultAccess</a> = GENERIC_READ | GENERIC_WRITE</td></tr>
 <tr class="separator:a1f719398d86140d7cf9798f9cf0352f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af11a5545c2c5b837e5779d4274440af1" id="r_af11a5545c2c5b837e5779d4274440af1"><td class="memItemLeft" align="right" valign="top">static constexpr DWORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af11a5545c2c5b837e5779d4274440af1">DefaultBaudRate</a> = CBR_57600</td></tr>
 <tr class="separator:af11a5545c2c5b837e5779d4274440af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a67d4b84706004fbd0edf8cb0b67796d3" id="r_a67d4b84706004fbd0edf8cb0b67796d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67d4b84706004fbd0edf8cb0b67796d3">portNumber_</a> = 0</td></tr>
+<tr class="memitem:a67d4b84706004fbd0edf8cb0b67796d3" id="r_a67d4b84706004fbd0edf8cb0b67796d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67d4b84706004fbd0edf8cb0b67796d3">portNumber_</a> = 0</td></tr>
 <tr class="separator:a67d4b84706004fbd0edf8cb0b67796d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -175,7 +184,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Common::Core::IO::SerialPort::SerialPort </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>portNumber</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>portNumber</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -297,7 +306,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_comm_device_stream.html">CommDeviceStream</a> Harlinn::Common::Core::IO::SerialPort::Open </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>baudRate</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#af11a5545c2c5b837e5779d4274440af1">DefaultBaudRate</a></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>baudRate</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#af11a5545c2c5b837e5779d4274440af1">DefaultBaudRate</a></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -307,7 +316,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>dataBits</em></span><span class="paramdefsep"> = </span><span class="paramdefval">8</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>dataBits</em></span><span class="paramdefsep"> = </span><span class="paramdefval">8</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -345,7 +354,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::IO::SerialPort::DefaultAccess = GENERIC_READ | GENERIC_WRITE</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::IO::SerialPort::DefaultAccess = GENERIC_READ | GENERIC_WRITE</td>
         </tr>
       </table>
   </td>
@@ -389,7 +398,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::IO::SerialPort::portNumber_ = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::IO::SerialPort::portNumber_ = 0</td>
         </tr>
       </table>
   </td>

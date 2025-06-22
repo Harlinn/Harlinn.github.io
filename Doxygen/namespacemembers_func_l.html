@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -100,37 +109,24 @@ $(function(){initNavTree('namespacemembers_func_l.html',''); initResizable(true)
 <div class="textblock">Here is a list of all namespace functions with links to the namespace documentation for each function:</div>
 
 <h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
-<li>ldexp()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#a4540a29921074f33bc8be71904e12aef">half_float::detail</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a8a595a81149b74120042dbfc450fb1ac">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>ldexpf()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a54a8a5ca9ed194cbebf10ada04d3910f">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>ldexpl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#ae59e8057b25902ac37c006d4cba4fe81">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>Length()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a5de17cb7e1eafb4402f4fc2a8e7921b8">Harlinn::Common::Core::Math</a>, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d2_d.html#a5ad447784851c018d5bd6f7a45d09749">Harlinn::Windows::Graphics::D2D</a></li>
-<li>LengthOf()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_internal.html#a84984f1b18cdefe96c4a3fc95bee7417">Harlinn::Common::Core::Internal</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a59eb2b0703cb6740a627a384eb405e92">Harlinn::Common::Core</a></li>
-<li>LengthSquared()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a37b56640627d41dc90b0aa32cba86944">Harlinn::Common::Core::Math</a></li>
-<li>Lerp()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#aaefb4f880152bf4f1fd6931b173811ad">Harlinn::Common::Core::Math</a></li>
-<li>Lerp2()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a076d7223380c75a93300fca5fe286531">Harlinn::Common::Core::Math</a></li>
-<li>LerpImpl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#aa3a2de788fca4657484af41b4377516e">Harlinn::Common::Core::Math::Internal</a></li>
-<li>Less()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a3527a1d6b3bed219dca6788c3f83e16c">Harlinn::Common::Core::Math</a></li>
-<li>LessOrEqual()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#ae0fa8a20a352c4ce016899822fdf5963">Harlinn::Common::Core::Math</a></li>
+<li>ldexp()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#a4540a29921074f33bc8be71904e12aef">half_float::detail</a></li>
+<li>Length()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#af6ae646ff1e802e9701420136bd99355">Harlinn::Math</a>, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d2_d.html#a5ad447784851c018d5bd6f7a45d09749">Harlinn::Windows::Graphics::D2D</a></li>
+<li>LengthOf()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_internal.html#a2c39100ac3a768f0d7489ace6a782cdd">Harlinn::Common::Internal</a>, <a class="el" href="namespace_harlinn_1_1_common.html#aaf9ac24e759da13473ea64c193b8d027">Harlinn::Common</a></li>
+<li>LengthSquared()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a844c2009d9ced9f68ebd1b38de558e3c">Harlinn::Math</a></li>
+<li>Lerp()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a15c0aa22d6e25b08bae0a587fd16aa0f">Harlinn::Math</a></li>
+<li>Lerp2()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a38e5e7d3d8874ca6e89a9049fdbe3e86">Harlinn::Math</a></li>
+<li>LerpImpl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math_1_1_internal.html#a2da06ea80a161a19a00c51fe443da841">Harlinn::Math::Internal</a></li>
+<li>Less()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#ac45b92fd9dab20f18f6620b09983d80c">Harlinn::Math</a></li>
+<li>LessOrEqual()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#aeb48c39d98d6162f742e2d9d764999f8">Harlinn::Math</a></li>
 <li>LessThan()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a6d32e8f87740bf95f2525b0c74ad1d33">Harlinn::AI::DML::X</a></li>
 <li>LessThanOrEqual()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#ad613e22d2b435b9a3556dfaa6afd79bb">Harlinn::AI::DML::X</a></li>
-<li>LGamma()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a6c76f688dc97c7335a7ad9e48a2cedee">Harlinn::Common::Core::Math</a></li>
-<li>lgamma()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#a7cf73acde909ef9f522b49f47e54843f">half_float::detail</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#ad3c41d666875d9ce6a4fcba52cd6ef05">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>lgamma_r()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a5e76feb52884c175091c9a583646b907">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>lgammaf()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a98bd9870792d27b0d99d5f43c00b457d">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>lgammaf_r()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a076383b55e2a803146bf263bf31eb335">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>lgammal()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#aa63cc73082dc960e61729e5cbbc1bbab">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>lgammal_r()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a3acf8ad8fb024169921d4f2290b2fee7">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
+<li>LGamma()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#af05d7353c0a884ee1a8ed360c06d31ed">Harlinn::Math</a></li>
+<li>lgamma()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#a7cf73acde909ef9f522b49f47e54843f">half_float::detail</a></li>
 <li>Libraries()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_environment_1_1_known_folder.html#afcb4cfecb623477477732e66aae27b8b">Harlinn::Windows::Environment::KnownFolder</a></li>
 <li>likely()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1details.html#ad7c00d8a14f176a8f697f496f500b6c5">Harlinn::Common::Core::details</a></li>
-<li>LinePointDistance()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a5280c7e95821b013eb64abc8fa4feba2">Harlinn::Common::Core::Math</a></li>
-<li>LinePointDistanceImpl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#a39770111d193c3401da47361e8672b08">Harlinn::Common::Core::Math::Internal</a></li>
+<li>LinePointDistance()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a4eda795c9a79228776bc7b0a7047fd24">Harlinn::Math</a></li>
+<li>LinePointDistanceImpl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math_1_1_internal.html#a1e46ed200d2aa0b9b5e60f3ac3cc7a1f">Harlinn::Math::Internal</a></li>
 <li>Links()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_environment_1_1_known_folder.html#ad68100115e6fd3fc63f221954d5eba8c">Harlinn::Windows::Environment::KnownFolder</a></li>
-<li>llrint()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a39af6fe3f879a52b3e844f269f987680">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>llrintf()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#ac7ba9461087e0173989492fac7a4cd63">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>llrintl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#af0d2cc10510d8b5face2005a95f8b470">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>llround()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#ab803fa61a8d8561d3b46c0e56f947e50">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>llroundf()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a5b9e789acbb83d189ba0671efade09b6">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>llroundl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#addc96ffbceddd74b88fe4efd65dc6f5e">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
 <li>Load()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_atomic.html#a941a9da2531cf4e51a290c5c1d4b65a1">Harlinn::Common::Core::Atomic</a></li>
 <li>LobAppend()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_o_c_i.html#a097c55b843e9edb4a525d630ae887c07">Harlinn::OCI</a></li>
 <li>LobAssign()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_o_c_i.html#abbb31783af59b61aad903ae5e698fd24">Harlinn::OCI</a></li>
@@ -178,48 +174,34 @@ $(function(){initNavTree('namespacemembers_func_l.html',''); initResizable(true)
 <li>LocalAppDataLow()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_environment_1_1_known_folder.html#a7e97921a420c1613c3501f35b7cbef4d">Harlinn::Windows::Environment::KnownFolder</a></li>
 <li>LocalizedResourcesDir()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_windows_1_1_environment_1_1_known_folder.html#a9bf07b3747b759522c166ea2772df578">Harlinn::Windows::Environment::KnownFolder</a></li>
 <li>LocalResponseNormalization()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a28c19c95e8b34680c3b1335cbc8f3cbe">Harlinn::AI::DML::X</a></li>
-<li>Log()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#af34ef4ece18998ec2c59640732f1de5a">Harlinn::AI::DML::X</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a48026344a2b3d5dda288d8cd992fbc27">Harlinn::Common::Core::Math</a></li>
-<li>log()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#aae4eda4733dc4a863b635473008d9bc0">half_float::detail</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a386c0f5dc9be3d6d7946c093bbe303e5">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>Log10()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a9544f1929587ecec99c64607aa75a661">Harlinn::Common::Core::Math</a></li>
-<li>log10()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#ad8d7b7769a3053dd74344ca0b122bb7b">half_float::detail</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a92d17904cdd84c6e3e955ff7da359f0d">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>log10f()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a6e6470ca44dfe2ff683b043d35059045">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>log10l()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#ab6fc44dea97e6155d4a0b0ed1798b133">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>Log1P()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a4adcc30c530e25573da45ad9698fe1cf">Harlinn::Common::Core::Math</a></li>
-<li>log1p()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#aaab6664f3cee88c7c0474396c8ba8219">half_float::detail</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a0a8892a985214acd3ed9fdce189320ef">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>log1pf()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a7456f2da94eec991b02e27250ff9534e">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>log1pl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#aa65f5d5db72652b384dd1e7a6e1de3ea">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>Log2()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a466e40e10c681301fe4df70e02bdb7fe">Harlinn::Common::Core::Math</a></li>
-<li>log2()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#ac864f8697a78ce420e343a9c5d37118f">half_float::detail</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a43e6a5fcd7a305231fad048eb2a10669">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>log2f()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#ae6949d2102a58a5bc96b9b175efe781d">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>Log2Int()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#adef6e8c650fe6d437fc59d475ca96a59">Harlinn::Common::Core::Math</a></li>
-<li>log2l()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a1ea87fd75dffad1d65ff2bee3c85db61">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>Log4Int()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a8e387fef89b33787f5009d77530f5ff2">Harlinn::Common::Core::Math</a></li>
-<li>LogB()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a1316802edb551884a7061e435317bc1c">Harlinn::Common::Core::Math</a></li>
-<li>logb()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#a9963a6cdd7b45287f35438e07717eba2">half_float::detail</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#ab9c475dc04c76c3efce21073a9eaa9bb">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>logbf()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#aeb6bb817c50bf40fcaa7f848d575d882">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>logbl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#afc651f1202b92b2204f12a8a047e53e1">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>logf()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#aa37ed6675ef21c185232ee0ac6d38471">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>LogI0()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#aa70e5220662fe2ea0cb5d884daca5c5a">Harlinn::Common::Core::Math</a></li>
+<li>Log()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#af34ef4ece18998ec2c59640732f1de5a">Harlinn::AI::DML::X</a>, <a class="el" href="namespace_harlinn_1_1_math.html#a383035a626dc08e038f62ba81a0733c9">Harlinn::Math</a></li>
+<li>log()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#aae4eda4733dc4a863b635473008d9bc0">half_float::detail</a></li>
+<li>Log10()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#acae347a158854527883628eeee6216f5">Harlinn::Math</a></li>
+<li>log10()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#ad8d7b7769a3053dd74344ca0b122bb7b">half_float::detail</a></li>
+<li>Log1P()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a0becfa6a2399a8362895e28cde842cde">Harlinn::Math</a></li>
+<li>log1p()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#aaab6664f3cee88c7c0474396c8ba8219">half_float::detail</a></li>
+<li>Log2()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#af9bfcf2df6a90c553b8382702d8f18e1">Harlinn::Math</a></li>
+<li>log2()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#ac864f8697a78ce420e343a9c5d37118f">half_float::detail</a></li>
+<li>Log2Int()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a64f86debde39dc16f64a157265d77700">Harlinn::Math</a></li>
+<li>Log4Int()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#aa37735b1dec272dc3c997e13e402c3e3">Harlinn::Math</a></li>
+<li>LogB()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#aa3b8da5fdeb7cdce22ff47e860552b72">Harlinn::Math</a></li>
+<li>logb()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#a9963a6cdd7b45287f35438e07717eba2">half_float::detail</a></li>
+<li>LogI0()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a91cf4c3f7c5688ffaddb00d62dd2de97">Harlinn::Math</a></li>
 <li>LogicalAnd()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a16c44a3ee0916ce4673f15d937ae5598">Harlinn::AI::DML::X</a></li>
 <li>LogicalNot()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a4a00080f4f43da11aa15bb726b8dca04">Harlinn::AI::DML::X</a></li>
 <li>LogicalOr()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a9319c9cee00c5f5fa6c0fc19c147293e">Harlinn::AI::DML::X</a></li>
 <li>LogicalXor()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#aa15a55439bc676b04abe6d590b0a0e74">Harlinn::AI::DML::X</a></li>
-<li>LogImpl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#ae184372ed9be444a72ac830bf6196b7a">Harlinn::Common::Core::Math::Internal</a></li>
-<li>Logistic()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#ad28eefa96f46b5ed88810fe1590ba2a3">Harlinn::Common::Core::Math</a></li>
-<li>LogisticCDF()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#ae359214c1ffe5b603eb1b3ffe6e8a6d8">Harlinn::Common::Core::Math</a></li>
-<li>logl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a8257cbf5871a226cb78a22ca55d865ad">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
+<li>LogImpl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math_1_1_internal.html#a2dcbf9156221f682751464ebda1c4a59">Harlinn::Math::Internal</a></li>
+<li>Logistic()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a8aabce1f77ad6a81ff997a7d9510aa0b">Harlinn::Math</a></li>
+<li>LogisticCDF()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a89e80a962d96d83c3d005c65decc3b93">Harlinn::Math</a></li>
 <li>LogStackTrace()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6502db90ee70b8d82a624db1767630cb">Harlinn::Common::Core</a></li>
 <li>LongPathName()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_path.html#abe69eba005a7d12264fceb6787437bd6">Harlinn::Common::Core::IO::Path</a></li>
 <li>LongPathNameImpl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_path_1_1_internal.html#ac006fed77e438eed6bbaaf31a2a82108">Harlinn::Common::Core::IO::Path::Internal</a></li>
-<li>LookAt()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#aabed1db8ec37b44e87b799efbbde9ab2">Harlinn::Common::Core::Math</a></li>
-<li>LookTo()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a07d96ba1436628874437eb0664072285">Harlinn::Common::Core::Math</a></li>
-<li>LookToImpl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal.html#ae2db69c6273216a6c92c56e5050b634a">Harlinn::Common::Core::Math::Internal</a></li>
-<li>lrint()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#aa2ee848c78f938434f485e75904bee45">half_float::detail</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a34331ae2bc3f962ac64fdaea3341e952">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>lrintf()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#aebb6899e5fc9e769848c80c1527434de">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>lrintl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#ab07a131a348b14c73850734ddcf5d092">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>lround()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#abff729297b6ad9e7ad431f73d280b76d">half_float::detail</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a7d5f7da6b31198e88d0907c5fc3f4d8f">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>lroundf()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a6b7e01b393fb37d795f10f2e4cd83e16">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
-<li>lroundl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_open_lib_m.html#a63bdfd643dc98296f56c7e17eb20685e">Harlinn::Common::Core::Math::Internal::OpenLibM</a></li>
+<li>LookAt()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#ab3c8a2682c3f9ca44bf2b39c1bc65365">Harlinn::Math</a></li>
+<li>LookTo()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math.html#a5dbd8de9377706d9a75eca81c33b3740">Harlinn::Math</a></li>
+<li>LookToImpl()&#160;:&#160;<a class="el" href="namespace_harlinn_1_1_math_1_1_internal.html#a0f615eb35986eb3e0a013924077c1c18">Harlinn::Math::Internal</a></li>
+<li>lrint()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#aa2ee848c78f938434f485e75904bee45">half_float::detail</a></li>
+<li>lround()&#160;:&#160;<a class="el" href="namespacehalf__float_1_1detail.html#abff729297b6ad9e7ad431f73d280b76d">half_float::detail</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -238,7 +238,7 @@ the same time. SIMD is used to implement artificial intelligence (AI),
 machine learning (ML), high performance graphics, and other data science solutions. 
 SIMD enables efficient data processing and increased computational performance.</p>
 
-<p>The <a href="/Cpp/Harlinn.Windows/Harlinn.Common.Core/Harlinn.Common.Core.html">Harlinn.Common.Core</a> 
+<p>The <a href="/Cpp/Harlinn.Windows/Harlinn.Math/Harlinn.Math.html">Harlinn.Math</a> 
 library allows developers to create highly optimized SIMD code, without 
 the complexity usually associated with using the SIMD intrinsic operations:</p>
 
@@ -252,12 +252,12 @@ Vector v3 = (v2 + Dot(v1,v2)) / Sin(v1);
 <p>The above example uses the <a href="FastLinearAlgebra.html">Fast Linear Algebra Classes for Games and Graphics</a>, which 
 leverages the <code class="language-plaintext highlighter-rouge">Traits&lt;T,N&gt;</code> specializations discussed below.</p>
 
-<p><code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> is header only, and does not require linking with <code class="language-plaintext highlighter-rouge">Harlinn.Common.Core.lib</code>.</p>
+<p><code class="language-plaintext highlighter-rouge">Harlinn/Math/Simd.h</code> is header only.</p>
 
 <h1 id="single-instruction-multiple-data">Single Instruction Multiple Data</h1>
 
-<p>The interface to SIMD operations in <a href="/Cpp/Harlinn.Windows/Harlinn.Common.Core/Harlinn.Common.Core.html">Harlinn.Common.Core</a> 
-is provided in <code class="language-plaintext highlighter-rouge">HCCSIMD.h</code> contained within the <code class="language-plaintext highlighter-rouge">Harlinn::Common::Core::SIMD</code> namespace through a set of specializations
+<p>The interface to SIMD operations in <a href="/Cpp/Harlinn.Windows/Harlinn.Math/Harlinn.Math.html">Harlinn.Math</a> 
+is provided in <code class="language-plaintext highlighter-rouge">Harlinn/Math/Simd.h</code> contained within the <code class="language-plaintext highlighter-rouge">Harlinn::Math::SIMD</code> namespace through a set of specializations
 of the template:</p>
 
 <pre><code class="language-C++">template&lt;typename T, size_t N&gt;

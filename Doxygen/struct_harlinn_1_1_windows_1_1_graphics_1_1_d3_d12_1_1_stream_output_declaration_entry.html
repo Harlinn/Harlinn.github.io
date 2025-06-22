@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -117,22 +126,22 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a9a86817927af601376e0173322e6a952" id="r_a9a86817927af601376e0173322e6a952"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a86817927af601376e0173322e6a952">Stream</a> = 0</td></tr>
+<tr class="memitem:a9a86817927af601376e0173322e6a952" id="r_a9a86817927af601376e0173322e6a952"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a86817927af601376e0173322e6a952">Stream</a> = 0</td></tr>
 <tr class="memdesc:a9a86817927af601376e0173322e6a952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zero-based, stream number.  <br /></td></tr>
 <tr class="separator:a9a86817927af601376e0173322e6a952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3812217c6ad826a04c03f44117cf0745" id="r_a3812217c6ad826a04c03f44117cf0745"><td class="memItemLeft" align="right" valign="top">LPCSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3812217c6ad826a04c03f44117cf0745">SemanticName</a> = nullptr</td></tr>
 <tr class="memdesc:a3812217c6ad826a04c03f44117cf0745"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of output element; possible values include: "POSITION", "NORMAL", or "TEXCOORD0". Note that if SemanticName is NULL then ComponentCount can be greater than 4 and the described entry will be a gap in the stream out where no data will be written.  <br /></td></tr>
 <tr class="separator:a3812217c6ad826a04c03f44117cf0745"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a933ae0632c01272095968238d424f1c5" id="r_a933ae0632c01272095968238d424f1c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a933ae0632c01272095968238d424f1c5">SemanticIndex</a> = 0</td></tr>
+<tr class="memitem:a933ae0632c01272095968238d424f1c5" id="r_a933ae0632c01272095968238d424f1c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a933ae0632c01272095968238d424f1c5">SemanticIndex</a> = 0</td></tr>
 <tr class="memdesc:a933ae0632c01272095968238d424f1c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output element's zero-based index. Use, for example, if you have more than one texture coordinate stored in each vertex.  <br /></td></tr>
 <tr class="separator:a933ae0632c01272095968238d424f1c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaf9e56086e511c976a7868695c3d1c6" id="r_adaf9e56086e511c976a7868695c3d1c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adaf9e56086e511c976a7868695c3d1c6">StartComponent</a> = 0</td></tr>
+<tr class="memitem:adaf9e56086e511c976a7868695c3d1c6" id="r_adaf9e56086e511c976a7868695c3d1c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adaf9e56086e511c976a7868695c3d1c6">StartComponent</a> = 0</td></tr>
 <tr class="memdesc:adaf9e56086e511c976a7868695c3d1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The component of the entry to begin writing out to. Valid values are 0 to 3. For example, if you only wish to output to the y and z components of a position, StartComponent is 1 and ComponentCount is 2.  <br /></td></tr>
 <tr class="separator:adaf9e56086e511c976a7868695c3d1c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc5b5d14ea6979d3dc23d36875c2b85" id="r_a6cc5b5d14ea6979d3dc23d36875c2b85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cc5b5d14ea6979d3dc23d36875c2b85">ComponentCount</a> = 0</td></tr>
+<tr class="memitem:a6cc5b5d14ea6979d3dc23d36875c2b85" id="r_a6cc5b5d14ea6979d3dc23d36875c2b85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cc5b5d14ea6979d3dc23d36875c2b85">ComponentCount</a> = 0</td></tr>
 <tr class="memdesc:a6cc5b5d14ea6979d3dc23d36875c2b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of components of the entry to write out to. Valid values are 1 to 4. For example, if you only wish to output to the y and z components of a position, StartComponent is 1 and ComponentCount is 2. Note that if SemanticName is NULL then ComponentCount can be greater than 4 and the described entry will be a gap in the stream out where no data will be written.  <br /></td></tr>
 <tr class="separator:a6cc5b5d14ea6979d3dc23d36875c2b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00bdc7a3037d345d1732f55d6dfc72ce" id="r_a00bdc7a3037d345d1732f55d6dfc72ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00bdc7a3037d345d1732f55d6dfc72ce">OutputSlot</a> = 0</td></tr>
+<tr class="memitem:a00bdc7a3037d345d1732f55d6dfc72ce" id="r_a00bdc7a3037d345d1732f55d6dfc72ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00bdc7a3037d345d1732f55d6dfc72ce">OutputSlot</a> = 0</td></tr>
 <tr class="memdesc:a00bdc7a3037d345d1732f55d6dfc72ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">The associated stream output buffer that is bound to the pipeline. The valid range for OutputSlot is 0 to 3.  <br /></td></tr>
 <tr class="separator:a00bdc7a3037d345d1732f55d6dfc72ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -164,7 +173,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> Harlinn::Windows::Graphics::D3D12::StreamOutputDeclarationEntry::ComponentCount = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> Harlinn::Windows::Graphics::D3D12::StreamOutputDeclarationEntry::ComponentCount = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -180,7 +189,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> Harlinn::Windows::Graphics::D3D12::StreamOutputDeclarationEntry::OutputSlot = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> Harlinn::Windows::Graphics::D3D12::StreamOutputDeclarationEntry::OutputSlot = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -196,7 +205,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::D3D12::StreamOutputDeclarationEntry::SemanticIndex = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::D3D12::StreamOutputDeclarationEntry::SemanticIndex = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -228,7 +237,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> Harlinn::Windows::Graphics::D3D12::StreamOutputDeclarationEntry::StartComponent = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> Harlinn::Windows::Graphics::D3D12::StreamOutputDeclarationEntry::StartComponent = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -244,7 +253,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::D3D12::StreamOutputDeclarationEntry::Stream = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::D3D12::StreamOutputDeclarationEntry::Stream = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

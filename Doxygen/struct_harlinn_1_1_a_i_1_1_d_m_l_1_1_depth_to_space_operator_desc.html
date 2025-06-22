@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -128,14 +137,14 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa15f47dc3205405a0b2fd189ae094326" id="r_aa15f47dc3205405a0b2fd189ae094326"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa15f47dc3205405a0b2fd189ae094326">DepthToSpaceOperatorDesc</a> () noexcept=default</td></tr>
 <tr class="separator:aa15f47dc3205405a0b2fd189ae094326"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a429b6501c0bb76a738e621cb8abdeec2" id="r_a429b6501c0bb76a738e621cb8abdeec2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a429b6501c0bb76a738e621cb8abdeec2">DepthToSpaceOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> blockSize=0) noexcept</td></tr>
+<tr class="memitem:a429b6501c0bb76a738e621cb8abdeec2" id="r_a429b6501c0bb76a738e621cb8abdeec2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a429b6501c0bb76a738e621cb8abdeec2">DepthToSpaceOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> blockSize=0) noexcept</td></tr>
 <tr class="separator:a429b6501c0bb76a738e621cb8abdeec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad78523617320dc611f4ffc8457df90ef" id="r_ad78523617320dc611f4ffc8457df90ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad78523617320dc611f4ffc8457df90ef">DML_IMPLEMENT_CONVERSIONS_TO</a> (DML_DEPTH_TO_SPACE_OPERATOR_DESC)</td></tr>
 <tr class="separator:ad78523617320dc611f4ffc8457df90ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5f8d35fcd6c7b995770e2e56ba907a6e" id="r_a5f8d35fcd6c7b995770e2e56ba907a6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f8d35fcd6c7b995770e2e56ba907a6e">BlockSize</a> = 0</td></tr>
+<tr class="memitem:a5f8d35fcd6c7b995770e2e56ba907a6e" id="r_a5f8d35fcd6c7b995770e2e56ba907a6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f8d35fcd6c7b995770e2e56ba907a6e">BlockSize</a> = 0</td></tr>
 <tr class="separator:a5f8d35fcd6c7b995770e2e56ba907a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -209,7 +218,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>blockSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>blockSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -247,7 +256,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::DepthToSpaceOperatorDesc::BlockSize = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::DepthToSpaceOperatorDesc::BlockSize = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

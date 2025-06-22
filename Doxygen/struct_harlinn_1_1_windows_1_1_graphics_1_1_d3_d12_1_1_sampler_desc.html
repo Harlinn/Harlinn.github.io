@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -129,7 +138,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a658e0b7992ccd3f9982da9bfb0510388" id="r_a658e0b7992ccd3f9982da9bfb0510388"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a658e0b7992ccd3f9982da9bfb0510388">MipLODBias</a> = 0.f</td></tr>
 <tr class="memdesc:a658e0b7992ccd3f9982da9bfb0510388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset from the calculated mipmap level. For example, if the runtime calculates that a texture should be sampled at mipmap level 3 and MipLODBias is 2, the texture will be sampled at mipmap level 5.  <br /></td></tr>
 <tr class="separator:a658e0b7992ccd3f9982da9bfb0510388"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62878f270e9b5c01a5441dca3b571d95" id="r_a62878f270e9b5c01a5441dca3b571d95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62878f270e9b5c01a5441dca3b571d95">MaxAnisotropy</a> = 0</td></tr>
+<tr class="memitem:a62878f270e9b5c01a5441dca3b571d95" id="r_a62878f270e9b5c01a5441dca3b571d95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62878f270e9b5c01a5441dca3b571d95">MaxAnisotropy</a> = 0</td></tr>
 <tr class="memdesc:a62878f270e9b5c01a5441dca3b571d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamping value used if <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#ac85222f5ce12395994711a9179617172a3cc429d7ee5b21a397fdc636221f8280" title="Use anisotropic interpolation for minification, magnification, and mip-level sampling.">Filter::Anisotropic</a> or FilterComparisonAnisotropic is specified in Filter. Valid values are between 1 and 16.  <br /></td></tr>
 <tr class="separator:a62878f270e9b5c01a5441dca3b571d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b027c3f7559fad92ff56f8e300f2eff" id="r_a4b027c3f7559fad92ff56f8e300f2eff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a45f12001aef9c3c6575a87f74cb06ef8">D3D12::ComparisonFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b027c3f7559fad92ff56f8e300f2eff">ComparisonFunc</a> = <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a45f12001aef9c3c6575a87f74cb06ef8a88183b946cc5f0e8c96b2e66e1c74a7e">D3D12::ComparisonFunction::Unknown</a></td></tr>
@@ -270,7 +279,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::D3D12::SamplerDesc::MaxAnisotropy = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::D3D12::SamplerDesc::MaxAnisotropy = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

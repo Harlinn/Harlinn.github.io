@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -125,7 +134,7 @@ Collaboration diagram for Harlinn::Common::Core::SimpleConcurrentQueue&lt; T, ma
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:af8f4bef27e36c31a8f62226a548ca4eb" id="r_af8f4bef27e36c31a8f62226a548ca4eb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8f4bef27e36c31a8f62226a548ca4eb">Container</a> = std::array&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#a3c604413f5bbe1e8840274dc4928bf3e">MaxQueueSize</a>&gt;</td></tr>
+<tr class="memitem:af8f4bef27e36c31a8f62226a548ca4eb" id="r_af8f4bef27e36c31a8f62226a548ca4eb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8f4bef27e36c31a8f62226a548ca4eb">Container</a> = std::array&lt;T, <a class="el" href="#a3c604413f5bbe1e8840274dc4928bf3e">MaxQueueSize</a>&gt;</td></tr>
 <tr class="separator:af8f4bef27e36c31a8f62226a548ca4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -144,11 +153,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9c3821a9444f816f1bc31581d2339f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60c30a2890f5042ceb6e8d473b8de83b" id="r_a60c30a2890f5042ceb6e8d473b8de83b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60c30a2890f5042ceb6e8d473b8de83b">IsClosed</a> () const noexcept</td></tr>
 <tr class="separator:a60c30a2890f5042ceb6e8d473b8de83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a9afac1967e79be3da4a3a41bc5e13b" id="r_a7a9afac1967e79be3da4a3a41bc5e13b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a9afac1967e79be3da4a3a41bc5e13b">Push</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;&amp;item)</td></tr>
+<tr class="memitem:a7a9afac1967e79be3da4a3a41bc5e13b" id="r_a7a9afac1967e79be3da4a3a41bc5e13b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a9afac1967e79be3da4a3a41bc5e13b">Push</a> (T &amp;&amp;item)</td></tr>
 <tr class="separator:a7a9afac1967e79be3da4a3a41bc5e13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25de431afdcdf93ccc76970752d133ff" id="r_a25de431afdcdf93ccc76970752d133ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25de431afdcdf93ccc76970752d133ff">Push</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;item)</td></tr>
+<tr class="memitem:a25de431afdcdf93ccc76970752d133ff" id="r_a25de431afdcdf93ccc76970752d133ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25de431afdcdf93ccc76970752d133ff">Push</a> (const T &amp;item)</td></tr>
 <tr class="separator:a25de431afdcdf93ccc76970752d133ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae15ffa5c950664ec95bbc784f7af0262" id="r_ae15ffa5c950664ec95bbc784f7af0262"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae15ffa5c950664ec95bbc784f7af0262">Pop</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;item)</td></tr>
+<tr class="memitem:ae15ffa5c950664ec95bbc784f7af0262" id="r_ae15ffa5c950664ec95bbc784f7af0262"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae15ffa5c950664ec95bbc784f7af0262">Pop</a> (T &amp;item)</td></tr>
 <tr class="separator:ae15ffa5c950664ec95bbc784f7af0262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -158,7 +167,7 @@ Static Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a55caedb75a43a1c2de1362acade5bab8" id="r_a55caedb75a43a1c2de1362acade5bab8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55caedb75a43a1c2de1362acade5bab8">PopValue</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value)</td></tr>
+<tr class="memitem:a55caedb75a43a1c2de1362acade5bab8" id="r_a55caedb75a43a1c2de1362acade5bab8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55caedb75a43a1c2de1362acade5bab8">PopValue</a> (T &amp;value)</td></tr>
 <tr class="separator:a55caedb75a43a1c2de1362acade5bab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -181,7 +190,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ac1fe2a72889969762ed309a5bc948740"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, size_t maxQueueSize&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T, size_t maxQueueSize&gt;<br />
 class Harlinn::Common::Core::SimpleConcurrentQueue&lt; T, maxQueueSize &gt;</div><p>Simple blocking fixed size queue. </p>
 <p>Pop will return false when the queue is empty <em>and</em> closed. Push will return false when the queue is closed. If the producer was waiting for the queue, the item will <em>not</em> be placed in the queue. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -197,10 +206,10 @@ class Harlinn::Common::Core::SimpleConcurrentQueue&lt; T, maxQueueSize &gt;</div
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::Container = std::array&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="#a3c604413f5bbe1e8840274dc4928bf3e">MaxQueueSize</a>&gt;</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::Container = std::array&lt;T, <a class="el" href="#a3c604413f5bbe1e8840274dc4928bf3e">MaxQueueSize</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -214,13 +223,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::SimpleConcurrentQueue </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::SimpleConcurrentQueue </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -241,15 +250,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::SimpleConcurrentQueue </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::SimpleConcurrentQueue </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -268,15 +277,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::SimpleConcurrentQueue </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::SimpleConcurrentQueue </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -296,13 +305,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::Close </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::Close </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -323,13 +332,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::IsClosed </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::IsClosed </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -350,15 +359,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">SimpleConcurrentQueue</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::operator= </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">SimpleConcurrentQueue</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -377,15 +386,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">SimpleConcurrentQueue</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::operator= </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">SimpleConcurrentQueue</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -404,15 +413,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::Pop </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::Pop </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
+          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -431,15 +440,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::PopValue </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::PopValue </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -458,15 +467,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::Push </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::Push </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -485,15 +494,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::Push </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::Push </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
+          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -513,13 +522,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;bool&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::closed_ = false</td>
+          <td class="memname">std::atomic&lt;bool&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::closed_ = false</td>
         </tr>
       </table>
   </td>
@@ -537,13 +546,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#af8f4bef27e36c31a8f62226a548ca4eb">Container</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::conatainer_</td>
+          <td class="memname"><a class="el" href="#af8f4bef27e36c31a8f62226a548ca4eb">Container</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::conatainer_</td>
         </tr>
       </table>
   </td>
@@ -561,13 +570,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_critical_section.html">CriticalSection</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::criticalSection_</td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_critical_section.html">CriticalSection</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::criticalSection_</td>
         </tr>
       </table>
   </td>
@@ -585,13 +594,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;size_t&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::lastItemProduced_ = 0</td>
+          <td class="memname">std::atomic&lt;size_t&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::lastItemProduced_ = 0</td>
         </tr>
       </table>
   </td>
@@ -609,13 +618,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::MaxQueueSize = maxQueueSize</td>
+          <td class="memname">size_t <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::MaxQueueSize = maxQueueSize</td>
         </tr>
       </table>
   </td>
@@ -633,13 +642,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_condition_variable.html">ConditionVariable</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::queueEmpty_</td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_condition_variable.html">ConditionVariable</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::queueEmpty_</td>
         </tr>
       </table>
   </td>
@@ -657,13 +666,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_condition_variable.html">ConditionVariable</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::queueFull_</td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_condition_variable.html">ConditionVariable</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::queueFull_</td>
         </tr>
       </table>
   </td>
@@ -681,13 +690,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;size_t&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::queueSize_ = 0</td>
+          <td class="memname">std::atomic&lt;size_t&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::queueSize_ = 0</td>
         </tr>
       </table>
   </td>
@@ -705,13 +714,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t maxQueueSize&gt; </div>
+template&lt;typename T , size_t maxQueueSize&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;size_t&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, maxQueueSize &gt;::startOffset_ = 0</td>
+          <td class="memname">std::atomic&lt;size_t&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_simple_concurrent_queue.html">Harlinn::Common::Core::SimpleConcurrentQueue</a>&lt; T, maxQueueSize &gt;::startOffset_ = 0</td>
         </tr>
       </table>
   </td>

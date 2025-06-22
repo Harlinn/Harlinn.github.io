@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -116,11 +125,11 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a385eab642afddfb9268a61946ffbda11" id="r_a385eab642afddfb9268a61946ffbda11"><td class="memItemLeft" align="right" valign="top">_In_ <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i.html#a44af51316c575dcac6b4f3fd7fe8233f">DXGI::Format</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a385eab642afddfb9268a61946ffbda11">Format</a></td></tr>
 <tr class="separator:a385eab642afddfb9268a61946ffbda11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dcab951e811a0796188a84bed97cc43" id="r_a0dcab951e811a0796188a84bed97cc43"><td class="memItemLeft" align="right" valign="top">_In_ <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dcab951e811a0796188a84bed97cc43">SampleCount</a></td></tr>
+<tr class="memitem:a0dcab951e811a0796188a84bed97cc43" id="r_a0dcab951e811a0796188a84bed97cc43"><td class="memItemLeft" align="right" valign="top">_In_ <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dcab951e811a0796188a84bed97cc43">SampleCount</a></td></tr>
 <tr class="separator:a0dcab951e811a0796188a84bed97cc43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac34129d1c79a013079e31783d686764c" id="r_ac34129d1c79a013079e31783d686764c"><td class="memItemLeft" align="right" valign="top">_In_ <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a343b38dcb23e3bb8794f7229ea9ddcc9">MultisampleQualityLevelFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac34129d1c79a013079e31783d686764c">Flags</a></td></tr>
 <tr class="separator:ac34129d1c79a013079e31783d686764c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb618bac06cabb253f1c734a12c0c303" id="r_acb618bac06cabb253f1c734a12c0c303"><td class="memItemLeft" align="right" valign="top">_Out_ <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb618bac06cabb253f1c734a12c0c303">NumQualityLevels</a></td></tr>
+<tr class="memitem:acb618bac06cabb253f1c734a12c0c303" id="r_acb618bac06cabb253f1c734a12c0c303"><td class="memItemLeft" align="right" valign="top">_Out_ <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb618bac06cabb253f1c734a12c0c303">NumQualityLevels</a></td></tr>
 <tr class="separator:acb618bac06cabb253f1c734a12c0c303"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -179,7 +188,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">_Out_ <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::D3D12::FeatureDataMultiSampleQualityLevels::NumQualityLevels</td>
+          <td class="memname">_Out_ <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::D3D12::FeatureDataMultiSampleQualityLevels::NumQualityLevels</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -193,7 +202,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">_In_ <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::D3D12::FeatureDataMultiSampleQualityLevels::SampleCount</td>
+          <td class="memname">_In_ <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::D3D12::FeatureDataMultiSampleQualityLevels::SampleCount</td>
         </tr>
       </table>
 </div><div class="memdoc">

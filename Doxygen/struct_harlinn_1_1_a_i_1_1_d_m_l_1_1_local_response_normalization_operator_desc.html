@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -128,7 +137,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5f52b3154569d8ed2baca0ca396e6062" id="r_a5f52b3154569d8ed2baca0ca396e6062"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f52b3154569d8ed2baca0ca396e6062">LocalResponseNormalizationOperatorDesc</a> () noexcept=default</td></tr>
 <tr class="separator:a5f52b3154569d8ed2baca0ca396e6062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61f3817369e51396702006e321e729ad" id="r_a61f3817369e51396702006e321e729ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61f3817369e51396702006e321e729ad">LocalResponseNormalizationOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, bool crossChannel, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> localSize, float alpha=0.0001f, float beta=0.75f, float bias=1.f) noexcept</td></tr>
+<tr class="memitem:a61f3817369e51396702006e321e729ad" id="r_a61f3817369e51396702006e321e729ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61f3817369e51396702006e321e729ad">LocalResponseNormalizationOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, bool crossChannel, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> localSize, float alpha=0.0001f, float beta=0.75f, float bias=1.f) noexcept</td></tr>
 <tr class="separator:a61f3817369e51396702006e321e729ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfad8605c12966e36a9802ec0dead043" id="r_adfad8605c12966e36a9802ec0dead043"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfad8605c12966e36a9802ec0dead043">DML_IMPLEMENT_CONVERSIONS_TO</a> (DML_LOCAL_RESPONSE_NORMALIZATION_OPERATOR_DESC)</td></tr>
 <tr class="separator:adfad8605c12966e36a9802ec0dead043"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,7 +146,7 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a5cfc395f7af045fb3e94d6d92d1a7909" id="r_a5cfc395f7af045fb3e94d6d92d1a7909"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_c_c_date_time_8cpp.html#a8663a698628cc67791708eda36b484a7">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cfc395f7af045fb3e94d6d92d1a7909">CrossChannel</a> = FALSE</td></tr>
 <tr class="separator:a5cfc395f7af045fb3e94d6d92d1a7909"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11bf245178ad614ad8ebefd4dc0ae5fb" id="r_a11bf245178ad614ad8ebefd4dc0ae5fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11bf245178ad614ad8ebefd4dc0ae5fb">LocalSize</a> = 0</td></tr>
+<tr class="memitem:a11bf245178ad614ad8ebefd4dc0ae5fb" id="r_a11bf245178ad614ad8ebefd4dc0ae5fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11bf245178ad614ad8ebefd4dc0ae5fb">LocalSize</a> = 0</td></tr>
 <tr class="separator:a11bf245178ad614ad8ebefd4dc0ae5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a580e4075643be727fc60f74d2dcc0e15" id="r_a580e4075643be727fc60f74d2dcc0e15"><td class="memItemLeft" align="right" valign="top">FLOAT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a580e4075643be727fc60f74d2dcc0e15">Alpha</a> = 0.f</td></tr>
 <tr class="separator:a580e4075643be727fc60f74d2dcc0e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,7 +232,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>localSize</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>localSize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -332,7 +341,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::LocalResponseNormalizationOperatorDesc::LocalSize = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::LocalResponseNormalizationOperatorDesc::LocalSize = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

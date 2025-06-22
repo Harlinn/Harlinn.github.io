@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -114,9 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a07f72a5345adb220ec1e73c8b04eb011"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ed837ee92aae5ef0bd66ed718f3975a" id="r_a7ed837ee92aae5ef0bd66ed718f3975a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ed837ee92aae5ef0bd66ed718f3975a">CPUDescriptorHandle</a> (_In_ const D3D12_CPU_DESCRIPTOR_HANDLE &amp;other) noexcept</td></tr>
 <tr class="separator:a7ed837ee92aae5ef0bd66ed718f3975a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff35af91663842982b343204c6c2fe7a" id="r_aff35af91663842982b343204c6c2fe7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff35af91663842982b343204c6c2fe7a">CPUDescriptorHandle</a> (_In_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> &amp;base, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> offsetScaledByIncrementSize)</td></tr>
+<tr class="memitem:aff35af91663842982b343204c6c2fe7a" id="r_aff35af91663842982b343204c6c2fe7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff35af91663842982b343204c6c2fe7a">CPUDescriptorHandle</a> (_In_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> &amp;base, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> offsetScaledByIncrementSize)</td></tr>
 <tr class="separator:aff35af91663842982b343204c6c2fe7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dde79b1f8905b3d9867e3ea68c714c8" id="r_a4dde79b1f8905b3d9867e3ea68c714c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dde79b1f8905b3d9867e3ea68c714c8">CPUDescriptorHandle</a> (_In_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> &amp;base, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> offsetInDescriptors, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> descriptorIncrementSize)</td></tr>
+<tr class="memitem:a4dde79b1f8905b3d9867e3ea68c714c8" id="r_a4dde79b1f8905b3d9867e3ea68c714c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dde79b1f8905b3d9867e3ea68c714c8">CPUDescriptorHandle</a> (_In_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> &amp;base, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> offsetInDescriptors, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> descriptorIncrementSize)</td></tr>
 <tr class="separator:a4dde79b1f8905b3d9867e3ea68c714c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa63d7bb58eceb912d2160d7cb12a5582" id="r_aa63d7bb58eceb912d2160d7cb12a5582"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa63d7bb58eceb912d2160d7cb12a5582">operator=</a> (_In_ const D3D12_CPU_DESCRIPTOR_HANDLE &amp;other) noexcept</td></tr>
 <tr class="separator:aa63d7bb58eceb912d2160d7cb12a5582"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,18 +137,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abf0212698943ff7c5720e8895f6dfe20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8c391a890226ad2899c1cdff243bb7f" id="r_ae8c391a890226ad2899c1cdff243bb7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8c391a890226ad2899c1cdff243bb7f">operator!=</a> (_In_ const D3D12_CPU_DESCRIPTOR_HANDLE &amp;other) const</td></tr>
 <tr class="separator:ae8c391a890226ad2899c1cdff243bb7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacac7e231c7ad9e687163efc68bfb825" id="r_aacac7e231c7ad9e687163efc68bfb825"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacac7e231c7ad9e687163efc68bfb825">Offset</a> (_In_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> &amp;base, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> offsetScaledByIncrementSize)</td></tr>
+<tr class="memitem:aacac7e231c7ad9e687163efc68bfb825" id="r_aacac7e231c7ad9e687163efc68bfb825"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacac7e231c7ad9e687163efc68bfb825">Offset</a> (_In_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> &amp;base, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> offsetScaledByIncrementSize)</td></tr>
 <tr class="separator:aacac7e231c7ad9e687163efc68bfb825"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a830e7959eb655dca1f325a57fd9cb756" id="r_a830e7959eb655dca1f325a57fd9cb756"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a830e7959eb655dca1f325a57fd9cb756">Offset</a> (_In_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> &amp;base, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> offsetInDescriptors, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> descriptorIncrementSize)</td></tr>
+<tr class="memitem:a830e7959eb655dca1f325a57fd9cb756" id="r_a830e7959eb655dca1f325a57fd9cb756"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a830e7959eb655dca1f325a57fd9cb756">Offset</a> (_In_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> &amp;base, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> offsetInDescriptors, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> descriptorIncrementSize)</td></tr>
 <tr class="separator:a830e7959eb655dca1f325a57fd9cb756"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a03cccd88fa82ff20b2199e46b35f15" id="r_a6a03cccd88fa82ff20b2199e46b35f15"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a03cccd88fa82ff20b2199e46b35f15">HWD3D12_IMPLEMENT_CONVERSIONS_TO</a> (D3D12_CPU_DESCRIPTOR_HANDLE)</td></tr>
 <tr class="separator:a6a03cccd88fa82ff20b2199e46b35f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a0d55d8310b2e730de9db7c090814f98a" id="r_a0d55d8310b2e730de9db7c090814f98a"><td class="memItemLeft" align="right" valign="top">static SIZE_T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d55d8310b2e730de9db7c090814f98a">CalculateOffset</a> (_In_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> &amp;base, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> offsetScaledByIncrementSize)</td></tr>
+<tr class="memitem:a0d55d8310b2e730de9db7c090814f98a" id="r_a0d55d8310b2e730de9db7c090814f98a"><td class="memItemLeft" align="right" valign="top">static SIZE_T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d55d8310b2e730de9db7c090814f98a">CalculateOffset</a> (_In_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> &amp;base, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> offsetScaledByIncrementSize)</td></tr>
 <tr class="separator:a0d55d8310b2e730de9db7c090814f98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ebbaf267e144a8430686409eabce62b" id="r_a5ebbaf267e144a8430686409eabce62b"><td class="memItemLeft" align="right" valign="top">static SIZE_T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ebbaf267e144a8430686409eabce62b">CalculateOffset</a> (_In_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> &amp;base, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> offsetInDescriptors, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> descriptorIncrementSize)</td></tr>
+<tr class="memitem:a5ebbaf267e144a8430686409eabce62b" id="r_a5ebbaf267e144a8430686409eabce62b"><td class="memItemLeft" align="right" valign="top">static SIZE_T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ebbaf267e144a8430686409eabce62b">CalculateOffset</a> (_In_ const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">CPUDescriptorHandle</a> &amp;base, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> offsetInDescriptors, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> descriptorIncrementSize)</td></tr>
 <tr class="separator:a5ebbaf267e144a8430686409eabce62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -217,7 +226,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>offsetScaledByIncrementSize</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a></td>          <td class="paramname"><span class="paramname"><em>offsetScaledByIncrementSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -246,12 +255,12 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>offsetInDescriptors</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a></td>          <td class="paramname"><span class="paramname"><em>offsetInDescriptors</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>descriptorIncrementSize</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>descriptorIncrementSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -281,12 +290,12 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>offsetInDescriptors</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a></td>          <td class="paramname"><span class="paramname"><em>offsetInDescriptors</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>descriptorIncrementSize</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>descriptorIncrementSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -315,7 +324,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>offsetScaledByIncrementSize</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a></td>          <td class="paramname"><span class="paramname"><em>offsetScaledByIncrementSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -361,12 +370,12 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>offsetInDescriptors</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a></td>          <td class="paramname"><span class="paramname"><em>offsetInDescriptors</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>descriptorIncrementSize</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>descriptorIncrementSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -395,7 +404,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>offsetScaledByIncrementSize</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a></td>          <td class="paramname"><span class="paramname"><em>offsetScaledByIncrementSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

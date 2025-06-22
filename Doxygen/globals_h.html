@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -120,6 +129,8 @@ $(function(){initNavTree('globals_h.html',''); initResizable(true); });
 <li>HARLINN_AI_HAIONNXDIRECTML_H_&#160;:&#160;<a class="el" href="_h_a_i_o_n_n_x_direct_m_l_8h.html#a6d3f03cf924af42cdd8b02ad30231c0b">HAIONNXDirectML.h</a></li>
 <li>HARLINN_AI_HAITENSOR_H_&#160;:&#160;<a class="el" href="_h_a_i_tensor_8h.html#a8a54cd9be9828ee20abc408b58a152e1">HAITensor.h</a></li>
 <li>HARLINN_AI_HAITRANSFORMS_H_&#160;:&#160;<a class="el" href="_h_a_i_transforms_8h.html#abbf539c946bb997866114137653dc4f6">HAITransforms.h</a></li>
+<li>HARLINN_COMMON_BASICTYPES_H_&#160;:&#160;<a class="el" href="_basic_types_8h.html#a5de97bd54b4b1497ad2e6de03eae245f">BasicTypes.h</a></li>
+<li>HARLINN_COMMON_CONCEPTS_H_&#160;:&#160;<a class="el" href="_concepts_8h.html#a115cf97b36dfb6534b693d5c57b00fe8">Concepts.h</a></li>
 <li>HARLINN_COMMON_CORE_HCCBINARY_H_&#160;:&#160;<a class="el" href="_h_c_c_binary_8h.html#a9716efcdacc23044e2d9c4b633dd0106">HCCBinary.h</a></li>
 <li>HARLINN_COMMON_CORE_HCCBITVECTOR_H_&#160;:&#160;<a class="el" href="_h_c_c_bits_8h.html#afc15c5a4ba5f4e5643140214562b5483">HCCBits.h</a></li>
 <li>HARLINN_COMMON_CORE_HCCCOMIMPL_H_&#160;:&#160;<a class="el" href="_h_c_c_com_impl_8h.html#a1d035902bd303c5cd90d0da028ea3a29">HCCComImpl.h</a></li>
@@ -143,15 +154,19 @@ $(function(){initNavTree('globals_h.html',''); initResizable(true); });
 <li>HARLINN_COMMON_CORE_HCCSERIALIZATIONDATATYPE_H_&#160;:&#160;<a class="el" href="_h_c_c_serialization_data_type_8h.html#abeebeee353d1e2efbd9a364554acd30a">HCCSerializationDataType.h</a></li>
 <li>HARLINN_COMMON_CORE_HCCSERIALIZATIONDATAWRITER_H_&#160;:&#160;<a class="el" href="_h_c_c_serialization_data_writer_8h.html#aa5f633e577b8579e72fd7f5abb26f77d">HCCSerializationDataWriter.h</a></li>
 <li>HARLINN_COMMON_CORE_HCCSERIALPORT_H_&#160;:&#160;<a class="el" href="_h_c_c_comm_device_8h.html#ac4fd0591465b121fe9182e59e152a167">HCCCommDevice.h</a></li>
-<li>HARLINN_COMMON_CORE_HCCTRANSFORMATIONS_H_&#160;:&#160;<a class="el" href="_h_c_c_transformations_8h.html#ac0fc2afb259f39bf8115beac67382bd5">HCCTransformations.h</a></li>
 <li>HARLINN_COMMON_CORE_HCCWBEM_H_&#160;:&#160;<a class="el" href="_h_c_cwbem_8h.html#a740c1c3da66e380e5d613a73579e7175">HCCwbem.h</a></li>
 <li>HARLINN_COMMON_CORE_HCCWINERROR_H_&#160;:&#160;<a class="el" href="_h_c_c_win_error_8h.html#a1cdabb6345bee6f018f2443d7a1b6241">HCCWinError.h</a></li>
-<li>HARLINN_COMMON_CORE_INTERNAL_CONSTEXPR_MATH_H_&#160;:&#160;<a class="el" href="constexpr__math_8h.html#ac01af371e9b737341e109d5f931ca341">constexpr_math.h</a></li>
-<li>HARLINN_COMMON_CORE_INTERNAL_MATH_NEARESTINTEGER_H_&#160;:&#160;<a class="el" href="_nearest_integer_8h.html#a2bc0483c4149e707a9a70a85c4fe807d">NearestInteger.h</a></li>
-<li>HARLINN_COMMON_CORE_INTERNAL_MATH_RANGEREDUCTION_H_&#160;:&#160;<a class="el" href="_range_reduction_8h.html#ad801b65d14339ee363a74773563bcda4">RangeReduction.h</a></li>
 <li>HARLINN_COMMON_DECLARE_STANDARD_EXCEPTION_MEMBERS&#160;:&#160;<a class="el" href="_h_c_c_exception_8h.html#a7c7edf03da249093f6921219ff0fbd1c">HCCException.h</a></li>
 <li>HARLINN_COMMON_DECLARE_STANDARD_EXCEPTION_MEMBERS2&#160;:&#160;<a class="el" href="_h_c_c_exception_8h.html#a15face5543761063be96f6522a4d22b7">HCCException.h</a></li>
 <li>HARLINN_COMMON_IMPLEMENT_STANDARD_EXCEPTION_MEMBERS&#160;:&#160;<a class="el" href="_h_c_c_exception_8h.html#a33874ecbd093b5dcd8bb42855bcbde13">HCCException.h</a></li>
+<li>HARLINN_COMMON_UTILS_H_&#160;:&#160;<a class="el" href="_utils_8h.html#a85c6f52732aa9c5a7920c6b6a87f3643">Utils.h</a></li>
+<li>HARLINN_MATH_LINE_H_&#160;:&#160;<a class="el" href="_line_8h.html#acdaef409a781371dd53267d77caf8b87">Line.h</a></li>
+<li>HARLINN_MATH_MATH_H_&#160;:&#160;<a class="el" href="_math_8h.html#a3175b6d328c1e0dd38dfcb4ff5443d57">Math.h</a></li>
+<li>HARLINN_MATH_MATHFORWARD_H_&#160;:&#160;<a class="el" href="_math_forward_8h.html#ae43602ce1fcd96a2363f30c5e74d7938">MathForward.h</a></li>
+<li>HARLINN_MATH_SEGMENT_H_&#160;:&#160;<a class="el" href="_segment_8h.html#a26d65b2a66dfe731cd7ed44a0535acba">Segment.h</a></li>
+<li>HARLINN_MATH_SIMD_H_&#160;:&#160;<a class="el" href="_simd_8h.html#a687419749681ac74fd5daa78b2ce1b2f">Simd.h</a></li>
+<li>HARLINN_MATH_TRANSFORMATIONS_H_&#160;:&#160;<a class="el" href="_transformations_8h.html#a5316865448715276a1919053e33cf6b9">Transformations.h</a></li>
+<li>HARLINN_MATH_VECTORMATH_H_&#160;:&#160;<a class="el" href="_vector_math_8h.html#aa68db197a787ed470713d1bcf3c05bf3">VectorMath.h</a></li>
 <li>HARLINN_WINDOWS_HAIDEF_H_&#160;:&#160;<a class="el" href="_h_a_i_def_8h.html#a16c1e40b1d98a57bb55382f03188597f">HAIDef.h</a></li>
 <li>HARLINN_WINDOWS_HAIDIRECTML_H_&#160;:&#160;<a class="el" href="_h_a_i_direct_m_l_8h.html#ab5aedf25440f43673cc62ff81cf32fb6">HAIDirectML.h</a></li>
 <li>HARLINN_WINDOWS_HWCAMERAUICONTROL_H_&#160;:&#160;<a class="el" href="_h_w_camera_u_i_control_8h.html#a4da0d0ba1fab2cb0e0f5bd39dcfa73d6">HWCameraUIControl.h</a></li>
@@ -209,7 +224,7 @@ $(function(){initNavTree('globals_h.html',''); initResizable(true); });
 <li>HCC_DATETIME_DATA_PROPERTY&#160;:&#160;<a class="el" href="_h_c_c_data_8h.html#a88082b6e54c67a88ee5b8ac2f6e97d24">HCCData.h</a></li>
 <li>HCC_DEBUG&#160;:&#160;<a class="el" href="_h_c_c_logging_8h.html#a64eb908c7a3967cb8251125aa36b494c">HCCLogging.h</a></li>
 <li>HCC_DEBUG_EX&#160;:&#160;<a class="el" href="_h_c_c_logging_8h.html#ad4674a16d40efb17bfed5b9125f6ccbe">HCCLogging.h</a></li>
-<li>HCC_DEFINE_ENUM_FLAG_OPERATORS&#160;:&#160;<a class="el" href="_h_c_c_def_8h.html#a9d040f5ebac94fff6b6cb40835b0e5d8">HCCDef.h</a></li>
+<li>HCC_DEFINE_ENUM_FLAG_OPERATORS&#160;:&#160;<a class="el" href="_basic_types_8h.html#a9d040f5ebac94fff6b6cb40835b0e5d8">BasicTypes.h</a></li>
 <li>HCC_DOUBLE_DATA_PROPERTY&#160;:&#160;<a class="el" href="_h_c_c_data_8h.html#a70b93e2937de6f84c84029302f497e0f">HCCData.h</a></li>
 <li>HCC_EMERGENCY&#160;:&#160;<a class="el" href="_h_c_c_logging_8h.html#a9c45a2e2ca2b0cacc8b4d563f1e247d4">HCCLogging.h</a></li>
 <li>HCC_EMERGENCY_EX&#160;:&#160;<a class="el" href="_h_c_c_logging_8h.html#a4e44abb8dcd4023176238941806ce816">HCCLogging.h</a></li>
@@ -267,6 +282,7 @@ $(function(){initNavTree('globals_h.html',''); initResizable(true); });
 <li>HCC_UINT16_DATA_PROPERTY&#160;:&#160;<a class="el" href="_h_c_c_data_8h.html#a45916caa6e35a1540f28d650a2174023">HCCData.h</a></li>
 <li>HCC_UINT32_DATA_PROPERTY&#160;:&#160;<a class="el" href="_h_c_c_data_8h.html#a55578c7c5249856558dcce5293791406">HCCData.h</a></li>
 <li>HCC_UINT64_DATA_PROPERTY&#160;:&#160;<a class="el" href="_h_c_c_data_8h.html#aedbe82346c944b71ff62015c950ad2f1">HCCData.h</a></li>
+<li>HCC_USE_COMMON&#160;:&#160;<a class="el" href="_h_c_c_def_8h.html#a8a86233c48f36d1c3acd854b23bc11db">HCCDef.h</a></li>
 <li>HCC_VERBOSE&#160;:&#160;<a class="el" href="_h_c_c_logging_8h.html#ac6a496c529fd87929445f5653dbeabab">HCCLogging.h</a></li>
 <li>HCC_VERBOSE_EX&#160;:&#160;<a class="el" href="_h_c_c_logging_8h.html#ab343bb295645a2a37f9283896b5ad8d2">HCCLogging.h</a></li>
 <li>HCC_WARNING&#160;:&#160;<a class="el" href="_h_c_c_logging_8h.html#a2dca59a26cdefd5cb1aae5143191789a">HCCLogging.h</a></li>
@@ -285,7 +301,6 @@ $(function(){initNavTree('globals_h.html',''); initResizable(true); });
 <li>HCCLIB_IMPLEMENTS_FLOOR_CEIL_TRUNC&#160;:&#160;<a class="el" href="_h_c_c_lib_8h.html#a8ebf1fc7a93b1e899ed1bd28ed015510">HCCLib.h</a></li>
 <li>HCCLIB_IMPLEMENTS_MIN_MAX_CLAMP&#160;:&#160;<a class="el" href="_h_c_c_lib_8h.html#a293760543ee3ee377e1c17f29df56fe5">HCCLib.h</a></li>
 <li>HCCLIB_IMPLEMENTS_ROUND&#160;:&#160;<a class="el" href="_h_c_c_lib_8h.html#a2a05a41d7bf26cf0e35fad7261d1b0e6">HCCLib.h</a></li>
-<li>HCCMATHFORWARD_H_&#160;:&#160;<a class="el" href="_h_c_c_math_forward_8h.html#aa4c942f1cf6a1d4db8584836aea7dbb7">HCCMathForward.h</a></li>
 <li>HCCNETWORK_H_&#160;:&#160;<a class="el" href="_h_c_c_network_8h.html#a709872e84a14a3f35cf611d12f42d359">HCCNetwork.h</a></li>
 <li>HCCRAPIDXML_H_&#160;:&#160;<a class="el" href="_h_c_c_rapid_xml_8h.html#a9b074dc008ace5db3d4203253b4c2969">HCCRapidXml.h</a></li>
 <li>HCCREGISTRY_H_&#160;:&#160;<a class="el" href="_h_c_c_registry_8h.html#a480e57d5b97a7d5be018d74e9b722bbf">HCCRegistry.h</a></li>
@@ -305,11 +320,7 @@ $(function(){initNavTree('globals_h.html',''); initResizable(true); });
 <li>HODBC_TEMPLATE_EXPORT&#160;:&#160;<a class="el" href="_h_o_d_b_c_def_8h.html#a58dabfe6a6e9ff6ae88199430afb2472">HODBCDef.h</a></li>
 <li>HODBC_TEMPLATE_EXPORT_DECL&#160;:&#160;<a class="el" href="_h_o_d_b_c_def_8h.html#af99b406a51ead05c138d0529c54aa007">HODBCDef.h</a></li>
 <li>HODBCMSSQL_H_&#160;:&#160;<a class="el" href="_h_o_d_b_c_ms_sql_8h.html#aa314c236a998f8b4d1ea76c13055d1ab">HODBCMsSql.h</a></li>
-<li>huge&#160;:&#160;<a class="el" href="s__ccosh_8inl.html#acbd466133274923cc0785707fbdeea9a">s_ccosh.inl</a>, <a class="el" href="s__ccoshf_8inl.html#a027ddaa8cacb1aca0f2ef3295df7b7b6">s_ccoshf.inl</a>, <a class="el" href="s__csinh_8inl.html#acbd466133274923cc0785707fbdeea9a">s_csinh.inl</a>, <a class="el" href="s__csinhf_8inl.html#a027ddaa8cacb1aca0f2ef3295df7b7b6">s_csinhf.inl</a></li>
-<li>HUGE_VAL&#160;:&#160;<a class="el" href="openlibm__math_8h.html#af2164b2db92d8a0ed3838ad5c28db971">openlibm_math.h</a></li>
-<li>HUGE_VALF&#160;:&#160;<a class="el" href="openlibm__math_8h.html#acd69981d54c27fe0ff514645dbfc6359">openlibm_math.h</a></li>
 <li>HUGE_VALH&#160;:&#160;<a class="el" href="half_8hpp.html#abdcd774b81d03564edec8523484d02bf">half.hpp</a></li>
-<li>HUGE_VALL&#160;:&#160;<a class="el" href="openlibm__math_8h.html#ab8b359c356d4311bf5d4ae6c03f43182">openlibm_math.h</a></li>
 <li>HW_EXPORT&#160;:&#160;<a class="el" href="_h_w_def_8h.html#afef48e77e08fbd01c5e087508f4bccef">HWDef.h</a></li>
 <li>HW_IMAGING_STANDARD_METHODS_IMPL&#160;:&#160;<a class="el" href="_h_w_imaging_8h.html#a246646876d9fd8ba6602681fbfc80fc6">HWImaging.h</a></li>
 <li>HW_INLINE&#160;:&#160;<a class="el" href="_h_w_def_8h.html#a462fe9ae925b11e92d867b93e94bfc97">HWDef.h</a></li>

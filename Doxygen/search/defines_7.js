@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['if_5fequal_5freturn_0',['IF_EQUAL_RETURN',['../_h_w_media_foundation_8cpp.html#aeed8a54bf1b281ad1bab5e9e64351879',1,'HWMediaFoundation.cpp']]],
-  ['infinity_1',['INFINITY',['../openlibm__math_8h.html#a956e2723d559858d08644ac99146e910',1,'openlibm_math.h']]],
-  ['inrange_2',['INRANGE',['../s__lround_8inl.html#a969fc05176011244251d840448692e91',1,'s_lround.inl']]]
+  ['jet_5funicode_0',['JET_UNICODE',['../_h_c_c_ese_result_8h.html#a7a2da97689d576e99b92e088d3ab086e',1,'HCCEseResult.h']]],
+  ['jet_5fversion_1',['JET_VERSION',['../_h_c_c_ese_result_8h.html#a5d5cc38f69b49dd11e688ed486f4c29a',1,'HCCEseResult.h']]]
 ];

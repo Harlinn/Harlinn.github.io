@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -121,9 +130,9 @@ Collaboration diagram for Harlinn::Common::Core::Doxygen::Structure::Internal::B
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa21a0e0f55a9510fb9f9e83effbf84c4" id="r_aa21a0e0f55a9510fb9f9e83effbf84c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa21a0e0f55a9510fb9f9e83effbf84c4">Base</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_structure_1_1_type_system.html">Structure::TypeSystem</a> *typeSystem)</td></tr>
 <tr class="separator:aa21a0e0f55a9510fb9f9e83effbf84c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af37464c8e80acfeaf01b44d6a741f614" id="r_af37464c8e80acfeaf01b44d6a741f614"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_constructible_v&lt;BaseT, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_structure_1_1_type_system.html">Structure::TypeSystem</a>*,const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&amp;&gt;</td></tr>
-<tr class="memitem:af37464c8e80acfeaf01b44d6a741f614"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af37464c8e80acfeaf01b44d6a741f614">Base</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_structure_1_1_type_system.html">Structure::TypeSystem</a> *typeSystem, const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;arg)</td></tr>
+<tr class="memitem:af37464c8e80acfeaf01b44d6a741f614" id="r_af37464c8e80acfeaf01b44d6a741f614"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_constructible_v&lt;BaseT, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_structure_1_1_type_system.html">Structure::TypeSystem</a>*,const T&amp;&gt;</td></tr>
+<tr class="memitem:af37464c8e80acfeaf01b44d6a741f614"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af37464c8e80acfeaf01b44d6a741f614">Base</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_structure_1_1_type_system.html">Structure::TypeSystem</a> *typeSystem, const T &amp;arg)</td></tr>
 <tr class="separator:af37464c8e80acfeaf01b44d6a741f614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea33e8586d72aee588c095252a03137d" id="r_aea33e8586d72aee588c095252a03137d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_structure.html#a87f59e7b66a1a3d6bdadf98bea73fc39">Structure::MemberType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea33e8586d72aee588c095252a03137d">MemberType</a> () const override</td></tr>
 <tr class="separator:aea33e8586d72aee588c095252a03137d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,8 +178,8 @@ template&lt;typename BaseT , <a class="el" href="namespace_harlinn_1_1_common_1_
 <div class="memtemplate">
 template&lt;typename BaseT , <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_structure.html#a87f59e7b66a1a3d6bdadf98bea73fc39">Structure::MemberType</a> memberType&gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_constructible_v&lt;BaseT, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_structure_1_1_type_system.html">Structure::TypeSystem</a>*,const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&amp;&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_constructible_v&lt;BaseT, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_structure_1_1_type_system.html">Structure::TypeSystem</a>*,const T&amp;&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -183,7 +192,7 @@ requires std::is_constructible_v&lt;BaseT, <a class="el" href="class_harlinn_1_1
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

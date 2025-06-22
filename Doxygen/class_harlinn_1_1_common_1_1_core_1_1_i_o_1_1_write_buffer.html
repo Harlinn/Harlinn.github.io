@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -130,7 +139,7 @@ Public Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ad8163edd806d955bc91d96935ce22396" id="r_ad8163edd806d955bc91d96935ce22396"><td class="memItemLeft" align="right" valign="top">const StreamT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8163edd806d955bc91d96935ce22396">stream_</a></td></tr>
 <tr class="separator:ad8163edd806d955bc91d96935ce22396"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b18b7f5f72c07897589a36421f897dd" id="r_a5b18b7f5f72c07897589a36421f897dd"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, <a class="el" href="#a290ec3e0623dd4e1d5936603e4b2b7f1">BufferSize</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b18b7f5f72c07897589a36421f897dd">data_</a></td></tr>
+<tr class="memitem:a5b18b7f5f72c07897589a36421f897dd" id="r_a5b18b7f5f72c07897589a36421f897dd"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>, <a class="el" href="#a290ec3e0623dd4e1d5936603e4b2b7f1">BufferSize</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b18b7f5f72c07897589a36421f897dd">data_</a></td></tr>
 <tr class="separator:a5b18b7f5f72c07897589a36421f897dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67acd6acea60b85bcf7558b30c425b7d" id="r_a67acd6acea60b85bcf7558b30c425b7d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67acd6acea60b85bcf7558b30c425b7d">position_</a> = 0</td></tr>
 <tr class="separator:a67acd6acea60b85bcf7558b30c425b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -318,7 +327,7 @@ template&lt;StreamWriter StreamT, size_t bufferSize = 4096&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, <a class="el" href="#a290ec3e0623dd4e1d5936603e4b2b7f1">BufferSize</a>&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_write_buffer.html">Harlinn::Common::Core::IO::WriteBuffer</a>&lt; StreamT, bufferSize &gt;::data_</td>
+          <td class="memname">std::array&lt;<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>, <a class="el" href="#a290ec3e0623dd4e1d5936603e4b2b7f1">BufferSize</a>&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_write_buffer.html">Harlinn::Common::Core::IO::WriteBuffer</a>&lt; StreamT, bufferSize &gt;::data_</td>
         </tr>
       </table>
   </td>

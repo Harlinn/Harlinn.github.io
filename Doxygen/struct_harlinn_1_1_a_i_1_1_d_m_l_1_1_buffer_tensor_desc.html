@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -109,35 +118,35 @@ $(function(){initNavTree('struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_buffer_tensor_des
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9e58cb77e3074f1c25f30ef316ae0d6e" id="r_a9e58cb77e3074f1c25f30ef316ae0d6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e58cb77e3074f1c25f30ef316ae0d6e">_Field_size_</a> (<a class="el" href="#ac3b60ac7e614767bd64d8f73e1c9206b">DimensionCount</a>) const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *Sizes</td></tr>
+<tr class="memitem:a9e58cb77e3074f1c25f30ef316ae0d6e" id="r_a9e58cb77e3074f1c25f30ef316ae0d6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e58cb77e3074f1c25f30ef316ae0d6e">_Field_size_</a> (<a class="el" href="#ac3b60ac7e614767bd64d8f73e1c9206b">DimensionCount</a>) const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *Sizes</td></tr>
 <tr class="separator:a9e58cb77e3074f1c25f30ef316ae0d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac963095784c2704c7626629cde288cd9" id="r_ac963095784c2704c7626629cde288cd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac963095784c2704c7626629cde288cd9">_Field_size_opt_</a> (<a class="el" href="#ac3b60ac7e614767bd64d8f73e1c9206b">DimensionCount</a>) const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *Strides</td></tr>
+<tr class="memitem:ac963095784c2704c7626629cde288cd9" id="r_ac963095784c2704c7626629cde288cd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac963095784c2704c7626629cde288cd9">_Field_size_opt_</a> (<a class="el" href="#ac3b60ac7e614767bd64d8f73e1c9206b">DimensionCount</a>) const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *Strides</td></tr>
 <tr class="separator:ac963095784c2704c7626629cde288cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a864a3294c8530ebcae45a859e1f99ba2" id="r_a864a3294c8530ebcae45a859e1f99ba2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a864a3294c8530ebcae45a859e1f99ba2">BufferTensorDesc</a> () noexcept=default</td></tr>
 <tr class="separator:a864a3294c8530ebcae45a859e1f99ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38e49a71dab0f4d5d671d0675a0566a2" id="r_a38e49a71dab0f4d5d671d0675a0566a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38e49a71dab0f4d5d671d0675a0566a2">BufferTensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> dimensionCount=0, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *sizes=nullptr, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *strides=nullptr)</td></tr>
+<tr class="memitem:a38e49a71dab0f4d5d671d0675a0566a2" id="r_a38e49a71dab0f4d5d671d0675a0566a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38e49a71dab0f4d5d671d0675a0566a2">BufferTensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> dimensionCount=0, const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *sizes=nullptr, const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *strides=nullptr)</td></tr>
 <tr class="separator:a38e49a71dab0f4d5d671d0675a0566a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37714e35c6a5ade9ed950eae3ab58a62" id="r_a37714e35c6a5ade9ed950eae3ab58a62"><td class="memTemplParams" colspan="2">template&lt;SimpleSpanLike T&gt; <br />
-requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt;</td></tr>
+requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt;</td></tr>
 <tr class="memitem:a37714e35c6a5ade9ed950eae3ab58a62"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a37714e35c6a5ade9ed950eae3ab58a62">BufferTensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, const <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;sizes, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7da6adf97f83acf6453d4a6a4b1070f3754">TensorFlags::None</a>)</td></tr>
 <tr class="separator:a37714e35c6a5ade9ed950eae3ab58a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d511b1e3713ee149fd7cd61476792c9" id="r_a4d511b1e3713ee149fd7cd61476792c9"><td class="memTemplParams" colspan="2">template&lt;SimpleSpanLike T&gt; <br />
-requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt;</td></tr>
+requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt;</td></tr>
 <tr class="memitem:a4d511b1e3713ee149fd7cd61476792c9"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4d511b1e3713ee149fd7cd61476792c9">BufferTensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, const <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;sizes, const <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;strides, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7da6adf97f83acf6453d4a6a4b1070f3754">TensorFlags::None</a>)</td></tr>
 <tr class="separator:a4d511b1e3713ee149fd7cd61476792c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a5467e9d77b78b2a3c75b7ee7bedca3" id="r_a9a5467e9d77b78b2a3c75b7ee7bedca3"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
-<tr class="memitem:a9a5467e9d77b78b2a3c75b7ee7bedca3"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9a5467e9d77b78b2a3c75b7ee7bedca3">BufferTensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>(&amp;sizes)[<a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a>], <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7da6adf97f83acf6453d4a6a4b1070f3754">TensorFlags::None</a>)</td></tr>
+<tr class="memitem:a9a5467e9d77b78b2a3c75b7ee7bedca3"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9a5467e9d77b78b2a3c75b7ee7bedca3">BufferTensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>(&amp;sizes)[<a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a>], <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7da6adf97f83acf6453d4a6a4b1070f3754">TensorFlags::None</a>)</td></tr>
 <tr class="separator:a9a5467e9d77b78b2a3c75b7ee7bedca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa70f9b440b92c040172b8755676463d1" id="r_aa70f9b440b92c040172b8755676463d1"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
-<tr class="memitem:aa70f9b440b92c040172b8755676463d1"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa70f9b440b92c040172b8755676463d1">BufferTensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>(&amp;sizes)[<a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a>], const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>(&amp;strides)[<a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a>], <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7da6adf97f83acf6453d4a6a4b1070f3754">TensorFlags::None</a>)</td></tr>
+<tr class="memitem:aa70f9b440b92c040172b8755676463d1"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa70f9b440b92c040172b8755676463d1">BufferTensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>(&amp;sizes)[<a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a>], const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>(&amp;strides)[<a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a>], <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7da6adf97f83acf6453d4a6a4b1070f3754">TensorFlags::None</a>)</td></tr>
 <tr class="separator:aa70f9b440b92c040172b8755676463d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac811f77b86b7d8f163a13b7c5ebcad2" id="r_aac811f77b86b7d8f163a13b7c5ebcad2"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
-<tr class="memitem:aac811f77b86b7d8f163a13b7c5ebcad2"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aac811f77b86b7d8f163a13b7c5ebcad2">BufferTensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a> &gt; &amp;sizes, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7da6adf97f83acf6453d4a6a4b1070f3754">TensorFlags::None</a>)</td></tr>
+<tr class="memitem:aac811f77b86b7d8f163a13b7c5ebcad2"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aac811f77b86b7d8f163a13b7c5ebcad2">BufferTensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>, <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a> &gt; &amp;sizes, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7da6adf97f83acf6453d4a6a4b1070f3754">TensorFlags::None</a>)</td></tr>
 <tr class="separator:aac811f77b86b7d8f163a13b7c5ebcad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0fcf00eef1cab9c4c84a80a3782622b" id="r_aa0fcf00eef1cab9c4c84a80a3782622b"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
-<tr class="memitem:aa0fcf00eef1cab9c4c84a80a3782622b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa0fcf00eef1cab9c4c84a80a3782622b">BufferTensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a> &gt; &amp;sizes, const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a> &gt; &amp;strides, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7da6adf97f83acf6453d4a6a4b1070f3754">TensorFlags::None</a>)</td></tr>
+<tr class="memitem:aa0fcf00eef1cab9c4c84a80a3782622b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa0fcf00eef1cab9c4c84a80a3782622b">BufferTensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>, <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a> &gt; &amp;sizes, const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>, <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a> &gt; &amp;strides, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7da6adf97f83acf6453d4a6a4b1070f3754">TensorFlags::None</a>)</td></tr>
 <tr class="separator:aa0fcf00eef1cab9c4c84a80a3782622b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a856da396f248fbc15927fafdf51826fd" id="r_a856da396f248fbc15927fafdf51826fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a856da396f248fbc15927fafdf51826fd">BufferTensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> dimensionCount, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *sizes, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *strides, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> totalTensorSizeInBytes, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> guaranteedBaseOffsetAlignment=0)</td></tr>
+<tr class="memitem:a856da396f248fbc15927fafdf51826fd" id="r_a856da396f248fbc15927fafdf51826fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a856da396f248fbc15927fafdf51826fd">BufferTensorDesc</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> dimensionCount, const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *sizes, const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *strides, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> totalTensorSizeInBytes, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> guaranteedBaseOffsetAlignment=0)</td></tr>
 <tr class="separator:a856da396f248fbc15927fafdf51826fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9159bfaac7f2926b97f5fd1c295b2d76" id="r_a9159bfaac7f2926b97f5fd1c295b2d76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9159bfaac7f2926b97f5fd1c295b2d76">DML_IMPLEMENT_CONVERSIONS_TO</a> (DML_BUFFER_TENSOR_DESC)</td></tr>
 <tr class="separator:a9159bfaac7f2926b97f5fd1c295b2d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,11 +157,11 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a33e84c3c4f745c0f1854cc5b23395d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f47239ebd607915d198a605ae72705e" id="r_a3f47239ebd607915d198a605ae72705e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f47239ebd607915d198a605ae72705e">Flags</a> = <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7da6adf97f83acf6453d4a6a4b1070f3754">TensorFlags::None</a></td></tr>
 <tr class="separator:a3f47239ebd607915d198a605ae72705e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3b60ac7e614767bd64d8f73e1c9206b" id="r_ac3b60ac7e614767bd64d8f73e1c9206b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3b60ac7e614767bd64d8f73e1c9206b">DimensionCount</a> = 0</td></tr>
+<tr class="memitem:ac3b60ac7e614767bd64d8f73e1c9206b" id="r_ac3b60ac7e614767bd64d8f73e1c9206b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3b60ac7e614767bd64d8f73e1c9206b">DimensionCount</a> = 0</td></tr>
 <tr class="separator:ac3b60ac7e614767bd64d8f73e1c9206b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e6478f829d2794b48b554fccba42cff" id="r_a2e6478f829d2794b48b554fccba42cff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e6478f829d2794b48b554fccba42cff">TotalTensorSizeInBytes</a> = 0</td></tr>
+<tr class="memitem:a2e6478f829d2794b48b554fccba42cff" id="r_a2e6478f829d2794b48b554fccba42cff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e6478f829d2794b48b554fccba42cff">TotalTensorSizeInBytes</a> = 0</td></tr>
 <tr class="separator:a2e6478f829d2794b48b554fccba42cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe37e89fef1677a8de372c9011dcca31" id="r_abe37e89fef1677a8de372c9011dcca31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe37e89fef1677a8de372c9011dcca31">GuaranteedBaseOffsetAlignment</a> = 0</td></tr>
+<tr class="memitem:abe37e89fef1677a8de372c9011dcca31" id="r_abe37e89fef1677a8de372c9011dcca31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe37e89fef1677a8de372c9011dcca31">GuaranteedBaseOffsetAlignment</a> = 0</td></tr>
 <tr class="separator:abe37e89fef1677a8de372c9011dcca31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -205,17 +214,17 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>dimensionCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>dimensionCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>strides</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>strides</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -234,7 +243,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimpleSpanLike T&gt; <br />
-requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt;</div>
+requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -271,7 +280,7 @@ requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace
 <div class="memproto">
 <div class="memtemplate">
 template&lt;SimpleSpanLike T&gt; <br />
-requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt;</div>
+requires std::is_same_v&lt;typename T::value_type, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -325,7 +334,7 @@ template&lt;size_t N&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>(&amp;)</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span>[N], </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>(&amp;)</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span>[N], </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -361,12 +370,12 @@ template&lt;size_t N&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>(&amp;)</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span>[N], </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>(&amp;)</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span>[N], </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>(&amp;)</td>          <td class="paramname"><span class="paramname"><em>strides</em></span>[N], </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>(&amp;)</td>          <td class="paramname"><span class="paramname"><em>strides</em></span>[N], </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -402,7 +411,7 @@ template&lt;size_t N&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span>, </td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>, <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -438,12 +447,12 @@ template&lt;size_t N&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span>, </td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>, <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>, <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>strides</em></span>, </td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>, <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcda8d9c307cb7f3c4a32822a51922d1ceaa">N</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>strides</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -482,27 +491,27 @@ template&lt;size_t N&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>dimensionCount</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>dimensionCount</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>strides</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>strides</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>totalTensorSizeInBytes</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a></td>          <td class="paramname"><span class="paramname"><em>totalTensorSizeInBytes</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>guaranteedBaseOffsetAlignment</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>guaranteedBaseOffsetAlignment</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -588,7 +597,7 @@ template&lt;size_t N&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::BufferTensorDesc::DimensionCount = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::BufferTensorDesc::DimensionCount = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -616,7 +625,7 @@ template&lt;size_t N&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::BufferTensorDesc::GuaranteedBaseOffsetAlignment = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::BufferTensorDesc::GuaranteedBaseOffsetAlignment = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -630,7 +639,7 @@ template&lt;size_t N&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::AI::DML::BufferTensorDesc::TotalTensorSizeInBytes = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> Harlinn::AI::DML::BufferTensorDesc::TotalTensorSizeInBytes = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

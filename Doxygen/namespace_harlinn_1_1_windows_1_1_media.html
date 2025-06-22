@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -815,9 +824,9 @@ Typedefs</h2></td></tr>
 <tr class="separator:a725a5b734ec155b8f472775c70f42883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac62bb463d6b6ccdf6220f70c36ac9d1e" id="r_ac62bb463d6b6ccdf6220f70c36ac9d1e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac62bb463d6b6ccdf6220f70c36ac9d1e">TransformRegisterTypeInfo</a> = MFT_REGISTER_TYPE_INFO</td></tr>
 <tr class="separator:ac62bb463d6b6ccdf6220f70c36ac9d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0dc9ec0181acbb6bee86e7a9b1c168b" id="r_ac0dc9ec0181acbb6bee86e7a9b1c168b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0dc9ec0181acbb6bee86e7a9b1c168b">Int32Attribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_UINT32&gt;</td></tr>
+<tr class="memitem:ac0dc9ec0181acbb6bee86e7a9b1c168b" id="r_ac0dc9ec0181acbb6bee86e7a9b1c168b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0dc9ec0181acbb6bee86e7a9b1c168b">Int32Attribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_UINT32&gt;</td></tr>
 <tr class="separator:ac0dc9ec0181acbb6bee86e7a9b1c168b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab94b54d399a858ddaa0ec80043b64b34" id="r_ab94b54d399a858ddaa0ec80043b64b34"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab94b54d399a858ddaa0ec80043b64b34">Int64Attribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_UINT64&gt;</td></tr>
+<tr class="memitem:ab94b54d399a858ddaa0ec80043b64b34" id="r_ab94b54d399a858ddaa0ec80043b64b34"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab94b54d399a858ddaa0ec80043b64b34">Int64Attribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_UINT64&gt;</td></tr>
 <tr class="separator:ab94b54d399a858ddaa0ec80043b64b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6554ed1dedf1017e60212c01c4602e98" id="r_a6554ed1dedf1017e60212c01c4602e98"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6554ed1dedf1017e60212c01c4602e98">DoubleAttribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;double, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_DOUBLE&gt;</td></tr>
 <tr class="separator:a6554ed1dedf1017e60212c01c4602e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -825,7 +834,7 @@ Typedefs</h2></td></tr>
 <tr class="separator:a26d6c53a5fcd4eb90ec40f55041cc968"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a733e61276875c4f89d0dd37f337f9267" id="r_a733e61276875c4f89d0dd37f337f9267"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a733e61276875c4f89d0dd37f337f9267">StringAttribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a>, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_STRING&gt;</td></tr>
 <tr class="separator:a733e61276875c4f89d0dd37f337f9267"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e4e65427649b8b11fe8489cdb86e811" id="r_a4e4e65427649b8b11fe8489cdb86e811"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e4e65427649b8b11fe8489cdb86e811">BlobAttribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;std::vector&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&gt;, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_BLOB&gt;</td></tr>
+<tr class="memitem:a4e4e65427649b8b11fe8489cdb86e811" id="r_a4e4e65427649b8b11fe8489cdb86e811"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e4e65427649b8b11fe8489cdb86e811">BlobAttribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;std::vector&lt;<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&gt;, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_BLOB&gt;</td></tr>
 <tr class="separator:a4e4e65427649b8b11fe8489cdb86e811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22de02395320e4f33b496839205b3724" id="r_a22de02395320e4f33b496839205b3724"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22de02395320e4f33b496839205b3724">UnknownAttribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_unknown.html">Unknown</a>, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_IUNKNOWN&gt;</td></tr>
 <tr class="separator:a22de02395320e4f33b496839205b3724"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -931,7 +940,7 @@ Functions</h2></td></tr>
 <tr class="separator:a25f943dc862448f2c427554fc2f10410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40e0199ac420592b368894733bf7c958" id="r_a40e0199ac420592b368894733bf7c958"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40e0199ac420592b368894733bf7c958">PrintOutputMediaTypeDescriptions</a> (DWORD streamIndex, const <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_m_f_transform.html">Media::MFTransform</a> &amp;transform)</td></tr>
 <tr class="separator:a40e0199ac420592b368894733bf7c958"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab167c489e4974711c68cd5e1c6710af" id="r_aab167c489e4974711c68cd5e1c6710af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab167c489e4974711c68cd5e1c6710af">HCC_DEFINE_ENUM_FLAG_OPERATORS</a> (<a class="el" href="#a3c213a04da4a3373ec32990d19a9899f">EnumTransformsFlags</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>)</td></tr>
+<tr class="memitem:aab167c489e4974711c68cd5e1c6710af" id="r_aab167c489e4974711c68cd5e1c6710af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab167c489e4974711c68cd5e1c6710af">HCC_DEFINE_ENUM_FLAG_OPERATORS</a> (<a class="el" href="#a3c213a04da4a3373ec32990d19a9899f">EnumTransformsFlags</a>, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>)</td></tr>
 <tr class="separator:aab167c489e4974711c68cd5e1c6710af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49de27dbe36ccf7e4303a9956348b1fb" id="r_a49de27dbe36ccf7e4303a9956348b1fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49de27dbe36ccf7e4303a9956348b1fb">PrintAttribute</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_m_f_attributes.html">MFAttributes</a> &amp;attributes, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a> &amp;attributeKey)</td></tr>
 <tr class="separator:a49de27dbe36ccf7e4303a9956348b1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -952,7 +961,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#a4e4e65427649b8b11fe8489cdb86e811">Harlinn::Windows::Media::BlobAttribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;std::vector&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&gt;, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_BLOB&gt;</td>
+          <td class="memname">using <a class="el" href="#a4e4e65427649b8b11fe8489cdb86e811">Harlinn::Windows::Media::BlobAttribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;std::vector&lt;<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&gt;, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_BLOB&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1008,7 +1017,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#ac0dc9ec0181acbb6bee86e7a9b1c168b">Harlinn::Windows::Media::Int32Attribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_UINT32&gt;</td>
+          <td class="memname">using <a class="el" href="#ac0dc9ec0181acbb6bee86e7a9b1c168b">Harlinn::Windows::Media::Int32Attribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_UINT32&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1022,7 +1031,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#ab94b54d399a858ddaa0ec80043b64b34">Harlinn::Windows::Media::Int64Attribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_UINT64&gt;</td>
+          <td class="memname">using <a class="el" href="#ab94b54d399a858ddaa0ec80043b64b34">Harlinn::Windows::Media::Int64Attribute</a> = <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_internal_1_1_attribute_impl.html">Internal::AttributeImpl</a>&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>, MF_ATTRIBUTE_TYPE::MF_ATTRIBUTE_UINT64&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1082,7 +1091,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum class <a class="el" href="#a3c213a04da4a3373ec32990d19a9899f">Harlinn::Windows::Media::EnumTransformsFlags</a> : <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>
+          <td class="memname">enum class <a class="el" href="#a3c213a04da4a3373ec32990d19a9899f">Harlinn::Windows::Media::EnumTransformsFlags</a> : <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>
         </tr>
       </table>
   </td>
@@ -1275,7 +1284,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

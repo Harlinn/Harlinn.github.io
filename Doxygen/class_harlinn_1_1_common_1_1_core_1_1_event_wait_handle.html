@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -174,7 +183,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a19572ab6fcdc5d5902af69cb6dec8bf7 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1762d4c9b92fec8e6d966cbdf72b5dc0 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle" id="r_a1762d4c9b92fec8e6d966cbdf72b5dc0"><td class="memItemLeft" align="right" valign="top">HANDLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html#a1762d4c9b92fec8e6d966cbdf72b5dc0">ReleaseHandle</a> () noexcept</td></tr>
 <tr class="separator:a1762d4c9b92fec8e6d966cbdf72b5dc0 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f5635679a1d8287ad451418a8cd3ba6 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle" id="r_a2f5635679a1d8287ad451418a8cd3ba6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html#a2f5635679a1d8287ad451418a8cd3ba6">Wait</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> timeoutInMillis=INFINITE) const</td></tr>
+<tr class="memitem:a2f5635679a1d8287ad451418a8cd3ba6 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle" id="r_a2f5635679a1d8287ad451418a8cd3ba6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html#a2f5635679a1d8287ad451418a8cd3ba6">Wait</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> timeoutInMillis=INFINITE) const</td></tr>
 <tr class="separator:a2f5635679a1d8287ad451418a8cd3ba6 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b234e0997a33fcf13c837e2cf46d02a inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle" id="r_a9b234e0997a33fcf13c837e2cf46d02a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html#a9b234e0997a33fcf13c837e2cf46d02a">Wait</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;timeout) const</td></tr>
 <tr class="separator:a9b234e0997a33fcf13c837e2cf46d02a inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,9 +240,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html">Harlinn::Common::Core::WaitableHandle</a></td></tr>
 <tr class="memitem:a0bbd4644a94ea19a64dffb868cdbcb9c inherit pro_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle" id="r_a0bbd4644a94ea19a64dffb868cdbcb9c"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html#a0bbd4644a94ea19a64dffb868cdbcb9c">WaitableHandle</a> (HANDLE handle) noexcept</td></tr>
 <tr class="separator:a0bbd4644a94ea19a64dffb868cdbcb9c inherit pro_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72a7dfea3e92b0080efe4b7726db8d95 inherit pro_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle" id="r_a72a7dfea3e92b0080efe4b7726db8d95"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html">WaitableHandle</a>, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a72a7dfea3e92b0080efe4b7726db8d95 inherit pro_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html#a72a7dfea3e92b0080efe4b7726db8d95">TakeOwnership</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;&amp;other)</td></tr>
+<tr class="memitem:a72a7dfea3e92b0080efe4b7726db8d95 inherit pro_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle" id="r_a72a7dfea3e92b0080efe4b7726db8d95"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html">WaitableHandle</a>, T&gt;</td></tr>
+<tr class="memitem:a72a7dfea3e92b0080efe4b7726db8d95 inherit pro_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_waitable_handle.html#a72a7dfea3e92b0080efe4b7726db8d95">TakeOwnership</a> (T &amp;&amp;other)</td></tr>
 <tr class="separator:a72a7dfea3e92b0080efe4b7726db8d95 inherit pro_methods_class_harlinn_1_1_common_1_1_core_1_1_waitable_handle"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>

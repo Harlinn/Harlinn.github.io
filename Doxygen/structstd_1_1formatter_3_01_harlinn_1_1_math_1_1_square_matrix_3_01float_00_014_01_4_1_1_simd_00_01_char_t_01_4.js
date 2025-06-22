@@ -1,0 +1,5 @@
+var structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_square_matrix_3_01float_00_014_01_4_1_1_simd_00_01_char_t_01_4 =
+[
+    [ "format", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_square_matrix_3_01float_00_014_01_4_1_1_simd_00_01_char_t_01_4.html#a1c0b19730f134a8446652b2c6661a0c3", null ],
+    [ "parse", "structstd_1_1formatter_3_01_harlinn_1_1_math_1_1_square_matrix_3_01float_00_014_01_4_1_1_simd_00_01_char_t_01_4.html#afeadbaa7013a3fb800037c49b78acf26", null ]
+];

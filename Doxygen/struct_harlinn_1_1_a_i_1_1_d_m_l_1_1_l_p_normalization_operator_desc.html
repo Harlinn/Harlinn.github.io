@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -128,18 +137,18 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2e7c020ea408c1683b6b66d250c2ad61" id="r_a2e7c020ea408c1683b6b66d250c2ad61"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e7c020ea408c1683b6b66d250c2ad61">LPNormalizationOperatorDesc</a> () noexcept=default</td></tr>
 <tr class="separator:a2e7c020ea408c1683b6b66d250c2ad61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a343724d9ce99904112d3bfaedd07d156" id="r_a343724d9ce99904112d3bfaedd07d156"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a343724d9ce99904112d3bfaedd07d156">LPNormalizationOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> axis=0, float epsilon=0.00001f, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> p=1) noexcept</td></tr>
+<tr class="memitem:a343724d9ce99904112d3bfaedd07d156" id="r_a343724d9ce99904112d3bfaedd07d156"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a343724d9ce99904112d3bfaedd07d156">LPNormalizationOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> axis=0, float epsilon=0.00001f, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> p=1) noexcept</td></tr>
 <tr class="separator:a343724d9ce99904112d3bfaedd07d156"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa840f8a407e917fc2231f4020a9853ba" id="r_aa840f8a407e917fc2231f4020a9853ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa840f8a407e917fc2231f4020a9853ba">DML_IMPLEMENT_CONVERSIONS_TO</a> (DML_LP_NORMALIZATION_OPERATOR_DESC)</td></tr>
 <tr class="separator:aa840f8a407e917fc2231f4020a9853ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aadd993484ab9331fe17eb263ee343179" id="r_aadd993484ab9331fe17eb263ee343179"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadd993484ab9331fe17eb263ee343179">Axis</a> = 0</td></tr>
+<tr class="memitem:aadd993484ab9331fe17eb263ee343179" id="r_aadd993484ab9331fe17eb263ee343179"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadd993484ab9331fe17eb263ee343179">Axis</a> = 0</td></tr>
 <tr class="separator:aadd993484ab9331fe17eb263ee343179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc3176cd8396cf14905c86aa651eada3" id="r_acc3176cd8396cf14905c86aa651eada3"><td class="memItemLeft" align="right" valign="top">FLOAT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc3176cd8396cf14905c86aa651eada3">Epsilon</a> = 0.f</td></tr>
 <tr class="separator:acc3176cd8396cf14905c86aa651eada3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcec879fcbd2562a07cbae47508f1f80" id="r_adcec879fcbd2562a07cbae47508f1f80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcec879fcbd2562a07cbae47508f1f80">P</a> = 0</td></tr>
+<tr class="memitem:adcec879fcbd2562a07cbae47508f1f80" id="r_adcec879fcbd2562a07cbae47508f1f80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcec879fcbd2562a07cbae47508f1f80">P</a> = 0</td></tr>
 <tr class="separator:adcec879fcbd2562a07cbae47508f1f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -213,7 +222,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>axis</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>axis</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -223,7 +232,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>p</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>p</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -261,7 +270,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::LPNormalizationOperatorDesc::Axis = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::LPNormalizationOperatorDesc::Axis = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -311,7 +320,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::LPNormalizationOperatorDesc::P = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::LPNormalizationOperatorDesc::P = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

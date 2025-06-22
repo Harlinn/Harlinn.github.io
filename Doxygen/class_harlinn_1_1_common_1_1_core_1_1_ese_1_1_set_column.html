@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -135,16 +144,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a199c450b04f63b33effde479700ac5e3" id="r_a199c450b04f63b33effde479700ac5e3"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a199c450b04f63b33effde479700ac5e3">SetFlags</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78">Ese::SetFlags</a> flags)</td></tr>
 <tr class="memdesc:a199c450b04f63b33effde479700ac5e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aff19f694e69eba93feca34eb6cde7f78" title="Flags used for the flags parameter Table::SetColumn function and for the grbit field of the JET_SETCO...">Ese::SetFlags</a> options for setting the column value.  <br /></td></tr>
 <tr class="separator:a199c450b04f63b33effde479700ac5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b9ebf15778886e0639394b5f830818f" id="r_a4b9ebf15778886e0639394b5f830818f"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b9ebf15778886e0639394b5f830818f">ByteOffset</a> () const</td></tr>
+<tr class="memitem:a4b9ebf15778886e0639394b5f830818f" id="r_a4b9ebf15778886e0639394b5f830818f"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b9ebf15778886e0639394b5f830818f">ByteOffset</a> () const</td></tr>
 <tr class="memdesc:a4b9ebf15778886e0639394b5f830818f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the offset off the first byte in the column value to be written to for a column of type of <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a02ba6c1b46fa199c2df41d5875577c3da4d1850321c839f6645dd2f5638f682ba" title="A fixed or variable length, raw binary column that can be up to 2147483647 bytes in length....">ColumnType::LongBinary</a> or <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a02ba6c1b46fa199c2df41d5875577c3daab5426ac7388e0dee135629dad52f6fc" title="A fixed or variable length, text column that can be up to 2147483647 ASCII characters in length or 10...">ColumnType::LongText</a>.  <br /></td></tr>
 <tr class="separator:a4b9ebf15778886e0639394b5f830818f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4065b4864abb42260f887683a9be1a6" id="r_ac4065b4864abb42260f887683a9be1a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4065b4864abb42260f887683a9be1a6">SetByteOffset</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> byteOffset)</td></tr>
+<tr class="memitem:ac4065b4864abb42260f887683a9be1a6" id="r_ac4065b4864abb42260f887683a9be1a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4065b4864abb42260f887683a9be1a6">SetByteOffset</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> byteOffset)</td></tr>
 <tr class="memdesc:ac4065b4864abb42260f887683a9be1a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the offset off the first byte in the column value to be written to for a column of type of <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a02ba6c1b46fa199c2df41d5875577c3da4d1850321c839f6645dd2f5638f682ba" title="A fixed or variable length, raw binary column that can be up to 2147483647 bytes in length....">ColumnType::LongBinary</a> or <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a02ba6c1b46fa199c2df41d5875577c3daab5426ac7388e0dee135629dad52f6fc" title="A fixed or variable length, text column that can be up to 2147483647 ASCII characters in length or 10...">ColumnType::LongText</a>.  <br /></td></tr>
 <tr class="separator:ac4065b4864abb42260f887683a9be1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad25fb5f785f10a3c256494d65b3dc67e" id="r_ad25fb5f785f10a3c256494d65b3dc67e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad25fb5f785f10a3c256494d65b3dc67e">TagSequence</a> () const</td></tr>
+<tr class="memitem:ad25fb5f785f10a3c256494d65b3dc67e" id="r_ad25fb5f785f10a3c256494d65b3dc67e"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad25fb5f785f10a3c256494d65b3dc67e">TagSequence</a> () const</td></tr>
 <tr class="memdesc:ad25fb5f785f10a3c256494d65b3dc67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the sequence number of value in a multi-valued column.  <br /></td></tr>
 <tr class="separator:ad25fb5f785f10a3c256494d65b3dc67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9383a815e7d94074560e0a78ef3ef62b" id="r_a9383a815e7d94074560e0a78ef3ef62b"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9383a815e7d94074560e0a78ef3ef62b">SetTagSequence</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> tagSequence)</td></tr>
+<tr class="memitem:a9383a815e7d94074560e0a78ef3ef62b" id="r_a9383a815e7d94074560e0a78ef3ef62b"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9383a815e7d94074560e0a78ef3ef62b">SetTagSequence</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> tagSequence)</td></tr>
 <tr class="memdesc:a9383a815e7d94074560e0a78ef3ef62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the sequence number of value in a multi-valued column.  <br /></td></tr>
 <tr class="separator:a9383a815e7d94074560e0a78ef3ef62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69b2ba23a769978c570bbff2582b5e3f" id="r_a69b2ba23a769978c570bbff2582b5e3f"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa71c1814cc10465a29c98721f5580304">Ese::Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69b2ba23a769978c570bbff2582b5e3f">Result</a> () const</td></tr>
@@ -288,7 +297,7 @@ template&lt;SimpleByteSpanLike SpanT&gt; </div>
 <p>Binds this <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_set_column.html" title="Contains input and output parameters for Table::SetColumns describing which column value to set,...">SetColumn</a> object to a column and a Byte container. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">SpanT</td><td>Any type matching <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_byte_span_like.html" title="Matches most common container classes with sequential memory layout.">SimpleByteSpanLike</a> concept. </td></tr>
+    <tr><td class="paramname">SpanT</td><td>Any type matching <a class="el" href="concept_harlinn_1_1_common_1_1_simple_byte_span_like.html" title="Matches most common container classes with sequential memory layout.">SimpleByteSpanLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -363,7 +372,7 @@ template&lt;SimpleByteSpanLike SpanT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::Ese::SetColumn::ByteOffset </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::Ese::SetColumn::ByteOffset </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -505,7 +514,7 @@ template&lt;SimpleByteSpanLike SpanT&gt; </div>
         <tr>
           <td class="memname">void Harlinn::Common::Core::Ese::SetColumn::SetByteOffset </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>byteOffset</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>byteOffset</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -675,7 +684,7 @@ template&lt;SimpleByteSpanLike SpanT&gt; </div>
         <tr>
           <td class="memname">void Harlinn::Common::Core::Ese::SetColumn::SetTagSequence </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>tagSequence</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>tagSequence</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -734,7 +743,7 @@ template&lt;SimpleByteSpanLike SpanT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::Ese::SetColumn::TagSequence </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::Ese::SetColumn::TagSequence </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

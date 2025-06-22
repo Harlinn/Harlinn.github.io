@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -138,31 +147,31 @@ Private Attributes</h2></td></tr>
 <tr class="separator:af24db08fe08506fa220a154dd2eb976c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1da99d7d4970a956872c3cdf5515f67c" id="r_a1da99d7d4970a956872c3cdf5515f67c"><td class="memItemLeft" align="right" valign="top">std::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1da99d7d4970a956872c3cdf5515f67c">oneDatabasePerSession_</a></td></tr>
 <tr class="separator:a1da99d7d4970a956872c3cdf5515f67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a245f0b9bd765cb2c5f72849ec31cdd2f" id="r_a245f0b9bd765cb2c5f72849ec31cdd2f"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a245f0b9bd765cb2c5f72849ec31cdd2f">batchIOBufferMax_</a></td></tr>
+<tr class="memitem:a245f0b9bd765cb2c5f72849ec31cdd2f" id="r_a245f0b9bd765cb2c5f72849ec31cdd2f"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a245f0b9bd765cb2c5f72849ec31cdd2f">batchIOBufferMax_</a></td></tr>
 <tr class="separator:a245f0b9bd765cb2c5f72849ec31cdd2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0d6db5e6cde2ebfe3b85247d10bdfed" id="r_ad0d6db5e6cde2ebfe3b85247d10bdfed"><td class="memItemLeft" align="right" valign="top">std::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0d6db5e6cde2ebfe3b85247d10bdfed">enableFileCache_</a></td></tr>
 <tr class="separator:ad0d6db5e6cde2ebfe3b85247d10bdfed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f1e9b5458b2549a4e720ab74274d7da" id="r_a5f1e9b5458b2549a4e720ab74274d7da"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f1e9b5458b2549a4e720ab74274d7da">outstandingIOMax_</a></td></tr>
+<tr class="memitem:a5f1e9b5458b2549a4e720ab74274d7da" id="r_a5f1e9b5458b2549a4e720ab74274d7da"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f1e9b5458b2549a4e720ab74274d7da">outstandingIOMax_</a></td></tr>
 <tr class="separator:a5f1e9b5458b2549a4e720ab74274d7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5519152a65257167658b817a9c2ac1b6" id="r_a5519152a65257167658b817a9c2ac1b6"><td class="memItemLeft" align="right" valign="top">std::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5519152a65257167658b817a9c2ac1b6">enableViewCache_</a></td></tr>
 <tr class="separator:a5519152a65257167658b817a9c2ac1b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a214ca6ad550cb92bf77a39a3e24363c2" id="r_a214ca6ad550cb92bf77a39a3e24363c2"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a214ca6ad550cb92bf77a39a3e24363c2">lrukCorrInterval_</a></td></tr>
 <tr class="separator:a214ca6ad550cb92bf77a39a3e24363c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af34fd2bc2692c4c528d83eb20ba0eb96" id="r_af34fd2bc2692c4c528d83eb20ba0eb96"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af34fd2bc2692c4c528d83eb20ba0eb96">lrukHistoryMax_</a></td></tr>
+<tr class="memitem:af34fd2bc2692c4c528d83eb20ba0eb96" id="r_af34fd2bc2692c4c528d83eb20ba0eb96"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af34fd2bc2692c4c528d83eb20ba0eb96">lrukHistoryMax_</a></td></tr>
 <tr class="separator:af34fd2bc2692c4c528d83eb20ba0eb96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16f214eb18141cc03ad178aec542ae6c" id="r_a16f214eb18141cc03ad178aec542ae6c"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16f214eb18141cc03ad178aec542ae6c">lrukPolicy_</a></td></tr>
+<tr class="memitem:a16f214eb18141cc03ad178aec542ae6c" id="r_a16f214eb18141cc03ad178aec542ae6c"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16f214eb18141cc03ad178aec542ae6c">lrukPolicy_</a></td></tr>
 <tr class="separator:a16f214eb18141cc03ad178aec542ae6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a650d6d833c8e401dcc793a421cee1a53" id="r_a650d6d833c8e401dcc793a421cee1a53"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a650d6d833c8e401dcc793a421cee1a53">lrukTimeout_</a></td></tr>
 <tr class="separator:a650d6d833c8e401dcc793a421cee1a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c7926d617eebc81e06fbfa06254e2ef" id="r_a2c7926d617eebc81e06fbfa06254e2ef"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#add827c178d5bc9090e515b19cab744d4">ExceptionAction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c7926d617eebc81e06fbfa06254e2ef">exceptionAction_</a></td></tr>
 <tr class="separator:a2c7926d617eebc81e06fbfa06254e2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fbf6fd0a14712adff85d5f4b95ee87d" id="r_a4fbf6fd0a14712adff85d5f4b95ee87d"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fbf6fd0a14712adff85d5f4b95ee87d">eventLogCacheSize_</a></td></tr>
+<tr class="memitem:a4fbf6fd0a14712adff85d5f4b95ee87d" id="r_a4fbf6fd0a14712adff85d5f4b95ee87d"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fbf6fd0a14712adff85d5f4b95ee87d">eventLogCacheSize_</a></td></tr>
 <tr class="separator:a4fbf6fd0a14712adff85d5f4b95ee87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80ba4419f6a40be7d0a68ff61c01b177" id="r_a80ba4419f6a40be7d0a68ff61c01b177"><td class="memItemLeft" align="right" valign="top">std::optional&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80ba4419f6a40be7d0a68ff61c01b177">monitoringPerformance_</a></td></tr>
 <tr class="separator:a80ba4419f6a40be7d0a68ff61c01b177"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed298bb5951996afa4342541126f209a" id="r_aed298bb5951996afa4342541126f209a"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed298bb5951996afa4342541126f209a">globalMinimumVersionPageCount_</a></td></tr>
+<tr class="memitem:aed298bb5951996afa4342541126f209a" id="r_aed298bb5951996afa4342541126f209a"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed298bb5951996afa4342541126f209a">globalMinimumVersionPageCount_</a></td></tr>
 <tr class="separator:aed298bb5951996afa4342541126f209a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4aecd5f1ea8167f81e089ff9a982a076" id="r_a4aecd5f1ea8167f81e089ff9a982a076"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4aecd5f1ea8167f81e089ff9a982a076">maximumInstanceCount_</a></td></tr>
+<tr class="memitem:a4aecd5f1ea8167f81e089ff9a982a076" id="r_a4aecd5f1ea8167f81e089ff9a982a076"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4aecd5f1ea8167f81e089ff9a982a076">maximumInstanceCount_</a></td></tr>
 <tr class="separator:a4aecd5f1ea8167f81e089ff9a982a076"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
@@ -268,7 +277,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt; Harlinn::Common::Core::Ese::GlobalOptions::batchIOBufferMax_</td>
+          <td class="memname">std::optional&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&gt; Harlinn::Common::Core::Ese::GlobalOptions::batchIOBufferMax_</td>
         </tr>
       </table>
   </td>
@@ -356,7 +365,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt; Harlinn::Common::Core::Ese::GlobalOptions::eventLogCacheSize_</td>
+          <td class="memname">std::optional&lt;<a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&gt; Harlinn::Common::Core::Ese::GlobalOptions::eventLogCacheSize_</td>
         </tr>
       </table>
   </td>
@@ -400,7 +409,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt; Harlinn::Common::Core::Ese::GlobalOptions::globalMinimumVersionPageCount_</td>
+          <td class="memname">std::optional&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&gt; Harlinn::Common::Core::Ese::GlobalOptions::globalMinimumVersionPageCount_</td>
         </tr>
       </table>
   </td>
@@ -444,7 +453,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt; Harlinn::Common::Core::Ese::GlobalOptions::lrukHistoryMax_</td>
+          <td class="memname">std::optional&lt;<a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&gt; Harlinn::Common::Core::Ese::GlobalOptions::lrukHistoryMax_</td>
         </tr>
       </table>
   </td>
@@ -466,7 +475,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt; Harlinn::Common::Core::Ese::GlobalOptions::lrukPolicy_</td>
+          <td class="memname">std::optional&lt;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt; Harlinn::Common::Core::Ese::GlobalOptions::lrukPolicy_</td>
         </tr>
       </table>
   </td>
@@ -510,7 +519,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt; Harlinn::Common::Core::Ese::GlobalOptions::maximumInstanceCount_</td>
+          <td class="memname">std::optional&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&gt; Harlinn::Common::Core::Ese::GlobalOptions::maximumInstanceCount_</td>
         </tr>
       </table>
   </td>
@@ -576,7 +585,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt; Harlinn::Common::Core::Ese::GlobalOptions::outstandingIOMax_</td>
+          <td class="memname">std::optional&lt;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt; Harlinn::Common::Core::Ese::GlobalOptions::outstandingIOMax_</td>
         </tr>
       </table>
   </td>

@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -122,9 +131,9 @@ Classes</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a9f518248db45e7e2156893306a84fe05" id="r_a9f518248db45e7e2156893306a84fe05"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f518248db45e7e2156893306a84fe05">Deviation</a> (double first, double second)</td></tr>
 <tr class="separator:a9f518248db45e7e2156893306a84fe05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad17e7ddd387920d745861616863ac6fd" id="r_ad17e7ddd387920d745861616863ac6fd"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename U &gt; <br />
-requires std::is_arithmetic_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&amp;&amp; std::is_arithmetic_v&lt;U&gt;</td></tr>
-<tr class="memitem:ad17e7ddd387920d745861616863ac6fd"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad17e7ddd387920d745861616863ac6fd">Deviation</a> (const std::pair&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U &gt; first, const std::pair&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U &gt; second)</td></tr>
+<tr class="memitem:ad17e7ddd387920d745861616863ac6fd" id="r_ad17e7ddd387920d745861616863ac6fd"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; <br />
+requires std::is_arithmetic_v&lt;T&gt;&amp;&amp; std::is_arithmetic_v&lt;U&gt;</td></tr>
+<tr class="memitem:ad17e7ddd387920d745861616863ac6fd"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad17e7ddd387920d745861616863ac6fd">Deviation</a> (const std::pair&lt; T, U &gt; first, const std::pair&lt; T, U &gt; second)</td></tr>
 <tr class="separator:ad17e7ddd387920d745861616863ac6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -139,8 +148,8 @@ Variables</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename U &gt; <br />
-requires std::is_arithmetic_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;&amp;&amp; std::is_arithmetic_v&lt;U&gt;</div>
+template&lt;typename T , typename U &gt; <br />
+requires std::is_arithmetic_v&lt;T&gt;&amp;&amp; std::is_arithmetic_v&lt;U&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -148,12 +157,12 @@ requires std::is_arithmetic_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8
         <tr>
           <td class="memname">double Harlinn::Common::Core::Test::Deviation </td>
           <td>(</td>
-          <td class="paramtype">const std::pair&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U &gt;</td>          <td class="paramname"><span class="paramname"><em>first</em></span>, </td>
+          <td class="paramtype">const std::pair&lt; T, U &gt;</td>          <td class="paramname"><span class="paramname"><em>first</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::pair&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, U &gt;</td>          <td class="paramname"><span class="paramname"><em>second</em></span>&#160;)</td>
+          <td class="paramtype">const std::pair&lt; T, U &gt;</td>          <td class="paramname"><span class="paramname"><em>second</em></span>&#160;)</td>
         </tr>
       </table>
   </td>

@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -131,11 +140,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7532c5a94eda358583e193c9336e1321" id="r_a7532c5a94eda358583e193c9336e1321"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &gt; </td></tr>
 <tr class="memitem:a7532c5a94eda358583e193c9336e1321"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_internal_1_1_node_i_d.html">NodeID</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7532c5a94eda358583e193c9336e1321">CreateOperatorNode</a> (const <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;desc, std::span&lt; <a class="el" href="class_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_internal_1_1_node_output.html">NodeOutput</a> *const &gt; inputs)</td></tr>
 <tr class="separator:a7532c5a94eda358583e193c9336e1321"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac342fa60efda7bb3b063fb1fa6164bc3" id="r_ac342fa60efda7bb3b063fb1fa6164bc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_internal_1_1_node_i_d.html">NodeID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac342fa60efda7bb3b063fb1fa6164bc3">CreateInputNode</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> inputIndex)</td></tr>
+<tr class="memitem:ac342fa60efda7bb3b063fb1fa6164bc3" id="r_ac342fa60efda7bb3b063fb1fa6164bc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_internal_1_1_node_i_d.html">NodeID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac342fa60efda7bb3b063fb1fa6164bc3">CreateInputNode</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> inputIndex)</td></tr>
 <tr class="separator:ac342fa60efda7bb3b063fb1fa6164bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21a24a5cac5cb463c9b46afcec288c43" id="r_a21a24a5cac5cb463c9b46afcec288c43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_internal_1_1_node_i_d.html">NodeID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21a24a5cac5cb463c9b46afcec288c43">CreateReinterpretNode</a> (<a class="el" href="class_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_internal_1_1_node_output.html">NodeOutput</a> *input)</td></tr>
 <tr class="separator:a21a24a5cac5cb463c9b46afcec288c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5872eb712304d439ba893af741fa5e97" id="r_a5872eb712304d439ba893af741fa5e97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_internal_1_1_node_output.html">NodeOutput</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5872eb712304d439ba893af741fa5e97">CreateNodeOutput</a> (<a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_internal_1_1_node_i_d.html">NodeID</a> node, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> outputIndex, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_tensor_desc.html">TensorDesc</a> &amp;tensorDesc)</td></tr>
+<tr class="memitem:a5872eb712304d439ba893af741fa5e97" id="r_a5872eb712304d439ba893af741fa5e97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_internal_1_1_node_output.html">NodeOutput</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5872eb712304d439ba893af741fa5e97">CreateNodeOutput</a> (<a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_internal_1_1_node_i_d.html">NodeID</a> node, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> outputIndex, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_tensor_desc.html">TensorDesc</a> &amp;tensorDesc)</td></tr>
 <tr class="separator:a5872eb712304d439ba893af741fa5e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7ba501b845c3370ceb28b9266180bf1" id="r_ae7ba501b845c3370ceb28b9266180bf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_internal_1_1_graph_desc.html">GraphDesc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7ba501b845c3370ceb28b9266180bf1">GetGraphDesc</a> (std::span&lt; const <a class="el" href="class_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_expression.html">Expression</a> &gt; outputs) const</td></tr>
 <tr class="separator:ae7ba501b845c3370ceb28b9266180bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,7 +213,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_internal_1_1_node_i_d.html">NodeID</a> Harlinn::AI::DML::X::Internal::GraphBuilder::CreateInputNode </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>inputIndex</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>inputIndex</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -234,7 +243,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>outputIndex</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>outputIndex</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

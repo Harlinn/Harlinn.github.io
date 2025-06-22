@@ -4,7 +4,7 @@ var searchData=
   ['marshalcontext_1',['MarshalContext',['../namespace_harlinn_1_1_common_1_1_core.html#a2988159dbec3679dfdab3f171af000de',1,'Harlinn::Common::Core']]],
   ['marshalflags_2',['MarshalFlags',['../namespace_harlinn_1_1_common_1_1_core.html#acad4b9db7fa96d33b4d69e0ce9241daf',1,'Harlinn::Common::Core']]],
   ['matrixtransform_3',['MatrixTransform',['../namespace_harlinn_1_1_a_i_1_1_d_m_l.html#ade148483d9ebe29c875683ff7af2f339',1,'Harlinn::AI::DML']]],
-  ['matrixtype_4',['MatrixType',['../namespace_harlinn_1_1_common_1_1_core_1_1_math.html#a6cecaf201e4c0edea0fcf41432540b19',1,'Harlinn::Common::Core::Math']]],
+  ['matrixtype_4',['MatrixType',['../namespace_harlinn_1_1_math.html#a6851f9f03a800224c7551b42347ef2f8',1,'Harlinn::Math']]],
   ['measurementsaction_5',['MeasurementsAction',['../namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#ae54f26745dec44bede266cd6fed49a80',1,'Harlinn::Windows::Graphics::D3D12']]],
   ['memberkind_6',['MemberKind',['../namespace_harlinn_1_1_common_1_1_core_1_1_doxygen.html#a86cddf58381dedb164f4d4107a3c82fd',1,'Harlinn::Common::Core::Doxygen']]],
   ['membertype_7',['MemberType',['../namespace_harlinn_1_1_common_1_1_core_1_1_doxygen_1_1_structure.html#a87f59e7b66a1a3d6bdadf98bea73fc39',1,'Harlinn::Common::Core::Doxygen::Structure']]],

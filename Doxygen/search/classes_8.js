@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['half_0',['Half',['../class_harlinn_1_1_common_1_1_core_1_1_math_1_1_half.html',1,'Harlinn::Common::Core::Math']]],
+  ['half_0',['Half',['../class_harlinn_1_1_math_1_1_half.html',1,'Harlinn::Math']]],
   ['half_1',['half',['../classhalf__float_1_1half.html',1,'half_float']]],
   ['half_5fcaster_2',['half_caster',['../structhalf__float_1_1detail_1_1half__caster.html',1,'half_float::detail']]],
   ['half_5fcaster_3c_20half_2c_20expr_2c_20r_20_3e_3',['half_caster&lt; half, expr, R &gt;',['../structhalf__float_1_1detail_1_1half__caster_3_01half_00_01expr_00_01_r_01_4.html',1,'half_float::detail']]],

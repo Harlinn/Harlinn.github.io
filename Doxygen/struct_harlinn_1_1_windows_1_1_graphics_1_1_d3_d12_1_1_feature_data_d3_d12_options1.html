@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -116,11 +125,11 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ae918382702df5b9369a98dfdf8b7f980" id="r_ae918382702df5b9369a98dfdf8b7f980"><td class="memItemLeft" align="right" valign="top">_Out_ <a class="el" href="_h_c_c_date_time_8cpp.html#a8663a698628cc67791708eda36b484a7">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae918382702df5b9369a98dfdf8b7f980">WaveOps</a></td></tr>
 <tr class="separator:ae918382702df5b9369a98dfdf8b7f980"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3618dcd139f77201ddf24b66d0ba1c7e" id="r_a3618dcd139f77201ddf24b66d0ba1c7e"><td class="memItemLeft" align="right" valign="top">_Out_ <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3618dcd139f77201ddf24b66d0ba1c7e">WaveLaneCountMin</a></td></tr>
+<tr class="memitem:a3618dcd139f77201ddf24b66d0ba1c7e" id="r_a3618dcd139f77201ddf24b66d0ba1c7e"><td class="memItemLeft" align="right" valign="top">_Out_ <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3618dcd139f77201ddf24b66d0ba1c7e">WaveLaneCountMin</a></td></tr>
 <tr class="separator:a3618dcd139f77201ddf24b66d0ba1c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc5b10e4ffb3981ca75f467ed4fe6125" id="r_adc5b10e4ffb3981ca75f467ed4fe6125"><td class="memItemLeft" align="right" valign="top">_Out_ <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc5b10e4ffb3981ca75f467ed4fe6125">WaveLaneCountMax</a></td></tr>
+<tr class="memitem:adc5b10e4ffb3981ca75f467ed4fe6125" id="r_adc5b10e4ffb3981ca75f467ed4fe6125"><td class="memItemLeft" align="right" valign="top">_Out_ <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc5b10e4ffb3981ca75f467ed4fe6125">WaveLaneCountMax</a></td></tr>
 <tr class="separator:adc5b10e4ffb3981ca75f467ed4fe6125"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c526937919b47f0dd31758d7fdee85c" id="r_a2c526937919b47f0dd31758d7fdee85c"><td class="memItemLeft" align="right" valign="top">_Out_ <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c526937919b47f0dd31758d7fdee85c">TotalLaneCount</a></td></tr>
+<tr class="memitem:a2c526937919b47f0dd31758d7fdee85c" id="r_a2c526937919b47f0dd31758d7fdee85c"><td class="memItemLeft" align="right" valign="top">_Out_ <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c526937919b47f0dd31758d7fdee85c">TotalLaneCount</a></td></tr>
 <tr class="separator:a2c526937919b47f0dd31758d7fdee85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3797b48b348c94e4cda68ad829d18999" id="r_a3797b48b348c94e4cda68ad829d18999"><td class="memItemLeft" align="right" valign="top">_Out_ <a class="el" href="_h_c_c_date_time_8cpp.html#a8663a698628cc67791708eda36b484a7">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3797b48b348c94e4cda68ad829d18999">ExpandedComputeResourceStates</a></td></tr>
 <tr class="separator:a3797b48b348c94e4cda68ad829d18999"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,7 +192,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">_Out_ <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::D3D12::FeatureDataD3D12Options1::TotalLaneCount</td>
+          <td class="memname">_Out_ <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::D3D12::FeatureDataD3D12Options1::TotalLaneCount</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -197,7 +206,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">_Out_ <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::D3D12::FeatureDataD3D12Options1::WaveLaneCountMax</td>
+          <td class="memname">_Out_ <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::D3D12::FeatureDataD3D12Options1::WaveLaneCountMax</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -211,7 +220,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">_Out_ <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::D3D12::FeatureDataD3D12Options1::WaveLaneCountMin</td>
+          <td class="memname">_Out_ <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::D3D12::FeatureDataD3D12Options1::WaveLaneCountMin</td>
         </tr>
       </table>
 </div><div class="memdoc">

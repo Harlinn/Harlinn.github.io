@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -129,14 +138,14 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a848297e17c34f6b72232a0265fa2b0cd" id="r_a848297e17c34f6b72232a0265fa2b0cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a848297e17c34f6b72232a0265fa2b0cd">MediaFoundationMediaSubsession</a> (UsageEnvironment &amp;env, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a4412707cac1cc70c15860d5d4e7a566e">Boolean</a> reuseFirstSource, portNumBits initialPortNum=6970, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a4412707cac1cc70c15860d5d4e7a566e">Boolean</a> multiplexRTCPWithRTP=False)</td></tr>
+<tr class="memitem:a848297e17c34f6b72232a0265fa2b0cd" id="r_a848297e17c34f6b72232a0265fa2b0cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a848297e17c34f6b72232a0265fa2b0cd">MediaFoundationMediaSubsession</a> (UsageEnvironment &amp;env, <a class="el" href="namespace_harlinn_1_1_common.html#a92feb4768f1738622dfbe66d719f20b2">Boolean</a> reuseFirstSource, portNumBits initialPortNum=6970, <a class="el" href="namespace_harlinn_1_1_common.html#a92feb4768f1738622dfbe66d719f20b2">Boolean</a> multiplexRTCPWithRTP=False)</td></tr>
 <tr class="separator:a848297e17c34f6b72232a0265fa2b0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79ac6b6aba04d5d50d9a8d1282fa3ab3" id="r_a79ac6b6aba04d5d50d9a8d1282fa3ab3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79ac6b6aba04d5d50d9a8d1282fa3ab3">~MediaFoundationMediaSubsession</a> ()</td></tr>
 <tr class="separator:a79ac6b6aba04d5d50d9a8d1282fa3ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ade8b5febf7a93c16cea6bd6f96a2a49b" id="r_ade8b5febf7a93c16cea6bd6f96a2a49b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_live_media_1_1_media_foundation_media_subsession.html">MediaFoundationMediaSubsession</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade8b5febf7a93c16cea6bd6f96a2a49b">createNew</a> (UsageEnvironment &amp;env, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a4412707cac1cc70c15860d5d4e7a566e">Boolean</a> reuseFirstSource, portNumBits initialPortNum=6970, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a4412707cac1cc70c15860d5d4e7a566e">Boolean</a> multiplexRTCPWithRTP=False)</td></tr>
+<tr class="memitem:ade8b5febf7a93c16cea6bd6f96a2a49b" id="r_ade8b5febf7a93c16cea6bd6f96a2a49b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_harlinn_1_1_windows_1_1_media_1_1_live_media_1_1_media_foundation_media_subsession.html">MediaFoundationMediaSubsession</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade8b5febf7a93c16cea6bd6f96a2a49b">createNew</a> (UsageEnvironment &amp;env, <a class="el" href="namespace_harlinn_1_1_common.html#a92feb4768f1738622dfbe66d719f20b2">Boolean</a> reuseFirstSource, portNumBits initialPortNum=6970, <a class="el" href="namespace_harlinn_1_1_common.html#a92feb4768f1738622dfbe66d719f20b2">Boolean</a> multiplexRTCPWithRTP=False)</td></tr>
 <tr class="separator:ade8b5febf7a93c16cea6bd6f96a2a49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -206,7 +215,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a4412707cac1cc70c15860d5d4e7a566e">Boolean</a></td>          <td class="paramname"><span class="paramname"><em>reuseFirstSource</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a92feb4768f1738622dfbe66d719f20b2">Boolean</a></td>          <td class="paramname"><span class="paramname"><em>reuseFirstSource</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -216,7 +225,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a4412707cac1cc70c15860d5d4e7a566e">Boolean</a></td>          <td class="paramname"><span class="paramname"><em>multiplexRTCPWithRTP</em></span><span class="paramdefsep"> = </span><span class="paramdefval">False</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a92feb4768f1738622dfbe66d719f20b2">Boolean</a></td>          <td class="paramname"><span class="paramname"><em>multiplexRTCPWithRTP</em></span><span class="paramdefsep"> = </span><span class="paramdefval">False</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -371,7 +380,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a4412707cac1cc70c15860d5d4e7a566e">Boolean</a></td>          <td class="paramname"><span class="paramname"><em>reuseFirstSource</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a92feb4768f1738622dfbe66d719f20b2">Boolean</a></td>          <td class="paramname"><span class="paramname"><em>reuseFirstSource</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -381,7 +390,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a4412707cac1cc70c15860d5d4e7a566e">Boolean</a></td>          <td class="paramname"><span class="paramname"><em>multiplexRTCPWithRTP</em></span><span class="paramdefsep"> = </span><span class="paramdefval">False</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a92feb4768f1738622dfbe66d719f20b2">Boolean</a></td>          <td class="paramname"><span class="paramname"><em>multiplexRTCPWithRTP</em></span><span class="paramdefsep"> = </span><span class="paramdefval">False</span>&#160;)</td>
         </tr>
       </table>
   </td>

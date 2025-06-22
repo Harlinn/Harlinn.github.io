@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -122,7 +131,7 @@ Collaboration diagram for Harlinn::Common::Core::SIMD::Traits32Bit&lt; T, N &gt;
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a4c071b0ed358e3a65678afa7fe521046" id="r_a4c071b0ed358e3a65678afa7fe521046"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a> = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td></tr>
+<tr class="memitem:a4c071b0ed358e3a65678afa7fe521046" id="r_a4c071b0ed358e3a65678afa7fe521046"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a> = T</td></tr>
 <tr class="separator:a4c071b0ed358e3a65678afa7fe521046"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5313f8ac27fee5434918d0fa8c96118" id="r_ac5313f8ac27fee5434918d0fa8c96118"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> = typename DataTypeTraits::Type</td></tr>
 <tr class="separator:ac5313f8ac27fee5434918d0fa8c96118"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,7 +222,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:afe152a7de067bc1c215d9135c8403b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0b2c97c92565dc040c866159b5b7810" id="r_ad0b2c97c92565dc040c866159b5b7810"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0b2c97c92565dc040c866159b5b7810">SIMDTypeCapacity</a> = <a class="el" href="#a1affbf2b4a104a63b466a398cb43370b">UseShortSIMDType</a> ? 4 : 8</td></tr>
 <tr class="separator:ad0b2c97c92565dc040c866159b5b7810"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf3038482b62683a9c7f9c03d21ef7cb" id="r_adf3038482b62683a9c7f9c03d21ef7cb"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf3038482b62683a9c7f9c03d21ef7cb">Capacity</a> = <a class="el" href="#a1affbf2b4a104a63b466a398cb43370b">UseShortSIMDType</a> ? 4 : ( ( N + 7 ) &amp; static_cast&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt;( -8 ) )</td></tr>
+<tr class="memitem:adf3038482b62683a9c7f9c03d21ef7cb" id="r_adf3038482b62683a9c7f9c03d21ef7cb"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf3038482b62683a9c7f9c03d21ef7cb">Capacity</a> = <a class="el" href="#a1affbf2b4a104a63b466a398cb43370b">UseShortSIMDType</a> ? 4 : ( ( N + 7 ) &amp; static_cast&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&gt;( -8 ) )</td></tr>
 <tr class="separator:adf3038482b62683a9c7f9c03d21ef7cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b4f0bbbb565ac49565794df971efbcb" id="r_a1b4f0bbbb565ac49565794df971efbcb"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b4f0bbbb565ac49565794df971efbcb">SIMDIterations</a> = ( <a class="el" href="#adf3038482b62683a9c7f9c03d21ef7cb">Capacity</a> * sizeof( <a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a> ) ) / <a class="el" href="#afe152a7de067bc1c215d9135c8403b89">SIMDTypeSize</a></td></tr>
 <tr class="separator:a1b4f0bbbb565ac49565794df971efbcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,10 +244,10 @@ Static Private Attributes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::ArrayType = std::array&lt;<a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a>, N&gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::ArrayType = std::array&lt;<a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a>, N&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -251,13 +260,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::DataTypeTraits = std::conditional_t&lt;<a class="el" href="#a1affbf2b4a104a63b466a398cb43370b">UseShortSIMDType</a>, <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_data_type_traits.html">SIMD::DataTypeTraits</a>&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a81f751d1a95891a5fac3a87d2b2fc77fa7014ddf69e65db5beffc6c32d849713c">DataType::m128i</a>&gt;, <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_data_type_traits.html">SIMD::DataTypeTraits</a>&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a81f751d1a95891a5fac3a87d2b2fc77fabedb1edb68d0faa29a83f89a06d0dc17">DataType::m256i</a>&gt; &gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::DataTypeTraits = std::conditional_t&lt;<a class="el" href="#a1affbf2b4a104a63b466a398cb43370b">UseShortSIMDType</a>, <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_data_type_traits.html">SIMD::DataTypeTraits</a>&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a81f751d1a95891a5fac3a87d2b2fc77fa7014ddf69e65db5beffc6c32d849713c">DataType::m128i</a>&gt;, <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_data_type_traits.html">SIMD::DataTypeTraits</a>&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a81f751d1a95891a5fac3a87d2b2fc77fabedb1edb68d0faa29a83f89a06d0dc17">DataType::m256i</a>&gt; &gt;</td>
         </tr>
       </table>
   </td>
@@ -275,10 +284,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::SIMDType = typename DataTypeTraits::Type</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::SIMDType = typename DataTypeTraits::Type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -291,10 +300,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Type = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Type = T</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -308,13 +317,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Add </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Add </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
         </tr>
@@ -350,13 +359,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::And </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::And </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
         </tr>
@@ -383,13 +392,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::AndNot </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::AndNot </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
         </tr>
@@ -416,7 +425,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <div class="memtemplate">
 template&lt;size_t index&gt; <br />
 requires ( index &lt; <a class="el" href="#af60c15dc0719ea466cf2fde4a9522be1">Size</a> )</div>
@@ -425,7 +434,7 @@ requires ( index &lt; <a class="el" href="#af60c15dc0719ea466cf2fde4a9522be1">Si
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::At </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::At </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
           <td></td>
@@ -461,13 +470,13 @@ requires ( index &lt; <a class="el" href="#af60c15dc0719ea466cf2fde4a9522be1">Si
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Clamp </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Clamp </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span>, </td>
         </tr>
@@ -497,7 +506,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <div class="memtemplate">
 template&lt;size_t index&gt; <br />
 requires ( index &lt; <a class="el" href="#af60c15dc0719ea466cf2fde4a9522be1">Size</a> )</div>
@@ -506,7 +515,7 @@ requires ( index &lt; <a class="el" href="#af60c15dc0719ea466cf2fde4a9522be1">Si
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Extract </td>
+          <td class="memname">static <a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Extract </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
           <td></td>
@@ -542,13 +551,13 @@ requires ( index &lt; <a class="el" href="#af60c15dc0719ea466cf2fde4a9522be1">Si
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Fill </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Fill </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -569,13 +578,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::First </td>
+          <td class="memname">static <a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::First </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
           <td></td>
@@ -605,13 +614,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::HAdd </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::HAdd </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
         </tr>
@@ -647,13 +656,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::HasNaN </td>
+          <td class="memname">static constexpr bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::HasNaN </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
           <td></td>
@@ -674,13 +683,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::HSum </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::HSum </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
           <td></td>
@@ -701,7 +710,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <div class="memtemplate">
 template&lt;size_t NA&gt; <br />
 requires ( NA &gt;= N )</div>
@@ -710,7 +719,7 @@ requires ( NA &gt;= N )</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Load </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Load </td>
           <td>(</td>
           <td class="paramtype">const std::array&lt; <a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a>, NA &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
           <td></td>
@@ -731,13 +740,13 @@ requires ( NA &gt;= N )</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Load </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Load </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a> *</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
           <td></td>
@@ -758,13 +767,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Max </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Max </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
         </tr>
@@ -789,13 +798,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Min </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Min </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
         </tr>
@@ -820,13 +829,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Mul </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Mul </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
         </tr>
@@ -851,13 +860,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Mul </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Mul </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
         </tr>
@@ -882,13 +891,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Mul </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Mul </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
         </tr>
@@ -913,13 +922,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Or </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Or </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
         </tr>
@@ -946,13 +955,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Store </td>
+          <td class="memname">static void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Store </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a> *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
         </tr>
@@ -977,13 +986,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Sub </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Sub </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
         </tr>
@@ -1020,13 +1029,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#a5f670845d4b8d7e6c0e63c4a699eec25">ArrayType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::ToArray </td>
+          <td class="memname">static <a class="el" href="#a5f670845d4b8d7e6c0e63c4a699eec25">ArrayType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::ToArray </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
           <td></td>
@@ -1056,13 +1065,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::UnalignedLoad </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::UnalignedLoad </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a> *</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
           <td></td>
@@ -1083,13 +1092,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::UnalignedStore </td>
+          <td class="memname">static void <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::UnalignedStore </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a> *</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
         </tr>
@@ -1114,13 +1123,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Xor </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Xor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a></td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
         </tr>
@@ -1147,13 +1156,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Zero </td>
+          <td class="memname">static <a class="el" href="#ac5313f8ac27fee5434918d0fa8c96118">SIMDType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Zero </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1175,13 +1184,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::AlignAs = DataTypeTraits::AlignAs</td>
+          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::AlignAs = DataTypeTraits::AlignAs</td>
         </tr>
       </table>
   </td>
@@ -1199,13 +1208,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Capacity = <a class="el" href="#a1affbf2b4a104a63b466a398cb43370b">UseShortSIMDType</a> ? 4 : ( ( N + 7 ) &amp; static_cast&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt;( -8 ) )</td>
+          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Capacity = <a class="el" href="#a1affbf2b4a104a63b466a398cb43370b">UseShortSIMDType</a> ? 4 : ( ( N + 7 ) &amp; static_cast&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&gt;( -8 ) )</td>
         </tr>
       </table>
   </td>
@@ -1223,13 +1232,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a81f751d1a95891a5fac3a87d2b2fc77f">DataType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Id = DataTypeTraits::Id</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_s_i_m_d.html#a81f751d1a95891a5fac3a87d2b2fc77f">DataType</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Id = DataTypeTraits::Id</td>
         </tr>
       </table>
   </td>
@@ -1247,13 +1256,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::SIMDIterations = ( <a class="el" href="#adf3038482b62683a9c7f9c03d21ef7cb">Capacity</a> * sizeof( <a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a> ) ) / <a class="el" href="#afe152a7de067bc1c215d9135c8403b89">SIMDTypeSize</a></td>
+          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::SIMDIterations = ( <a class="el" href="#adf3038482b62683a9c7f9c03d21ef7cb">Capacity</a> * sizeof( <a class="el" href="#a4c071b0ed358e3a65678afa7fe521046">Type</a> ) ) / <a class="el" href="#afe152a7de067bc1c215d9135c8403b89">SIMDTypeSize</a></td>
         </tr>
       </table>
   </td>
@@ -1271,13 +1280,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::SIMDTypeCapacity = <a class="el" href="#a1affbf2b4a104a63b466a398cb43370b">UseShortSIMDType</a> ? 4 : 8</td>
+          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::SIMDTypeCapacity = <a class="el" href="#a1affbf2b4a104a63b466a398cb43370b">UseShortSIMDType</a> ? 4 : 8</td>
         </tr>
       </table>
   </td>
@@ -1295,13 +1304,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::SIMDTypeSize = DataTypeTraits::Size</td>
+          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::SIMDTypeSize = DataTypeTraits::Size</td>
         </tr>
       </table>
   </td>
@@ -1319,13 +1328,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::Size = N</td>
+          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::Size = N</td>
         </tr>
       </table>
   </td>
@@ -1343,13 +1352,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , size_t N&gt; </div>
+template&lt;typename T , size_t N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, N &gt;::UseShortSIMDType = N &lt;= 4</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits32_bit.html">Harlinn::Common::Core::SIMD::Traits32Bit</a>&lt; T, N &gt;::UseShortSIMDType = N &lt;= 4</td>
         </tr>
       </table>
   </td>

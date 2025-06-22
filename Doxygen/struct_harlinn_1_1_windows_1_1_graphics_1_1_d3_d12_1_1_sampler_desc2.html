@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -129,21 +138,21 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a56714d81525625ec8c7bb5572e2286e8" id="r_a56714d81525625ec8c7bb5572e2286e8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56714d81525625ec8c7bb5572e2286e8">MipLODBias</a> = 0.f</td></tr>
 <tr class="memdesc:a56714d81525625ec8c7bb5572e2286e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset from the calculated mipmap level. For example, if the runtime calculates that a texture should be sampled at mipmap level 3 and MipLODBias is 2, the texture will be sampled at mipmap level 5.  <br /></td></tr>
 <tr class="separator:a56714d81525625ec8c7bb5572e2286e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b55daf565b4dbeedd80dbfd315525bd" id="r_a5b55daf565b4dbeedd80dbfd315525bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b55daf565b4dbeedd80dbfd315525bd">MaxAnisotropy</a> = 0</td></tr>
+<tr class="memitem:a5b55daf565b4dbeedd80dbfd315525bd" id="r_a5b55daf565b4dbeedd80dbfd315525bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b55daf565b4dbeedd80dbfd315525bd">MaxAnisotropy</a> = 0</td></tr>
 <tr class="memdesc:a5b55daf565b4dbeedd80dbfd315525bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clamping value used if <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#ac85222f5ce12395994711a9179617172a3cc429d7ee5b21a397fdc636221f8280" title="Use anisotropic interpolation for minification, magnification, and mip-level sampling.">Filter::Anisotropic</a> or FilterComparisonAnisotropic is specified in Filter. Valid values are between 1 and 16.  <br /></td></tr>
 <tr class="separator:a5b55daf565b4dbeedd80dbfd315525bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cfeefea573f7d69ddba45483a7c58be" id="r_a5cfeefea573f7d69ddba45483a7c58be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a45f12001aef9c3c6575a87f74cb06ef8">D3D12::ComparisonFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cfeefea573f7d69ddba45483a7c58be">ComparisonFunc</a> = <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a45f12001aef9c3c6575a87f74cb06ef8a88183b946cc5f0e8c96b2e66e1c74a7e">D3D12::ComparisonFunction::Unknown</a></td></tr>
 <tr class="memdesc:a5cfeefea573f7d69ddba45483a7c58be"><td class="mdescLeft">&#160;</td><td class="mdescRight">A ComparisonFunction value that specifies a function that compares sampled data against existing sampled data.  <br /></td></tr>
 <tr class="separator:a5cfeefea573f7d69ddba45483a7c58be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa88550e64ef3518c5f707d37b7034f72" id="r_aa88550e64ef3518c5f707d37b7034f72"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memitem:aef93472b6a5e0b576ab44ec36cf1d148" id="r_aef93472b6a5e0b576ab44ec36cf1d148"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0db25a7c0c51abf8b7608b81e6aa1a3" id="r_ae0db25a7c0c51abf8b7608b81e6aa1a3"><td class="memItemLeft" >&#160;&#160;&#160;FLOAT&#160;&#160;&#160;<a class="el" href="#af6db2676c19e26f53dca680fdff54770">FloatBorderColor</a> [4]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memdesc:ae0db25a7c0c51abf8b7608b81e6aa1a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGBA border color to use if <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a3e21493f853aef71b1211078901fe0eaa070554647306343cbea29ebfdd278ba8" title="Texture coordinates outside the range [0.0, 1.0] are set to the border color specified in SamplerDesc...">TextureAddressMode::Border</a> is specified for AddressU, AddressV, or AddressW. <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_range.html">Range</a> must be between 0.0 and 1.0 inclusive.  <a href="#af6db2676c19e26f53dca680fdff54770">More...</a><br /></td></tr>
-<tr class="separator:ae0db25a7c0c51abf8b7608b81e6aa1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a826e64aeb4df5f935cd40c9eae4f8449" id="r_a826e64aeb4df5f935cd40c9eae4f8449"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;&#160;&#160;<a class="el" href="#a8f41ed85ef59ec94d86d0ef0cce88393">UintBorderColor</a> [4] {}&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a826e64aeb4df5f935cd40c9eae4f8449"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa88550e64ef3518c5f707d37b7034f72" id="r_aa88550e64ef3518c5f707d37b7034f72"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:aa88550e64ef3518c5f707d37b7034f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3947dc3edb1888781c49e9cccd4cdbfb" id="r_a3947dc3edb1888781c49e9cccd4cdbfb"><td class="memItemLeft" >&#160;&#160;&#160;FLOAT&#160;&#160;&#160;<a class="el" href="#af6db2676c19e26f53dca680fdff54770">FloatBorderColor</a> [4]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a3947dc3edb1888781c49e9cccd4cdbfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGBA border color to use if <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a3e21493f853aef71b1211078901fe0eaa070554647306343cbea29ebfdd278ba8" title="Texture coordinates outside the range [0.0, 1.0] are set to the border color specified in SamplerDesc...">TextureAddressMode::Border</a> is specified for AddressU, AddressV, or AddressW. <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_range.html">Range</a> must be between 0.0 and 1.0 inclusive.  <a href="#af6db2676c19e26f53dca680fdff54770">More...</a><br /></td></tr>
+<tr class="separator:a3947dc3edb1888781c49e9cccd4cdbfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d8cadd8b0e2955a56c39771932c4eff" id="r_a2d8cadd8b0e2955a56c39771932c4eff"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;&#160;&#160;<a class="el" href="#a8f41ed85ef59ec94d86d0ef0cce88393">UintBorderColor</a> [4] {}&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a2d8cadd8b0e2955a56c39771932c4eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef93472b6a5e0b576ab44ec36cf1d148" id="r_aef93472b6a5e0b576ab44ec36cf1d148"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:aef93472b6a5e0b576ab44ec36cf1d148"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea22132e9f170f3a962ee15fcf85b616" id="r_aea22132e9f170f3a962ee15fcf85b616"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea22132e9f170f3a962ee15fcf85b616">MinLOD</a> = 0.f</td></tr>
 <tr class="memdesc:aea22132e9f170f3a962ee15fcf85b616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower end of the mipmap range to clamp access to, where 0 is the largest and most detailed mipmap level and any level higher than that is less detailed.  <br /></td></tr>
 <tr class="separator:aea22132e9f170f3a962ee15fcf85b616"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,8 +183,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa88550e64ef3518c5f707d37b7034f72" name="aa88550e64ef3518c5f707d37b7034f72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa88550e64ef3518c5f707d37b7034f72">&#9670;&#160;</a></span>[union]</h2>
+<a id="aef93472b6a5e0b576ab44ec36cf1d148" name="aef93472b6a5e0b576ab44ec36cf1d148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef93472b6a5e0b576ab44ec36cf1d148">&#9670;&#160;</a></span>[union]</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,7 +314,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::D3D12::SamplerDesc2::MaxAnisotropy = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::D3D12::SamplerDesc2::MaxAnisotropy = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -369,7 +378,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::D3D12::SamplerDesc2::UintBorderColor[4] {}</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::D3D12::SamplerDesc2::UintBorderColor[4] {}</td>
         </tr>
       </table>
 </div><div class="memdoc">

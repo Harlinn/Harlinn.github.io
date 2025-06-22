@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -111,7 +120,7 @@ $(function(){initNavTree('class_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_tensor_polic
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ab5dc6166c2b4be30656065a13614721c" id="r_ab5dc6166c2b4be30656065a13614721c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5dc6166c2b4be30656065a13614721c">Func</a> = std::function&lt; <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_tensor_properties.html">TensorProperties</a>( <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags, std::span&lt;const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt; sizes ) &gt;</td></tr>
+<tr class="memitem:ab5dc6166c2b4be30656065a13614721c" id="r_ab5dc6166c2b4be30656065a13614721c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5dc6166c2b4be30656065a13614721c">Func</a> = std::function&lt; <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_tensor_properties.html">TensorProperties</a>( <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags, std::span&lt;const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt; sizes ) &gt;</td></tr>
 <tr class="separator:ab5dc6166c2b4be30656065a13614721c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -120,7 +129,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1d3b6799c4848ba047ad9e64e9398009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a368302d6806af9d07c24b6a3ab087118" id="r_a368302d6806af9d07c24b6a3ab087118"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a368302d6806af9d07c24b6a3ab087118">TensorPolicy</a> (<a class="el" href="#ab5dc6166c2b4be30656065a13614721c">Func</a> impl)</td></tr>
 <tr class="separator:a368302d6806af9d07c24b6a3ab087118"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65d0987d8b4319690dc012519282d285" id="r_a65d0987d8b4319690dc012519282d285"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_tensor_properties.html">TensorProperties</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65d0987d8b4319690dc012519282d285">Get</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags, std::span&lt; const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> &gt; sizes) const</td></tr>
+<tr class="memitem:a65d0987d8b4319690dc012519282d285" id="r_a65d0987d8b4319690dc012519282d285"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_tensor_properties.html">TensorProperties</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65d0987d8b4319690dc012519282d285">Get</a> (<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags, std::span&lt; const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> &gt; sizes) const</td></tr>
 <tr class="separator:a65d0987d8b4319690dc012519282d285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -143,7 +152,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#ab5dc6166c2b4be30656065a13614721c">Harlinn::AI::DML::X::TensorPolicy::Func</a> = std::function&lt; <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_tensor_properties.html">TensorProperties</a>( <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags, std::span&lt;const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt; sizes ) &gt;</td>
+          <td class="memname">using <a class="el" href="#ab5dc6166c2b4be30656065a13614721c">Harlinn::AI::DML::X::TensorPolicy::Func</a> = std::function&lt; <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_tensor_properties.html">TensorProperties</a>( <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a5c4388705094d5f8c84a6e0da9c9a435">TensorDataType</a> dataType, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#a7ccca7908ddc654dde1d2b59874fcd7d">TensorFlags</a> flags, std::span&lt;const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt; sizes ) &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -249,7 +258,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::span&lt; const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span>&#160;) const</td>
+          <td class="paramtype">std::span&lt; const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>sizes</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>

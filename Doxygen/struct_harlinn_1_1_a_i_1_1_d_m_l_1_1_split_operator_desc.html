@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -130,7 +139,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1cbad61e0e930dc8eae5aad514e8488c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f8adca3a7d9ef5a90b9e24259525e25" id="r_a5f8adca3a7d9ef5a90b9e24259525e25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f8adca3a7d9ef5a90b9e24259525e25">SplitOperatorDesc</a> () noexcept=default</td></tr>
 <tr class="separator:a5f8adca3a7d9ef5a90b9e24259525e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a018f0cce93346e7d36f0d19add39149e" id="r_a018f0cce93346e7d36f0d19add39149e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a018f0cce93346e7d36f0d19add39149e">SplitOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> outputTensorCount, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensors, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> axis=0) noexcept</td></tr>
+<tr class="memitem:a018f0cce93346e7d36f0d19add39149e" id="r_a018f0cce93346e7d36f0d19add39149e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a018f0cce93346e7d36f0d19add39149e">SplitOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> outputTensorCount, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensors, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> axis=0) noexcept</td></tr>
 <tr class="separator:a018f0cce93346e7d36f0d19add39149e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af41e8ccd48316ff93e7ab3d8b79bbf98" id="r_af41e8ccd48316ff93e7ab3d8b79bbf98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af41e8ccd48316ff93e7ab3d8b79bbf98">DML_IMPLEMENT_CONVERSIONS_TO</a> (DML_SPLIT_OPERATOR_DESC)</td></tr>
 <tr class="separator:af41e8ccd48316ff93e7ab3d8b79bbf98"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,9 +148,9 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a411eeb2d99d678208b4c232fd9c6078e" id="r_a411eeb2d99d678208b4c232fd9c6078e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a411eeb2d99d678208b4c232fd9c6078e">InputTensor</a> = nullptr</td></tr>
 <tr class="separator:a411eeb2d99d678208b4c232fd9c6078e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebe05259493b151cf1d2fc08b67d2387" id="r_aebe05259493b151cf1d2fc08b67d2387"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebe05259493b151cf1d2fc08b67d2387">OutputCount</a> = 0</td></tr>
+<tr class="memitem:aebe05259493b151cf1d2fc08b67d2387" id="r_aebe05259493b151cf1d2fc08b67d2387"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebe05259493b151cf1d2fc08b67d2387">OutputCount</a> = 0</td></tr>
 <tr class="separator:aebe05259493b151cf1d2fc08b67d2387"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4baf0006a78eb525ef13b3b3918d86d" id="r_ad4baf0006a78eb525ef13b3b3918d86d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4baf0006a78eb525ef13b3b3918d86d">Axis</a> = 0</td></tr>
+<tr class="memitem:ad4baf0006a78eb525ef13b3b3918d86d" id="r_ad4baf0006a78eb525ef13b3b3918d86d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4baf0006a78eb525ef13b3b3918d86d">Axis</a> = 0</td></tr>
 <tr class="separator:ad4baf0006a78eb525ef13b3b3918d86d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -211,7 +220,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>outputTensorCount</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>outputTensorCount</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -221,7 +230,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>axis</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>axis</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -276,7 +285,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::SplitOperatorDesc::Axis = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::SplitOperatorDesc::Axis = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -326,7 +335,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::SplitOperatorDesc::OutputCount = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::SplitOperatorDesc::OutputCount = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

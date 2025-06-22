@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -120,7 +129,7 @@ Collaboration diagram for Harlinn::Common::Core::Security::SecurityPackage:</div
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae3644a4ab9df5d7278f8566fdbc7d272" id="r_ae3644a4ab9df5d7278f8566fdbc7d272"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3644a4ab9df5d7278f8566fdbc7d272">SecurityPackage</a> (const wchar_t *packageName)</td></tr>
 <tr class="separator:ae3644a4ab9df5d7278f8566fdbc7d272"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20cd2e9606ee997f58f06408813dd63f" id="r_a20cd2e9606ee997f58f06408813dd63f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20cd2e9606ee997f58f06408813dd63f">SecurityPackage</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_security.html#a0aa405b56bcab40f0c5f28d62454037f">SecurityPackageFlags</a> flags, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> rpcId, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> maxTokenSize, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;name, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;comment)</td></tr>
+<tr class="memitem:a20cd2e9606ee997f58f06408813dd63f" id="r_a20cd2e9606ee997f58f06408813dd63f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20cd2e9606ee997f58f06408813dd63f">SecurityPackage</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_security.html#a0aa405b56bcab40f0c5f28d62454037f">SecurityPackageFlags</a> flags, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> rpcId, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> maxTokenSize, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;name, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;comment)</td></tr>
 <tr class="separator:a20cd2e9606ee997f58f06408813dd63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8293e816f1719d2e2ceb6602ed495f2d" id="r_a8293e816f1719d2e2ceb6602ed495f2d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8293e816f1719d2e2ceb6602ed495f2d">SecurityPackage</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_security_1_1_security_package.html">SecurityPackage</a> &amp;other)=delete</td></tr>
 <tr class="separator:a8293e816f1719d2e2ceb6602ed495f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,9 +141,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a114556130f77e34b1754f425564adbc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a527f6f2df7eb80527d1ad6a3c6f21471" id="r_a527f6f2df7eb80527d1ad6a3c6f21471"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_security.html#a0aa405b56bcab40f0c5f28d62454037f">SecurityPackageFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a527f6f2df7eb80527d1ad6a3c6f21471">Flags</a> () const noexcept</td></tr>
 <tr class="separator:a527f6f2df7eb80527d1ad6a3c6f21471"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62554a10e567dea658b233c13dc01359" id="r_a62554a10e567dea658b233c13dc01359"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62554a10e567dea658b233c13dc01359">RpcId</a> () const noexcept</td></tr>
+<tr class="memitem:a62554a10e567dea658b233c13dc01359" id="r_a62554a10e567dea658b233c13dc01359"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62554a10e567dea658b233c13dc01359">RpcId</a> () const noexcept</td></tr>
 <tr class="separator:a62554a10e567dea658b233c13dc01359"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9399b602b5b83bf687e30b03ead12dd" id="r_ac9399b602b5b83bf687e30b03ead12dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9399b602b5b83bf687e30b03ead12dd">MaxTokenSize</a> () const noexcept</td></tr>
+<tr class="memitem:ac9399b602b5b83bf687e30b03ead12dd" id="r_ac9399b602b5b83bf687e30b03ead12dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9399b602b5b83bf687e30b03ead12dd">MaxTokenSize</a> () const noexcept</td></tr>
 <tr class="separator:ac9399b602b5b83bf687e30b03ead12dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f31926ae094b545300a81275b3b5ff5" id="r_a0f31926ae094b545300a81275b3b5ff5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f31926ae094b545300a81275b3b5ff5">Name</a> () const noexcept</td></tr>
 <tr class="separator:a0f31926ae094b545300a81275b3b5ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,7 +152,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a4efa83cd990552d9c2a84ac676b26151" id="r_a4efa83cd990552d9c2a84ac676b26151"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4efa83cd990552d9c2a84ac676b26151">RpcIdNone</a> = 0xFFFF</td></tr>
+<tr class="memitem:a4efa83cd990552d9c2a84ac676b26151" id="r_a4efa83cd990552d9c2a84ac676b26151"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4efa83cd990552d9c2a84ac676b26151">RpcIdNone</a> = 0xFFFF</td></tr>
 <tr class="separator:a4efa83cd990552d9c2a84ac676b26151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6aeaa8f28fe1e6dc530a7239a32a8fa" id="r_ac6aeaa8f28fe1e6dc530a7239a32a8fa"><td class="memItemLeft" align="right" valign="top">static constexpr wchar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6aeaa8f28fe1e6dc530a7239a32a8fa">NTLM</a> [] = NTLMSP_NAME</td></tr>
 <tr class="separator:ac6aeaa8f28fe1e6dc530a7239a32a8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,9 +173,9 @@ Static Public Attributes</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ab92656923cfe5aa978f66f47b414f885" id="r_ab92656923cfe5aa978f66f47b414f885"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_security.html#a0aa405b56bcab40f0c5f28d62454037f">SecurityPackageFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab92656923cfe5aa978f66f47b414f885">flags_</a></td></tr>
 <tr class="separator:ab92656923cfe5aa978f66f47b414f885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adced67f92de0d4e1890f12ce71cd88a8" id="r_adced67f92de0d4e1890f12ce71cd88a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adced67f92de0d4e1890f12ce71cd88a8">rpcId_</a></td></tr>
+<tr class="memitem:adced67f92de0d4e1890f12ce71cd88a8" id="r_adced67f92de0d4e1890f12ce71cd88a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adced67f92de0d4e1890f12ce71cd88a8">rpcId_</a></td></tr>
 <tr class="separator:adced67f92de0d4e1890f12ce71cd88a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02c3fda5e75194902f90176a590401f3" id="r_a02c3fda5e75194902f90176a590401f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02c3fda5e75194902f90176a590401f3">maxTokenSize_</a></td></tr>
+<tr class="memitem:a02c3fda5e75194902f90176a590401f3" id="r_a02c3fda5e75194902f90176a590401f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02c3fda5e75194902f90176a590401f3">maxTokenSize_</a></td></tr>
 <tr class="separator:a02c3fda5e75194902f90176a590401f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a052777aef60777d597100df5660eb066" id="r_a052777aef60777d597100df5660eb066"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a052777aef60777d597100df5660eb066">name_</a></td></tr>
 <tr class="separator:a052777aef60777d597100df5660eb066"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,12 +229,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>rpcId</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>rpcId</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>maxTokenSize</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>maxTokenSize</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -358,7 +367,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::Security::SecurityPackage::MaxTokenSize </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::Security::SecurityPackage::MaxTokenSize </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -458,7 +467,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::Security::SecurityPackage::RpcId </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::Security::SecurityPackage::RpcId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -616,7 +625,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::Security::SecurityPackage::maxTokenSize_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::Security::SecurityPackage::maxTokenSize_</td>
         </tr>
       </table>
   </td>
@@ -726,7 +735,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::Security::SecurityPackage::rpcId_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::Security::SecurityPackage::rpcId_</td>
         </tr>
       </table>
   </td>
@@ -748,7 +757,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::Security::SecurityPackage::RpcIdNone = 0xFFFF</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::Security::SecurityPackage::RpcIdNone = 0xFFFF</td>
         </tr>
       </table>
   </td>

@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -115,7 +124,7 @@ $(function(){initNavTree('class_harlinn_1_1_common_1_1_core_1_1_bits.html',''); 
 <div class="dynheader">
 Collaboration diagram for Harlinn::Common::Core::Bits&lt; bitCount &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_harlinn_1_1_common_1_1_core_1_1_bits__coll__graph.svg" width="168" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_harlinn_1_1_common_1_1_core_1_1_bits__coll__graph.svg" width="222" height="242"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -125,7 +134,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a8f9dfc15e665186589cee6b45103f668" id="r_a8f9dfc15e665186589cee6b45103f668"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f9dfc15e665186589cee6b45103f668">word_type</a> = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_bit_mask.html">BitMask</a>&lt;<a class="el" href="#ad73c1e9472822694a84cf4616b467515">Size</a>&gt;<a class="el" href="s__llrint_8inl.html#a53155e22eaa05190346890241be3367c">::type</a></td></tr>
+<tr class="memitem:a8f9dfc15e665186589cee6b45103f668" id="r_a8f9dfc15e665186589cee6b45103f668"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f9dfc15e665186589cee6b45103f668">word_type</a> = typename <a class="el" href="struct_harlinn_1_1_common_1_1_bit_mask.html">BitMask</a>&lt;<a class="el" href="#ad73c1e9472822694a84cf4616b467515">Size</a>&gt;::type</td></tr>
 <tr class="separator:a8f9dfc15e665186589cee6b45103f668"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a892eb94caaeb7e1a9fdfe0ac07390642" id="r_a892eb94caaeb7e1a9fdfe0ac07390642"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a892eb94caaeb7e1a9fdfe0ac07390642">value_type</a> = bool</td></tr>
 <tr class="separator:a892eb94caaeb7e1a9fdfe0ac07390642"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,13 +165,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3b66f1a195b976eb58161bc997fc0a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5430e02cdca96a0f5b471bc6ec4cbf7d" id="r_a5430e02cdca96a0f5b471bc6ec4cbf7d"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Bits</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5430e02cdca96a0f5b471bc6ec4cbf7d">operator^=</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Bits</a> &amp;other) noexcept</td></tr>
 <tr class="separator:a5430e02cdca96a0f5b471bc6ec4cbf7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d9ac0a79364ea06352edc453748ba64" id="r_a5d9ac0a79364ea06352edc453748ba64"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a5d9ac0a79364ea06352edc453748ba64"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Bits</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5d9ac0a79364ea06352edc453748ba64">operator&lt;&lt;=</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;val) noexcept</td></tr>
+<tr class="memitem:a5d9ac0a79364ea06352edc453748ba64" id="r_a5d9ac0a79364ea06352edc453748ba64"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:a5d9ac0a79364ea06352edc453748ba64"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Bits</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5d9ac0a79364ea06352edc453748ba64">operator&lt;&lt;=</a> (const T &amp;val) noexcept</td></tr>
 <tr class="separator:a5d9ac0a79364ea06352edc453748ba64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63841ead3ce62757c972a9fe3c5964d8" id="r_a63841ead3ce62757c972a9fe3c5964d8"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a63841ead3ce62757c972a9fe3c5964d8"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Bits</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a63841ead3ce62757c972a9fe3c5964d8">operator&gt;&gt;=</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;val) noexcept</td></tr>
+<tr class="memitem:a63841ead3ce62757c972a9fe3c5964d8" id="r_a63841ead3ce62757c972a9fe3c5964d8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:a63841ead3ce62757c972a9fe3c5964d8"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Bits</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a63841ead3ce62757c972a9fe3c5964d8">operator&gt;&gt;=</a> (const T &amp;val) noexcept</td></tr>
 <tr class="separator:a63841ead3ce62757c972a9fe3c5964d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6eb3934df9f1c6ae0b32a9c190e47367" id="r_a6eb3934df9f1c6ae0b32a9c190e47367"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6eb3934df9f1c6ae0b32a9c190e47367">reverse</a> () noexcept</td></tr>
 <tr class="separator:a6eb3934df9f1c6ae0b32a9c190e47367"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,7 +209,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:ad73c1e9472822694a84cf4616b467515" id="r_ad73c1e9472822694a84cf4616b467515"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad73c1e9472822694a84cf4616b467515">Size</a> = bitCount</td></tr>
 <tr class="separator:ad73c1e9472822694a84cf4616b467515"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a865adf59c081b10c66f017a9f803ad1c" id="r_a865adf59c081b10c66f017a9f803ad1c"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="#a8f9dfc15e665186589cee6b45103f668">word_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a865adf59c081b10c66f017a9f803ad1c">Mask</a> = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_bit_mask.html">BitMask</a>&lt;<a class="el" href="#ad73c1e9472822694a84cf4616b467515">Size</a>&gt;::value</td></tr>
+<tr class="memitem:a865adf59c081b10c66f017a9f803ad1c" id="r_a865adf59c081b10c66f017a9f803ad1c"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="#a8f9dfc15e665186589cee6b45103f668">word_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a865adf59c081b10c66f017a9f803ad1c">Mask</a> = <a class="el" href="struct_harlinn_1_1_common_1_1_bit_mask.html">BitMask</a>&lt;<a class="el" href="#ad73c1e9472822694a84cf4616b467515">Size</a>&gt;::value</td></tr>
 <tr class="separator:a865adf59c081b10c66f017a9f803ad1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5879be6224c414c230811154aaf566bc" id="r_a5879be6224c414c230811154aaf566bc"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5879be6224c414c230811154aaf566bc">BytesPerWord</a> = sizeof( <a class="el" href="#a8f9dfc15e665186589cee6b45103f668">word_type</a> )</td></tr>
 <tr class="separator:a5879be6224c414c230811154aaf566bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,7 +257,7 @@ template&lt;size_t bitCount&gt; </div>
 template&lt;size_t bitCount&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Harlinn::Common::Core::Bits</a>&lt; bitCount &gt;::word_type = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_bit_mask.html">BitMask</a>&lt;<a class="el" href="#ad73c1e9472822694a84cf4616b467515">Size</a>&gt;<a class="el" href="s__llrint_8inl.html#a53155e22eaa05190346890241be3367c">::type</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Harlinn::Common::Core::Bits</a>&lt; bitCount &gt;::word_type = typename <a class="el" href="struct_harlinn_1_1_common_1_1_bit_mask.html">BitMask</a>&lt;<a class="el" href="#ad73c1e9472822694a84cf4616b467515">Size</a>&gt;::type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -535,8 +544,8 @@ template&lt;size_t bitCount&gt; </div>
 <div class="memtemplate">
 template&lt;size_t bitCount&gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -544,7 +553,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Bits</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Harlinn::Common::Core::Bits</a>&lt; bitCount &gt;::operator&lt;&lt;= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -592,8 +601,8 @@ template&lt;size_t bitCount&gt; </div>
 <div class="memtemplate">
 template&lt;size_t bitCount&gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -601,7 +610,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Bits</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Harlinn::Common::Core::Bits</a>&lt; bitCount &gt;::operator&gt;&gt;= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1137,7 +1146,7 @@ template&lt;size_t bitCount&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a8f9dfc15e665186589cee6b45103f668">word_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Harlinn::Common::Core::Bits</a>&lt; bitCount &gt;::Mask = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_bit_mask.html">BitMask</a>&lt;<a class="el" href="#ad73c1e9472822694a84cf4616b467515">Size</a>&gt;::value</td>
+          <td class="memname"><a class="el" href="#a8f9dfc15e665186589cee6b45103f668">word_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Harlinn::Common::Core::Bits</a>&lt; bitCount &gt;::Mask = <a class="el" href="struct_harlinn_1_1_common_1_1_bit_mask.html">BitMask</a>&lt;<a class="el" href="#ad73c1e9472822694a84cf4616b467515">Size</a>&gt;::value</td>
         </tr>
       </table>
   </td>

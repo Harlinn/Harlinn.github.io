@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -127,9 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a82a98208220de7fc22f5d318176774bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a132510c3dd4398347291ee0abbec6832" id="r_a132510c3dd4398347291ee0abbec6832"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a132510c3dd4398347291ee0abbec6832">Color</a> (<a class="el" href="#aa407883cdcfe348f35b90b62f6595c61">SIMDType</a> value)</td></tr>
 <tr class="separator:a132510c3dd4398347291ee0abbec6832"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6258fa957d301921f99f9954ea77eb0" id="r_aa6258fa957d301921f99f9954ea77eb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6258fa957d301921f99f9954ea77eb0">Color</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> red, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> green, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> blue, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> alpha=255, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> bitDepth=8)</td></tr>
+<tr class="memitem:aa6258fa957d301921f99f9954ea77eb0" id="r_aa6258fa957d301921f99f9954ea77eb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6258fa957d301921f99f9954ea77eb0">Color</a> (<a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> red, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> green, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> blue, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> alpha=255, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> bitDepth=8)</td></tr>
 <tr class="separator:aa6258fa957d301921f99f9954ea77eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5591ae5eb04079815e551f6982e540d9" id="r_a5591ae5eb04079815e551f6982e540d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5591ae5eb04079815e551f6982e540d9">Color</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> rgba)</td></tr>
+<tr class="memitem:a5591ae5eb04079815e551f6982e540d9" id="r_a5591ae5eb04079815e551f6982e540d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5591ae5eb04079815e551f6982e540d9">Color</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> rgba)</td></tr>
 <tr class="separator:a5591ae5eb04079815e551f6982e540d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bb25f826ec4709e8777fa7eeaa1bbe0" id="r_a6bb25f826ec4709e8777fa7eeaa1bbe0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bb25f826ec4709e8777fa7eeaa1bbe0">R</a> () const</td></tr>
 <tr class="separator:a6bb25f826ec4709e8777fa7eeaa1bbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,13 +180,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7a088a0e04631af65a5a84426e8fe3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5ab19a316705f2f7a0677a17d6aebd2" id="r_ab5ab19a316705f2f7a0677a17d6aebd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5ab19a316705f2f7a0677a17d6aebd2">FromREC709</a> (void) const</td></tr>
 <tr class="separator:ab5ab19a316705f2f7a0677a17d6aebd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ac13f544e4b6a63f36bc6640e3a6080" id="r_a0ac13f544e4b6a63f36bc6640e3a6080"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ac13f544e4b6a63f36bc6640e3a6080">R10G10B10A2</a> (void) const</td></tr>
+<tr class="memitem:a0ac13f544e4b6a63f36bc6640e3a6080" id="r_a0ac13f544e4b6a63f36bc6640e3a6080"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ac13f544e4b6a63f36bc6640e3a6080">R10G10B10A2</a> (void) const</td></tr>
 <tr class="separator:a0ac13f544e4b6a63f36bc6640e3a6080"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69918fbc7caf02739e0212c6cd9e4884" id="r_a69918fbc7caf02739e0212c6cd9e4884"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69918fbc7caf02739e0212c6cd9e4884">R8G8B8A8</a> (void) const</td></tr>
+<tr class="memitem:a69918fbc7caf02739e0212c6cd9e4884" id="r_a69918fbc7caf02739e0212c6cd9e4884"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69918fbc7caf02739e0212c6cd9e4884">R8G8B8A8</a> (void) const</td></tr>
 <tr class="separator:a69918fbc7caf02739e0212c6cd9e4884"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f3c1369f553de47c322dce5c324498e" id="r_a3f3c1369f553de47c322dce5c324498e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f3c1369f553de47c322dce5c324498e">R11G11B10F</a> (bool roundToEven=false) const</td></tr>
+<tr class="memitem:a3f3c1369f553de47c322dce5c324498e" id="r_a3f3c1369f553de47c322dce5c324498e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f3c1369f553de47c322dce5c324498e">R11G11B10F</a> (bool roundToEven=false) const</td></tr>
 <tr class="separator:a3f3c1369f553de47c322dce5c324498e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37c6cc5e275c182f611a7649768c323a" id="r_a37c6cc5e275c182f611a7649768c323a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37c6cc5e275c182f611a7649768c323a">R9G9B9E5</a> () const</td></tr>
+<tr class="memitem:a37c6cc5e275c182f611a7649768c323a" id="r_a37c6cc5e275c182f611a7649768c323a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37c6cc5e275c182f611a7649768c323a">R9G9B9E5</a> () const</td></tr>
 <tr class="separator:a37c6cc5e275c182f611a7649768c323a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -362,27 +371,27 @@ Private Types</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Windows::Graphics::Color::Color </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>red</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>red</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>green</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>green</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>blue</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>blue</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>alpha</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>alpha</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>bitDepth</em></span><span class="paramdefsep"> = </span><span class="paramdefval">8</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>bitDepth</em></span><span class="paramdefsep"> = </span><span class="paramdefval">8</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -406,7 +415,7 @@ Private Types</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Windows::Graphics::Color::Color </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>rgba</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>rgba</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -730,7 +739,7 @@ Private Types</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::Color::R10G10B10A2 </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::Color::R10G10B10A2 </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -755,7 +764,7 @@ Private Types</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::Color::R11G11B10F </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::Color::R11G11B10F </td>
           <td>(</td>
           <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>roundToEven</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
           <td> const</td>
@@ -780,7 +789,7 @@ Private Types</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::Color::R8G8B8A8 </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::Color::R8G8B8A8 </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -805,7 +814,7 @@ Private Types</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::Color::R9G9B9E5 </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::Color::R9G9B9E5 </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

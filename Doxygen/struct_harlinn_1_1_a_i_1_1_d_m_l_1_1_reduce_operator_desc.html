@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -126,11 +135,11 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9d9b3f4169bc7c05fdd651bd13c9f8e0" id="r_a9d9b3f4169bc7c05fdd651bd13c9f8e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d9b3f4169bc7c05fdd651bd13c9f8e0">_Field_size_</a> (<a class="el" href="#aa718e97ca890baa63694c7f920c127c9">AxisCount</a>) const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *Axes</td></tr>
+<tr class="memitem:a9d9b3f4169bc7c05fdd651bd13c9f8e0" id="r_a9d9b3f4169bc7c05fdd651bd13c9f8e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d9b3f4169bc7c05fdd651bd13c9f8e0">_Field_size_</a> (<a class="el" href="#aa718e97ca890baa63694c7f920c127c9">AxisCount</a>) const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *Axes</td></tr>
 <tr class="separator:a9d9b3f4169bc7c05fdd651bd13c9f8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f0de0c4e14b62ba4c19c2e210316303" id="r_a7f0de0c4e14b62ba4c19c2e210316303"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f0de0c4e14b62ba4c19c2e210316303">ReduceOperatorDesc</a> () noexcept=default</td></tr>
 <tr class="separator:a7f0de0c4e14b62ba4c19c2e210316303"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ae16c0af9df412a5635efd3acaf307a" id="r_a2ae16c0af9df412a5635efd3acaf307a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ae16c0af9df412a5635efd3acaf307a">ReduceOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#afe8659274c91204ae8a7bc1e67b65a45">ReduceFunction</a> function=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#afe8659274c91204ae8a7bc1e67b65a45a4766ad7b5b229c7c9a713faa05a2ef67">ReduceFunction::ArgMax</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> axisCount=0, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *axes=nullptr) noexcept</td></tr>
+<tr class="memitem:a2ae16c0af9df412a5635efd3acaf307a" id="r_a2ae16c0af9df412a5635efd3acaf307a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ae16c0af9df412a5635efd3acaf307a">ReduceOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#afe8659274c91204ae8a7bc1e67b65a45">ReduceFunction</a> function=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#afe8659274c91204ae8a7bc1e67b65a45a4766ad7b5b229c7c9a713faa05a2ef67">ReduceFunction::ArgMax</a>, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> axisCount=0, const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *axes=nullptr) noexcept</td></tr>
 <tr class="separator:a2ae16c0af9df412a5635efd3acaf307a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e7e607c16e9d967c27d47ba891a2609" id="r_a3e7e607c16e9d967c27d47ba891a2609"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e7e607c16e9d967c27d47ba891a2609">DML_IMPLEMENT_CONVERSIONS_TO</a> (DML_REDUCE_OPERATOR_DESC)</td></tr>
 <tr class="separator:a3e7e607c16e9d967c27d47ba891a2609"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,7 +152,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a53adc0342c6b82f9b59e6dd2e7d9f4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59ab35404241c2e3299ed5ccaccac8ae" id="r_a59ab35404241c2e3299ed5ccaccac8ae"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59ab35404241c2e3299ed5ccaccac8ae">OutputTensor</a> = nullptr</td></tr>
 <tr class="separator:a59ab35404241c2e3299ed5ccaccac8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa718e97ca890baa63694c7f920c127c9" id="r_aa718e97ca890baa63694c7f920c127c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa718e97ca890baa63694c7f920c127c9">AxisCount</a> = 0</td></tr>
+<tr class="memitem:aa718e97ca890baa63694c7f920c127c9" id="r_aa718e97ca890baa63694c7f920c127c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa718e97ca890baa63694c7f920c127c9">AxisCount</a> = 0</td></tr>
 <tr class="separator:aa718e97ca890baa63694c7f920c127c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -223,12 +232,12 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>axisCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>axisCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>axes</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>axes</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -283,7 +292,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::ReduceOperatorDesc::AxisCount = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::ReduceOperatorDesc::AxisCount = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

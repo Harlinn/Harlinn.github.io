@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -116,9 +125,9 @@ Collaboration diagram for Harlinn::AI::DML::BindingTableDesc:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abe0ed75d327d0bfce11a6f85472216a5" id="r_abe0ed75d327d0bfce11a6f85472216a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe0ed75d327d0bfce11a6f85472216a5">BindingTableDesc</a> () noexcept=default</td></tr>
 <tr class="separator:abe0ed75d327d0bfce11a6f85472216a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fb45829399d02bf8cab6ec0e27ae7b8" id="r_a4fb45829399d02bf8cab6ec0e27ae7b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fb45829399d02bf8cab6ec0e27ae7b8">BindingTableDesc</a> (IDMLDispatchable *dispatchable, const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">Graphics::D3D12::CPUDescriptorHandle</a> &amp;cpuDescriptorHandle, const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_g_p_u_descriptor_handle.html">Graphics::D3D12::GPUDescriptorHandle</a> &amp;gpuDescriptorHandle, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> sizeInDescriptors) noexcept</td></tr>
+<tr class="memitem:a4fb45829399d02bf8cab6ec0e27ae7b8" id="r_a4fb45829399d02bf8cab6ec0e27ae7b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fb45829399d02bf8cab6ec0e27ae7b8">BindingTableDesc</a> (IDMLDispatchable *dispatchable, const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">Graphics::D3D12::CPUDescriptorHandle</a> &amp;cpuDescriptorHandle, const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_g_p_u_descriptor_handle.html">Graphics::D3D12::GPUDescriptorHandle</a> &amp;gpuDescriptorHandle, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> sizeInDescriptors) noexcept</td></tr>
 <tr class="separator:a4fb45829399d02bf8cab6ec0e27ae7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a142452985ec052b43805c4a0938e2c8d" id="r_a142452985ec052b43805c4a0938e2c8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a142452985ec052b43805c4a0938e2c8d">BindingTableDesc</a> (const <a class="el" href="class_harlinn_1_1_a_i_1_1_d_m_l_1_1_dispatchable.html">DML::Dispatchable</a> &amp;dispatchable, const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">Graphics::D3D12::CPUDescriptorHandle</a> &amp;cpuDescriptorHandle, const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_g_p_u_descriptor_handle.html">Graphics::D3D12::GPUDescriptorHandle</a> &amp;gpuDescriptorHandle, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> sizeInDescriptors) noexcept</td></tr>
+<tr class="memitem:a142452985ec052b43805c4a0938e2c8d" id="r_a142452985ec052b43805c4a0938e2c8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a142452985ec052b43805c4a0938e2c8d">BindingTableDesc</a> (const <a class="el" href="class_harlinn_1_1_a_i_1_1_d_m_l_1_1_dispatchable.html">DML::Dispatchable</a> &amp;dispatchable, const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_c_p_u_descriptor_handle.html">Graphics::D3D12::CPUDescriptorHandle</a> &amp;cpuDescriptorHandle, const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_g_p_u_descriptor_handle.html">Graphics::D3D12::GPUDescriptorHandle</a> &amp;gpuDescriptorHandle, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> sizeInDescriptors) noexcept</td></tr>
 <tr class="separator:a142452985ec052b43805c4a0938e2c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bfc165eb83d90642aea943aa6027590" id="r_a2bfc165eb83d90642aea943aa6027590"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bfc165eb83d90642aea943aa6027590">DML_IMPLEMENT_CONVERSIONS_TO</a> (DML_BINDING_TABLE_DESC)</td></tr>
 <tr class="separator:a2bfc165eb83d90642aea943aa6027590"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,7 +140,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aa0a03e7958cfb4fa8b1107f366b1a9bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6a9c9341d0ab98204a53033cff7e4bb" id="r_ab6a9c9341d0ab98204a53033cff7e4bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_g_p_u_descriptor_handle.html">Graphics::D3D12::GPUDescriptorHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6a9c9341d0ab98204a53033cff7e4bb">GPUDescriptorHandle</a></td></tr>
 <tr class="separator:ab6a9c9341d0ab98204a53033cff7e4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15798d5a35040123903b5d3c78c3a659" id="r_a15798d5a35040123903b5d3c78c3a659"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15798d5a35040123903b5d3c78c3a659">SizeInDescriptors</a> = 0</td></tr>
+<tr class="memitem:a15798d5a35040123903b5d3c78c3a659" id="r_a15798d5a35040123903b5d3c78c3a659"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15798d5a35040123903b5d3c78c3a659">SizeInDescriptors</a> = 0</td></tr>
 <tr class="separator:a15798d5a35040123903b5d3c78c3a659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -189,7 +198,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>sizeInDescriptors</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>sizeInDescriptors</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -228,7 +237,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>sizeInDescriptors</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>sizeInDescriptors</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -308,7 +317,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::BindingTableDesc::SizeInDescriptors = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::BindingTableDesc::SizeInDescriptors = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

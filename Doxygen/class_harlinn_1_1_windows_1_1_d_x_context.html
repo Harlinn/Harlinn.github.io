@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -149,7 +158,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a45253d04a7e352aebaf199d1df9d7d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3f9fd3d77c2188a4a376d91288d65e5" id="r_af3f9fd3d77c2188a4a376d91288d65e5"><td class="memItemLeft" align="right" valign="top">const std::array&lt; <a class="el" href="struct_harlinn_1_1_windows_1_1_d_x_context_1_1_frame_context.html">FrameContext</a>, <a class="el" href="#ab8cd032048c7bee54bbeb9244544664d">FRAMES_IN_FLIGHT_COUNT</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3f9fd3d77c2188a4a376d91288d65e5">FrameContexts</a> () const</td></tr>
 <tr class="separator:af3f9fd3d77c2188a4a376d91288d65e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a15b54d6cbea569b6bc925bee4748ce" id="r_a6a15b54d6cbea569b6bc925bee4748ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a15b54d6cbea569b6bc925bee4748ce">FenceLastSignaledValue</a> () const</td></tr>
+<tr class="memitem:a6a15b54d6cbea569b6bc925bee4748ce" id="r_a6a15b54d6cbea569b6bc925bee4748ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a15b54d6cbea569b6bc925bee4748ce">FenceLastSignaledValue</a> () const</td></tr>
 <tr class="separator:a6a15b54d6cbea569b6bc925bee4748ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4035182d3a3b025ee39915c923fa1818" id="r_a4035182d3a3b025ee39915c923fa1818"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_swap_chain4.html">Graphics::DXGI::SwapChain4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4035182d3a3b025ee39915c923fa1818">SwapChain</a> () const</td></tr>
 <tr class="separator:a4035182d3a3b025ee39915c923fa1818"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,7 +274,7 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a2825684e7f281c5cfe007c3f427d5192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23d723a99c7d8adf3037948dcadb4953" id="r_a23d723a99c7d8adf3037948dcadb4953"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="struct_harlinn_1_1_windows_1_1_d_x_context_1_1_frame_context.html">FrameContext</a>, <a class="el" href="#ab8cd032048c7bee54bbeb9244544664d">FRAMES_IN_FLIGHT_COUNT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23d723a99c7d8adf3037948dcadb4953">frameContexts_</a> = {}</td></tr>
 <tr class="separator:a23d723a99c7d8adf3037948dcadb4953"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e78fb24313e27f47bf24fa216343b64" id="r_a6e78fb24313e27f47bf24fa216343b64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e78fb24313e27f47bf24fa216343b64">fenceLastSignaledValue_</a> = 0</td></tr>
+<tr class="memitem:a6e78fb24313e27f47bf24fa216343b64" id="r_a6e78fb24313e27f47bf24fa216343b64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e78fb24313e27f47bf24fa216343b64">fenceLastSignaledValue_</a> = 0</td></tr>
 <tr class="separator:a6e78fb24313e27f47bf24fa216343b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c1b03a557b37a6f897551ac8c5c5e69" id="r_a1c1b03a557b37a6f897551ac8c5c5e69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d_x_g_i_1_1_swap_chain4.html">Graphics::DXGI::SwapChain4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c1b03a557b37a6f897551ac8c5c5e69">swapChain_</a></td></tr>
 <tr class="separator:a1c1b03a557b37a6f897551ac8c5c5e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -819,7 +828,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::Windows::DXContext::FenceLastSignaledValue </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> Harlinn::Windows::DXContext::FenceLastSignaledValue </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1608,7 +1617,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::Windows::DXContext::fenceLastSignaledValue_ = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> Harlinn::Windows::DXContext::fenceLastSignaledValue_ = 0</td>
         </tr>
       </table>
   </td>

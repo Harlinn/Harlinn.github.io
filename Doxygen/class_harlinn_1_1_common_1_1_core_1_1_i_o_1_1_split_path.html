@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -115,7 +124,7 @@ Collaboration diagram for Harlinn::Common::Core::IO::SplitPath&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:acb55028b6a0287b59563747c19d44d70" id="r_acb55028b6a0287b59563747c19d44d70"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td></tr>
+<tr class="memitem:acb55028b6a0287b59563747c19d44d70" id="r_acb55028b6a0287b59563747c19d44d70"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> = T</td></tr>
 <tr class="separator:acb55028b6a0287b59563747c19d44d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3618181f0860dd65bf301507dac7929a" id="r_a3618181f0860dd65bf301507dac7929a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3618181f0860dd65bf301507dac7929a">char_type</a> = typename string_type::value_type</td></tr>
 <tr class="separator:a3618181f0860dd65bf301507dac7929a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,7 +182,7 @@ Private Attributes</h2></td></tr>
 template&lt;StringLike T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::char_type = typename string_type::value_type</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::char_type = typename string_type::value_type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -189,7 +198,7 @@ template&lt;StringLike T&gt; </div>
 template&lt;StringLike T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::string_type = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::string_type = T</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -209,7 +218,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SplitPath </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::SplitPath </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#a3618181f0860dd65bf301507dac7929a">char_type</a> *</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
           <td></td>
@@ -236,7 +245,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SplitPath </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::SplitPath </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
           <td></td>
@@ -264,7 +273,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Directory </td>
+          <td class="memname">const <a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::Directory </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -293,7 +302,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::DirectoryPath </td>
+          <td class="memname"><a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::DirectoryPath </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -322,7 +331,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Drive </td>
+          <td class="memname">const <a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::Drive </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -351,7 +360,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Extension </td>
+          <td class="memname">const <a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::Extension </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -380,7 +389,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsDirectoryValid </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::IsDirectoryValid </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -407,7 +416,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsDriveValid </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::IsDriveValid </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -434,7 +443,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsExtensionValid </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::IsExtensionValid </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -461,7 +470,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsNameValid </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::IsNameValid </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -488,7 +497,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsRootDirectory </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::IsRootDirectory </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -515,7 +524,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Name </td>
+          <td class="memname">const <a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::Name </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -545,7 +554,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::directory_</td>
+          <td class="memname"><a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::directory_</td>
         </tr>
       </table>
   </td>
@@ -569,7 +578,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::drive_</td>
+          <td class="memname"><a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::drive_</td>
         </tr>
       </table>
   </td>
@@ -593,7 +602,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::extension_</td>
+          <td class="memname"><a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::extension_</td>
         </tr>
       </table>
   </td>
@@ -617,7 +626,7 @@ template&lt;StringLike T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::name_</td>
+          <td class="memname"><a class="el" href="#acb55028b6a0287b59563747c19d44d70">string_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_split_path.html">Harlinn::Common::Core::IO::SplitPath</a>&lt; T &gt;::name_</td>
         </tr>
       </table>
   </td>

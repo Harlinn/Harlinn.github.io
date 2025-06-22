@@ -84,7 +84,7 @@ var searchData=
   ['advisesink2_81',['AdviseSink2',['../class_harlinn_1_1_common_1_1_core_1_1_advise_sink2.html',1,'Harlinn::Common::Core']]],
   ['advisesinkex_82',['AdviseSinkEx',['../class_harlinn_1_1_common_1_1_core_1_1_advise_sink_ex.html',1,'Harlinn::Common::Core']]],
   ['affinetransform2deffect_83',['AffineTransform2DEffect',['../class_harlinn_1_1_windows_1_1_graphics_1_1_direct_composition_1_1_affine_transform2_d_effect.html',1,'Harlinn::Windows::Graphics::DirectComposition']]],
-  ['affinetransformation_84',['AffineTransformation',['../class_harlinn_1_1_common_1_1_core_1_1_math_1_1_affine_transformation.html',1,'Harlinn::Common::Core::Math']]],
+  ['affinetransformation_84',['AffineTransformation',['../class_harlinn_1_1_math_1_1_affine_transformation.html',1,'Harlinn::Math']]],
   ['aggregateexception_85',['AggregateException',['../class_harlinn_1_1_common_1_1_core_1_1_aggregate_exception.html',1,'Harlinn::Common::Core']]],
   ['allocator_86',['Allocator',['../class_harlinn_1_1_common_1_1_core_1_1_allocator.html',1,'Harlinn::Common::Core']]],
   ['alwaysfalse_87',['AlwaysFalse',['../struct_harlinn_1_1_common_1_1_core_1_1_always_false.html',1,'Harlinn::Common::Core']]],
@@ -188,5 +188,5 @@ var searchData=
   ['autobreadcrumbnode_185',['AutoBreadcrumbNode',['../struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_auto_breadcrumb_node.html',1,'Harlinn::Windows::Graphics::D3D12']]],
   ['autobreadcrumbnode1_186',['AutoBreadcrumbNode1',['../struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_auto_breadcrumb_node1.html',1,'Harlinn::Windows::Graphics::D3D12']]],
   ['averagepoolingoperatordesc_187',['AveragePoolingOperatorDesc',['../struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_average_pooling_operator_desc.html',1,'Harlinn::AI::DML']]],
-  ['axisangle_188',['AxisAngle',['../struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_quaternion_1_1_axis_angle.html',1,'Harlinn::Common::Core::Math::Quaternion']]]
+  ['axisangle_188',['AxisAngle',['../struct_harlinn_1_1_math_1_1_quaternion_1_1_axis_angle.html',1,'Harlinn::Math::Quaternion']]]
 ];

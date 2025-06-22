@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -128,7 +137,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a051d8c20042c3c2f8a6840d68d922c67" id="r_a051d8c20042c3c2f8a6840d68d922c67"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a051d8c20042c3c2f8a6840d68d922c67">TopKOperatorDesc</a> () noexcept=default</td></tr>
 <tr class="separator:a051d8c20042c3c2f8a6840d68d922c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42649f55ddf08d7575c6d02d575a09b9" id="r_a42649f55ddf08d7575c6d02d575a09b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42649f55ddf08d7575c6d02d575a09b9">TopKOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputValueTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputIndexTensor, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> axis=0, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> k=0) noexcept</td></tr>
+<tr class="memitem:a42649f55ddf08d7575c6d02d575a09b9" id="r_a42649f55ddf08d7575c6d02d575a09b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42649f55ddf08d7575c6d02d575a09b9">TopKOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputValueTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputIndexTensor, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> axis=0, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> k=0) noexcept</td></tr>
 <tr class="separator:a42649f55ddf08d7575c6d02d575a09b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e093ee1b168e7cf10e471f62f161b53" id="r_a8e093ee1b168e7cf10e471f62f161b53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e093ee1b168e7cf10e471f62f161b53">DML_IMPLEMENT_CONVERSIONS_TO</a> (DML_TOP_K_OPERATOR_DESC)</td></tr>
 <tr class="separator:a8e093ee1b168e7cf10e471f62f161b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,9 +150,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a317f2f579d350a6517aae99a45f3ab60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af90281a9a85021f357611ca79b05f829" id="r_af90281a9a85021f357611ca79b05f829"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af90281a9a85021f357611ca79b05f829">OutputIndexTensor</a> = nullptr</td></tr>
 <tr class="separator:af90281a9a85021f357611ca79b05f829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eff1ed5550d37b3ded531966f5f4111" id="r_a5eff1ed5550d37b3ded531966f5f4111"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eff1ed5550d37b3ded531966f5f4111">Axis</a> = 0</td></tr>
+<tr class="memitem:a5eff1ed5550d37b3ded531966f5f4111" id="r_a5eff1ed5550d37b3ded531966f5f4111"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eff1ed5550d37b3ded531966f5f4111">Axis</a> = 0</td></tr>
 <tr class="separator:a5eff1ed5550d37b3ded531966f5f4111"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a571cec605624765d956223bfb634ce7c" id="r_a571cec605624765d956223bfb634ce7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a571cec605624765d956223bfb634ce7c">K</a> = 0</td></tr>
+<tr class="memitem:a571cec605624765d956223bfb634ce7c" id="r_a571cec605624765d956223bfb634ce7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a571cec605624765d956223bfb634ce7c">K</a> = 0</td></tr>
 <tr class="separator:a571cec605624765d956223bfb634ce7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -222,12 +231,12 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>axis</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>axis</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>k</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>k</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -265,7 +274,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::TopKOperatorDesc::Axis = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::TopKOperatorDesc::Axis = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -293,7 +302,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::TopKOperatorDesc::K = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::TopKOperatorDesc::K = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

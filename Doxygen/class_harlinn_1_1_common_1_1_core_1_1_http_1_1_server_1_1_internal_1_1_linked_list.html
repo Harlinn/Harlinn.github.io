@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -121,7 +130,7 @@ Collaboration diagram for Harlinn::Common::Core::Http::Server::Internal::LinkedL
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a72e9342e4f9e490600c3cccca89a14b0" id="r_a72e9342e4f9e490600c3cccca89a14b0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72e9342e4f9e490600c3cccca89a14b0">Base</a> = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html">LinkedListBase</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html">LinkedList</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, hasOwnership&gt;, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, hasOwnership&gt;</td></tr>
+<tr class="memitem:a72e9342e4f9e490600c3cccca89a14b0" id="r_a72e9342e4f9e490600c3cccca89a14b0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72e9342e4f9e490600c3cccca89a14b0">Base</a> = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html">LinkedListBase</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html">LinkedList</a>&lt;T, hasOwnership&gt;, T, hasOwnership&gt;</td></tr>
 <tr class="separator:a72e9342e4f9e490600c3cccca89a14b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html">Harlinn::Common::Core::Http::Server::Internal::LinkedListBase&lt; LinkedList&lt; T, hasOwnership &gt;, T, hasOwnership &gt;</a></td></tr>
 <tr class="memitem:aa99a29e6fb98b0afe1df3efa328b2a7f inherit pub_types_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base" id="r_aa99a29e6fb98b0afe1df3efa328b2a7f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html#aa99a29e6fb98b0afe1df3efa328b2a7f">DerivedType</a></td></tr>
@@ -136,27 +145,27 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5c794d49504ad2bbb95a67b2b519030e inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75387865bf02236c581879359527a8df inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base" id="r_a75387865bf02236c581879359527a8df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html#a75387865bf02236c581879359527a8df">~LinkedListBase</a> ()</td></tr>
 <tr class="separator:a75387865bf02236c581879359527a8df inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79e7703b79e068404428cdc93ce5a756 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base" id="r_a79e7703b79e068404428cdc93ce5a756"><td class="memItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html#a79e7703b79e068404428cdc93ce5a756">First</a> () const</td></tr>
+<tr class="memitem:a79e7703b79e068404428cdc93ce5a756 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base" id="r_a79e7703b79e068404428cdc93ce5a756"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html#a79e7703b79e068404428cdc93ce5a756">First</a> () const</td></tr>
 <tr class="separator:a79e7703b79e068404428cdc93ce5a756 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d839b325ed8d9f784580dfa0272870a inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base" id="r_a9d839b325ed8d9f784580dfa0272870a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html#a9d839b325ed8d9f784580dfa0272870a">Last</a> () const</td></tr>
+<tr class="memitem:a9d839b325ed8d9f784580dfa0272870a inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base" id="r_a9d839b325ed8d9f784580dfa0272870a"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html#a9d839b325ed8d9f784580dfa0272870a">Last</a> () const</td></tr>
 <tr class="separator:a9d839b325ed8d9f784580dfa0272870a inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8da2217f31b0ca664a7d963c3a61cfce inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base" id="r_a8da2217f31b0ca664a7d963c3a61cfce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html#a8da2217f31b0ca664a7d963c3a61cfce">Clear</a> ()</td></tr>
 <tr class="separator:a8da2217f31b0ca664a7d963c3a61cfce inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afeafd1dca91e7caaa5264c9a723b1f3c inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base" id="r_afeafd1dca91e7caaa5264c9a723b1f3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html#afeafd1dca91e7caaa5264c9a723b1f3c">Add</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *item)</td></tr>
+<tr class="memitem:afeafd1dca91e7caaa5264c9a723b1f3c inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base" id="r_afeafd1dca91e7caaa5264c9a723b1f3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html#afeafd1dca91e7caaa5264c9a723b1f3c">Add</a> (T *item)</td></tr>
 <tr class="separator:afeafd1dca91e7caaa5264c9a723b1f3c inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5347eab6a75fccb7c12de458145964df inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base" id="r_a5347eab6a75fccb7c12de458145964df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html#a5347eab6a75fccb7c12de458145964df">Remove</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *itemToRemove)</td></tr>
+<tr class="memitem:a5347eab6a75fccb7c12de458145964df inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base" id="r_a5347eab6a75fccb7c12de458145964df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html#a5347eab6a75fccb7c12de458145964df">Remove</a> (T *itemToRemove)</td></tr>
 <tr class="separator:a5347eab6a75fccb7c12de458145964df inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a60485bfe696257bd98da5441ab982f56" id="r_a60485bfe696257bd98da5441ab982f56"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60485bfe696257bd98da5441ab982f56">GetNext</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *item)</td></tr>
+<tr class="memitem:a60485bfe696257bd98da5441ab982f56" id="r_a60485bfe696257bd98da5441ab982f56"><td class="memItemLeft" align="right" valign="top">static T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60485bfe696257bd98da5441ab982f56">GetNext</a> (T *item)</td></tr>
 <tr class="separator:a60485bfe696257bd98da5441ab982f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9f74e9ba85ee5ca550f782d6bba7793" id="r_ae9f74e9ba85ee5ca550f782d6bba7793"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9f74e9ba85ee5ca550f782d6bba7793">SetNext</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *item, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *next)</td></tr>
+<tr class="memitem:ae9f74e9ba85ee5ca550f782d6bba7793" id="r_ae9f74e9ba85ee5ca550f782d6bba7793"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9f74e9ba85ee5ca550f782d6bba7793">SetNext</a> (T *item, T *next)</td></tr>
 <tr class="separator:ae9f74e9ba85ee5ca550f782d6bba7793"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ab9c3ad4449525b8fbdfcd0dda6aa7ffa" id="r_ab9c3ad4449525b8fbdfcd0dda6aa7ffa"><td class="memTemplParams" colspan="2">template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , bool hasOwnership&gt; </td></tr>
+<tr class="memitem:ab9c3ad4449525b8fbdfcd0dda6aa7ffa" id="r_ab9c3ad4449525b8fbdfcd0dda6aa7ffa"><td class="memTemplParams" colspan="2">template&lt;typename DerivedT , typename T , bool hasOwnership&gt; </td></tr>
 <tr class="memitem:ab9c3ad4449525b8fbdfcd0dda6aa7ffa"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab9c3ad4449525b8fbdfcd0dda6aa7ffa">LinkedListBase</a></td></tr>
 <tr class="separator:ab9c3ad4449525b8fbdfcd0dda6aa7ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -167,10 +176,10 @@ Friends</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , bool hasOwnership&gt; </div>
+template&lt;typename T , bool hasOwnership&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html">Harlinn::Common::Core::Http::Server::Internal::LinkedList</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, hasOwnership &gt;::Base = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html">LinkedListBase</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html">LinkedList</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, hasOwnership&gt;, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, hasOwnership&gt;</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html">Harlinn::Common::Core::Http::Server::Internal::LinkedList</a>&lt; T, hasOwnership &gt;::Base = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list_base.html">LinkedListBase</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html">LinkedList</a>&lt;T, hasOwnership&gt;, T, hasOwnership&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -184,13 +193,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , bool hasOwnership&gt; </div>
+template&lt;typename T , bool hasOwnership&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html">Harlinn::Common::Core::Http::Server::Internal::LinkedList</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, hasOwnership &gt;::LinkedList </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html">Harlinn::Common::Core::Http::Server::Internal::LinkedList</a>&lt; T, hasOwnership &gt;::LinkedList </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -212,15 +221,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , bool hasOwnership&gt; </div>
+template&lt;typename T , bool hasOwnership&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html">Harlinn::Common::Core::Http::Server::Internal::LinkedList</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, hasOwnership &gt;::GetNext </td>
+          <td class="memname">static T * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html">Harlinn::Common::Core::Http::Server::Internal::LinkedList</a>&lt; T, hasOwnership &gt;::GetNext </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
+          <td class="paramtype">T *</td>          <td class="paramname"><span class="paramname"><em>item</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -239,20 +248,20 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , bool hasOwnership&gt; </div>
+template&lt;typename T , bool hasOwnership&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html">Harlinn::Common::Core::Http::Server::Internal::LinkedList</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, hasOwnership &gt;::SetNext </td>
+          <td class="memname">static void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_internal_1_1_linked_list.html">Harlinn::Common::Core::Http::Server::Internal::LinkedList</a>&lt; T, hasOwnership &gt;::SetNext </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>item</em></span>, </td>
+          <td class="paramtype">T *</td>          <td class="paramname"><span class="paramname"><em>item</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>next</em></span>&#160;)</td>
+          <td class="paramtype">T *</td>          <td class="paramname"><span class="paramname"><em>next</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -271,9 +280,9 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , bool hasOwnership&gt; </div>
+template&lt;typename T , bool hasOwnership&gt; </div>
 <div class="memtemplate">
-template&lt;typename DerivedT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , bool hasOwnership&gt; </div>
+template&lt;typename DerivedT , typename T , bool hasOwnership&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

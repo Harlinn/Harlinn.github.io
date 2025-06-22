@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -119,7 +128,7 @@ Collaboration diagram for Harlinn::Common::Core::LMDBEx::KeyBuffer&lt; T &gt;:</
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:add1e39b5bce6979e395740c262fd2ed7" id="r_add1e39b5bce6979e395740c262fd2ed7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add1e39b5bce6979e395740c262fd2ed7">Base</a> = boost::container::small_vector&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, 4&gt;</td></tr>
+<tr class="memitem:add1e39b5bce6979e395740c262fd2ed7" id="r_add1e39b5bce6979e395740c262fd2ed7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add1e39b5bce6979e395740c262fd2ed7">Base</a> = boost::container::small_vector&lt;T, 4&gt;</td></tr>
 <tr class="separator:add1e39b5bce6979e395740c262fd2ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefabad733e62bc0dee697038773adabe" id="r_aefabad733e62bc0dee697038773adabe"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefabad733e62bc0dee697038773adabe">value_type</a> = typename Base::value_type</td></tr>
 <tr class="separator:aefabad733e62bc0dee697038773adabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,10 +153,10 @@ Public Member Functions</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html">Harlinn::Common::Core::LMDBEx::KeyBuffer</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Base = boost::container::small_vector&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, 4&gt;</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html">Harlinn::Common::Core::LMDBEx::KeyBuffer</a>&lt; T &gt;::Base = boost::container::small_vector&lt;T, 4&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -160,10 +169,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html">Harlinn::Common::Core::LMDBEx::KeyBuffer</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::value_type = typename Base::value_type</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html">Harlinn::Common::Core::LMDBEx::KeyBuffer</a>&lt; T &gt;::value_type = typename Base::value_type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -177,13 +186,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html">Harlinn::Common::Core::LMDBEx::KeyBuffer</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::KeyBuffer </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html">Harlinn::Common::Core::LMDBEx::KeyBuffer</a>&lt; T &gt;::KeyBuffer </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -204,13 +213,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html">Harlinn::Common::Core::LMDBEx::KeyBuffer</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::KeyBuffer </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html">Harlinn::Common::Core::LMDBEx::KeyBuffer</a>&lt; T &gt;::KeyBuffer </td>
           <td>(</td>
           <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
         </tr>
@@ -236,13 +245,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html">Harlinn::Common::Core::LMDBEx::KeyBuffer</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Add </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html">Harlinn::Common::Core::LMDBEx::KeyBuffer</a>&lt; T &gt;::Add </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#aefabad733e62bc0dee697038773adabe">value_type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -263,13 +272,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html">Harlinn::Common::Core::LMDBEx::KeyBuffer</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::erase </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html">Harlinn::Common::Core::LMDBEx::KeyBuffer</a>&lt; T &gt;::erase </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#aefabad733e62bc0dee697038773adabe">value_type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
@@ -290,13 +299,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html">Harlinn::Common::Core::LMDBEx::KeyBuffer</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Remove </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_l_m_d_b_ex_1_1_key_buffer.html">Harlinn::Common::Core::LMDBEx::KeyBuffer</a>&lt; T &gt;::Remove </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#aefabad733e62bc0dee697038773adabe">value_type</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>

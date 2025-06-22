@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -187,37 +196,37 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a354f6137db3e207b6a6e11f115b83d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4df46af1ad5ae3c3ac359bfddc2dce32" id="r_a4df46af1ad5ae3c3ac359bfddc2dce32"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4df46af1ad5ae3c3ac359bfddc2dce32">operator=</a> (const std::chrono::system_clock::duration &amp;value)</td></tr>
 <tr class="separator:a4df46af1ad5ae3c3ac359bfddc2dce32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abee7ab5177110057085a3543a997108d" id="r_abee7ab5177110057085a3543a997108d"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:abee7ab5177110057085a3543a997108d"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abee7ab5177110057085a3543a997108d">operator+=</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value) const noexcept</td></tr>
+<tr class="memitem:abee7ab5177110057085a3543a997108d" id="r_abee7ab5177110057085a3543a997108d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:abee7ab5177110057085a3543a997108d"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abee7ab5177110057085a3543a997108d">operator+=</a> (const T &amp;value) const noexcept</td></tr>
 <tr class="separator:abee7ab5177110057085a3543a997108d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac602fd3f69da7a6bbccaeb1be389d431" id="r_ac602fd3f69da7a6bbccaeb1be389d431"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:ac602fd3f69da7a6bbccaeb1be389d431"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac602fd3f69da7a6bbccaeb1be389d431">operator+</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value) const noexcept</td></tr>
+<tr class="memitem:ac602fd3f69da7a6bbccaeb1be389d431" id="r_ac602fd3f69da7a6bbccaeb1be389d431"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:ac602fd3f69da7a6bbccaeb1be389d431"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac602fd3f69da7a6bbccaeb1be389d431">operator+</a> (const T &amp;value) const noexcept</td></tr>
 <tr class="separator:ac602fd3f69da7a6bbccaeb1be389d431"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56679b3613627e5aa757e58db68485fb" id="r_a56679b3613627e5aa757e58db68485fb"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a56679b3613627e5aa757e58db68485fb"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a56679b3613627e5aa757e58db68485fb">operator-=</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value) const noexcept</td></tr>
+<tr class="memitem:a56679b3613627e5aa757e58db68485fb" id="r_a56679b3613627e5aa757e58db68485fb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:a56679b3613627e5aa757e58db68485fb"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a56679b3613627e5aa757e58db68485fb">operator-=</a> (const T &amp;value) const noexcept</td></tr>
 <tr class="separator:a56679b3613627e5aa757e58db68485fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17fb91a46a135d46b591c5ff3bd3019b" id="r_a17fb91a46a135d46b591c5ff3bd3019b"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a17fb91a46a135d46b591c5ff3bd3019b"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a17fb91a46a135d46b591c5ff3bd3019b">operator-</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value) const noexcept</td></tr>
+<tr class="memitem:a17fb91a46a135d46b591c5ff3bd3019b" id="r_a17fb91a46a135d46b591c5ff3bd3019b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:a17fb91a46a135d46b591c5ff3bd3019b"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a17fb91a46a135d46b591c5ff3bd3019b">operator-</a> (const T &amp;value) const noexcept</td></tr>
 <tr class="separator:a17fb91a46a135d46b591c5ff3bd3019b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58b6cd2e8324c4ccc7a11ee52041fde0" id="r_a58b6cd2e8324c4ccc7a11ee52041fde0"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a58b6cd2e8324c4ccc7a11ee52041fde0"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a58b6cd2e8324c4ccc7a11ee52041fde0">operator*=</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value) const noexcept</td></tr>
+<tr class="memitem:a58b6cd2e8324c4ccc7a11ee52041fde0" id="r_a58b6cd2e8324c4ccc7a11ee52041fde0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:a58b6cd2e8324c4ccc7a11ee52041fde0"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a58b6cd2e8324c4ccc7a11ee52041fde0">operator*=</a> (const T &amp;value) const noexcept</td></tr>
 <tr class="separator:a58b6cd2e8324c4ccc7a11ee52041fde0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6d26a671e2d2d7f95ee0830ed96c02b" id="r_ad6d26a671e2d2d7f95ee0830ed96c02b"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:ad6d26a671e2d2d7f95ee0830ed96c02b"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad6d26a671e2d2d7f95ee0830ed96c02b">operator*</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value) const noexcept</td></tr>
+<tr class="memitem:ad6d26a671e2d2d7f95ee0830ed96c02b" id="r_ad6d26a671e2d2d7f95ee0830ed96c02b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:ad6d26a671e2d2d7f95ee0830ed96c02b"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ad6d26a671e2d2d7f95ee0830ed96c02b">operator*</a> (const T &amp;value) const noexcept</td></tr>
 <tr class="separator:ad6d26a671e2d2d7f95ee0830ed96c02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d7c39797dab628a62ea212f7121235f" id="r_a3d7c39797dab628a62ea212f7121235f"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a3d7c39797dab628a62ea212f7121235f"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3d7c39797dab628a62ea212f7121235f">operator/=</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value) const</td></tr>
+<tr class="memitem:a3d7c39797dab628a62ea212f7121235f" id="r_a3d7c39797dab628a62ea212f7121235f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:a3d7c39797dab628a62ea212f7121235f"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3d7c39797dab628a62ea212f7121235f">operator/=</a> (const T &amp;value) const</td></tr>
 <tr class="separator:a3d7c39797dab628a62ea212f7121235f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8241c3c7992d4c3e1c1cc166b2ee96af" id="r_a8241c3c7992d4c3e1c1cc166b2ee96af"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a8241c3c7992d4c3e1c1cc166b2ee96af"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8241c3c7992d4c3e1c1cc166b2ee96af">operator/</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value) const</td></tr>
+<tr class="memitem:a8241c3c7992d4c3e1c1cc166b2ee96af" id="r_a8241c3c7992d4c3e1c1cc166b2ee96af"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:a8241c3c7992d4c3e1c1cc166b2ee96af"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8241c3c7992d4c3e1c1cc166b2ee96af">operator/</a> (const T &amp;value) const</td></tr>
 <tr class="separator:a8241c3c7992d4c3e1c1cc166b2ee96af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a412836c9b3b6b32aa1b602f84ed1942e" id="r_a412836c9b3b6b32aa1b602f84ed1942e"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a412836c9b3b6b32aa1b602f84ed1942e">operator bool</a> () const noexcept</td></tr>
 <tr class="separator:a412836c9b3b6b32aa1b602f84ed1942e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,21 +316,21 @@ Private Attributes</h2></td></tr>
 Friends</h2></td></tr>
 <tr class="memitem:ae3d4a8787eced68c65a23f5906c11add" id="r_ae3d4a8787eced68c65a23f5906c11add"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3d4a8787eced68c65a23f5906c11add">DateTime</a></td></tr>
 <tr class="separator:ae3d4a8787eced68c65a23f5906c11add"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0789ec8d048b25f80d233ce1b74841ea" id="r_a0789ec8d048b25f80d233ce1b74841ea"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a0789ec8d048b25f80d233ce1b74841ea"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0789ec8d048b25f80d233ce1b74841ea">operator+</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;timeSpan) noexcept</td></tr>
+<tr class="memitem:a0789ec8d048b25f80d233ce1b74841ea" id="r_a0789ec8d048b25f80d233ce1b74841ea"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:a0789ec8d048b25f80d233ce1b74841ea"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0789ec8d048b25f80d233ce1b74841ea">operator+</a> (const T &amp;value, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;timeSpan) noexcept</td></tr>
 <tr class="separator:a0789ec8d048b25f80d233ce1b74841ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56d83f16d255e9703e0da5d809029749" id="r_a56d83f16d255e9703e0da5d809029749"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a56d83f16d255e9703e0da5d809029749"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a56d83f16d255e9703e0da5d809029749">operator-</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;timeSpan) noexcept</td></tr>
+<tr class="memitem:a56d83f16d255e9703e0da5d809029749" id="r_a56d83f16d255e9703e0da5d809029749"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:a56d83f16d255e9703e0da5d809029749"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a56d83f16d255e9703e0da5d809029749">operator-</a> (const T &amp;value, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;timeSpan) noexcept</td></tr>
 <tr class="separator:a56d83f16d255e9703e0da5d809029749"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4dcc20bbfd84b623504617350cb4fe5" id="r_aa4dcc20bbfd84b623504617350cb4fe5"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:aa4dcc20bbfd84b623504617350cb4fe5"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa4dcc20bbfd84b623504617350cb4fe5">operator*</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;timeSpan) noexcept</td></tr>
+<tr class="memitem:aa4dcc20bbfd84b623504617350cb4fe5" id="r_aa4dcc20bbfd84b623504617350cb4fe5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:aa4dcc20bbfd84b623504617350cb4fe5"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa4dcc20bbfd84b623504617350cb4fe5">operator*</a> (const T &amp;value, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;timeSpan) noexcept</td></tr>
 <tr class="separator:aa4dcc20bbfd84b623504617350cb4fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a659ff4e29d908c129830b6add155ed85" id="r_a659ff4e29d908c129830b6add155ed85"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a659ff4e29d908c129830b6add155ed85"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a659ff4e29d908c129830b6add155ed85">operator/</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;value, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;timeSpan)</td></tr>
+<tr class="memitem:a659ff4e29d908c129830b6add155ed85" id="r_a659ff4e29d908c129830b6add155ed85"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:a659ff4e29d908c129830b6add155ed85"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a659ff4e29d908c129830b6add155ed85">operator/</a> (const T &amp;value, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;timeSpan)</td></tr>
 <tr class="separator:a659ff4e29d908c129830b6add155ed85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21c8465ab2a63b93306c3f2a61a5e98a" id="r_a21c8465ab2a63b93306c3f2a61a5e98a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_c_c_export_8h.html#afb06ae686742fde98e6427c4a1e2206c">HCC_EXPORT</a> friend std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21c8465ab2a63b93306c3f2a61a5e98a">operator&lt;&lt;</a> (std::ostream &amp;stream, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp;timeSpan)</td></tr>
 <tr class="separator:a21c8465ab2a63b93306c3f2a61a5e98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -372,13 +381,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a6c1b7db7da55cfaea9c7cba74e491fe7 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace2a40f7379a8b239d1553f697289564 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_ace2a40f7379a8b239d1553f697289564"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#ace2a40f7379a8b239d1553f697289564">MillisPerDay</a> = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a6c1b7db7da55cfaea9c7cba74e491fe7">MillisPerHour</a> * 24</td></tr>
 <tr class="separator:ace2a40f7379a8b239d1553f697289564 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51f2daa444a424ad25a432782fcf8bc6 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a51f2daa444a424ad25a432782fcf8bc6"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a51f2daa444a424ad25a432782fcf8bc6">MaxSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a13e2cce25b750cddaddf6d1432c40be3">MaxInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a4cf2951a09bf3797e23b5d8aa3742dfd">TicksPerSecond</a></td></tr>
+<tr class="memitem:a51f2daa444a424ad25a432782fcf8bc6 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a51f2daa444a424ad25a432782fcf8bc6"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a51f2daa444a424ad25a432782fcf8bc6">MaxSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common.html#a9a5e71cf8f54185d6c29cb1274fb17c6">MaxInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a4cf2951a09bf3797e23b5d8aa3742dfd">TicksPerSecond</a></td></tr>
 <tr class="separator:a51f2daa444a424ad25a432782fcf8bc6 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77601e07870e35af96fd8ac1f9546dac inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a77601e07870e35af96fd8ac1f9546dac"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a77601e07870e35af96fd8ac1f9546dac">MinSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6604007404964ecd88a8610f3a5687cc">MinInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a4cf2951a09bf3797e23b5d8aa3742dfd">TicksPerSecond</a></td></tr>
+<tr class="memitem:a77601e07870e35af96fd8ac1f9546dac inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a77601e07870e35af96fd8ac1f9546dac"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a77601e07870e35af96fd8ac1f9546dac">MinSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common.html#af4a2cd3aa428af5be7813a035b83e7e5">MinInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a4cf2951a09bf3797e23b5d8aa3742dfd">TicksPerSecond</a></td></tr>
 <tr class="separator:a77601e07870e35af96fd8ac1f9546dac inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8edfdab4d6ed164ef4e4a971200dde6d inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a8edfdab4d6ed164ef4e4a971200dde6d"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a8edfdab4d6ed164ef4e4a971200dde6d">MaxMilliSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a13e2cce25b750cddaddf6d1432c40be3">MaxInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#abba4be8174d0219af2624b4665516166">TicksPerMillisecond</a></td></tr>
+<tr class="memitem:a8edfdab4d6ed164ef4e4a971200dde6d inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a8edfdab4d6ed164ef4e4a971200dde6d"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a8edfdab4d6ed164ef4e4a971200dde6d">MaxMilliSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common.html#a9a5e71cf8f54185d6c29cb1274fb17c6">MaxInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#abba4be8174d0219af2624b4665516166">TicksPerMillisecond</a></td></tr>
 <tr class="separator:a8edfdab4d6ed164ef4e4a971200dde6d inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73aab427a9558e1e9f199437ab519034 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a73aab427a9558e1e9f199437ab519034"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a73aab427a9558e1e9f199437ab519034">MinMilliSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6604007404964ecd88a8610f3a5687cc">MinInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#abba4be8174d0219af2624b4665516166">TicksPerMillisecond</a></td></tr>
+<tr class="memitem:a73aab427a9558e1e9f199437ab519034 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a73aab427a9558e1e9f199437ab519034"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a73aab427a9558e1e9f199437ab519034">MinMilliSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common.html#af4a2cd3aa428af5be7813a035b83e7e5">MinInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#abba4be8174d0219af2624b4665516166">TicksPerMillisecond</a></td></tr>
 <tr class="separator:a73aab427a9558e1e9f199437ab519034 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c82ca99f570ff0e3044012f024b6d67 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a3c82ca99f570ff0e3044012f024b6d67"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a3c82ca99f570ff0e3044012f024b6d67">UnixEpoch</a> = 621355968000000000LL</td></tr>
 <tr class="separator:a3c82ca99f570ff0e3044012f024b6d67 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1171,8 +1180,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1180,7 +1189,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> Harlinn::Common::Core::TimeSpan::operator* </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1199,8 +1208,8 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1208,7 +1217,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp; Harlinn::Common::Core::TimeSpan::operator*= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1227,8 +1236,8 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1236,7 +1245,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> Harlinn::Common::Core::TimeSpan::operator+ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1280,8 +1289,8 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1289,7 +1298,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp; Harlinn::Common::Core::TimeSpan::operator+= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1333,8 +1342,8 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1342,7 +1351,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> Harlinn::Common::Core::TimeSpan::operator- </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1386,8 +1395,8 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1395,7 +1404,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp; Harlinn::Common::Core::TimeSpan::operator-= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1439,8 +1448,8 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1448,7 +1457,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> Harlinn::Common::Core::TimeSpan::operator/ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1467,8 +1476,8 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1476,7 +1485,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> &amp; Harlinn::Common::Core::TimeSpan::operator/= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -2364,8 +2373,8 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2373,7 +2382,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> operator* </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2396,8 +2405,8 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2405,7 +2414,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> operator+ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2428,8 +2437,8 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2437,7 +2446,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> operator- </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2460,8 +2469,8 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -2469,7 +2478,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_span.html">TimeSpan</a> operator/ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

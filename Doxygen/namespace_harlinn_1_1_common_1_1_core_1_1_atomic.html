@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -105,69 +114,69 @@ $(function(){initNavTree('namespace_harlinn_1_1_common_1_1_core_1_1_atomic.html'
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab6942a332527261cdf0d5a8d3d6e9238" id="r_ab6942a332527261cdf0d5a8d3d6e9238"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>,<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, char&gt;</td></tr>
-<tr class="memitem:ab6942a332527261cdf0d5a8d3d6e9238"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab6942a332527261cdf0d5a8d3d6e9238">Increment</a> (volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *value)</td></tr>
+<tr class="memitem:ab6942a332527261cdf0d5a8d3d6e9238" id="r_ab6942a332527261cdf0d5a8d3d6e9238"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T,<a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&gt; || std::is_same_v&lt;T, char&gt;</td></tr>
+<tr class="memitem:ab6942a332527261cdf0d5a8d3d6e9238"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab6942a332527261cdf0d5a8d3d6e9238">Increment</a> (volatile T *value)</td></tr>
 <tr class="separator:ab6942a332527261cdf0d5a8d3d6e9238"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d89c7068b0923c98c22b72b95387235" id="r_a4d89c7068b0923c98c22b72b95387235"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, char&gt;</td></tr>
-<tr class="memitem:a4d89c7068b0923c98c22b72b95387235"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4d89c7068b0923c98c22b72b95387235">Decrement</a> (volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *value)</td></tr>
+<tr class="memitem:a4d89c7068b0923c98c22b72b95387235" id="r_a4d89c7068b0923c98c22b72b95387235"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&gt; || std::is_same_v&lt;T, char&gt;</td></tr>
+<tr class="memitem:a4d89c7068b0923c98c22b72b95387235"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4d89c7068b0923c98c22b72b95387235">Decrement</a> (volatile T *value)</td></tr>
 <tr class="separator:a4d89c7068b0923c98c22b72b95387235"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bcad0c0e67670a2b340f867e2f3a765" id="r_a8bcad0c0e67670a2b340f867e2f3a765"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&gt;</td></tr>
-<tr class="memitem:a8bcad0c0e67670a2b340f867e2f3a765"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8bcad0c0e67670a2b340f867e2f3a765">Increment</a> (volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *value)</td></tr>
+<tr class="memitem:a8bcad0c0e67670a2b340f867e2f3a765" id="r_a8bcad0c0e67670a2b340f867e2f3a765"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&gt;</td></tr>
+<tr class="memitem:a8bcad0c0e67670a2b340f867e2f3a765"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a8bcad0c0e67670a2b340f867e2f3a765">Increment</a> (volatile T *value)</td></tr>
 <tr class="separator:a8bcad0c0e67670a2b340f867e2f3a765"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba726c328b9b6f8b60da4bd16910f82d" id="r_aba726c328b9b6f8b60da4bd16910f82d"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&gt;</td></tr>
-<tr class="memitem:aba726c328b9b6f8b60da4bd16910f82d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aba726c328b9b6f8b60da4bd16910f82d">Decrement</a> (volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *value)</td></tr>
+<tr class="memitem:aba726c328b9b6f8b60da4bd16910f82d" id="r_aba726c328b9b6f8b60da4bd16910f82d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&gt;</td></tr>
+<tr class="memitem:aba726c328b9b6f8b60da4bd16910f82d"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aba726c328b9b6f8b60da4bd16910f82d">Decrement</a> (volatile T *value)</td></tr>
 <tr class="separator:aba726c328b9b6f8b60da4bd16910f82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b14f84d855a46573d142848e77ba8ac" id="r_a4b14f84d855a46573d142848e77ba8ac"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, long&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, unsigned long&gt;</td></tr>
-<tr class="memitem:a4b14f84d855a46573d142848e77ba8ac"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4b14f84d855a46573d142848e77ba8ac">Increment</a> (volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *value)</td></tr>
+<tr class="memitem:a4b14f84d855a46573d142848e77ba8ac" id="r_a4b14f84d855a46573d142848e77ba8ac"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt; || std::is_same_v&lt;T, long&gt; || std::is_same_v&lt;T, unsigned long&gt;</td></tr>
+<tr class="memitem:a4b14f84d855a46573d142848e77ba8ac"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4b14f84d855a46573d142848e77ba8ac">Increment</a> (volatile T *value)</td></tr>
 <tr class="separator:a4b14f84d855a46573d142848e77ba8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f5986540c364e0ae5e7a74d20002e77" id="r_a5f5986540c364e0ae5e7a74d20002e77"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, long&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, unsigned long&gt;</td></tr>
-<tr class="memitem:a5f5986540c364e0ae5e7a74d20002e77"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5f5986540c364e0ae5e7a74d20002e77">Decrement</a> (volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *value)</td></tr>
+<tr class="memitem:a5f5986540c364e0ae5e7a74d20002e77" id="r_a5f5986540c364e0ae5e7a74d20002e77"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt; || std::is_same_v&lt;T, long&gt; || std::is_same_v&lt;T, unsigned long&gt;</td></tr>
+<tr class="memitem:a5f5986540c364e0ae5e7a74d20002e77"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a5f5986540c364e0ae5e7a74d20002e77">Decrement</a> (volatile T *value)</td></tr>
 <tr class="separator:a5f5986540c364e0ae5e7a74d20002e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e1846b0aa6d517dc85c42fbc7cb2f53" id="r_a9e1846b0aa6d517dc85c42fbc7cb2f53"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;</td></tr>
-<tr class="memitem:a9e1846b0aa6d517dc85c42fbc7cb2f53"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9e1846b0aa6d517dc85c42fbc7cb2f53">Increment</a> (volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *value)</td></tr>
+<tr class="memitem:a9e1846b0aa6d517dc85c42fbc7cb2f53" id="r_a9e1846b0aa6d517dc85c42fbc7cb2f53"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&gt;</td></tr>
+<tr class="memitem:a9e1846b0aa6d517dc85c42fbc7cb2f53"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9e1846b0aa6d517dc85c42fbc7cb2f53">Increment</a> (volatile T *value)</td></tr>
 <tr class="separator:a9e1846b0aa6d517dc85c42fbc7cb2f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4351b990416fd84845fb937121739dd2" id="r_a4351b990416fd84845fb937121739dd2"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;</td></tr>
-<tr class="memitem:a4351b990416fd84845fb937121739dd2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4351b990416fd84845fb937121739dd2">Decrement</a> (volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *value)</td></tr>
+<tr class="memitem:a4351b990416fd84845fb937121739dd2" id="r_a4351b990416fd84845fb937121739dd2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&gt;</td></tr>
+<tr class="memitem:a4351b990416fd84845fb937121739dd2"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4351b990416fd84845fb937121739dd2">Decrement</a> (volatile T *value)</td></tr>
 <tr class="separator:a4351b990416fd84845fb937121739dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a941a9da2531cf4e51a290c5c1d4b65a1" id="r_a941a9da2531cf4e51a290c5c1d4b65a1"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, char&gt;</td></tr>
-<tr class="memitem:a941a9da2531cf4e51a290c5c1d4b65a1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a941a9da2531cf4e51a290c5c1d4b65a1">Load</a> (const volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *value)</td></tr>
+<tr class="memitem:a941a9da2531cf4e51a290c5c1d4b65a1" id="r_a941a9da2531cf4e51a290c5c1d4b65a1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&gt; || std::is_same_v&lt;T, char&gt;</td></tr>
+<tr class="memitem:a941a9da2531cf4e51a290c5c1d4b65a1"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a941a9da2531cf4e51a290c5c1d4b65a1">Load</a> (const volatile T *value)</td></tr>
 <tr class="separator:a941a9da2531cf4e51a290c5c1d4b65a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a820ee655bdfdb763d70991a1b7735640" id="r_a820ee655bdfdb763d70991a1b7735640"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, char&gt;</td></tr>
-<tr class="memitem:a820ee655bdfdb763d70991a1b7735640"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a820ee655bdfdb763d70991a1b7735640">Store</a> (volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *location, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> value)</td></tr>
+<tr class="memitem:a820ee655bdfdb763d70991a1b7735640" id="r_a820ee655bdfdb763d70991a1b7735640"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&gt; || std::is_same_v&lt;T, char&gt;</td></tr>
+<tr class="memitem:a820ee655bdfdb763d70991a1b7735640"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a820ee655bdfdb763d70991a1b7735640">Store</a> (volatile T *location, T value)</td></tr>
 <tr class="separator:a820ee655bdfdb763d70991a1b7735640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e1c2d266915ed519da1c54bc0d09469" id="r_a7e1c2d266915ed519da1c54bc0d09469"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&gt;</td></tr>
-<tr class="memitem:a7e1c2d266915ed519da1c54bc0d09469"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7e1c2d266915ed519da1c54bc0d09469">Load</a> (const volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *value)</td></tr>
+<tr class="memitem:a7e1c2d266915ed519da1c54bc0d09469" id="r_a7e1c2d266915ed519da1c54bc0d09469"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&gt;</td></tr>
+<tr class="memitem:a7e1c2d266915ed519da1c54bc0d09469"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7e1c2d266915ed519da1c54bc0d09469">Load</a> (const volatile T *value)</td></tr>
 <tr class="separator:a7e1c2d266915ed519da1c54bc0d09469"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeeac798f94d54c8e18058dd7f80daf12" id="r_aeeac798f94d54c8e18058dd7f80daf12"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&gt;</td></tr>
-<tr class="memitem:aeeac798f94d54c8e18058dd7f80daf12"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aeeac798f94d54c8e18058dd7f80daf12">Store</a> (volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *location, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> value)</td></tr>
+<tr class="memitem:aeeac798f94d54c8e18058dd7f80daf12" id="r_aeeac798f94d54c8e18058dd7f80daf12"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&gt;</td></tr>
+<tr class="memitem:aeeac798f94d54c8e18058dd7f80daf12"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aeeac798f94d54c8e18058dd7f80daf12">Store</a> (volatile T *location, T value)</td></tr>
 <tr class="separator:aeeac798f94d54c8e18058dd7f80daf12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c79fe0207ac98a32f05705e4bb7796f" id="r_a0c79fe0207ac98a32f05705e4bb7796f"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, long&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, unsigned long&gt;</td></tr>
-<tr class="memitem:a0c79fe0207ac98a32f05705e4bb7796f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0c79fe0207ac98a32f05705e4bb7796f">Load</a> (const volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *value)</td></tr>
+<tr class="memitem:a0c79fe0207ac98a32f05705e4bb7796f" id="r_a0c79fe0207ac98a32f05705e4bb7796f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt; || std::is_same_v&lt;T, long&gt; || std::is_same_v&lt;T, unsigned long&gt;</td></tr>
+<tr class="memitem:a0c79fe0207ac98a32f05705e4bb7796f"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0c79fe0207ac98a32f05705e4bb7796f">Load</a> (const volatile T *value)</td></tr>
 <tr class="separator:a0c79fe0207ac98a32f05705e4bb7796f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe7e3a8d07d2dc8282e3ed1bb0761d83" id="r_abe7e3a8d07d2dc8282e3ed1bb0761d83"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, long&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, unsigned long&gt;</td></tr>
-<tr class="memitem:abe7e3a8d07d2dc8282e3ed1bb0761d83"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abe7e3a8d07d2dc8282e3ed1bb0761d83">Store</a> (volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *location, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> value)</td></tr>
+<tr class="memitem:abe7e3a8d07d2dc8282e3ed1bb0761d83" id="r_abe7e3a8d07d2dc8282e3ed1bb0761d83"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt; || std::is_same_v&lt;T, long&gt; || std::is_same_v&lt;T, unsigned long&gt;</td></tr>
+<tr class="memitem:abe7e3a8d07d2dc8282e3ed1bb0761d83"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abe7e3a8d07d2dc8282e3ed1bb0761d83">Store</a> (volatile T *location, T value)</td></tr>
 <tr class="separator:abe7e3a8d07d2dc8282e3ed1bb0761d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaca2926714bb0219e94950c9b44a4351" id="r_aaca2926714bb0219e94950c9b44a4351"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;</td></tr>
-<tr class="memitem:aaca2926714bb0219e94950c9b44a4351"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aaca2926714bb0219e94950c9b44a4351">Load</a> (const volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *value)</td></tr>
+<tr class="memitem:aaca2926714bb0219e94950c9b44a4351" id="r_aaca2926714bb0219e94950c9b44a4351"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&gt;</td></tr>
+<tr class="memitem:aaca2926714bb0219e94950c9b44a4351"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aaca2926714bb0219e94950c9b44a4351">Load</a> (const volatile T *value)</td></tr>
 <tr class="separator:aaca2926714bb0219e94950c9b44a4351"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ef32e3c86cbfa7e37d189e627ad49f4" id="r_a4ef32e3c86cbfa7e37d189e627ad49f4"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;</td></tr>
-<tr class="memitem:a4ef32e3c86cbfa7e37d189e627ad49f4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4ef32e3c86cbfa7e37d189e627ad49f4">Store</a> (volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *location, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> value)</td></tr>
+<tr class="memitem:a4ef32e3c86cbfa7e37d189e627ad49f4" id="r_a4ef32e3c86cbfa7e37d189e627ad49f4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&gt;</td></tr>
+<tr class="memitem:a4ef32e3c86cbfa7e37d189e627ad49f4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a4ef32e3c86cbfa7e37d189e627ad49f4">Store</a> (volatile T *location, T value)</td></tr>
 <tr class="separator:a4ef32e3c86cbfa7e37d189e627ad49f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -177,16 +186,16 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, char&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&gt; || std::is_same_v&lt;T, char&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> Harlinn::Common::Core::Atomic::Decrement </td>
+          <td class="memname">T Harlinn::Common::Core::Atomic::Decrement </td>
           <td>(</td>
-          <td class="paramtype">volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">volatile T *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -205,16 +214,16 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> Harlinn::Common::Core::Atomic::Decrement </td>
+          <td class="memname">T Harlinn::Common::Core::Atomic::Decrement </td>
           <td>(</td>
-          <td class="paramtype">volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">volatile T *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -233,16 +242,16 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, long&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, unsigned long&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt; || std::is_same_v&lt;T, long&gt; || std::is_same_v&lt;T, unsigned long&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> Harlinn::Common::Core::Atomic::Decrement </td>
+          <td class="memname">T Harlinn::Common::Core::Atomic::Decrement </td>
           <td>(</td>
-          <td class="paramtype">volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">volatile T *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -261,16 +270,16 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> Harlinn::Common::Core::Atomic::Decrement </td>
+          <td class="memname">T Harlinn::Common::Core::Atomic::Decrement </td>
           <td>(</td>
-          <td class="paramtype">volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">volatile T *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -289,16 +298,16 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>,<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, char&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T,<a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&gt; || std::is_same_v&lt;T, char&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> Harlinn::Common::Core::Atomic::Increment </td>
+          <td class="memname">T Harlinn::Common::Core::Atomic::Increment </td>
           <td>(</td>
-          <td class="paramtype">volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">volatile T *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -317,16 +326,16 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> Harlinn::Common::Core::Atomic::Increment </td>
+          <td class="memname">T Harlinn::Common::Core::Atomic::Increment </td>
           <td>(</td>
-          <td class="paramtype">volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">volatile T *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -345,16 +354,16 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, long&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, unsigned long&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt; || std::is_same_v&lt;T, long&gt; || std::is_same_v&lt;T, unsigned long&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> Harlinn::Common::Core::Atomic::Increment </td>
+          <td class="memname">T Harlinn::Common::Core::Atomic::Increment </td>
           <td>(</td>
-          <td class="paramtype">volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">volatile T *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -373,16 +382,16 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> Harlinn::Common::Core::Atomic::Increment </td>
+          <td class="memname">T Harlinn::Common::Core::Atomic::Increment </td>
           <td>(</td>
-          <td class="paramtype">volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">volatile T *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -401,16 +410,16 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, char&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&gt; || std::is_same_v&lt;T, char&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> Harlinn::Common::Core::Atomic::Load </td>
+          <td class="memname">T Harlinn::Common::Core::Atomic::Load </td>
           <td>(</td>
-          <td class="paramtype">const volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const volatile T *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -429,16 +438,16 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> Harlinn::Common::Core::Atomic::Load </td>
+          <td class="memname">T Harlinn::Common::Core::Atomic::Load </td>
           <td>(</td>
-          <td class="paramtype">const volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const volatile T *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -457,16 +466,16 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, long&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, unsigned long&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt; || std::is_same_v&lt;T, long&gt; || std::is_same_v&lt;T, unsigned long&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> Harlinn::Common::Core::Atomic::Load </td>
+          <td class="memname">T Harlinn::Common::Core::Atomic::Load </td>
           <td>(</td>
-          <td class="paramtype">const volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const volatile T *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -485,16 +494,16 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> Harlinn::Common::Core::Atomic::Load </td>
+          <td class="memname">T Harlinn::Common::Core::Atomic::Load </td>
           <td>(</td>
-          <td class="paramtype">const volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td class="paramtype">const volatile T *</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -513,18 +522,18 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6b02859d5fc5a3399e9345f3e6027242">SByte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, char&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a1a5406a5c4a3f32c803764edd2d67e9f">SByte</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>&gt; || std::is_same_v&lt;T, char&gt;</div>
       <table class="memname">
         <tr>
           <td class="memname">void Harlinn::Common::Core::Atomic::Store </td>
           <td>(</td>
-          <td class="paramtype">volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>location</em></span>, </td>
+          <td class="paramtype">volatile T *</td>          <td class="paramname"><span class="paramname"><em>location</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -537,18 +546,18 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af703ff0bcd3499cce23b6f3479e09d6f">Int16</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a7044df4e685ce824c42109b62f7a2cb3">Int16</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&gt;</div>
       <table class="memname">
         <tr>
           <td class="memname">void Harlinn::Common::Core::Atomic::Store </td>
           <td>(</td>
-          <td class="paramtype">volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>location</em></span>, </td>
+          <td class="paramtype">volatile T *</td>          <td class="paramname"><span class="paramname"><em>location</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -561,18 +570,18 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, long&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, unsigned long&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&gt; || std::is_same_v&lt;T, long&gt; || std::is_same_v&lt;T, unsigned long&gt;</div>
       <table class="memname">
         <tr>
           <td class="memname">void Harlinn::Common::Core::Atomic::Store </td>
           <td>(</td>
-          <td class="paramtype">volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>location</em></span>, </td>
+          <td class="paramtype">volatile T *</td>          <td class="paramname"><span class="paramname"><em>location</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -585,18 +594,18 @@ requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&gt; || std::is_same_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&gt; || std::is_same_v&lt;T, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&gt;</div>
       <table class="memname">
         <tr>
           <td class="memname">void Harlinn::Common::Core::Atomic::Store </td>
           <td>(</td>
-          <td class="paramtype">volatile <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>location</em></span>, </td>
+          <td class="paramtype">volatile T *</td>          <td class="paramname"><span class="paramname"><em>location</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

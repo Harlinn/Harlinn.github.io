@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -123,10 +132,10 @@ Public Attributes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a72c1477f639dea18113e709291ebb4dc">index_t</a>&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::ImplicitProducer::BlockIndexEntry::key</td>
+          <td class="memname">std::atomic&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a72c1477f639dea18113e709291ebb4dc">index_t</a>&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::ImplicitProducer::BlockIndexEntry::key</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -139,10 +148,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;<a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_block.html">Block</a>*&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::ImplicitProducer::BlockIndexEntry::value</td>
+          <td class="memname">std::atomic&lt;<a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_block.html">Block</a>*&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::ImplicitProducer::BlockIndexEntry::value</td>
         </tr>
       </table>
 </div><div class="memdoc">

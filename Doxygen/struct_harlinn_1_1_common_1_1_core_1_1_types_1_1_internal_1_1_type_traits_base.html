@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -112,14 +121,14 @@ $(function(){initNavTree('struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_inter
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a294c491150372447c2cfc3dc928b0c5b" id="r_a294c491150372447c2cfc3dc928b0c5b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a294c491150372447c2cfc3dc928b0c5b">Type</a> = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td></tr>
+<tr class="memitem:a294c491150372447c2cfc3dc928b0c5b" id="r_a294c491150372447c2cfc3dc928b0c5b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a294c491150372447c2cfc3dc928b0c5b">Type</a> = T</td></tr>
 <tr class="separator:a294c491150372447c2cfc3dc928b0c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c9488ba4f1e76139d7ef8917474e642" id="r_a2c9488ba4f1e76139d7ef8917474e642"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c9488ba4f1e76139d7ef8917474e642">RawType</a> = RT</td></tr>
 <tr class="separator:a2c9488ba4f1e76139d7ef8917474e642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a9e2deede0ce0ed91fdaff60dc5ab993d" id="r_a9e2deede0ce0ed91fdaff60dc5ab993d"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e2deede0ce0ed91fdaff60dc5ab993d">SizeOf</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;object) noexcept</td></tr>
+<tr class="memitem:a9e2deede0ce0ed91fdaff60dc5ab993d" id="r_a9e2deede0ce0ed91fdaff60dc5ab993d"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e2deede0ce0ed91fdaff60dc5ab993d">SizeOf</a> (const T &amp;object) noexcept</td></tr>
 <tr class="separator:a9e2deede0ce0ed91fdaff60dc5ab993d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -164,10 +173,10 @@ Static Public Attributes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::RawType = RT</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::RawType = RT</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -180,10 +189,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::Type = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::Type = T</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -197,15 +206,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::SizeOf </td>
+          <td class="memname">static constexpr size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::SizeOf </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>object</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -225,13 +234,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsAdapted = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsAdapted = false</td>
         </tr>
       </table>
   </td>
@@ -249,13 +258,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsArray = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsArray = false</td>
         </tr>
       </table>
   </td>
@@ -273,13 +282,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsBasic = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsBasic = false</td>
         </tr>
       </table>
   </td>
@@ -297,13 +306,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsConst = Core::IsConst&lt;RT&gt;</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsConst = Core::IsConst&lt;RT&gt;</td>
         </tr>
       </table>
   </td>
@@ -321,13 +330,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsContainer = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsContainer = false</td>
         </tr>
       </table>
   </td>
@@ -345,13 +354,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsFixedSize = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsFixedSize = false</td>
         </tr>
       </table>
   </td>
@@ -369,13 +378,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsOptional = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsOptional = false</td>
         </tr>
       </table>
   </td>
@@ -393,13 +402,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsPointer = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsPointer = false</td>
         </tr>
       </table>
   </td>
@@ -417,13 +426,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsReference = Core::IsReference&lt;RT&gt;</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsReference = Core::IsReference&lt;RT&gt;</td>
         </tr>
       </table>
   </td>
@@ -441,13 +450,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsSharedPtr = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsSharedPtr = false</td>
         </tr>
       </table>
   </td>
@@ -465,13 +474,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsSupported = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsSupported = false</td>
         </tr>
       </table>
   </td>
@@ -489,13 +498,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsTuple = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsTuple = false</td>
         </tr>
       </table>
   </td>
@@ -513,13 +522,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsTypeList = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsTypeList = false</td>
         </tr>
       </table>
   </td>
@@ -537,13 +546,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsUniquePtr = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsUniquePtr = false</td>
         </tr>
       </table>
   </td>
@@ -561,13 +570,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsVariant = false</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsVariant = false</td>
         </tr>
       </table>
   </td>
@@ -585,13 +594,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename RT &gt; </div>
+template&lt;typename T , typename RT &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, RT &gt;::IsVolatile = Core::IsVolatile&lt;RT&gt;</td>
+          <td class="memname">bool <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase</a>&lt; T, RT &gt;::IsVolatile = Core::IsVolatile&lt;RT&gt;</td>
         </tr>
       </table>
   </td>

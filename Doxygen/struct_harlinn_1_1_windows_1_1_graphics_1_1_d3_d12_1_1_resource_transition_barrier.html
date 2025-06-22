@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -111,9 +120,9 @@ $(function(){initNavTree('struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2591b181fb397dbaf02bb5612b16594a" id="r_a2591b181fb397dbaf02bb5612b16594a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2591b181fb397dbaf02bb5612b16594a">ResourceTransitionBarrier</a> () noexcept=default</td></tr>
 <tr class="separator:a2591b181fb397dbaf02bb5612b16594a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd2ba8ac6adf77b82254b4407b79116b" id="r_acd2ba8ac6adf77b82254b4407b79116b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd2ba8ac6adf77b82254b4407b79116b">ResourceTransitionBarrier</a> (ID3D12Resource *resource, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> subresource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateBefore, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateAfter) noexcept</td></tr>
+<tr class="memitem:acd2ba8ac6adf77b82254b4407b79116b" id="r_acd2ba8ac6adf77b82254b4407b79116b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd2ba8ac6adf77b82254b4407b79116b">ResourceTransitionBarrier</a> (ID3D12Resource *resource, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> subresource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateBefore, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateAfter) noexcept</td></tr>
 <tr class="separator:acd2ba8ac6adf77b82254b4407b79116b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f9cedd3c41a778487717f35c8d68917" id="r_a9f9cedd3c41a778487717f35c8d68917"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f9cedd3c41a778487717f35c8d68917">ResourceTransitionBarrier</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource.html">Resource</a> &amp;resource, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> subresource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateBefore, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateAfter) noexcept</td></tr>
+<tr class="memitem:a9f9cedd3c41a778487717f35c8d68917" id="r_a9f9cedd3c41a778487717f35c8d68917"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f9cedd3c41a778487717f35c8d68917">ResourceTransitionBarrier</a> (const <a class="el" href="class_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_resource.html">Resource</a> &amp;resource, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> subresource, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateBefore, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a> stateAfter) noexcept</td></tr>
 <tr class="separator:a9f9cedd3c41a778487717f35c8d68917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b6201d1653d3b30d6d5bb6e43caeacc" id="r_a5b6201d1653d3b30d6d5bb6e43caeacc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b6201d1653d3b30d6d5bb6e43caeacc">HWD3D12_IMPLEMENT_CONVERSIONS_TO</a> (D3D12_RESOURCE_TRANSITION_BARRIER)</td></tr>
 <tr class="separator:a5b6201d1653d3b30d6d5bb6e43caeacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,7 +131,7 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ac92cbd7e92df797a4615d3c97cc0217d" id="r_ac92cbd7e92df797a4615d3c97cc0217d"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac92cbd7e92df797a4615d3c97cc0217d">pResource</a> = nullptr</td></tr>
 <tr class="separator:ac92cbd7e92df797a4615d3c97cc0217d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4988057f816bf751e340e24eb634567a" id="r_a4988057f816bf751e340e24eb634567a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4988057f816bf751e340e24eb634567a">Subresource</a> = 0</td></tr>
+<tr class="memitem:a4988057f816bf751e340e24eb634567a" id="r_a4988057f816bf751e340e24eb634567a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4988057f816bf751e340e24eb634567a">Subresource</a> = 0</td></tr>
 <tr class="separator:a4988057f816bf751e340e24eb634567a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a030262e66f4aa7db4ded46db2f2ac233" id="r_a030262e66f4aa7db4ded46db2f2ac233"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23">ResourceStates</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a030262e66f4aa7db4ded46db2f2ac233">StateBefore</a> = <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a511e077974b7088190d8364916089b23ad13bc5b68b2bd9e18f29777db17cc563">ResourceStates::Common</a></td></tr>
 <tr class="separator:a030262e66f4aa7db4ded46db2f2ac233"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,7 +183,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>subresource</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>subresource</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -213,7 +222,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>subresource</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>subresource</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -303,7 +312,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::D3D12::ResourceTransitionBarrier::Subresource = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::D3D12::ResourceTransitionBarrier::Subresource = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

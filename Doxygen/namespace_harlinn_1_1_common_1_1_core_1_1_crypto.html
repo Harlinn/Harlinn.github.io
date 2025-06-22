@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -340,28 +349,28 @@ Functions</h2></td></tr>
 <tr class="memitem:a100c564400c550ddfd05656920c6d95d" id="r_a100c564400c550ddfd05656920c6d95d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a100c564400c550ddfd05656920c6d95d">HCC_DEFINE_ENUM_FLAG_OPERATORS</a> (<a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a>, DWORD)</td></tr>
 <tr class="separator:a100c564400c550ddfd05656920c6d95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe7be62778aad1f5b35f0472ce230bea" id="r_abe7be62778aad1f5b35f0472ce230bea"><td class="memTemplParams" colspan="2">template&lt;WideStringLike StringT&gt; </td></tr>
-<tr class="memitem:abe7be62778aad1f5b35f0472ce230bea"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abe7be62778aad1f5b35f0472ce230bea">BinaryToString</a> (const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *inputBuffer, size_t inputBufferSize, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> flags, StringT &amp;result)</td></tr>
+<tr class="memitem:abe7be62778aad1f5b35f0472ce230bea"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abe7be62778aad1f5b35f0472ce230bea">BinaryToString</a> (const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *inputBuffer, size_t inputBufferSize, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> flags, StringT &amp;result)</td></tr>
 <tr class="separator:abe7be62778aad1f5b35f0472ce230bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32031337b88e70164ac361c46896e47c" id="r_a32031337b88e70164ac361c46896e47c"><td class="memTemplParams" colspan="2">template&lt;SimpleByteSpanLike SpanT, StringLike ResultT&gt; </td></tr>
 <tr class="memitem:a32031337b88e70164ac361c46896e47c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a32031337b88e70164ac361c46896e47c">BinaryToString</a> (const SpanT &amp;inputBuffer, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> flags, ResultT &amp;result)</td></tr>
 <tr class="separator:a32031337b88e70164ac361c46896e47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ba3c9417c4a80aad4816ec640e175fe" id="r_a7ba3c9417c4a80aad4816ec640e175fe"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ba3c9417c4a80aad4816ec640e175fe">StringToBinary</a> (const wchar_t *inputString, size_t inputStringLength, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> requestedConversionFlags, std::unique_ptr&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>[]&gt; &amp;result, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *skipCount=nullptr, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> *actualConversionFlags=nullptr)</td></tr>
+<tr class="memitem:a7ba3c9417c4a80aad4816ec640e175fe" id="r_a7ba3c9417c4a80aad4816ec640e175fe"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ba3c9417c4a80aad4816ec640e175fe">StringToBinary</a> (const wchar_t *inputString, size_t inputStringLength, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> requestedConversionFlags, std::unique_ptr&lt; <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>[]&gt; &amp;result, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *skipCount=nullptr, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> *actualConversionFlags=nullptr)</td></tr>
 <tr class="separator:a7ba3c9417c4a80aad4816ec640e175fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae97288d26e4bb4d8b1721c8d67b1bd11" id="r_ae97288d26e4bb4d8b1721c8d67b1bd11"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae97288d26e4bb4d8b1721c8d67b1bd11">StringToBinary</a> (const char *inputString, size_t inputStringLength, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> requestedConversionFlags, std::unique_ptr&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>[]&gt; &amp;result, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *skipCount=nullptr, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> *actualConversionFlags=nullptr)</td></tr>
+<tr class="memitem:ae97288d26e4bb4d8b1721c8d67b1bd11" id="r_ae97288d26e4bb4d8b1721c8d67b1bd11"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae97288d26e4bb4d8b1721c8d67b1bd11">StringToBinary</a> (const char *inputString, size_t inputStringLength, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> requestedConversionFlags, std::unique_ptr&lt; <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>[]&gt; &amp;result, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *skipCount=nullptr, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> *actualConversionFlags=nullptr)</td></tr>
 <tr class="separator:ae97288d26e4bb4d8b1721c8d67b1bd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae59f59f472e5ecc3e64c5e4c89596cf3" id="r_ae59f59f472e5ecc3e64c5e4c89596cf3"><td class="memTemplParams" colspan="2">template&lt;SimpleCharSpanLike StringT&gt; </td></tr>
-<tr class="memitem:ae59f59f472e5ecc3e64c5e4c89596cf3"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae59f59f472e5ecc3e64c5e4c89596cf3">StringToBinary</a> (const StringT &amp;inputString, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> requestedConversionFlags, std::unique_ptr&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>[]&gt; &amp;result, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *skipCount=nullptr, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> *actualConversionFlags=nullptr)</td></tr>
+<tr class="memitem:ae59f59f472e5ecc3e64c5e4c89596cf3"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae59f59f472e5ecc3e64c5e4c89596cf3">StringToBinary</a> (const StringT &amp;inputString, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> requestedConversionFlags, std::unique_ptr&lt; <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>[]&gt; &amp;result, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *skipCount=nullptr, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> *actualConversionFlags=nullptr)</td></tr>
 <tr class="separator:ae59f59f472e5ecc3e64c5e4c89596cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8039d8c29ad8b0d2975f21152b9b9e6" id="r_ab8039d8c29ad8b0d2975f21152b9b9e6"><td class="memTemplParams" colspan="2">template&lt;BinaryLike ResultT&gt; </td></tr>
-<tr class="memitem:ab8039d8c29ad8b0d2975f21152b9b9e6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab8039d8c29ad8b0d2975f21152b9b9e6">StringToBinary</a> (const wchar_t *inputString, size_t inputStringLength, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> requestedConversionFlags, ResultT &amp;result, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *skipCount=nullptr, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> *actualConversionFlags=nullptr)</td></tr>
+<tr class="memitem:ab8039d8c29ad8b0d2975f21152b9b9e6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab8039d8c29ad8b0d2975f21152b9b9e6">StringToBinary</a> (const wchar_t *inputString, size_t inputStringLength, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> requestedConversionFlags, ResultT &amp;result, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *skipCount=nullptr, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> *actualConversionFlags=nullptr)</td></tr>
 <tr class="separator:ab8039d8c29ad8b0d2975f21152b9b9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe419cce289a1ac856415dd023df1167" id="r_abe419cce289a1ac856415dd023df1167"><td class="memTemplParams" colspan="2">template&lt;BinaryLike ResultT&gt; </td></tr>
-<tr class="memitem:abe419cce289a1ac856415dd023df1167"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abe419cce289a1ac856415dd023df1167">StringToBinary</a> (const char *inputString, size_t inputStringLength, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> requestedConversionFlags, ResultT &amp;result, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *skipCount=nullptr, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> *actualConversionFlags=nullptr)</td></tr>
+<tr class="memitem:abe419cce289a1ac856415dd023df1167"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#abe419cce289a1ac856415dd023df1167">StringToBinary</a> (const char *inputString, size_t inputStringLength, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> requestedConversionFlags, ResultT &amp;result, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *skipCount=nullptr, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> *actualConversionFlags=nullptr)</td></tr>
 <tr class="separator:abe419cce289a1ac856415dd023df1167"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ab539d08cffcf23e0d4bf6f49e14c9c" id="r_a0ab539d08cffcf23e0d4bf6f49e14c9c"><td class="memTemplParams" colspan="2">template&lt;SimpleCharSpanLike StringT, BinaryLike ResultT&gt; </td></tr>
-<tr class="memitem:a0ab539d08cffcf23e0d4bf6f49e14c9c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0ab539d08cffcf23e0d4bf6f49e14c9c">StringToBinary</a> (const StringT &amp;inputString, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> requestedConversionFlags, ResultT &amp;result, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *skipCount=nullptr, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> *actualConversionFlags=nullptr)</td></tr>
+<tr class="memitem:a0ab539d08cffcf23e0d4bf6f49e14c9c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0ab539d08cffcf23e0d4bf6f49e14c9c">StringToBinary</a> (const StringT &amp;inputString, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> requestedConversionFlags, ResultT &amp;result, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *skipCount=nullptr, <a class="el" href="#a097320d08ffe2b013142cfb659f03d51">CryptStringFlags</a> *actualConversionFlags=nullptr)</td></tr>
 <tr class="separator:a0ab539d08cffcf23e0d4bf6f49e14c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03cb5ac395555bfc73a57e5a4d0a83ef" id="r_a03cb5ac395555bfc73a57e5a4d0a83ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03cb5ac395555bfc73a57e5a4d0a83ef">FormatObject</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_encoding_type.html">EncodingType</a> &amp;certEncodingType, <a class="el" href="#a18dcfc221cae04b0e86457e4f404ba94">FormatType</a> formatType, <a class="el" href="#ad2f32edc3fb2a76ea6b5ec48ddf2eac3">FormatStringType</a> formatStringType, const char *structType, const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *encodedBuffer, size_t encodedBufferLength, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;result)</td></tr>
+<tr class="memitem:a03cb5ac395555bfc73a57e5a4d0a83ef" id="r_a03cb5ac395555bfc73a57e5a4d0a83ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03cb5ac395555bfc73a57e5a4d0a83ef">FormatObject</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_encoding_type.html">EncodingType</a> &amp;certEncodingType, <a class="el" href="#a18dcfc221cae04b0e86457e4f404ba94">FormatType</a> formatType, <a class="el" href="#ad2f32edc3fb2a76ea6b5ec48ddf2eac3">FormatStringType</a> formatStringType, const char *structType, const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *encodedBuffer, size_t encodedBufferLength, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7b2b8eb82c826297870ffb50d3739060">WideString</a> &amp;result)</td></tr>
 <tr class="separator:a03cb5ac395555bfc73a57e5a4d0a83ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfa6c65c3428b5fe1353abcf33c05f90" id="r_abfa6c65c3428b5fe1353abcf33c05f90"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfa6c65c3428b5fe1353abcf33c05f90">RetrieveObjectByUrl</a> (const wchar_t *url, <a class="el" href="#aa1e9f953ee8bae2b1920bc7dfcf57715">ContextObjectType</a> contextObjectType, <a class="el" href="#a7f755a7be81b9bc5c32d545de3557c56">RetrievalFlags</a> retrievalFlags, DWORD timeoutInMillis, LPVOID *ppvObject, const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_certificate_context.html">CertificateContext</a> &amp;certificateContext=<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_certificate_context.html">CertificateContext</a>(), PCRYPT_RETRIEVE_AUX_INFO pRETRIEVE_AUX_INFO=nullptr)</td></tr>
 <tr class="separator:abfa6c65c3428b5fe1353abcf33c05f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -775,7 +784,7 @@ template&lt;WideStringLike StringT&gt; </div>
         <tr>
           <td class="memname">void Harlinn::Common::Core::Crypto::BinaryToString </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>inputBuffer</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>inputBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -870,7 +879,7 @@ template&lt;SimpleByteSpanLike SpanT, StringLike ResultT&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>encodedBuffer</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>encodedBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1014,7 +1023,7 @@ template&lt;BinaryLike ResultT&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>skipCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>skipCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1058,12 +1067,12 @@ template&lt;BinaryLike ResultT&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>[]&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>[]&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>skipCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>skipCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1109,7 +1118,7 @@ template&lt;SimpleCharSpanLike StringT, BinaryLike ResultT&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>skipCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>skipCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1150,12 +1159,12 @@ template&lt;SimpleCharSpanLike StringT&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>[]&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>[]&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>skipCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>skipCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1206,7 +1215,7 @@ template&lt;BinaryLike ResultT&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>skipCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>skipCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1250,12 +1259,12 @@ template&lt;BinaryLike ResultT&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>[]&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>[]&gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>skipCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *</td>          <td class="paramname"><span class="paramname"><em>skipCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

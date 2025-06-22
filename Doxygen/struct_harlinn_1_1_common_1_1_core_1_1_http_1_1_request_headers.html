@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -116,12 +125,12 @@ Collaboration diagram for Harlinn::Common::Core::Http::RequestHeaders:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a83847f20bd002043a9047a6e3984753d" id="r_a83847f20bd002043a9047a6e3984753d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83847f20bd002043a9047a6e3984753d">UnknownHeaderCount</a></td></tr>
+<tr class="memitem:a83847f20bd002043a9047a6e3984753d" id="r_a83847f20bd002043a9047a6e3984753d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83847f20bd002043a9047a6e3984753d">UnknownHeaderCount</a></td></tr>
 <tr class="memdesc:a83847f20bd002043a9047a6e3984753d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The array of unknown HTTP headers and the number of entries in the array.  <br /></td></tr>
 <tr class="separator:a83847f20bd002043a9047a6e3984753d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa84bccc72d9c6e1b0473fd277301e747" id="r_aa84bccc72d9c6e1b0473fd277301e747"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_unknown_header.html">UnknownHeader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa84bccc72d9c6e1b0473fd277301e747">pUnknownHeaders</a></td></tr>
 <tr class="separator:aa84bccc72d9c6e1b0473fd277301e747"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0830bcd354a68d82f3ddfc1af03b3c82" id="r_a0830bcd354a68d82f3ddfc1af03b3c82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0830bcd354a68d82f3ddfc1af03b3c82">TrailerCount</a></td></tr>
+<tr class="memitem:a0830bcd354a68d82f3ddfc1af03b3c82" id="r_a0830bcd354a68d82f3ddfc1af03b3c82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0830bcd354a68d82f3ddfc1af03b3c82">TrailerCount</a></td></tr>
 <tr class="separator:a0830bcd354a68d82f3ddfc1af03b3c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a578bba84ae20311eb52ecb61a9919247" id="r_a578bba84ae20311eb52ecb61a9919247"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_http_1_1_unknown_header.html">UnknownHeader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a578bba84ae20311eb52ecb61a9919247">pTrailers</a></td></tr>
 <tr class="separator:a578bba84ae20311eb52ecb61a9919247"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,7 +192,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::Http::RequestHeaders::TrailerCount</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::Http::RequestHeaders::TrailerCount</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -197,7 +206,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::Common::Core::Http::RequestHeaders::UnknownHeaderCount</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::Common::Core::Http::RequestHeaders::UnknownHeaderCount</td>
         </tr>
       </table>
 </div><div class="memdoc">

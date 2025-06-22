@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -122,9 +131,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a64a651a11025a4812a534ea8fcf2c434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a839058a5b504266308d6832823f11620" id="r_a839058a5b504266308d6832823f11620"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_http_server_request_queue.html">HttpServerRequestQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a839058a5b504266308d6832823f11620">AddRequestQueue</a> (size_t concurrentRequestCount, const wchar_t *requestQueueName=nullptr, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_http.html#af96beeb672e69867b85a069108754de3">CreateRequestQueueFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_http.html#af96beeb672e69867b85a069108754de3a6adf97f83acf6453d4a6a4b1070f3754">CreateRequestQueueFlags::None</a>, PSECURITY_ATTRIBUTES securityAttributes=nullptr)</td></tr>
 <tr class="separator:a839058a5b504266308d6832823f11620"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7e20d7e2293da0e8ad231a13fee7593" id="r_ab7e20d7e2293da0e8ad231a13fee7593"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename ... Args&gt; <br />
-requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_http_request_handler.html">HttpRequestHandler</a>, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:ab7e20d7e2293da0e8ad231a13fee7593"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab7e20d7e2293da0e8ad231a13fee7593">AddRequestHandler</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memitem:ab7e20d7e2293da0e8ad231a13fee7593" id="r_ab7e20d7e2293da0e8ad231a13fee7593"><td class="memTemplParams" colspan="2">template&lt;typename T , typename ... Args&gt; <br />
+requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_http_request_handler.html">HttpRequestHandler</a>, T&gt;</td></tr>
+<tr class="memitem:ab7e20d7e2293da0e8ad231a13fee7593"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab7e20d7e2293da0e8ad231a13fee7593">AddRequestHandler</a> (Args &amp;&amp;... args)</td></tr>
 <tr class="separator:ab7e20d7e2293da0e8ad231a13fee7593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08bc15436ce28b81432d8bec4976eae9" id="r_a08bc15436ce28b81432d8bec4976eae9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_http_request_handler.html">HttpRequestHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08bc15436ce28b81432d8bec4976eae9">FindHandler</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_http_request.html">HttpRequest</a> &amp;request) const</td></tr>
 <tr class="separator:a08bc15436ce28b81432d8bec4976eae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,14 +192,14 @@ Private Attributes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename ... Args&gt; <br />
-requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_http_request_handler.html">HttpRequestHandler</a>, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T , typename ... Args&gt; <br />
+requires std::is_base_of_v&lt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_http_1_1_server_1_1_http_request_handler.html">HttpRequestHandler</a>, T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * Harlinn::Common::Core::Http::Server::HttpServer::AddRequestHandler </td>
+          <td class="memname">T * Harlinn::Common::Core::Http::Server::HttpServer::AddRequestHandler </td>
           <td>(</td>
           <td class="paramtype">Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
           <td></td>

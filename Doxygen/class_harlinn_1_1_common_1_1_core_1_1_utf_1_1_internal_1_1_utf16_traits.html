@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -115,7 +124,7 @@ Inheritance diagram for Harlinn::Common::Core::Utf::Internal::Utf16Traits&lt; T 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a0ed2659acf7dae8536fea6ac6bc19cde" id="r_a0ed2659acf7dae8536fea6ac6bc19cde"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a> = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td></tr>
+<tr class="memitem:a0ed2659acf7dae8536fea6ac6bc19cde" id="r_a0ed2659acf7dae8536fea6ac6bc19cde"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a> = T</td></tr>
 <tr class="separator:a0ed2659acf7dae8536fea6ac6bc19cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -153,7 +162,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a09c4e706e98e7951469b7687d2e14463"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3a5f926393517a030a2bf5a8d0f2200" id="r_ae3a5f926393517a030a2bf5a8d0f2200"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3a5f926393517a030a2bf5a8d0f2200">IsUtf8</a> = false</td></tr>
 <tr class="separator:ae3a5f926393517a030a2bf5a8d0f2200"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f19ebe90b1d1db6553a4b95b733176c" id="r_a5f19ebe90b1d1db6553a4b95b733176c"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f19ebe90b1d1db6553a4b95b733176c">SurrogateOffset</a> = ( 0x0000d800 &lt;&lt; 10UL ) + 0xdc00 - 0x10000</td></tr>
+<tr class="memitem:a5f19ebe90b1d1db6553a4b95b733176c" id="r_a5f19ebe90b1d1db6553a4b95b733176c"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f19ebe90b1d1db6553a4b95b733176c">SurrogateOffset</a> = ( 0x0000d800 &lt;&lt; 10UL ) + 0xdc00 - 0x10000</td></tr>
 <tr class="separator:a5f19ebe90b1d1db6553a4b95b733176c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b36622a4221a2a3c1cde163814c7ae9" id="r_a4b36622a4221a2a3c1cde163814c7ae9"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b36622a4221a2a3c1cde163814c7ae9">MaxLength</a> = 2</td></tr>
 <tr class="separator:a4b36622a4221a2a3c1cde163814c7ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,10 +174,10 @@ Static Public Attributes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::CharType = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::CharType = T</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -182,13 +191,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_utf.html#a7f6136711bcfd8b7d434afeec8be175c">CodePointType</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::CodePoint </td>
+          <td class="memname">static constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_utf.html#a7f6136711bcfd8b7d434afeec8be175c">CodePointType</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::CodePoint </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a> *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
         </tr>
@@ -224,13 +233,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_utf.html#a7f6136711bcfd8b7d434afeec8be175c">CodePointType</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::CodePoint </td>
+          <td class="memname">static constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_utf.html#a7f6136711bcfd8b7d434afeec8be175c">CodePointType</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::CodePoint </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a> *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
         </tr>
@@ -265,13 +274,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsLead </td>
+          <td class="memname">static constexpr bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::IsLead </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
@@ -300,13 +309,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsSingle </td>
+          <td class="memname">static constexpr bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::IsSingle </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
@@ -335,13 +344,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsSurrogate </td>
+          <td class="memname">static constexpr bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::IsSurrogate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
@@ -370,13 +379,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsSurrogateLead </td>
+          <td class="memname">static constexpr bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::IsSurrogateLead </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
@@ -405,13 +414,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsSurrogateTrail </td>
+          <td class="memname">static constexpr bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::IsSurrogateTrail </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
@@ -440,13 +449,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsTrail </td>
+          <td class="memname">static constexpr bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::IsTrail </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
@@ -475,13 +484,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Lead </td>
+          <td class="memname">static constexpr <a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::Lead </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_utf.html#a7f6136711bcfd8b7d434afeec8be175c">CodePointType</a></td>          <td class="paramname"><span class="paramname"><em>supplementary</em></span></td><td>)</td>
           <td></td>
@@ -510,13 +519,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr size_t <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Length </td>
+          <td class="memname">static constexpr size_t <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::Length </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_utf.html#a7f6136711bcfd8b7d434afeec8be175c">CodePointType</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
           <td></td>
@@ -546,13 +555,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr const <a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a> * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Next </td>
+          <td class="memname">static constexpr const <a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a> * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::Next </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a> *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
@@ -573,13 +582,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_utf.html#a7f6136711bcfd8b7d434afeec8be175c">CodePointType</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Supplementary </td>
+          <td class="memname">static constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_utf.html#a7f6136711bcfd8b7d434afeec8be175c">CodePointType</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::Supplementary </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a></td>          <td class="paramname"><span class="paramname"><em>lead</em></span>, </td>
         </tr>
@@ -614,13 +623,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Trail </td>
+          <td class="memname">static constexpr <a class="el" href="#a0ed2659acf7dae8536fea6ac6bc19cde">CharType</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::Trail </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_utf.html#a7f6136711bcfd8b7d434afeec8be175c">CodePointType</a></td>          <td class="paramname"><span class="paramname"><em>supplementary</em></span></td><td>)</td>
           <td></td>
@@ -650,13 +659,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsUtf16 = true</td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::IsUtf16 = true</td>
         </tr>
       </table>
   </td>
@@ -674,13 +683,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::IsUtf8 = false</td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::IsUtf8 = false</td>
         </tr>
       </table>
   </td>
@@ -698,13 +707,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::MaxLength = 2</td>
+          <td class="memname">size_t <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::MaxLength = 2</td>
         </tr>
       </table>
   </td>
@@ -722,13 +731,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SurrogateOffset = ( 0x0000d800 &lt;&lt; 10UL ) + 0xdc00 - 0x10000</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_utf_1_1_internal_1_1_utf16_traits.html">Harlinn::Common::Core::Utf::Internal::Utf16Traits</a>&lt; T &gt;::SurrogateOffset = ( 0x0000d800 &lt;&lt; 10UL ) + 0xdc00 - 0x10000</td>
         </tr>
       </table>
   </td>

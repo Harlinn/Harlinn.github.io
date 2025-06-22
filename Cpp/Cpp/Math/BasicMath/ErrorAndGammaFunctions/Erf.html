@@ -234,7 +234,12 @@
   <div class="post-content">
     <p><a href="../ErrorAndGammaFunctions.html">Error and gamma functions</a></p>
 
-<p>Calculates the error function.</p>
+<p>The <code class="language-plaintext highlighter-rouge">Erf</code> function returns <a href="https://en.wikipedia.org/wiki/Error_function">the error function</a> of a given number. The error 
+function is a mathematical function used in probability, statistics, and 
+partial differential equations to describe the probability of a random variable 
+falling within the range \([-x, x]\).</p>
+
+\[\text{erf}(x) = \frac{2}{\sqrt{\pi}} \int_0^x e^{-t^2} \, dt\]
 
 <pre><code class="language-C++">template&lt;FloatingPointType T&gt;
 constexpr inline T Erf( T x ) noexcept

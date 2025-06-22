@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -337,8 +346,8 @@ Variables</h2></td></tr>
 <tr class="separator:a3cfc4725c2cce4e8e69989bf77f0885f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45c59d093a23354a1dc1279d753b6ec7" id="r_a45c59d093a23354a1dc1279d753b6ec7"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45c59d093a23354a1dc1279d753b6ec7">UtilityTypeIdMax</a> = static_cast&lt;size_t&gt;( <a class="el" href="#a8ed5a703e548143aa9eef82aeb9eaf49ac8908bd190fd9bd291183d01ec881a9e">UtilityTypeId::TypeList</a> )</td></tr>
 <tr class="separator:a45c59d093a23354a1dc1279d753b6ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a765be437d87a7f3bc8e1a609d5c95402" id="r_a765be437d87a7f3bc8e1a609d5c95402"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </td></tr>
-<tr class="memitem:a765be437d87a7f3bc8e1a609d5c95402"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a765be437d87a7f3bc8e1a609d5c95402">HasTypeAdapter</a> = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_adapters_1_1_type_adapter.html">Types::Adapters::TypeAdapter</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;::value</td></tr>
+<tr class="memitem:a765be437d87a7f3bc8e1a609d5c95402" id="r_a765be437d87a7f3bc8e1a609d5c95402"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a765be437d87a7f3bc8e1a609d5c95402"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a765be437d87a7f3bc8e1a609d5c95402">HasTypeAdapter</a> = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_adapters_1_1_type_adapter.html">Types::Adapters::TypeAdapter</a>&lt;T&gt;::value</td></tr>
 <tr class="separator:a765be437d87a7f3bc8e1a609d5c95402"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -352,7 +361,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum class <a class="el" href="#ad7050d48722d01c073c0b3fcdd66613d">Harlinn::Common::Core::Types::BasicTypeId</a> : <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>
+          <td class="memname">enum class <a class="el" href="#ad7050d48722d01c073c0b3fcdd66613d">Harlinn::Common::Core::Types::BasicTypeId</a> : <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>
         </tr>
       </table>
   </td>
@@ -413,7 +422,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum class <a class="el" href="#abbadc6a649fabd96bdc1f2739149fbc0">Harlinn::Common::Core::Types::ContainerTypeId</a> : <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>
+          <td class="memname">enum class <a class="el" href="#abbadc6a649fabd96bdc1f2739149fbc0">Harlinn::Common::Core::Types::ContainerTypeId</a> : <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>
         </tr>
       </table>
   </td>
@@ -461,7 +470,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum class <a class="el" href="#ab40c9779dfbd970053302e5dad9ef05c">Harlinn::Common::Core::Types::TupleTypeId</a> : <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>
+          <td class="memname">enum class <a class="el" href="#ab40c9779dfbd970053302e5dad9ef05c">Harlinn::Common::Core::Types::TupleTypeId</a> : <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>
         </tr>
       </table>
   </td>
@@ -489,7 +498,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum class <a class="el" href="#a8ed5a703e548143aa9eef82aeb9eaf49">Harlinn::Common::Core::Types::UtilityTypeId</a> : <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>
+          <td class="memname">enum class <a class="el" href="#a8ed5a703e548143aa9eef82aeb9eaf49">Harlinn::Common::Core::Types::UtilityTypeId</a> : <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>
         </tr>
       </table>
   </td>
@@ -724,13 +733,13 @@ template&lt;typename ... Args&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Harlinn::Common::Core::Types::HasTypeAdapter = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_adapters_1_1_type_adapter.html">Types::Adapters::TypeAdapter</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;::value</td>
+          <td class="memname">bool Harlinn::Common::Core::Types::HasTypeAdapter = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_adapters_1_1_type_adapter.html">Types::Adapters::TypeAdapter</a>&lt;T&gt;::value</td>
         </tr>
       </table>
   </td>

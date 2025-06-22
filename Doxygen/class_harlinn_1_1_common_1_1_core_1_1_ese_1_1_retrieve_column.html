@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -141,16 +150,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af3523e9784a09508a23d38fc34065dea" id="r_af3523e9784a09508a23d38fc34065dea"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3523e9784a09508a23d38fc34065dea">SetFlags</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#aa265be545dc0e3092a333ff82b0c1f97">RetrieveFlags</a> flags)</td></tr>
 <tr class="memdesc:af3523e9784a09508a23d38fc34065dea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the RetrieveFlags options for column retrieval.  <br /></td></tr>
 <tr class="separator:af3523e9784a09508a23d38fc34065dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec3e6dba09179e17d8966fdeb64ede46" id="r_aec3e6dba09179e17d8966fdeb64ede46"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec3e6dba09179e17d8966fdeb64ede46">ByteOffset</a> () const</td></tr>
+<tr class="memitem:aec3e6dba09179e17d8966fdeb64ede46" id="r_aec3e6dba09179e17d8966fdeb64ede46"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec3e6dba09179e17d8966fdeb64ede46">ByteOffset</a> () const</td></tr>
 <tr class="memdesc:aec3e6dba09179e17d8966fdeb64ede46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the offset to the first byte to be retrieved from a column of type of <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a02ba6c1b46fa199c2df41d5875577c3da4d1850321c839f6645dd2f5638f682ba" title="A fixed or variable length, raw binary column that can be up to 2147483647 bytes in length....">ColumnType::LongBinary</a> or <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a02ba6c1b46fa199c2df41d5875577c3daab5426ac7388e0dee135629dad52f6fc" title="A fixed or variable length, text column that can be up to 2147483647 ASCII characters in length or 10...">ColumnType::LongText</a>.  <br /></td></tr>
 <tr class="separator:aec3e6dba09179e17d8966fdeb64ede46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16c2c95971fc7bfaafa088e14f3c6c41" id="r_a16c2c95971fc7bfaafa088e14f3c6c41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16c2c95971fc7bfaafa088e14f3c6c41">SetByteOffset</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> byteOffset)</td></tr>
+<tr class="memitem:a16c2c95971fc7bfaafa088e14f3c6c41" id="r_a16c2c95971fc7bfaafa088e14f3c6c41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16c2c95971fc7bfaafa088e14f3c6c41">SetByteOffset</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> byteOffset)</td></tr>
 <tr class="memdesc:a16c2c95971fc7bfaafa088e14f3c6c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the offset to the first byte to be retrieved from a column of type of <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a02ba6c1b46fa199c2df41d5875577c3da4d1850321c839f6645dd2f5638f682ba" title="A fixed or variable length, raw binary column that can be up to 2147483647 bytes in length....">ColumnType::LongBinary</a> or <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_ese.html#a02ba6c1b46fa199c2df41d5875577c3daab5426ac7388e0dee135629dad52f6fc" title="A fixed or variable length, text column that can be up to 2147483647 ASCII characters in length or 10...">ColumnType::LongText</a>.  <br /></td></tr>
 <tr class="separator:a16c2c95971fc7bfaafa088e14f3c6c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a721b14abb52f89555e7b721488da870a" id="r_a721b14abb52f89555e7b721488da870a"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a721b14abb52f89555e7b721488da870a">TagSequence</a> () const</td></tr>
+<tr class="memitem:a721b14abb52f89555e7b721488da870a" id="r_a721b14abb52f89555e7b721488da870a"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a721b14abb52f89555e7b721488da870a">TagSequence</a> () const</td></tr>
 <tr class="memdesc:a721b14abb52f89555e7b721488da870a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the sequence number of the values that are contained in a multi-valued column.  <br /></td></tr>
 <tr class="separator:a721b14abb52f89555e7b721488da870a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66e1d8b04b23ca28e402961ecb1cf5cc" id="r_a66e1d8b04b23ca28e402961ecb1cf5cc"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66e1d8b04b23ca28e402961ecb1cf5cc">SetTagSequence</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> tagSequence)</td></tr>
+<tr class="memitem:a66e1d8b04b23ca28e402961ecb1cf5cc" id="r_a66e1d8b04b23ca28e402961ecb1cf5cc"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66e1d8b04b23ca28e402961ecb1cf5cc">SetTagSequence</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> tagSequence)</td></tr>
 <tr class="memdesc:a66e1d8b04b23ca28e402961ecb1cf5cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the sequence number of the values that are contained in a multi-valued column.  <br /></td></tr>
 <tr class="separator:a66e1d8b04b23ca28e402961ecb1cf5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a4043d60ee26f3ae9803d94f58b56e9" id="r_a1a4043d60ee26f3ae9803d94f58b56e9"><td class="memItemLeft" align="right" valign="top">constexpr JET_COLUMNID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a4043d60ee26f3ae9803d94f58b56e9">ColumnIdNextTagged</a> () const</td></tr>
@@ -326,7 +335,7 @@ template&lt;SimpleByteSpanLike SpanT&gt; </div>
 <p>Binds this <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_ese_1_1_retrieve_column.html" title="Holds input and output parameters for use with the Table::RetrieveColumns function....">RetrieveColumn</a> object to a column and a Byte container. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">SpanT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_byte_span_like.html" title="Matches most common container classes with sequential memory layout.">SimpleByteSpanLike</a> concept. </td></tr>
+    <tr><td class="paramname">SpanT</td><td>Any type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_byte_span_like.html" title="Matches most common container classes with sequential memory layout.">SimpleByteSpanLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -401,7 +410,7 @@ template&lt;SimpleByteSpanLike SpanT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::Ese::RetrieveColumn::ByteOffset </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::Ese::RetrieveColumn::ByteOffset </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -596,7 +605,7 @@ template&lt;SimpleByteSpanLike SpanT&gt; </div>
         <tr>
           <td class="memname">void Harlinn::Common::Core::Ese::RetrieveColumn::SetByteOffset </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>byteOffset</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>byteOffset</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -791,7 +800,7 @@ template&lt;SimpleByteSpanLike SpanT&gt; </div>
         <tr>
           <td class="memname">void Harlinn::Common::Core::Ese::RetrieveColumn::SetTagSequence </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>tagSequence</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>tagSequence</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -850,7 +859,7 @@ template&lt;SimpleByteSpanLike SpanT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::Ese::RetrieveColumn::TagSequence </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::Ese::RetrieveColumn::TagSequence </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

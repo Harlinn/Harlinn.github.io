@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -118,11 +127,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae24b774f175e7f5f9f28413820c55620"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3952413df8d389bcf1717f5e8a151857" id="r_a3952413df8d389bcf1717f5e8a151857"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3952413df8d389bcf1717f5e8a151857">AddInputTensor</a> (const char *name, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0">FieldFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0a6adf97f83acf6453d4a6a4b1070f3754">FieldFlags::None</a>, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#afb61e4c9ac50faf0cd72be455c7c03cf">TensorDataTypeMask</a> typeMask=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#afb61e4c9ac50faf0cd72be455c7c03cfae668fc61f49e37bd36639296b854443e">TensorDataTypeMask::AllButNibble</a>)</td></tr>
 <tr class="separator:a3952413df8d389bcf1717f5e8a151857"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a343e461026a84e09a63ac57bcc0ff9d1" id="r_a343e461026a84e09a63ac57bcc0ff9d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a343e461026a84e09a63ac57bcc0ff9d1">AddInputTensor</a> (const char *name, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0">FieldFlags</a> flags, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#afb61e4c9ac50faf0cd72be455c7c03cf">TensorDataTypeMask</a> typeMask, std::vector&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> &gt; &amp;dimensions)</td></tr>
+<tr class="memitem:a343e461026a84e09a63ac57bcc0ff9d1" id="r_a343e461026a84e09a63ac57bcc0ff9d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a343e461026a84e09a63ac57bcc0ff9d1">AddInputTensor</a> (const char *name, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0">FieldFlags</a> flags, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#afb61e4c9ac50faf0cd72be455c7c03cf">TensorDataTypeMask</a> typeMask, std::vector&lt; <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> &gt; &amp;dimensions)</td></tr>
 <tr class="separator:a343e461026a84e09a63ac57bcc0ff9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af77f88ddb0c05e5f6cbfec2e7f51d0e4" id="r_af77f88ddb0c05e5f6cbfec2e7f51d0e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af77f88ddb0c05e5f6cbfec2e7f51d0e4">AddOutputTensor</a> (const char *name, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0">FieldFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0a6adf97f83acf6453d4a6a4b1070f3754">FieldFlags::None</a>, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#afb61e4c9ac50faf0cd72be455c7c03cf">TensorDataTypeMask</a> typeMask=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#afb61e4c9ac50faf0cd72be455c7c03cfae668fc61f49e37bd36639296b854443e">TensorDataTypeMask::AllButNibble</a>)</td></tr>
 <tr class="separator:af77f88ddb0c05e5f6cbfec2e7f51d0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6d98c739f3147be401c3deaaa5db821" id="r_ad6d98c739f3147be401c3deaaa5db821"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6d98c739f3147be401c3deaaa5db821">AddOutputTensor</a> (const char *name, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0">FieldFlags</a> flags, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#afb61e4c9ac50faf0cd72be455c7c03cf">TensorDataTypeMask</a> typeMask, std::vector&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> &gt; &amp;dimensions)</td></tr>
+<tr class="memitem:ad6d98c739f3147be401c3deaaa5db821" id="r_ad6d98c739f3147be401c3deaaa5db821"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6d98c739f3147be401c3deaaa5db821">AddOutputTensor</a> (const char *name, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0">FieldFlags</a> flags, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#afb61e4c9ac50faf0cd72be455c7c03cf">TensorDataTypeMask</a> typeMask, std::vector&lt; <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> &gt; &amp;dimensions)</td></tr>
 <tr class="separator:ad6d98c739f3147be401c3deaaa5db821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad807b9209126883a544df353d28ed47d" id="r_ad807b9209126883a544df353d28ed47d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad807b9209126883a544df353d28ed47d">AddBoolean</a> (const char *name, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0">FieldFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0a6adf97f83acf6453d4a6a4b1070f3754">FieldFlags::None</a>)</td></tr>
 <tr class="separator:ad807b9209126883a544df353d28ed47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,7 +157,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a54ca0843669d5a90608076e5050c7437"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade92357095cba01fb231373dcdab7878" id="r_ade92357095cba01fb231373dcdab7878"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade92357095cba01fb231373dcdab7878">AddSize2D</a> (const char *name, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0">FieldFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0a6adf97f83acf6453d4a6a4b1070f3754">FieldFlags::None</a>)</td></tr>
 <tr class="separator:ade92357095cba01fb231373dcdab7878"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5323d416d9873007d3a37b10adf65230" id="r_a5323d416d9873007d3a37b10adf65230"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5323d416d9873007d3a37b10adf65230">AddSize</a> (const char *name, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> fieldCount, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0">FieldFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0a6adf97f83acf6453d4a6a4b1070f3754">FieldFlags::None</a>)</td></tr>
+<tr class="memitem:a5323d416d9873007d3a37b10adf65230" id="r_a5323d416d9873007d3a37b10adf65230"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5323d416d9873007d3a37b10adf65230">AddSize</a> (const char *name, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> fieldCount, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0">FieldFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0a6adf97f83acf6453d4a6a4b1070f3754">FieldFlags::None</a>)</td></tr>
 <tr class="separator:a5323d416d9873007d3a37b10adf65230"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c3b74fd0a57238cb44c23881c045efe" id="r_a3c3b74fd0a57238cb44c23881c045efe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c3b74fd0a57238cb44c23881c045efe">AddScalarUnion</a> (const char *name, <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0">FieldFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l.html#aef8f25f28dadcd0c9752eac80f9db1f0a6adf97f83acf6453d4a6a4b1070f3754">FieldFlags::None</a>)</td></tr>
 <tr class="separator:a3c3b74fd0a57238cb44c23881c045efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -412,7 +421,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dimensions</em></span>&#160;)</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dimensions</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -635,7 +644,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dimensions</em></span>&#160;)</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dimensions</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -790,7 +799,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>fieldCount</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>fieldCount</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

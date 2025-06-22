@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -117,7 +126,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7336e820bc1bf2b0caff8b90d80be3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af587bbf2ca0cc65786f5a956fe0933b9" id="r_af587bbf2ca0cc65786f5a956fe0933b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af587bbf2ca0cc65786f5a956fe0933b9">ComBuffer</a> (size_t <a class="el" href="#af1bd6c4c2343625ab825ab572b44f0bd">size</a>)</td></tr>
 <tr class="separator:af587bbf2ca0cc65786f5a956fe0933b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a123efefe673d440dde04f15cb8a9d27c" id="r_a123efefe673d440dde04f15cb8a9d27c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a123efefe673d440dde04f15cb8a9d27c">ComBuffer</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *<a class="el" href="#a71f26ac4d2ceec1b41384d869635d88a">data</a>, size_t <a class="el" href="#af1bd6c4c2343625ab825ab572b44f0bd">size</a>)</td></tr>
+<tr class="memitem:a123efefe673d440dde04f15cb8a9d27c" id="r_a123efefe673d440dde04f15cb8a9d27c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a123efefe673d440dde04f15cb8a9d27c">ComBuffer</a> (<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *<a class="el" href="#a71f26ac4d2ceec1b41384d869635d88a">data</a>, size_t <a class="el" href="#af1bd6c4c2343625ab825ab572b44f0bd">size</a>)</td></tr>
 <tr class="separator:a123efefe673d440dde04f15cb8a9d27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a902250169b02d16da6b0c1a7c1974be8" id="r_a902250169b02d16da6b0c1a7c1974be8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a902250169b02d16da6b0c1a7c1974be8">ComBuffer</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_com_buffer.html">ComBuffer</a> &amp;other)=delete</td></tr>
 <tr class="separator:a902250169b02d16da6b0c1a7c1974be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,20 +142,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af1bd6c4c2343625ab825ab572b44f0bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb3c417aaa5777b964b11846654f7632" id="r_abb3c417aaa5777b964b11846654f7632"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb3c417aaa5777b964b11846654f7632">resize</a> (size_t newSize)</td></tr>
 <tr class="separator:abb3c417aaa5777b964b11846654f7632"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4826b3fdc08ee34c09e96665bafe978" id="r_ae4826b3fdc08ee34c09e96665bafe978"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4826b3fdc08ee34c09e96665bafe978">operator[]</a> (size_t index)</td></tr>
+<tr class="memitem:ae4826b3fdc08ee34c09e96665bafe978" id="r_ae4826b3fdc08ee34c09e96665bafe978"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4826b3fdc08ee34c09e96665bafe978">operator[]</a> (size_t index)</td></tr>
 <tr class="separator:ae4826b3fdc08ee34c09e96665bafe978"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecf6cc2d4dce18dce7a0dd93bc147569" id="r_aecf6cc2d4dce18dce7a0dd93bc147569"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecf6cc2d4dce18dce7a0dd93bc147569">operator[]</a> (size_t index) const</td></tr>
+<tr class="memitem:aecf6cc2d4dce18dce7a0dd93bc147569" id="r_aecf6cc2d4dce18dce7a0dd93bc147569"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecf6cc2d4dce18dce7a0dd93bc147569">operator[]</a> (size_t index) const</td></tr>
 <tr class="separator:aecf6cc2d4dce18dce7a0dd93bc147569"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71f26ac4d2ceec1b41384d869635d88a" id="r_a71f26ac4d2ceec1b41384d869635d88a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71f26ac4d2ceec1b41384d869635d88a">data</a> ()</td></tr>
+<tr class="memitem:a71f26ac4d2ceec1b41384d869635d88a" id="r_a71f26ac4d2ceec1b41384d869635d88a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71f26ac4d2ceec1b41384d869635d88a">data</a> ()</td></tr>
 <tr class="separator:a71f26ac4d2ceec1b41384d869635d88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cb26bb3dd33031f8d956d0afbbc1ace" id="r_a3cb26bb3dd33031f8d956d0afbbc1ace"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cb26bb3dd33031f8d956d0afbbc1ace">data</a> () const</td></tr>
+<tr class="memitem:a3cb26bb3dd33031f8d956d0afbbc1ace" id="r_a3cb26bb3dd33031f8d956d0afbbc1ace"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cb26bb3dd33031f8d956d0afbbc1ace">data</a> () const</td></tr>
 <tr class="separator:a3cb26bb3dd33031f8d956d0afbbc1ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ab68bc3aca01404f4f49fa29bcd21f1bb" id="r_ab68bc3aca01404f4f49fa29bcd21f1bb"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab68bc3aca01404f4f49fa29bcd21f1bb">size_</a> = 0</td></tr>
 <tr class="separator:ab68bc3aca01404f4f49fa29bcd21f1bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62f7b173c595cd95317a4651ec62a114" id="r_a62f7b173c595cd95317a4651ec62a114"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62f7b173c595cd95317a4651ec62a114">data_</a> = nullptr</td></tr>
+<tr class="memitem:a62f7b173c595cd95317a4651ec62a114" id="r_a62f7b173c595cd95317a4651ec62a114"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62f7b173c595cd95317a4651ec62a114">data_</a> = nullptr</td></tr>
 <tr class="separator:a62f7b173c595cd95317a4651ec62a114"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -215,7 +224,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Common::Core::ComBuffer::ComBuffer </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -318,7 +327,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> * Harlinn::Common::Core::ComBuffer::data </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> * Harlinn::Common::Core::ComBuffer::data </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -343,7 +352,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> * Harlinn::Common::Core::ComBuffer::data </td>
+          <td class="memname">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> * Harlinn::Common::Core::ComBuffer::data </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -418,7 +427,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> &amp; Harlinn::Common::Core::ComBuffer::operator[] </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> &amp; Harlinn::Common::Core::ComBuffer::operator[] </td>
           <td>(</td>
           <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
           <td></td>
@@ -443,7 +452,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> &amp; Harlinn::Common::Core::ComBuffer::operator[] </td>
+          <td class="memname">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> &amp; Harlinn::Common::Core::ComBuffer::operator[] </td>
           <td>(</td>
           <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
           <td> const</td>
@@ -519,7 +528,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>* Harlinn::Common::Core::ComBuffer::data_ = nullptr</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>* Harlinn::Common::Core::ComBuffer::data_ = nullptr</td>
         </tr>
       </table>
   </td>

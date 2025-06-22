@@ -176,6 +176,8 @@ var struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_
     [ "Permute", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#a2e4714cde33a4cdfef78e0927f3c25f0", null ],
     [ "Pow", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#a337d757cf9ebc88cd6a56e0acc3f0bdc", null ],
     [ "QuaternionMultiply", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#aaa379407829876889275f809477a6d73", null ],
+    [ "Reciprocal", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#a740929fdd63cab43f252c62bcecb713b", null ],
+    [ "ReciprocalSqrt", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#af1c5a6abf97c171d71ba5a3b0f49a808", null ],
     [ "Round", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#a7d5bcf95ff627f366ed3bb7d9e531d14", null ],
     [ "SameValue", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#a5c176f3899003bd784eb95d77a5cfc71", null ],
     [ "SameValue", "struct_harlinn_1_1_common_1_1_core_1_1_s_i_m_d_1_1_traits_3_01float_00_01_n_01_4.html#ac633b38a360fc569389a0a19b981cd8c", null ],

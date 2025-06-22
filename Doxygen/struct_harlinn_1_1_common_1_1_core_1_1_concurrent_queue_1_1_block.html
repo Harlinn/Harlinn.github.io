@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -130,9 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aba13abbea5db0066c0bd9b5e27ffc07a" id="r_aba13abbea5db0066c0bd9b5e27ffc07a"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#af755981fa3774dcd5e0c41e354150ec0">InnerQueueContext</a> context&gt; </td></tr>
 <tr class="memitem:aba13abbea5db0066c0bd9b5e27ffc07a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aba13abbea5db0066c0bd9b5e27ffc07a">reset_empty</a> ()</td></tr>
 <tr class="separator:aba13abbea5db0066c0bd9b5e27ffc07a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af16e74d155fd967b372501571528eb14" id="r_af16e74d155fd967b372501571528eb14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af16e74d155fd967b372501571528eb14">operator[]</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a72c1477f639dea18113e709291ebb4dc">index_t</a> idx) noexcept</td></tr>
+<tr class="memitem:af16e74d155fd967b372501571528eb14" id="r_af16e74d155fd967b372501571528eb14"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af16e74d155fd967b372501571528eb14">operator[]</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a72c1477f639dea18113e709291ebb4dc">index_t</a> idx) noexcept</td></tr>
 <tr class="separator:af16e74d155fd967b372501571528eb14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2d42205ba5704036ac3622921f2ca9a" id="r_af2d42205ba5704036ac3622921f2ca9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2d42205ba5704036ac3622921f2ca9a">operator[]</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a72c1477f639dea18113e709291ebb4dc">index_t</a> idx) const noexcept</td></tr>
+<tr class="memitem:af2d42205ba5704036ac3622921f2ca9a" id="r_af2d42205ba5704036ac3622921f2ca9a"><td class="memItemLeft" align="right" valign="top">T const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2d42205ba5704036ac3622921f2ca9a">operator[]</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a72c1477f639dea18113e709291ebb4dc">index_t</a> idx) const noexcept</td></tr>
 <tr class="separator:af2d42205ba5704036ac3622921f2ca9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -152,7 +161,7 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:ab55eb093aa6d1c022fe03cbb87e79639" id="r_ab55eb093aa6d1c022fe03cbb87e79639"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab55eb093aa6d1c022fe03cbb87e79639">MOODYCAMEL_ALIGNED_TYPE_LIKE</a> (char[sizeof(<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>) *<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a721a012a691c3142acf3c409715ff8df">BLOCK_SIZE</a>], <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>) elements</td></tr>
+<tr class="memitem:ab55eb093aa6d1c022fe03cbb87e79639" id="r_ab55eb093aa6d1c022fe03cbb87e79639"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab55eb093aa6d1c022fe03cbb87e79639">MOODYCAMEL_ALIGNED_TYPE_LIKE</a> (char[sizeof(T) *<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a721a012a691c3142acf3c409715ff8df">BLOCK_SIZE</a>], T) elements</td></tr>
 <tr class="separator:ab55eb093aa6d1c022fe03cbb87e79639"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -162,13 +171,13 @@ Private Member Functions</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::Block </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::Block </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -190,7 +199,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
 <div class="memtemplate">
 template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#af755981fa3774dcd5e0c41e354150ec0">InnerQueueContext</a> context&gt; </div>
 <table class="mlabels">
@@ -198,7 +207,7 @@ template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::is_empty </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::is_empty </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -219,20 +228,20 @@ template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::MOODYCAMEL_ALIGNED_TYPE_LIKE </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::MOODYCAMEL_ALIGNED_TYPE_LIKE </td>
           <td>(</td>
           <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em></em></span>[sizeof(T) *BLOCK_SIZE], </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -250,13 +259,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> const  * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::operator[] </td>
+          <td class="memname">T const  * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::operator[] </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a72c1477f639dea18113e709291ebb4dc">index_t</a></td>          <td class="paramname"><span class="paramname"><em>idx</em></span></td><td>)</td>
           <td> const</td>
@@ -277,13 +286,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::operator[] </td>
+          <td class="memname">T * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::operator[] </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a72c1477f639dea18113e709291ebb4dc">index_t</a></td>          <td class="paramname"><span class="paramname"><em>idx</em></span></td><td>)</td>
           <td></td>
@@ -304,7 +313,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
 <div class="memtemplate">
 template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#af755981fa3774dcd5e0c41e354150ec0">InnerQueueContext</a> context&gt; </div>
 <table class="mlabels">
@@ -312,7 +321,7 @@ template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::reset_empty </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::reset_empty </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -333,7 +342,7 @@ template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
 <div class="memtemplate">
 template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#af755981fa3774dcd5e0c41e354150ec0">InnerQueueContext</a> context&gt; </div>
 <table class="mlabels">
@@ -341,7 +350,7 @@ template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::set_all_empty </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::set_all_empty </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -362,7 +371,7 @@ template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
 <div class="memtemplate">
 template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#af755981fa3774dcd5e0c41e354150ec0">InnerQueueContext</a> context&gt; </div>
 <table class="mlabels">
@@ -370,7 +379,7 @@ template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::set_empty </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::set_empty </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a72c1477f639dea18113e709291ebb4dc">index_t</a></td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
           <td></td>
@@ -391,7 +400,7 @@ template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
 <div class="memtemplate">
 template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#af755981fa3774dcd5e0c41e354150ec0">InnerQueueContext</a> context&gt; </div>
 <table class="mlabels">
@@ -399,7 +408,7 @@ template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::set_many_empty </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::set_many_empty </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a72c1477f639dea18113e709291ebb4dc">index_t</a></td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
         </tr>
@@ -425,10 +434,10 @@ template&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::dynamicallyAllocated</td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::dynamicallyAllocated</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -441,10 +450,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#ae56b559143f44deae0679b6b9c451dc1">size_t</a>&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::elementsCompletelyDequeued</td>
+          <td class="memname">std::atomic&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#ae56b559143f44deae0679b6b9c451dc1">size_t</a>&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::elementsCompletelyDequeued</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -457,10 +466,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;bool&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::emptyFlags[<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a721a012a691c3142acf3c409715ff8df">BLOCK_SIZE</a>&lt;=<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#afb7803ed41262d637a4611dff0c5027c">EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD</a> ? <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a721a012a691c3142acf3c409715ff8df">BLOCK_SIZE</a> :1]</td>
+          <td class="memname">std::atomic&lt;bool&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::emptyFlags[<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a721a012a691c3142acf3c409715ff8df">BLOCK_SIZE</a>&lt;=<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#afb7803ed41262d637a4611dff0c5027c">EXPLICIT_BLOCK_EMPTY_COUNTER_THRESHOLD</a> ? <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html#a721a012a691c3142acf3c409715ff8df">BLOCK_SIZE</a> :1]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -473,10 +482,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;<a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_block.html">Block</a>*&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::freeListNext</td>
+          <td class="memname">std::atomic&lt;<a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_block.html">Block</a>*&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::freeListNext</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -489,10 +498,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;std::uint32_t&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::freeListRefs</td>
+          <td class="memname">std::atomic&lt;std::uint32_t&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::freeListRefs</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -505,10 +514,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
+template&lt;typename T , typename Traits  = ConcurrentQueueDefaultTraits&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_block.html">Block</a>* <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>, Traits &gt;::Block::next</td>
+          <td class="memname"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_concurrent_queue_1_1_block.html">Block</a>* <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_concurrent_queue.html">Harlinn::Common::Core::ConcurrentQueue</a>&lt; T, Traits &gt;::Block::next</td>
         </tr>
       </table>
 </div><div class="memdoc">

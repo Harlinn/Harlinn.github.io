@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -109,14 +118,14 @@ $(function(){initNavTree('struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_inter
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a8cd5d187e9337cfec991aff72deaf602" id="r_a8cd5d187e9337cfec991aff72deaf602"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cd5d187e9337cfec991aff72deaf602">TypeTraits</a> = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
+<tr class="memitem:a8cd5d187e9337cfec991aff72deaf602" id="r_a8cd5d187e9337cfec991aff72deaf602"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cd5d187e9337cfec991aff72deaf602">TypeTraits</a> = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;T&gt;</td></tr>
 <tr class="separator:a8cd5d187e9337cfec991aff72deaf602"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c8d8f4751b3e0443d52ac19f6e6ba08" id="r_a8c8d8f4751b3e0443d52ac19f6e6ba08"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c8d8f4751b3e0443d52ac19f6e6ba08">ElementType</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_meta.html#ab5b409558be9238c75f4d2ffa85e1b0b">Meta::At</a>&lt; typename TypeTraits::Types, i&gt;</td></tr>
 <tr class="separator:a8c8d8f4751b3e0443d52ac19f6e6ba08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:ae29ccc95fc0cff32f59d0335d770934c" id="r_ae29ccc95fc0cff32f59d0335d770934c"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae29ccc95fc0cff32f59d0335d770934c">value</a> = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_packed_size_of.html">PackedSizeOf</a>&lt;<a class="el" href="#a8c8d8f4751b3e0443d52ac19f6e6ba08">ElementType</a>&gt;::value + <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_packed_size_of.html">VariadicStructureTypePackedSizeOf</a>&lt;i - 1, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;::value</td></tr>
+<tr class="memitem:ae29ccc95fc0cff32f59d0335d770934c" id="r_ae29ccc95fc0cff32f59d0335d770934c"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae29ccc95fc0cff32f59d0335d770934c">value</a> = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_packed_size_of.html">PackedSizeOf</a>&lt;<a class="el" href="#a8c8d8f4751b3e0443d52ac19f6e6ba08">ElementType</a>&gt;::value + <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_packed_size_of.html">VariadicStructureTypePackedSizeOf</a>&lt;i - 1, T&gt;::value</td></tr>
 <tr class="separator:ae29ccc95fc0cff32f59d0335d770934c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
@@ -126,10 +135,10 @@ Static Public Attributes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;size_t i, typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;size_t i, typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_packed_size_of.html">Harlinn::Common::Core::Types::Internal::VariadicStructureTypePackedSizeOf</a>&lt; i, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::ElementType = <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_meta.html#ab5b409558be9238c75f4d2ffa85e1b0b">Meta::At</a>&lt; typename TypeTraits::Types, i&gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_packed_size_of.html">Harlinn::Common::Core::Types::Internal::VariadicStructureTypePackedSizeOf</a>&lt; i, T &gt;::ElementType = <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_meta.html#ab5b409558be9238c75f4d2ffa85e1b0b">Meta::At</a>&lt; typename TypeTraits::Types, i&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -142,10 +151,10 @@ template&lt;size_t i, typename <a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;size_t i, typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;size_t i, typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_packed_size_of.html">Harlinn::Common::Core::Types::Internal::VariadicStructureTypePackedSizeOf</a>&lt; i, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::TypeTraits = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_packed_size_of.html">Harlinn::Common::Core::Types::Internal::VariadicStructureTypePackedSizeOf</a>&lt; i, T &gt;::TypeTraits = typename <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_type_traits.html">Types::TypeTraits</a>&lt;T&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -159,13 +168,13 @@ template&lt;size_t i, typename <a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;size_t i, typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;size_t i, typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_packed_size_of.html">Harlinn::Common::Core::Types::Internal::VariadicStructureTypePackedSizeOf</a>&lt; i, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::value = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_packed_size_of.html">PackedSizeOf</a>&lt;<a class="el" href="#a8c8d8f4751b3e0443d52ac19f6e6ba08">ElementType</a>&gt;::value + <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_packed_size_of.html">VariadicStructureTypePackedSizeOf</a>&lt;i - 1, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;::value</td>
+          <td class="memname">size_t <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_packed_size_of.html">Harlinn::Common::Core::Types::Internal::VariadicStructureTypePackedSizeOf</a>&lt; i, T &gt;::value = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_packed_size_of.html">PackedSizeOf</a>&lt;<a class="el" href="#a8c8d8f4751b3e0443d52ac19f6e6ba08">ElementType</a>&gt;::value + <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_variadic_structure_type_packed_size_of.html">VariadicStructureTypePackedSizeOf</a>&lt;i - 1, T&gt;::value</td>
         </tr>
       </table>
   </td>

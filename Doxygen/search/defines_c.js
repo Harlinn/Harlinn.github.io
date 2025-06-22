@@ -1,24 +1,4 @@
 var searchData=
 [
-  ['oci_5fautotuned_5fstmt_5fcache_0',['OCI_AUTOTUNED_STMT_CACHE',['../_h_o_c_i_enums_8h.html#a99d2db0a9dbb9200962167198971fc9c',1,'HOCIEnums.h']]],
-  ['oci_5fdirpath_5fdefaults_5fdefault_1',['OCI_DIRPATH_DEFAULTS_DEFAULT',['../_h_o_c_i_enums_8h.html#a59130b92a3cd75cdd65aad3b955abe02',1,'HOCIEnums.h']]],
-  ['oci_5fdirpath_5fdefaults_5fevaluate_5fevery_5frow_2',['OCI_DIRPATH_DEFAULTS_EVALUATE_EVERY_ROW',['../_h_o_c_i_enums_8h.html#ae0dc247caa5de9157eec0493c8bd32dd',1,'HOCIEnums.h']]],
-  ['oci_5fdirpath_5fdefaults_5fevaluate_5fonce_3',['OCI_DIRPATH_DEFAULTS_EVALUATE_ONCE',['../_h_o_c_i_enums_8h.html#a3d62528f3f7a3efe9f550158e8abbe22',1,'HOCIEnums.h']]],
-  ['oci_5fdirpath_5fdefaults_5fignore_4',['OCI_DIRPATH_DEFAULTS_IGNORE',['../_h_o_c_i_enums_8h.html#a11de6d40a82a623aa3104bcc732ffee8',1,'HOCIEnums.h']]],
-  ['oci_5fdirpath_5fdefaults_5fignore_5funsupported_5fevaluate_5fevery_5frow_5',['OCI_DIRPATH_DEFAULTS_IGNORE_UNSUPPORTED_EVALUATE_EVERY_ROW',['../_h_o_c_i_enums_8h.html#ae6eed624026980eeac023b9b4881dae7',1,'HOCIEnums.h']]],
-  ['oci_5fdirpath_5fdefaults_5fignore_5funsupported_5fevaluate_5fonce_6',['OCI_DIRPATH_DEFAULTS_IGNORE_UNSUPPORTED_EVALUATE_ONCE',['../_h_o_c_i_enums_8h.html#aac45dffd314bf7be362b29fa3959267a',1,'HOCIEnums.h']]],
-  ['oci_5fha_5fstatus_5fdown_7',['OCI_HA_STATUS_DOWN',['../_h_o_c_i_enums_8h.html#abee1b3ec41927fd94f6b727ba6d7f360',1,'HOCIEnums.h']]],
-  ['oci_5fha_5fstatus_5fup_8',['OCI_HA_STATUS_UP',['../_h_o_c_i_enums_8h.html#a9862896b7ebb8c41f6aa456975f1286b',1,'HOCIEnums.h']]],
-  ['oci_5fsession_5fstateful_9',['OCI_SESSION_STATEFUL',['../_h_o_c_i_enums_8h.html#a364b9d2602a000b874335ce07e73fe69',1,'HOCIEnums.h']]],
-  ['oci_5fsession_5fstateless_10',['OCI_SESSION_STATELESS',['../_h_o_c_i_enums_8h.html#a003dfaabf7be0a6411eea0b3cd78448c',1,'HOCIEnums.h']]],
-  ['oci_5fsession_5fstateless_5fapp_11',['OCI_SESSION_STATELESS_APP',['../_h_o_c_i_enums_8h.html#ab7843324886cd98d31609f4e61f52974',1,'HOCIEnums.h']]],
-  ['oci_5fsession_5fstateless_5fcal_12',['OCI_SESSION_STATELESS_CAL',['../_h_o_c_i_enums_8h.html#a819532e77b785560a106a411e91a0d78',1,'HOCIEnums.h']]],
-  ['oci_5fsession_5fstateless_5fdef_13',['OCI_SESSION_STATELESS_DEF',['../_h_o_c_i_enums_8h.html#a6a0f5d09457a82caa685a59c79ebd142',1,'HOCIEnums.h']]],
-  ['oci_5fsession_5fstateless_5ftxn_14',['OCI_SESSION_STATELESS_TXN',['../_h_o_c_i_enums_8h.html#a5ae63a7ce8db3fc091d30d5d4822155a',1,'HOCIEnums.h']]],
-  ['oemresource_15',['OEMRESOURCE',['../_h_c_c_def_8h.html#a3a75770af38d05856eb2e9d1867b471c',1,'HCCDef.h']]],
-  ['olm_5fdllexport_16',['OLM_DLLEXPORT',['../openlibm__defs_8h.html#a1f74bd5115955e86bc1032b0ba55be3e',1,'openlibm_defs.h']]],
-  ['olm_5flong_5fdouble_17',['OLM_LONG_DOUBLE',['../openlibm__math_8h.html#a159941cb8ad32a4d5ef08c55ff0d96be',1,'openlibm_math.h']]],
-  ['one_18',['one',['../k__tan_8inl.html#a7cf126dbeb6f30c606e3b42fea65cfef',1,'k_tan.inl']]],
-  ['openlibm_5fcomplex_5fh_19',['OPENLIBM_COMPLEX_H',['../openlibm__complex_8h.html#a423619494f2920abdcf3d88957e1a8e2',1,'openlibm_complex.h']]],
-  ['openlibm_5fmath_5fh_20',['OPENLIBM_MATH_H',['../openlibm__math_8h.html#a84ea3dee8e6ae1a422cb4388428185a5',1,'openlibm_math.h']]]
+  ['poly_0',['POLY',['../_h_c_c_c_r_c32_8cpp.html#aa55bbb692b1c5e89d3a5c3bee1ce8399',1,'HCCCRC32.cpp']]]
 ];

@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -116,13 +125,13 @@ Collaboration diagram for Harlinn::Common::Core::OwnerVector&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ae6505f7b0170a2afd9b6021e28b42224" id="r_ae6505f7b0170a2afd9b6021e28b42224"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6505f7b0170a2afd9b6021e28b42224">VectorType</a> = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>*&gt;</td></tr>
+<tr class="memitem:ae6505f7b0170a2afd9b6021e28b42224" id="r_ae6505f7b0170a2afd9b6021e28b42224"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6505f7b0170a2afd9b6021e28b42224">VectorType</a> = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt;T*&gt;</td></tr>
 <tr class="separator:ae6505f7b0170a2afd9b6021e28b42224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21a19ec03c5f51ea6aae035eebc16435" id="r_a21a19ec03c5f51ea6aae035eebc16435"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a> = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html#a80b981c6bb999b01ab16c7212fce2c77">VectorType::size_type</a></td></tr>
 <tr class="separator:a21a19ec03c5f51ea6aae035eebc16435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1296b6b8c6cf48c64e1a389443ba828" id="r_ac1296b6b8c6cf48c64e1a389443ba828"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1296b6b8c6cf48c64e1a389443ba828">difference_type</a> = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a54aa9178314227d441276b6ec4d8a0ea">VectorType::difference_type</a></td></tr>
 <tr class="separator:ac1296b6b8c6cf48c64e1a389443ba828"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12d7560d7cd40cc26075b26516c72dd8" id="r_a12d7560d7cd40cc26075b26516c72dd8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12d7560d7cd40cc26075b26516c72dd8">value_type</a> = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>*</td></tr>
+<tr class="memitem:a12d7560d7cd40cc26075b26516c72dd8" id="r_a12d7560d7cd40cc26075b26516c72dd8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12d7560d7cd40cc26075b26516c72dd8">value_type</a> = T*</td></tr>
 <tr class="separator:a12d7560d7cd40cc26075b26516c72dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9684d1a0d936dbeb2dd8c4e0304c403a" id="r_a9684d1a0d936dbeb2dd8c4e0304c403a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9684d1a0d936dbeb2dd8c4e0304c403a">pointer</a> = <a class="el" href="#a12d7560d7cd40cc26075b26516c72dd8">value_type</a>*</td></tr>
 <tr class="separator:a9684d1a0d936dbeb2dd8c4e0304c403a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,7 +160,7 @@ Public Member Functions</h2></td></tr>
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9765bf4143d8820765b98dea5b">IsIterator_v</a>&lt;It&gt;</td></tr>
 <tr class="memitem:a3d34036d88f58ff2925456a6d6445f71"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a3d34036d88f58ff2925456a6d6445f71">OwnerVector</a> (It first, It last)</td></tr>
 <tr class="separator:a3d34036d88f58ff2925456a6d6445f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a561fe2d4b5ccf180b161aac34ae7abf1" id="r_a561fe2d4b5ccf180b161aac34ae7abf1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a561fe2d4b5ccf180b161aac34ae7abf1">OwnerVector</a> (std::initializer_list&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * &gt; values)</td></tr>
+<tr class="memitem:a561fe2d4b5ccf180b161aac34ae7abf1" id="r_a561fe2d4b5ccf180b161aac34ae7abf1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a561fe2d4b5ccf180b161aac34ae7abf1">OwnerVector</a> (std::initializer_list&lt; T * &gt; values)</td></tr>
 <tr class="separator:a561fe2d4b5ccf180b161aac34ae7abf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad35c86c9117e7f741bb8dafe2cf514b3" id="r_ad35c86c9117e7f741bb8dafe2cf514b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad35c86c9117e7f741bb8dafe2cf514b3">OwnerVector</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a> &amp;other)</td></tr>
 <tr class="separator:ad35c86c9117e7f741bb8dafe2cf514b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,9 +184,9 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9
 <tr class="separator:a4b0b1d3dbc29e072e8fd7affe80bfe43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a587e8a58359b50fefd03c9b4a9406f7e" id="r_a587e8a58359b50fefd03c9b4a9406f7e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a587e8a58359b50fefd03c9b4a9406f7e">operator!=</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a> &amp;other) const</td></tr>
 <tr class="separator:a587e8a58359b50fefd03c9b4a9406f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76e4b2a6a99eef2a2527cd68393a5931" id="r_a76e4b2a6a99eef2a2527cd68393a5931"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76e4b2a6a99eef2a2527cd68393a5931">operator==</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * &gt; &amp;other) const</td></tr>
+<tr class="memitem:a76e4b2a6a99eef2a2527cd68393a5931" id="r_a76e4b2a6a99eef2a2527cd68393a5931"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76e4b2a6a99eef2a2527cd68393a5931">operator==</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T * &gt; &amp;other) const</td></tr>
 <tr class="separator:a76e4b2a6a99eef2a2527cd68393a5931"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafb7f4402fb2da8a5785e47124ba8ef1" id="r_aafb7f4402fb2da8a5785e47124ba8ef1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafb7f4402fb2da8a5785e47124ba8ef1">operator!=</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * &gt; &amp;other) const</td></tr>
+<tr class="memitem:aafb7f4402fb2da8a5785e47124ba8ef1" id="r_aafb7f4402fb2da8a5785e47124ba8ef1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafb7f4402fb2da8a5785e47124ba8ef1">operator!=</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T * &gt; &amp;other) const</td></tr>
 <tr class="separator:aafb7f4402fb2da8a5785e47124ba8ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0daec5b030360b096488c3370bfc57cf" id="r_a0daec5b030360b096488c3370bfc57cf"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0daec5b030360b096488c3370bfc57cf">empty</a> () const noexcept</td></tr>
 <tr class="separator:a0daec5b030360b096488c3370bfc57cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,9 +198,9 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9
 <tr class="separator:adbc9f52b320754ebd762cdeabd15d92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ac22821610ddacc2ac4738308376512" id="r_a2ac22821610ddacc2ac4738308376512"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ac22821610ddacc2ac4738308376512">capacity</a> () const noexcept</td></tr>
 <tr class="separator:a2ac22821610ddacc2ac4738308376512"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7d1bac0979ec2d2c6b386f8e7e8ae2c" id="r_aa7d1bac0979ec2d2c6b386f8e7e8ae2c"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7d1bac0979ec2d2c6b386f8e7e8ae2c">operator[]</a> (<a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a> i) noexcept</td></tr>
+<tr class="memitem:aa7d1bac0979ec2d2c6b386f8e7e8ae2c" id="r_aa7d1bac0979ec2d2c6b386f8e7e8ae2c"><td class="memItemLeft" align="right" valign="top">constexpr T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7d1bac0979ec2d2c6b386f8e7e8ae2c">operator[]</a> (<a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a> i) noexcept</td></tr>
 <tr class="separator:aa7d1bac0979ec2d2c6b386f8e7e8ae2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19b0b345f2157b9177b287b4e630b479" id="r_a19b0b345f2157b9177b287b4e630b479"><td class="memItemLeft" align="right" valign="top">constexpr const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19b0b345f2157b9177b287b4e630b479">operator[]</a> (<a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a> i) const noexcept</td></tr>
+<tr class="memitem:a19b0b345f2157b9177b287b4e630b479" id="r_a19b0b345f2157b9177b287b4e630b479"><td class="memItemLeft" align="right" valign="top">constexpr const T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19b0b345f2157b9177b287b4e630b479">operator[]</a> (<a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a> i) const noexcept</td></tr>
 <tr class="separator:a19b0b345f2157b9177b287b4e630b479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1aaff0f065b9d09d85c4fa5b9e521dc9" id="r_a1aaff0f065b9d09d85c4fa5b9e521dc9"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1aaff0f065b9d09d85c4fa5b9e521dc9">begin</a> () noexcept</td></tr>
 <tr class="separator:a1aaff0f065b9d09d85c4fa5b9e521dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,9 +230,9 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9
 <tr class="separator:a7d9056b6de35d7275d745c596267fa9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe7028c359b7b8b1f935f80ddafdddaf" id="r_afe7028c359b7b8b1f935f80ddafdddaf"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a705022c481b4de0fd858399ca533b82b">const_pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe7028c359b7b8b1f935f80ddafdddaf">data</a> () const noexcept</td></tr>
 <tr class="separator:afe7028c359b7b8b1f935f80ddafdddaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c733c2802fcab9bd635c97721d13a34" id="r_a1c733c2802fcab9bd635c97721d13a34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c733c2802fcab9bd635c97721d13a34">Raw</a> ()</td></tr>
+<tr class="memitem:a1c733c2802fcab9bd635c97721d13a34" id="r_a1c733c2802fcab9bd635c97721d13a34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c733c2802fcab9bd635c97721d13a34">Raw</a> ()</td></tr>
 <tr class="separator:a1c733c2802fcab9bd635c97721d13a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8481762019dd41ce0c7f0022018a1e5f" id="r_a8481762019dd41ce0c7f0022018a1e5f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8481762019dd41ce0c7f0022018a1e5f">Raw</a> () const</td></tr>
+<tr class="memitem:a8481762019dd41ce0c7f0022018a1e5f" id="r_a8481762019dd41ce0c7f0022018a1e5f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8481762019dd41ce0c7f0022018a1e5f">Raw</a> () const</td></tr>
 <tr class="separator:a8481762019dd41ce0c7f0022018a1e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affbace20721aeb3ad6b5dd7c73a8371c" id="r_affbace20721aeb3ad6b5dd7c73a8371c"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#ab49c919f00bfd1842b4629df512a6e74">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affbace20721aeb3ad6b5dd7c73a8371c">front</a> () noexcept</td></tr>
 <tr class="separator:affbace20721aeb3ad6b5dd7c73a8371c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -233,7 +242,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9
 <tr class="separator:acbe912bf574d9df2b281876af1940073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ad3a508bf093685c58c33983e75a5d1" id="r_a3ad3a508bf093685c58c33983e75a5d1"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#aa4b8f5f5ca93cfffe9de9e16627fe636">const_reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ad3a508bf093685c58c33983e75a5d1">back</a> () const noexcept</td></tr>
 <tr class="separator:a3ad3a508bf093685c58c33983e75a5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad393c2ac28d2fb589cf1031d446a90d9" id="r_ad393c2ac28d2fb589cf1031d446a90d9"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad393c2ac28d2fb589cf1031d446a90d9">swap</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * &gt; &amp;other)</td></tr>
+<tr class="memitem:ad393c2ac28d2fb589cf1031d446a90d9" id="r_ad393c2ac28d2fb589cf1031d446a90d9"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad393c2ac28d2fb589cf1031d446a90d9">swap</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T * &gt; &amp;other)</td></tr>
 <tr class="separator:ad393c2ac28d2fb589cf1031d446a90d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab70fbc638bdf6be0574b009758d15dea" id="r_ab70fbc638bdf6be0574b009758d15dea"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab70fbc638bdf6be0574b009758d15dea">swap</a> (<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a> &amp;other)</td></tr>
 <tr class="separator:ab70fbc638bdf6be0574b009758d15dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,44 +250,44 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9
 <tr class="separator:a1be48c98957debbb26630244e3e501c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a824dcf286b6315d4dc21383d77cb1572" id="r_a824dcf286b6315d4dc21383d77cb1572"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a824dcf286b6315d4dc21383d77cb1572">reserve</a> (<a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a> requiredCapacity)</td></tr>
 <tr class="separator:a824dcf286b6315d4dc21383d77cb1572"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac5077270da8660ecf72beaa97f029d3" id="r_aac5077270da8660ecf72beaa97f029d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab49c919f00bfd1842b4629df512a6e74">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac5077270da8660ecf72beaa97f029d3">emplace_back</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr)</td></tr>
+<tr class="memitem:aac5077270da8660ecf72beaa97f029d3" id="r_aac5077270da8660ecf72beaa97f029d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab49c919f00bfd1842b4629df512a6e74">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac5077270da8660ecf72beaa97f029d3">emplace_back</a> (T *ptr)</td></tr>
 <tr class="separator:aac5077270da8660ecf72beaa97f029d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab66f26a6437b13f79aad403142334a3f" id="r_ab66f26a6437b13f79aad403142334a3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab49c919f00bfd1842b4629df512a6e74">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab66f26a6437b13f79aad403142334a3f">emplace_front</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr)</td></tr>
+<tr class="memitem:ab66f26a6437b13f79aad403142334a3f" id="r_ab66f26a6437b13f79aad403142334a3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab49c919f00bfd1842b4629df512a6e74">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab66f26a6437b13f79aad403142334a3f">emplace_front</a> (T *ptr)</td></tr>
 <tr class="separator:ab66f26a6437b13f79aad403142334a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d2df811f204c6adc5a8757027e683f1" id="r_a6d2df811f204c6adc5a8757027e683f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d2df811f204c6adc5a8757027e683f1">emplace</a> (<a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> it, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr)</td></tr>
+<tr class="memitem:a6d2df811f204c6adc5a8757027e683f1" id="r_a6d2df811f204c6adc5a8757027e683f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d2df811f204c6adc5a8757027e683f1">emplace</a> (<a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> it, T *ptr)</td></tr>
 <tr class="separator:a6d2df811f204c6adc5a8757027e683f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ce71bb75af0e26d8cd1b98966856e26" id="r_a3ce71bb75af0e26d8cd1b98966856e26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ce71bb75af0e26d8cd1b98966856e26">push_back</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr)</td></tr>
+<tr class="memitem:a3ce71bb75af0e26d8cd1b98966856e26" id="r_a3ce71bb75af0e26d8cd1b98966856e26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ce71bb75af0e26d8cd1b98966856e26">push_back</a> (T *ptr)</td></tr>
 <tr class="separator:a3ce71bb75af0e26d8cd1b98966856e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6b9c8e04591f0125b84b3986b82b8ad" id="r_ae6b9c8e04591f0125b84b3986b82b8ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6b9c8e04591f0125b84b3986b82b8ad">push_front</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr)</td></tr>
+<tr class="memitem:ae6b9c8e04591f0125b84b3986b82b8ad" id="r_ae6b9c8e04591f0125b84b3986b82b8ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6b9c8e04591f0125b84b3986b82b8ad">push_front</a> (T *ptr)</td></tr>
 <tr class="separator:ae6b9c8e04591f0125b84b3986b82b8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e949f778fc743187c150051548fb6b5" id="r_a8e949f778fc743187c150051548fb6b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e949f778fc743187c150051548fb6b5">erase</a> (<a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> it)</td></tr>
 <tr class="separator:a8e949f778fc743187c150051548fb6b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe48107f252602a71527360ffe6312cc" id="r_afe48107f252602a71527360ffe6312cc"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe48107f252602a71527360ffe6312cc">release</a> (<a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> it)</td></tr>
+<tr class="memitem:afe48107f252602a71527360ffe6312cc" id="r_afe48107f252602a71527360ffe6312cc"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe48107f252602a71527360ffe6312cc">release</a> (<a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> it)</td></tr>
 <tr class="separator:afe48107f252602a71527360ffe6312cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ae7e722622e2db35a1df0b506183a31" id="r_a8ae7e722622e2db35a1df0b506183a31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ae7e722622e2db35a1df0b506183a31">insert</a> (<a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> it, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr)</td></tr>
+<tr class="memitem:a8ae7e722622e2db35a1df0b506183a31" id="r_a8ae7e722622e2db35a1df0b506183a31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ae7e722622e2db35a1df0b506183a31">insert</a> (<a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> it, T *ptr)</td></tr>
 <tr class="separator:a8ae7e722622e2db35a1df0b506183a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a006924a844424cc4a1b6c6e299592e8a" id="r_a006924a844424cc4a1b6c6e299592e8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a006924a844424cc4a1b6c6e299592e8a">MoveToFront</a> (<a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> it)</td></tr>
 <tr class="separator:a006924a844424cc4a1b6c6e299592e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a174e7ad041433b2c9d0aeb2bd035ec53" id="r_a174e7ad041433b2c9d0aeb2bd035ec53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a174e7ad041433b2c9d0aeb2bd035ec53">MoveToBack</a> (<a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> it)</td></tr>
 <tr class="separator:a174e7ad041433b2c9d0aeb2bd035ec53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1c19483fcfc8165dfa07481365f004e" id="r_ad1c19483fcfc8165dfa07481365f004e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1c19483fcfc8165dfa07481365f004e">contains</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr) const</td></tr>
+<tr class="memitem:ad1c19483fcfc8165dfa07481365f004e" id="r_ad1c19483fcfc8165dfa07481365f004e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1c19483fcfc8165dfa07481365f004e">contains</a> (const T *ptr) const</td></tr>
 <tr class="separator:ad1c19483fcfc8165dfa07481365f004e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58a0426d670732f8b398bd77cab7fbc0" id="r_a58a0426d670732f8b398bd77cab7fbc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58a0426d670732f8b398bd77cab7fbc0">find</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr)</td></tr>
+<tr class="memitem:a58a0426d670732f8b398bd77cab7fbc0" id="r_a58a0426d670732f8b398bd77cab7fbc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58a0426d670732f8b398bd77cab7fbc0">find</a> (const T *ptr)</td></tr>
 <tr class="separator:a58a0426d670732f8b398bd77cab7fbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0dde8ba0db0e1f8b263ae15175884cf" id="r_ab0dde8ba0db0e1f8b263ae15175884cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0dde8ba0db0e1f8b263ae15175884cf">find</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr) const</td></tr>
+<tr class="memitem:ab0dde8ba0db0e1f8b263ae15175884cf" id="r_ab0dde8ba0db0e1f8b263ae15175884cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0dde8ba0db0e1f8b263ae15175884cf">find</a> (const T *ptr) const</td></tr>
 <tr class="separator:ab0dde8ba0db0e1f8b263ae15175884cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a592d52c9186f0e6893a1d73d9403e411" id="r_a592d52c9186f0e6893a1d73d9403e411"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a592d52c9186f0e6893a1d73d9403e411">reverse_find</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr)</td></tr>
+<tr class="memitem:a592d52c9186f0e6893a1d73d9403e411" id="r_a592d52c9186f0e6893a1d73d9403e411"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a592d52c9186f0e6893a1d73d9403e411">reverse_find</a> (const T *ptr)</td></tr>
 <tr class="separator:a592d52c9186f0e6893a1d73d9403e411"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74bb4195254879eb553b45e239be3a46" id="r_a74bb4195254879eb553b45e239be3a46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74bb4195254879eb553b45e239be3a46">reverse_find</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr) const</td></tr>
+<tr class="memitem:a74bb4195254879eb553b45e239be3a46" id="r_a74bb4195254879eb553b45e239be3a46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74bb4195254879eb553b45e239be3a46">reverse_find</a> (const T *ptr) const</td></tr>
 <tr class="separator:a74bb4195254879eb553b45e239be3a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a809a4aa9c8217c94bb4a387a10951e8c" id="r_a809a4aa9c8217c94bb4a387a10951e8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a809a4aa9c8217c94bb4a387a10951e8c">reverse_find</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr, <a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> itLast)</td></tr>
+<tr class="memitem:a809a4aa9c8217c94bb4a387a10951e8c" id="r_a809a4aa9c8217c94bb4a387a10951e8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a809a4aa9c8217c94bb4a387a10951e8c">reverse_find</a> (const T *ptr, <a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> itLast)</td></tr>
 <tr class="separator:a809a4aa9c8217c94bb4a387a10951e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9a735830fa4a0a2f08425c16b8e7aff" id="r_ad9a735830fa4a0a2f08425c16b8e7aff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9a735830fa4a0a2f08425c16b8e7aff">reverse_find</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *ptr, <a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> itLast) const</td></tr>
+<tr class="memitem:ad9a735830fa4a0a2f08425c16b8e7aff" id="r_ad9a735830fa4a0a2f08425c16b8e7aff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9a735830fa4a0a2f08425c16b8e7aff">reverse_find</a> (const T *ptr, <a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> itLast) const</td></tr>
 <tr class="separator:ad9a735830fa4a0a2f08425c16b8e7aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a42d4c06f33e11aaeb6d7681e1461c7bc" id="r_a42d4c06f33e11aaeb6d7681e1461c7bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42d4c06f33e11aaeb6d7681e1461c7bc">Delete</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> **itPtr, <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> **itLastPtr)</td></tr>
+<tr class="memitem:a42d4c06f33e11aaeb6d7681e1461c7bc" id="r_a42d4c06f33e11aaeb6d7681e1461c7bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42d4c06f33e11aaeb6d7681e1461c7bc">Delete</a> (T **itPtr, T **itLastPtr)</td></tr>
 <tr class="separator:a42d4c06f33e11aaeb6d7681e1461c7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -293,10 +302,10 @@ Private Attributes</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::const_iterator = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html#af0752c329f422be99c88ae4f020163c0">VectorType::const_iterator</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::const_iterator = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html#af0752c329f422be99c88ae4f020163c0">VectorType::const_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -309,10 +318,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::const_pointer = const <a class="el" href="#a12d7560d7cd40cc26075b26516c72dd8">value_type</a>*</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::const_pointer = const <a class="el" href="#a12d7560d7cd40cc26075b26516c72dd8">value_type</a>*</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -325,10 +334,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::const_reference = const <a class="el" href="#a12d7560d7cd40cc26075b26516c72dd8">value_type</a>&amp;</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::const_reference = const <a class="el" href="#a12d7560d7cd40cc26075b26516c72dd8">value_type</a>&amp;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -341,10 +350,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::const_reverse_iterator = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a4059ec082bedd5db7709b29c010a053d">VectorType::const_reverse_iterator</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::const_reverse_iterator = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a4059ec082bedd5db7709b29c010a053d">VectorType::const_reverse_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -357,10 +366,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::difference_type = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a54aa9178314227d441276b6ec4d8a0ea">VectorType::difference_type</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::difference_type = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a54aa9178314227d441276b6ec4d8a0ea">VectorType::difference_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -373,10 +382,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::iterator = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html#a460571d73a84d35329c4ab3b198ac9ea">VectorType::iterator</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::iterator = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html#a460571d73a84d35329c4ab3b198ac9ea">VectorType::iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -389,10 +398,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::pointer = <a class="el" href="#a12d7560d7cd40cc26075b26516c72dd8">value_type</a>*</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::pointer = <a class="el" href="#a12d7560d7cd40cc26075b26516c72dd8">value_type</a>*</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -405,10 +414,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::reference = <a class="el" href="#a12d7560d7cd40cc26075b26516c72dd8">value_type</a>&amp;</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::reference = <a class="el" href="#a12d7560d7cd40cc26075b26516c72dd8">value_type</a>&amp;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -421,10 +430,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::reverse_iterator = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a2a903e21b7db2042b0c997439ec4423d">VectorType::reverse_iterator</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::reverse_iterator = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector_base.html#a2a903e21b7db2042b0c997439ec4423d">VectorType::reverse_iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -437,10 +446,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::size_type = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html#a80b981c6bb999b01ab16c7212fce2c77">VectorType::size_type</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::size_type = typename <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html#a80b981c6bb999b01ab16c7212fce2c77">VectorType::size_type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -453,10 +462,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::value_type = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>*</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::value_type = T*</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -469,10 +478,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::VectorType = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>*&gt;</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::VectorType = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt;T*&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -486,13 +495,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::OwnerVector </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::OwnerVector </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -513,13 +522,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::OwnerVector </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::OwnerVector </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span></td><td>)</td>
           <td></td>
@@ -540,7 +549,7 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <div class="memtemplate">
 template&lt;typename It &gt; <br />
 requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9765bf4143d8820765b98dea5b">IsIterator_v</a>&lt;It&gt;</div>
@@ -549,7 +558,7 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::OwnerVector </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::OwnerVector </td>
           <td>(</td>
           <td class="paramtype">It</td>          <td class="paramname"><span class="paramname"><em>first</em></span>, </td>
         </tr>
@@ -574,15 +583,15 @@ requires <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a30ba5d9
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::OwnerVector </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::OwnerVector </td>
           <td>(</td>
-          <td class="paramtype">std::initializer_list&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * &gt;</td>          <td class="paramname"><span class="paramname"><em>values</em></span></td><td>)</td>
+          <td class="paramtype">std::initializer_list&lt; T * &gt;</td>          <td class="paramname"><span class="paramname"><em>values</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -601,15 +610,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::OwnerVector </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::OwnerVector </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -628,15 +637,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::OwnerVector </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::OwnerVector </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -655,13 +664,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::~<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a> </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::~<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -683,15 +692,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Assign </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::Assign </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -710,13 +719,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#aa4b8f5f5ca93cfffe9de9e16627fe636">const_reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::back </td>
+          <td class="memname"><a class="el" href="#aa4b8f5f5ca93cfffe9de9e16627fe636">const_reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::back </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -737,13 +746,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab49c919f00bfd1842b4629df512a6e74">reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::back </td>
+          <td class="memname"><a class="el" href="#ab49c919f00bfd1842b4629df512a6e74">reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::back </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -764,13 +773,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::begin </td>
+          <td class="memname"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::begin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -791,13 +800,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::begin </td>
+          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::begin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -818,13 +827,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::capacity </td>
+          <td class="memname"><a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::capacity </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -845,13 +854,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::cbegin </td>
+          <td class="memname"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::cbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -872,13 +881,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::cend </td>
+          <td class="memname"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::cend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -899,13 +908,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::clear </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::clear </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -926,15 +935,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::contains </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::contains </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -953,13 +962,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a3609c371375957d6ba39b70b7dc23094">const_reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::crbegin </td>
+          <td class="memname"><a class="el" href="#a3609c371375957d6ba39b70b7dc23094">const_reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::crbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -980,13 +989,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a3609c371375957d6ba39b70b7dc23094">const_reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::crend </td>
+          <td class="memname"><a class="el" href="#a3609c371375957d6ba39b70b7dc23094">const_reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::crend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1007,13 +1016,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a705022c481b4de0fd858399ca533b82b">const_pointer</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::data </td>
+          <td class="memname"><a class="el" href="#a705022c481b4de0fd858399ca533b82b">const_pointer</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::data </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1034,13 +1043,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a9684d1a0d936dbeb2dd8c4e0304c403a">pointer</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::data </td>
+          <td class="memname"><a class="el" href="#a9684d1a0d936dbeb2dd8c4e0304c403a">pointer</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::data </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1061,13 +1070,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Delete </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::Delete </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a></td>          <td class="paramname"><span class="paramname"><em>it</em></span>, </td>
         </tr>
@@ -1092,20 +1101,20 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Delete </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::Delete </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> **</td>          <td class="paramname"><span class="paramname"><em>itPtr</em></span>, </td>
+          <td class="paramtype">T **</td>          <td class="paramname"><span class="paramname"><em>itPtr</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> **</td>          <td class="paramname"><span class="paramname"><em>itLastPtr</em></span>&#160;)</td>
+          <td class="paramtype">T **</td>          <td class="paramname"><span class="paramname"><em>itLastPtr</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1123,20 +1132,20 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::emplace </td>
+          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::emplace </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a></td>          <td class="paramname"><span class="paramname"><em>it</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>&#160;)</td>
+          <td class="paramtype">T *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1154,15 +1163,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab49c919f00bfd1842b4629df512a6e74">reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::emplace_back </td>
+          <td class="memname"><a class="el" href="#ab49c919f00bfd1842b4629df512a6e74">reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::emplace_back </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td class="paramtype">T *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1181,15 +1190,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab49c919f00bfd1842b4629df512a6e74">reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::emplace_front </td>
+          <td class="memname"><a class="el" href="#ab49c919f00bfd1842b4629df512a6e74">reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::emplace_front </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td class="paramtype">T *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1208,13 +1217,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::empty </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::empty </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1235,13 +1244,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::end </td>
+          <td class="memname"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::end </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1262,13 +1271,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::end </td>
+          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::end </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1289,15 +1298,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Equals </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::Equals </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1316,13 +1325,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::erase </td>
+          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::erase </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a></td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
           <td></td>
@@ -1343,15 +1352,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::find </td>
+          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::find </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1370,15 +1379,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::find </td>
+          <td class="memname"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::find </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1397,13 +1406,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#aa4b8f5f5ca93cfffe9de9e16627fe636">const_reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::front </td>
+          <td class="memname"><a class="el" href="#aa4b8f5f5ca93cfffe9de9e16627fe636">const_reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::front </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1424,13 +1433,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ab49c919f00bfd1842b4629df512a6e74">reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::front </td>
+          <td class="memname"><a class="el" href="#ab49c919f00bfd1842b4629df512a6e74">reference</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::front </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1451,20 +1460,20 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::insert </td>
+          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::insert </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a></td>          <td class="paramname"><span class="paramname"><em>it</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>&#160;)</td>
+          <td class="paramtype">T *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1482,13 +1491,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::max_size </td>
+          <td class="memname"><a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::max_size </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1509,13 +1518,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::MoveToBack </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::MoveToBack </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a></td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
           <td></td>
@@ -1536,13 +1545,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::MoveToFront </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::MoveToFront </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a></td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
           <td></td>
@@ -1563,15 +1572,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator!= </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::operator!= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1590,15 +1599,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator!= </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::operator!= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1617,15 +1626,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator= </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1644,15 +1653,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator= </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a> &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1671,15 +1680,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator== </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::operator== </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1698,15 +1707,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator== </td>
+          <td class="memname">bool <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::operator== </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1725,13 +1734,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator[] </td>
+          <td class="memname">const T * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a></td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
           <td> const</td>
@@ -1752,13 +1761,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::operator[] </td>
+          <td class="memname">T * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a></td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
           <td></td>
@@ -1779,15 +1788,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::push_back </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::push_back </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td class="paramtype">T *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1806,15 +1815,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::push_front </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::push_front </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td class="paramtype">T *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1833,13 +1842,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * &gt; &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Raw </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T * &gt; &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::Raw </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1860,13 +1869,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * &gt; &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Raw </td>
+          <td class="memname">const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T * &gt; &amp; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::Raw </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1887,13 +1896,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a3609c371375957d6ba39b70b7dc23094">const_reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::rbegin </td>
+          <td class="memname"><a class="el" href="#a3609c371375957d6ba39b70b7dc23094">const_reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::rbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1914,13 +1923,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a17984fd20b1b782c1ac0cf8c6481cada">reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::rbegin </td>
+          <td class="memname"><a class="el" href="#a17984fd20b1b782c1ac0cf8c6481cada">reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::rbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1941,13 +1950,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::release </td>
+          <td class="memname">std::unique_ptr&lt; T &gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::release </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a></td>          <td class="paramname"><span class="paramname"><em>it</em></span></td><td>)</td>
           <td></td>
@@ -1968,13 +1977,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a3609c371375957d6ba39b70b7dc23094">const_reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::rend </td>
+          <td class="memname"><a class="el" href="#a3609c371375957d6ba39b70b7dc23094">const_reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::rend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1995,13 +2004,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a17984fd20b1b782c1ac0cf8c6481cada">reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::rend </td>
+          <td class="memname"><a class="el" href="#a17984fd20b1b782c1ac0cf8c6481cada">reverse_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::rend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -2022,13 +2031,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::reserve </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::reserve </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a></td>          <td class="paramname"><span class="paramname"><em>requiredCapacity</em></span></td><td>)</td>
           <td></td>
@@ -2049,13 +2058,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::resize </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::resize </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a></td>          <td class="paramname"><span class="paramname"><em>newSize</em></span></td><td>)</td>
           <td></td>
@@ -2076,15 +2085,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::reverse_find </td>
+          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::reverse_find </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2103,15 +2112,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::reverse_find </td>
+          <td class="memname"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::reverse_find </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -2130,15 +2139,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::reverse_find </td>
+          <td class="memname"><a class="el" href="#a08b79fba6536bbbc8187ba1fdeba7a5d">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::reverse_find </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2161,15 +2170,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::reverse_find </td>
+          <td class="memname"><a class="el" href="#a44bf084d5d1e0952c5a5b3ba42ab3fd8">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::reverse_find </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2192,13 +2201,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::size </td>
+          <td class="memname"><a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::size </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2219,13 +2228,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::size_in_bytes </td>
+          <td class="memname"><a class="el" href="#a21a19ec03c5f51ea6aae035eebc16435">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::size_in_bytes </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -2246,15 +2255,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::swap </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::swap </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">OwnerVector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2273,15 +2282,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::swap </td>
+          <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::swap </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_vector.html">Vector</a>&lt; T * &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2301,13 +2310,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ae6505f7b0170a2afd9b6021e28b42224">VectorType</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::data_</td>
+          <td class="memname"><a class="el" href="#ae6505f7b0170a2afd9b6021e28b42224">VectorType</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_owner_vector.html">Harlinn::Common::Core::OwnerVector</a>&lt; T &gt;::data_</td>
         </tr>
       </table>
   </td>

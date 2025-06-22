@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -252,7 +261,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a76c927cee4f769a8563d20acaef31a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fa74a6240ebb17ef38a217c0f87e031" id="r_a8fa74a6240ebb17ef38a217c0f87e031"><td class="memItemLeft" align="right" valign="top">timeval&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fa74a6240ebb17ef38a217c0f87e031">ToTimeval</a> () const noexcept</td></tr>
 <tr class="separator:a8fa74a6240ebb17ef38a217c0f87e031"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa840966794b0ba3b3a106bbd32daeffd" id="r_aa840966794b0ba3b3a106bbd32daeffd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa840966794b0ba3b3a106bbd32daeffd">ToNTP</a> () const</td></tr>
+<tr class="memitem:aa840966794b0ba3b3a106bbd32daeffd" id="r_aa840966794b0ba3b3a106bbd32daeffd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa840966794b0ba3b3a106bbd32daeffd">ToNTP</a> () const</td></tr>
 <tr class="separator:aa840966794b0ba3b3a106bbd32daeffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f40cdea9645e36ce045580697999ec7" id="r_a8f40cdea9645e36ce045580697999ec7"><td class="memItemLeft" align="right" valign="top">constexpr std::chrono::system_clock::time_point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f40cdea9645e36ce045580697999ec7">ToTimePoint</a> () const noexcept</td></tr>
 <tr class="separator:a8f40cdea9645e36ce045580697999ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -366,18 +375,18 @@ requires std::is_same_v&lt;StringT, std::wstring_view&gt; || std::is_same_v&lt;S
 <tr class="separator:ad2d26cb7d0e94c060f1ee2af76316e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61f28867c0df28db31e17d12894a44cd" id="r_a61f28867c0df28db31e17d12894a44cd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61f28867c0df28db31e17d12894a44cd">FromTimeval</a> (const timeval &amp;tv)</td></tr>
 <tr class="separator:a61f28867c0df28db31e17d12894a44cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c4c7d862af20c1b5120c2dab9900295" id="r_a5c4c7d862af20c1b5120c2dab9900295"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c4c7d862af20c1b5120c2dab9900295">FromNTP</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> secondsSince1900, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> fraction)</td></tr>
+<tr class="memitem:a5c4c7d862af20c1b5120c2dab9900295" id="r_a5c4c7d862af20c1b5120c2dab9900295"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c4c7d862af20c1b5120c2dab9900295">FromNTP</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> secondsSince1900, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> fraction)</td></tr>
 <tr class="separator:a5c4c7d862af20c1b5120c2dab9900295"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace3c0e46100b43e283fe4ac300c4e950" id="r_ace3c0e46100b43e283fe4ac300c4e950"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace3c0e46100b43e283fe4ac300c4e950">FromNTP</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a> ntpTime)</td></tr>
+<tr class="memitem:ace3c0e46100b43e283fe4ac300c4e950" id="r_ace3c0e46100b43e283fe4ac300c4e950"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace3c0e46100b43e283fe4ac300c4e950">FromNTP</a> (<a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a> ntpTime)</td></tr>
 <tr class="separator:ace3c0e46100b43e283fe4ac300c4e950"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84b59bcb504849794ff5bf7013ce77b2" id="r_a84b59bcb504849794ff5bf7013ce77b2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84b59bcb504849794ff5bf7013ce77b2">FromTimePoint</a> (std::chrono::system_clock::time_point timePoint) noexcept</td></tr>
 <tr class="separator:a84b59bcb504849794ff5bf7013ce77b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a83f71ae93d42c213aec15491bd8c6ee5" id="r_a83f71ae93d42c213aec15491bd8c6ee5"><td class="memItemLeft" align="right" valign="top">static constexpr wchar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83f71ae93d42c213aec15491bd8c6ee5">DEFAULT_WIDE_FORMAT</a> [] = L&quot;%FT%<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>%Z&quot;</td></tr>
+<tr class="memitem:a83f71ae93d42c213aec15491bd8c6ee5" id="r_a83f71ae93d42c213aec15491bd8c6ee5"><td class="memItemLeft" align="right" valign="top">static constexpr wchar_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83f71ae93d42c213aec15491bd8c6ee5">DEFAULT_WIDE_FORMAT</a> [] = L&quot;%FT%T%Z&quot;</td></tr>
 <tr class="separator:a83f71ae93d42c213aec15491bd8c6ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade18ecce450543df93e8513b4aef9159" id="r_ade18ecce450543df93e8513b4aef9159"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade18ecce450543df93e8513b4aef9159">DEFAULT_FORMAT</a> [] = &quot;%FT%<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>%Z&quot;</td></tr>
+<tr class="memitem:ade18ecce450543df93e8513b4aef9159" id="r_ade18ecce450543df93e8513b4aef9159"><td class="memItemLeft" align="right" valign="top">static constexpr char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade18ecce450543df93e8513b4aef9159">DEFAULT_FORMAT</a> [] = &quot;%FT%T%Z&quot;</td></tr>
 <tr class="separator:ade18ecce450543df93e8513b4aef9159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html">Harlinn::Common::Core::TimeBase</a></td></tr>
 <tr class="memitem:af1984030d64d64535fc07856d0152e53 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_af1984030d64d64535fc07856d0152e53"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#af1984030d64d64535fc07856d0152e53">TicksPerMicrosecond</a> = 10</td></tr>
@@ -420,13 +429,13 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a6c1b7db7da55cfaea9c7cba74e491fe7 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace2a40f7379a8b239d1553f697289564 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_ace2a40f7379a8b239d1553f697289564"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#ace2a40f7379a8b239d1553f697289564">MillisPerDay</a> = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a6c1b7db7da55cfaea9c7cba74e491fe7">MillisPerHour</a> * 24</td></tr>
 <tr class="separator:ace2a40f7379a8b239d1553f697289564 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51f2daa444a424ad25a432782fcf8bc6 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a51f2daa444a424ad25a432782fcf8bc6"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a51f2daa444a424ad25a432782fcf8bc6">MaxSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a13e2cce25b750cddaddf6d1432c40be3">MaxInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a4cf2951a09bf3797e23b5d8aa3742dfd">TicksPerSecond</a></td></tr>
+<tr class="memitem:a51f2daa444a424ad25a432782fcf8bc6 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a51f2daa444a424ad25a432782fcf8bc6"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a51f2daa444a424ad25a432782fcf8bc6">MaxSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common.html#a9a5e71cf8f54185d6c29cb1274fb17c6">MaxInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a4cf2951a09bf3797e23b5d8aa3742dfd">TicksPerSecond</a></td></tr>
 <tr class="separator:a51f2daa444a424ad25a432782fcf8bc6 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77601e07870e35af96fd8ac1f9546dac inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a77601e07870e35af96fd8ac1f9546dac"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a77601e07870e35af96fd8ac1f9546dac">MinSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6604007404964ecd88a8610f3a5687cc">MinInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a4cf2951a09bf3797e23b5d8aa3742dfd">TicksPerSecond</a></td></tr>
+<tr class="memitem:a77601e07870e35af96fd8ac1f9546dac inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a77601e07870e35af96fd8ac1f9546dac"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a77601e07870e35af96fd8ac1f9546dac">MinSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common.html#af4a2cd3aa428af5be7813a035b83e7e5">MinInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a4cf2951a09bf3797e23b5d8aa3742dfd">TicksPerSecond</a></td></tr>
 <tr class="separator:a77601e07870e35af96fd8ac1f9546dac inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8edfdab4d6ed164ef4e4a971200dde6d inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a8edfdab4d6ed164ef4e4a971200dde6d"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a8edfdab4d6ed164ef4e4a971200dde6d">MaxMilliSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a13e2cce25b750cddaddf6d1432c40be3">MaxInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#abba4be8174d0219af2624b4665516166">TicksPerMillisecond</a></td></tr>
+<tr class="memitem:a8edfdab4d6ed164ef4e4a971200dde6d inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a8edfdab4d6ed164ef4e4a971200dde6d"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a8edfdab4d6ed164ef4e4a971200dde6d">MaxMilliSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common.html#a9a5e71cf8f54185d6c29cb1274fb17c6">MaxInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#abba4be8174d0219af2624b4665516166">TicksPerMillisecond</a></td></tr>
 <tr class="separator:a8edfdab4d6ed164ef4e4a971200dde6d inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73aab427a9558e1e9f199437ab519034 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a73aab427a9558e1e9f199437ab519034"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a73aab427a9558e1e9f199437ab519034">MinMilliSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a6604007404964ecd88a8610f3a5687cc">MinInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#abba4be8174d0219af2624b4665516166">TicksPerMillisecond</a></td></tr>
+<tr class="memitem:a73aab427a9558e1e9f199437ab519034 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a73aab427a9558e1e9f199437ab519034"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a73aab427a9558e1e9f199437ab519034">MinMilliSeconds</a> = <a class="el" href="namespace_harlinn_1_1_common.html#af4a2cd3aa428af5be7813a035b83e7e5">MinInt64</a> / <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#abba4be8174d0219af2624b4665516166">TicksPerMillisecond</a></td></tr>
 <tr class="separator:a73aab427a9558e1e9f199437ab519034 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c82ca99f570ff0e3044012f024b6d67 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base" id="r_a3c82ca99f570ff0e3044012f024b6d67"><td class="memItemLeft" align="right" valign="top">static constexpr long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_time_base.html#a3c82ca99f570ff0e3044012f024b6d67">UnixEpoch</a> = 621355968000000000LL</td></tr>
 <tr class="separator:a3c82ca99f570ff0e3044012f024b6d67 inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_time_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1285,7 +1294,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> Harlinn::Common::Core::DateTime::FromNTP </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a></td>          <td class="paramname"><span class="paramname"><em>ntpTime</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a></td>          <td class="paramname"><span class="paramname"><em>ntpTime</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1310,12 +1319,12 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">static <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_date_time.html">DateTime</a> Harlinn::Common::Core::DateTime::FromNTP </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>secondsSince1900</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>secondsSince1900</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>fraction</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>fraction</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2542,7 +2551,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a934f1e669bbe888bfa94af14a3647296">Int64</a> Harlinn::Common::Core::DateTime::ToNTP </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a5a63a6a5f3e67cefd19fb0873208989d">Int64</a> Harlinn::Common::Core::DateTime::ToNTP </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -3669,7 +3678,7 @@ requires std::is_same_v&lt;StringT, std::wstring_view&gt; || std::is_same_v&lt;S
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char Harlinn::Common::Core::DateTime::DEFAULT_FORMAT[] = &quot;%FT%<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>%Z&quot;</td>
+          <td class="memname">char Harlinn::Common::Core::DateTime::DEFAULT_FORMAT[] = &quot;%FT%T%Z&quot;</td>
         </tr>
       </table>
   </td>
@@ -3691,7 +3700,7 @@ requires std::is_same_v&lt;StringT, std::wstring_view&gt; || std::is_same_v&lt;S
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">wchar_t Harlinn::Common::Core::DateTime::DEFAULT_WIDE_FORMAT[] = L&quot;%FT%<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>%Z&quot;</td>
+          <td class="memname">wchar_t Harlinn::Common::Core::DateTime::DEFAULT_WIDE_FORMAT[] = L&quot;%FT%T%Z&quot;</td>
         </tr>
       </table>
   </td>

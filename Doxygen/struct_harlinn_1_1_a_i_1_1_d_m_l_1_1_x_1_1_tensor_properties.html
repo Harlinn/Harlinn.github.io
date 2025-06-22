@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -110,9 +119,9 @@ $(function(){initNavTree('struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_x_1_1_tensor_prop
 Public Attributes</h2></td></tr>
 <tr class="memitem:ae74ac77d9fc73e13f5ead7d28ca3ab6b" id="r_ae74ac77d9fc73e13f5ead7d28ca3ab6b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="namespace_harlinn_1_1_a_i_1_1_d_m_l_1_1_x.html#a122e06de0b44c3e0e6acf0e439f84c18">TensorStrides</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae74ac77d9fc73e13f5ead7d28ca3ab6b">strides</a> = std::nullopt</td></tr>
 <tr class="separator:ae74ac77d9fc73e13f5ead7d28ca3ab6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7317b751b5072fed0917fb297b4fe40" id="r_ad7317b751b5072fed0917fb297b4fe40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7317b751b5072fed0917fb297b4fe40">totalTensorSizeInBytes</a> = 0</td></tr>
+<tr class="memitem:ad7317b751b5072fed0917fb297b4fe40" id="r_ad7317b751b5072fed0917fb297b4fe40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7317b751b5072fed0917fb297b4fe40">totalTensorSizeInBytes</a> = 0</td></tr>
 <tr class="separator:ad7317b751b5072fed0917fb297b4fe40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00ce2b5850ace49b37a07bac783118ca" id="r_a00ce2b5850ace49b37a07bac783118ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00ce2b5850ace49b37a07bac783118ca">guaranteedBaseOffsetAlignment</a> = 0</td></tr>
+<tr class="memitem:a00ce2b5850ace49b37a07bac783118ca" id="r_a00ce2b5850ace49b37a07bac783118ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00ce2b5850ace49b37a07bac783118ca">guaranteedBaseOffsetAlignment</a> = 0</td></tr>
 <tr class="separator:a00ce2b5850ace49b37a07bac783118ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -123,7 +132,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::X::TensorProperties::guaranteedBaseOffsetAlignment = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::X::TensorProperties::guaranteedBaseOffsetAlignment = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -151,7 +160,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> Harlinn::AI::DML::X::TensorProperties::totalTensorSizeInBytes = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> Harlinn::AI::DML::X::TensorProperties::totalTensorSizeInBytes = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

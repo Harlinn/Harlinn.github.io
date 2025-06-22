@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -119,9 +128,9 @@ Collaboration diagram for Harlinn::Common::Core::Types::Internal::ContainerTypeT
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aaaa27c5cd8c3f87b15f2675b5a021d2b" id="r_aaaa27c5cd8c3f87b15f2675b5a021d2b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaa27c5cd8c3f87b15f2675b5a021d2b">Base</a> = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits_base.html">ContainerTypeTraitsBase</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_basic_string.html">BasicString</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;, RT&gt;</td></tr>
+<tr class="memitem:aaaa27c5cd8c3f87b15f2675b5a021d2b" id="r_aaaa27c5cd8c3f87b15f2675b5a021d2b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaaa27c5cd8c3f87b15f2675b5a021d2b">Base</a> = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits_base.html">ContainerTypeTraitsBase</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_basic_string.html">BasicString</a>&lt;T&gt;, RT&gt;</td></tr>
 <tr class="separator:aaaa27c5cd8c3f87b15f2675b5a021d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5299c8e1ad8e53e2d69733561552b1dc" id="r_a5299c8e1ad8e53e2d69733561552b1dc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5299c8e1ad8e53e2d69733561552b1dc">CharTraits</a> = typename std::basic_string&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;::traits_type</td></tr>
+<tr class="memitem:a5299c8e1ad8e53e2d69733561552b1dc" id="r_a5299c8e1ad8e53e2d69733561552b1dc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5299c8e1ad8e53e2d69733561552b1dc">CharTraits</a> = typename std::basic_string&lt;T&gt;::traits_type</td></tr>
 <tr class="separator:a5299c8e1ad8e53e2d69733561552b1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits_base')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits_base.html">Harlinn::Common::Core::Types::Internal::ContainerTypeTraitsBase&lt; BasicString&lt; T &gt;, RT &gt;</a></td></tr>
 <tr class="memitem:a2e649b48ae903e6b5847b3cacf1277f7 inherit pub_types_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits_base" id="r_a2e649b48ae903e6b5847b3cacf1277f7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits_base.html#a2e649b48ae903e6b5847b3cacf1277f7">Base</a></td></tr>
@@ -129,7 +138,7 @@ Public Types</h2></td></tr>
 <tr class="memitem:a2540f7a1887b4c4240f6dbd12d8b7979 inherit pub_types_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits_base" id="r_a2540f7a1887b4c4240f6dbd12d8b7979"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits_base.html#a2540f7a1887b4c4240f6dbd12d8b7979">ElementType</a></td></tr>
 <tr class="separator:a2540f7a1887b4c4240f6dbd12d8b7979 inherit pub_types_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase&lt; T, RT &gt;</a></td></tr>
-<tr class="memitem:a294c491150372447c2cfc3dc928b0c5b inherit pub_types_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base" id="r_a294c491150372447c2cfc3dc928b0c5b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html#a294c491150372447c2cfc3dc928b0c5b">Type</a> = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td></tr>
+<tr class="memitem:a294c491150372447c2cfc3dc928b0c5b inherit pub_types_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base" id="r_a294c491150372447c2cfc3dc928b0c5b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html#a294c491150372447c2cfc3dc928b0c5b">Type</a> = T</td></tr>
 <tr class="separator:a294c491150372447c2cfc3dc928b0c5b inherit pub_types_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c9488ba4f1e76139d7ef8917474e642 inherit pub_types_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base" id="r_a2c9488ba4f1e76139d7ef8917474e642"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html#a2c9488ba4f1e76139d7ef8917474e642">RawType</a> = RT</td></tr>
 <tr class="separator:a2c9488ba4f1e76139d7ef8917474e642 inherit pub_types_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,7 +195,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_methods_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html">Harlinn::Common::Core::Types::Internal::TypeTraitsBase&lt; T, RT &gt;</a></td></tr>
-<tr class="memitem:a9e2deede0ce0ed91fdaff60dc5ab993d inherit pub_static_methods_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base" id="r_a9e2deede0ce0ed91fdaff60dc5ab993d"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html#a9e2deede0ce0ed91fdaff60dc5ab993d">SizeOf</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;object) noexcept</td></tr>
+<tr class="memitem:a9e2deede0ce0ed91fdaff60dc5ab993d inherit pub_static_methods_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base" id="r_a9e2deede0ce0ed91fdaff60dc5ab993d"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base.html#a9e2deede0ce0ed91fdaff60dc5ab993d">SizeOf</a> (const T &amp;object) noexcept</td></tr>
 <tr class="separator:a9e2deede0ce0ed91fdaff60dc5ab993d inherit pub_static_methods_struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_type_traits_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
@@ -196,10 +205,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename RT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename RT , typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits.html">Harlinn::Common::Core::Types::Internal::ContainerTypeTraits</a>&lt; RT, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_basic_string.html">BasicString</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &gt;::Base = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits_base.html">ContainerTypeTraitsBase</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_basic_string.html">BasicString</a>&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;, RT&gt;</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits.html">Harlinn::Common::Core::Types::Internal::ContainerTypeTraits</a>&lt; RT, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_basic_string.html">BasicString</a>&lt; T &gt; &gt;::Base = <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits_base.html">ContainerTypeTraitsBase</a>&lt;<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_basic_string.html">BasicString</a>&lt;T&gt;, RT&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -212,10 +221,10 @@ template&lt;typename RT , typename <a class="el" href="k__tan_8inl.html#a0acb682
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename RT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename RT , typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits.html">Harlinn::Common::Core::Types::Internal::ContainerTypeTraits</a>&lt; RT, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_basic_string.html">BasicString</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &gt;::CharTraits = typename std::basic_string&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;::traits_type</td>
+          <td class="memname">using <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits.html">Harlinn::Common::Core::Types::Internal::ContainerTypeTraits</a>&lt; RT, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_basic_string.html">BasicString</a>&lt; T &gt; &gt;::CharTraits = typename std::basic_string&lt;T&gt;::traits_type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -229,13 +238,13 @@ template&lt;typename RT , typename <a class="el" href="k__tan_8inl.html#a0acb682
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename RT , typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename RT , typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_types.html#abbadc6a649fabd96bdc1f2739149fbc0">ContainerTypeId</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits.html">Harlinn::Common::Core::Types::Internal::ContainerTypeTraits</a>&lt; RT, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_basic_string.html">BasicString</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; &gt;::TypeId = <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_types.html#abbadc6a649fabd96bdc1f2739149fbc0ac947b0cd4e8ebb35e4ae65f0ed7bd551">ContainerTypeId::BasicString</a></td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_types.html#abbadc6a649fabd96bdc1f2739149fbc0">ContainerTypeId</a> <a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_types_1_1_internal_1_1_container_type_traits.html">Harlinn::Common::Core::Types::Internal::ContainerTypeTraits</a>&lt; RT, <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_basic_string.html">BasicString</a>&lt; T &gt; &gt;::TypeId = <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_types.html#abbadc6a649fabd96bdc1f2739149fbc0ac947b0cd4e8ebb35e4ae65f0ed7bd551">ContainerTypeId::BasicString</a></td>
         </tr>
       </table>
   </td>

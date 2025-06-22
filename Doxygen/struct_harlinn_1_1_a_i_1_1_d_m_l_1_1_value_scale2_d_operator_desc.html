@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -130,7 +139,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a306120cecb6a3d101154a44d32899390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60f07bd2ece7bdf9fc4d93bf5394f9b3" id="r_a60f07bd2ece7bdf9fc4d93bf5394f9b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60f07bd2ece7bdf9fc4d93bf5394f9b3">ValueScale2DOperatorDesc</a> () noexcept=default</td></tr>
 <tr class="separator:a60f07bd2ece7bdf9fc4d93bf5394f9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad689dbb6315362b4b8665fff98c89a01" id="r_ad689dbb6315362b4b8665fff98c89a01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad689dbb6315362b4b8665fff98c89a01">ValueScale2DOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, FLOAT scale=0.f, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> channelCount=0, const FLOAT *bias=nullptr) noexcept</td></tr>
+<tr class="memitem:ad689dbb6315362b4b8665fff98c89a01" id="r_ad689dbb6315362b4b8665fff98c89a01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad689dbb6315362b4b8665fff98c89a01">ValueScale2DOperatorDesc</a> (const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *inputTensor, const <a class="el" href="struct_harlinn_1_1_a_i_1_1_d_m_l_1_1_tensor_desc.html">TensorDesc</a> *outputTensor, FLOAT scale=0.f, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> channelCount=0, const FLOAT *bias=nullptr) noexcept</td></tr>
 <tr class="separator:ad689dbb6315362b4b8665fff98c89a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6290bd39e407c7014e1d36009560a81a" id="r_a6290bd39e407c7014e1d36009560a81a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6290bd39e407c7014e1d36009560a81a">DML_IMPLEMENT_CONVERSIONS_TO</a> (DML_VALUE_SCALE_2D_OPERATOR_DESC)</td></tr>
 <tr class="separator:a6290bd39e407c7014e1d36009560a81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,7 +148,7 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a0d86295e1c1e4e2350175191076ec904" id="r_a0d86295e1c1e4e2350175191076ec904"><td class="memItemLeft" align="right" valign="top">FLOAT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d86295e1c1e4e2350175191076ec904">Scale</a> = 0.f</td></tr>
 <tr class="separator:a0d86295e1c1e4e2350175191076ec904"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac99c284e23951e82a9cce80b86b8af8" id="r_aac99c284e23951e82a9cce80b86b8af8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac99c284e23951e82a9cce80b86b8af8">ChannelCount</a> = 0</td></tr>
+<tr class="memitem:aac99c284e23951e82a9cce80b86b8af8" id="r_aac99c284e23951e82a9cce80b86b8af8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac99c284e23951e82a9cce80b86b8af8">ChannelCount</a> = 0</td></tr>
 <tr class="separator:aac99c284e23951e82a9cce80b86b8af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -220,7 +229,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>channelCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>channelCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -280,7 +289,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::AI::DML::ValueScale2DOperatorDesc::ChannelCount = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::AI::DML::ValueScale2DOperatorDesc::ChannelCount = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

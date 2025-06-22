@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -129,13 +138,13 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a48e7d31fc894ab686cb6b59f8b476b7a" id="r_a48e7d31fc894ab686cb6b59f8b476b7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_o_def_8h.html#aaa8205634629a73c8520f9556792b16a">HO_EXPORT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48e7d31fc894ab686cb6b59f8b476b7a">TypeInfo</a> (const <a class="el" href="class_harlinn_1_1_o_c_i_1_1_type_descriptor.html">TypeDescriptor</a> *<a class="el" href="s__llrint_8inl.html#a53155e22eaa05190346890241be3367c">type</a>)</td></tr>
+<tr class="memitem:a48e7d31fc894ab686cb6b59f8b476b7a" id="r_a48e7d31fc894ab686cb6b59f8b476b7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_o_def_8h.html#aaa8205634629a73c8520f9556792b16a">HO_EXPORT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48e7d31fc894ab686cb6b59f8b476b7a">TypeInfo</a> (const <a class="el" href="class_harlinn_1_1_o_c_i_1_1_type_descriptor.html">TypeDescriptor</a> *type)</td></tr>
 <tr class="separator:a48e7d31fc894ab686cb6b59f8b476b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bb55049aa9f8b6cc842bfb3d8582662" id="r_a4bb55049aa9f8b6cc842bfb3d8582662"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bb55049aa9f8b6cc842bfb3d8582662">DataSize</a> () const noexcept</td></tr>
 <tr class="separator:a4bb55049aa9f8b6cc842bfb3d8582662"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a615ba9f264b7dbd74ccb866fb950b99b" id="r_a615ba9f264b7dbd74ccb866fb950b99b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_o_c_i.html#adbbbaea9a0a829c6198adc319d936cca">OCI::TypeCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a615ba9f264b7dbd74ccb866fb950b99b">TypeCodeOf</a> (size_t index) const noexcept</td></tr>
 <tr class="separator:a615ba9f264b7dbd74ccb866fb950b99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63badfc7ee5e7d746a2d184e86bcacdc" id="r_a63badfc7ee5e7d746a2d184e86bcacdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63badfc7ee5e7d746a2d184e86bcacdc">PrecisionOf</a> (size_t index) const noexcept</td></tr>
+<tr class="memitem:a63badfc7ee5e7d746a2d184e86bcacdc" id="r_a63badfc7ee5e7d746a2d184e86bcacdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63badfc7ee5e7d746a2d184e86bcacdc">PrecisionOf</a> (size_t index) const noexcept</td></tr>
 <tr class="separator:a63badfc7ee5e7d746a2d184e86bcacdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b7736deb21cfa31a5fa59c76634671c" id="r_a3b7736deb21cfa31a5fa59c76634671c"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b7736deb21cfa31a5fa59c76634671c">ScaleOf</a> (size_t index) const noexcept</td></tr>
 <tr class="separator:a3b7736deb21cfa31a5fa59c76634671c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -451,7 +460,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> Harlinn::OCI::TypeInfo::PrecisionOf </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> Harlinn::OCI::TypeInfo::PrecisionOf </td>
           <td>(</td>
           <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
           <td> const</td>

@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -123,9 +132,9 @@ Collaboration diagram for Harlinn::Common::Core::Math::Exponent&lt; T &gt;:</div
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a8a54a5fdc8590d2604c31ef117b39f3f" id="r_a8a54a5fdc8590d2604c31ef117b39f3f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a54a5fdc8590d2604c31ef117b39f3f">FloatType</a> = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td></tr>
+<tr class="memitem:a8a54a5fdc8590d2604c31ef117b39f3f" id="r_a8a54a5fdc8590d2604c31ef117b39f3f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a54a5fdc8590d2604c31ef117b39f3f">FloatType</a> = T</td></tr>
 <tr class="separator:a8a54a5fdc8590d2604c31ef117b39f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac35872b0d1c8deecc7efb5acd6b3986c" id="r_ac35872b0d1c8deecc7efb5acd6b3986c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac35872b0d1c8deecc7efb5acd6b3986c">Base</a> = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_integer.html">Integer</a>&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt;</td></tr>
+<tr class="memitem:ac35872b0d1c8deecc7efb5acd6b3986c" id="r_ac35872b0d1c8deecc7efb5acd6b3986c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac35872b0d1c8deecc7efb5acd6b3986c">Base</a> = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_integer.html">Integer</a>&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&gt;</td></tr>
 <tr class="separator:ac35872b0d1c8deecc7efb5acd6b3986c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_class_harlinn_1_1_common_1_1_core_1_1_integer"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_class_harlinn_1_1_common_1_1_core_1_1_integer')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_integer.html">Harlinn::Common::Core::Integer&lt; Int32 &gt;</a></td></tr>
 <tr class="memitem:a4879b297178135c880fe95849715b170 inherit pub_types_class_harlinn_1_1_common_1_1_core_1_1_integer" id="r_a4879b297178135c880fe95849715b170"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_integer.html#a4879b297178135c880fe95849715b170">value_type</a></td></tr>
@@ -146,7 +155,7 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a294fb1bfe5d152a3d513c613570dacdf" id="r_a294fb1bfe5d152a3d513c613570dacdf"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a294fb1bfe5d152a3d513c613570dacdf">Bias</a> = static_cast&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> &gt;(<a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_exponent_bias.html">Internal::ExponentBias</a>&lt;<a class="el" href="#a8a54a5fdc8590d2604c31ef117b39f3f">FloatType</a>&gt;::value)</td></tr>
+<tr class="memitem:a294fb1bfe5d152a3d513c613570dacdf" id="r_a294fb1bfe5d152a3d513c613570dacdf"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a294fb1bfe5d152a3d513c613570dacdf">Bias</a> = static_cast&lt; <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> &gt;(<a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_exponent_bias.html">Internal::ExponentBias</a>&lt;<a class="el" href="#a8a54a5fdc8590d2604c31ef117b39f3f">FloatType</a>&gt;::value)</td></tr>
 <tr class="separator:a294fb1bfe5d152a3d513c613570dacdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_integer"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_integer')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_integer.html">Harlinn::Common::Core::Integer&lt; Int32 &gt;</a></td></tr>
 <tr class="memitem:a79acfa2c66e50f29d809a164fe6f7dcb inherit pub_static_attribs_class_harlinn_1_1_common_1_1_core_1_1_integer" id="r_a79acfa2c66e50f29d809a164fe6f7dcb"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_integer.html#a79acfa2c66e50f29d809a164fe6f7dcb">IsSigned</a></td></tr>
@@ -208,7 +217,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aefe1096c2ac1f7a993abc471959bf716 inherit pro_attribs_class_harlinn_1_1_common_1_1_core_1_1_integer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 class Harlinn::Common::Core::Math::Exponent&lt; T &gt;</div><p>Holds the value of the exponent part of a floating point value. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -223,10 +232,10 @@ class Harlinn::Common::Core::Math::Exponent&lt; T &gt;</div><p>Holds the value o
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Base = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_integer.html">Integer</a>&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt;</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; T &gt;::Base = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_integer.html">Integer</a>&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -239,10 +248,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::FloatType = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; T &gt;::FloatType = T</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -256,13 +265,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Exponent</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Inf </td>
+          <td class="memname">static constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Exponent</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; T &gt;::Inf </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -283,13 +292,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Exponent</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Max </td>
+          <td class="memname">static constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Exponent</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; T &gt;::Max </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -310,13 +319,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Exponent</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Min </td>
+          <td class="memname">static constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Exponent</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; T &gt;::Min </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -337,13 +346,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Exponent</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::SubNormal </td>
+          <td class="memname">static constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Exponent</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; T &gt;::SubNormal </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -364,13 +373,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Exponent</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Zero </td>
+          <td class="memname">static constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Exponent</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; T &gt;::Zero </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -392,13 +401,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Bias = static_cast&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> &gt;(<a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_exponent_bias.html">Internal::ExponentBias</a>&lt;<a class="el" href="#a8a54a5fdc8590d2604c31ef117b39f3f">FloatType</a>&gt;::value)</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_math_1_1_exponent.html">Harlinn::Common::Core::Math::Exponent</a>&lt; T &gt;::Bias = static_cast&lt; <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> &gt;(<a class="el" href="struct_harlinn_1_1_common_1_1_core_1_1_math_1_1_internal_1_1_exponent_bias.html">Internal::ExponentBias</a>&lt;<a class="el" href="#a8a54a5fdc8590d2604c31ef117b39f3f">FloatType</a>&gt;::value)</td>
         </tr>
       </table>
   </td>

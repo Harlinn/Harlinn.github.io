@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -104,9 +113,8 @@ $(function(){initNavTree('concept_harlinn_1_1_windows_1_1_internal_1_1_point_typ
 <p><code>#include &lt;HWCommon.h&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="concept_harlinn_1_1_windows_1_1_internal_1_1_point_type.html">Harlinn::Windows::Internal::PointType</a> =  <a class="code hl_variable" href="namespace_harlinn_1_1_common_1_1_core.html#acfa3b6ffbd23e06dc33b163ebdc9eae2">IsSpecializationOf&lt;T, PointT&gt;</a></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="concept_harlinn_1_1_windows_1_1_internal_1_1_point_type.html">Harlinn::Windows::Internal::PointType</a> =  IsSpecializationOf&lt;T, PointT&gt;</div>
 <div class="ttc" id="aconcept_harlinn_1_1_windows_1_1_internal_1_1_point_type_html"><div class="ttname"><a href="concept_harlinn_1_1_windows_1_1_internal_1_1_point_type.html">Harlinn::Windows::Internal::PointType</a></div><div class="ttdef"><b>Definition</b> HWCommon.h:56</div></div>
-<div class="ttc" id="anamespace_harlinn_1_1_common_1_1_core_html_acfa3b6ffbd23e06dc33b163ebdc9eae2"><div class="ttname"><a href="namespace_harlinn_1_1_common_1_1_core.html#acfa3b6ffbd23e06dc33b163ebdc9eae2">Harlinn::Common::Core::IsSpecializationOf</a></div><div class="ttdeci">constexpr bool IsSpecializationOf</div><div class="ttdef"><b>Definition</b> HCCTraits.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

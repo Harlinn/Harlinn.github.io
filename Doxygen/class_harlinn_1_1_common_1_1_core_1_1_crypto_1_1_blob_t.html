@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -123,7 +132,7 @@ Public Types</h2></td></tr>
 <tr class="separator:a4512c57b25597ca7c7439df03e8d2849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5ba9514b60567e49920bfc75a12f414" id="r_ae5ba9514b60567e49920bfc75a12f414"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5ba9514b60567e49920bfc75a12f414">size_type</a> = DWORD</td></tr>
 <tr class="separator:ae5ba9514b60567e49920bfc75a12f414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4025a92f31c57df46c153b1d1bdec7a2" id="r_a4025a92f31c57df46c153b1d1bdec7a2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4025a92f31c57df46c153b1d1bdec7a2">value_type</a> = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td></tr>
+<tr class="memitem:a4025a92f31c57df46c153b1d1bdec7a2" id="r_a4025a92f31c57df46c153b1d1bdec7a2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4025a92f31c57df46c153b1d1bdec7a2">value_type</a> = T</td></tr>
 <tr class="separator:a4025a92f31c57df46c153b1d1bdec7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a305dbf630a1de4e126dc09380d00ac25" id="r_a305dbf630a1de4e126dc09380d00ac25"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a305dbf630a1de4e126dc09380d00ac25">pointer</a> = <a class="el" href="#a4025a92f31c57df46c153b1d1bdec7a2">value_type</a>*</td></tr>
 <tr class="separator:a305dbf630a1de4e126dc09380d00ac25"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,7 +151,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aef17740533881fdbf1475efbb7f4046c" id="r_aef17740533881fdbf1475efbb7f4046c"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef17740533881fdbf1475efbb7f4046c">BlobT</a> () noexcept</td></tr>
 <tr class="separator:aef17740533881fdbf1475efbb7f4046c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acda9ac51ea795a0cb78afc55abf15326" id="r_acda9ac51ea795a0cb78afc55abf15326"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acda9ac51ea795a0cb78afc55abf15326">BlobT</a> (<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *items, <a class="el" href="#ae5ba9514b60567e49920bfc75a12f414">size_type</a> count) noexcept</td></tr>
+<tr class="memitem:acda9ac51ea795a0cb78afc55abf15326" id="r_acda9ac51ea795a0cb78afc55abf15326"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acda9ac51ea795a0cb78afc55abf15326">BlobT</a> (T *items, <a class="el" href="#ae5ba9514b60567e49920bfc75a12f414">size_type</a> count) noexcept</td></tr>
 <tr class="separator:acda9ac51ea795a0cb78afc55abf15326"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1967482cfc18a3c3fc8fb5ffb67c66d0" id="r_a1967482cfc18a3c3fc8fb5ffb67c66d0"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#ae5ba9514b60567e49920bfc75a12f414">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1967482cfc18a3c3fc8fb5ffb67c66d0">size</a> () const noexcept</td></tr>
 <tr class="separator:a1967482cfc18a3c3fc8fb5ffb67c66d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,9 +167,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2b6b721c9adc390c7da813141194deca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59e9c30d67698cf78b37a8302f270494" id="r_a59e9c30d67698cf78b37a8302f270494"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="#a0b5ccc0b0249cf3ec1edbd3c8d9c13ee">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59e9c30d67698cf78b37a8302f270494">cend</a> () noexcept</td></tr>
 <tr class="separator:a59e9c30d67698cf78b37a8302f270494"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac943848dc1511ed1cc38be393cbc9dea" id="r_ac943848dc1511ed1cc38be393cbc9dea"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac943848dc1511ed1cc38be393cbc9dea">data</a> () noexcept</td></tr>
+<tr class="memitem:ac943848dc1511ed1cc38be393cbc9dea" id="r_ac943848dc1511ed1cc38be393cbc9dea"><td class="memItemLeft" align="right" valign="top">constexpr T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac943848dc1511ed1cc38be393cbc9dea">data</a> () noexcept</td></tr>
 <tr class="separator:ac943848dc1511ed1cc38be393cbc9dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af811565df8b768c018b9320a8fe63c01" id="r_af811565df8b768c018b9320a8fe63c01"><td class="memItemLeft" align="right" valign="top">constexpr const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af811565df8b768c018b9320a8fe63c01">data</a> () const noexcept</td></tr>
+<tr class="memitem:af811565df8b768c018b9320a8fe63c01" id="r_af811565df8b768c018b9320a8fe63c01"><td class="memItemLeft" align="right" valign="top">constexpr const T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af811565df8b768c018b9320a8fe63c01">data</a> () const noexcept</td></tr>
 <tr class="separator:af811565df8b768c018b9320a8fe63c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -168,20 +177,20 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob')"><img src="closed.png" alt="-"/>&#160;Private Member Functions inherited from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html">Harlinn::Common::Core::Crypto::Blob</a></td></tr>
 <tr class="memitem:a6a06ef0a7e47f089d5195f5cdad1489e inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob" id="r_a6a06ef0a7e47f089d5195f5cdad1489e"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a6a06ef0a7e47f089d5195f5cdad1489e">Blob</a> () noexcept</td></tr>
 <tr class="separator:a6a06ef0a7e47f089d5195f5cdad1489e inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad16910c11604f8d3935e7174a074f90b inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob" id="r_ad16910c11604f8d3935e7174a074f90b"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#ad16910c11604f8d3935e7174a074f90b">Blob</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a43bc10b139b1e0bae3481600fcd576d0">data</a>, DWORD blobSize) noexcept</td></tr>
+<tr class="memitem:ad16910c11604f8d3935e7174a074f90b inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob" id="r_ad16910c11604f8d3935e7174a074f90b"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#ad16910c11604f8d3935e7174a074f90b">Blob</a> (<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a43bc10b139b1e0bae3481600fcd576d0">data</a>, DWORD blobSize) noexcept</td></tr>
 <tr class="separator:ad16910c11604f8d3935e7174a074f90b inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a224dde8a987e59529eb057df8cf562e9 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob" id="r_a224dde8a987e59529eb057df8cf562e9"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a224dde8a987e59529eb057df8cf562e9">Assign</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a43bc10b139b1e0bae3481600fcd576d0">data</a>, DWORD blobSize) noexcept</td></tr>
+<tr class="memitem:a224dde8a987e59529eb057df8cf562e9 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob" id="r_a224dde8a987e59529eb057df8cf562e9"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a224dde8a987e59529eb057df8cf562e9">Assign</a> (<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *<a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a43bc10b139b1e0bae3481600fcd576d0">data</a>, DWORD blobSize) noexcept</td></tr>
 <tr class="separator:a224dde8a987e59529eb057df8cf562e9 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43bc10b139b1e0bae3481600fcd576d0 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob" id="r_a43bc10b139b1e0bae3481600fcd576d0"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a43bc10b139b1e0bae3481600fcd576d0">data</a> () noexcept</td></tr>
+<tr class="memitem:a43bc10b139b1e0bae3481600fcd576d0 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob" id="r_a43bc10b139b1e0bae3481600fcd576d0"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a43bc10b139b1e0bae3481600fcd576d0">data</a> () noexcept</td></tr>
 <tr class="separator:a43bc10b139b1e0bae3481600fcd576d0 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bbef7d2838b97b972181c4da4ab8ad3 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob" id="r_a7bbef7d2838b97b972181c4da4ab8ad3"><td class="memItemLeft" align="right" valign="top">constexpr const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a7bbef7d2838b97b972181c4da4ab8ad3">data</a> () const noexcept</td></tr>
+<tr class="memitem:a7bbef7d2838b97b972181c4da4ab8ad3 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob" id="r_a7bbef7d2838b97b972181c4da4ab8ad3"><td class="memItemLeft" align="right" valign="top">constexpr const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a7bbef7d2838b97b972181c4da4ab8ad3">data</a> () const noexcept</td></tr>
 <tr class="separator:a7bbef7d2838b97b972181c4da4ab8ad3 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a605b1102afbf5374e06f8b4a03eed5a9 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob" id="r_a605b1102afbf5374e06f8b4a03eed5a9"><td class="memItemLeft" align="right" valign="top">constexpr DWORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a605b1102afbf5374e06f8b4a03eed5a9">BlobSize</a> () const noexcept</td></tr>
 <tr class="separator:a605b1102afbf5374e06f8b4a03eed5a9 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_attribs_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob')"><img src="closed.png" alt="-"/>&#160;Private Attributes inherited from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html">Harlinn::Common::Core::Crypto::Blob</a></td></tr>
 <tr class="memitem:a03e906c9b89d36c5272e9904164b3b0d inherit pub_attribs_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob" id="r_a03e906c9b89d36c5272e9904164b3b0d"><td class="memItemLeft" align="right" valign="top">DWORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a03e906c9b89d36c5272e9904164b3b0d">blobSize_</a></td></tr>
 <tr class="separator:a03e906c9b89d36c5272e9904164b3b0d inherit pub_attribs_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fdc9be05c98d9eedf801da161d6ac49 inherit pub_attribs_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob" id="r_a2fdc9be05c98d9eedf801da161d6ac49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a2fdc9be05c98d9eedf801da161d6ac49">data_</a></td></tr>
+<tr class="memitem:a2fdc9be05c98d9eedf801da161d6ac49 inherit pub_attribs_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob" id="r_a2fdc9be05c98d9eedf801da161d6ac49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html#a2fdc9be05c98d9eedf801da161d6ac49">data_</a></td></tr>
 <tr class="separator:a2fdc9be05c98d9eedf801da161d6ac49 inherit pub_attribs_class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
@@ -191,10 +200,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::Base = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html">Blob</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::Base = <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob.html">Blob</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -207,10 +216,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::const_iterator = <a class="el" href="#a0bd4d0c5a1156658053e28b120c81ba9">const_pointer</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::const_iterator = <a class="el" href="#a0bd4d0c5a1156658053e28b120c81ba9">const_pointer</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -223,10 +232,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::const_pointer = const <a class="el" href="#a4025a92f31c57df46c153b1d1bdec7a2">value_type</a>*</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::const_pointer = const <a class="el" href="#a4025a92f31c57df46c153b1d1bdec7a2">value_type</a>*</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -239,10 +248,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::const_reference = const <a class="el" href="#a4025a92f31c57df46c153b1d1bdec7a2">value_type</a>&amp;</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::const_reference = const <a class="el" href="#a4025a92f31c57df46c153b1d1bdec7a2">value_type</a>&amp;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -255,10 +264,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::iterator = <a class="el" href="#a305dbf630a1de4e126dc09380d00ac25">pointer</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::iterator = <a class="el" href="#a305dbf630a1de4e126dc09380d00ac25">pointer</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -271,10 +280,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::pointer = <a class="el" href="#a4025a92f31c57df46c153b1d1bdec7a2">value_type</a>*</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::pointer = <a class="el" href="#a4025a92f31c57df46c153b1d1bdec7a2">value_type</a>*</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -287,10 +296,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::reference = <a class="el" href="#a4025a92f31c57df46c153b1d1bdec7a2">value_type</a>&amp;</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::reference = <a class="el" href="#a4025a92f31c57df46c153b1d1bdec7a2">value_type</a>&amp;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -303,10 +312,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::size_type = DWORD</td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::size_type = DWORD</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -319,10 +328,10 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::value_type = <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>
+          <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::value_type = T</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -336,13 +345,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::BlobT </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::BlobT </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -363,15 +372,15 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::BlobT </td>
+          <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::BlobT </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>items</em></span>, </td>
+          <td class="paramtype">T *</td>          <td class="paramname"><span class="paramname"><em>items</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -395,13 +404,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#af06608102304286e7d3b73f2a1cd5e14">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::begin </td>
+          <td class="memname"><a class="el" href="#af06608102304286e7d3b73f2a1cd5e14">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::begin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -422,13 +431,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a0b5ccc0b0249cf3ec1edbd3c8d9c13ee">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::begin </td>
+          <td class="memname"><a class="el" href="#a0b5ccc0b0249cf3ec1edbd3c8d9c13ee">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::begin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -449,13 +458,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a0b5ccc0b0249cf3ec1edbd3c8d9c13ee">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::cbegin </td>
+          <td class="memname"><a class="el" href="#a0b5ccc0b0249cf3ec1edbd3c8d9c13ee">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::cbegin </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -476,13 +485,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a0b5ccc0b0249cf3ec1edbd3c8d9c13ee">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::cend </td>
+          <td class="memname"><a class="el" href="#a0b5ccc0b0249cf3ec1edbd3c8d9c13ee">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::cend </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -503,13 +512,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::data </td>
+          <td class="memname">const T * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::data </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -530,13 +539,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::data </td>
+          <td class="memname">T * <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::data </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -557,13 +566,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#af06608102304286e7d3b73f2a1cd5e14">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::end </td>
+          <td class="memname"><a class="el" href="#af06608102304286e7d3b73f2a1cd5e14">iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::end </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -584,13 +593,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#a0b5ccc0b0249cf3ec1edbd3c8d9c13ee">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::end </td>
+          <td class="memname"><a class="el" href="#a0b5ccc0b0249cf3ec1edbd3c8d9c13ee">const_iterator</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::end </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -611,13 +620,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ae5ba9514b60567e49920bfc75a12f414">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::size </td>
+          <td class="memname"><a class="el" href="#ae5ba9514b60567e49920bfc75a12f414">size_type</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_crypto_1_1_blob_t.html">Harlinn::Common::Core::Crypto::BlobT</a>&lt; T &gt;::size </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

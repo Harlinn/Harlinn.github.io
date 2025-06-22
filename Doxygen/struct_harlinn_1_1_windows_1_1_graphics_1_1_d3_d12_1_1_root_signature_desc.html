@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -115,11 +124,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2c0ccbc4848d75df86469f7036de28a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18f5dd158816ec52531a3ac972be92f7" id="r_a18f5dd158816ec52531a3ac972be92f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18f5dd158816ec52531a3ac972be92f7">RootSignatureDesc</a> ()=default</td></tr>
 <tr class="separator:a18f5dd158816ec52531a3ac972be92f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d28fdc36f1c943da10340d8381182e6" id="r_a5d28fdc36f1c943da10340d8381182e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d28fdc36f1c943da10340d8381182e6">RootSignatureDesc</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> numParameters, <a class="el" href="#a6a27862b518e19d2a37c66a17947aea5">_Field_size_full_</a>(numParameters) const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a> *parameters, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2b42da0824179b5834ff946c61106f6a">RootSignatureFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2b42da0824179b5834ff946c61106f6aa6adf97f83acf6453d4a6a4b1070f3754">RootSignatureFlags::None</a>)</td></tr>
+<tr class="memitem:a5d28fdc36f1c943da10340d8381182e6" id="r_a5d28fdc36f1c943da10340d8381182e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d28fdc36f1c943da10340d8381182e6">RootSignatureDesc</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> numParameters, <a class="el" href="#a6a27862b518e19d2a37c66a17947aea5">_Field_size_full_</a>(numParameters) const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a> *parameters, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2b42da0824179b5834ff946c61106f6a">RootSignatureFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2b42da0824179b5834ff946c61106f6aa6adf97f83acf6453d4a6a4b1070f3754">RootSignatureFlags::None</a>)</td></tr>
 <tr class="separator:a5d28fdc36f1c943da10340d8381182e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2438651126ce4eed622271ea8f5ef00d" id="r_a2438651126ce4eed622271ea8f5ef00d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2438651126ce4eed622271ea8f5ef00d">RootSignatureDesc</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> numStaticSamplers, <a class="el" href="#a6a27862b518e19d2a37c66a17947aea5">_Field_size_full_</a>(numStaticSamplers) const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_static_sampler_desc.html">StaticSamplerDesc</a> *staticSamplers, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2b42da0824179b5834ff946c61106f6a">RootSignatureFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2b42da0824179b5834ff946c61106f6aa6adf97f83acf6453d4a6a4b1070f3754">RootSignatureFlags::None</a>)</td></tr>
+<tr class="memitem:a2438651126ce4eed622271ea8f5ef00d" id="r_a2438651126ce4eed622271ea8f5ef00d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2438651126ce4eed622271ea8f5ef00d">RootSignatureDesc</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> numStaticSamplers, <a class="el" href="#a6a27862b518e19d2a37c66a17947aea5">_Field_size_full_</a>(numStaticSamplers) const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_static_sampler_desc.html">StaticSamplerDesc</a> *staticSamplers, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2b42da0824179b5834ff946c61106f6a">RootSignatureFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2b42da0824179b5834ff946c61106f6aa6adf97f83acf6453d4a6a4b1070f3754">RootSignatureFlags::None</a>)</td></tr>
 <tr class="separator:a2438651126ce4eed622271ea8f5ef00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0669abc03d9740ecada9f1f03f0456ad" id="r_a0669abc03d9740ecada9f1f03f0456ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0669abc03d9740ecada9f1f03f0456ad">RootSignatureDesc</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> numParameters, <a class="el" href="#a6a27862b518e19d2a37c66a17947aea5">_Field_size_full_</a>(numParameters) const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a> *parameters, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> numStaticSamplers, <a class="el" href="#a6a27862b518e19d2a37c66a17947aea5">_Field_size_full_</a>(numStaticSamplers) const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_static_sampler_desc.html">StaticSamplerDesc</a> *staticSamplers, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2b42da0824179b5834ff946c61106f6a">RootSignatureFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2b42da0824179b5834ff946c61106f6aa6adf97f83acf6453d4a6a4b1070f3754">RootSignatureFlags::None</a>)</td></tr>
+<tr class="memitem:a0669abc03d9740ecada9f1f03f0456ad" id="r_a0669abc03d9740ecada9f1f03f0456ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0669abc03d9740ecada9f1f03f0456ad">RootSignatureDesc</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> numParameters, <a class="el" href="#a6a27862b518e19d2a37c66a17947aea5">_Field_size_full_</a>(numParameters) const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a> *parameters, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> numStaticSamplers, <a class="el" href="#a6a27862b518e19d2a37c66a17947aea5">_Field_size_full_</a>(numStaticSamplers) const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_static_sampler_desc.html">StaticSamplerDesc</a> *staticSamplers, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2b42da0824179b5834ff946c61106f6a">RootSignatureFlags</a> flags=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2b42da0824179b5834ff946c61106f6aa6adf97f83acf6453d4a6a4b1070f3754">RootSignatureFlags::None</a>)</td></tr>
 <tr class="separator:a0669abc03d9740ecada9f1f03f0456ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a673646f25eb3d2b4f47c0dc1cb9f7274" id="r_a673646f25eb3d2b4f47c0dc1cb9f7274"><td class="memTemplParams" colspan="2">template&lt;SimpleSpanLike T&gt; <br />
 requires std::is_same_v&lt;<a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a>,typename T::value_type&gt;</td></tr>
@@ -138,9 +147,9 @@ requires std::is_same_v&lt;<a class="el" href="struct_harlinn_1_1_windows_1_1_gr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a324cf8876d15a344eb7aa94f877dd6e0" id="r_a324cf8876d15a344eb7aa94f877dd6e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a324cf8876d15a344eb7aa94f877dd6e0">NumParameters</a> = 0</td></tr>
+<tr class="memitem:a324cf8876d15a344eb7aa94f877dd6e0" id="r_a324cf8876d15a344eb7aa94f877dd6e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a324cf8876d15a344eb7aa94f877dd6e0">NumParameters</a> = 0</td></tr>
 <tr class="separator:a324cf8876d15a344eb7aa94f877dd6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ff2a65e74e18d7b0f542bac80573950" id="r_a5ff2a65e74e18d7b0f542bac80573950"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ff2a65e74e18d7b0f542bac80573950">NumStaticSamplers</a> = 0</td></tr>
+<tr class="memitem:a5ff2a65e74e18d7b0f542bac80573950" id="r_a5ff2a65e74e18d7b0f542bac80573950"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ff2a65e74e18d7b0f542bac80573950">NumStaticSamplers</a> = 0</td></tr>
 <tr class="separator:a5ff2a65e74e18d7b0f542bac80573950"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ed2b3ec04a694d0adae44435a96b2b9" id="r_a5ed2b3ec04a694d0adae44435a96b2b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2b42da0824179b5834ff946c61106f6a">RootSignatureFlags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ed2b3ec04a694d0adae44435a96b2b9">Flags</a> = <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a2b42da0824179b5834ff946c61106f6aa6adf97f83acf6453d4a6a4b1070f3754">RootSignatureFlags::None</a></td></tr>
 <tr class="separator:a5ed2b3ec04a694d0adae44435a96b2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,7 +194,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Windows::Graphics::D3D12::RootSignatureDesc::RootSignatureDesc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numParameters</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numParameters</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -219,7 +228,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Windows::Graphics::D3D12::RootSignatureDesc::RootSignatureDesc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numStaticSamplers</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numStaticSamplers</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -253,7 +262,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Windows::Graphics::D3D12::RootSignatureDesc::RootSignatureDesc </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numParameters</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numParameters</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -263,7 +272,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numStaticSamplers</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numStaticSamplers</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -460,7 +469,7 @@ requires std::is_same_v&lt;<a class="el" href="struct_harlinn_1_1_windows_1_1_gr
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::D3D12::RootSignatureDesc::NumParameters = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::D3D12::RootSignatureDesc::NumParameters = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -474,7 +483,7 @@ requires std::is_same_v&lt;<a class="el" href="struct_harlinn_1_1_windows_1_1_gr
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Windows::Graphics::D3D12::RootSignatureDesc::NumStaticSamplers = 0</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Windows::Graphics::D3D12::RootSignatureDesc::NumStaticSamplers = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

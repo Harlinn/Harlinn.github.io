@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -134,13 +143,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acadd34f298ea661d4306a0102eaa1e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55c09a8f9529d83900eb6081036645fd" id="r_a55c09a8f9529d83900eb6081036645fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55c09a8f9529d83900eb6081036645fd">BitVector</a> (bool value)</td></tr>
 <tr class="separator:a55c09a8f9529d83900eb6081036645fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5d10149056a218673f0742ebe1a324a" id="r_ac5d10149056a218673f0742ebe1a324a"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:ac5d10149056a218673f0742ebe1a324a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac5d10149056a218673f0742ebe1a324a">BitVector</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> bits, size_t bitCount)</td></tr>
+<tr class="memitem:ac5d10149056a218673f0742ebe1a324a" id="r_ac5d10149056a218673f0742ebe1a324a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:ac5d10149056a218673f0742ebe1a324a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac5d10149056a218673f0742ebe1a324a">BitVector</a> (const T bits, size_t bitCount)</td></tr>
 <tr class="separator:ac5d10149056a218673f0742ebe1a324a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32a0310c627db623502eeb96a1b35f30" id="r_a32a0310c627db623502eeb96a1b35f30"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a32a0310c627db623502eeb96a1b35f30"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a32a0310c627db623502eeb96a1b35f30">BitVector</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *bits, size_t bitCount)</td></tr>
+<tr class="memitem:a32a0310c627db623502eeb96a1b35f30" id="r_a32a0310c627db623502eeb96a1b35f30"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:a32a0310c627db623502eeb96a1b35f30"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a32a0310c627db623502eeb96a1b35f30">BitVector</a> (const T *bits, size_t bitCount)</td></tr>
 <tr class="separator:a32a0310c627db623502eeb96a1b35f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14ae322f88c9bebeb15835f7f17142b2" id="r_a14ae322f88c9bebeb15835f7f17142b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14ae322f88c9bebeb15835f7f17142b2">BitVector</a> (const <a class="el" href="#a80f7e54316b28c9a667ed7e293e2f0ca">VectorType</a> &amp;bits, size_t bitCount)</td></tr>
 <tr class="separator:a14ae322f88c9bebeb15835f7f17142b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,13 +207,13 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 <tr class="memitem:a7ed17923828e23223df99c29bd16ce3b" id="r_a7ed17923828e23223df99c29bd16ce3b"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
 <tr class="memitem:a7ed17923828e23223df99c29bd16ce3b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7ed17923828e23223df99c29bd16ce3b">append</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bits.html">Bits</a>&lt; N &gt; values)</td></tr>
 <tr class="separator:a7ed17923828e23223df99c29bd16ce3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd5b3639f775e805643ee909ee054532" id="r_afd5b3639f775e805643ee909ee054532"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:afd5b3639f775e805643ee909ee054532"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afd5b3639f775e805643ee909ee054532">append</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> value, size_t bitCount=sizeof(<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>) *<a class="el" href="#a8cffe54961676aa2785f9b11af5ac582">BitsPerByte</a>)</td></tr>
+<tr class="memitem:afd5b3639f775e805643ee909ee054532" id="r_afd5b3639f775e805643ee909ee054532"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:afd5b3639f775e805643ee909ee054532"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#afd5b3639f775e805643ee909ee054532">append</a> (const T value, size_t bitCount=sizeof(T) *<a class="el" href="#a8cffe54961676aa2785f9b11af5ac582">BitsPerByte</a>)</td></tr>
 <tr class="separator:afd5b3639f775e805643ee909ee054532"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0da03d9e31323028305c2705f83eb146" id="r_a0da03d9e31323028305c2705f83eb146"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</td></tr>
-<tr class="memitem:a0da03d9e31323028305c2705f83eb146"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0da03d9e31323028305c2705f83eb146">append</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *bits, size_t bitCount)</td></tr>
+<tr class="memitem:a0da03d9e31323028305c2705f83eb146" id="r_a0da03d9e31323028305c2705f83eb146"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</td></tr>
+<tr class="memitem:a0da03d9e31323028305c2705f83eb146"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0da03d9e31323028305c2705f83eb146">append</a> (const T *bits, size_t bitCount)</td></tr>
 <tr class="separator:a0da03d9e31323028305c2705f83eb146"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a336df90125f74954b7df6cca3bf50e94" id="r_a336df90125f74954b7df6cca3bf50e94"><td class="memTemplParams" colspan="2">template&lt;typename VectorU &gt; </td></tr>
 <tr class="memitem:a336df90125f74954b7df6cca3bf50e94"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a336df90125f74954b7df6cca3bf50e94">append</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bit_vector.html">BitVector</a>&lt; VectorU &gt; &amp;other)</td></tr>
@@ -262,7 +271,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename VectorT&gt;<br />
-requires requires( VectorT vec ) { { vec.size( ) } -&gt;std::convertible_to&lt;size_t&gt;; { vec.data( ) } -&gt;std::convertible_to&lt;typename VectorT::value_type*&gt;; { vec[0] } -&gt;std::convertible_to&lt;typename VectorT::value_type&gt;; { vec[0] = static_cast&lt;typename VectorT::value_type&gt;( 0 ) }; { vec.emplace_back( static_cast&lt;typename VectorT::value_type&gt;( 0 ) ) }; { vec.resize( static_cast&lt;typename VectorT::size_type&gt;( 0 ) ) }; } &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa4443a5f8e1e9a8a8ad6ac36e15019cf">IsInteger</a>&lt;typename VectorT::value_type&gt;<br />
+requires requires( VectorT vec ) { { vec.size( ) } -&gt;std::convertible_to&lt;size_t&gt;; { vec.data( ) } -&gt;std::convertible_to&lt;typename VectorT::value_type*&gt;; { vec[0] } -&gt;std::convertible_to&lt;typename VectorT::value_type&gt;; { vec[0] = static_cast&lt;typename VectorT::value_type&gt;( 0 ) }; { vec.emplace_back( static_cast&lt;typename VectorT::value_type&gt;( 0 ) ) }; { vec.resize( static_cast&lt;typename VectorT::size_type&gt;( 0 ) ) }; } &amp;&amp; <a class="el" href="namespace_harlinn_1_1_common.html#ad246238c0f9ceab519dedadc8105d2e6">IsInteger</a>&lt;typename VectorT::value_type&gt;<br />
 class Harlinn::Common::Core::BitVector&lt; VectorT &gt;</div><p>A resizeable bit-vector. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -383,8 +392,8 @@ template&lt;typename VectorT &gt; </div>
 <div class="memtemplate">
 template&lt;typename VectorT &gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -392,7 +401,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bit_vector.html">Harlinn::Common::Core::BitVector</a>&lt; VectorT &gt;::BitVector </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>bits</em></span>, </td>
+          <td class="paramtype">const T</td>          <td class="paramname"><span class="paramname"><em>bits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -417,8 +426,8 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memtemplate">
 template&lt;typename VectorT &gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -426,7 +435,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bit_vector.html">Harlinn::Common::Core::BitVector</a>&lt; VectorT &gt;::BitVector </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>bits</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>bits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -651,8 +660,8 @@ template&lt;typename VectorU &gt; </div>
 <div class="memtemplate">
 template&lt;typename VectorT &gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -660,7 +669,7 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bit_vector.html">Harlinn::Common::Core::BitVector</a>&lt; VectorT &gt;::append </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> *</td>          <td class="paramname"><span class="paramname"><em>bits</em></span>, </td>
+          <td class="paramtype">const T *</td>          <td class="paramname"><span class="paramname"><em>bits</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -685,8 +694,8 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
 <div class="memtemplate">
 template&lt;typename VectorT &gt; </div>
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;</div>
+template&lt;typename T &gt; <br />
+requires std::is_integral_v&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -694,12 +703,12 @@ requires std::is_integral_v&lt;<a class="el" href="k__tan_8inl.html#a0acb682b826
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_bit_vector.html">Harlinn::Common::Core::BitVector</a>&lt; VectorT &gt;::append </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">const T</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>bitCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">sizeof(<a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>)&#160;*&#160;<a class="el" href="#a8cffe54961676aa2785f9b11af5ac582">BitsPerByte</a></span>&#160;)</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>bitCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">sizeof(T)&#160;*&#160;<a class="el" href="#a8cffe54961676aa2785f9b11af5ac582">BitsPerByte</a></span>&#160;)</td>
         </tr>
       </table>
   </td>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['jet_5funicode_0',['JET_UNICODE',['../_h_c_c_ese_result_8h.html#a7a2da97689d576e99b92e088d3ab086e',1,'HCCEseResult.h']]],
-  ['jet_5fversion_1',['JET_VERSION',['../_h_c_c_ese_result_8h.html#a5d5cc38f69b49dd11e688ed486f4c29a',1,'HCCEseResult.h']]]
+  ['long_5fshift_0',['LONG_SHIFT',['../_h_c_c_c_r_c32_8cpp.html#a0ecf6a47ba994979dfb43114977a3bd9',1,'HCCCRC32.cpp']]]
 ];

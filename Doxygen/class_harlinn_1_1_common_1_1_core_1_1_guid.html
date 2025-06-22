@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -126,7 +135,7 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ae1ccab0d2a454c635314088becbf1983" id="r_ae1ccab0d2a454c635314088becbf1983"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1ccab0d2a454c635314088becbf1983">Bytes</a> = std::array&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, 16&gt;</td></tr>
+<tr class="memitem:ae1ccab0d2a454c635314088becbf1983" id="r_ae1ccab0d2a454c635314088becbf1983"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1ccab0d2a454c635314088becbf1983">Bytes</a> = std::array&lt;<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>, 16&gt;</td></tr>
 <tr class="separator:ae1ccab0d2a454c635314088becbf1983"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -135,7 +144,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a084921fde03d42c1638400acde0c7eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a9baf745672b1bf28618de00c5252de" id="r_a8a9baf745672b1bf28618de00c5252de"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a9baf745672b1bf28618de00c5252de">Guid</a> (const GUID &amp;other) noexcept</td></tr>
 <tr class="separator:a8a9baf745672b1bf28618de00c5252de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18dbbb1df13c522b79d37e418f0b87f8" id="r_a18dbbb1df13c522b79d37e418f0b87f8"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18dbbb1df13c522b79d37e418f0b87f8">Guid</a> (const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, 16 &gt; &amp;other) noexcept</td></tr>
+<tr class="memitem:a18dbbb1df13c522b79d37e418f0b87f8" id="r_a18dbbb1df13c522b79d37e418f0b87f8"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18dbbb1df13c522b79d37e418f0b87f8">Guid</a> (const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>, 16 &gt; &amp;other) noexcept</td></tr>
 <tr class="separator:a18dbbb1df13c522b79d37e418f0b87f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed0a957b0debaeb8e08cc51cfe4c3a10" id="r_aed0a957b0debaeb8e08cc51cfe4c3a10"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed0a957b0debaeb8e08cc51cfe4c3a10">Guid</a> (const boost::uuids::uuid &amp;other) noexcept</td></tr>
 <tr class="separator:aed0a957b0debaeb8e08cc51cfe4c3a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,11 +152,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa13ec202479e9efaf44032aede773abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9911700750f6e7ecb2284b29f0d348ea" id="r_a9911700750f6e7ecb2284b29f0d348ea"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9911700750f6e7ecb2284b29f0d348ea">Guid</a> (const uint64_t values[2]) noexcept</td></tr>
 <tr class="separator:a9911700750f6e7ecb2284b29f0d348ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3727e3963a064b7997070c68dee34642" id="r_a3727e3963a064b7997070c68dee34642"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3727e3963a064b7997070c68dee34642">Guid</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> d1, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> d2, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a> d3, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> d4, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> d5, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> d6, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> d7, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> d8, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> d9, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> d10, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> d11) noexcept</td></tr>
+<tr class="memitem:a3727e3963a064b7997070c68dee34642" id="r_a3727e3963a064b7997070c68dee34642"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3727e3963a064b7997070c68dee34642">Guid</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> d1, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> d2, <a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a> d3, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> d4, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> d5, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> d6, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> d7, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> d8, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> d9, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> d10, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> d11) noexcept</td></tr>
 <tr class="separator:a3727e3963a064b7997070c68dee34642"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d3599921634ba143ba9c91ef434151b" id="r_a2d3599921634ba143ba9c91ef434151b"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d3599921634ba143ba9c91ef434151b">Guid</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b1, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b2, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b3, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b4, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b5, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b6, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b7, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b8, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b9, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b10, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b11, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b12, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b13, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b14, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b15, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> b16) noexcept</td></tr>
+<tr class="memitem:a2d3599921634ba143ba9c91ef434151b" id="r_a2d3599921634ba143ba9c91ef434151b"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d3599921634ba143ba9c91ef434151b">Guid</a> (<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b1, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b2, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b3, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b4, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b5, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b6, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b7, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b8, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b9, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b10, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b11, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b12, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b13, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b14, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b15, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> b16) noexcept</td></tr>
 <tr class="separator:a2d3599921634ba143ba9c91ef434151b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af454d95dac70259c815262cb4ffc6d48" id="r_af454d95dac70259c815262cb4ffc6d48"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af454d95dac70259c815262cb4ffc6d48">Guid</a> (const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> values[16]) noexcept</td></tr>
+<tr class="memitem:af454d95dac70259c815262cb4ffc6d48" id="r_af454d95dac70259c815262cb4ffc6d48"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af454d95dac70259c815262cb4ffc6d48">Guid</a> (const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> values[16]) noexcept</td></tr>
 <tr class="separator:af454d95dac70259c815262cb4ffc6d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c3b2728fb38e13abf3b57ba8923c045" id="r_a4c3b2728fb38e13abf3b57ba8923c045"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html">Guid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c3b2728fb38e13abf3b57ba8923c045">Next</a> () const noexcept</td></tr>
 <tr class="separator:a4c3b2728fb38e13abf3b57ba8923c045"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,10 +196,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:affe7dbdbd6f1a413b5b8e90f210b8396" id="r_affe7dbdbd6f1a413b5b8e90f210b8396"><td class="memItemLeft" align="right" valign="top">constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affe7dbdbd6f1a413b5b8e90f210b8396">Lo</a> () const noexcept</td></tr>
 <tr class="memdesc:affe7dbdbd6f1a413b5b8e90f210b8396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the 64 least significant bits of this <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> as an unsigned 64-bit integer.  <br /></td></tr>
 <tr class="separator:affe7dbdbd6f1a413b5b8e90f210b8396"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa89163218b6ce7d8fe26414fe3f63fd4" id="r_aa89163218b6ce7d8fe26414fe3f63fd4"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, 16 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa89163218b6ce7d8fe26414fe3f63fd4">ToArray</a> () const</td></tr>
+<tr class="memitem:aa89163218b6ce7d8fe26414fe3f63fd4" id="r_aa89163218b6ce7d8fe26414fe3f63fd4"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>, 16 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa89163218b6ce7d8fe26414fe3f63fd4">ToArray</a> () const</td></tr>
 <tr class="memdesc:aa89163218b6ce7d8fe26414fe3f63fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the data of this <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> as a std::array&lt;Byte, 16&gt;.  <br /></td></tr>
 <tr class="separator:aa89163218b6ce7d8fe26414fe3f63fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3636fa7a1e17997c0bd2196f9470caed" id="r_a3636fa7a1e17997c0bd2196f9470caed"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, 16 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3636fa7a1e17997c0bd2196f9470caed">ToBytes</a> () const</td></tr>
+<tr class="memitem:a3636fa7a1e17997c0bd2196f9470caed" id="r_a3636fa7a1e17997c0bd2196f9470caed"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>, 16 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3636fa7a1e17997c0bd2196f9470caed">ToBytes</a> () const</td></tr>
 <tr class="memdesc:a3636fa7a1e17997c0bd2196f9470caed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the data of this <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> as a std::array&lt;Byte, 16&gt;.  <br /></td></tr>
 <tr class="separator:a3636fa7a1e17997c0bd2196f9470caed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72917bc8d8958f758c77b169d1571c62" id="r_a72917bc8d8958f758c77b169d1571c62"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72917bc8d8958f758c77b169d1571c62">operator const GUID &amp;</a> () const noexcept</td></tr>
@@ -203,27 +212,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8cea1b8f3eb7ae1b606f86391c9cd8fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a reference to the data of this <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> as a GUID.  <br /></td></tr>
 <tr class="separator:a8cea1b8f3eb7ae1b606f86391c9cd8fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a456291e6ec5072930c9d36778d86b89f" id="r_a456291e6ec5072930c9d36778d86b89f"><td class="memTemplParams" colspan="2">template&lt;GuidType T&gt; </td></tr>
-<tr class="memitem:a456291e6ec5072930c9d36778d86b89f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a456291e6ec5072930c9d36778d86b89f">operator==</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;other) const noexcept</td></tr>
+<tr class="memitem:a456291e6ec5072930c9d36778d86b89f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a456291e6ec5072930c9d36778d86b89f">operator==</a> (const T &amp;other) const noexcept</td></tr>
 <tr class="memdesc:a456291e6ec5072930c9d36778d86b89f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if this <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> is equal to another <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a>, GUID or boost::uuids::uuid.  <br /></td></tr>
 <tr class="separator:a456291e6ec5072930c9d36778d86b89f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f02a8927d14dc2288f0550271e1a8de" id="r_a9f02a8927d14dc2288f0550271e1a8de"><td class="memTemplParams" colspan="2">template&lt;GuidType T&gt; </td></tr>
-<tr class="memitem:a9f02a8927d14dc2288f0550271e1a8de"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9f02a8927d14dc2288f0550271e1a8de">operator!=</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;other) const noexcept</td></tr>
+<tr class="memitem:a9f02a8927d14dc2288f0550271e1a8de"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9f02a8927d14dc2288f0550271e1a8de">operator!=</a> (const T &amp;other) const noexcept</td></tr>
 <tr class="memdesc:a9f02a8927d14dc2288f0550271e1a8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if this <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> is not equal to another <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a>, GUID or boost::uuids::uuid.  <br /></td></tr>
 <tr class="separator:a9f02a8927d14dc2288f0550271e1a8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d7364d599e7d1fc5e73e8b7e2f0f95a" id="r_a7d7364d599e7d1fc5e73e8b7e2f0f95a"><td class="memTemplParams" colspan="2">template&lt;GuidType T&gt; </td></tr>
-<tr class="memitem:a7d7364d599e7d1fc5e73e8b7e2f0f95a"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7d7364d599e7d1fc5e73e8b7e2f0f95a">operator&lt;=</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;other) const noexcept</td></tr>
+<tr class="memitem:a7d7364d599e7d1fc5e73e8b7e2f0f95a"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7d7364d599e7d1fc5e73e8b7e2f0f95a">operator&lt;=</a> (const T &amp;other) const noexcept</td></tr>
 <tr class="memdesc:a7d7364d599e7d1fc5e73e8b7e2f0f95a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if this <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> is less or equal to another <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a>, GUID or boost::uuids::uuid.  <br /></td></tr>
 <tr class="separator:a7d7364d599e7d1fc5e73e8b7e2f0f95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb0d474ffc6eb5f35de4ee0f3ba83d31" id="r_adb0d474ffc6eb5f35de4ee0f3ba83d31"><td class="memTemplParams" colspan="2">template&lt;GuidType T&gt; </td></tr>
-<tr class="memitem:adb0d474ffc6eb5f35de4ee0f3ba83d31"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adb0d474ffc6eb5f35de4ee0f3ba83d31">operator&lt;</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;other) const noexcept</td></tr>
+<tr class="memitem:adb0d474ffc6eb5f35de4ee0f3ba83d31"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#adb0d474ffc6eb5f35de4ee0f3ba83d31">operator&lt;</a> (const T &amp;other) const noexcept</td></tr>
 <tr class="memdesc:adb0d474ffc6eb5f35de4ee0f3ba83d31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if this <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> is less than another <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a>, GUID or boost::uuids::uuid.  <br /></td></tr>
 <tr class="separator:adb0d474ffc6eb5f35de4ee0f3ba83d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a189589258d9cc2681deb41f3197c1bcc" id="r_a189589258d9cc2681deb41f3197c1bcc"><td class="memTemplParams" colspan="2">template&lt;GuidType T&gt; </td></tr>
-<tr class="memitem:a189589258d9cc2681deb41f3197c1bcc"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a189589258d9cc2681deb41f3197c1bcc">operator&gt;=</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;other) const noexcept</td></tr>
+<tr class="memitem:a189589258d9cc2681deb41f3197c1bcc"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a189589258d9cc2681deb41f3197c1bcc">operator&gt;=</a> (const T &amp;other) const noexcept</td></tr>
 <tr class="memdesc:a189589258d9cc2681deb41f3197c1bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if this <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> is greater or equal to another <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a>, GUID or boost::uuids::uuid.  <br /></td></tr>
 <tr class="separator:a189589258d9cc2681deb41f3197c1bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24a4791ca30a9e352c49d65403ae726c" id="r_a24a4791ca30a9e352c49d65403ae726c"><td class="memTemplParams" colspan="2">template&lt;GuidType T&gt; </td></tr>
-<tr class="memitem:a24a4791ca30a9e352c49d65403ae726c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a24a4791ca30a9e352c49d65403ae726c">operator&gt;</a> (const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;other) const noexcept</td></tr>
+<tr class="memitem:a24a4791ca30a9e352c49d65403ae726c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a24a4791ca30a9e352c49d65403ae726c">operator&gt;</a> (const T &amp;other) const noexcept</td></tr>
 <tr class="memdesc:a24a4791ca30a9e352c49d65403ae726c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if this <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a> is grater than another <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_guid.html" title="Represents a globally unique identifier (GUID).">Guid</a>, GUID or boost::uuids::uuid.  <br /></td></tr>
 <tr class="separator:a24a4791ca30a9e352c49d65403ae726c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -287,7 +296,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="#ae1ccab0d2a454c635314088becbf1983">Harlinn::Common::Core::Guid::Bytes</a> = std::array&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, 16&gt;</td>
+          <td class="memname">using <a class="el" href="#ae1ccab0d2a454c635314088becbf1983">Harlinn::Common::Core::Guid::Bytes</a> = std::array&lt;<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>, 16&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -357,7 +366,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Common::Core::Guid::Guid </td>
           <td>(</td>
-          <td class="paramtype">const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, 16 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>, 16 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -461,57 +470,57 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Common::Core::Guid::Guid </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>d1</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>d1</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>d2</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>d2</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a16d9ed304994b417f1b60c1431408c7e">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>d3</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#aaad093a07d3f6eb4ef5f76f2bbb9d922">UInt16</a></td>          <td class="paramname"><span class="paramname"><em>d3</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d4</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d4</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d5</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d5</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d6</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d6</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d7</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d7</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d8</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d8</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d9</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d9</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d10</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d10</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d11</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>d11</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -535,82 +544,82 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Common::Core::Guid::Guid </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b1</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b1</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b2</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b2</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b3</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b3</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b4</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b4</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b5</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b5</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b6</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b6</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b7</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b7</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b8</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b8</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b9</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b9</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b10</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b10</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b11</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b11</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b12</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b12</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b13</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b13</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b14</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b14</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b15</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b15</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b16</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>b16</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -634,7 +643,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Common::Core::Guid::Guid </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>[16]</td><td>)</td>
+          <td class="paramtype">const <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a></td>          <td class="paramname"><span class="paramname"><em>values</em></span>[16]</td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1136,7 +1145,7 @@ template&lt;GuidType T&gt; </div>
         <tr>
           <td class="memname">bool Harlinn::Common::Core::Guid::operator!= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1178,7 +1187,7 @@ template&lt;GuidType T&gt; </div>
         <tr>
           <td class="memname">bool Harlinn::Common::Core::Guid::operator&lt; </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1220,7 +1229,7 @@ template&lt;GuidType T&gt; </div>
         <tr>
           <td class="memname">bool Harlinn::Common::Core::Guid::operator&lt;= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1262,7 +1271,7 @@ template&lt;GuidType T&gt; </div>
         <tr>
           <td class="memname">bool Harlinn::Common::Core::Guid::operator== </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1304,7 +1313,7 @@ template&lt;GuidType T&gt; </div>
         <tr>
           <td class="memname">bool Harlinn::Common::Core::Guid::operator&gt; </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1346,7 +1355,7 @@ template&lt;GuidType T&gt; </div>
         <tr>
           <td class="memname">bool Harlinn::Common::Core::Guid::operator&gt;= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1565,7 +1574,7 @@ requires ( std::is_same_v&lt;StringT,<a class="el" href="namespace_harlinn_1_1_c
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, 16 &gt; Harlinn::Common::Core::Guid::ToArray </td>
+          <td class="memname">std::array&lt; <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>, 16 &gt; Harlinn::Common::Core::Guid::ToArray </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -1593,7 +1602,7 @@ requires ( std::is_same_v&lt;StringT,<a class="el" href="namespace_harlinn_1_1_c
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>, 16 &gt; Harlinn::Common::Core::Guid::ToBytes </td>
+          <td class="memname">std::array&lt; <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>, 16 &gt; Harlinn::Common::Core::Guid::ToBytes </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

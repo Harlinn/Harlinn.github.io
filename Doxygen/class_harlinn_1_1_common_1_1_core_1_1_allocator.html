@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -115,11 +124,11 @@ Inheritance diagram for Harlinn::Common::Core::Allocator:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aabb990091a1c24ac28f474496d3402ba" id="r_aabb990091a1c24ac28f474496d3402ba"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_h_c_c_export_8h.html#afb06ae686742fde98e6427c4a1e2206c">HCC_EXPORT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabb990091a1c24ac28f474496d3402ba">~Allocator</a> ()</td></tr>
 <tr class="separator:aabb990091a1c24ac28f474496d3402ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5647abb6b886c19c9f6cd3a1a7075348" id="r_a5647abb6b886c19c9f6cd3a1a7075348"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5647abb6b886c19c9f6cd3a1a7075348">Allocate</a> (size_t size)=0</td></tr>
+<tr class="memitem:a5647abb6b886c19c9f6cd3a1a7075348" id="r_a5647abb6b886c19c9f6cd3a1a7075348"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5647abb6b886c19c9f6cd3a1a7075348">Allocate</a> (size_t size)=0</td></tr>
 <tr class="separator:a5647abb6b886c19c9f6cd3a1a7075348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad54c2a009db408a96f5c24e8d65c50ca" id="r_ad54c2a009db408a96f5c24e8d65c50ca"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad54c2a009db408a96f5c24e8d65c50ca">Reallocate</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *ptr, size_t size)=0</td></tr>
+<tr class="memitem:ad54c2a009db408a96f5c24e8d65c50ca" id="r_ad54c2a009db408a96f5c24e8d65c50ca"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad54c2a009db408a96f5c24e8d65c50ca">Reallocate</a> (<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *ptr, size_t size)=0</td></tr>
 <tr class="separator:ad54c2a009db408a96f5c24e8d65c50ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71314c5c8de8d36ea86437a88200a3b7" id="r_a71314c5c8de8d36ea86437a88200a3b7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71314c5c8de8d36ea86437a88200a3b7">Free</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *ptr)=0</td></tr>
+<tr class="memitem:a71314c5c8de8d36ea86437a88200a3b7" id="r_a71314c5c8de8d36ea86437a88200a3b7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71314c5c8de8d36ea86437a88200a3b7">Free</a> (<a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *ptr)=0</td></tr>
 <tr class="separator:a71314c5c8de8d36ea86437a88200a3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -159,7 +168,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> * Harlinn::Common::Core::Allocator::Allocate </td>
+          <td class="memname">virtual <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> * Harlinn::Common::Core::Allocator::Allocate </td>
           <td>(</td>
           <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
           <td></td>
@@ -188,7 +197,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void Harlinn::Common::Core::Allocator::Free </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -213,9 +222,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> * Harlinn::Common::Core::Allocator::Reallocate </td>
+          <td class="memname">virtual <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> * Harlinn::Common::Core::Allocator::Reallocate </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

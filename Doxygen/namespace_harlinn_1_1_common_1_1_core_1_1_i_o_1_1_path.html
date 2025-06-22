@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -395,7 +404,7 @@ requires ( std::is_same_v&lt;CharT,char&gt; || std::is_same_v&lt;CharT, wchar_t&
 <p>Changes the extension of a path string. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
     <tr><td class="paramname">CharT</td><td>Either char or wchar_t. The type of CharT must be of the same type as ResultT::value_type. </td></tr>
   </table>
   </dd>
@@ -444,9 +453,9 @@ requires ( std::is_same_v&lt;CharT,char&gt; || std::is_same_v&lt;CharT, wchar_t&
 <p>Changes the extension of a path string. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
     <tr><td class="paramname">CharT</td><td>Either char or wchar_t. The type of CharT must be of the same type as ResultT::value_type. </td></tr>
-    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
+    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -495,8 +504,8 @@ requires ( std::is_same_v&lt;CharT,char&gt; || std::is_same_v&lt;CharT, wchar_t&
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">CharT</td><td>Either char or wchar_t. The type of CharT must be of the same type as ResultT::value_type. </td></tr>
-    <tr><td class="paramname">StringT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. The purpose of this overload is to let this type be deduced from the startOfPath parameter. </td></tr>
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. By default this type is deduced from the type of StringT. </td></tr>
+    <tr><td class="paramname">StringT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. The purpose of this overload is to let this type be deduced from the startOfPath parameter. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. By default this type is deduced from the type of StringT. </td></tr>
   </table>
   </dd>
 </dl>
@@ -544,8 +553,8 @@ requires ( std::is_same_v&lt;CharT,char&gt; || std::is_same_v&lt;CharT, wchar_t&
 <p>Changes the extension of a path string. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
-    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
+    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
     <tr><td class="paramname">CharT</td><td>Either char or wchar_t. The type of CharT must be of the same type as ResultT::value_type. </td></tr>
   </table>
   </dd>
@@ -594,9 +603,9 @@ requires ( std::is_same_v&lt;typename ResultT::value_type, std::remove_cvref_t&l
 <p>Changes the extension of a path string. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
-    <tr><td class="paramname">SpanT1</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept if SpanT2 matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
-    <tr><td class="paramname">SpanT2</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept if SpanT1 matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
+    <tr><td class="paramname">SpanT1</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept if SpanT2 matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
+    <tr><td class="paramname">SpanT2</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept if SpanT1 matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -644,9 +653,9 @@ requires ( std::is_same_v&lt;CharT,char&gt; || std::is_same_v&lt;CharT, wchar_t&
 <p>Changes the extension of a path string. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">StringT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. The purpose of this overload is to let this type be deduced from the startOfPath parameter. </td></tr>
+    <tr><td class="paramname">StringT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. The purpose of this overload is to let this type be deduced from the startOfPath parameter. </td></tr>
     <tr><td class="paramname">CharT</td><td>Either char or wchar_t. The type of CharT must be of the same type as ResultT::value_type. </td></tr>
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. By default this type is deduced from the type of StringT. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. By default this type is deduced from the type of StringT. </td></tr>
   </table>
   </dd>
 </dl>
@@ -694,9 +703,9 @@ requires std::is_same_v&lt;typename StringT1::value_type, std::remove_cvref_t&lt
 <p>Changes the extension of a path string. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">StringT1</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
-    <tr><td class="paramname">StringT2</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. By default this type is deduced from the type of StringT1 or StringT2 as long as at least one of the types satisfies the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. When both satisfies the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept, ResultT is deduced to be of type StringT1. </td></tr>
+    <tr><td class="paramname">StringT1</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
+    <tr><td class="paramname">StringT2</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. By default this type is deduced from the type of StringT1 or StringT2 as long as at least one of the types satisfies the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. When both satisfies the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept, ResultT is deduced to be of type StringT1. </td></tr>
   </table>
   </dd>
 </dl>
@@ -744,7 +753,7 @@ requires ( std::is_same_v&lt;CharT,char&gt; || std::is_same_v&lt;CharT, wchar_t&
 <p>Combines strings into a path, and, if necessary, inserts a directory separator between the the two parts. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
     <tr><td class="paramname">CharT</td><td>Either char or wchar_t. The type of CharT must be of the same type as ResultT::value_type. </td></tr>
   </table>
   </dd>
@@ -793,9 +802,9 @@ requires ( std::is_same_v&lt;CharT,char&gt; || std::is_same_v&lt;CharT, wchar_t&
 <p>Combines strings into a path, and, if necessary, inserts a directory separator between the the two parts. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
     <tr><td class="paramname">CharT</td><td>Either char or wchar_t. The type of CharT must be of the same type as ResultT::value_type. </td></tr>
-    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
+    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -845,8 +854,8 @@ requires ( std::is_same_v&lt;CharT,char&gt; || std::is_same_v&lt;CharT, wchar_t&
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">CharT</td><td>Either char or wchar_t. The type of CharT must be of the same type as ResultT::value_type. </td></tr>
-    <tr><td class="paramname">StringT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. The purpose of this overload is to let this type be deduced from the startOfPath parameter. </td></tr>
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. By default this type is deduced from the type of StringT. </td></tr>
+    <tr><td class="paramname">StringT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. The purpose of this overload is to let this type be deduced from the startOfPath parameter. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. By default this type is deduced from the type of StringT. </td></tr>
   </table>
   </dd>
 </dl>
@@ -895,8 +904,8 @@ requires ( std::is_same_v&lt;CharT,char&gt; || std::is_same_v&lt;CharT, wchar_t&
 <p>Combines strings into a path, and, if necessary, inserts a directory separator between the the two parts. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
-    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
+    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
     <tr><td class="paramname">CharT</td><td>Either char or wchar_t. The type of CharT must be of the same type as ResultT::value_type. </td></tr>
   </table>
   </dd>
@@ -946,9 +955,9 @@ requires ( std::is_same_v&lt;typename ResultT::value_type, std::remove_cvref_t&l
 <p>Combines strings into a path, and, if necessary, inserts a directory separator between the the two parts. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
-    <tr><td class="paramname">SpanT1</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept if SpanT2 matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
-    <tr><td class="paramname">SpanT2</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept if SpanT1 matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
+    <tr><td class="paramname">SpanT1</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept if SpanT2 matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
+    <tr><td class="paramname">SpanT2</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept, but not the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept if SpanT1 matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -997,9 +1006,9 @@ requires ( std::is_same_v&lt;CharT,char&gt; || std::is_same_v&lt;CharT, wchar_t&
 <p>Combines strings into a path, and, if necessary, inserts a directory separator between the the two parts. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">StringT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. The purpose of this overload is to let this type be deduced from the startOfPath parameter. </td></tr>
+    <tr><td class="paramname">StringT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. The purpose of this overload is to let this type be deduced from the startOfPath parameter. </td></tr>
     <tr><td class="paramname">CharT</td><td>Either char or wchar_t. The type of CharT must be of the same type as ResultT::value_type. </td></tr>
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. By default this type is deduced from the type of StringT. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. By default this type is deduced from the type of StringT. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1048,9 +1057,9 @@ requires std::is_same_v&lt;typename StringT1::value_type, std::remove_cvref_t&lt
 <p>Combines strings into a path, and, if necessary, inserts a directory separator between the the two parts. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">StringT1</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
-    <tr><td class="paramname">StringT2</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. By default this type is deduced from the type of StringT1 or StringT2 as long as at least one of the types satisfies the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. When both satisfies the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept, ResultT is deduced to be of type StringT1. </td></tr>
+    <tr><td class="paramname">StringT1</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
+    <tr><td class="paramname">StringT2</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. By default this type is deduced from the type of StringT1 or StringT2 as long as at least one of the types satisfies the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept. When both satisfies the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept, ResultT is deduced to be of type StringT1. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1163,7 +1172,7 @@ template&lt;SimpleCharSpanLike StringT&gt; </div>
 <p>Returns a value that indicates whether the specified path ends in a directory separator. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">StringT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
+    <tr><td class="paramname">StringT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1248,7 +1257,7 @@ template&lt;SimpleCharSpanLike SpanT&gt; </div>
 <p>Returns a value that indicates whether the specified path ends in a directory separator. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
+    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1291,7 +1300,7 @@ requires std::is_same_v&lt;CharT, typename ResultT::value_type&gt; &amp;&amp; ( 
 <p>Adds a directory separator to the argument path if it does not end with a directory separator. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
     <tr><td class="paramname">CharT</td><td>Either char or wchar_t. The type of CharT must be of the same type as ResultT::value_type. </td></tr>
   </table>
   </dd>
@@ -1335,8 +1344,8 @@ requires std::is_same_v&lt;typename SpanT::value_type, typename ResultT::value_t
 <p>Adds a directory separator to the argument path if it does not end with a directory separator. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
-    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. The type of SpanT::value_type must be of the same type as StringT::value_type. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
+    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. The type of SpanT::value_type must be of the same type as StringT::value_type. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1379,8 +1388,8 @@ requires std::is_same_v&lt;typename ResultT::value_type, typename StringT::value
 <p>Adds a directory separator to the argument path if it does not end with a directory separator. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">StringT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the argument path. </td></tr>
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
+    <tr><td class="paramname">StringT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the argument path. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2118,7 +2127,7 @@ requires std::is_same_v&lt;CharT,typename ResultT::value_type&gt; &amp;&amp; ( s
 <p>Trims one trailing directory separator beyond the root of the specified path. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
     <tr><td class="paramname">CharT</td><td>Either char or wchar_t. The type of CharT must be of the same type as ResultT::value_type. </td></tr>
   </table>
   </dd>
@@ -2162,8 +2171,8 @@ requires std::is_same_v&lt;typename SpanT::value_type,typename ResultT::value_ty
 <p>Trims one trailing directory separator beyond the root of the specified path. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
-    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. The type of SpanT::value_type must be of the same type as ResultT::value_type. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
+    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. The type of SpanT::value_type must be of the same type as ResultT::value_type. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2206,8 +2215,8 @@ requires std::is_same_v&lt;typename StringT::value_type,typename ResultT::value_
 <p>Trims one trailing directory separator beyond the root of the specified path. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">StringT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the argument path. </td></tr>
-    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
+    <tr><td class="paramname">StringT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the argument path. </td></tr>
+    <tr><td class="paramname">ResultT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_string_like.html" title="Matches zero terminated C++ string classes with sequential memory layout that implements an API simil...">StringLike</a> concept specifying the type of the returned value. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2382,7 +2391,7 @@ template&lt;SimpleCharSpanLike SpanT&gt; </div>
 <p>Returns a value that indicates whether the specified path starts with a directory separator. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_core_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
+    <tr><td class="paramname">SpanT</td><td>A type that matches the <a class="el" href="concept_harlinn_1_1_common_1_1_simple_char_span_like.html" title="Matches most common string classes with sequential memory layout. Do not assume that they are zero te...">SimpleCharSpanLike</a> concept. </td></tr>
   </table>
   </dd>
 </dl>

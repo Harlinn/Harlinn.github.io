@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -130,7 +139,7 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a68ef76785ed18a8ff36d23c04a7d3479" id="r_a68ef76785ed18a8ff36d23c04a7d3479"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68ef76785ed18a8ff36d23c04a7d3479">LightweightSemaphoreImpl</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> initialCount=0)</td></tr>
+<tr class="memitem:a68ef76785ed18a8ff36d23c04a7d3479" id="r_a68ef76785ed18a8ff36d23c04a7d3479"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68ef76785ed18a8ff36d23c04a7d3479">LightweightSemaphoreImpl</a> (<a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> initialCount=0)</td></tr>
 <tr class="separator:a68ef76785ed18a8ff36d23c04a7d3479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99759ea6d1b02a5a298012cbdbd653a6" id="r_a99759ea6d1b02a5a298012cbdbd653a6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="#a16a7913ffeaea5b199deadf5b7fbee4f">SemaphoreType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99759ea6d1b02a5a298012cbdbd653a6">Semaphore</a> () const</td></tr>
 <tr class="separator:a99759ea6d1b02a5a298012cbdbd653a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,13 +147,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acc275758e9a12d6a38d602ef0fd4d961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d2cf471ed53008e54eaa31e02cf47e6" id="r_a3d2cf471ed53008e54eaa31e02cf47e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d2cf471ed53008e54eaa31e02cf47e6">Wait</a> (DWORD timeoutInMilliseconds=INFINITE)</td></tr>
 <tr class="separator:a3d2cf471ed53008e54eaa31e02cf47e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcb1bb0d3a5c95225885446f399325ea" id="r_adcb1bb0d3a5c95225885446f399325ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcb1bb0d3a5c95225885446f399325ea">TryWaitMany</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> max)</td></tr>
+<tr class="memitem:adcb1bb0d3a5c95225885446f399325ea" id="r_adcb1bb0d3a5c95225885446f399325ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcb1bb0d3a5c95225885446f399325ea">TryWaitMany</a> (<a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> max)</td></tr>
 <tr class="separator:adcb1bb0d3a5c95225885446f399325ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25d706adf585f6c5f1d0f4464ef4dda3" id="r_a25d706adf585f6c5f1d0f4464ef4dda3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25d706adf585f6c5f1d0f4464ef4dda3">WaitMany</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> max, DWORD timeoutInMilliseconds=INFINITE)</td></tr>
+<tr class="memitem:a25d706adf585f6c5f1d0f4464ef4dda3" id="r_a25d706adf585f6c5f1d0f4464ef4dda3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25d706adf585f6c5f1d0f4464ef4dda3">WaitMany</a> (<a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> max, DWORD timeoutInMilliseconds=INFINITE)</td></tr>
 <tr class="separator:a25d706adf585f6c5f1d0f4464ef4dda3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab428227c7863cae8f56bce21ad6fbee6" id="r_ab428227c7863cae8f56bce21ad6fbee6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab428227c7863cae8f56bce21ad6fbee6">Release</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> count=1)</td></tr>
+<tr class="memitem:ab428227c7863cae8f56bce21ad6fbee6" id="r_ab428227c7863cae8f56bce21ad6fbee6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab428227c7863cae8f56bce21ad6fbee6">Release</a> (<a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> count=1)</td></tr>
 <tr class="separator:ab428227c7863cae8f56bce21ad6fbee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa01ea1c6126302cb58a2524743ecacf1" id="r_aa01ea1c6126302cb58a2524743ecacf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa01ea1c6126302cb58a2524743ecacf1">Signal</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> count=1)</td></tr>
+<tr class="memitem:aa01ea1c6126302cb58a2524743ecacf1" id="r_aa01ea1c6126302cb58a2524743ecacf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa01ea1c6126302cb58a2524743ecacf1">Signal</a> (<a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> count=1)</td></tr>
 <tr class="separator:aa01ea1c6126302cb58a2524743ecacf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fd3d0414aebaabb97c70db9c6aaa2cb" id="r_a4fd3d0414aebaabb97c70db9c6aaa2cb"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fd3d0414aebaabb97c70db9c6aaa2cb">Available</a> () const</td></tr>
 <tr class="separator:a4fd3d0414aebaabb97c70db9c6aaa2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,25 +166,25 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a6dd6f4731ed155f2aec300477aa629d9" id="r_a6dd6f4731ed155f2aec300477aa629d9"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dd6f4731ed155f2aec300477aa629d9">MaxSpins</a> = maxSpins</td></tr>
+<tr class="memitem:a6dd6f4731ed155f2aec300477aa629d9" id="r_a6dd6f4731ed155f2aec300477aa629d9"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dd6f4731ed155f2aec300477aa629d9">MaxSpins</a> = maxSpins</td></tr>
 <tr class="separator:a6dd6f4731ed155f2aec300477aa629d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a301faa1a0060a7861436120b5ac6c8f0" id="r_a301faa1a0060a7861436120b5ac6c8f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a301faa1a0060a7861436120b5ac6c8f0">WaitWithPartialSpinning</a> (DWORD timeoutInMilliseconds=INFINITE)</td></tr>
 <tr class="separator:a301faa1a0060a7861436120b5ac6c8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63a635ca471c35c897c0812e35951d86" id="r_a63a635ca471c35c897c0812e35951d86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63a635ca471c35c897c0812e35951d86">WaitManyWithPartialSpinning</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> max, DWORD timeoutInMilliseconds=INFINITE)</td></tr>
+<tr class="memitem:a63a635ca471c35c897c0812e35951d86" id="r_a63a635ca471c35c897c0812e35951d86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63a635ca471c35c897c0812e35951d86">WaitManyWithPartialSpinning</a> (<a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> max, DWORD timeoutInMilliseconds=INFINITE)</td></tr>
 <tr class="separator:a63a635ca471c35c897c0812e35951d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:afa57f840f85ad979ef99c1f5237ed792" id="r_afa57f840f85ad979ef99c1f5237ed792"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa57f840f85ad979ef99c1f5237ed792">count_</a></td></tr>
+<tr class="memitem:afa57f840f85ad979ef99c1f5237ed792" id="r_afa57f840f85ad979ef99c1f5237ed792"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa57f840f85ad979ef99c1f5237ed792">count_</a></td></tr>
 <tr class="separator:afa57f840f85ad979ef99c1f5237ed792"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a532469e0cba459f0a19956aa29e5ea1d" id="r_a532469e0cba459f0a19956aa29e5ea1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a16a7913ffeaea5b199deadf5b7fbee4f">SemaphoreType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a532469e0cba459f0a19956aa29e5ea1d">semaphore_</a></td></tr>
 <tr class="separator:a532469e0cba459f0a19956aa29e5ea1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename SemaphoreT = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename SemaphoreT = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt;<br />
 class Harlinn::Common::Core::Internal::LightweightSemaphoreImpl&lt; SemaphoreT, maxSpins &gt;</div><p><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html" title="LightweightSemaphoreImpl.">LightweightSemaphoreImpl</a>. </p>
 <p>This is a modified version of Cameron Desrochers <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_lightweight_semaphore.html">LightweightSemaphore</a>. </p>
 <p>I have changed it to work with my <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_semaphore.html">Semaphore</a> class, and converted it into a template that takes an <code>Int32</code> argument specifying the maximum spin count. Timeout are specified in milliseconds. </p>
@@ -192,7 +201,7 @@ class Harlinn::Common::Core::Internal::LightweightSemaphoreImpl&lt; SemaphoreT, 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html">Harlinn::Common::Core::Internal::LightweightSemaphoreImpl</a>&lt; SemaphoreT, maxSpins &gt;::SemaphoreType = SemaphoreT</td>
@@ -209,7 +218,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -217,7 +226,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
         <tr>
           <td class="memname"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html">Harlinn::Common::Core::Internal::LightweightSemaphoreImpl</a>&lt; SemaphoreT, maxSpins &gt;::LightweightSemaphoreImpl </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>initialCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a></td>          <td class="paramname"><span class="paramname"><em>initialCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -237,7 +246,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -264,7 +273,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -291,7 +300,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -299,7 +308,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html">Harlinn::Common::Core::Internal::LightweightSemaphoreImpl</a>&lt; SemaphoreT, maxSpins &gt;::Release </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -318,7 +327,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -345,7 +354,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -353,7 +362,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
         <tr>
           <td class="memname">void <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html">Harlinn::Common::Core::Internal::LightweightSemaphoreImpl</a>&lt; SemaphoreT, maxSpins &gt;::Signal </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a></td>          <td class="paramname"><span class="paramname"><em>count</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -372,7 +381,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -399,7 +408,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -426,15 +435,15 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html">Harlinn::Common::Core::Internal::LightweightSemaphoreImpl</a>&lt; SemaphoreT, maxSpins &gt;::TryWaitMany </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html">Harlinn::Common::Core::Internal::LightweightSemaphoreImpl</a>&lt; SemaphoreT, maxSpins &gt;::TryWaitMany </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -453,7 +462,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -480,7 +489,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -507,15 +516,15 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html">Harlinn::Common::Core::Internal::LightweightSemaphoreImpl</a>&lt; SemaphoreT, maxSpins &gt;::WaitMany </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html">Harlinn::Common::Core::Internal::LightweightSemaphoreImpl</a>&lt; SemaphoreT, maxSpins &gt;::WaitMany </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -538,15 +547,15 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html">Harlinn::Common::Core::Internal::LightweightSemaphoreImpl</a>&lt; SemaphoreT, maxSpins &gt;::WaitManyWithPartialSpinning </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html">Harlinn::Common::Core::Internal::LightweightSemaphoreImpl</a>&lt; SemaphoreT, maxSpins &gt;::WaitManyWithPartialSpinning </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -569,7 +578,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -597,13 +606,13 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a>&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html">Harlinn::Common::Core::Internal::LightweightSemaphoreImpl</a>&lt; SemaphoreT, maxSpins &gt;::count_</td>
+          <td class="memname">std::atomic&lt;<a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a>&gt; <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html">Harlinn::Common::Core::Internal::LightweightSemaphoreImpl</a>&lt; SemaphoreT, maxSpins &gt;::count_</td>
         </tr>
       </table>
   </td>
@@ -621,13 +630,13 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html">Harlinn::Common::Core::Internal::LightweightSemaphoreImpl</a>&lt; SemaphoreT, maxSpins &gt;::MaxSpins = maxSpins</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_internal_1_1_lightweight_semaphore_impl.html">Harlinn::Common::Core::Internal::LightweightSemaphoreImpl</a>&lt; SemaphoreT, maxSpins &gt;::MaxSpins = maxSpins</td>
         </tr>
       </table>
   </td>
@@ -645,7 +654,7 @@ template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harl
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#aa879caba763494ad2c3cd321ce4bbdda">Int32</a> maxSpins = 10000&gt; </div>
+template&lt;typename SemaphoreT  = Semaphore, <a class="el" href="namespace_harlinn_1_1_common.html#a77b0045551d73ca9f4fb32769fa84426">Int32</a> maxSpins = 10000&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">

@@ -1,0 +1,5 @@
+var structstd_1_1formatter_3_01typename_01_harlinn_1_1_math_1_1_quaternion_3_01float_01_4_1_1_simd_00_01_char_t_01_4 =
+[
+    [ "format", "structstd_1_1formatter_3_01typename_01_harlinn_1_1_math_1_1_quaternion_3_01float_01_4_1_1_simd_00_01_char_t_01_4.html#afdce904146d070b237a84fc2829eba3c", null ],
+    [ "parse", "structstd_1_1formatter_3_01typename_01_harlinn_1_1_math_1_1_quaternion_3_01float_01_4_1_1_simd_00_01_char_t_01_4.html#a5af0e5ac34860b1af9bfdd34e03c3c5e", null ]
+];

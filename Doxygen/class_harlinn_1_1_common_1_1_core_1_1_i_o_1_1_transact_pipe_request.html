@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -132,21 +141,21 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af7f6f459189e387e48e3a368faa422e2" id="r_af7f6f459189e387e48e3a368faa422e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7f6f459189e387e48e3a368faa422e2">TransactPipeRequest</a> (HANDLE handle, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *writeBuffer, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> numberOfBytesToWrite, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *readBuffer, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> readBufferSize)</td></tr>
+<tr class="memitem:af7f6f459189e387e48e3a368faa422e2" id="r_af7f6f459189e387e48e3a368faa422e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7f6f459189e387e48e3a368faa422e2">TransactPipeRequest</a> (HANDLE handle, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *writeBuffer, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> numberOfBytesToWrite, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *readBuffer, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> readBufferSize)</td></tr>
 <tr class="separator:af7f6f459189e387e48e3a368faa422e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79493eee4c6f9fa2bfade04d12c02fca" id="r_a79493eee4c6f9fa2bfade04d12c02fca"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79493eee4c6f9fa2bfade04d12c02fca">TransactPipeRequest</a> (HANDLE handle, HANDLE manualResetEvent, bool ownsEvent, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *writeBuffer, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> numberOfBytesToWrite, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *readBuffer, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> readBufferSize) noexcept</td></tr>
+<tr class="memitem:a79493eee4c6f9fa2bfade04d12c02fca" id="r_a79493eee4c6f9fa2bfade04d12c02fca"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79493eee4c6f9fa2bfade04d12c02fca">TransactPipeRequest</a> (HANDLE handle, HANDLE manualResetEvent, bool ownsEvent, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *writeBuffer, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> numberOfBytesToWrite, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *readBuffer, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> readBufferSize) noexcept</td></tr>
 <tr class="separator:a79493eee4c6f9fa2bfade04d12c02fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80f885a356f809d99c39589a1eaf8a3e" id="r_a80f885a356f809d99c39589a1eaf8a3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80f885a356f809d99c39589a1eaf8a3e">TransactPipeRequest</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe.html">Pipe</a> &amp;pipe, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *writeBuffer, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> numberOfBytesToWrite, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *readBuffer, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> readBufferSize)</td></tr>
+<tr class="memitem:a80f885a356f809d99c39589a1eaf8a3e" id="r_a80f885a356f809d99c39589a1eaf8a3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80f885a356f809d99c39589a1eaf8a3e">TransactPipeRequest</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe.html">Pipe</a> &amp;pipe, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *writeBuffer, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> numberOfBytesToWrite, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *readBuffer, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> readBufferSize)</td></tr>
 <tr class="separator:a80f885a356f809d99c39589a1eaf8a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af99c96f9e79c8cee49f281f7fe96ede6" id="r_af99c96f9e79c8cee49f281f7fe96ede6"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af99c96f9e79c8cee49f281f7fe96ede6">TransactPipeRequest</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe.html">Pipe</a> &amp;pipe, HANDLE manualResetEvent, bool ownsEvent, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *writeBuffer, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> numberOfBytesToWrite, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *readBuffer, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> readBufferSize) noexcept</td></tr>
+<tr class="memitem:af99c96f9e79c8cee49f281f7fe96ede6" id="r_af99c96f9e79c8cee49f281f7fe96ede6"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af99c96f9e79c8cee49f281f7fe96ede6">TransactPipeRequest</a> (const <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe.html">Pipe</a> &amp;pipe, HANDLE manualResetEvent, bool ownsEvent, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *writeBuffer, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> numberOfBytesToWrite, <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *readBuffer, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> readBufferSize) noexcept</td></tr>
 <tr class="separator:af99c96f9e79c8cee49f281f7fe96ede6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae79bd2bf078c303e19ce532f7d8dc5fc" id="r_ae79bd2bf078c303e19ce532f7d8dc5fc"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae79bd2bf078c303e19ce532f7d8dc5fc">WriteBuffer</a> () const noexcept</td></tr>
+<tr class="memitem:ae79bd2bf078c303e19ce532f7d8dc5fc" id="r_ae79bd2bf078c303e19ce532f7d8dc5fc"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae79bd2bf078c303e19ce532f7d8dc5fc">WriteBuffer</a> () const noexcept</td></tr>
 <tr class="separator:ae79bd2bf078c303e19ce532f7d8dc5fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3da6e0e35b11eb3727d349237f8f0fe4" id="r_a3da6e0e35b11eb3727d349237f8f0fe4"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3da6e0e35b11eb3727d349237f8f0fe4">NumberOfBytesToWrite</a> () const noexcept</td></tr>
+<tr class="memitem:a3da6e0e35b11eb3727d349237f8f0fe4" id="r_a3da6e0e35b11eb3727d349237f8f0fe4"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3da6e0e35b11eb3727d349237f8f0fe4">NumberOfBytesToWrite</a> () const noexcept</td></tr>
 <tr class="separator:a3da6e0e35b11eb3727d349237f8f0fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25ac08d3d54aa6238aece82388a46a87" id="r_a25ac08d3d54aa6238aece82388a46a87"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25ac08d3d54aa6238aece82388a46a87">ReadBuffer</a> () const noexcept</td></tr>
+<tr class="memitem:a25ac08d3d54aa6238aece82388a46a87" id="r_a25ac08d3d54aa6238aece82388a46a87"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25ac08d3d54aa6238aece82388a46a87">ReadBuffer</a> () const noexcept</td></tr>
 <tr class="separator:a25ac08d3d54aa6238aece82388a46a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c43d0006d86ac742c8bd1ce9cdc05ef" id="r_a8c43d0006d86ac742c8bd1ce9cdc05ef"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c43d0006d86ac742c8bd1ce9cdc05ef">ReadBufferSize</a> () const noexcept</td></tr>
+<tr class="memitem:a8c43d0006d86ac742c8bd1ce9cdc05ef" id="r_a8c43d0006d86ac742c8bd1ce9cdc05ef"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c43d0006d86ac742c8bd1ce9cdc05ef">ReadBufferSize</a> () const noexcept</td></tr>
 <tr class="separator:a8c43d0006d86ac742c8bd1ce9cdc05ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request.html">Harlinn::Common::Core::IO::PipeRequest</a></td></tr>
 <tr class="memitem:a86f459900ca977a642b2b66f508913d7 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request" id="r_a86f459900ca977a642b2b66f508913d7"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a29889fb1d4f9193b26dd21422541eb6d">PipeRequestType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request.html#a86f459900ca977a642b2b66f508913d7">Type</a> () const noexcept</td></tr>
@@ -171,7 +180,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abb72ff63e0bf2b9c1d2618c0180cbfa3 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request" id="r_abb72ff63e0bf2b9c1d2618c0180cbfa3"><td class="memItemLeft" align="right" valign="top">constexpr ULONG_PTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request.html#abb72ff63e0bf2b9c1d2618c0180cbfa3">Status</a> () const noexcept</td></tr>
 <tr class="memdesc:abb72ff63e0bf2b9c1d2618c0180cbfa3 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the status code for the I/O request. Will return STATUS_PENDING to indicate that the operation has not yet completed, and for operations that has completed it will return the status code for the completed request.  <br /></td></tr>
 <tr class="separator:abb72ff63e0bf2b9c1d2618c0180cbfa3 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d9497bb448be3b44a485f10a2ddb815 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request" id="r_a7d9497bb448be3b44a485f10a2ddb815"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request.html#a7d9497bb448be3b44a485f10a2ddb815">SetResult</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7db81262edfb59ceb8618fa43cc28a88">WinError</a> ioResult, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a47d821532420478a9043d9f71d0735d8">UInt64</a> numberOfBytesTransferred) noexcept</td></tr>
+<tr class="memitem:a7d9497bb448be3b44a485f10a2ddb815 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request" id="r_a7d9497bb448be3b44a485f10a2ddb815"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request.html#a7d9497bb448be3b44a485f10a2ddb815">SetResult</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7db81262edfb59ceb8618fa43cc28a88">WinError</a> ioResult, <a class="el" href="namespace_harlinn_1_1_common.html#aeaa56507a02c6cfabe794d1df81a442a">UInt64</a> numberOfBytesTransferred) noexcept</td></tr>
 <tr class="memdesc:a7d9497bb448be3b44a485f10a2ddb815 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the status code and number of bytes transferred for this request.  <br /></td></tr>
 <tr class="separator:a7d9497bb448be3b44a485f10a2ddb815 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacf3c14c025bd46cb577b8f0395e44dd inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request" id="r_aacf3c14c025bd46cb577b8f0395e44dd"><td class="memItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request.html#aacf3c14c025bd46cb577b8f0395e44dd">SetResult</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a7db81262edfb59ceb8618fa43cc28a88">WinError</a> ioResult) noexcept</td></tr>
@@ -222,13 +231,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adf5e0951f4f11cf54e45e9f821bfe2f5 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request" id="r_adf5e0951f4f11cf54e45e9f821bfe2f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request.html#adf5e0951f4f11cf54e45e9f821bfe2f5">IoCompleted</a> () const</td></tr>
 <tr class="memdesc:adf5e0951f4f11cf54e45e9f821bfe2f5 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request"><td class="mdescLeft">&#160;</td><td class="mdescRight">A high performance test operation that can be used to poll for the completion of an outstanding I/O request.  <br /></td></tr>
 <tr class="separator:adf5e0951f4f11cf54e45e9f821bfe2f5 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade1e2e3da770332eabb1a5516d77d8b1 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request" id="r_ade1e2e3da770332eabb1a5516d77d8b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a35e9effb171a9d3efbd0b0fe56a30596">RequestWaitResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request.html#ade1e2e3da770332eabb1a5516d77d8b1">Wait</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *numberOfBytesTransferred, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> timeoutInMilliseconds, bool alertableWait) const</td></tr>
+<tr class="memitem:ade1e2e3da770332eabb1a5516d77d8b1 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request" id="r_ade1e2e3da770332eabb1a5516d77d8b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a35e9effb171a9d3efbd0b0fe56a30596">RequestWaitResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request.html#ade1e2e3da770332eabb1a5516d77d8b1">Wait</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *numberOfBytesTransferred, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> timeoutInMilliseconds, bool alertableWait) const</td></tr>
 <tr class="memdesc:ade1e2e3da770332eabb1a5516d77d8b1 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for the completion of this asynchronous request.  <br /></td></tr>
 <tr class="separator:ade1e2e3da770332eabb1a5516d77d8b1 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a812131aeed21753c0589a17c228b44b4 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request" id="r_a812131aeed21753c0589a17c228b44b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request.html#a812131aeed21753c0589a17c228b44b4">Wait</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> *numberOfBytesTransferred, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> timeoutInMilliseconds=INFINITE) const</td></tr>
+<tr class="memitem:a812131aeed21753c0589a17c228b44b4 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request" id="r_a812131aeed21753c0589a17c228b44b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request.html#a812131aeed21753c0589a17c228b44b4">Wait</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> *numberOfBytesTransferred, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> timeoutInMilliseconds=INFINITE) const</td></tr>
 <tr class="memdesc:a812131aeed21753c0589a17c228b44b4 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for the completion of this asynchronous request.  <br /></td></tr>
 <tr class="separator:a812131aeed21753c0589a17c228b44b4 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a477652f9be29fa79cd0afc77f5e177d8 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request" id="r_a477652f9be29fa79cd0afc77f5e177d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request.html#a477652f9be29fa79cd0afc77f5e177d8">Wait</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> timeoutInMilliseconds=INFINITE) const</td></tr>
+<tr class="memitem:a477652f9be29fa79cd0afc77f5e177d8 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request" id="r_a477652f9be29fa79cd0afc77f5e177d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request.html#a477652f9be29fa79cd0afc77f5e177d8">Wait</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> timeoutInMilliseconds=INFINITE) const</td></tr>
 <tr class="memdesc:a477652f9be29fa79cd0afc77f5e177d8 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for the completion of this asynchronous request.  <br /></td></tr>
 <tr class="separator:a477652f9be29fa79cd0afc77f5e177d8 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cefcc22aff05079044b7934aa1edd63 inherit pub_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request" id="r_a4cefcc22aff05079044b7934aa1edd63"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_request.html#a4cefcc22aff05079044b7934aa1edd63">Cancel</a> () const</td></tr>
@@ -251,21 +260,21 @@ Static Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a752789875b39928078ccc9a0561c629f" id="r_a752789875b39928078ccc9a0561c629f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a752789875b39928078ccc9a0561c629f">writeBuffer_</a></td></tr>
+<tr class="memitem:a752789875b39928078ccc9a0561c629f" id="r_a752789875b39928078ccc9a0561c629f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a752789875b39928078ccc9a0561c629f">writeBuffer_</a></td></tr>
 <tr class="separator:a752789875b39928078ccc9a0561c629f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4465bff967d24bd9707ab589b8e21793" id="r_a4465bff967d24bd9707ab589b8e21793"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4465bff967d24bd9707ab589b8e21793">numberOfBytesToWrite_</a></td></tr>
+<tr class="memitem:a4465bff967d24bd9707ab589b8e21793" id="r_a4465bff967d24bd9707ab589b8e21793"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4465bff967d24bd9707ab589b8e21793">numberOfBytesToWrite_</a></td></tr>
 <tr class="separator:a4465bff967d24bd9707ab589b8e21793"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebca7e051facddda2aea3cd7a9f75b16" id="r_aebca7e051facddda2aea3cd7a9f75b16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebca7e051facddda2aea3cd7a9f75b16">readBuffer_</a></td></tr>
+<tr class="memitem:aebca7e051facddda2aea3cd7a9f75b16" id="r_aebca7e051facddda2aea3cd7a9f75b16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebca7e051facddda2aea3cd7a9f75b16">readBuffer_</a></td></tr>
 <tr class="separator:aebca7e051facddda2aea3cd7a9f75b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1abe4ef499598ea4b156a69a51d1df90" id="r_a1abe4ef499598ea4b156a69a51d1df90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1abe4ef499598ea4b156a69a51d1df90">readBufferSize_</a></td></tr>
+<tr class="memitem:a1abe4ef499598ea4b156a69a51d1df90" id="r_a1abe4ef499598ea4b156a69a51d1df90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1abe4ef499598ea4b156a69a51d1df90">readBufferSize_</a></td></tr>
 <tr class="separator:a1abe4ef499598ea4b156a69a51d1df90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request.html">Harlinn::Common::Core::IO::PipeRequest</a></td></tr>
-<tr class="memitem:a50370a3c6a61da04dca31bfc5ee4a874 inherit pro_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request" id="r_a50370a3c6a61da04dca31bfc5ee4a874"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request.html#a50370a3c6a61da04dca31bfc5ee4a874">PipeRequest</a> (HANDLE handle, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a29889fb1d4f9193b26dd21422541eb6d">PipeRequestType</a> <a class="el" href="s__llrint_8inl.html#a53155e22eaa05190346890241be3367c">type</a>)</td></tr>
+<tr class="memitem:a50370a3c6a61da04dca31bfc5ee4a874 inherit pro_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request" id="r_a50370a3c6a61da04dca31bfc5ee4a874"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request.html#a50370a3c6a61da04dca31bfc5ee4a874">PipeRequest</a> (HANDLE handle, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a29889fb1d4f9193b26dd21422541eb6d">PipeRequestType</a> type)</td></tr>
 <tr class="separator:a50370a3c6a61da04dca31bfc5ee4a874 inherit pro_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a451c5afe5ec36580987df781cc6661a9 inherit pro_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request" id="r_a451c5afe5ec36580987df781cc6661a9"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request.html#a451c5afe5ec36580987df781cc6661a9">PipeRequest</a> (HANDLE handle, HANDLE manualResetEvent, bool ownsEvent, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a29889fb1d4f9193b26dd21422541eb6d">PipeRequestType</a> <a class="el" href="s__llrint_8inl.html#a53155e22eaa05190346890241be3367c">type</a>) noexcept</td></tr>
+<tr class="memitem:a451c5afe5ec36580987df781cc6661a9 inherit pro_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request" id="r_a451c5afe5ec36580987df781cc6661a9"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request.html#a451c5afe5ec36580987df781cc6661a9">PipeRequest</a> (HANDLE handle, HANDLE manualResetEvent, bool ownsEvent, <a class="el" href="namespace_harlinn_1_1_common_1_1_core_1_1_i_o.html#a29889fb1d4f9193b26dd21422541eb6d">PipeRequestType</a> type) noexcept</td></tr>
 <tr class="separator:a451c5afe5ec36580987df781cc6661a9 inherit pro_methods_class_harlinn_1_1_common_1_1_core_1_1_i_o_1_1_pipe_request"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
@@ -301,22 +310,22 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>writeBuffer</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>writeBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numberOfBytesToWrite</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numberOfBytesToWrite</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>readBuffer</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>readBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>readBufferSize</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>readBufferSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -355,22 +364,22 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>writeBuffer</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>writeBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numberOfBytesToWrite</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numberOfBytesToWrite</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>readBuffer</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>readBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>readBufferSize</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>readBufferSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -399,22 +408,22 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>writeBuffer</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>writeBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numberOfBytesToWrite</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numberOfBytesToWrite</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>readBuffer</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>readBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>readBufferSize</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>readBufferSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -453,22 +462,22 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>writeBuffer</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>writeBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numberOfBytesToWrite</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numberOfBytesToWrite</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>readBuffer</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> *</td>          <td class="paramname"><span class="paramname"><em>readBuffer</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>readBufferSize</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>readBufferSize</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -491,7 +500,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::IO::TransactPipeRequest::NumberOfBytesToWrite </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::IO::TransactPipeRequest::NumberOfBytesToWrite </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -516,7 +525,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> * Harlinn::Common::Core::IO::TransactPipeRequest::ReadBuffer </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> * Harlinn::Common::Core::IO::TransactPipeRequest::ReadBuffer </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -541,7 +550,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::IO::TransactPipeRequest::ReadBufferSize </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::IO::TransactPipeRequest::ReadBufferSize </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -566,7 +575,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a> * Harlinn::Common::Core::IO::TransactPipeRequest::WriteBuffer </td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a> * Harlinn::Common::Core::IO::TransactPipeRequest::WriteBuffer </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -592,7 +601,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::IO::TransactPipeRequest::numberOfBytesToWrite_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::IO::TransactPipeRequest::numberOfBytesToWrite_</td>
         </tr>
       </table>
   </td>
@@ -614,7 +623,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>* Harlinn::Common::Core::IO::TransactPipeRequest::readBuffer_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>* Harlinn::Common::Core::IO::TransactPipeRequest::readBuffer_</td>
         </tr>
       </table>
   </td>
@@ -636,7 +645,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> Harlinn::Common::Core::IO::TransactPipeRequest::readBufferSize_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> Harlinn::Common::Core::IO::TransactPipeRequest::readBufferSize_</td>
         </tr>
       </table>
   </td>
@@ -680,7 +689,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#af82811a69582d9f85a78627741d07b19">Byte</a>* Harlinn::Common::Core::IO::TransactPipeRequest::writeBuffer_</td>
+          <td class="memname"><a class="el" href="namespace_harlinn_1_1_common.html#afb72401245faa7c17ffa170c84332c1e">Byte</a>* Harlinn::Common::Core::IO::TransactPipeRequest::writeBuffer_</td>
         </tr>
       </table>
   </td>

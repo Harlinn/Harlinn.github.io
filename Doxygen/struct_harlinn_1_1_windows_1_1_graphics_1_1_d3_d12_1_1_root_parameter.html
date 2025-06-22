@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -119,47 +128,47 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3f3aa2289acc9d37d3e1ce8fd44229db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b28b17666b42fbfd7b43a3e79f024aa" id="r_a2b28b17666b42fbfd7b43a3e79f024aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b28b17666b42fbfd7b43a3e79f024aa">RootParameter</a> (const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_descriptor_table.html">RootDescriptorTable</a> &amp;descriptorTable, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
 <tr class="separator:a2b28b17666b42fbfd7b43a3e79f024aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a689537931fc0eab4055ba59e1ccd32f9" id="r_a689537931fc0eab4055ba59e1ccd32f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a689537931fc0eab4055ba59e1ccd32f9">RootParameter</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> numDescriptorRanges, _Field_size_full_(numDescriptorRanges) const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_descriptor_range.html">DescriptorRange</a> *descriptorRanges, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
+<tr class="memitem:a689537931fc0eab4055ba59e1ccd32f9" id="r_a689537931fc0eab4055ba59e1ccd32f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a689537931fc0eab4055ba59e1ccd32f9">RootParameter</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> numDescriptorRanges, _Field_size_full_(numDescriptorRanges) const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_descriptor_range.html">DescriptorRange</a> *descriptorRanges, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
 <tr class="separator:a689537931fc0eab4055ba59e1ccd32f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53303513a1c49da2029487e71619a871" id="r_a53303513a1c49da2029487e71619a871"><td class="memTemplParams" colspan="2">template&lt;SimpleSpanLike T&gt; </td></tr>
 <tr class="memitem:a53303513a1c49da2029487e71619a871"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a53303513a1c49da2029487e71619a871">RootParameter</a> (const <a class="el" href="namespace_harlinn_1_1_windows.html#ae78a358018b23c0b19e707c580404bcdab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> &amp;descriptorRanges, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
 <tr class="separator:a53303513a1c49da2029487e71619a871"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00094ac8232044206d716d56a8a48e82" id="r_a00094ac8232044206d716d56a8a48e82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00094ac8232044206d716d56a8a48e82">RootParameter</a> (<a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_constants.html">RootConstants</a> &amp;constants, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
 <tr class="separator:a00094ac8232044206d716d56a8a48e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad983708ef44d9af46e72afa96c74d94f" id="r_ad983708ef44d9af46e72afa96c74d94f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad983708ef44d9af46e72afa96c74d94f">RootParameter</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> shaderRegister, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> registerSpace, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> num32BitValues, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
+<tr class="memitem:ad983708ef44d9af46e72afa96c74d94f" id="r_ad983708ef44d9af46e72afa96c74d94f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad983708ef44d9af46e72afa96c74d94f">RootParameter</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> shaderRegister, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> registerSpace, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> num32BitValues, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
 <tr class="separator:ad983708ef44d9af46e72afa96c74d94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9b17783272c47c342d1707fd87a3826" id="r_ab9b17783272c47c342d1707fd87a3826"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9b17783272c47c342d1707fd87a3826">RootParameter</a> (<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a693657834fe67a8b0bb928bf87ac3a18">RootParameterType</a> parameterType, const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_descriptor.html">RootDescriptor</a> &amp;descriptor, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
 <tr class="separator:ab9b17783272c47c342d1707fd87a3826"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a881728e5a095518935ab924c2da0dcc1" id="r_a881728e5a095518935ab924c2da0dcc1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a881728e5a095518935ab924c2da0dcc1">RootParameter</a> (<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a693657834fe67a8b0bb928bf87ac3a18">RootParameterType</a> parameterType, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> shaderRegister, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> registerSpace, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
+<tr class="memitem:a881728e5a095518935ab924c2da0dcc1" id="r_a881728e5a095518935ab924c2da0dcc1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a881728e5a095518935ab924c2da0dcc1">RootParameter</a> (<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a693657834fe67a8b0bb928bf87ac3a18">RootParameterType</a> parameterType, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> shaderRegister, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> registerSpace, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
 <tr class="separator:a881728e5a095518935ab924c2da0dcc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeef360e651641171a291f7255e8cd61d" id="r_aeef360e651641171a291f7255e8cd61d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeef360e651641171a291f7255e8cd61d">HWD3D12_IMPLEMENT_CONVERSIONS_TO</a> (D3D12_ROOT_PARAMETER)</td></tr>
 <tr class="separator:aeef360e651641171a291f7255e8cd61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aac365bdb85b64ed80fc5e14a13403790" id="r_aac365bdb85b64ed80fc5e14a13403790"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac365bdb85b64ed80fc5e14a13403790">AsDescriptorTable</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> numDescriptorRanges, _Field_size_full_(numDescriptorRanges) const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_descriptor_range.html">DescriptorRange</a> *descriptorRanges, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
+<tr class="memitem:aac365bdb85b64ed80fc5e14a13403790" id="r_aac365bdb85b64ed80fc5e14a13403790"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac365bdb85b64ed80fc5e14a13403790">AsDescriptorTable</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> numDescriptorRanges, _Field_size_full_(numDescriptorRanges) const <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_descriptor_range.html">DescriptorRange</a> *descriptorRanges, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
 <tr class="separator:aac365bdb85b64ed80fc5e14a13403790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c22465c3d47a7d20f678a0dc66762d6" id="r_a5c22465c3d47a7d20f678a0dc66762d6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c22465c3d47a7d20f678a0dc66762d6">AsConstantBufferView</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> shaderRegister, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> registerSpace, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
+<tr class="memitem:a5c22465c3d47a7d20f678a0dc66762d6" id="r_a5c22465c3d47a7d20f678a0dc66762d6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c22465c3d47a7d20f678a0dc66762d6">AsConstantBufferView</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> shaderRegister, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> registerSpace, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
 <tr class="separator:a5c22465c3d47a7d20f678a0dc66762d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ffc8fddbd5aea7d480ceda4341ededc" id="r_a8ffc8fddbd5aea7d480ceda4341ededc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ffc8fddbd5aea7d480ceda4341ededc">AsShaderResourceView</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> shaderRegister, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> registerSpace, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
+<tr class="memitem:a8ffc8fddbd5aea7d480ceda4341ededc" id="r_a8ffc8fddbd5aea7d480ceda4341ededc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ffc8fddbd5aea7d480ceda4341ededc">AsShaderResourceView</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> shaderRegister, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> registerSpace, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
 <tr class="separator:a8ffc8fddbd5aea7d480ceda4341ededc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a564c4a912d6e1295ff8f6fc5959adb2a" id="r_a564c4a912d6e1295ff8f6fc5959adb2a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a564c4a912d6e1295ff8f6fc5959adb2a">AsUnorderedAccessView</a> (<a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> shaderRegister, <a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a> registerSpace, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
+<tr class="memitem:a564c4a912d6e1295ff8f6fc5959adb2a" id="r_a564c4a912d6e1295ff8f6fc5959adb2a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a564c4a912d6e1295ff8f6fc5959adb2a">AsUnorderedAccessView</a> (<a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> shaderRegister, <a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a> registerSpace, <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a> shaderVisibility=<a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a>)</td></tr>
 <tr class="separator:a564c4a912d6e1295ff8f6fc5959adb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:afffb59f3a46b1d9f975eeb31e8600aa2" id="r_afffb59f3a46b1d9f975eeb31e8600aa2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a693657834fe67a8b0bb928bf87ac3a18">RootParameterType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afffb59f3a46b1d9f975eeb31e8600aa2">ParameterType</a> = <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a693657834fe67a8b0bb928bf87ac3a18a0481544837ca05dcaca9820110c3676d">RootParameterType::DescriptorTable</a></td></tr>
 <tr class="separator:afffb59f3a46b1d9f975eeb31e8600aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4ec675ebc731df223a212f3a1ff9a3f" id="r_ac4ec675ebc731df223a212f3a1ff9a3f"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memitem:a035c7961b584fdb1896d5949e5c422c8" id="r_a035c7961b584fdb1896d5949e5c422c8"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06630e7474e4ae94a8232c7e5efca67f" id="r_a06630e7474e4ae94a8232c7e5efca67f"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_descriptor_table.html">RootDescriptorTable</a>&#160;&#160;&#160;<a class="el" href="#ace6e7afd6db6424f1cb2dde07cedf85f">DescriptorTable</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a06630e7474e4ae94a8232c7e5efca67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f0c3b777d65c0388c0b45576ea24da8" id="r_a1f0c3b777d65c0388c0b45576ea24da8"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_constants.html">RootConstants</a>&#160;&#160;&#160;<a class="el" href="#a2d246da43bc575d397a3999ec6dbb80e">Constants</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a1f0c3b777d65c0388c0b45576ea24da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf22fd405cf56af00011cf228aab0654" id="r_adf22fd405cf56af00011cf228aab0654"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_descriptor.html">RootDescriptor</a>&#160;&#160;&#160;<a class="el" href="#aee0b8b55115ee0e5c353e953d77f8756">Descriptor</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:adf22fd405cf56af00011cf228aab0654"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4ec675ebc731df223a212f3a1ff9a3f" id="r_ac4ec675ebc731df223a212f3a1ff9a3f"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:ac4ec675ebc731df223a212f3a1ff9a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6266c54936dda488fc63a00c29410dc8" id="r_a6266c54936dda488fc63a00c29410dc8"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_descriptor_table.html">RootDescriptorTable</a>&#160;&#160;&#160;<a class="el" href="#ace6e7afd6db6424f1cb2dde07cedf85f">DescriptorTable</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a6266c54936dda488fc63a00c29410dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e0afa5c79c0561752e57061c7e33c96" id="r_a6e0afa5c79c0561752e57061c7e33c96"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_constants.html">RootConstants</a>&#160;&#160;&#160;<a class="el" href="#a2d246da43bc575d397a3999ec6dbb80e">Constants</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a6e0afa5c79c0561752e57061c7e33c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7d59aa747b06ebd0a00315485b74af0" id="r_ad7d59aa747b06ebd0a00315485b74af0"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_descriptor.html">RootDescriptor</a>&#160;&#160;&#160;<a class="el" href="#aee0b8b55115ee0e5c353e953d77f8756">Descriptor</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ad7d59aa747b06ebd0a00315485b74af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a035c7961b584fdb1896d5949e5c422c8" id="r_a035c7961b584fdb1896d5949e5c422c8"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a035c7961b584fdb1896d5949e5c422c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd89457adfc9bdd06b72e376578f8f49" id="r_abd89457adfc9bdd06b72e376578f8f49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6">D3D12::ShaderVisibility</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd89457adfc9bdd06b72e376578f8f49">ShaderVisibility</a> = <a class="el" href="namespace_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12.html#a7fdbd982843de6569ea8baa8b54085f6ab1c94ca2fbc3e78fc30069c8d0f01680">D3D12::ShaderVisibility::All</a></td></tr>
 <tr class="separator:abd89457adfc9bdd06b72e376578f8f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -232,7 +241,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">Harlinn::Windows::Graphics::D3D12::RootParameter::RootParameter </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numDescriptorRanges</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numDescriptorRanges</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -326,17 +335,17 @@ template&lt;SimpleSpanLike T&gt; </div>
         <tr>
           <td class="memname">Harlinn::Windows::Graphics::D3D12::RootParameter::RootParameter </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>shaderRegister</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>shaderRegister</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>registerSpace</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>registerSpace</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>num32BitValues</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>num32BitValues</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -404,12 +413,12 @@ template&lt;SimpleSpanLike T&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>shaderRegister</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>shaderRegister</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>registerSpace</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>registerSpace</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -439,12 +448,12 @@ template&lt;SimpleSpanLike T&gt; </div>
         <tr>
           <td class="memname">static <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a> Harlinn::Windows::Graphics::D3D12::RootParameter::AsConstantBufferView </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>shaderRegister</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>shaderRegister</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>registerSpace</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>registerSpace</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -473,7 +482,7 @@ template&lt;SimpleSpanLike T&gt; </div>
         <tr>
           <td class="memname">static <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a> Harlinn::Windows::Graphics::D3D12::RootParameter::AsDescriptorTable </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numDescriptorRanges</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>numDescriptorRanges</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -507,12 +516,12 @@ template&lt;SimpleSpanLike T&gt; </div>
         <tr>
           <td class="memname">static <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a> Harlinn::Windows::Graphics::D3D12::RootParameter::AsShaderResourceView </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>shaderRegister</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>shaderRegister</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>registerSpace</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>registerSpace</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -541,12 +550,12 @@ template&lt;SimpleSpanLike T&gt; </div>
         <tr>
           <td class="memname">static <a class="el" href="struct_harlinn_1_1_windows_1_1_graphics_1_1_d3_d12_1_1_root_parameter.html">RootParameter</a> Harlinn::Windows::Graphics::D3D12::RootParameter::AsUnorderedAccessView </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>shaderRegister</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>shaderRegister</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common_1_1_core.html#a9633dfa5c015d8773e20d1aa6035a966">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>registerSpace</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespace_harlinn_1_1_common.html#af3ce862d19ad61e7bef7ba1566ed81ef">UInt32</a></td>          <td class="paramname"><span class="paramname"><em>registerSpace</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -581,8 +590,8 @@ template&lt;SimpleSpanLike T&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac4ec675ebc731df223a212f3a1ff9a3f" name="ac4ec675ebc731df223a212f3a1ff9a3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4ec675ebc731df223a212f3a1ff9a3f">&#9670;&#160;</a></span>[union]</h2>
+<a id="a035c7961b584fdb1896d5949e5c422c8" name="a035c7961b584fdb1896d5949e5c422c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a035c7961b584fdb1896d5949e5c422c8">&#9670;&#160;</a></span>[union]</h2>
 
 <div class="memitem">
 <div class="memproto">

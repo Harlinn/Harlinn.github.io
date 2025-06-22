@@ -18,6 +18,15 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -114,7 +123,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a9f98cb43656e90319b63016c7dbadfc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 struct half_float::detail::unary_specialized&lt; T &gt;</div><p>Wrapper for unary half-precision functions needing specialization for individual argument types. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>argument type </td></tr>
@@ -128,13 +137,13 @@ struct half_float::detail::unary_specialized&lt; T &gt;</div><p>Wrapper for unar
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classhalf__float_1_1half.html">half</a> <a class="el" href="structhalf__float_1_1detail_1_1unary__specialized.html">half_float::detail::unary_specialized</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::fabs </td>
+          <td class="memname">static <a class="el" href="classhalf__float_1_1half.html">half</a> <a class="el" href="structhalf__float_1_1detail_1_1unary__specialized.html">half_float::detail::unary_specialized</a>&lt; T &gt;::fabs </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classhalf__float_1_1half.html">half</a></td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
           <td></td>
@@ -162,13 +171,13 @@ template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b91
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; </div>
+template&lt;typename T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="half_8hpp.html#ace3116a3e2cd66dd15780b92060987c7">HALF_CONSTEXPR</a> <a class="el" href="classhalf__float_1_1half.html">half</a> <a class="el" href="structhalf__float_1_1detail_1_1unary__specialized.html">half_float::detail::unary_specialized</a>&lt; <a class="el" href="k__tan_8inl.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt;::negate </td>
+          <td class="memname">static <a class="el" href="half_8hpp.html#ace3116a3e2cd66dd15780b92060987c7">HALF_CONSTEXPR</a> <a class="el" href="classhalf__float_1_1half.html">half</a> <a class="el" href="structhalf__float_1_1detail_1_1unary__specialized.html">half_float::detail::unary_specialized</a>&lt; T &gt;::negate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classhalf__float_1_1half.html">half</a></td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
           <td></td>
